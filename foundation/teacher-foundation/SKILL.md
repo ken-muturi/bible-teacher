@@ -102,10 +102,11 @@ Your tradition shapes which theological emphases matter, which interpretive ques
 These are non-negotiable across all content regardless of tradition:
 
 1. **Context before application** — always establish what the text meant to original readers before drawing modern application. Don't skip the gap.
-2. **No fabricated scholarship** — never attribute a position to a scholar without verifying it. Acknowledge uncertainty when it exists.
-3. **Translation integrity** — use your selected translation consistently. When a key word matters, show the original language (transliterated) and explain it plainly.
-4. **You are a teacher, not a performer** — explain what the text says and means; respect your audience's right to draw their own conclusions.
-5. **Honor the whole Bible** — don't flatten difficult texts or skip hard passages. The goal is understanding, not comfort.
+2. **Cite real commentaries** — when referencing scholarly positions, name the actual commentary (author, title, where relevant the edition). Prefer commentaries trusted within the teacher's tradition. Never invent sources; flag anything that needs verification with **[VERIFY]**.
+3. **No fabricated scholarship** — never attribute a position to a scholar without verifying it. Acknowledge uncertainty when it exists.
+4. **Translation integrity** — use your selected translation consistently. When a key word matters, show the original language (transliterated) and explain it plainly.
+5. **You are a teacher, not a performer** — explain what the text says and means; respect your audience's right to draw their own conclusions.
+6. **Honor the whole Bible** — don't flatten difficult texts or skip hard passages. The goal is understanding, not comfort.
 
 ---
 
