@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Leviticus — Teaching Panel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 32px;
+  }
+
+  .panel {
+    background: #faf7f2;
+    border: 3px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 28px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* TITLE */
+  .title-bar {
+    text-align: center;
+    border-bottom: 3px solid #2c2c2c;
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+  }
+  .title-bar h1 {
+    font-family: 'Special Elite', serif;
+    font-size: 3rem;
+    letter-spacing: 0.15em;
+    color: #1a1a1a;
+  }
+  .title-bar .subtitle {
+    font-size: 1.05rem;
+    color: #666;
+    margin-top: 3px;
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 210px 1fr 240px;
+    gap: 18px;
+    align-items: start;
+  }
+
+  /* GENERIC BOX */
+  .box {
+    border: 2.5px solid;
+    border-radius: 3px;
+    padding: 8px 11px;
+    margin-bottom: 10px;
+  }
+  .box-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .box-body {
+    font-size: 1rem;
+    line-height: 1.38;
+  }
+
+  .blue   { border-color: #3b6fd4; background: #edf2fc; }
+  .blue   .box-title { color: #3b6fd4; }
+  .green  { border-color: #2e8a4a; background: #edf7f1; }
+  .green  .box-title { color: #2e8a4a; }
+  .red    { border-color: #c0392b; background: #fdf0ee; }
+  .red    .box-title { color: #c0392b; }
+  .orange { border-color: #d47c1a; background: #fdf4e7; }
+  .orange .box-title { color: #d47c1a; }
+  .purple { border-color: #6c4bbf; background: #f2eefb; }
+  .purple .box-title { color: #6c4bbf; }
+  .dark   { border-color: #2c2c2c; background: #f0ede8; }
+  .dark   .box-title { color: #2c2c2c; }
+
+  .col-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 9px;
+  }
+
+  /* ── LEFT: Structure Arc ── */
+  .arc {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .arc-block {
+    border: 2.5px solid;
+    border-radius: 3px;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .arc-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .arc-title {
+    font-family: 'Special Elite', serif;
+    font-size: 1.05rem;
+  }
+  .arc-sub {
+    font-size: 0.82rem;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  .arc-arrow {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #aaa;
+    padding: 2px 0;
+    line-height: 1;
+  }
+
+  .arc-hinge {
+    border-color: #c0392b;
+    background: #fdf0ee;
+  }
+  .arc-hinge .arc-label { color: #c0392b; }
+
+  .arc-part1 {
+    border-color: #3b6fd4;
+    background: #edf2fc;
+  }
+  .arc-part1 .arc-label { color: #3b6fd4; }
+
+  .arc-part2 {
+    border-color: #2e8a4a;
+    background: #edf7f1;
+  }
+  .arc-part2 .arc-label { color: #2e8a4a; }
+
+  .command-strip {
+    margin-top: 12px;
+    background: #1a1a1a;
+    color: #f5f0e8;
+    border-radius: 3px;
+    padding: 9px 11px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .command-strip strong {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 4px;
+  }
+
+  /* ── MIDDLE: Offerings + Passage ── */
+
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .offering-card {
+    border: 2.5px solid #3b6fd4;
+    border-radius: 3px;
+    padding: 9px 10px;
+    background: #fff;
+  }
+  .offering-card.peace  { border-color: #2e8a4a; }
+  .offering-card.sin    { border-color: #c0392b; }
+  .offering-card.guilt  { border-color: #d47c1a; }
+  .offering-card.grain  { border-color: #6c4bbf; }
+
+  .offering-name {
+    font-family: 'Special Elite', serif;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 2px;
+    color: #1a1a1a;
+  }
+  .offering-hebrew {
+    font-size: 0.78rem;
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+    font-style: italic;
+  }
+  .offering-purpose {
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.3;
+  }
+
+  /* YOM KIPPUR CALLOUT */
+  .yom-kippur {
+    border: 3px solid #c0392b;
+    border-radius: 3px;
+    background: #fdf0ee;
+    padding: 11px 14px;
+    margin-bottom: 14px;
+  }
+  .yom-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #c0392b;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .yom-goats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 7px;
+  }
+  .goat-box {
+    border: 1.5px solid #c0392b;
+    border-radius: 3px;
+    padding: 6px 8px;
+    background: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.35;
+  }
+  .goat-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #c0392b;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .yom-verse {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+  }
+
+  /* KEY PASSAGE */
+  .callout {
+    border-left: 5px solid #3b6fd4;
+    background: #edf2fc;
+    padding: 9px 13px;
+    border-radius: 0 3px 3px 0;
+    margin-bottom: 12px;
+  }
+  .callout-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #3b6fd4;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .callout-text {
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.45;
+  }
+  .callout-ref {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 3px;
+  }
+
+  /* ── RIGHT: Words + Connections + Application ── */
+
+  .word-item {
+    margin-bottom: 9px;
+  }
+  .word-hebrew {
+    font-family: 'Special Elite', serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+  }
+  .word-gloss {
+    font-size: 0.78rem;
+    color: #888;
+    font-style: italic;
+    margin-left: 4px;
+  }
+  .word-def {
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
+  .connections { margin-bottom: 10px; }
+  .conn-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+  .conn-label {
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .conn-back  { background: #d47c1a; color: #fff; }
+  .conn-fwd   { background: #2e8a4a; color: #fff; }
+  .conn-para  { background: #6c4bbf; color: #fff; }
+
+  .verdict {
+    border: 3px solid #2c2c2c;
+    border-radius: 3px;
+    padding: 9px 12px;
+    background: #f0ede8;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .verdict-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 4px;
+  }
+  .verdict-text {
+    font-family: 'Special Elite', serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.4;
+  }
+  .verdict-ref {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 3px;
+  }
+
+  /* BOTTOM STRIP */
+  .bottom-strip {
+    border-top: 2px solid #ddd;
+    margin-top: 18px;
+    padding-top: 13px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .strip-label {
+    font-size: 0.67rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 3px;
+  }
+  .strip-body { font-size: 0.92rem; line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <!-- TITLE -->
+  <div class="title-bar">
+    <h1>LEVITICUS</h1>
+    <span class="subtitle">Series 1: The Law (Torah) &nbsp;·&nbsp; Book 3 of 66 &nbsp;·&nbsp; The most avoided book in the Bible</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT: Context + Arc -->
+    <div>
+      <div class="col-label">← From Exodus 40</div>
+
+      <div class="box blue" style="margin-bottom:13px;">
+        <span class="box-title">The Setup</span>
+        <span class="box-body">God's glory fills the tabernacle. Israel is camped at Sinai. The question Leviticus answers: <em>how does a holy God live among an unholy people?</em></span>
+      </div>
+
+      <div class="col-label">Book Structure</div>
+
+      <div class="arc">
+        <div class="arc-block arc-part1">
+          <span class="arc-label">Part 1 · Chs. 1–15</span>
+          <span class="arc-title">Approaching God</span>
+          <span class="arc-sub">The five offerings · clean &amp; unclean · priestly ordination</span>
+        </div>
+        <div class="arc-arrow">↓</div>
+        <div class="arc-block arc-hinge">
+          <span class="arc-label">The Hinge · Ch. 16</span>
+          <span class="arc-title">Day of Atonement</span>
+          <span class="arc-sub">Yom Kippur · two goats · the high priest enters</span>
+        </div>
+        <div class="arc-arrow">↓</div>
+        <div class="arc-block arc-part2">
+          <span class="arc-label">Part 2 · Chs. 17–27</span>
+          <span class="arc-title">Living as Holy</span>
+          <span class="arc-sub">The Holiness Code · ethics · festivals · neighbors</span>
+        </div>
+      </div>
+
+      <div class="command-strip">
+        <strong>Repeated 50+ times</strong>
+        "Be holy, for I the LORD your God am holy."
+        <div style="font-size:0.8rem; color:#aaa; margin-top:3px;">Lev 19:2</div>
+      </div>
+    </div>
+
+    <!-- MIDDLE: Offerings + Yom Kippur + Passage -->
+    <div>
+      <div class="col-label">The Five Offerings (Chs. 1–7)</div>
+
+      <div class="offerings-grid">
+        <div class="offering-card">
+          <span class="offering-name">Burnt Offering</span>
+          <span class="offering-hebrew">עֹלָה · Olah · "that which goes up"</span>
+          <span class="offering-purpose">Entirely consumed. Total dedication — nothing kept by the offerer.</span>
+        </div>
+        <div class="offering-card grain">
+          <span class="offering-name">Grain Offering</span>
+          <span class="offering-hebrew">מִנְחָה · Minchah · "gift / tribute"</span>
+          <span class="offering-purpose">Flour, oil, incense. Accompanies animal offerings. Acknowledges God as provider.</span>
+        </div>
+        <div class="offering-card peace">
+          <span class="offering-name">Peace Offering</span>
+          <span class="offering-hebrew">שְׁלָמִים · Shelamim · "wholeness"</span>
+          <span class="offering-purpose">Shared meal: parts for God, parts for priest, parts for worshipper. Communion.</span>
+        </div>
+        <div class="offering-card sin">
+          <span class="offering-name">Sin Offering</span>
+          <span class="offering-hebrew">חַטָּאת · Chatat · "to miss the mark"</span>
+          <span class="offering-purpose">Addresses unintentional sin or impurity. Restores access to the holy space.</span>
+        </div>
+        <div class="offering-card guilt">
+          <span class="offering-name">Guilt Offering</span>
+          <span class="offering-hebrew">אָשָׁם · Asham · "liability / debt"</span>
+          <span class="offering-purpose">For specific violations. Includes restitution — repair, not just forgiveness.</span>
+        </div>
+        <div class="offering-card" style="border-color:#aaa; background:#f8f8f6; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:0.88rem; color:#888; text-align:center; font-style:italic;">Each offering addresses a different aspect of the human–God relationship</span>
+        </div>
+      </div>
+
+      <!-- YOM KIPPUR -->
+      <div class="yom-kippur">
+        <div class="yom-label">The Hinge — Ch. 16: Day of Atonement (Yom Kippur)</div>
+        <div class="yom-goats">
+          <div class="goat-box">
+            <span class="goat-tag">Goat 1 — Sacrificed</span>
+            Blood brought into the Most Holy Place. Propitiation — the holiness of God is satisfied.
+          </div>
+          <div class="goat-box">
+            <span class="goat-tag">Goat 2 — Azazel (Scapegoat)</span>
+            Sins confessed over it, driven into the wilderness. Expiation — guilt is removed and sent away.
+          </div>
+        </div>
+        <div class="yom-verse">Two goats, two problems: the presence of holiness + the reality of sin · Once a year · High priest only</div>
+      </div>
+
+      <!-- Key passage -->
+      <div class="callout">
+        <div class="callout-label">Key Passage — Read Aloud</div>
+        <div class="callout-text">"You shall be holy, for I the LORD your God am holy."</div>
+        <div class="callout-ref">Leviticus 19:2 (ESV) — the Holiness Code's opening command</div>
+      </div>
+
+      <!-- Pressure point -->
+      <div class="box red">
+        <span class="box-title">Hardest Moment — Ch. 10: Nadab &amp; Abihu</span>
+        <span class="box-body">Aaron's sons offer "unauthorized fire" and are immediately killed. Not arbitrary cruelty — the point is that proximity to holiness is not casual. The extensive ordination ritual that precedes this existed precisely because the stakes were this high.</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Words + Connections + Application -->
+    <div>
+      <div class="col-label">Key Words</div>
+
+      <div class="word-item">
+        <span class="word-hebrew">קָדוֹשׁ / Qadosh <span class="word-gloss">(Holy)</span></span>
+        <div class="word-def">Appears 152× in Leviticus. "Set apart / other / categorically different." Ontological, not just moral — God is holy because he is unlike everything else.</div>
+      </div>
+      <div class="word-item">
+        <span class="word-hebrew">כָּפַר / Kaphar <span class="word-gloss">(Atonement)</span></span>
+        <div class="word-def">"To cover / ransom / wipe clean." Root of Yom Kippur. Closer to satisfying a debt than simply forgiving it.</div>
+      </div>
+      <div class="word-item">
+        <span class="word-hebrew">טָמֵא / Tame <span class="word-gloss">(Unclean)</span></span>
+        <div class="word-def">Ritual impurity — a state, not a sin. Being tamei is not morally culpable; it means you cannot approach the holy space until resolved.</div>
+      </div>
+
+      <div style="border-top: 1.5px solid #ddd; margin: 10px 0;"></div>
+
+      <div class="col-label">Cross-Bible Links</div>
+      <div class="connections">
+        <div class="conn-row">
+          <span class="conn-label conn-back">← OT</span>
+          <span>Exodus 40 — tabernacle complete; Lev 1 begins next morning</span>
+        </div>
+        <div class="conn-row">
+          <span class="conn-label conn-back">← OT</span>
+          <span>Genesis 1 — clean/unclean echoes ordered/disordered creation</span>
+        </div>
+        <div class="conn-row">
+          <span class="conn-label conn-fwd">NT →</span>
+          <span>Hebrews 7–10 — Christ as final high priest and sacrifice</span>
+        </div>
+        <div class="conn-row">
+          <span class="conn-label conn-fwd">NT →</span>
+          <span>Matthew 22:39 — Jesus quotes Lev 19:18 ("love your neighbor")</span>
+        </div>
+        <div class="conn-row">
+          <span class="conn-label conn-para">≈</span>
+          <span>Isaiah 53 — the suffering servant absorbs the scapegoat logic</span>
+        </div>
+      </div>
+
+      <div class="box purple">
+        <span class="box-title">Then → Now</span>
+        <span class="box-body">Israel asked: how do we live next to a presence this holy? We've largely stopped asking the question. Leviticus is jarring because it assumes a sense of divine holiness most modern people — including regular churchgoers — no longer have.</span>
+      </div>
+
+      <div class="verdict">
+        <div class="verdict-label">What This Book Uniquely Contributes</div>
+        <div class="verdict-text">Holiness has a cost. Mediation is necessary. You cannot simply walk into the presence of the holy — something has to be done first.</div>
+        <div class="verdict-ref">The question every NT writer assumes you've already asked</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM STRIP -->
+  <div class="bottom-strip">
+    <div>
+      <div class="strip-label">Period / Setting</div>
+      <div class="strip-body">Israel at Sinai · immediately after Exodus 40 · the narrative clock barely moves</div>
+    </div>
+    <div>
+      <div class="strip-label">Question to Sit With</div>
+      <div class="strip-body">The system took seriously both human failure and divine holiness. What does it mean that we've made both of those things smaller?</div>
+    </div>
+    <div>
+      <div class="strip-label">Next in Series</div>
+      <div class="strip-body">Numbers → the wilderness generation fails. The Levitical system is in place — and it still doesn't fix the problem.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

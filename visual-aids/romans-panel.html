@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Romans — Teaching Panel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 32px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 28px 32px; max-width: 1260px; margin: 0 auto; }
+
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 22px; }
+  .title-bar h1 { font-family: 'Special Elite', serif; font-size: 3rem; letter-spacing: 0.15em; }
+  .title-bar .subtitle { font-size: 1rem; color: #666; margin-top: 3px; }
+
+  .body { display: grid; grid-template-columns: 1fr 260px; gap: 22px; align-items: start; }
+
+  /* THESIS BANNER */
+  .thesis {
+    border: 3px solid #2c2c2c;
+    border-radius: 3px;
+    background: #1a1a1a;
+    color: #f5f0e8;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .thesis-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .thesis-text { font-family: 'Special Elite', serif; font-size: 1.25rem; line-height: 1.45; color: #fff; }
+  .thesis-ref { font-size: 0.82rem; color: #888; margin-top: 5px; }
+
+  /* ARGUMENT FLOW */
+  .flow { display: flex; flex-direction: column; gap: 0; }
+
+  .flow-connector {
+    display: flex; align-items: center; gap: 10px;
+    padding: 4px 0;
+    color: #bbb; font-size: 0.88rem;
+  }
+  .flow-line { flex: 1; height: 2px; background: #ddd; }
+  .flow-arrow { font-size: 1.4rem; color: #bbb; }
+
+  .movement {
+    border: 2.5px solid;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .movement-header {
+    padding: 9px 14px;
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .movement-num {
+    font-family: 'Special Elite', serif;
+    font-size: 2rem;
+    line-height: 1;
+    opacity: 0.25;
+  }
+  .movement-meta { flex: 1; }
+  .movement-tag {
+    font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700; padding: 1px 6px; border-radius: 2px; margin-bottom: 3px; display: inline-block;
+  }
+  .movement-title { font-family: 'Special Elite', serif; font-size: 1.2rem; display: block; }
+  .movement-chs { font-size: 0.78rem; color: #aaa; }
+
+  .movement-body { padding: 0 14px 12px 14px; }
+  .movement-points { list-style: none; }
+  .movement-points li {
+    font-size: 0.95rem; line-height: 1.4;
+    padding: 3px 0 3px 14px;
+    position: relative; color: #333;
+  }
+  .movement-points li::before { content: '·'; position: absolute; left: 0; color: #aaa; }
+
+  .tension-box {
+    margin: 6px 0 4px 0;
+    border-left: 4px solid;
+    padding: 6px 10px;
+    border-radius: 0 2px 2px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Movement colors */
+  .mv-problem  { border-color: #c0392b; }
+  .mv-problem  .movement-header { background: #fdf0ee; }
+  .mv-problem  .movement-tag { background: #c0392b; color: #fff; }
+  .mv-problem  .movement-num { color: #c0392b; }
+  .mv-problem  .tension-box { border-color: #c0392b; background: #fdf0ee; }
+
+  .mv-solution { border-color: #2e8a4a; }
+  .mv-solution .movement-header { background: #edf7f1; }
+  .mv-solution .movement-tag { background: #2e8a4a; color: #fff; }
+  .mv-solution .movement-num { color: #2e8a4a; }
+  .mv-solution .tension-box { border-color: #2e8a4a; background: #edf7f1; }
+
+  .mv-israel  { border-color: #d47c1a; }
+  .mv-israel  .movement-header { background: #fdf4e7; }
+  .mv-israel  .movement-tag { background: #d47c1a; color: #fff; }
+  .mv-israel  .movement-num { color: #d47c1a; }
+  .mv-israel  .tension-box { border-color: #d47c1a; background: #fdf4e7; }
+
+  .mv-practice { border-color: #3b6fd4; }
+  .mv-practice .movement-header { background: #edf2fc; }
+  .mv-practice .movement-tag { background: #3b6fd4; color: #fff; }
+  .mv-practice .movement-num { color: #3b6fd4; }
+  .mv-practice .tension-box { border-color: #3b6fd4; background: #edf2fc; }
+
+  /* CALLOUT */
+  .callout {
+    border-left: 5px solid #2e8a4a;
+    background: #edf7f1;
+    padding: 10px 13px;
+    border-radius: 0 3px 3px 0;
+    margin-top: 16px;
+  }
+  .callout-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2e8a4a; font-weight: 700; margin-bottom: 4px; }
+  .callout-text { font-size: 1rem; color: #1a1a1a; line-height: 1.45; }
+  .callout-ref { font-size: 0.8rem; color: #888; margin-top: 3px; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; padding: 12px 16px; background: #f0ede8; text-align: center; margin-top: 16px; }
+  .verdict-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 5px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.2rem; color: #1a1a1a; line-height: 1.4; }
+  .verdict-ref { font-size: 0.82rem; color: #888; margin-top: 5px; }
+
+  /* SIDEBAR */
+  .sidebar-label { font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 7px; padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8; margin-top: 14px; }
+  .sidebar-label:first-child { margin-top: 0; }
+
+  .box { border: 2.5px solid; border-radius: 3px; padding: 8px 10px; margin-bottom: 9px; }
+  .box-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 3px; display: block; }
+  .box-body { font-size: 0.93rem; line-height: 1.38; }
+  .orange { border-color: #d47c1a; background: #fdf4e7; } .orange .box-title { color: #d47c1a; }
+  .purple { border-color: #6c4bbf; background: #f2eefb; } .purple .box-title { color: #6c4bbf; }
+  .red    { border-color: #c0392b; background: #fdf0ee; } .red    .box-title { color: #c0392b; }
+  .dark-note { background: #1a1a1a; color: #f5f0e8; border-radius: 3px; padding: 8px 10px; margin-bottom: 9px; font-size: 0.92rem; line-height: 1.4; }
+  .dark-note strong { display: block; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 3px; }
+
+  .word-item { margin-bottom: 9px; }
+  .word-gk { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #1a1a1a; }
+  .word-gloss { font-size: 0.75rem; color: #888; font-style: italic; margin-left: 3px; }
+  .word-def { font-size: 0.85rem; color: #444; line-height: 1.3; margin-top: 2px; }
+
+  .conn-row { display: flex; align-items: baseline; gap: 5px; margin-bottom: 6px; font-size: 0.88rem; }
+  .conn-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; padding: 1px 5px; border-radius: 2px; white-space: nowrap; flex-shrink: 0; }
+  .conn-back { background: #d47c1a; color: #fff; }
+  .conn-fwd  { background: #2e8a4a; color: #fff; }
+  .conn-para { background: #6c4bbf; color: #fff; }
+
+  .bottom-strip { border-top: 2px solid #ddd; margin-top: 18px; padding-top: 13px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .strip-label { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 3px; }
+  .strip-body { font-size: 0.92rem; line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <div class="title-bar">
+    <h1>ROMANS</h1>
+    <span class="subtitle">Series 8: Paul's Letters &nbsp;·&nbsp; Book 45 of 66 &nbsp;·&nbsp; The most systematic case for the gospel ever written</span>
+  </div>
+
+  <div class="body">
+    <div class="left-col">
+
+      <!-- THESIS -->
+      <div class="thesis">
+        <div class="thesis-label">The Thesis — Everything else argues from here</div>
+        <div class="thesis-text">"For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and also to the Greek. For in it the righteousness of God is revealed from faith for faith."</div>
+        <div class="thesis-ref">Romans 1:16–17 (ESV)</div>
+      </div>
+
+      <!-- ARGUMENT FLOW -->
+      <div class="flow">
+
+        <!-- Movement 1: The Problem -->
+        <div class="movement mv-problem">
+          <div class="movement-header">
+            <div class="movement-num">1</div>
+            <div class="movement-meta">
+              <span class="movement-tag">The Problem</span>
+              <span class="movement-title">All Are Under Judgment</span>
+              <span class="movement-chs">Chapters 1–3</span>
+            </div>
+          </div>
+          <div class="movement-body">
+            <ul class="movement-points">
+              <li>Gentiles are without excuse — creation itself witnesses to God (1:18–32)</li>
+              <li>Jews are also without excuse — knowing the law and breaking it is worse, not better (2:1–3:8)</li>
+              <li>The hammer: "None is righteous, no, not one." (3:10) — Jew and Gentile equally condemned</li>
+            </ul>
+            <div class="tension-box">
+              Paul's rhetorical trap: he builds a case against Gentile sin (his Jewish reader nods along), then pivots without warning — "therefore you have no excuse, O man, every one of you who judges." (2:1)
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector"><div class="flow-line"></div><div class="flow-arrow">↓</div><div class="flow-line"></div></div>
+
+        <!-- Movement 2: The Solution -->
+        <div class="movement mv-solution">
+          <div class="movement-header">
+            <div class="movement-num">2</div>
+            <div class="movement-meta">
+              <span class="movement-tag">The Solution</span>
+              <span class="movement-title">Justification by Faith — Then Life in the Spirit</span>
+              <span class="movement-chs">Chapters 3–8</span>
+            </div>
+          </div>
+          <div class="movement-body">
+            <ul class="movement-points">
+              <li>God's righteousness is given, not earned — through faith in Christ (3:21–26)</li>
+              <li>Abraham as the paradigm: credited as righteous before circumcision, before the law existed (ch. 4)</li>
+              <li>Adam brought death to all; Christ brings life to all who receive it — the two humanities (ch. 5)</li>
+              <li>Does grace mean sin doesn't matter? Emphatically not — we died to it (ch. 6)</li>
+              <li>The law is good but cannot fix the problem — it shows sin without removing it (ch. 7)</li>
+              <li>The Spirit accomplishes what the law could not — no condemnation, adoption, future glory (ch. 8)</li>
+            </ul>
+            <div class="tension-box">
+              Chapter 8 is the crescendo. "There is therefore now no condemnation for those who are in Christ Jesus." (8:1) — and it ends with one of the most durable paragraphs in Scripture (8:38–39).
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector"><div class="flow-line"></div><div class="flow-arrow">↓</div><div class="flow-line"></div></div>
+
+        <!-- Movement 3: Israel Question -->
+        <div class="movement mv-israel">
+          <div class="movement-header">
+            <div class="movement-num">3</div>
+            <div class="movement-meta">
+              <span class="movement-tag">The Hard Question</span>
+              <span class="movement-title">What About Israel?</span>
+              <span class="movement-chs">Chapters 9–11</span>
+            </div>
+          </div>
+          <div class="movement-body">
+            <ul class="movement-points">
+              <li>If the gospel is true, has God abandoned his promises to Israel? Paul's answer: no — but the story isn't finished</li>
+              <li>God's sovereignty in election: the potter and the clay (ch. 9) — does not eliminate human responsibility</li>
+              <li>Israel stumbled but did not fall — a remnant remains; Gentile inclusion was always in the plan (ch. 10–11)</li>
+              <li>"All Israel will be saved" (11:26) — one of the most debated lines in Paul; at minimum, the story of Israel is not over</li>
+            </ul>
+            <div class="tension-box">
+              Paul ends chs. 9–11 not with a tidy answer but with doxology: "Oh, the depth of the riches and wisdom and knowledge of God! How unsearchable are his judgments..." (11:33). He reaches mystery, not resolution.
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector"><div class="flow-line"></div><div class="flow-arrow">↓</div><div class="flow-line"></div></div>
+
+        <!-- Movement 4: Practice -->
+        <div class="movement mv-practice">
+          <div class="movement-header">
+            <div class="movement-num">4</div>
+            <div class="movement-meta">
+              <span class="movement-tag">The Practice</span>
+              <span class="movement-title">How the Justified Actually Live</span>
+              <span class="movement-chs">Chapters 12–16</span>
+            </div>
+          </div>
+          <div class="movement-body">
+            <ul class="movement-points">
+              <li>Living sacrifice — the whole of life as response to the gospel (12:1–2)</li>
+              <li>The body with many members; gifts used for others, not self-display (12:3–8)</li>
+              <li>Governing authorities, paying taxes — the justified live as responsible citizens (ch. 13)</li>
+              <li>The strong and the weak — don't use your freedom to destroy someone else's conscience (chs. 14–15)</li>
+              <li>Personal greetings: 26 people named — the letter lands in a real community with real tensions</li>
+            </ul>
+            <div class="tension-box">
+              Romans 12:1–2 is the hinge between theology and practice — "Therefore" connects everything Paul argued in chs. 1–11 to everything he asks in chs. 12–16. The ethics are the logic of the gospel, not an addition to it.
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /flow -->
+
+      <!-- KEY PASSAGE -->
+      <div class="callout">
+        <div class="callout-label">Key Passage — Read Aloud</div>
+        <div class="callout-text">"For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord."</div>
+        <div class="callout-ref">Romans 8:38–39 (ESV)</div>
+      </div>
+
+      <!-- VERDICT -->
+      <div class="verdict">
+        <div class="verdict-label">What Romans Uniquely Contributes</div>
+        <div class="verdict-text">The gospel is not primarily a self-improvement program. It is the announcement that God has done what no one could do for themselves — and the only appropriate response is a life given away in return.</div>
+        <div class="verdict-ref">The theological backbone of the New Testament</div>
+      </div>
+
+    </div><!-- /left -->
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-label">Context</div>
+      <div class="box" style="border-color:#3b6fd4; background:#edf2fc;">
+        <span class="box-title" style="color:#3b6fd4;">Why Paul Wrote This</span>
+        <span class="box-body">Paul had not yet visited Rome. He was writing to introduce himself and his gospel before arriving — and to address real tensions between Jewish and Gentile believers in the Roman church.</span>
+      </div>
+      <div class="box" style="border-color:#2c2c2c; background:#f0ede8;">
+        <span class="box-title">Author / Date</span>
+        <span class="box-body">Paul of Tarsus · ~57 AD · written from Corinth · authorship universally accepted</span>
+      </div>
+
+      <div class="sidebar-label">The Common Misread</div>
+      <div class="dark-note">
+        <strong>Don't do this</strong>
+        Romans is not a timeless systematic theology dropped from heaven. It is a letter, addressed to a specific community with specific tensions. Reading it as abstract doctrine instead of pastoral argument flattens it.
+      </div>
+
+      <div class="sidebar-label">Key Words</div>
+      <div class="word-item">
+        <span class="word-gk">δικαιοσύνη / Dikaiosyne <span class="word-gloss">(Righteousness)</span></span>
+        <div class="word-def">Used for both God's righteous character and the status given to the believer. Same root as "justification" (dikaiōsis). ESV distinguishes them; NLT often uses "right relationship."</div>
+      </div>
+      <div class="word-item">
+        <span class="word-gk">πίστις / Pistis <span class="word-gloss">(Faith)</span></span>
+        <div class="word-def">"Trust / faithfulness / reliance." Not intellectual assent — active reliance on what God has done. Some scholars argue "faithfulness of Christ" (not "faith in Christ") in key passages. [VERIFY: genitive debate in 3:22]</div>
+      </div>
+      <div class="word-item">
+        <span class="word-gk">χάρις / Charis <span class="word-gloss">(Grace)</span></span>
+        <div class="word-def">"Unearned favor." In Roman culture, charis was the language of patron-client relationships — gift given freely, response expected. Paul's audience would have heard commercial overtones.</div>
+      </div>
+      <div class="word-item">
+        <span class="word-gk">νόμος / Nomos <span class="word-gloss">(Law)</span></span>
+        <div class="word-def">Refers variously to the Mosaic law, a general principle, and the Pentateuch. Context determines which — a distinction English translations often lose.</div>
+      </div>
+
+      <div class="sidebar-label">Cross-Bible Links</div>
+      <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Hab 2:4 — "the righteous shall live by faith" — Paul's thesis text (1:17)</span></div>
+      <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Gen 15:6 — Abraham's faith credited as righteousness (Romans 4)</span></div>
+      <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Isaiah 52–53 — Paul's mission logic draws on the servant passages</span></div>
+      <div class="conn-row"><span class="conn-label conn-para">≈</span><span>Galatians — same core argument, shorter, angrier</span></div>
+      <div class="conn-row"><span class="conn-label conn-para">≈</span><span>James 2 — "faith without works is dead" — appears to contradict Romans; the two are answering different questions</span></div>
+
+      <div class="sidebar-label">Then → Now</div>
+      <div class="box purple">
+        <span class="box-title">The Reversal</span>
+        <span class="box-body">Romans insists the human problem is deeper than behavior — it is a broken relationship with God that produces broken behavior. Self-improvement programs don't reach the root. That's not pessimism; it's what makes the solution as large as it is.</span>
+      </div>
+
+    </div><!-- /sidebar -->
+  </div><!-- /body -->
+
+  <div class="bottom-strip">
+    <div>
+      <div class="strip-label">Written</div>
+      <div class="strip-body">~57 AD · Corinth · to a church Paul had not yet visited · the longest of his letters</div>
+    </div>
+    <div>
+      <div class="strip-label">Question to Sit With</div>
+      <div class="strip-body">Romans argues the human problem is not primarily behavioral but relational — a broken standing before God. If that's true, what changes about how you think about self-improvement, guilt, and forgiveness?</div>
+    </div>
+    <div>
+      <div class="strip-label">Next in Series</div>
+      <div class="strip-body">1 Corinthians → same author, completely different tone. A fractured church replacing the cross with status, wisdom, and factions.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
