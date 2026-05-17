@@ -5,6 +5,66 @@ Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skil
 
 ---
 
+## Installation
+
+### 1. Get Claude
+
+This toolkit runs on [Claude](https://claude.ai) by Anthropic. You need one of the following:
+
+**Option A — Claude.ai (browser, easiest)**
+1. Go to [claude.ai](https://claude.ai) and create a free account
+2. Upgrade to Claude Pro for best results (required for long research sessions)
+3. Create a **Project** — this keeps your teacher profile and skills persistent across conversations
+
+**Option B — Claude Code (terminal, recommended for power users)**
+1. Install [Node.js](https://nodejs.org) if you don't have it
+2. Install Claude Code:
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+3. Authenticate:
+   ```bash
+   claude
+   ```
+   Follow the prompts to connect your Anthropic account.
+
+---
+
+### 2. Get This Toolkit
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ken-muturi/bible-teacher.git
+cd bible-teacher
+```
+
+Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/heads/main.zip) and unzip it.
+
+---
+
+### 3. Using the Skills
+
+**With Claude Code** — open the toolkit directory and start Claude:
+```bash
+cd bible-teacher
+claude
+```
+Claude Code automatically reads the skill files in the directory. Reference any skill by name in conversation:
+```
+book-overview judges
+book-overview-infographic judges --non-constrained
+discussion-guide judges
+```
+
+**With Claude.ai Projects**
+1. Create a new Project in Claude.ai
+2. Go to **Project instructions** and paste the contents of `foundation/teacher-foundation/SKILL.md`
+3. Add each skill file you want to use as a Project file (or paste into the instructions)
+4. Start a conversation and reference the skills by name
+
+---
+
 ## Setup (do this once)
 
 1. Open `foundation/teacher-foundation/SKILL.md`
