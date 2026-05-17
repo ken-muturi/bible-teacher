@@ -96,16 +96,17 @@ Output a concise study brief in chat first — this is the teacher's prep summar
 - Then → Now (two sentences total)
 
 **Deep mode brief (chat):**
-- Passage reference + one-sentence placement
-- Key verse quoted
-- 3–5 word studies (term → transliterated original → what is lost in English)
-- Structure map with all movements
-- 3–5 illustrations (two sentences each)
-- Historical context (2–3 sentences, cite sources)
-- Commentary shelf (author, title, one-sentence take per source)
-- Pressure points (main debate / common misread / open question)
-- Cross-references (tagged, one sentence each)
-- Then → Now bridge
+No length limit — write the full study. Cover everything:
+- Passage reference + placement in the book
+- Full passage text in teacher's translation
+- 3–5 word studies (term → transliterated original → translations compared → what is lost in English)
+- Complete structure map with all movements labelled
+- 3–5 illustrations — fully developed, specific, no moralizing
+- Historical/cultural context — as much detail as is useful; cite sources; flag **[VERIFY]**
+- Commentary shelf — author, title, what they say about this specific text, tradition tag
+- Interpretive pressure points — main scholarly debate, most common misread, open question
+- 3–5 cross-references with full explanation
+- Then → Now bridge calibrated to the teacher's audience
 
 After the chat brief, generate and save the HTML panel, then open the preview.
 
