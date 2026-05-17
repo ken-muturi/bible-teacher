@@ -96,6 +96,8 @@ Each guide includes:
 
 Output: `guides/discussions/<book>-discussion-guide.html` — print-ready via browser.
 
+![Judges Discussion Guide](guides/discussions/screenshots/judges-discussion-guide.png)
+
 ---
 
 ## Workflow Per Book
