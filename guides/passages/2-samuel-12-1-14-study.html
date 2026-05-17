@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2 Samuel 12:1–14 — Passage Study Panel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 26px 30px; max-width: 1260px; margin: 0 auto; }
+
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 20px; }
+  .title-bar h1 { font-family: 'Special Elite', serif; font-size: 2.8rem; letter-spacing: 0.1em; }
+  .title-bar .book-tag { font-size: 0.85rem; color: #666; margin-top: 2px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .title-bar .summary { font-size: 1.1rem; color: #2c2c2c; margin-top: 6px; }
+
+  .passage-callout { border-left: 5px solid #c0392b; background: #fbeaea; padding: 14px 18px; margin-bottom: 20px; border-radius: 0 3px 3px 0; }
+  .passage-callout .label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #c0392b; margin-bottom: 6px; }
+  .passage-callout .text { font-size: 0.95rem; line-height: 1.65; color: #2c2c2c; }
+  .passage-callout .ref { font-size: 0.78rem; color: #555; margin-top: 8px; }
+
+  .word-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; }
+  .word-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 10px 12px; }
+  .word-english { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; }
+  .word-orig { font-size: 0.82rem; color: #3b6fd4; margin-top: 2px; font-style: italic; }
+  .word-meaning { font-size: 0.8rem; color: #444; margin-top: 4px; line-height: 1.4; }
+
+  .main-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; align-items: start; }
+
+  .box { border: 2px solid; border-radius: 3px; padding: 13px 15px; }
+  .box-blue   { border-color: #3b6fd4; background: #eef2fb; }
+  .box-green  { border-color: #2e8a4a; background: #eaf4ee; }
+  .box-red    { border-color: #c0392b; background: #fbeaea; }
+  .box-orange { border-color: #d47c1a; background: #fdf3e3; }
+  .box-purple { border-color: #6c4bbf; background: #f0ecfb; }
+  .box-dark   { background: #1a1a1a; color: #f5f0e8; border: 2.5px solid #2c2c2c; border-radius: 3px; padding: 13px 15px; }
+
+  .box-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+  .blue-label   { color: #3b6fd4; }
+  .green-label  { color: #2e8a4a; }
+  .red-label    { color: #c0392b; }
+  .orange-label { color: #d47c1a; }
+  .purple-label { color: #6c4bbf; }
+  .dark-label   { color: #aaa; }
+
+  .beats { display: flex; flex-direction: column; gap: 8px; }
+  .beat { border: 2px solid; border-radius: 3px; padding: 10px 13px; display: flex; gap: 11px; align-items: flex-start; }
+  .beat-num { font-family: 'Special Elite', serif; font-size: 1.4rem; min-width: 26px; }
+  .beat-ref { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+  .beat-title { font-size: 1rem; font-weight: 700; }
+  .beat-desc { font-size: 0.82rem; margin-top: 3px; line-height: 1.45; }
+
+  .illus-grid { display: flex; flex-direction: column; gap: 9px; }
+  .illus-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #f0ecfb; padding: 10px 13px; }
+  .illus-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6c4bbf; margin-bottom: 4px; }
+  .illus-text { font-size: 0.85rem; line-height: 1.5; color: #2c2c2c; }
+
+  .xref-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 18px; }
+  .xref-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #f5f0e8; padding: 8px 10px; }
+  .xref-tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 2px; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; }
+  .xref-note { font-size: 0.72rem; color: #555; margin-top: 3px; line-height: 1.35; }
+
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f0ecfb; padding: 14px 18px; margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6c4bbf; margin-bottom: 5px; }
+  .tn-text { font-size: 0.88rem; line-height: 1.55; color: #2c2c2c; }
+
+  .verdict { text-align: center; border: 3px solid #2c2c2c; border-radius: 3px; background: #1a1a1a; color: #f5f0e8; padding: 14px 20px; margin-top: 18px; }
+  .verdict-label { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.3rem; color: #fff; line-height: 1.4; }
+  .verdict-ref { font-size: 0.78rem; color: #888; margin-top: 5px; }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <div class="title-bar">
+    <h1>2 Samuel 12:1–14</h1>
+    <div class="book-tag">2 Samuel &nbsp;·&nbsp; Prophetic Confrontation &nbsp;·&nbsp; NIV</div>
+    <div class="summary">Nathan's parable — the trap that makes David judge himself before he knows he is the accused</div>
+  </div>
+
+  <div class="passage-callout">
+    <div class="label">The Turn</div>
+    <div class="text">
+      <strong>v.1–4</strong> — Nathan tells of a rich man who takes a poor man's beloved ewe lamb to feed a guest, rather than one from his own flock.<br><br>
+      <strong>v.5–6</strong> — David burns with anger: "The man who did this must die! He must pay back four times the amount."<br><br>
+      <strong>v.7</strong> — "Then Nathan said to David: 'You are the man!'"
+    </div>
+    <div class="ref">2 Samuel 12:1–14 (NIV) &nbsp;·&nbsp; Follows chapter 11: adultery with Bathsheba, Uriah's engineered death, the cover-up</div>
+  </div>
+
+  <!-- WORD STUDY STRIP -->
+  <div class="word-strip">
+    <div class="word-card">
+      <div class="word-english">Sent</div>
+      <div class="word-orig">šālaḥ (Hebrew)</div>
+      <div class="word-meaning">God sent Nathan — a formal prophetic commission. Nathan is not acting on personal courage; he is dispatched. The same verb used of Moses, Elijah, Isaiah.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-english">Ewe lamb</div>
+      <div class="word-orig">kibśâ (Hebrew)</div>
+      <div class="word-meaning">A diminutive form — small, tender. The poor man raised it "like a daughter." The word choice is designed to make David feel the attachment before he knows who he is judging.</div>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- COL 1: STRUCTURE -->
+    <div>
+      <div class="box box-blue">
+        <div class="box-label blue-label">Structure — Three Beats</div>
+        <div class="beats">
+          <div class="beat" style="border-color:#d47c1a; background:#fdf3e3;">
+            <div class="beat-num" style="color:#d47c1a;">1</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#d47c1a;">vv.1–4 — The Trap Set</div>
+              <div class="beat-title">The Parable</div>
+              <div class="beat-desc">Rich man takes the poor man's beloved lamb. Nathan builds maximum emotional attachment before the verdict lands.</div>
+            </div>
+          </div>
+          <div class="beat" style="border-color:#c0392b; background:#fbeaea;">
+            <div class="beat-num" style="color:#c0392b;">2</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#c0392b;">vv.5–7a — The Trap Closes</div>
+              <div class="beat-title">"You are the man"</div>
+              <div class="beat-desc">David pronounces his own sentence. Nathan's reversal is a single line — no argument, no defence. The parable has done its work.</div>
+            </div>
+          </div>
+          <div class="beat" style="border-color:#2e8a4a; background:#eaf4ee;">
+            <div class="beat-num" style="color:#2e8a4a;">3</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#2e8a4a;">vv.7b–14 — The Indictment</div>
+              <div class="beat-title">God's Charge + Consequence</div>
+              <div class="beat-desc">God rehearses his gifts to David. David had everything — and took the one thing that wasn't his. Four consequences declared.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COL 2: ILLUSTRATIONS -->
+    <div>
+      <div class="box-label purple-label" style="margin-bottom:8px;">Teaching Illustrations</div>
+      <div class="illus-grid">
+        <div class="illus-card">
+          <div class="illus-label">Rhetoric — The Indirect Accusation</div>
+          <div class="illus-text">A direct accusation of a king could mean death for the accuser. Nathan does something more dangerous to David: he gets David to convict himself first. The verdict is already out of David's mouth before he knows who the defendant is. Self-judgment lands deeper than external judgment — David can't dismiss it as Nathan's opinion.</div>
+        </div>
+        <div class="illus-card">
+          <div class="illus-label">Everyday — The Blind Spot</div>
+          <div class="illus-text">A manager who demands honesty from his team while quietly padding his expense report. A parent who lectures a child on fairness while playing favourites. The passage names the gap between moral clarity about others and moral blindness about ourselves — not as hypocrisy but as the ordinary condition Nathan is exploiting.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COL 3: CONTEXT + PRESSURE POINTS -->
+    <div>
+      <div class="box box-orange" style="margin-bottom:14px;">
+        <div class="box-label orange-label">Historical Context</div>
+        <div style="font-size:0.84rem; line-height:1.55; color:#2c2c2c;">
+          <p style="margin-bottom:8px;"><strong>Royal impunity:</strong> Ancient Near Eastern kings had near-absolute power over life, property, and women. David's actions in ch.11 were not unusual for the political world around him — but they were being measured against a different standard. The covenant God, not the surrounding kings, set the terms.</p>
+          <p><strong>Nathan's risk:</strong> Prophets who displeased kings were killed (cf. 1 Kings 18:4). The parable form is not just rhetoric — it is survival strategy. Nathan needs David to be inside the story before he can name him in it. <strong>[VERIFY: See Walter Brueggemann, First and Second Samuel, Interpretation Commentary]</strong></p>
+        </div>
+      </div>
+
+      <div class="box-dark">
+        <div class="box-label dark-label">What the Text Is Not Saying</div>
+        <div style="font-size:0.83rem; line-height:1.55;">
+          <p style="margin-bottom:7px;">Not that David loses his salvation — God's response (v.13) is immediate: "The LORD has taken away your sin." Forgiveness and consequence coexist.</p>
+          <p>Not that the consequences are punishment in the retributive sense — they are the structural outworking of what David set in motion. Violence in the household mirrors the violence David used on Uriah.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- XREF STRIP -->
+  <div class="xref-strip">
+    <div class="xref-card">
+      <div class="xref-tag">← Context</div>
+      <div class="xref-ref">2 Samuel 11</div>
+      <div class="xref-note">The full account of adultery, pregnancy, Uriah's death — what Nathan is confronting</div>
+    </div>
+    <div class="xref-card">
+      <div class="xref-tag">≈ Parallel — David's Response</div>
+      <div class="xref-ref">Psalm 51</div>
+      <div class="xref-note">David's prayer of confession written in the aftermath — the interior response to Nathan's confrontation</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div>
+      <div class="tn-label">Then — Original Audience</div>
+      <div class="tn-text">For Israel, this passage established that the covenant king was not above the covenant law. God's choice of David did not grant immunity. Nathan's access to the king — and the king's accountability — were markers of Israel's distinction from the surrounding nations.</div>
+    </div>
+    <div>
+      <div class="tn-label">Now — Your Audience</div>
+      <div class="tn-text">The passage confronts the gap between moral clarity and self-knowledge — how readily we see injustice in others and how slowly we see it in ourselves. Nathan's method is also worth sitting with: truth reaches people most effectively when they have already agreed with it before they know it applies to them.</div>
+    </div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">The Controlling Idea</div>
+    <div class="verdict-text">"You are the man." — Nathan to David</div>
+    <div class="verdict-ref">2 Samuel 12:7 &nbsp;·&nbsp; The shortest indictment in Scripture. David had already pronounced his own sentence.</div>
+  </div>
+
+</div>
+</body>
+</html>
