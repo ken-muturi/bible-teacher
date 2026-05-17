@@ -84,10 +84,37 @@ Save to: `guides/passages/<book-chapter-verse>-study.html`
 
 ## Format Rules
 
-- All research is internal — do not output study notes in chat
+### Chat output (before the HTML)
+Output a concise study brief in chat first — this is the teacher's prep summary, not the full exegetical dump. Keep it tight:
+
+**Quick mode brief (chat):**
+- Passage reference + one-sentence placement
+- Key verse quoted
+- 2 word studies (term → transliterated original → one-sentence meaning)
+- Structure in 3 labelled beats
+- 2 illustrations (one sentence each)
+- Then → Now (two sentences total)
+
+**Deep mode brief (chat):**
+- Passage reference + one-sentence placement
+- Key verse quoted
+- 3–5 word studies (term → transliterated original → what is lost in English)
+- Structure map with all movements
+- 3–5 illustrations (two sentences each)
+- Historical context (2–3 sentences, cite sources)
+- Commentary shelf (author, title, one-sentence take per source)
+- Pressure points (main debate / common misread / open question)
+- Cross-references (tagged, one sentence each)
+- Then → Now bridge
+
+After the chat brief, generate and save the HTML panel, then open the preview.
+
+### HTML panel
+- Self-contained — all CSS in `<style>`, fonts via `@import`
 - After saving, open the preview at `http://localhost:7654/guides/passages/<filename>.html`
 - Confirm with one line: `Saved: guides/passages/<filename>.html`
-- HTML must be fully self-contained — all CSS in `<style>`, fonts via `@import`
+
+### Quality rules
 - Flag every unverified claim: **[VERIFY: what to check]**
 - Never fill a section with generic content — if no chiasm exists, don't force one
 - Never fabricate word meanings, commentary positions, or historical details
