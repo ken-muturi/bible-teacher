@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amos — Teaching Panel (3-Column)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 32px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 28px 32px; max-width: 1260px; margin: 0 auto; }
+
+  /* TITLE */
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 22px; }
+  .title-bar h1 { font-family: 'Special Elite', serif; font-size: 3rem; letter-spacing: 0.15em; }
+  .title-bar .subtitle { font-size: 1rem; color: #666; margin-top: 3px; }
+
+  /* 3-COLUMN GRID */
+  .grid { display: grid; grid-template-columns: 220px 1fr 250px; gap: 20px; align-items: start; }
+
+  /* shared */
+  .col-label { font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8; }
+
+  .box { border: 2.5px solid; border-radius: 3px; padding: 8px 11px; margin-bottom: 10px; }
+  .box-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 3px; display: block; }
+  .box-body { font-size: 0.93rem; line-height: 1.38; }
+
+  .blue   { border-color: #3b6fd4; background: #edf2fc; } .blue   .box-title { color: #3b6fd4; }
+  .green  { border-color: #2e8a4a; background: #edf7f1; } .green  .box-title { color: #2e8a4a; }
+  .red    { border-color: #c0392b; background: #fdf0ee; } .red    .box-title { color: #c0392b; }
+  .orange { border-color: #d47c1a; background: #fdf4e7; } .orange .box-title { color: #d47c1a; }
+  .purple { border-color: #6c4bbf; background: #f2eefb; } .purple .box-title { color: #6c4bbf; }
+  .dark   { border-color: #2c2c2c; background: #f0ede8; } .dark   .box-title { color: #2c2c2c; }
+  .dark-note { background: #1a1a1a; color: #f5f0e8; border-radius: 3px; padding: 8px 10px; margin-bottom: 10px; font-size: 0.92rem; line-height: 1.4; }
+  .dark-note strong { display: block; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 3px; }
+
+  /* ── LEFT COLUMN ── */
+
+  /* Trap diagram — compact vertical funnel */
+  .trap-funnel { display: flex; flex-direction: column; align-items: center; gap: 3px; margin-bottom: 12px; }
+  .trap-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .nation-pill {
+    border: 1.5px solid #aaa; border-radius: 10px; background: #fff;
+    padding: 2px 8px; font-size: 0.78rem; color: #555; white-space: nowrap;
+  }
+  .nation-pill.judah { border-color: #d47c1a; background: #fdf4e7; color: #d47c1a; }
+  .trap-down { color: #c0392b; font-size: 1.2rem; line-height: 1; }
+  .israel-pill {
+    border: 2.5px solid #c0392b; border-radius: 3px;
+    background: #c0392b; color: #fff;
+    padding: 5px 16px; font-family: 'Special Elite', serif;
+    font-size: 1.1rem; letter-spacing: 0.05em;
+  }
+  .trap-caption { font-size: 0.78rem; color: #888; text-align: center; font-style: italic; margin-top: 4px; }
+  .trap-form {
+    font-size: 0.8rem; color: #c0392b; text-align: center;
+    font-style: italic; margin-bottom: 8px; line-height: 1.35;
+  }
+
+  /* Three sermons */
+  .sermon-item { margin-bottom: 8px; padding-left: 12px; position: relative; font-size: 0.9rem; line-height: 1.35; color: #333; }
+  .sermon-item::before { content: '›'; position: absolute; left: 0; color: #c0392b; font-size: 1rem; }
+  .sermon-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #888; display: block; margin-bottom: 1px; }
+
+  /* ── MIDDLE COLUMN ── */
+
+  /* Indictment vs Requirement */
+  .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .contrast-col { border: 2px solid; border-radius: 3px; overflow: hidden; }
+  .contrast-head { padding: 6px 10px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+  .contrast-body { padding: 8px 10px; background: #fff; }
+  .contrast-item { font-size: 0.85rem; line-height: 1.35; padding: 3px 0 3px 12px; position: relative; border-bottom: 1px solid #f0f0f0; color: #333; }
+  .contrast-item:last-child { border-bottom: none; }
+  .contrast-item::before { content: '·'; position: absolute; left: 2px; }
+
+  .col-indict { border-color: #c0392b; }
+  .col-indict .contrast-head { background: #fdf0ee; color: #c0392b; }
+  .col-indict .contrast-item::before { color: #c0392b; }
+
+  .col-require { border-color: #2e8a4a; }
+  .col-require .contrast-head { background: #edf7f1; color: #2e8a4a; }
+  .col-require .contrast-item::before { color: #2e8a4a; }
+
+  /* Key passage */
+  .callout { border-left: 5px solid #2e8a4a; background: #edf7f1; padding: 10px 13px; border-radius: 0 3px 3px 0; margin-bottom: 12px; }
+  .callout-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2e8a4a; font-weight: 700; margin-bottom: 4px; }
+  .callout-text { font-size: 1.05rem; color: #1a1a1a; line-height: 1.45; }
+  .callout-ref { font-size: 0.8rem; color: #888; margin-top: 3px; }
+
+  /* Five visions */
+  .visions-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #888; margin-bottom: 8px; }
+  .visions-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 12px; }
+  .vision-card { border: 2px solid; border-radius: 3px; padding: 7px 7px; background: #fff; }
+  .vision-tag { font-size: 0.6rem; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; padding: 1px 4px; border-radius: 2px; display: block; margin-bottom: 3px; }
+  .vision-name { font-family: 'Special Elite', serif; font-size: 0.88rem; display: block; margin-bottom: 2px; }
+  .vision-ref { font-size: 0.68rem; color: #aaa; display: block; margin-bottom: 3px; }
+  .vision-outcome { font-size: 0.75rem; font-style: italic; }
+
+  .v1,.v2 { border-color: #3b6fd4; } .v1 .vision-tag,.v2 .vision-tag { background: #3b6fd4; color: #fff; } .v1 .vision-outcome,.v2 .vision-outcome { color: #3b6fd4; }
+  .v3      { border-color: #d47c1a; } .v3 .vision-tag { background: #d47c1a; color: #fff; } .v3 .vision-outcome { color: #d47c1a; }
+  .v4      { border-color: #c0392b; } .v4 .vision-tag { background: #c0392b; color: #fff; } .v4 .vision-outcome { color: #c0392b; }
+  .v5      { border-color: #1a1a1a; background: #f5f0ec; } .v5 .vision-tag { background: #1a1a1a; color: #fff; } .v5 .vision-outcome { color: #c0392b; }
+
+  /* ── RIGHT COLUMN ── */
+
+  .word-item { margin-bottom: 9px; }
+  .word-heb { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #1a1a1a; }
+  .word-gloss { font-size: 0.75rem; color: #888; font-style: italic; margin-left: 3px; }
+  .word-def { font-size: 0.85rem; color: #444; line-height: 1.3; margin-top: 2px; }
+
+  .conn-row { display: flex; align-items: baseline; gap: 5px; margin-bottom: 6px; font-size: 0.88rem; }
+  .conn-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; padding: 1px 5px; border-radius: 2px; white-space: nowrap; flex-shrink: 0; }
+  .conn-back { background: #d47c1a; color: #fff; }
+  .conn-fwd  { background: #2e8a4a; color: #fff; }
+  .conn-para { background: #6c4bbf; color: #fff; }
+
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; padding: 10px 12px; background: #f0ede8; text-align: center; margin-top: 12px; }
+  .verdict-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #1a1a1a; line-height: 1.4; }
+  .verdict-ref { font-size: 0.78rem; color: #888; margin-top: 4px; }
+
+  /* BOTTOM STRIP */
+  .bottom-strip { border-top: 2px solid #ddd; margin-top: 18px; padding-top: 13px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .strip-label { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 3px; }
+  .strip-body { font-size: 0.92rem; line-height: 1.35; }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <div class="title-bar">
+    <h1>AMOS</h1>
+    <span class="subtitle">Series 5: The Minor Prophets &nbsp;·&nbsp; Book 30 of 66 &nbsp;·&nbsp; A farmer from the south, sent north to say what no one wanted to hear</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT: Identity + Structure -->
+    <div>
+      <div class="col-label">← From the Torah</div>
+
+      <div class="box blue">
+        <span class="box-title">Author</span>
+        <span class="box-body">Amos of Tekoa — sheep breeder, fig farmer, Judahite. Sent north to Israel. Not a professional prophet: <em>"The LORD took me from following the flock."</em> (7:15)</span>
+      </div>
+
+      <div class="box dark">
+        <span class="box-title">Date &amp; Context</span>
+        <span class="box-body">~760–750 BC · Jeroboam II's reign · northern kingdom at peak prosperity and inequality · Amos preaches at Bethel, the royal sanctuary</span>
+      </div>
+
+      <div class="col-label" style="margin-top: 4px;">The Structural Trap — Chs. 1–2</div>
+
+      <div class="trap-form">"For three transgressions of X,<br>and for four, I will not revoke<br>the punishment." × 8</div>
+
+      <div class="trap-funnel">
+        <div class="trap-row">
+          <span class="nation-pill">Damascus</span>
+          <span class="nation-pill">Gaza</span>
+          <span class="nation-pill">Tyre</span>
+        </div>
+        <div class="trap-down">↓</div>
+        <div class="trap-row">
+          <span class="nation-pill">Edom</span>
+          <span class="nation-pill">Ammon</span>
+          <span class="nation-pill">Moab</span>
+        </div>
+        <div class="trap-down">↓</div>
+        <div class="trap-row">
+          <span class="nation-pill judah">Judah</span>
+        </div>
+        <div class="trap-down" style="font-size:1.5rem; font-weight:700;">⟹</div>
+        <div class="israel-pill">ISRAEL</div>
+        <div class="trap-caption">The audience cheered through six nations.<br>Shifted at Judah. The trap closed.</div>
+      </div>
+
+      <div class="col-label" style="margin-top: 12px;">Three Sermons — Chs. 3–6</div>
+      <div class="sermon-item"><span class="sermon-label">What you've become</span>Selling the righteous for silver; trampling the poor (2:6–7)</div>
+      <div class="sermon-item"><span class="sermon-label">What your religion looks like</span>"I hate, I despise your feasts" — worship without justice is an insult (5:21)</div>
+      <div class="sermon-item"><span class="sermon-label">What your comfort costs</span>"Woe to those at ease in Zion" — comfort without grief over the ruin of Joseph (6:1–6)</div>
+    </div>
+
+    <!-- MIDDLE: Content -->
+    <div>
+      <div class="col-label">The Indictment vs. The Requirement</div>
+
+      <div class="contrast">
+        <div class="contrast-col col-indict">
+          <div class="contrast-head">What Israel Was Doing</div>
+          <div class="contrast-body">
+            <div class="contrast-item">Selling the needy for a pair of sandals (2:6)</div>
+            <div class="contrast-item">Elaborate festivals, songs, offerings (5:21–23)</div>
+            <div class="contrast-item">Ivory beds, choice lambs, wine (6:4)</div>
+            <div class="contrast-item">Women of Samaria crushing the poor (4:1)</div>
+            <div class="contrast-item">At ease — not grieving the ruin of Joseph (6:6)</div>
+          </div>
+        </div>
+        <div class="contrast-col col-require">
+          <div class="contrast-head">What God Required</div>
+          <div class="contrast-body">
+            <div class="contrast-item">Seek good and not evil, that you may live (5:14)</div>
+            <div class="contrast-item">Hate evil, love good, establish justice in the gate (5:15)</div>
+            <div class="contrast-item">Justice and righteousness — not religious performance</div>
+            <div class="contrast-item">Amos 9:7 — covenant ≠ immunity. God moves all nations.</div>
+            <div class="contrast-item">The Exodus gave responsibility, not privilege</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key passage -->
+      <div class="callout">
+        <div class="callout-label">Key Passage — Read Aloud · Amos 5:21–24</div>
+        <div class="callout-text">"I hate, I despise your feasts... But let justice roll down like waters, and righteousness like an ever-flowing stream."</div>
+        <div class="callout-ref">Amos 5:21, 24 (ESV) — the whole book in two sentences</div>
+      </div>
+
+      <!-- Five Visions -->
+      <div class="visions-label">Five Visions — Chs. 7–9 · Escalating · God relents at 1 &amp; 2; from 3, no more</div>
+      <div class="visions-row">
+        <div class="vision-card v1">
+          <span class="vision-tag">Relents</span>
+          <span class="vision-name">Locusts</span>
+          <span class="vision-ref">7:1–3</span>
+          <span class="vision-outcome">"It shall not be." (7:3)</span>
+        </div>
+        <div class="vision-card v2">
+          <span class="vision-tag">Relents</span>
+          <span class="vision-name">Fire</span>
+          <span class="vision-ref">7:4–6</span>
+          <span class="vision-outcome">"This also shall not be." (7:6)</span>
+        </div>
+        <div class="vision-card v3">
+          <span class="vision-tag">No more</span>
+          <span class="vision-name">Plumb Line</span>
+          <span class="vision-ref">7:7–9</span>
+          <span class="vision-outcome">"I will never again pass by." (7:8) [VERIFY]</span>
+        </div>
+        <div class="vision-card v4">
+          <span class="vision-tag">Wordplay</span>
+          <span class="vision-name">Summer Fruit</span>
+          <span class="vision-ref">8:1–3</span>
+          <span class="vision-outcome">Qaitz (fruit) = Qetz (end). (8:2)</span>
+        </div>
+        <div class="vision-card v5">
+          <span class="vision-tag">No escape</span>
+          <span class="vision-name">God at Altar</span>
+          <span class="vision-ref">9:1–4</span>
+          <span class="vision-outcome">"For evil and not for good." (9:4)</span>
+        </div>
+      </div>
+
+      <!-- Confrontation -->
+      <div class="box" style="border-color:#6c4bbf; background:#f2eefb;">
+        <span class="box-title" style="color:#6c4bbf;">The Confrontation — 7:10–17</span>
+        <span class="box-body">Amaziah (priest of Bethel) reports Amos to King Jeroboam and orders him home. Amos refuses — his authority is divine call, not institutional permission. The live question: who gets to speak prophetically, and by whose authority?</span>
+      </div>
+
+      <!-- Hard question -->
+      <div class="dark-note">
+        <strong>Hard Question</strong>
+        Is Amos 9:11–15 (the sudden restoration promise) original? Many scholars argue it was added later to soften the book. Others defend it. Name both positions — don't pretend it isn't live. [VERIFY: Shalom Paul or James Mays]
+      </div>
+    </div>
+
+    <!-- RIGHT: Words + Links + Application -->
+    <div>
+      <div class="col-label">Key Words</div>
+
+      <div class="word-item">
+        <span class="word-heb">מִשְׁפָּט / Mishpat <span class="word-gloss">(Justice)</span></span>
+        <div class="word-def">Active restoration of right community relationship — not just avoiding wrong. "Let justice roll down like waters." (5:24)</div>
+      </div>
+      <div class="word-item">
+        <span class="word-heb">צְדָקָה / Tzedakah <span class="word-gloss">(Righteousness)</span></span>
+        <div class="word-def">Rightly ordered relationship — outward, social. Always paired with mishpat. Together: what God actually requires of a community.</div>
+      </div>
+      <div class="word-item">
+        <span class="word-heb">יוֹם יְהוָה / Yom YHWH <span class="word-gloss">(Day of the LORD)</span></span>
+        <div class="word-def">Israel expected a victory parade. Amos flips it: "It is darkness, not light." (5:18) One of the earliest uses — and the sharpest inversion.</div>
+      </div>
+      <div class="word-item">
+        <span class="word-heb">שְׁאָנַן / Sha'anan <span class="word-gloss">(At ease / complacent)</span></span>
+        <div class="word-def">"At ease in Zion" (6:1). Not active evil — settled indifference. Obliviousness to what is happening around you.</div>
+      </div>
+
+      <div class="col-label" style="margin-top:4px;">Cross-Bible Links</div>
+      <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Deut 15 / Lev 25 — economic laws Israel is violating</span></div>
+      <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Exodus 9:7 — invoked then subverted; covenant ≠ immunity</span></div>
+      <div class="conn-row"><span class="conn-label conn-fwd">NT →</span><span>Acts 15:16–17 — James quotes Amos 9:11–12 at Jerusalem Council</span></div>
+      <div class="conn-row"><span class="conn-label conn-fwd">NT →</span><span>Matthew 23:23 — Jesus on neglecting "justice and mercy" echoes Amos</span></div>
+      <div class="conn-row"><span class="conn-label conn-para">≈</span><span>Isaiah 1 — nearly identical indictment, same period</span></div>
+      <div class="conn-row"><span class="conn-label conn-para">≈</span><span>Micah 6:8 — "do justice, love kindness" — Amos summarized in three words</span></div>
+
+      <div class="col-label" style="margin-top:4px;">Then → Now</div>
+      <div class="box purple">
+        <span class="box-title">The Indictment That Travels</span>
+        <span class="box-body">Amos doesn't let you choose between orthodoxy and justice. Israel was theologically careful and economically indifferent — and God called it an insult. Religious communities today can be simultaneously articulate about belief and inattentive to the neighbor.</span>
+      </div>
+
+      <div class="verdict">
+        <div class="verdict-label">What Amos Uniquely Contributes</div>
+        <div class="verdict-text">Worship that bypasses the poor is not worship of the God of Israel. It is something else wearing his name.</div>
+        <div class="verdict-ref">The standard every prophet after Amos inherits</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM STRIP -->
+  <div class="bottom-strip">
+    <div>
+      <div class="strip-label">Period / Setting</div>
+      <div class="strip-body">~760–750 BC · Jeroboam II · northern kingdom at peak prosperity · preaches at Bethel, the royal sanctuary</div>
+    </div>
+    <div>
+      <div class="strip-label">Question to Sit With</div>
+      <div class="strip-body">Amos says God despises worship disconnected from how worshippers treat the vulnerable. What would it mean for a community — not as a program, but as a definition — to take that seriously?</div>
+    </div>
+    <div>
+      <div class="strip-label">Next in Series</div>
+      <div class="strip-body">Obadiah → one chapter, the shortest book in the OT. Judgment on Edom for standing by while Jerusalem fell. A very different register from Amos.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

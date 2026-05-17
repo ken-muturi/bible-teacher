@@ -72,6 +72,13 @@ Four numbered movements flow downward from the thesis (1:16–17), each feeding 
 
 ---
 
+### Amos — 3-column (default layout)
+Standard three-column grid: left holds identity, the compact trap diagram, and three-sermon summary; center holds the indictment/requirement contrast, key passage, five visions, and confrontation; right holds key words, cross-links, and application.
+
+![Amos Teaching Panel 3-Column](visual-aids/screenshots/amos-panel-3col.png)
+
+---
+
 ### Amos — `--non-constrained` (funnel trap layout)
 The rhetorical trap structure drives the layout: six nations flow across the top, close down through Judah, then snap onto Israel — visually enacting what Amos does rhetorically in chapters 1–2. Below: the indictment vs. requirement contrast, the full-width 5:24 passage, five escalating visions, and the application grid.
 
