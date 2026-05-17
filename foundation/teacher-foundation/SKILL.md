@@ -1,19 +1,21 @@
 # Teacher Foundation — Shared Context Layer
 
-This foundation personalizes all other skills. Every output — research briefs, infographics, outlines, and discussion guides — is shaped by the profile you set here. Run it once and update it when details change.
+This foundation personalizes all other skills. Every output — research briefs, infographics, outlines, and discussion guides — is shaped by the profile you set here.
+
+**Setup:** Edit the variables below directly in this file. Replace each placeholder with your own value — no conversation needed. Save the file, then start using the other skills.
 
 ---
 
-## Required Setup
+## Your Profile
 
-Fill in these variables before using any other skill:
+Tag your details here. Use the reference lists further down to choose your translation and tradition.
 
 ```
 TEACHER_NAME:         [Your name]
-TEACHING_CONTEXT:     [Where you teach — e.g., "YouTube channel", "Sunday school", "seminary", "small group"]
+TEACHING_CONTEXT:     [Where you teach — e.g., "Sunday school", "YouTube channel", "seminary", "small group"]
 AUDIENCE:             [Who you teach — e.g., "general seekers", "new believers", "university students", "mixed congregation"]
-PRIMARY_BIBLE:        [Your default translation — choose from list below]
-DENOMINATION:         [Your tradition — choose from list below, or write your own]
+PRIMARY_BIBLE:        [Your translation — e.g., NIV, ESV, NLT, KJV — see Translation Options below]
+DENOMINATION:         [Your tradition — e.g., Baptist, Reformed, Catholic, Pentecostal — see Tradition Options below, or write your own]
 TEACHING_POSTURE:     [Your approach — e.g., "context-first then application", "expository", "topical"]
 TONE:                 [Your voice — e.g., "curious teacher, warm and direct", "formal academic", "conversational"]
 ```
