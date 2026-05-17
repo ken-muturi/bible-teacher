@@ -74,8 +74,9 @@ discussion-guide judges
 ## Setup (do this once)
 
 1. Open `foundation/teacher-foundation/SKILL.md`
-2. Fill in your six profile variables (name, channel, audience, translation, posture, tone)
-3. That foundation is then referenced by all other skills automatically
+2. Fill in your profile variables — name, teaching context, audience, Bible translation, denominational tradition, posture, and tone
+3. The file includes a full list of translation options (ESV, NIV, NLT, KJV, NABRE, NJB, and more) and denominational traditions (Baptist, Catholic, Reformed, Orthodox, Pentecostal, and more) to choose from
+4. Every skill output is shaped by this profile — research emphasis, interpretive framing, commentary recommendations, and application bridges all adapt to your tradition and audience
 
 ---
 
