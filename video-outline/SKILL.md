@@ -1,6 +1,6 @@
 # Video Outline — Script Structure Skill
 
-Turns a completed book-overview brief into a structured video outline.
+Turns a completed book-overview brief into a structured teaching outline.
 This produces a talking-points outline, not a word-for-word script.
 
 **Prerequisite:** teacher-foundation + a completed book-overview brief for this book.
@@ -11,7 +11,7 @@ This produces a talking-points outline, not a word-for-word script.
 
 Provide:
 - **Book name**
-- **Target length** (default: 18-22 minutes)
+- **Target length** (default: 18-22 minutes — adjust for your format)
 - **Anything to emphasize** (optional — "spend more time on the historical background" or "audience asked about the authorship question")
 - **Anything to skip** (optional — "assume they've already seen my Genesis video")
 

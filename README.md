@@ -1,6 +1,6 @@
 # Bible Teacher — AI Skill Toolkit
 
-A set of workflow tools for producing YouTube Bible teaching content.
+A set of workflow tools for producing Bible teaching content.
 Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skills/) architecture by Thomas Costello.
 
 ---
