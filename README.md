@@ -16,7 +16,13 @@ This toolkit runs on [Claude](https://claude.ai) by Anthropic. You need one of t
 2. Upgrade to Claude Pro for best results (required for long research sessions)
 3. Create a **Project** — this keeps your teacher profile and skills persistent across conversations
 
-**Option B — Claude Code (terminal, recommended for power users)**
+**Option B — Claude Desktop (recommended for most teachers)**
+1. Download the Claude desktop app for [Mac or Windows](https://claude.ai/download)
+2. Sign in with your Anthropic account (or create one)
+3. Create a **Project** and add your skill files — works identically to Claude.ai but as a native app
+4. Upgrade to Claude Pro for best results
+
+**Option C — Claude Code (terminal, for power users)**
 1. Install [Node.js](https://nodejs.org) if you don't have it
 2. Install Claude Code:
    ```bash
