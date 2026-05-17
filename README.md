@@ -31,8 +31,7 @@ Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skil
 1. Run book-overview             →  research brief
 2. Run book-overview-infographic →  HTML visual teaching panel
 3. Run video-outline             →  talking-points structure
-4. Film your video
-5. Run discussion-guide          →  companion resource
+4. Run discussion-guide          →  companion resource
 ```
 
 ---
