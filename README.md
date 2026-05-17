@@ -89,6 +89,7 @@ discussion-guide judges
 | Book Overview Infographic | `book-overview-infographic/SKILL.md` | HTML visual teaching panel from the research brief |
 | Video Outline | `video-outline/SKILL.md` | Talking-points outline for a teaching session |
 | Discussion Guide | `discussion-guide/SKILL.md` | Printable one-page study companion for groups |
+| Passage Study | `passage-study/SKILL.md` | Deep dive on a verse or chapter — word studies, illustrations, and HTML visual panel |
 
 ### Discussion Guide
 
