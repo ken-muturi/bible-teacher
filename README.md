@@ -34,7 +34,7 @@ Each guide includes:
 - **Going deeper** — one book, one resource, one passage to read alongside
 - **Closing thought** — one sentence on what this book uniquely contributes
 
-Output: `discussion-guides/<book>-discussion-guide.html` — print-ready via browser.
+Output: `guides/discussions/<book>-discussion-guide.html` — print-ready via browser.
 
 ---
 
@@ -66,35 +66,35 @@ The default 3-column layout is consistent and printable across all 66 books.
 ### Judges — `--non-constrained` (downward descent layout)
 The layout mirrors the book's spiral: each judge card is indented further right as quality deteriorates, collapsing into a dark zone for chapters 17–21 where no judge appears.
 
-![Judges Teaching Panel](visual-aids/screenshots/judges-panel.png)
+![Judges Teaching Panel](guides/visuals/screenshots/judges-panel.png)
 
 ---
 
 ### Leviticus — `--non-constrained` (two-part arc layout)
 Structured around the two halves of the book with the Day of Atonement (ch. 16) as the red hinge between "Approaching God" and "Living as Holy."
 
-![Leviticus Teaching Panel](visual-aids/screenshots/leviticus-panel.png)
+![Leviticus Teaching Panel](guides/visuals/screenshots/leviticus-panel.png)
 
 ---
 
 ### Romans — `--non-constrained` (argument cascade layout)
 Four numbered movements flow downward from the thesis (1:16–17), each feeding logically into the next: Problem → Solution → Israel Question → Practice.
 
-![Romans Teaching Panel](visual-aids/screenshots/romans-panel.png)
+![Romans Teaching Panel](guides/visuals/screenshots/romans-panel.png)
 
 ---
 
 ### Amos — 3-column (default layout)
 Standard three-column grid: left holds identity, the compact trap diagram, and three-sermon summary; center holds the indictment/requirement contrast, key passage, five visions, and confrontation; right holds key words, cross-links, and application.
 
-![Amos Teaching Panel 3-Column](visual-aids/screenshots/amos-panel-3col.png)
+![Amos Teaching Panel 3-Column](guides/visuals/screenshots/amos-panel-3col.png)
 
 ---
 
 ### Amos — `--non-constrained` (funnel trap layout)
 The rhetorical trap structure drives the layout: six nations flow across the top, close down through Judah, then snap onto Israel — visually enacting what Amos does rhetorically in chapters 1–2. Below: the indictment vs. requirement contrast, the full-width 5:24 passage, five escalating visions, and the application grid.
 
-![Amos Teaching Panel](visual-aids/screenshots/amos-panel.png)
+![Amos Teaching Panel](guides/visuals/screenshots/amos-panel.png)
 
 ---
 

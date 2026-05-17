@@ -120,7 +120,7 @@ These are present regardless of layout:
 
 ## File Output
 
-Save to: `visual-aids/<bookname-lowercase>-panel.html`
+Save to: `guides/visuals/<bookname-lowercase>-panel.html`
 
 The file must be fully self-contained — all CSS in a `<style>` block, fonts via `@import`. No external scripts or stylesheets beyond the Google Fonts CDN.
 

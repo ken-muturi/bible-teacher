@@ -62,6 +62,12 @@ Specific, verifiable resources — not generic suggestions:
 
 ---
 
+## File Output
+
+Save to: `guides/discussions/<bookname-lowercase>-discussion-guide.html`
+
+---
+
 ### Closing Thought
 One sentence that captures what this book uniquely contributes to the Bible's larger story.
 Phrased as an observation, not a command.
