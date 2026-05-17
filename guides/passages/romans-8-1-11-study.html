@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Romans 8:1–11 — Passage Study Panel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 26px 30px; max-width: 1260px; margin: 0 auto; }
+
+  /* TITLE BAR */
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 22px; }
+  .title-bar h1 { font-family: 'Special Elite', serif; font-size: 2.8rem; letter-spacing: 0.1em; }
+  .title-bar .book-tag { font-size: 0.85rem; color: #666; margin-top: 2px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .title-bar .summary { font-size: 1.1rem; color: #2c2c2c; margin-top: 6px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout {
+    border-left: 5px solid #3b6fd4;
+    background: #eef2fb;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    border-radius: 0 3px 3px 0;
+  }
+  .passage-callout .label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #3b6fd4; margin-bottom: 6px; }
+  .passage-callout .text { font-size: 0.95rem; line-height: 1.65; color: #2c2c2c; }
+  .passage-callout .ref { font-size: 0.78rem; color: #555; margin-top: 8px; }
+
+  /* MAIN GRID */
+  .main-grid { display: grid; grid-template-columns: 1fr 1fr 280px; gap: 18px; align-items: start; }
+
+  /* SECTION BOXES */
+  .box { border: 2px solid; border-radius: 3px; padding: 13px 15px; }
+  .box-blue  { border-color: #3b6fd4; background: #eef2fb; }
+  .box-green { border-color: #2e8a4a; background: #eaf4ee; }
+  .box-red   { border-color: #c0392b; background: #fbeaea; }
+  .box-orange{ border-color: #d47c1a; background: #fdf3e3; }
+  .box-purple{ border-color: #6c4bbf; background: #f0ecfb; }
+  .box-dark  { background: #1a1a1a; color: #f5f0e8; border: 2.5px solid #2c2c2c; border-radius: 3px; padding: 13px 15px; }
+
+  .box-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 7px; font-weight: 700; }
+  .blue-label  { color: #3b6fd4; }
+  .green-label { color: #2e8a4a; }
+  .red-label   { color: #c0392b; }
+  .orange-label{ color: #d47c1a; }
+  .purple-label{ color: #6c4bbf; }
+  .dark-label  { color: #aaa; }
+
+  /* WORD STUDY STRIP */
+  .word-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 20px; }
+  .word-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 10px 11px; }
+  .word-english { font-family: 'Special Elite', serif; font-size: 1.0rem; color: #2c2c2c; }
+  .word-greek { font-size: 0.82rem; color: #3b6fd4; margin-top: 2px; font-style: italic; }
+  .word-meaning { font-size: 0.78rem; color: #444; margin-top: 4px; line-height: 1.4; }
+
+  /* STRUCTURE BEATS */
+  .beats { display: flex; flex-direction: column; gap: 8px; }
+  .beat { border: 2px solid; border-radius: 3px; padding: 10px 13px; display: flex; gap: 12px; align-items: flex-start; }
+  .beat-num { font-family: 'Special Elite', serif; font-size: 1.4rem; min-width: 28px; }
+  .beat-body { flex: 1; }
+  .beat-ref { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+  .beat-title { font-size: 1.0rem; font-weight: 700; }
+  .beat-desc { font-size: 0.82rem; margin-top: 3px; line-height: 1.45; }
+
+  /* ILLUSTRATIONS */
+  .illus-grid { display: flex; flex-direction: column; gap: 9px; }
+  .illus-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #f0ecfb; padding: 10px 13px; }
+  .illus-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6c4bbf; margin-bottom: 4px; }
+  .illus-text { font-size: 0.85rem; line-height: 1.5; color: #2c2c2c; }
+
+  /* COMMENTARY SHELF */
+  .commentary { display: flex; flex-direction: column; gap: 9px; }
+  .comm-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf3e3; padding: 10px 13px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; }
+  .comm-title { font-style: italic; font-size: 0.8rem; color: #555; margin-top: 1px; }
+  .comm-note { font-size: 0.78rem; color: #444; margin-top: 5px; line-height: 1.4; }
+  .comm-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: #d47c1a; margin-top: 4px; }
+
+  /* XREF STRIP */
+  .xref-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 18px; }
+  .xref-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #f5f0e8; padding: 8px 10px; }
+  .xref-tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 2px; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; }
+  .xref-note { font-size: 0.72rem; color: #555; margin-top: 3px; line-height: 1.35; }
+
+  /* THEN NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f0ecfb; padding: 14px 18px; margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .then-now .half .tn-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6c4bbf; margin-bottom: 5px; }
+  .then-now .half .tn-text { font-size: 0.88rem; line-height: 1.55; color: #2c2c2c; }
+
+  /* VERDICT */
+  .verdict { text-align: center; border: 3px solid #2c2c2c; border-radius: 3px; background: #1a1a1a; color: #f5f0e8; padding: 14px 20px; margin-top: 18px; }
+  .verdict-label { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.3rem; color: #fff; line-height: 1.4; }
+  .verdict-ref { font-size: 0.78rem; color: #888; margin-top: 5px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .panel { border: none; padding: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <!-- TITLE BAR -->
+  <div class="title-bar">
+    <h1>Romans 8:1–11</h1>
+    <div class="book-tag">Paul's Letter to the Romans &nbsp;·&nbsp; Theological Argument &nbsp;·&nbsp; NIV</div>
+    <div class="summary">The verdict reversed — no condemnation, the Spirit indwelling, resurrection power already at work</div>
+  </div>
+
+  <!-- PASSAGE CALLOUT -->
+  <div class="passage-callout">
+    <div class="label">Key Verse</div>
+    <div class="text">
+      <strong>v.1</strong> — "Therefore, there is now no condemnation for those who are in Christ Jesus, because through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death."
+      <br><br>
+      <strong>v.11</strong> — "And if the Spirit of him who raised Jesus from the dead is in you, he who raised Christ from the dead will also give life to your mortal bodies because of his Spirit who lives in you."
+    </div>
+    <div class="ref">Romans 8:1–2, 11 (NIV) &nbsp;·&nbsp; Pivot of the letter — chapters 1–7 are the diagnosis; chapter 8 is the prognosis</div>
+  </div>
+
+  <!-- WORD STUDY STRIP -->
+  <div class="word-strip">
+    <div class="word-card">
+      <div class="word-english">Condemnation</div>
+      <div class="word-greek">katakrima</div>
+      <div class="word-meaning">The executed sentence, not just guilt. The penalty declared after verdict — legally vacated in v.1.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-english">Flesh</div>
+      <div class="word-greek">sarx</div>
+      <div class="word-meaning">Not the body — the whole person oriented away from God. A mode of existence, not a moral tendency. NIV's "sinful nature" narrows this.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-english">Mindset</div>
+      <div class="word-greek">phronēma</div>
+      <div class="word-meaning">Governing orientation of the whole person — where the self is aimed. Not just what you think but what you are set toward.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-english">Dwells / Lives in</div>
+      <div class="word-greek">oikeō</div>
+      <div class="word-meaning">To make one's home (oikos = house). Permanent residence, not a visit. The Spirit inhabits as a homeowner.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-english">Law of the Spirit</div>
+      <div class="word-greek">nomos tou pneumatos</div>
+      <div class="word-meaning">Not a legal code — a ruling power. The force of the Spirit that governs life, contrasted with the power of sin and death.</div>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- COL 1: STRUCTURE + CONTEXT -->
+    <div>
+      <div class="box box-blue" style="margin-bottom:14px;">
+        <div class="box-label blue-label">Structure — Three Beats</div>
+        <div class="beats">
+          <div class="beat" style="border-color:#c0392b; background:#fbeaea;">
+            <div class="beat-num" style="color:#c0392b;">1</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#c0392b;">vv.1–4 — Legal</div>
+              <div class="beat-title">The Verdict Reversed</div>
+              <div class="beat-desc">Sentence vacated → Christ did what the law could not → the law's requirement now met in us</div>
+            </div>
+          </div>
+          <div class="beat" style="border-color:#d47c1a; background:#fdf3e3;">
+            <div class="beat-num" style="color:#d47c1a;">2</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#d47c1a;">vv.5–8 — Ethical</div>
+              <div class="beat-title">Two Orientations</div>
+              <div class="beat-desc">Flesh-set mind → death, hostility, cannot please God. Spirit-set mind → life, peace. Not two equal options — one is a dead end.</div>
+            </div>
+          </div>
+          <div class="beat" style="border-color:#2e8a4a; background:#eaf4ee;">
+            <div class="beat-num" style="color:#2e8a4a;">3</div>
+            <div class="beat-body">
+              <div class="beat-ref" style="color:#2e8a4a;">vv.9–11 — Eschatological</div>
+              <div class="beat-title">The Present Reality</div>
+              <div class="beat-desc">You are already in the realm of the Spirit → body still dies → Spirit gives life → resurrection power already at work in you</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-orange">
+        <div class="box-label orange-label">Historical &amp; Cultural Context</div>
+        <div style="font-size:0.84rem; line-height:1.55; color:#2c2c2c;">
+          <p style="margin-bottom:8px;"><strong>Roman legal culture:</strong> katakrima was a publicly declared, permanent sentence. "No condemnation" is a legal reversal with public standing — not a private reassurance.</p>
+          <p style="margin-bottom:8px;"><strong>Not Platonic:</strong> Paul's flesh/Spirit contrast is not body vs. soul. Flesh is self-curved-in-on-itself (the old age). Spirit is the new age breaking in — not immaterial, but the divine presence actively inhabiting the person.</p>
+          <p><strong>The Shekinah:</strong> oikeō echoes God's dwelling in the tabernacle and temple (Ex 25:8). Paul's claim: what the Jerusalem temple was — God's dwelling — is now the believer. <strong>[VERIFY: Fee, God's Empowering Presence, pp.543–553]</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COL 2: ILLUSTRATIONS + PRESSURE POINTS -->
+    <div>
+      <div style="margin-bottom:14px;">
+        <div class="box-label purple-label" style="margin-bottom:8px;">Teaching Illustrations</div>
+        <div class="illus-grid">
+          <div class="illus-card">
+            <div class="illus-label">Legal — The Vacated Sentence</div>
+            <div class="illus-text">A man on death row receives not a stay of execution but full exoneration — the conviction overturned, the record cleared. He doesn't walk out on parole. He walks out with no case against him. That is katakrima reversed.</div>
+          </div>
+          <div class="illus-card">
+            <div class="illus-label">Everyday — Operating System</div>
+            <div class="illus-text">Two people can use the same hardware but run on entirely different operating systems — one built around self-optimization, the other oriented toward something beyond the self. The machine looks identical from outside. The phronēma is the OS, not the processor.</div>
+          </div>
+          <div class="illus-card">
+            <div class="illus-label">Dwelling — Tenant to Homeowner</div>
+            <div class="illus-text">A tenant maintains a house to avoid complaints. A homeowner invests because it's theirs. When the Spirit oikeō — takes up residence — the relationship to the body changes. Not rules to keep but a home to inhabit well.</div>
+          </div>
+          <div class="illus-card">
+            <div class="illus-label">Orientation — The Compass</div>
+            <div class="illus-text">A compass doesn't fight to find north. It is oriented to it. The phronēma set on the Spirit is not daily willpower to think differently — it is a reorientation of the whole person. The effort is not in the pointing; it is in what you are calibrated to.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-dark">
+        <div class="box-label dark-label">Interpretive Pressure Points</div>
+        <div style="font-size:0.83rem; line-height:1.55; margin-bottom:8px;"><strong style="color:#f5f0e8;">Main debate:</strong> What is Romans 7 describing? If pre-Christian, 8:1 announces a categorically different existence. If Christian, it's relief after ongoing struggle. Most current scholarship (Moo, Wright, Dunn) reads 7 as pre-Christian.</div>
+        <div style="font-size:0.83rem; line-height:1.55; margin-bottom:8px;"><strong style="color:#f5f0e8;">Common misread:</strong> "No condemnation" read as "God is no longer angry." The actual claim is forensic — the death sentence vacated. Makes the passage about managing God's disappointment instead of inhabiting a new legal status.</div>
+        <div style="font-size:0.83rem; line-height:1.55;"><strong style="color:#f5f0e8;">Open question:</strong> v.10 — "your body is subject to death because of sin" even after the Spirit indwells. Physical death still coming, or the old mode of the body the Spirit is already overcoming? v.11 points toward resurrection as the answer but the tension in v.10 is real.</div>
+      </div>
+    </div>
+
+    <!-- COL 3: COMMENTARY + SIDEBAR -->
+    <div>
+      <div style="margin-bottom:14px;">
+        <div class="box-label orange-label" style="margin-bottom:8px;">Commentary Shelf</div>
+        <div class="commentary">
+          <div class="comm-card">
+            <div class="comm-author">Douglas Moo</div>
+            <div class="comm-title">The Letter to the Romans (NICNT, 2nd ed., 2018)</div>
+            <div class="comm-note">Standard evangelical commentary. On 8:1, argues katakrima is strictly forensic — change of legal standing, not experience. Strong on "righteous requirement" (v.4) and justification.</div>
+            <div class="comm-tag">Reformed / Evangelical</div>
+          </div>
+          <div class="comm-card">
+            <div class="comm-author">N.T. Wright</div>
+            <div class="comm-title">Paul for Everyone: Romans Part 1 (2004)</div>
+            <div class="comm-note">Reads vv.1–11 within a new-exodus frame — the Spirit doing what the law at Sinai could not. "Flesh" as the old age, not just individual sinfulness. Opens the corporate and cosmic dimensions.</div>
+            <div class="comm-tag">Anglican / Ecumenical</div>
+          </div>
+          <div class="comm-card">
+            <div class="comm-author">Gordon Fee</div>
+            <div class="comm-title">God's Empowering Presence (Hendrickson, 1994)</div>
+            <div class="comm-note">Definitive study of Pauline pneumatology. On vv.9–11: the Spirit's oikeō is not metaphorical — it is the present reality of the new age breaking in. Resurrection of v.11 is prospective, built on the Spirit's present indwelling.</div>
+            <div class="comm-tag">Pentecostal / Evangelical</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-red">
+        <div class="box-label red-label">What the Text Is Not Saying</div>
+        <div style="font-size:0.82rem; line-height:1.5; color:#2c2c2c;">
+          <p style="margin-bottom:6px;">Not "God no longer gets angry at you" — the claim is legal, not emotional.</p>
+          <p style="margin-bottom:6px;">Not a contrast between body (bad) and soul (good) — Paul is not Platonic.</p>
+          <p>Not a formula for sinless perfection — the body still dies (v.10); the Spirit's work is present and prospective.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CROSS-REFERENCE STRIP -->
+  <div class="xref-strip">
+    <div class="xref-card">
+      <div class="xref-tag">← OT Source</div>
+      <div class="xref-ref">Ezekiel 36:26–27</div>
+      <div class="xref-note">"I will put my Spirit in you" — the prophetic promise Paul sees fulfilled</div>
+    </div>
+    <div class="xref-card">
+      <div class="xref-tag">← OT Echo</div>
+      <div class="xref-ref">Genesis 2:7</div>
+      <div class="xref-note">God breathed life into Adam — oikeō echoes the original life-giving in-breathing</div>
+    </div>
+    <div class="xref-card">
+      <div class="xref-tag">← Romans Foundation</div>
+      <div class="xref-ref">Romans 5:1</div>
+      <div class="xref-note">"Peace with God through faith" — the forensic foundation that makes 8:1 possible</div>
+    </div>
+    <div class="xref-card">
+      <div class="xref-tag">NT → Outworking</div>
+      <div class="xref-ref">Galatians 5:16–25</div>
+      <div class="xref-note">"Walk by the Spirit" — the ethical outworking of the same flesh/Spirit contrast</div>
+    </div>
+    <div class="xref-card">
+      <div class="xref-tag">≈ Parallel</div>
+      <div class="xref-ref">John 3:5–8</div>
+      <div class="xref-note">"Born of the Spirit" — the same two-age, two-realm contrast in a different idiom</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="half">
+      <div class="tn-label">Then — Original Audience</div>
+      <div class="tn-text">For Paul's Roman audience — Jews and Gentiles both under the verdict of the law — "no condemnation" was a legal declaration that the death sentence standing over every person in Adam had been vacated, not deferred. The Spirit's indwelling was the sign that the new age had broken in.</div>
+    </div>
+    <div class="half">
+      <div class="tn-label">Now — Your Audience</div>
+      <div class="tn-text">The Christian life does not begin with trying harder to qualify. The verdict is already in, the Spirit has already moved in, and the power that raised a dead man is already at work. The question is not how to earn the status — it is how to live from it.</div>
+    </div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">The Controlling Idea</div>
+    <div class="verdict-text">"Therefore, there is now no condemnation for those who are in Christ Jesus."</div>
+    <div class="verdict-ref">Romans 8:1 — Not an encouragement. A legal declaration. The starting line, not the finish line.</div>
+  </div>
+
+</div>
+</body>
+</html>
