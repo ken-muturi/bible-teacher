@@ -114,7 +114,28 @@ Output: `guides/discussions/<book>-discussion-guide.html` — print-ready via br
 2. Run book-overview-infographic →  HTML visual teaching panel
 3. Run video-outline             →  talking-points structure
 4. Run discussion-guide          →  companion resource
+5. python3 scripts/to-pdf.py --all  →  PDF versions of all guides
 ```
+
+---
+
+## PDF Export
+
+Convert any HTML guide or visual panel to PDF:
+
+```bash
+# Install dependency (once)
+pip3 install -r requirements.txt
+
+# Convert a specific file
+python3 scripts/to-pdf.py guides/discussions/judges-discussion-guide.html
+
+# Convert all guides and panels at once
+python3 scripts/to-pdf.py --all
+```
+
+Discussion guides export as A4 portrait. Visual panels export as A3 landscape.
+PDFs are saved alongside the HTML files in the same folder.
 
 ---
 
