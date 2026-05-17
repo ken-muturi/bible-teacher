@@ -72,6 +72,13 @@ Four numbered movements flow downward from the thesis (1:16–17), each feeding 
 
 ---
 
+### Amos — `--non-constrained` (funnel trap layout)
+The rhetorical trap structure drives the layout: six nations flow across the top, close down through Judah, then snap onto Israel — visually enacting what Amos does rhetorically in chapters 1–2. Below: the indictment vs. requirement contrast, the full-width 5:24 passage, five escalating visions, and the application grid.
+
+![Amos Teaching Panel](visual-aids/screenshots/amos-panel.png)
+
+---
+
 ## Channel Curriculum
 
 See `CURRICULUM.md` for the full 66-book curriculum organized into 9 playlist series.
