@@ -66,6 +66,8 @@ Specific, verifiable resources — not generic suggestions:
 
 Save to: `guides/discussions/<bookname-lowercase>-discussion-guide.html`
 
+After saving, open the preview at `http://localhost:7654/guides/discussions/<bookname-lowercase>-discussion-guide.html`
+
 ---
 
 ### Closing Thought

@@ -85,6 +85,7 @@ Save to: `guides/passages/<book-chapter-verse>-study.html`
 ## Format Rules
 
 - All research is internal — do not output study notes in chat
+- After saving, open the preview at `http://localhost:7654/guides/passages/<filename>.html`
 - Confirm with one line: `Saved: guides/passages/<filename>.html`
 - HTML must be fully self-contained — all CSS in `<style>`, fonts via `@import`
 - Flag every unverified claim: **[VERIFY: what to check]**
