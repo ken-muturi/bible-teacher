@@ -20,8 +20,21 @@ Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skil
 | Teacher Foundation | `foundation/teacher-foundation/SKILL.md` | Personalizes all outputs with your profile |
 | Book Overview | `book-overview/SKILL.md` | Deep research brief for any of the 66 books |
 | Book Overview Infographic | `book-overview-infographic/SKILL.md` | HTML visual teaching panel from the research brief |
-| Video Outline | `video-outline/SKILL.md` | Talking-points outline for an 18-22 min video |
-| Discussion Guide | `discussion-guide/SKILL.md` | Printable study companion for groups |
+| Video Outline | `video-outline/SKILL.md` | Talking-points outline for a teaching session |
+| Discussion Guide | `discussion-guide/SKILL.md` | Printable one-page study companion for groups |
+
+### Discussion Guide
+
+A one-page printable HTML resource generated from the completed teaching outline. Designed for small groups, classrooms, or self-study — no prior Bible knowledge assumed.
+
+Each guide includes:
+- **Before you engage** — 3 questions anyone can answer before the session
+- **Key terms** — plain-language definitions, no jargon
+- **Discussion questions** — tagged by type (Observation / Context / Application); no yes/no questions, no easy answers
+- **Going deeper** — one book, one resource, one passage to read alongside
+- **Closing thought** — one sentence on what this book uniquely contributes
+
+Output: `discussion-guides/<book>-discussion-guide.html` — print-ready via browser.
 
 ---
 
