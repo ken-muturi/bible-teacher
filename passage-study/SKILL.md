@@ -113,7 +113,7 @@ After the chat brief, generate and save the HTML panel, then open the preview.
 ### HTML panel
 - Self-contained — all CSS in `<style>`, fonts via `@import`
 - After saving, open the preview at `http://localhost:7654/guides/passages/<filename>.html`
-- Confirm with one line: `Saved: guides/passages/<filename>.html`
+- Confirm with one line as a clickable link: `[guides/passages/<filename>.html](http://localhost:7654/guides/passages/<filename>.html)`
 
 ### Quality rules
 - Flag every unverified claim: **[VERIFY: what to check]**
