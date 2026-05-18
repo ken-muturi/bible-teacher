@@ -63,6 +63,20 @@ Claude fetches the skills manifest, creates all skill directories, and confirms 
 > ```
 > Then run the one-liner above to install everything else.
 
+**Already installed? Get the latest version:**
+
+```
+update skills from https://github.com/ken-muturi/bible-teacher
+```
+
+Or simply:
+
+```
+update skills
+```
+
+Claude will fetch the latest version of every skill and overwrite the existing files. New skills added to the repo since your last install will be added automatically.
+
 ### Option 2 — Git clone (full repo)
 
 Clone the repository and run Claude Code from inside it:
