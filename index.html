@@ -88,6 +88,47 @@
   .copy-btn:hover { background: #444; color: #ccc; }
   .copy-btn.copied { background: #2e8a4a; color: #fff; border-color: #2e8a4a; }
 
+  /* ── PROMPT CHIP ── */
+  .card-prompt {
+    display: inline-block; margin-top: 7px;
+    font-size: 0.62rem; font-family: monospace; letter-spacing: 0.04em;
+    background: #1a1a1a; color: #7eb8f7;
+    border-radius: 2px; padding: 2px 7px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;
+  }
+
+  /* ── GO TO TOWN STRIP ── */
+  .cta-strip {
+    grid-column: 1 / -1;
+    background: #2c2c2c; border: 2.5px solid #1a1a1a;
+    border-radius: 4px; padding: 28px 28px;
+    display: flex; align-items: center; gap: 28px;
+  }
+  .cta-text { flex: 1; }
+  .cta-heading {
+    font-family: 'Special Elite', serif; font-size: 1.35rem;
+    color: #f5f0e8; margin-bottom: 6px;
+  }
+  .cta-sub { font-size: 0.88rem; color: #aaa; line-height: 1.55; }
+  .cta-examples {
+    margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .cta-chip {
+    font-size: 0.65rem; font-family: monospace; color: #7eb8f7;
+    background: #111; border-radius: 2px; padding: 3px 9px;
+    white-space: nowrap;
+  }
+  .cta-arrow {
+    font-family: 'Special Elite', serif; font-size: 3rem;
+    color: #444; flex-shrink: 0; line-height: 1;
+  }
+
+  /* ── EXAMPLES NOTICE ── */
+  .examples-notice {
+    font-size: 0.75rem; color: #999; font-style: italic;
+    margin-bottom: 18px; text-align: center;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     body { padding: 20px 16px 60px; }
@@ -112,7 +153,7 @@
 
   <div class="header">
     <h1>Bible Teacher</h1>
-    <p>All generated guides — click any card to open</p>
+    <p>Sample outputs — every panel below was generated from a single skill prompt</p>
   </div>
 
   <div class="sections">
@@ -124,36 +165,44 @@
         <a class="guide-card card-blue" href="guides/visuals/mark-panel.html">
           <div class="card-book">Mark</div>
           <div class="card-type">Servant in motion layout</div>
+          <code class="card-prompt">book-overview Mark --non-constrained</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/judges-panel.html">
           <div class="card-book">Judges</div>
           <div class="card-type">Downward descent layout</div>
+          <code class="card-prompt">book-overview Judges --non-constrained</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/leviticus-panel.html">
           <div class="card-book">Leviticus</div>
           <div class="card-type">Two-part arc layout</div>
+          <code class="card-prompt">book-overview Leviticus --non-constrained</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/romans-panel.html">
           <div class="card-book">Romans</div>
           <div class="card-type">Argument cascade layout</div>
+          <code class="card-prompt">book-overview Romans --non-constrained</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/amos-panel.html">
           <div class="card-book">Amos</div>
           <div class="card-type">Funnel trap layout</div>
+          <code class="card-prompt">book-overview Amos --non-constrained</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/amos-panel-3col.html">
           <div class="card-book">Amos</div>
           <div class="card-type">3-column default layout</div>
           <span class="card-badge badge-3col">3-col</span>
+          <code class="card-prompt">book-overview Amos</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/judges-panel-3col.html">
           <div class="card-book">Judges</div>
           <div class="card-type">3-column default layout</div>
           <span class="card-badge badge-3col">3-col</span>
+          <code class="card-prompt">book-overview Judges</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/hosea-panel.html">
           <div class="card-book">Hosea</div>
           <div class="card-type">The Wounded Husband — love that will not let go</div>
+          <code class="card-prompt">book-overview Hosea --non-constrained</code>
         </a>
       </div>
     </div>
@@ -165,6 +214,7 @@
         <a class="guide-card card-orange" href="guides/discussions/judges-discussion-guide.html">
           <div class="card-book">Judges</div>
           <div class="card-type">Small group study companion</div>
+          <code class="card-prompt">discussion-guide Judges</code>
         </a>
       </div>
     </div>
@@ -177,36 +227,44 @@
           <div class="card-book">2 Samuel 12:1–14</div>
           <div class="card-type">Nathan confronts David</div>
           <span class="card-badge badge-deep">Deep</span>
+          <code class="card-prompt">passage-study 2 Samuel 12:1–14 --deep</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/romans-8-1-11-study.html">
           <div class="card-book">Romans 8:1–11</div>
           <div class="card-type">Life in the Spirit</div>
+          <code class="card-prompt">passage-study Romans 8:1–11</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/2-samuel-11-study.html">
           <div class="card-book">2 Samuel 11</div>
           <div class="card-type">The anatomy of a fall</div>
+          <code class="card-prompt">passage-study 2 Samuel 11</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/psalm-51-study.html">
           <div class="card-book">Psalm 51</div>
           <div class="card-type">The anatomy of repentance</div>
+          <code class="card-prompt">passage-study Psalm 51</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/psalm-51-deep-study.html">
           <div class="card-book">Psalm 51</div>
           <div class="card-type">Courson · MacArthur · Piper · Spurgeon · Kidner</div>
           <span class="card-badge badge-deep">Deep</span>
+          <code class="card-prompt">passage-study Psalm 51 --deep</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/gods-power-to-raise.html">
           <div class="card-book">Amos 9:11 · Judges 13–16</div>
           <div class="card-type">God's power to raise — Samson sermon panel</div>
+          <code class="card-prompt">passage-study Judges 13–16 --deep</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/hosea-sermon.html">
           <div class="card-book">Hosea 1–3 · 6:6 · 14:1–4</div>
           <div class="card-type">Love that will not let go — sermon structure</div>
+          <code class="card-prompt">passage-study Hosea --sermon</code>
         </a>
         <a class="guide-card card-purple" href="guides/passages/hosea-deep-study.html">
           <div class="card-book">Hosea 1–14</div>
           <div class="card-type">Courson · MacArthur · Piper · Spurgeon · Kidner</div>
           <span class="card-badge badge-deep">Deep</span>
+          <code class="card-prompt">passage-study Hosea 1–14 --deep</code>
         </a>
       </div>
     </div>
@@ -217,12 +275,14 @@
       <div class="guide-list" style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
         <a class="guide-card card-blue" href="guides/visuals/bible-timeline-full.html">
           <div class="card-book">Adam → Jesus</div>
-          <div class="card-type">Full timeline — lifespans, family tree, contemporaries, books in context</div>
+          <div class="card-type">Full timeline — lifespans, family tree, contemporaries, books in context, prophets</div>
+          <code class="card-prompt">bible-timeline full</code>
         </a>
         <a class="guide-card card-blue" href="guides/visuals/bible-timeline-events.html">
           <div class="card-book">The Spine of Biblical History</div>
           <div class="card-type">20 pivotal events — books written, prophets active, excluded books, canon formation</div>
           <span class="card-badge badge-deep">Deep</span>
+          <code class="card-prompt">bible-timeline events</code>
         </a>
       </div>
     </div>
@@ -234,11 +294,32 @@
         <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/visuals/judges-amos-comparison.html">
           <div class="card-book" style="color:#2c2c2c;">Judges × Amos</div>
           <div class="card-type">Same failure, 300 years apart — neglect vs. injustice</div>
+          <code class="card-prompt">book-overview Judges Amos --compare</code>
         </a>
         <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/passages/david-fall-and-return.html">
           <div class="card-book" style="color:#2c2c2c;">2 Samuel 11 × Psalm 51</div>
           <div class="card-type">The fall and the return — same man, same God</div>
+          <code class="card-prompt">passage-study 2 Samuel 11 Psalm 51 --compare</code>
         </a>
+      </div>
+    </div>
+
+    <!-- GO TO TOWN CTA -->
+    <div class="cta-strip">
+      <div class="cta-arrow">↓</div>
+      <div class="cta-text">
+        <div class="cta-heading">These are just examples — now go to town</div>
+        <div class="cta-sub">Every panel above came from a single prompt. Install the skills below and generate overviews for any of the 66 books, deep studies on any passage, discussion guides for any series, timelines for any figure or era — the toolkit handles the rest.</div>
+        <div class="cta-examples">
+          <span class="cta-chip">book-overview Genesis</span>
+          <span class="cta-chip">book-overview Revelation --non-constrained</span>
+          <span class="cta-chip">passage-study John 1:1–18 --deep</span>
+          <span class="cta-chip">discussion-guide Romans</span>
+          <span class="cta-chip">bible-timeline Moses</span>
+          <span class="cta-chip">bible-timeline exile</span>
+          <span class="cta-chip">passage-study Isaiah 53 --deep</span>
+          <span class="cta-chip">book-overview Philippians</span>
+        </div>
       </div>
     </div>
 
