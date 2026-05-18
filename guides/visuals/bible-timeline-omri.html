@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bible Timeline — Omri: The Forgotten Founder</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 24px 16px 48px;
+    color: #2c2c2c;
+  }
+
+  /* ── HOME NAV ── */
+  .home-nav {
+    padding: 0 0 16px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .home-nav-link {
+    font-family: 'Caveat', cursive;
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: none;
+    border-bottom: 1px dashed #aaa;
+  }
+  .home-nav-link:hover { color: #555; }
+
+  /* ── PANEL ── */
+  .panel {
+    background: #faf7f2;
+    border: 3px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 32px 36px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #2c2c2c;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  .header h1 {
+    font-family: 'Special Elite', serif;
+    font-size: 3.2rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+  .header .subtitle {
+    font-size: 1.25rem;
+    color: #444;
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+  .header .meta {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 6px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .header .era-badge {
+    display: inline-block;
+    margin-top: 10px;
+    background: #c0392b;
+    color: #fff;
+    font-family: 'Special Elite', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 2px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #e0ddd8;
+  }
+
+  section { margin-bottom: 40px; }
+
+  /* ══════════════════════════════════════════
+     SECTION 1 — ERA STRIP
+  ══════════════════════════════════════════ */
+  .era-strip {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid #2c2c2c;
+    height: 56px;
+    margin-bottom: 8px;
+  }
+  .era-band {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .era-band span {
+    font-family: 'Special Elite', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    line-height: 1.25;
+    padding: 0 4px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+    pointer-events: none;
+  }
+  .era-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 10px;
+  }
+  .era-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+  .era-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 2 — LIFESPAN BARS
+  ══════════════════════════════════════════ */
+  .timeline-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .timeline-inner {
+    min-width: 700px;
+  }
+  .axis-row {
+    display: flex;
+    margin-left: 108px;
+    margin-bottom: 4px;
+  }
+  .axis-tick {
+    flex: 1;
+    text-align: left;
+    font-size: 0.6rem;
+    color: #aaa;
+    border-left: 1px dashed #ddd;
+    padding-left: 2px;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 8px;
+  }
+  .bar-name {
+    width: 100px;
+    flex-shrink: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: right;
+    color: #333;
+    white-space: nowrap;
+  }
+  .bar-name.focus {
+    font-family: 'Special Elite', serif;
+    color: #c0392b;
+    font-size: 0.95rem;
+  }
+  .bar-track {
+    flex: 1;
+    background: #e8e4dc;
+    border-radius: 2px;
+    height: 22px;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    min-width: 24px;
+  }
+  .bar-fill span {
+    font-size: 0.7rem;
+    color: #fff;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    overflow: hidden;
+  }
+  .bar-date {
+    font-size: 0.72rem;
+    color: #888;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 140px;
+  }
+  .group-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    margin: 12px 0 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .group-divider {
+    border: none;
+    border-top: 1px dashed #ddd;
+    margin: 10px 0;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 3 — FAMILY TREE
+  ══════════════════════════════════════════ */
+  .tree-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tree-container {
+    min-width: 860px;
+    padding: 8px 0 16px;
+  }
+
+  .tree-spine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .tree-node-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tree-connector {
+    width: 2px;
+    height: 22px;
+    background: #2c2c2c;
+    flex-shrink: 0;
+  }
+  .tree-connector-dashed {
+    width: 2px;
+    height: 22px;
+    border-left: 2px dashed #aaa;
+    flex-shrink: 0;
+  }
+  .tree-node {
+    border: 2px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 5px 12px;
+    background: #faf7f2;
+    text-align: center;
+    min-width: 130px;
+    position: relative;
+  }
+  .tree-node.focus-node {
+    border-color: #c0392b;
+    border-width: 3px;
+    background: #fdf2f0;
+  }
+  .tree-node .tn-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+  }
+  .tree-node .tn-badge {
+    display: inline-block;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-top: 2px;
+    color: #fff;
+  }
+  .tree-node .tn-date {
+    font-size: 0.7rem;
+    color: #777;
+    margin-top: 2px;
+  }
+  .branch-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+  .branch-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .branch-h-line {
+    height: 2px;
+    background: #aaa;
+    width: 50px;
+    margin-top: 14px;
+    flex-shrink: 0;
+  }
+  .branch-h-line-long {
+    height: 2px;
+    background: #aaa;
+    width: 80px;
+    margin-top: 14px;
+    flex-shrink: 0;
+  }
+  .branch-node {
+    border: 2px dashed #aaa;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: #f0ede8;
+    text-align: center;
+    min-width: 100px;
+  }
+  .branch-node.sidon-branch {
+    border-color: #2980b9;
+    background: #eaf4fb;
+  }
+  .branch-node .bn-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  .branch-node.sidon-branch .bn-name { color: #2471a3; }
+  .branch-node .bn-note {
+    font-size: 0.65rem;
+    color: #888;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  .branch-connector-v {
+    width: 2px;
+    height: 14px;
+    background: #aaa;
+  }
+  .branch-connector-v-blue {
+    width: 2px;
+    height: 14px;
+    background: #2980b9;
+  }
+
+  /* Grandchildren row */
+  .grandchild-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+  }
+  .gc-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gc-h {
+    height: 2px;
+    background: #aaa;
+    width: 40px;
+    margin-top: 14px;
+    flex-shrink: 0;
+  }
+  .gc-v {
+    width: 2px;
+    height: 18px;
+    background: #aaa;
+  }
+
+  /* Rival box */
+  .rivals-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+  .rival-card {
+    border: 2px dashed #c0392b;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background: #fdf5f5;
+    text-align: center;
+    min-width: 130px;
+  }
+  .rival-card .rc-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c0392b;
+    margin-bottom: 3px;
+  }
+  .rival-card .rc-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.88rem;
+    color: #2c2c2c;
+  }
+  .rival-card .rc-note {
+    font-size: 0.68rem;
+    color: #888;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 4 — CONTEMPORARIES
+  ══════════════════════════════════════════ */
+  .contemporaries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .contemp-col-head {
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    border-radius: 2px;
+    color: #fff;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  .contemp-card {
+    border: 2px solid #e0ddd8;
+    border-radius: 4px;
+    padding: 12px 14px;
+    background: #faf7f2;
+    margin-bottom: 10px;
+  }
+  .contemp-card:last-child { margin-bottom: 0; }
+  .contemp-era {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #fff;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .contemp-names {
+    font-family: 'Special Elite', serif;
+    font-size: 1.0rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 3px;
+    color: #2c2c2c;
+  }
+  .contemp-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 5px;
+  }
+  .contemp-note {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: #444;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 5 — KEY EVENTS
+  ══════════════════════════════════════════ */
+  .events-timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+  .events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: linear-gradient(to bottom, #c0392b, #c0392b88, #8b1a1a);
+    border-radius: 2px;
+  }
+  .event-item {
+    position: relative;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .event-dot {
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #faf7f2;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px #c0392b;
+    background: #c0392b;
+  }
+  .event-dot.dot-dark {
+    background: #8b1a1a;
+    box-shadow: 0 0 0 2px #8b1a1a;
+  }
+  .event-dot.dot-ahab {
+    background: #d47c1a;
+    box-shadow: 0 0 0 2px #d47c1a;
+  }
+  .event-dot.dot-jehu {
+    background: #2e8a4a;
+    box-shadow: 0 0 0 2px #2e8a4a;
+  }
+  .event-body {}
+  .event-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .event-date {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: 8px;
+  }
+  .event-note {
+    font-size: 0.82rem;
+    color: #555;
+    margin-top: 2px;
+    line-height: 1.35;
+  }
+  .event-ref {
+    font-size: 0.72rem;
+    color: #aaa;
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 6 — BOOKS IN CONTEXT
+  ══════════════════════════════════════════ */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .books-card {
+    border: 2px solid;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .books-card-head {
+    padding: 7px 11px;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .books-card-body {
+    padding: 10px 12px;
+    background: #faf7f2;
+  }
+  .books-card-date {
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  .books-list {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #333;
+  }
+  .books-list .book-pill {
+    display: inline-block;
+    background: #f0ede8;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin: 1px 2px 1px 0;
+    font-size: 0.78rem;
+  }
+  .books-note {
+    font-size: 0.78rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  .books-xref {
+    font-size: 0.78rem;
+    color: #555;
+    margin-top: 6px;
+    line-height: 1.45;
+    border-left: 2px solid #e0ddd8;
+    padding-left: 8px;
+  }
+  .books-xref span {
+    font-family: 'Special Elite', serif;
+    font-size: 0.82rem;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 7 — THEN / NOW
+  ══════════════════════════════════════════ */
+  .then-now-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .then-box, .now-box {
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .then-box {
+    background: #fdf5f5;
+    border: 2px solid #c0392b;
+  }
+  .now-box {
+    background: #f2f8f5;
+    border: 2px solid #2e8a4a;
+  }
+  .tn-head {
+    font-family: 'Special Elite', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .then-box .tn-head { color: #c0392b; }
+  .now-box .tn-head { color: #2e8a4a; }
+  .tn-body {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #333;
+  }
+
+  /* ══════════════════════════════════════════
+     ASSYRIAN / EXTERNAL NOTE
+  ══════════════════════════════════════════ */
+  .external-note {
+    background: #f8f5ee;
+    border: 1.5px solid #bbb;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 0.84rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: -16px;
+    margin-bottom: 40px;
+  }
+  .external-note strong {
+    font-family: 'Special Elite', serif;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .panel { padding: 20px 16px; }
+    .header h1 { font-size: 2.1rem; }
+    .header .subtitle { font-size: 1.05rem; }
+    .era-strip { height: 42px; }
+    .era-band span { font-size: 0.48rem; }
+    .contemporaries-grid,
+    .books-grid,
+    .then-now-grid {
+      grid-template-columns: 1fr;
+    }
+    .bar-name { width: 80px; font-size: 0.8rem; }
+    .bar-date { display: none; }
+    .tree-container { min-width: 700px; }
+    .events-timeline { padding-left: 28px; }
+  }
+  @media (max-width: 480px) {
+    body { padding: 12px 8px 32px; }
+    .contemporaries-grid,
+    .books-grid,
+    .then-now-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
+
+<div class="panel">
+
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════ -->
+  <div class="header">
+    <h1>Omri</h1>
+    <div class="subtitle">The Forgotten Founder — Builder of Samaria, Father of the Omride Dynasty</div>
+    <div class="meta">Divided Kingdom · ~885–874 BC · 1 Kings 16</div>
+    <div class="era-badge">Divided Kingdom</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — ERA BAND STRIP
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Era in Context</div>
+
+    <!-- Approximate proportional widths for 910–830 BC = 80 years -->
+    <!-- Context: United Kingdom ends ~930 BC, Divided Kingdom continues -->
+    <div class="era-strip">
+      <!-- 910–930 represents the tail of United Kingdom (pre-split shown smaller) -->
+      <div class="era-band" style="width:6%; background:#d4a017;">
+        <span>United</span>
+      </div>
+      <!-- Divided Kingdom 930–830 BC = 100 yr, our window 910–830 -->
+      <div class="era-band" style="width:94%; background:#c0392b;">
+        <span>Divided Kingdom (Israel &amp; Judah) · ~930–722 BC</span>
+      </div>
+    </div>
+
+    <!-- Timeline ruler: 910 → 830 BC in 10-year steps = 8 ticks -->
+    <div style="display:flex; margin-left:0; margin-top:4px; font-size:0.62rem; color:#aaa; letter-spacing:0.05em;">
+      <span style="flex:1;">910 BC</span>
+      <span style="flex:1; text-align:center;">900</span>
+      <span style="flex:1; text-align:center;">890</span>
+      <span style="flex:1; text-align:center;">880</span>
+      <span style="flex:1; text-align:center;">870</span>
+      <span style="flex:1; text-align:center;">860</span>
+      <span style="flex:1; text-align:center;">850</span>
+      <span style="flex:1; text-align:center;">840</span>
+      <span style="flex:1; text-align:right;">830 BC</span>
+    </div>
+
+    <div class="era-legend">
+      <div class="era-legend-item"><div class="era-dot" style="background:#c0392b;"></div> Divided Kingdom</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#2e8a4a;"></div> Judah kings</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#7c3aed;"></div> Prophets</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#1a5276;"></div> Foreign powers</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — LIFESPAN BARS
+       Timeline span: 910 BC → 830 BC = 80 years
+       Each 1% = 0.8 years
+       left% = (910 - start) / 80 * 100
+       width% = (start - end) / 80 * 100
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Lifespans &amp; Reigns (~910–830 BC)</div>
+    <div class="timeline-wrap">
+      <div class="timeline-inner">
+
+        <!-- axis ticks -->
+        <div class="axis-row">
+          <div class="axis-tick">910</div>
+          <div class="axis-tick">900</div>
+          <div class="axis-tick">890</div>
+          <div class="axis-tick">880</div>
+          <div class="axis-tick">870</div>
+          <div class="axis-tick">860</div>
+          <div class="axis-tick">850</div>
+          <div class="axis-tick">840</div>
+          <div class="axis-tick">830</div>
+        </div>
+
+        <!-- ISRAEL KINGS -->
+        <div class="group-label" style="background:#c0392b;">Israel (Northern Kingdom)</div>
+
+        <!-- Omri: reigned 885–874 BC; born ~900 BC -->
+        <!-- bar: life 900–874: left=(910-900)/80=12.5%, width=(900-874)/80=32.5% -->
+        <!-- reign overlay 885–874: left=(910-885)/80=31.25%, width=(885-874)/80=13.75% -->
+        <div class="bar-row">
+          <div class="bar-name focus">Omri</div>
+          <div class="bar-track">
+            <!-- full life bar (lighter) -->
+            <div class="bar-fill" style="left:12.5%; width:32.5%; background:#e88070; opacity:0.5;">
+              <span></span>
+            </div>
+            <!-- reign bar (solid) -->
+            <div class="bar-fill" style="left:31.25%; width:13.75%; background:#c0392b;">
+              <span>King</span>
+            </div>
+          </div>
+          <div class="bar-date">~900–874 BC (reigned 885–874)</div>
+        </div>
+
+        <!-- Ahab: reigned 874–853 BC; born ~875 BC -->
+        <!-- life: (910-875)/80=43.75%, width=(875-853)/80=27.5% -->
+        <!-- reign: (910-874)/80=45%, width=(874-853)/80=26.25% -->
+        <div class="bar-row">
+          <div class="bar-name">Ahab</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:43.75%; width:27.5%; background:#e09050; opacity:0.5;">
+              <span></span>
+            </div>
+            <div class="bar-fill" style="left:45%; width:26.25%; background:#d47c1a;">
+              <span>King</span>
+            </div>
+          </div>
+          <div class="bar-date">~875–853 BC (reigned 874–853)</div>
+        </div>
+
+        <!-- Ahaziah of Israel: reigned 853–852 BC -->
+        <!-- (910-853)/80=71.25%, width=(853-852)/80=1.25% -->
+        <div class="bar-row">
+          <div class="bar-name">Ahaziah (I)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:71.25%; width:1.25%; background:#c0392b;">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar-date">reigned 853–852 BC</div>
+        </div>
+
+        <!-- Joram of Israel: reigned 852–841 BC -->
+        <!-- (910-852)/80=72.5%, width=(852-841)/80=13.75% -->
+        <div class="bar-row">
+          <div class="bar-name">Joram (I)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:72.5%; width:13.75%; background:#c0392b;">
+              <span>King</span>
+            </div>
+          </div>
+          <div class="bar-date">reigned 852–841 BC</div>
+        </div>
+
+        <hr class="group-divider">
+
+        <!-- JUDAH KINGS -->
+        <div class="group-label" style="background:#2e8a4a;">Judah (Southern Kingdom)</div>
+
+        <!-- Asa of Judah: 910–869 BC reign -->
+        <!-- (910-910)/80=0%, width=(910-869)/80=51.25% -->
+        <div class="bar-row">
+          <div class="bar-name">Asa</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:0%; width:51.25%; background:#2e8a4a;">
+              <span>King of Judah</span>
+            </div>
+          </div>
+          <div class="bar-date">~910–869 BC</div>
+        </div>
+
+        <!-- Jehoshaphat of Judah: 872–848 BC -->
+        <!-- (910-872)/80=47.5%, width=(872-848)/80=30% -->
+        <div class="bar-row">
+          <div class="bar-name">Jehoshaphat</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:47.5%; width:30%; background:#27ae60;">
+              <span>King of Judah</span>
+            </div>
+          </div>
+          <div class="bar-date">~872–848 BC</div>
+        </div>
+
+        <!-- Athaliah: Queen regnant 841–835 BC -->
+        <!-- (910-841)/80=86.25%, width=(841-835)/80=7.5% -->
+        <div class="bar-row">
+          <div class="bar-name">Athaliah</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:86.25%; width:7.5%; background:#8e44ad;">
+              <span>Queen</span>
+            </div>
+          </div>
+          <div class="bar-date">queen regnant 841–835 BC</div>
+        </div>
+
+        <hr class="group-divider">
+
+        <!-- PROPHETS -->
+        <div class="group-label" style="background:#7c3aed;">Prophets</div>
+
+        <!-- Elijah: ~875–848 BC -->
+        <!-- (910-875)/80=43.75%, width=(875-848)/80=33.75% -->
+        <div class="bar-row">
+          <div class="bar-name">Elijah</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:43.75%; width:33.75%; background:#7c3aed;">
+              <span>Active</span>
+            </div>
+          </div>
+          <div class="bar-date">~875–848 BC</div>
+        </div>
+
+        <!-- Elisha: ~850–800 BC (shown to 830) -->
+        <!-- (910-850)/80=75%, width=(850-830)/80=25% -->
+        <div class="bar-row">
+          <div class="bar-name">Elisha</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:75%; width:25%; background:#9b59b6;">
+              <span>Active →</span>
+            </div>
+          </div>
+          <div class="bar-date">~852–798 BC</div>
+        </div>
+
+        <hr class="group-divider">
+
+        <!-- FOREIGN POWERS -->
+        <div class="group-label" style="background:#1a5276;">Foreign Powers</div>
+
+        <!-- Ethbaal of Sidon: ~887–856 BC (approx) -->
+        <!-- (910-887)/80=28.75%, width=(887-856)/80=38.75% -->
+        <div class="bar-row">
+          <div class="bar-name">Ethbaal (Sidon)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:28.75%; width:38.75%; background:#2980b9;">
+              <span>King of Sidon</span>
+            </div>
+          </div>
+          <div class="bar-date">fl. ~887–856 BC</div>
+        </div>
+
+        <!-- Ben-Hadad I of Syria: ~880–841 BC -->
+        <!-- (910-880)/80=37.5%, width=(880-841)/80=48.75% -->
+        <div class="bar-row">
+          <div class="bar-name">Ben-Hadad I (Aram)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:37.5%; width:48.75%; background:#1a5276;">
+              <span>King of Aram</span>
+            </div>
+          </div>
+          <div class="bar-date">~880–841 BC</div>
+        </div>
+
+        <!-- Shalmaneser III of Assyria: 858–824 BC -->
+        <!-- (910-858)/80=65%, width=(858-830)/80=35% (to edge of chart) -->
+        <div class="bar-row">
+          <div class="bar-name">Shalmaneser III</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:65%; width:35%; background:#5d6d7e;">
+              <span>Assyria →</span>
+            </div>
+          </div>
+          <div class="bar-date">~858–824 BC</div>
+        </div>
+
+        <!-- Mesha of Moab: ~853–810 BC (shown from 853) -->
+        <!-- (910-853)/80=71.25%, width=(853-830)/80=28.75% -->
+        <div class="bar-row">
+          <div class="bar-name">Mesha (Moab)</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="left:71.25%; width:28.75%; background:#7b241c;">
+              <span>King of Moab</span>
+            </div>
+          </div>
+          <div class="bar-date">fl. ~853 BC onward</div>
+        </div>
+
+      </div><!-- /timeline-inner -->
+    </div><!-- /timeline-wrap -->
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — OMRIDE FAMILY TREE
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">The Omride Dynasty — Family Tree</div>
+    <div class="tree-scroll">
+      <div class="tree-container">
+
+        <!-- ROOT: Omri -->
+        <div class="tree-spine">
+
+          <div class="tree-node-wrap">
+            <div class="tree-node focus-node">
+              <div class="tn-name">Omri</div>
+              <div style="display:flex; justify-content:center; gap:4px; flex-wrap:wrap; margin-top:3px;">
+                <span class="tn-badge" style="background:#c0392b;">King of Israel</span>
+              </div>
+              <div class="tn-date">reigned 885–874 BC</div>
+              <div style="font-size:0.68rem;color:#888;margin-top:2px;">Founded Samaria · 1 Kgs 16:21–28</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- Ahab level — with side branch for Jezebel from Ethbaal -->
+          <div class="branch-group" style="width:100%; max-width:700px;">
+
+            <!-- Left spacer / Ethbaal branch on far left -->
+            <div class="branch-col">
+              <div class="branch-h-line-long" style="background:#2980b9;"></div>
+            </div>
+
+            <!-- Ethbaal (Sidon) side node -->
+            <div class="branch-col">
+              <div class="branch-node sidon-branch">
+                <div class="bn-name">Ethbaal</div>
+                <div class="bn-note">King of Sidon<br>Jezebel's father</div>
+              </div>
+              <div class="branch-connector-v-blue"></div>
+              <div class="branch-node sidon-branch" style="border-style:solid;">
+                <div class="bn-name">Jezebel</div>
+                <div class="bn-note">Princess of Sidon<br>married Ahab<br>introduced Baal worship</div>
+              </div>
+              <div class="branch-connector-v-blue"></div>
+              <!-- Marriage arrow pointing right to Ahab — just a line -->
+              <div style="display:flex;align-items:center;gap:0;">
+                <div style="height:2px;width:40px;background:#2980b9;margin-top:0;"></div>
+                <span style="font-size:0.62rem;color:#2980b9;letter-spacing:0.08em;text-transform:uppercase;margin-left:2px;">marriage<br>alliance</span>
+              </div>
+            </div>
+
+            <!-- Central vertical connector to Ahab -->
+            <div class="branch-col">
+              <!-- extra space -->
+              <div style="height:14px;"></div>
+              <div class="tree-node" style="margin-top:6px;">
+                <div class="tn-name">Ahab</div>
+                <div style="display:flex; justify-content:center; gap:4px; flex-wrap:wrap; margin-top:3px;">
+                  <span class="tn-badge" style="background:#d47c1a;">King of Israel</span>
+                </div>
+                <div class="tn-date">reigned 874–853 BC</div>
+                <div style="font-size:0.68rem;color:#888;margin-top:2px;">+ Jezebel of Sidon · 1 Kgs 16:29</div>
+              </div>
+            </div>
+
+            <!-- Right filler -->
+            <div class="branch-col" style="flex:1;"></div>
+
+          </div><!-- /branch-group -->
+
+          <!-- Connector Ahab → children -->
+          <div class="tree-connector" style="margin-left:30px;"></div>
+
+          <!-- Grandchildren row: Ahaziah, Joram, Athaliah -->
+          <div class="grandchild-row" style="max-width:700px; margin:0 auto;">
+
+            <!-- Ahaziah of Israel -->
+            <div class="gc-col">
+              <div class="gc-h"></div>
+            </div>
+            <div class="gc-col">
+              <div class="tree-node">
+                <div class="tn-name">Ahaziah of Israel</div>
+                <span class="tn-badge" style="background:#c0392b;">King</span>
+                <div class="tn-date">reigned 853–852 BC</div>
+                <div style="font-size:0.65rem;color:#aaa;margin-top:2px;">2 years · 2 Kgs 1</div>
+              </div>
+            </div>
+
+            <!-- spacing -->
+            <div class="gc-col">
+              <div class="gc-h"></div>
+              <div style="width:20px;"></div>
+              <div class="gc-h"></div>
+            </div>
+
+            <!-- Joram of Israel -->
+            <div class="gc-col">
+              <div class="tree-node">
+                <div class="tn-name">Joram of Israel</div>
+                <span class="tn-badge" style="background:#c0392b;">King</span>
+                <div class="tn-date">reigned 852–841 BC</div>
+                <div style="font-size:0.65rem;color:#aaa;margin-top:2px;">killed by Jehu · 2 Kgs 9</div>
+              </div>
+            </div>
+
+            <!-- spacing -->
+            <div class="gc-col">
+              <div class="gc-h"></div>
+              <div style="width:20px;"></div>
+              <div class="gc-h"></div>
+            </div>
+
+            <!-- Athaliah -->
+            <div class="gc-col">
+              <div class="tree-node" style="border-color:#8e44ad;">
+                <div class="tn-name">Athaliah</div>
+                <span class="tn-badge" style="background:#8e44ad;">Queen of Judah</span>
+                <div class="tn-date">reigned 841–835 BC</div>
+                <div style="font-size:0.65rem;color:#aaa;margin-top:2px;">married Jehoram of Judah<br>Only queen regnant · 2 Kgs 11</div>
+              </div>
+            </div>
+
+            <div class="gc-col">
+              <div class="gc-h"></div>
+            </div>
+
+          </div><!-- /grandchild-row -->
+
+          <!-- Athaliah sub-line: Ahaziah of Judah -->
+          <div style="display:flex;justify-content:flex-end;max-width:700px;margin:0 auto;padding-right:40px;">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div class="gc-v"></div>
+              <div class="tree-node" style="border-color:#8e44ad; min-width:160px;">
+                <div class="tn-name">Ahaziah of Judah</div>
+                <span class="tn-badge" style="background:#8e44ad;">King of Judah</span>
+                <div class="tn-date">reigned 841 BC</div>
+                <div style="font-size:0.65rem;color:#aaa;margin-top:2px;">killed by Jehu · Athaliah seizes throne</div>
+              </div>
+              <div style="font-size:0.72rem;color:#8e44ad;margin-top:6px;font-style:italic;">→ Omride blood in Judah's royal line ends 835 BC (Joash revealed)</div>
+            </div>
+          </div>
+
+        </div><!-- /tree-spine -->
+
+        <!-- Rivals box -->
+        <div class="rivals-row">
+          <div class="rival-card">
+            <div class="rc-label">Rival / Predecessor</div>
+            <div class="rc-name">Zimri</div>
+            <div class="rc-note">Killed Elah; reigned 7 days<br>~885 BC · burned palace &amp; died<br>1 Kgs 16:9–20</div>
+          </div>
+          <div class="rival-card">
+            <div class="rc-label">Rival Claimant</div>
+            <div class="rc-name">Tibni son of Ginath</div>
+            <div class="rc-note">Civil war ~885–880 BC<br>Died; Omri sole king<br>1 Kgs 16:21–22</div>
+          </div>
+        </div>
+
+      </div><!-- /tree-container -->
+    </div><!-- /tree-scroll -->
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — CONTEMPORARIES
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Contemporaries</div>
+    <div class="contemporaries-grid">
+
+      <!-- Column 1: Judah Kings -->
+      <div>
+        <div class="contemp-col-head" style="background:#2e8a4a;">Judah Kings</div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#2e8a4a;">Judah</div>
+          <div class="contemp-names">Asa of Judah</div>
+          <div class="contemp-label">King · ~910–869 BC</div>
+          <div class="contemp-note">Overlapped Omri's entire reign. Sought alliance with Ben-Hadad I of Aram against Israel (1 Kgs 15:18–20). Known for religious reforms in Judah, yet stumbled in later years.</div>
+        </div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#27ae60;">Judah</div>
+          <div class="contemp-names">Jehoshaphat of Judah</div>
+          <div class="contemp-label">King · ~872–848 BC</div>
+          <div class="contemp-note">Allied with Ahab (Omri's son). His son Jehoram of Judah married Athaliah — bringing Omride blood directly into Judah's royal house. The alliance that nearly destroyed the Davidic line.</div>
+        </div>
+
+      </div>
+
+      <!-- Column 2: Prophets -->
+      <div>
+        <div class="contemp-col-head" style="background:#7c3aed;">Prophets</div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#7c3aed;">Prophet</div>
+          <div class="contemp-names">Elijah the Tishbite</div>
+          <div class="contemp-label">~875–848 BC</div>
+          <div class="contemp-note">Called during Ahab's reign — the direct inheritor of Omri's covenantal failures. Confronted Baal worship (Jezebel's import), declared drought, stood alone at Carmel (1 Kgs 17–18). The prophetic antidote to the Omride dynasty.</div>
+        </div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#9b59b6;">Prophet</div>
+          <div class="contemp-names">Obadiah (the official)</div>
+          <div class="contemp-label">fl. ~874–853 BC · 1 Kgs 18:3–4</div>
+          <div class="contemp-note">Ahab's palace manager who feared God — hid 100 prophets from Jezebel. A quiet act of courage inside the Omride court. (Distinct from Obadiah the prophet whose book's dating is debated.)</div>
+        </div>
+
+      </div>
+
+      <!-- Column 3: Foreign Powers -->
+      <div>
+        <div class="contemp-col-head" style="background:#1a5276;">Foreign Powers</div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#2980b9;">Phoenicia</div>
+          <div class="contemp-names">Ethbaal of Sidon</div>
+          <div class="contemp-label">King of Sidon / Tyre</div>
+          <div class="contemp-note">Omri's ally — sealed by the marriage of Ahab to Ethbaal's daughter Jezebel. Strategic alliance that opened Israel to Baal worship on an institutional scale. The price of geopolitical stability.</div>
+        </div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#1a5276;">Aram-Syria</div>
+          <div class="contemp-names">Ben-Hadad I of Aram</div>
+          <div class="contemp-label">~880–841 BC</div>
+          <div class="contemp-note">Rival of Omri and Ahab. Bribed by Asa of Judah to attack Israel (1 Kgs 15:18–20). Later made treaty with Ahab. The ongoing Syrian threat shaped Omride foreign policy.</div>
+        </div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#5d6d7e;">Assyria</div>
+          <div class="contemp-names">Shalmaneser III</div>
+          <div class="contemp-label">~858–824 BC — growing shadow</div>
+          <div class="contemp-note">Not yet a threat during Omri's lifetime — but fought Ahab at the Battle of Qarqar (853 BC). The Kurkh Monolith names "Ahab the Israelite." Assyria would call Israel "Bit Humri" (House of Omri) for a century.</div>
+        </div>
+
+        <div class="contemp-card">
+          <div class="contemp-era" style="background:#7b241c;">Moab</div>
+          <div class="contemp-names">Mesha, King of Moab</div>
+          <div class="contemp-label">fl. ~853 BC · The Mesha Stele</div>
+          <div class="contemp-note">Paid tribute to Omri and Ahab. Rebelled after Ahab's death. The Mesha Stele (Moabite Stone, ~830 BC) names Omri — one of the earliest extra-biblical attestations of an Israelite king. Moab's perspective on liberation from Israel.</div>
+        </div>
+
+      </div>
+
+    </div><!-- /contemporaries-grid -->
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — KEY EVENTS TIMELINE
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Key Events (~885–835 BC)</div>
+
+    <div class="events-timeline">
+
+      <div class="event-item">
+        <div class="event-dot"></div>
+        <div class="event-body">
+          <div class="event-name">Zimri assassinates Elah — and Omri marches<span class="event-date">~885 BC</span></div>
+          <div class="event-note">Zimri kills Elah in Tirzah; reigns 7 days. The army immediately proclaims Omri king. Omri besieges Tirzah; Zimri burns the palace and dies in it.</div>
+          <div class="event-ref">1 Kings 16:9–20</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-dark"></div>
+        <div class="event-body">
+          <div class="event-name">Civil War — Omri vs. Tibni<span class="event-date">~885–880 BC</span></div>
+          <div class="event-note">Five-year standoff between Omri's faction and Tibni son of Ginath. Tibni dies; Omri becomes sole king over Israel.</div>
+          <div class="event-ref">1 Kings 16:21–22</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot"></div>
+        <div class="event-body">
+          <div class="event-name">Omri buys the hill of Samaria — a new capital<span class="event-date">~880 BC</span></div>
+          <div class="event-note">Purchased from Shemer for two talents of silver. A politically brilliant move — no tribal loyalties attached to Samaria. Built as a royal city from scratch, rivaling Jerusalem. It would stand 150+ years.</div>
+          <div class="event-ref">1 Kings 16:24</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot"></div>
+        <div class="event-body">
+          <div class="event-name">Omri humbles Moab; treaty with Phoenicia<span class="event-date">~880–874 BC</span></div>
+          <div class="event-note">Forced tribute from Moab (recorded on the Mesha Stele: "Omri, king of Israel, oppressed Moab many days"). Arranged Ahab's marriage to Jezebel of Sidon — sealing the Phoenician alliance.</div>
+          <div class="event-ref">Mesha Stele; 1 Kings 16:31</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-dark"></div>
+        <div class="event-body">
+          <div class="event-name">Omri dies; Ahab succeeds<span class="event-date">~874 BC</span></div>
+          <div class="event-note">Biblical assessment: "did more evil than all before him" (1 Kgs 16:25) — but this is a covenantal verdict on his Baal-friendly policies, not a military one. He was Israel's most powerful king.</div>
+          <div class="event-ref">1 Kings 16:28</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-ahab"></div>
+        <div class="event-body">
+          <div class="event-name">Elijah's ministry — drought, Carmel, Naboth<span class="event-date">~874–853 BC</span></div>
+          <div class="event-note">Ahab's reign brings the full consequence of Omri's Phoenician alliance: Jezebel's Baal worship goes institutional. Elijah declares drought; Mt. Carmel showdown; Naboth's vineyard seized (1 Kgs 21). The prophetic confrontation with the Omride legacy.</div>
+          <div class="event-ref">1 Kings 17–21</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-ahab"></div>
+        <div class="event-body">
+          <div class="event-name">Battle of Qarqar — Ahab vs. Shalmaneser III<span class="event-date">~853 BC</span></div>
+          <div class="event-note">Ahab joins the Syrian coalition against Assyria at Qarqar. The Kurkh Monolith records "Ahab the Israelite" with 2,000 chariots — the largest contingent. Ahab dies the same year at Ramoth-Gilead.</div>
+          <div class="event-ref">Kurkh Monolith; 1 Kings 22:34–37</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-dark"></div>
+        <div class="event-body">
+          <div class="event-name">Joram of Israel rules; Elisha's ministry begins<span class="event-date">~852–841 BC</span></div>
+          <div class="event-note">The third-generation Omride. Elisha takes over Elijah's mantle. Moab rebels (2 Kgs 3 — corroborated by the Mesha Stele). The Omride dynasty begins to unravel.</div>
+          <div class="event-ref">2 Kings 1–9; 2 Kings 3</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot dot-jehu"></div>
+        <div class="event-body">
+          <div class="event-name">Jehu's Revolution — the Omride dynasty ends<span class="event-date">~841 BC</span></div>
+          <div class="event-note">Jehu (anointed by Elisha's servant) kills Joram of Israel and Ahaziah of Judah in one campaign. Jezebel thrown from the window; Ahab's 70 sons killed. Four generations of Omride power ends in a single afternoon.</div>
+          <div class="event-ref">2 Kings 9–10</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="background:#8e44ad; box-shadow:0 0 0 2px #8e44ad;"></div>
+        <div class="event-body">
+          <div class="event-name">Athaliah seizes Judah; Omride line in Jerusalem<span class="event-date">~841–835 BC</span></div>
+          <div class="event-note">Omri's granddaughter Athaliah kills the royal family of Judah and rules as queen. The infant Joash is hidden in the temple by Jehosheba. After 6 years, Jehoiada the priest reveals Joash; Athaliah killed. The Omride line in Judah ends.</div>
+          <div class="event-ref">2 Kings 11:1–16</div>
+        </div>
+      </div>
+
+    </div><!-- /events-timeline -->
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — BOOKS IN CONTEXT
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Books in Context</div>
+    <div class="books-grid">
+
+      <div class="books-card" style="border-color:#c0392b;">
+        <div class="books-card-head" style="background:#c0392b;">Written During This Era</div>
+        <div class="books-card-body">
+          <div class="books-card-date">Narrative record of the period</div>
+          <div class="books-list">
+            <span class="book-pill">1 Kings 16–22</span>
+            <span class="book-pill">2 Kings 1–10</span>
+          </div>
+          <div class="books-note">Omri's rise through Ahab's death (1 Kgs 16–22). Ahaziah, Joram, and Jehu's revolution (2 Kgs 1–10). The Deuteronomistic History's sharpest negative verdict on any dynasty.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#7c3aed;">
+        <div class="books-card-head" style="background:#7c3aed;">Set During This Era</div>
+        <div class="books-card-body">
+          <div class="books-card-date">Narrative set in Omride period</div>
+          <div class="books-list">
+            <span class="book-pill">Elijah narratives</span>
+            <span class="book-pill">1 Kgs 17–2 Kgs 13</span>
+            <span class="book-pill">Naboth's vineyard (1 Kgs 21)</span>
+          </div>
+          <div class="books-note">The Elijah–Elisha cycle spans the entire Omride era. Also the Mesha Stele (~830 BC) — extra-biblical; Moab's own account of throwing off the Omride yoke.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#2980b9;">
+        <div class="books-card-head" style="background:#2980b9;">Key Cross-References</div>
+        <div class="books-card-body">
+          <div class="books-card-date">Long-shadow passages</div>
+          <div class="books-xref">
+            <span>1 Kings 16:21–28</span> — Omri's reign summary<br>
+            <span>1 Kings 16:29–34</span> — Ahab introduced<br>
+            <span>Micah 6:16</span> — "the statutes of Omri" condemned 150 years later<br>
+            <span>2 Kings 8:18, 8:26</span> — Athaliah's Omride lineage traced<br>
+            <span>2 Kings 11:1</span> — Athaliah nearly wipes out the Davidic line
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /books-grid -->
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXTRA-BIBLICAL NOTE
+  ════════════════════════════════════════ -->
+  <div class="external-note">
+    <strong>Extra-Biblical Evidence:</strong> The <em>Mesha Stele</em> (Moabite Stone, ~830 BC) explicitly names Omri — "Omri, king of Israel, oppressed Moab many days" — making him one of the most archaeologically confirmed Israelite monarchs. Assyrian records used "Bit Humri" (House of Omri) to refer to the northern kingdom of Israel for over a century after the Omride dynasty ended with Jehu's revolution in ~841 BC. The Kurkh Monolith names his son "Ahab the Israelite." Omri was invisible in world memory for centuries — then archaeology confirmed him as one of the most consequential kings of Iron Age Israel.
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — THEN / NOW
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Then &rarr; Now</div>
+    <div class="then-now-grid">
+
+      <div class="then-box">
+        <div class="tn-head">Then</div>
+        <div class="tn-body">
+          Omri was politically brilliant but covenantally disastrous. He built Samaria (which stood 150 years), subdued Moab, and allied with Phoenicia — the ancient Near East took notice. But his real legacy was the Baal worship Jezebel brought in, and the Omride DNA he planted in Judah through Athaliah, which nearly wiped out the Davidic line entirely (2 Kgs 11:1). The Assyrians remembered his name; the prophets remembered his sin (Mic 6:16).
+        </div>
+      </div>
+
+      <div class="now-box">
+        <div class="tn-head">Now</div>
+        <div class="tn-body">
+          Competence and covenant faithfulness are not the same thing. A leader can be effective, strategic, and historically significant — and still be building on sand. Omri's dynasty lasted 4 kings across 44 years. Jehu's revolution ended it in one afternoon. What outlasted the Omride dynasty was not their military power but the prophetic word that confronted it. The statutes of Omri (Mic 6:16) were still being invoked as a warning 150 years later.
+        </div>
+      </div>
+
+    </div><!-- /then-now-grid -->
+  </section>
+
+</div><!-- /panel -->
+</body>
+</html>
