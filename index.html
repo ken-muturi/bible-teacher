@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bible Teacher — Guide Index</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 40px 32px; }
+
+  .header { text-align: center; margin-bottom: 40px; }
+  .header h1 { font-family: 'Special Elite', serif; font-size: 2.4rem; color: #2c2c2c; letter-spacing: 0.1em; }
+  .header p { font-size: 1rem; color: #666; margin-top: 6px; }
+
+  .sections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+
+  .section { background: #faf7f2; border: 2.5px solid #2c2c2c; border-radius: 4px; padding: 20px 22px; }
+  .section-label { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .label-blue   { color: #3b6fd4; }
+  .label-purple { color: #6c4bbf; }
+  .label-orange { color: #d47c1a; }
+
+  .guide-list { display: flex; flex-direction: column; gap: 8px; }
+  .guide-card { border: 2px solid; border-radius: 3px; padding: 11px 14px; text-decoration: none; display: block; transition: opacity 0.15s; }
+  .guide-card:hover { opacity: 0.75; }
+
+  .card-blue   { border-color: #3b6fd4; background: #eef2fb; }
+  .card-purple { border-color: #6c4bbf; background: #f0ecfb; }
+  .card-orange { border-color: #d47c1a; background: #fdf3e3; }
+
+  .card-book { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #2c2c2c; }
+  .card-type { font-size: 0.72rem; color: #888; margin-top: 2px; letter-spacing: 0.08em; }
+  .card-badge { display: inline-block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; margin-top: 5px; }
+  .badge-deep { background: #1a1a1a; color: #f5f0e8; }
+  .badge-3col { background: #e0d8cc; color: #555; }
+
+  .empty { font-size: 0.85rem; color: #aaa; font-style: italic; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Bible Teacher</h1>
+    <p>All generated guides — click any card to open</p>
+  </div>
+
+  <div class="sections">
+
+    <!-- VISUAL PANELS -->
+    <div class="section">
+      <div class="section-label label-blue">Book Overview Panels</div>
+      <div class="guide-list">
+        <a class="guide-card card-blue" href="guides/visuals/judges-panel.html">
+          <div class="card-book">Judges</div>
+          <div class="card-type">Downward descent layout</div>
+        </a>
+        <a class="guide-card card-blue" href="guides/visuals/leviticus-panel.html">
+          <div class="card-book">Leviticus</div>
+          <div class="card-type">Two-part arc layout</div>
+        </a>
+        <a class="guide-card card-blue" href="guides/visuals/romans-panel.html">
+          <div class="card-book">Romans</div>
+          <div class="card-type">Argument cascade layout</div>
+        </a>
+        <a class="guide-card card-blue" href="guides/visuals/amos-panel.html">
+          <div class="card-book">Amos</div>
+          <div class="card-type">Funnel trap layout</div>
+        </a>
+        <a class="guide-card card-blue" href="guides/visuals/amos-panel-3col.html">
+          <div class="card-book">Amos</div>
+          <div class="card-type">3-column default layout</div>
+          <span class="card-badge badge-3col">3-col</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- DISCUSSION GUIDES -->
+    <div class="section">
+      <div class="section-label label-orange">Discussion Guides</div>
+      <div class="guide-list">
+        <a class="guide-card card-orange" href="guides/discussions/judges-discussion-guide.html">
+          <div class="card-book">Judges</div>
+          <div class="card-type">Small group study companion</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- PASSAGE STUDIES -->
+    <div class="section">
+      <div class="section-label label-purple">Passage Studies</div>
+      <div class="guide-list">
+        <a class="guide-card card-purple" href="guides/passages/2-samuel-12-1-14-study.html">
+          <div class="card-book">2 Samuel 12:1–14</div>
+          <div class="card-type">Nathan confronts David</div>
+          <span class="card-badge badge-deep">Deep</span>
+        </a>
+        <a class="guide-card card-purple" href="guides/passages/romans-8-1-11-study.html">
+          <div class="card-book">Romans 8:1–11</div>
+          <div class="card-type">Life in the Spirit</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
