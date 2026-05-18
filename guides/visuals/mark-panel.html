@@ -3,393 +3,1148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mark — The Gospel of the Servant in Motion</title>
+<title>Mark — Book Overview</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
 
-  .page-header { text-align: center; margin-bottom: 28px; }
-  .book-title { font-family: 'Special Elite', serif; font-size: 2.4rem; color: #2c2c2c; letter-spacing: 0.08em; }
-  .book-subtitle { font-size: 1.1rem; color: #555; margin-top: 4px; }
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #f5f0e8;
+  font-family: 'Caveat', cursive;
+  color: #2c2c2c;
+  padding: 24px 22px 48px;
+}
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: #3b6fd4;
+  text-decoration: none;
+  border: 1.5px solid #3b6fd4;
+  border-radius: 3px;
+  padding: 3px 10px 2px;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+.back-link:hover { background: #eef2fb; }
 
-  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
-  .card + .card { margin-top: 14px; }
-  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+/* ── PAGE HEADER ── */
+.page-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.series-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 4px;
+}
+.book-title {
+  font-family: 'Special Elite', serif;
+  font-size: 3rem;
+  color: #2c2c2c;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.book-tagline {
+  font-size: 1.05rem;
+  color: #555;
+  margin-top: 5px;
+  font-style: italic;
+}
 
-  /* identity */
-  .identity-row { display: flex; justify-content: space-between; margin-bottom: 6px; border-bottom: 1px solid #e8e0d0; padding-bottom: 6px; }
-  .identity-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .id-label { font-size: 0.72rem; color: #888; }
-  .id-value { font-size: 0.82rem; color: #2c2c2c; text-align: right; max-width: 60%; }
+/* ── SHARED CARD ── */
+.card {
+  background: #faf7f2;
+  border: 2.5px solid #2c2c2c;
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+.card-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 10px;
+}
 
-  /* euthys counter */
-  .euthys-bar { background: #1a1a1a; border-radius: 3px; padding: 12px 14px; margin-top: 10px; }
-  .euthys-word { font-family: 'Special Elite', serif; font-size: 1.4rem; color: #f5f0e8; }
-  .euthys-trans { font-size: 0.72rem; color: #888; font-style: italic; }
-  .euthys-count { font-size: 0.8rem; color: #aaa; margin-top: 4px; }
-  .euthys-dots { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 8px; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: #c0392b; flex-shrink: 0; }
-  .dot.act2 { background: #d47c1a; }
-  .dot.act3 { background: #6c4bbf; }
+/* ── JOURNEY MAP (Act 1 | Pivot | Act 2) ── */
+.journey-map {
+  display: grid;
+  grid-template-columns: 1fr 220px 1fr;
+  gap: 0;
+  margin-bottom: 20px;
+  border: 2.5px solid #2c2c2c;
+  border-radius: 3px;
+  overflow: hidden;
+}
 
-  /* structure acts */
-  .act { border-left: 4px solid; padding: 10px 12px; margin-bottom: 10px; border-radius: 0 3px 3px 0; }
-  .act:last-child { margin-bottom: 0; }
-  .act-1 { border-color: #3b6fd4; background: #eef2fb; }
-  .act-2 { border-color: #d47c1a; background: #fdf3e3; }
-  .act-3 { border-color: #c0392b; background: #ffeaea; }
-  .act-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 3px; }
-  .act-1 .act-label { color: #3b6fd4; }
-  .act-2 .act-label { color: #d47c1a; }
-  .act-3 .act-label { color: #c0392b; }
-  .act-title { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; }
-  .act-ref { font-size: 0.68rem; color: #888; margin-bottom: 4px; }
-  .act-desc { font-size: 0.82rem; color: #444; line-height: 1.4; }
+.act-block {
+  padding: 16px 18px;
+}
+.act-block.act1 { background: #e8eef9; border-right: 2.5px solid #2c2c2c; }
+.act-block.act2 { background: #faeaea; border-left: 2.5px solid #2c2c2c; }
 
-  /* passion predictions */
-  .passion-predictions { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
-  .pp-row { display: flex; align-items: flex-start; gap: 8px; }
-  .pp-num { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #c0392b; min-width: 20px; }
-  .pp-content { flex: 1; }
-  .pp-ref { font-size: 0.68rem; color: #c0392b; font-weight: 700; }
-  .pp-text { font-size: 0.8rem; color: #444; line-height: 1.35; }
-  .pp-fail { font-size: 0.72rem; color: #888; font-style: italic; margin-top: 2px; }
+.act-number {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.act-block.act1 .act-number { color: #3b6fd4; }
+.act-block.act2 .act-number { color: #c0392b; }
 
-  /* sandwich */
-  .sandwich { margin-top: 8px; }
-  .sw-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 6px; }
-  .sw-outer { background: #eef2fb; border: 1.5px solid #3b6fd4; border-radius: 3px; padding: 7px 9px; text-align: center; }
-  .sw-inner { background: #fdf3e3; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 7px 9px; text-align: center; }
-  .sw-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; }
-  .sw-title { font-family: 'Special Elite', serif; font-size: 0.8rem; color: #2c2c2c; margin-top: 2px; }
-  .sw-ref { font-size: 0.66rem; color: #888; }
+.act-heading {
+  font-family: 'Special Elite', serif;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+.act-block.act1 .act-heading { color: #2a4e9e; }
+.act-block.act2 .act-heading { color: #8b1a1a; }
 
-  /* key verse */
-  .key-verse { background: #1a1a1a; border-radius: 3px; padding: 14px 16px; }
-  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; margin-bottom: 6px; }
-  .kv-text { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #f5f0e8; line-height: 1.5; font-style: italic; }
-  .kv-ref { font-size: 0.74rem; color: #666; margin-top: 5px; }
+.act-ref {
+  font-size: 0.7rem;
+  color: #888;
+  margin-bottom: 8px;
+}
 
-  /* messianic secret */
-  .secret-item { display: flex; align-items: baseline; gap: 6px; margin-bottom: 5px; }
-  .secret-item:last-child { margin-bottom: 0; }
-  .secret-ref { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #6c4bbf; min-width: 48px; }
-  .secret-text { font-size: 0.78rem; color: #555; line-height: 1.35; }
+.act-beats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.act-beats li {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.38;
+  padding: 4px 0 4px 10px;
+  border-bottom: 1px dotted #d8d0c4;
+  position: relative;
+}
+.act-beats li:last-child { border-bottom: none; }
+.act-beats li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.act-block.act1 .act-beats li::before { background: #3b6fd4; }
+.act-block.act2 .act-beats li::before { background: #c0392b; }
 
-  /* word studies */
-  .word-card { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
-  .word-card:last-child { margin-bottom: 0; }
-  .greek { font-size: 1.3rem; color: #6c4bbf; font-weight: 700; }
-  .transliteration { font-size: 0.74rem; color: #888; font-style: italic; }
-  .word-gloss { font-size: 0.9rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
-  .word-note { font-size: 0.81rem; color: #555; line-height: 1.4; }
+.beat-ref {
+  font-family: 'Special Elite', serif;
+  font-size: 0.74rem;
+  color: #888;
+  display: block;
+}
+.beat-label {
+  font-weight: 700;
+}
 
-  /* then-now */
-  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .tn-box { padding: 10px 12px; border-radius: 3px; }
-  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
-  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
-  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
-  .tn-then .tn-label { color: #7a6f62; }
-  .tn-now  .tn-label { color: #3b6fd4; }
-  .tn-text { font-size: 0.84rem; color: #333; line-height: 1.4; }
+/* ── PIVOT SPINE ── */
+.pivot-spine {
+  background: #2c2c2c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+  text-align: center;
+}
+.pivot-label {
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+.pivot-ref {
+  font-family: 'Special Elite', serif;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+.pivot-location {
+  font-size: 0.72rem;
+  color: #666;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.pivot-q {
+  font-family: 'Special Elite', serif;
+  font-size: 0.9rem;
+  color: #f5f0e8;
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.pivot-a {
+  font-family: 'Special Elite', serif;
+  font-size: 0.88rem;
+  color: #d4aa70;
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.pivot-divider {
+  width: 40px;
+  height: 1.5px;
+  background: #555;
+  margin: 10px auto;
+}
+.pivot-note {
+  font-size: 0.72rem;
+  color: #888;
+  line-height: 1.4;
+}
+.pivot-arrow {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 8px 0;
+  line-height: 1;
+}
 
-  /* xref */
-  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 7px; margin-bottom: 7px; }
-  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.85rem; color: #c0392b; }
-  .xref-note { font-size: 0.79rem; color: #555; margin-top: 2px; line-height: 1.35; }
+/* ── EUTHYS BANNER ── */
+.euthys-banner {
+  background: #1a1a1a;
+  border: 2.5px solid #2c2c2c;
+  border-radius: 3px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.euthys-left {
+  min-width: 140px;
+}
+.euthys-word {
+  font-family: 'Special Elite', serif;
+  font-size: 2rem;
+  color: #f5f0e8;
+  line-height: 1;
+}
+.euthys-roman {
+  font-size: 0.78rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 2px;
+}
+.euthys-stat {
+  font-size: 0.76rem;
+  color: #aaa;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.euthys-right {
+  flex: 1;
+}
+.euthys-dots-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 6px;
+}
+.euthys-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot.a1 { background: #3b6fd4; }
+.dot.pivot { background: #d47c1a; }
+.dot.a2 { background: #c0392b; }
+.euthys-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 0.66rem;
+  color: #888;
+}
+.euthys-legend span { display: flex; align-items: center; gap: 4px; }
+.leg-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
-  /* misread */
-  .misread { background: #ffeaea; border: 1.5px solid #c0392b; border-radius: 3px; padding: 11px 13px; }
-  .misread-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
-  .misread-text { font-size: 0.83rem; color: #444; line-height: 1.4; }
+/* ── MAIN GRID ── */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
 
-  /* verdict */
-  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
-  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
-  .verdict-text { font-size: 0.9rem; line-height: 1.5; }
+/* ── PASSION PREDICTIONS ── */
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pp-table th {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;
+  padding: 0 8px 6px 0;
+  text-align: left;
+  border-bottom: 1.5px solid #e0d8cc;
+}
+.pp-table td {
+  padding: 7px 8px 7px 0;
+  vertical-align: top;
+  border-bottom: 1px dotted #e0d8cc;
+  font-size: 0.81rem;
+  line-height: 1.38;
+  color: #444;
+}
+.pp-table tr:last-child td { border-bottom: none; }
+.pp-num-cell {
+  font-family: 'Special Elite', serif;
+  font-size: 1.3rem;
+  color: #c0392b;
+  min-width: 24px;
+  padding-right: 6px !important;
+}
+.pp-ref-cell {
+  font-family: 'Special Elite', serif;
+  font-size: 0.8rem;
+  color: #c0392b;
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: 56px;
+}
+.pp-fail-cell {
+  font-size: 0.74rem !important;
+  color: #888 !important;
+  font-style: italic;
+}
+.pp-fail-label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: 2px;
+  font-style: normal;
+}
 
-  /* confession moment */
-  .confession { border: 2px solid #c0392b; border-radius: 3px; padding: 12px 14px; background: #ffeaea; }
-  .conf-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
-  .conf-text { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
-  .conf-note { font-size: 0.78rem; color: #555; margin-top: 5px; line-height: 1.35; }
+/* ── MARKAN SANDWICH ── */
+.sandwich-item {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1.5px dotted #d8d0c4;
+}
+.sandwich-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    body { padding: 20px 16px 60px; }
-    .grid { grid-template-columns: 1fr !important; }
-    .sw-row,
-    .then-now-grid { grid-template-columns: 1fr !important; }
-    .word-card { width: 100%; }
-    h1, .book-title { font-size: 2rem !important; }
-    table { display: block; overflow-x: auto; }
-  }
+.sw-frame {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 4px;
+  align-items: stretch;
+  margin-bottom: 6px;
+}
+.sw-outer-box {
+  background: #e8eef9;
+  border: 2px solid #3b6fd4;
+  border-radius: 3px;
+  padding: 6px 8px;
+  text-align: center;
+}
+.sw-inner-box {
+  background: #fff3e0;
+  border: 2px solid #d47c1a;
+  border-radius: 3px;
+  padding: 6px 8px;
+  text-align: center;
+}
+.sw-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  padding: 0 2px;
+}
+.sw-type {
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  display: block;
+  margin-bottom: 2px;
+}
+.sw-title {
+  font-family: 'Special Elite', serif;
+  font-size: 0.8rem;
+  color: #2c2c2c;
+}
+.sw-ref {
+  font-size: 0.65rem;
+  color: #888;
+  display: block;
+  margin-top: 1px;
+}
+.sw-meaning {
+  font-size: 0.78rem;
+  color: #555;
+  line-height: 1.38;
+}
+.sw-meaning strong {
+  color: #d47c1a;
+}
 
-  @media (max-width: 480px) {
-    body { padding: 16px 12px 48px; }
-    h1, .book-title { font-size: 1.6rem !important; }
-  }
+/* ── KEY PASSAGE CALLOUT ── */
+.key-passage {
+  background: #2c2c2c;
+  border-radius: 3px;
+  border: 2.5px solid #2c2c2c;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.kp-left {}
+.kp-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+}
+.kp-text {
+  font-family: 'Special Elite', serif;
+  font-size: 1.15rem;
+  color: #f5f0e8;
+  line-height: 1.5;
+  font-style: italic;
+}
+.kp-ref {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+.kp-right {
+  border-left: 2px solid #444;
+  padding-left: 20px;
+}
+.verdict-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+}
+.verdict-text {
+  font-family: 'Special Elite', serif;
+  font-size: 1.05rem;
+  color: #d4aa70;
+  line-height: 1.5;
+  font-style: italic;
+}
+.verdict-ref {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* ── MESSIANIC SECRET ── */
+.secret-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px dotted #e0d8cc;
+}
+.secret-row:last-of-type { border-bottom: none; }
+.secret-ref {
+  font-family: 'Special Elite', serif;
+  font-size: 0.82rem;
+  color: #6c4bbf;
+  min-width: 44px;
+  flex-shrink: 0;
+}
+.secret-text {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.35;
+}
+.secret-lifted {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 0 0;
+  margin-top: 6px;
+  border-top: 1.5px solid #e0d8cc;
+}
+.secret-lifted .secret-ref { color: #c0392b; }
+.secret-lifted .secret-text { color: #c0392b; font-weight: 600; }
+
+/* ── KEY WORDS ── */
+.word-item {
+  padding: 8px 0;
+  border-bottom: 1px dotted #e0d8cc;
+}
+.word-item:last-child { border-bottom: none; padding-bottom: 0; }
+.word-greek {
+  font-family: 'Special Elite', serif;
+  font-size: 1.15rem;
+  color: #6c4bbf;
+  line-height: 1;
+}
+.word-roman {
+  font-size: 0.7rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 1px;
+}
+.word-gloss {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 2px;
+}
+.word-note {
+  font-size: 0.79rem;
+  color: #555;
+  line-height: 1.38;
+}
+
+/* ── CROSS REFS ── */
+.xref-item {
+  padding: 6px 0;
+  border-bottom: 1px dotted #e0d8cc;
+}
+.xref-item:last-child { border-bottom: none; }
+.xref-ref {
+  font-family: 'Special Elite', serif;
+  font-size: 0.86rem;
+  color: #c0392b;
+  margin-bottom: 2px;
+}
+.xref-dir {
+  font-size: 0.65rem;
+  color: #888;
+  font-style: italic;
+  margin-right: 4px;
+}
+.xref-note {
+  font-size: 0.79rem;
+  color: #555;
+  line-height: 1.38;
+}
+
+/* ── THEN / NOW ── */
+.then-now {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.tn-box {
+  padding: 10px 12px;
+  border-radius: 3px;
+}
+.tn-then {
+  background: #e8e0d4;
+  border: 2px solid #a09080;
+}
+.tn-now {
+  background: #ede9f8;
+  border: 2px solid #6c4bbf;
+}
+.tn-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.tn-then .tn-label { color: #7a6f62; }
+.tn-now .tn-label { color: #6c4bbf; }
+.tn-text {
+  font-size: 0.82rem;
+  color: #333;
+  line-height: 1.42;
+}
+
+/* ── ACT 2 KEY MOMENTS ── */
+.moment-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px dotted #e0d8cc;
+}
+.moment-item:last-child { border-bottom: none; }
+.moment-ref {
+  font-family: 'Special Elite', serif;
+  font-size: 0.8rem;
+  color: #c0392b;
+  min-width: 52px;
+  flex-shrink: 0;
+}
+.moment-ref.green { color: #2e8a4a; }
+.moment-text {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.35;
+}
+
+/* ── EMPTY TOMB ── */
+.empty-tomb-box {
+  background: #e8f5ee;
+  border: 2.5px solid #2e8a4a;
+  border-radius: 3px;
+  padding: 12px 14px;
+  margin-top: 10px;
+}
+.et-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2e8a4a;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.et-text {
+  font-family: 'Special Elite', serif;
+  font-size: 0.95rem;
+  color: #1b5c33;
+  line-height: 1.45;
+  font-style: italic;
+}
+.et-note {
+  font-size: 0.76rem;
+  color: #2e8a4a;
+  margin-top: 5px;
+  line-height: 1.35;
+}
+
+/* ── QUESTION BOX ── */
+.question-box {
+  background: #ede9f8;
+  border: 2.5px solid #6c4bbf;
+  border-radius: 3px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+.q-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6c4bbf;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.q-text {
+  font-family: 'Special Elite', serif;
+  font-size: 0.96rem;
+  color: #3a2870;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ── SECTION HEADER ── */
+.section-header {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;
+  margin: 18px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid #d8d0c4;
+}
+
+/* ── BOTTOM ROW GRID ── */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  body { padding: 18px 14px 40px; }
+  .journey-map { grid-template-columns: 1fr; }
+  .pivot-spine { border-left: none; border-top: 2.5px solid #2c2c2c; border-bottom: 2.5px solid #2c2c2c; padding: 14px 16px; }
+  .act-block.act1 { border-right: none; border-bottom: 2.5px solid #2c2c2c; }
+  .act-block.act2 { border-left: none; border-top: 2.5px solid #2c2c2c; }
+  .main-grid { grid-template-columns: 1fr; }
+  .euthys-banner { grid-template-columns: 1fr; }
+  .key-passage { grid-template-columns: 1fr; }
+  .kp-right { border-left: none; border-top: 1.5px solid #444; padding-left: 0; padding-top: 14px; }
+  .then-now { grid-template-columns: 1fr; }
+  .bottom-grid { grid-template-columns: 1fr; }
+  .book-title { font-size: 2.2rem !important; }
+}
+
+@media (max-width: 480px) {
+  body { padding: 14px 10px 32px; }
+  .book-title { font-size: 1.8rem !important; }
+  .sw-frame { grid-template-columns: 1fr; gap: 3px; }
+  .sw-arrow { display: none; }
+}
 </style>
 </head>
 <body>
 
+<!-- BACK LINK -->
+<a class="back-link" href="../../index.html">← Back to index</a>
 
+<!-- PAGE HEADER -->
 <div class="page-header">
+  <div class="series-badge">NT 2 of 27 &nbsp;·&nbsp; Gospels 1 of 4</div>
   <div class="book-title">Mark</div>
-  <div class="book-subtitle">The Gospel of the Servant in Motion</div>
+  <div class="book-tagline">The Gospel of the servant who moves — urgency, power, and a cross that redefines both</div>
 </div>
 
-<div class="grid">
+<!-- εὐθύς BANNER -->
+<div class="euthys-banner">
+  <div class="euthys-left">
+    <div class="euthys-word">εὐθύς</div>
+    <div class="euthys-roman">euthys — "immediately / straightway"</div>
+    <div class="euthys-stat">
+      41× in Mark<br>
+      ~5× in Matthew + Luke combined<br>
+      More than the rest of the NT
+    </div>
+  </div>
+  <div class="euthys-right">
+    <div class="euthys-dots-label">41 occurrences — each dot = one use of εὐθύς</div>
+    <div class="euthys-dots">
+      <!-- Act 1 (1:1–8:26) — blue — ~30 occurrences -->
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div><div class="dot a1"></div>
+      <!-- Act 2 (8:31–16:8) — red — 11 occurrences -->
+      <div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div>
+      <div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div><div class="dot a2"></div>
+      <div class="dot a2"></div>
+    </div>
+    <div class="euthys-legend">
+      <span><span class="leg-dot" style="background:#3b6fd4;"></span> Act 1 · Power in Galilee</span>
+      <span><span class="leg-dot" style="background:#c0392b;"></span> Act 2 · Suffering toward Jerusalem</span>
+    </div>
+  </div>
+</div>
 
-  <!-- COL 1: Identity + εὐθύς + Structure -->
+<!-- JOURNEY MAP -->
+<div class="journey-map">
+
+  <!-- ACT 1 -->
+  <div class="act-block act1">
+    <div class="act-number">Act 1 — Power in Galilee</div>
+    <div class="act-heading">Authority Demonstrated</div>
+    <div class="act-ref">1:1 – 8:26</div>
+    <ul class="act-beats">
+      <li>
+        <span class="beat-ref">1:1–20</span>
+        <span class="beat-label">Prologue + first disciples</span><br>
+        John, baptism, temptation, "Follow me"
+      </li>
+      <li>
+        <span class="beat-ref">1:21–3:6</span>
+        <span class="beat-label">Authority demonstrated</span><br>
+        Teaching, exorcism, healing, Sabbath controversy — "Who is this?"
+      </li>
+      <li>
+        <span class="beat-ref">3:7–6:6</span>
+        <span class="beat-label">Kingdom breaks in</span><br>
+        Kingdom parables, calming the storm, Gerasene demoniac, Jairus/bleeding woman
+      </li>
+      <li>
+        <span class="beat-ref">6:7–8:26</span>
+        <span class="beat-label">Expanding mission</span><br>
+        Sending of Twelve, feeding 5000, walking on water, feeding 4000, blind man of Bethsaida
+      </li>
+      <li>
+        <span class="beat-ref">1:34 · 3:12 · 5:43 · 7:36</span>
+        <span class="beat-label">Messianic secret begins</span><br>
+        Jesus silences demons, healed people, and eventually his own disciples
+      </li>
+    </ul>
+  </div>
+
+  <!-- PIVOT SPINE -->
+  <div class="pivot-spine">
+    <div class="pivot-label">The Pivot</div>
+    <div class="pivot-ref">Mark 8:27–30</div>
+    <div class="pivot-location">Caesarea Philippi</div>
+    <div class="pivot-divider"></div>
+    <div class="pivot-q">"Who do you say that I am?"</div>
+    <div class="pivot-arrow">↓</div>
+    <div class="pivot-a">"You are the Christ."</div>
+    <div class="pivot-divider"></div>
+    <div class="pivot-note">Everything before asks the question. Everything after answers what <em>kind</em> of Christ.</div>
+    <div style="margin-top:10px; font-size:0.7rem; color:#c07070; line-height:1.4;">Immediately followed by the first passion prediction (8:31) and "Get behind me, Satan" (8:33)</div>
+  </div>
+
+  <!-- ACT 2 -->
+  <div class="act-block act2">
+    <div class="act-number">Act 2 — Suffering toward Jerusalem</div>
+    <div class="act-heading">The Servant Descends</div>
+    <div class="act-ref">8:31 – 16:8</div>
+    <ul class="act-beats">
+      <li>
+        <span class="beat-ref">9:2–8</span>
+        <span class="beat-label">Transfiguration</span><br>
+        Moses, Elijah — "This is my beloved Son, listen to him"
+      </li>
+      <li>
+        <span class="beat-ref">10:17–22</span>
+        <span class="beat-label">Rich young man</span><br>
+        "One thing you lack" — the cost of the kingdom
+      </li>
+      <li>
+        <span class="beat-ref">11:1–10</span>
+        <span class="beat-label">Triumphal entry</span><br>
+        Jerusalem hails a king who will be crucified in a week
+      </li>
+      <li>
+        <span class="beat-ref">14:3–9</span>
+        <span class="beat-label">Anointing at Bethany</span><br>
+        "She has done a beautiful thing" — the only person who prepares for his death
+      </li>
+      <li>
+        <span class="beat-ref">14:32–42</span>
+        <span class="beat-label">Gethsemane</span><br>
+        "Abba, Father, all things are possible for you" — disciples sleep
+      </li>
+      <li>
+        <span class="beat-ref">15:33–39</span>
+        <span class="beat-label">The cross</span><br>
+        Darkness · cry of dereliction · curtain torn · centurion: "Truly this was the Son of God"
+      </li>
+      <li>
+        <span class="beat-ref">16:1–8</span>
+        <span class="beat-label">The empty tomb</span><br>
+        "They said nothing to anyone, for they were afraid." — Mark's final word
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!-- END JOURNEY MAP -->
+
+<!-- KEY PASSAGE + FINAL VERDICT -->
+<div class="key-passage">
+  <div class="kp-left">
+    <div class="kp-label">Key Passage — The Confession</div>
+    <div class="kp-text">"But who do you say that I am?" Peter answered him, "You are the Christ."</div>
+    <div class="kp-ref">Mark 8:29</div>
+  </div>
+  <div class="kp-right">
+    <div class="verdict-label">Final Verdict</div>
+    <div class="verdict-text">"The Son of Man came not to be served but to serve, and to give his life as a ransom for many."</div>
+    <div class="verdict-ref">Mark 10:45</div>
+  </div>
+</div>
+
+<!-- MAIN THREE-COLUMN GRID -->
+<div class="main-grid">
+
+  <!-- COLUMN 1 -->
   <div>
 
     <div class="card">
       <div class="card-label">Identity</div>
-      <div class="identity-row"><span class="id-label">Author</span><span class="id-value">John Mark — Peter's interpreter (1 Pet 5:13, Acts 12:12)</span></div>
-      <div class="identity-row"><span class="id-label">Date</span><span class="id-value">~65–70 AD · earliest Gospel</span></div>
-      <div class="identity-row"><span class="id-label">Audience</span><span class="id-value">Roman/Gentile — explains Jewish customs, translates Aramaic</span></div>
-      <div class="identity-row"><span class="id-label">Length</span><span class="id-value">16 chapters · 678 verses · shortest Gospel</span></div>
-      <div class="identity-row"><span class="id-label">Source</span><span class="id-value">Peter's eyewitness testimony — vivid, present-tense narration</span></div>
-
-      <div class="euthys-bar">
-        <div class="euthys-word">εὐθύς</div>
-        <div class="euthys-trans">euthys — "immediately / at once"</div>
-        <div class="euthys-count">41× in Mark &nbsp;·&nbsp; 7× in Matthew &nbsp;·&nbsp; 1× in Luke</div>
-        <div class="euthys-dots">
-          <!-- 41 dots: ~16 act1 (blue), ~12 act2 (orange), ~13 act3 (purple) -->
-          <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div>
-          <div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div>
-          <div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div><div class="dot act2"></div>
-          <div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div>
-          <div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div>
-          <div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div><div class="dot act3"></div>
-          <div class="dot act3"></div>
-        </div>
-        <div style="font-size:0.66rem; color:#666; margin-top:5px;">
-          <span style="color:#c0392b;">■</span> Act 1 &nbsp;
-          <span style="color:#d47c1a;">■</span> Act 2 &nbsp;
-          <span style="color:#6c4bbf;">■</span> Act 3
-        </div>
-      </div>
+      <div class="moment-item"><span class="moment-ref" style="color:#2c2c2c; min-width:70px;">Author</span><span class="moment-text">John Mark — Peter's interpreter (1 Pet 5:13, Acts 12:12). Later redeemed after desertion (Acts 13:13; 2 Tim 4:11).</span></div>
+      <div class="moment-item"><span class="moment-ref" style="color:#2c2c2c; min-width:70px;">Date</span><span class="moment-text">~65–70 AD · earliest Gospel · written as Rome burns and persecution rises</span></div>
+      <div class="moment-item"><span class="moment-ref" style="color:#2c2c2c; min-width:70px;">Audience</span><span class="moment-text">Roman/Gentile — explains Jewish customs, translates Aramaic, Latinizes expressions</span></div>
+      <div class="moment-item"><span class="moment-ref" style="color:#2c2c2c; min-width:70px;">Length</span><span class="moment-text">16 chapters · 678 verses · shortest Gospel</span></div>
+      <div class="moment-item" style="border-bottom:none;"><span class="moment-ref" style="color:#2c2c2c; min-width:70px;">Source</span><span class="moment-text">Peter's eyewitness testimony — vivid, present-tense narration, specific details</span></div>
     </div>
 
-    <div class="card">
-      <div class="card-label">Structure — 3 Acts</div>
-
-      <div class="act act-1">
-        <div class="act-label">Act 1 · Galilee</div>
-        <div class="act-ref">1:1 – 8:26</div>
-        <div class="act-title">Authority Demonstrated</div>
-        <div class="act-desc">Baptism → ministry launch → miracles, exorcisms, teachings. Crowds are amazed; Pharisees are threatened; disciples follow but misunderstand. The question accumulates: <em>who is this man?</em></div>
-      </div>
-
-      <div class="act act-2">
-        <div class="act-label">Act 2 · The Road</div>
-        <div class="act-ref">8:27 – 10:52</div>
-        <div class="act-title">The Hinge — Three Predictions</div>
-        <div class="act-desc">Peter's confession (8:29) unlocks the second half. Three passion predictions follow, each met with disciple failure, each answered with servant-leadership teaching. The Son of Man must suffer.</div>
-      </div>
-
-      <div class="act act-3">
-        <div class="act-label">Act 3 · Jerusalem</div>
-        <div class="act-ref">11:1 – 16:8</div>
-        <div class="act-title">Authority Surrendered</div>
-        <div class="act-desc">Entry → Temple → escalating conflict → Last Supper → Gethsemane → arrest → cross → empty tomb. ~40% of the Gospel is passion narrative. The ransom is paid.</div>
-      </div>
+    <div style="margin-top: 14px;" class="card">
+      <div class="card-label">Three Passion Predictions + Disciple Failures</div>
+      <table class="pp-table">
+        <thead>
+          <tr>
+            <th style="width:20px;"></th>
+            <th>Prediction</th>
+            <th>Disciple Failure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pp-num-cell">①</td>
+            <td class="pp-ref-cell">8:31</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="moment-text" style="font-size:0.8rem; color:#444; padding-top:0; padding-bottom:4px;">Son of Man must suffer, be rejected by elders, be killed, and rise after three days.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="pp-fail-cell"><span class="pp-fail-label">Failure</span>Peter rebukes Jesus (8:32) — "Get behind me, Satan" (8:33)</td>
+          </tr>
+          <tr>
+            <td class="pp-num-cell">②</td>
+            <td class="pp-ref-cell">9:31</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="moment-text" style="font-size:0.8rem; color:#444; padding-top:0; padding-bottom:4px;">Son of Man delivered into human hands, killed, raised on the third day.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="pp-fail-cell"><span class="pp-fail-label">Failure</span>Disciples argue about who is greatest (9:34) — more specific, more tone-deaf</td>
+          </tr>
+          <tr>
+            <td class="pp-num-cell">③</td>
+            <td class="pp-ref-cell">10:33–34</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="moment-text" style="font-size:0.8rem; color:#444; padding-top:0; padding-bottom:4px;">Most detailed: betrayed, condemned by priests, handed to Gentiles, mocked, flogged, killed, raised.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="2" class="pp-fail-cell"><span class="pp-fail-label">Failure</span>James and John request seats of honour at Jesus's right and left (10:35–40)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:10px; font-size:0.77rem; color:#888; line-height:1.4; font-style:italic;">Each prediction becomes more specific. Each failure becomes more tone-deaf. Peter's final failure: the denial (14:66–72).</div>
     </div>
 
-    <div class="card">
-      <div class="card-label">The Three Passion Predictions</div>
-      <div class="passion-predictions">
-        <div class="pp-row">
-          <div class="pp-num">①</div>
-          <div class="pp-content">
-            <div class="pp-ref">8:31</div>
-            <div class="pp-text">Son of Man must suffer, be rejected, be killed, rise after three days.</div>
-            <div class="pp-fail">Disciple response: Peter rebukes Jesus (8:32)</div>
-          </div>
-        </div>
-        <div class="pp-row">
-          <div class="pp-num">②</div>
-          <div class="pp-content">
-            <div class="pp-ref">9:31</div>
-            <div class="pp-text">Son of Man will be delivered into human hands, killed, rise on the third day.</div>
-            <div class="pp-fail">Disciple response: argue who is greatest (9:34)</div>
-          </div>
-        </div>
-        <div class="pp-row">
-          <div class="pp-num">③</div>
-          <div class="pp-content">
-            <div class="pp-ref">10:33–34</div>
-            <div class="pp-text">Most detailed: betrayed, condemned, mocked, flogged, killed, raised.</div>
-            <div class="pp-fail">Disciple response: James and John request thrones (10:37)</div>
-          </div>
-        </div>
+    <div style="margin-top: 14px;" class="card">
+      <div class="card-label">The Messianic Secret</div>
+      <div style="font-size:0.81rem; color:#555; line-height:1.42; margin-bottom:10px;">Jesus commands silence after healings and miracles. Identity can only be rightly understood after the cross. Every "messiah" without the cross is the wrong messiah.</div>
+      <div class="secret-row"><div class="secret-ref">1:34 · 3:12</div><div class="secret-text">Jesus forbids demons to speak — they know who he is, but their testimony is premature</div></div>
+      <div class="secret-row"><div class="secret-ref">1:44</div><div class="secret-text">Healed leper — "See that you say nothing to anyone"</div></div>
+      <div class="secret-row"><div class="secret-ref">5:43</div><div class="secret-text">Jairus's daughter raised — "Tell no one what had happened"</div></div>
+      <div class="secret-row"><div class="secret-ref">7:36</div><div class="secret-text">Deaf-mute healed — Jesus charged them to tell no one; they proclaimed it more</div></div>
+      <div class="secret-row"><div class="secret-ref">8:30</div><div class="secret-text">After Peter's confession — "He strictly charged them to tell no one about him"</div></div>
+      <div class="secret-row"><div class="secret-ref">9:9</div><div class="secret-text">After transfiguration — tell no one until the Son of Man is raised from the dead</div></div>
+      <div class="secret-lifted">
+        <div class="secret-ref">15:39</div>
+        <div class="secret-text">Secret lifted — at the cross, a Roman soldier confesses: <em>"Truly this man was the Son of God."</em> The one who had no stake in false hope gets it right.</div>
       </div>
     </div>
 
   </div>
 
-  <!-- COL 2: Key Verse + Sandwich + Messianic Secret + Confessions -->
+  <!-- COLUMN 2 -->
   <div>
 
-    <div class="key-verse">
-      <div class="kv-label">Thesis Verse</div>
-      <div class="kv-text">"For even the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many."</div>
-      <div class="kv-ref">Mark 10:45</div>
-    </div>
-
     <div class="card">
-      <div class="card-label">The Messianic Secret</div>
-      <div style="font-size:0.83rem; color:#555; line-height:1.4; margin-bottom:10px;">Jesus repeatedly commands silence after healings and after Peter's confession. Identity could only be rightly understood in light of the cross. Every "messiah" without the cross is the wrong messiah.</div>
-      <div class="secret-item"><div class="secret-ref">1:44</div><div class="secret-text">Healed leper — "Tell no one"</div></div>
-      <div class="secret-item"><div class="secret-ref">5:43</div><div class="secret-text">Jairus' daughter raised — "Tell no one"</div></div>
-      <div class="secret-item"><div class="secret-ref">7:36</div><div class="secret-text">Deaf-mute healed — ordered to silence</div></div>
-      <div class="secret-item"><div class="secret-ref">8:30</div><div class="secret-text">After Peter's confession — "Tell no one about me"</div></div>
-      <div class="secret-item" style="border-top:1px solid #e0d8cc; padding-top:8px; margin-top:5px;">
-        <div class="secret-ref" style="color:#c0392b;">15:39</div>
-        <div class="secret-text" style="color:#c0392b; font-weight:600;">Secret lifted — at the cross, a Roman soldier: <em>"Surely this man was the Son of God."</em></div>
+      <div class="card-label">Markan Sandwiches (Intercalation)</div>
+      <div style="font-size:0.8rem; color:#666; line-height:1.4; margin-bottom:12px;">Mark's signature literary device: story A begins — story B interrupts and completes — story A concludes. The interrupting story always interprets the outer frame.</div>
+
+      <div class="sandwich-item">
+        <div class="sw-frame">
+          <div class="sw-outer-box">
+            <span class="sw-type">Outer A</span>
+            <div class="sw-title">Jairus: My Daughter</div>
+            <span class="sw-ref">5:21–24, 35–43</span>
+          </div>
+          <div class="sw-arrow">⟷</div>
+          <div class="sw-inner-box">
+            <span class="sw-type">Inner B</span>
+            <div class="sw-title">Bleeding Woman</div>
+            <span class="sw-ref">5:25–34</span>
+          </div>
+        </div>
+        <div class="sw-meaning"><strong>Meaning:</strong> Faith that falls at Jesus's feet and faith that reaches out and touches — both receive "your faith has made you well." Healing flows through vulnerability, not status. The interruption is part of the miracle.</div>
+      </div>
+
+      <div class="sandwich-item">
+        <div class="sw-frame">
+          <div class="sw-outer-box">
+            <span class="sw-type">Outer A</span>
+            <div class="sw-title">Fig Tree Cursed</div>
+            <span class="sw-ref">11:12–14, 20–25</span>
+          </div>
+          <div class="sw-arrow">⟷</div>
+          <div class="sw-inner-box">
+            <span class="sw-type">Inner B</span>
+            <div class="sw-title">Temple Cleansed</div>
+            <span class="sw-ref">11:15–19</span>
+          </div>
+        </div>
+        <div class="sw-meaning"><strong>Meaning:</strong> The cursed fig tree = fruitless religion that looks alive but produces nothing. The cleansed temple = what true worship should be. Israel's institutional religion is being judged by the same standard as the tree.</div>
+      </div>
+
+      <div class="sandwich-item">
+        <div class="sw-frame">
+          <div class="sw-outer-box">
+            <span class="sw-type">Outer A</span>
+            <div class="sw-title">Twelve Sent Out</div>
+            <span class="sw-ref">6:7–13, 30–32</span>
+          </div>
+          <div class="sw-arrow">⟷</div>
+          <div class="sw-inner-box">
+            <span class="sw-type">Inner B</span>
+            <div class="sw-title">John Beheaded</div>
+            <span class="sw-ref">6:14–29</span>
+          </div>
+        </div>
+        <div class="sw-meaning"><strong>Meaning:</strong> Disciples are sent out in power; while they are gone, John is killed in powerlessness. The sandwich foreshadows the cost of the mission — those sent in power may return to hear of death.</div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-label">The Sandwich Structure (Intercalation)</div>
-      <div style="font-size:0.8rem; color:#666; margin-bottom:10px;">Mark's signature technique: story A interrupted by story B — the inner story interprets the outer.</div>
+    <div style="margin-top: 14px;" class="card">
+      <div class="card-label">Act 2 — Key Moments</div>
+      <div class="moment-item"><span class="moment-ref">9:2–8</span><span class="moment-text"><strong>Transfiguration</strong> — Moses and Elijah; "This is my beloved Son, listen to him." The disciples see his glory; they still don't understand.</span></div>
+      <div class="moment-item"><span class="moment-ref">10:17–22</span><span class="moment-text"><strong>Rich young man</strong> — "One thing you lack." Jesus loved him. He went away sad. The kingdom costs everything.</span></div>
+      <div class="moment-item"><span class="moment-ref">11:1–10</span><span class="moment-text"><strong>Triumphal entry</strong> — "Hosanna! Blessed is he who comes in the name of the Lord!" The crowd wants a political king.</span></div>
+      <div class="moment-item"><span class="moment-ref">14:3–9</span><span class="moment-text"><strong>Anointing at Bethany</strong> — "She has done a beautiful thing to me." The only person who prepares for his death.</span></div>
+      <div class="moment-item"><span class="moment-ref">14:32–42</span><span class="moment-text"><strong>Gethsemane</strong> — "Abba, Father... not what I will, but what you will." The disciples sleep three times.</span></div>
+      <div class="moment-item"><span class="moment-ref">14:66–72</span><span class="moment-text"><strong>Peter's denial</strong> — the final and deepest disciple failure. "And he broke down and wept."</span></div>
+      <div class="moment-item"><span class="moment-ref">15:33–39</span><span class="moment-text"><strong>The cross</strong> — three hours of darkness, cry of dereliction (Ps 22:1), temple curtain torn top to bottom, centurion: "Truly this man was the Son of God."</span></div>
+      <div class="moment-item" style="border-bottom:none;"><span class="moment-ref green">16:1–8</span><span class="moment-text" style="color:#2e8a4a;"><strong>Empty tomb</strong> — "He has risen, he is not here." Three women. Linen cloths. An angel. And then silence.</span></div>
 
-      <div class="sandwich">
-        <div class="sw-row">
-          <div class="sw-outer"><div class="sw-label">Outer A</div><div class="sw-title">Fig Tree Cursed</div><div class="sw-ref">11:12–14</div></div>
-          <div class="sw-inner"><div class="sw-label">Inner B</div><div class="sw-title">Temple Cleansed</div><div class="sw-ref">11:15–19</div></div>
-        </div>
-        <div class="sw-row">
-          <div class="sw-outer"><div class="sw-label">Outer A</div><div class="sw-title">Jairus: My Daughter</div><div class="sw-ref">5:21–24, 35–43</div></div>
-          <div class="sw-inner"><div class="sw-label">Inner B</div><div class="sw-title">Bleeding Woman</div><div class="sw-ref">5:25–34</div></div>
-        </div>
-        <div class="sw-row">
-          <div class="sw-outer"><div class="sw-label">Outer A</div><div class="sw-title">Twelve Sent Out</div><div class="sw-ref">6:7–13, 30–32</div></div>
-          <div class="sw-inner"><div class="sw-label">Inner B</div><div class="sw-title">John Beheaded</div><div class="sw-ref">6:14–29</div></div>
-        </div>
+      <div class="empty-tomb-box">
+        <div class="et-label">Mark's Final Word (16:8)</div>
+        <div class="et-text">"They went out and fled from the tomb, for trembling and astonishment had seized them, and they said nothing to anyone, for they were afraid."</div>
+        <div class="et-note">The oldest manuscripts end here — ἐφοβοῦντο γάρ — ending on a Greek postpositive conjunction, grammatically jarring. The longer ending (vv.9–20) is absent from the best witnesses. The abruptness is almost certainly intentional. The reader must complete the story.</div>
       </div>
-    </div>
-
-    <div class="confession">
-      <div class="conf-label">The Two Confessions</div>
-      <div class="conf-text">"You are the Messiah." — Peter (8:29)</div>
-      <div class="conf-note">At Caesarea Philippi — the structural pivot. Made in safety, in private, without understanding the cross.</div>
-      <div class="conf-text" style="margin-top:10px;">"Surely this man was the Son of God." — Roman soldier (15:39)</div>
-      <div class="conf-note">At Calvary — after watching Jesus die. Made publicly, by an enemy, with full knowledge of what the cross means. The second confession is the correct one.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-label">The Abrupt Ending (16:8)</div>
-      <div style="font-size:0.85rem; color:#444; line-height:1.45;">The oldest manuscripts end: <em>"they said nothing to anyone, because they were afraid."</em> (ἐφοβοῦντο γάρ — ending on a postpositive Greek conjunction, grammatically jarring and narratively unresolved.) The longer ending (vv.9–20) is absent from the best witnesses. The abruptness is almost certainly intentional — the story is unfinished. The reader must complete it.</div>
     </div>
 
   </div>
 
-  <!-- COL 3: Word Studies + Cross-refs + Then/Now + Misread + Verdict -->
+  <!-- COLUMN 3 -->
   <div>
 
     <div class="card">
       <div class="card-label">Key Words</div>
 
-      <div class="word-card">
-        <div class="greek">εὐθύς</div>
-        <div class="transliteration">euthys — "immediately / at once"</div>
-        <div class="word-gloss">The Gospel's engine (41×)</div>
-        <div class="word-note">More than a stylistic tic — it is a theological statement. The Son of Man came to act, not to be discussed. Mark's pace is deliberate urgency.</div>
+      <div class="word-item">
+        <div class="word-greek">εὐθύς</div>
+        <div class="word-roman">euthys — "immediately / straightway"</div>
+        <div class="word-gloss">Mark's signature word of urgency (41×)</div>
+        <div class="word-note">More than a stylistic tic — a theological statement. The Son of Man came to act, not to be discussed. Mark's pace is deliberate urgency. 41× in Mark vs ~5× in Matthew and Luke combined.</div>
       </div>
 
-      <div class="word-card">
-        <div class="greek">εὐαγγέλιον</div>
-        <div class="transliteration">euangelion — "gospel / good news"</div>
+      <div class="word-item">
+        <div class="word-greek">μυστήριον</div>
+        <div class="word-roman">mysterion — "mystery / secret"</div>
+        <div class="word-gloss">The Messianic Secret (4:11)</div>
+        <div class="word-note">Jesus repeatedly commands silence about his identity. Mark's way of showing that the disciples and readers must understand the cross before they can name him rightly. A messiah without the cross is the wrong messiah.</div>
+      </div>
+
+      <div class="word-item">
+        <div class="word-greek">διάκονος</div>
+        <div class="word-roman">diakonos — "servant / deacon"</div>
+        <div class="word-gloss">The servant-leader paradox (10:43–45)</div>
+        <div class="word-note">"Whoever would be great among you must be your servant... the Son of Man came not to be served but to serve." Greatness is redefined at every passion prediction.</div>
+      </div>
+
+      <div class="word-item">
+        <div class="word-greek">εὐαγγέλιον</div>
+        <div class="word-roman">euangelion — "gospel / good news"</div>
         <div class="word-gloss">First word of the book (1:1)</div>
-        <div class="word-note">The Romans used this word for the emperor's proclamation — a new king has come, peace is established. Mark uses it for a different king, whose throne is a cross.</div>
+        <div class="word-note">Romans used this word for the emperor's proclamation — a new king has come, peace is established. Mark uses it for a different king whose throne is a cross.</div>
       </div>
 
-      <div class="word-card">
-        <div class="greek">ἐξουσία</div>
-        <div class="transliteration">exousia — "authority"</div>
-        <div class="word-gloss">The crowd's repeated reaction</div>
-        <div class="word-note">1:22, 1:27, 2:10, 11:28. Authority over teaching, disease, demons, nature, sin, death, and tradition. The whole Gospel is the question: <em>by what authority?</em> The cross is the answer.</div>
-      </div>
-
-      <div class="word-card">
-        <div class="greek">λύτρον</div>
-        <div class="transliteration">lytron — "ransom"</div>
-        <div class="word-gloss">The thesis of 10:45</div>
-        <div class="word-note">Commercial/legal term — a price paid to release a captive. <em>ἀντί</em> (for/instead of) is substitutionary. <em>πολλῶν</em> (many) echoes Isaiah 53:11–12. The whole Gospel is the story of how this price is paid.</div>
-      </div>
-
-      <div class="word-card">
-        <div class="greek">δύναμις</div>
-        <div class="transliteration">dynamis — "power / miracle"</div>
-        <div class="word-gloss">Root of "dynamite"</div>
-        <div class="word-note">Used throughout for Jesus' miracles. Mark's Jesus is not a teacher who also heals — he is a force of God's kingdom breaking into the present age.</div>
+      <div class="word-item">
+        <div class="word-greek">ἐκπλήσσω</div>
+        <div class="word-roman">ekplessō — "amazed / astonished"</div>
+        <div class="word-gloss">The crowd's repeated reaction to Jesus</div>
+        <div class="word-note">The crowd is repeatedly and deeply astonished by his authority over teaching, demons, disease, and death. Mark uses this more than any other Gospel. The question "Who is this?" is the engine of Act 1.</div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-label">Cross-References</div>
+    <div style="margin-top: 14px;" class="card">
+      <div class="card-label">Cross-Bible Links</div>
 
       <div class="xref-item">
-        <div class="xref-ref">Isaiah 40:3 + Malachi 3:1</div>
-        <div class="xref-note">Quoted together in 1:2–3 as one composite "Isaiah" citation — the voice in the wilderness, the messenger preparing the way. Mark opens with the OT's own announcement of what it's been pointing to.</div>
+        <div class="xref-ref"><span class="xref-dir">←</span>Isaiah 40:3 + Malachi 3:1</div>
+        <div class="xref-note">Mark 1:2–3 quotes both as a single composite "Isaiah" citation — the voice in the wilderness, the messenger preparing the way. Note: Mark attributes both to Isaiah; only Isa 40:3 is technically Isaiah. Mark opens with the OT's own announcement of what it has been pointing to.</div>
       </div>
-      <div class="xref-item">
-        <div class="xref-ref">Isaiah 53:10–12</div>
-        <div class="xref-note">Background theology of 10:45 — the suffering servant who bears the sins of "many," makes himself an offering, is raised. Mark's ransom is Isaiah's servant.</div>
-      </div>
-      <div class="xref-item">
-        <div class="xref-ref">Daniel 7:13–14</div>
-        <div class="xref-note">"Son of Man" — used 14× in Mark. Not a humble title but a royal one — the figure who receives dominion over all nations. Jesus applies it to himself in power (14:62).</div>
-      </div>
-      <div class="xref-item">
-        <div class="xref-ref">Psalm 22</div>
-        <div class="xref-note">The cross narrative draws heavily on Ps 22: garments divided by lot (15:24), "My God, my God, why have you forsaken me?" (15:34), mockery matching vv.7–8. The psalm was both a cry and a promise.</div>
-      </div>
-      <div class="xref-item">
-        <div class="xref-ref">Exodus 24 + Jeremiah 31</div>
-        <div class="xref-note">Last Supper covenant language (14:24): "my blood of the covenant." Ex 24 — Sinai covenant sealed in blood. Jer 31 — the new covenant promised. Both land in one cup.</div>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card-label">Then → Now</div>
-      <div class="then-now-grid">
-        <div class="tn-box tn-then">
-          <div class="tn-label">Then · ~65–70 AD</div>
-          <div class="tn-text">Written for Roman Christians in the aftermath of Nero's persecution — believers who had watched leaders martyred and wondered if following a crucified king was a mistake. The breathless pace and suffering-servant theology are not accidental.</div>
-        </div>
-        <div class="tn-box tn-now">
-          <div class="tn-label">Now</div>
-          <div class="tn-text">Mark remains the most accessible entry point to the Gospels — short, urgent, unapologetic. Where Matthew argues and Luke explains, Mark simply shows. For contemporary readers impatient with religion, Mark's Jesus is harder to dismiss.</div>
-        </div>
+      <div class="xref-item">
+        <div class="xref-ref"><span class="xref-dir">←</span>Isaiah 53</div>
+        <div class="xref-note">The Suffering Servant is the background theology of 10:45 — "ransom for many" echoes Isa 53:10–12. The servant who bears iniquity of "many" makes himself an offering. Mark's ransom is Isaiah's servant.</div>
       </div>
-    </div>
 
-    <div class="misread">
-      <div class="misread-label">Common Misread</div>
-      <div class="misread-text">Mark is sometimes read as a rough draft that Matthew and Luke "improved." In fact, Mark's brevity and urgency are deliberate — every omission is a choice. The absent birth narrative, the failed disciples, the abrupt ending, and the 41 "immediatelys" are a theology, not an oversight.</div>
-    </div>
+      <div class="xref-item">
+        <div class="xref-ref"><span class="xref-dir">←</span>Psalm 22</div>
+        <div class="xref-note">The cross narrative is saturated with Ps 22: garments divided by lot (15:24), "My God, my God, why have you forsaken me?" (15:34), mockery matching vv.7–8. The psalm was both a cry of desolation and a promise of vindication.</div>
+      </div>
 
-    <div class="verdict" style="margin-top:14px;">
-      <div class="verdict-label">Verdict</div>
-      <div class="verdict-text">Mark is the gospel you hand someone who doesn't have time for religion. It opens with no genealogy, no angel, no manger — just a man walking out of the Jordan and immediately turning the world upside down. It ends with an empty tomb and terrified women. In between: 678 verses of concentrated authority, and one thesis — the Son of Man came to give his life as a ransom for many.</div>
+      <div class="xref-item">
+        <div class="xref-ref"><span class="xref-dir">NT →</span>Acts 13:13</div>
+        <div class="xref-note">John Mark abandons Paul on the first missionary journey. Later (2 Tim 4:11) Paul calls him "useful for ministry." Tradition holds Mark is Peter's interpreter in Rome — the Gospel is Peter's testimony filtered through Mark's pen.</div>
+      </div>
+
+      <div class="xref-item">
+        <div class="xref-ref"><span class="xref-dir">≈</span>Matthew 16:16 / Luke 9:20</div>
+        <div class="xref-note">Parallel confessions at Caesarea Philippi in all three Synoptics. Only Mark includes the unvarnished "Get behind me, Satan" (8:33) — Matthew and Luke soften the aftermath. Mark's Peter fails harder and more specifically.</div>
+      </div>
     </div>
 
   </div>
 
 </div>
+<!-- END MAIN GRID -->
+
+<!-- BOTTOM ROW: Then/Now + Question -->
+<div class="bottom-grid">
+
+  <div class="card">
+    <div class="card-label">Then → Now</div>
+    <div class="then-now">
+      <div class="tn-box tn-then">
+        <div class="tn-label">Then · ~65–70 AD</div>
+        <div class="tn-text">Mark was written for a Roman audience facing Nero's persecution — believers who had watched leaders martyred and wondered whether following a crucified king was a mistake. The breathless pace, stripped-back birth narrative, and suffering-servant theology are not accidental choices. The abrupt ending (16:8) left the reader inside the story's open question.</div>
+      </div>
+      <div class="tn-box tn-now">
+        <div class="tn-label">Now</div>
+        <div class="tn-text">The question of Caesarea Philippi is still the only question that matters — not "Who do people say Jesus is?" but "Who do <em>you</em> say he is?" Mark's unfinished ending is an invitation: the story continues in whoever reads it. For contemporary readers impatient with religion, Mark's Jesus is harder to dismiss than any theological argument.</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="question-box">
+      <div class="q-label">Question to Sit With</div>
+      <div class="q-text">"Mark ends with the women running away in fear, saying nothing to anyone. Is that where the story is supposed to leave you — or is the fear the point of entry?"</div>
+    </div>
+
+    <div style="margin-top: 14px;" class="card" style="border-color: #c0392b;">
+      <div class="card-label">The Two Confessions</div>
+      <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1.5px dotted #e0d8cc;">
+        <div style="font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; font-style: italic;">"You are the Christ."</div>
+        <div style="font-size: 0.76rem; color: #888; margin-top: 3px;">— Peter, 8:29 · Caesarea Philippi · private · without understanding the cross</div>
+      </div>
+      <div>
+        <div style="font-family: 'Special Elite', serif; font-size: 0.9rem; color: #c0392b; font-style: italic;">"Truly this man was the Son of God."</div>
+        <div style="font-size: 0.76rem; color: #888; margin-top: 3px;">— Roman soldier, 15:39 · Calvary · public · after watching Jesus die · by an enemy · with full knowledge of what the cross means</div>
+        <div style="font-size: 0.79rem; color: #555; margin-top: 6px; line-height: 1.4;">The second confession is the correct one. The messianic secret is only unlocked at the cross.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
