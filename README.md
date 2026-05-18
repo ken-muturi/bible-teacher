@@ -1,128 +1,105 @@
 # Bible Teacher — AI Skill Toolkit
 
-A set of workflow tools for producing Bible teaching content.
+A set of Claude Code skills for producing Bible teaching content — visual panels, passage studies, discussion guides, and book comparisons.
+
 Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skills/) architecture by Thomas Costello.
 
 ---
 
-## Installation
+## Quick Install
 
-### 1. Get Claude
+Open any Claude Code project and run:
 
-This toolkit runs on [Claude](https://claude.ai) by Anthropic. You need one of the following:
-
-**Option A — Claude.ai (browser, easiest)**
-1. Go to [claude.ai](https://claude.ai) and create a free account
-2. Upgrade to Claude Pro for best results (required for long research sessions)
-3. Create a **Project** — this keeps your teacher profile and skills persistent across conversations
-
-**Option B — Claude Desktop (recommended for most teachers)**
-1. Download the Claude desktop app for [Mac or Windows](https://claude.ai/download)
-2. Sign in with your Anthropic account (or create one)
-3. Create a **Project** and add your skill files — works identically to Claude.ai but as a native app
-4. Upgrade to Claude Pro for best results
-
-**Option C — Claude Code (terminal, for power users)**
-1. Install [Node.js](https://nodejs.org) if you don't have it
-2. Install Claude Code:
-   ```bash
-   npm install -g @anthropic-ai/claude-code
-   ```
-3. Authenticate:
-   ```bash
-   claude
-   ```
-   Follow the prompts to connect your Anthropic account.
-
----
-
-### 2. Get This Toolkit
-
-Clone the repository:
-
-```bash
-git clone https://github.com/ken-muturi/bible-teacher.git
-cd bible-teacher
+```
+install skills from https://github.com/ken-muturi/bible-teacher
 ```
 
-Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/heads/main.zip) and unzip it.
+Claude fetches the skills manifest, creates the skill directories, and confirms everything is installed. That's it.
 
----
-
-### 3. Using the Skills
-
-**With Claude Code** — open the toolkit directory and start Claude:
-```bash
-cd bible-teacher
-claude
-```
-Claude Code automatically reads the skill files in the directory. Reference any skill by name in conversation:
-```
-book-overview judges
-book-overview-infographic judges --non-constrained
-discussion-guide judges
-```
-
-**With Claude.ai Projects**
-1. Create a new Project in Claude.ai
-2. Go to **Project instructions** and paste the contents of `foundation/teacher-foundation/SKILL.md`
-3. Add each skill file you want to use as a Project file (or paste into the instructions)
-4. Start a conversation and reference the skills by name
-
----
-
-## Setup (do this once)
-
-1. Open `foundation/teacher-foundation/SKILL.md`
-2. Fill in your profile variables — name, teaching context, audience, Bible translation, denominational tradition, posture, and tone
-3. The file includes a full list of translation options (ESV, NIV, NLT, KJV, NABRE, NJB, and more) and denominational traditions (Baptist, Catholic, Reformed, Orthodox, Pentecostal, and more) to choose from
-4. Every skill output is shaped by this profile — research emphasis, interpretive framing, commentary recommendations, and application bridges all adapt to your tradition and audience
+> **First time?** You need the `install-skill` skill to bootstrap the rest. Install it once manually:
+> ```
+> install skill https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md
+> ```
+> Then run the one-liner above to install everything else.
 
 ---
 
 ## Skills
 
-| Skill | File | What It Does |
-|-------|------|--------------|
-| Teacher Foundation | `foundation/teacher-foundation/SKILL.md` | Personalizes all outputs with your profile |
-| Book Overview | `book-overview/SKILL.md` | Deep research brief for any of the 66 books |
-| Book Overview Infographic | `book-overview-infographic/SKILL.md` | HTML visual teaching panel from the research brief |
-| Video Outline | `video-outline/SKILL.md` | Talking-points outline for a teaching session |
-| Discussion Guide | `discussion-guide/SKILL.md` | Printable one-page study companion for groups |
-| Passage Study | `passage-study/SKILL.md` | Deep dive on a verse or chapter — word studies, illustrations, and HTML visual panel |
-
-### Discussion Guide
-
-A one-page printable HTML resource generated from the completed teaching outline. Designed for small groups, classrooms, or self-study — no prior Bible knowledge assumed.
-
-Each guide includes:
-- **Before you engage** — 3 questions anyone can answer before the session
-- **Key terms** — plain-language definitions, no jargon
-- **Discussion questions** — tagged by type (Observation / Context / Application); no yes/no questions, no easy answers
-- **Going deeper** — one book, one resource, one passage to read alongside
-- **Closing thought** — one sentence on what this book uniquely contributes
-
-Output: `guides/discussions/<book>-discussion-guide.html` — print-ready via browser.
-
-![Judges Discussion Guide](guides/discussions/screenshots/judges-discussion-guide.png)
+| Skill | Trigger | What It Does |
+|-------|---------|--------------|
+| **Teacher Foundation** | Edit `foundation/teacher-foundation/SKILL.md` | Set your tradition, translation, and theology once — all other skills inherit it |
+| **Book Overview Infographic** | `book-overview <Book>` | Generates a custom HTML visual panel for any Bible book |
+| **Passage Study** | `passage-study <ref>` | Quick overview panel for any verse or chapter |
+| **Passage Study (deep)** | `passage-study <ref> --deep` | Full exegetical study — word studies, commentaries, illustrations, chat brief + rich HTML panel |
+| **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any book |
+| **Install Skill** | `install skill <url>` or `install skills from <repo>` | Installs one skill or all skills from a GitHub repo |
 
 ---
 
-## Workflow Per Book
+## Setup (do once)
 
-```
-1. Run book-overview             →  research brief
-2. Run book-overview-infographic →  HTML visual teaching panel
-3. Run video-outline             →  talking-points structure
-4. Run discussion-guide          →  companion resource
-5. python3 scripts/to-pdf.py --all  →  PDF versions of all guides
-```
+1. Open `foundation/teacher-foundation/SKILL.md`
+2. Edit the variables directly in the file — name, context, audience, translation, denomination, preaching posture
+3. Includes a full table of 12 Bible translations and denominational tradition options across 6 categories
+4. All skill outputs adapt to your profile automatically — commentary recommendations, application bridges, interpretive framing
+
+---
+
+## Outputs
+
+All generated guides are HTML files in `guides/`. Open `index.html` at the project root to browse everything.
+
+### Book Overview Panels
+Visual teaching panels — layout adapts to the book's own structure.
+
+| Mode | Trigger | Layout |
+|------|---------|--------|
+| Default | `book-overview <Book>` | 3-column grid, consistent across all books |
+| Non-constrained | `book-overview <Book> --non-constrained` | Layout emerges from the book's structure |
+
+Output: `guides/visuals/<book>-panel.html`
+
+**Examples**
+
+- **Judges** (`--non-constrained`) — downward descent layout, each judge card indented further right as quality deteriorates
+- **Amos** (`--non-constrained`) — funnel trap layout, six nations close down onto Israel, enacting the rhetorical trap of chapters 1–2
+- **Romans** (`--non-constrained`) — argument cascade, four movements flowing from the 1:16–17 thesis
+- **Leviticus** (`--non-constrained`) — two-part arc with ch.16 Day of Atonement as the red hinge
+
+### Passage Studies
+Two modes for different use cases:
+
+**Quick** — `passage-study Romans 8:1–11`
+Concise panel: 2 word studies, 3-beat structure, 2 illustrations, Then→Now, 2 cross-references.
+
+**Deep** — `passage-study 2 Samuel 12:1–14 --deep`
+Full exegetical study: 3–5 word studies, historical context, 3–5 illustrations, 2–3 cited commentaries (named authors), pressure points, full cross-references. Outputs a chat brief first, then a rich HTML panel.
+
+Output: `guides/passages/<book-chapter-verse>-study.html`
+
+### Book & Passage Comparisons
+Side-by-side panels showing two books or passages in parallel.
+
+- **Judges × Amos** — same covenant failure 300 years apart, neglect vs. injustice
+- **2 Samuel 11 × Psalm 51** — the fall and the return, narrative vs. prayer, diptych layout with arc strip
+
+Output: `guides/visuals/<name>-comparison.html` or `guides/passages/<name>.html`
+
+### Discussion Guides
+One-page printable HTML companion for small groups, classrooms, or self-study.
+
+Each guide includes: Before You Engage questions, Key Terms, Discussion Questions (tagged Observation / Context / Application), Going Deeper resources, and a Closing Thought.
+
+Output: `guides/discussions/<book>-discussion-guide.html`
 
 ---
 
 ## PDF Export
 
-Convert any HTML guide or visual panel to PDF:
+Every HTML panel has a **↓ Save as PDF** button — click it and use your browser's print dialog to save as PDF.
+
+For batch export via script:
 
 ```bash
 # Install dependency (once)
@@ -135,57 +112,24 @@ python3 scripts/to-pdf.py guides/discussions/judges-discussion-guide.html
 python3 scripts/to-pdf.py --all
 ```
 
-Discussion guides export as A4 portrait. Visual panels export as A3 landscape.
-PDFs are saved alongside the HTML files in the same folder.
+Discussion guides → A4 portrait. Visual panels → A3 landscape. PDFs saved alongside the HTML files.
 
 ---
 
-## Infographic Layout Modes
+## Typical Workflow
 
 ```
-book-overview-infographic genesis                      # 3-column grid (default)
-book-overview-infographic judges --non-constrained     # theme-driven layout
+1. passage-study <ref>                   →  quick study panel
+   passage-study <ref> --deep            →  full exegetical study
+2. book-overview <Book>                  →  visual teaching panel
+3. discussion-guide <Book>              →  companion resource for groups
 ```
 
-The default 3-column layout is consistent and printable across all 66 books.
-`--non-constrained` lets the layout emerge from the book's own structure.
-
 ---
 
-## Sample Infographics
+## Browse All Guides
 
-### Judges — `--non-constrained` (downward descent layout)
-The layout mirrors the book's spiral: each judge card is indented further right as quality deteriorates, collapsing into a dark zone for chapters 17–21 where no judge appears.
-
-![Judges Teaching Panel](guides/visuals/screenshots/judges-panel.png)
-
----
-
-### Leviticus — `--non-constrained` (two-part arc layout)
-Structured around the two halves of the book with the Day of Atonement (ch. 16) as the red hinge between "Approaching God" and "Living as Holy."
-
-![Leviticus Teaching Panel](guides/visuals/screenshots/leviticus-panel.png)
-
----
-
-### Romans — `--non-constrained` (argument cascade layout)
-Four numbered movements flow downward from the thesis (1:16–17), each feeding logically into the next: Problem → Solution → Israel Question → Practice.
-
-![Romans Teaching Panel](guides/visuals/screenshots/romans-panel.png)
-
----
-
-### Amos — 3-column (default layout)
-Standard three-column grid: left holds identity, the compact trap diagram, and three-sermon summary; center holds the indictment/requirement contrast, key passage, five visions, and confrontation; right holds key words, cross-links, and application.
-
-![Amos Teaching Panel 3-Column](guides/visuals/screenshots/amos-panel-3col.png)
-
----
-
-### Amos — `--non-constrained` (funnel trap layout)
-The rhetorical trap structure drives the layout: six nations flow across the top, close down through Judah, then snap onto Israel — visually enacting what Amos does rhetorically in chapters 1–2. Below: the indictment vs. requirement contrast, the full-width 5:24 passage, five escalating visions, and the application grid.
-
-![Amos Teaching Panel](guides/visuals/screenshots/amos-panel.png)
+Open `index.html` in your browser (or at `http://localhost:7654/index.html` if running the preview server) to browse all generated guides by category, with clickable cards for every panel, study, comparison, and discussion guide.
 
 ---
 
@@ -200,4 +144,6 @@ See `CURRICULUM.md` for the full 66-book curriculum organized into 9 playlist se
 ## Philosophy
 
 These are research and structure tools. They do not teach for you.
-The historical knowledge, interpretive judgment, and application are yours.
+The historical knowledge, interpretive judgment, application bridges, and pastoral instinct are yours.
+
+Skills cite real commentaries — named authors, named works — so you can follow the footnotes yourself.
