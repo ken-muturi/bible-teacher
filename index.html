@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bible Teacher — Guide Index</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -86,6 +87,25 @@
   }
   .copy-btn:hover { background: #444; color: #ccc; }
   .copy-btn.copied { background: #2e8a4a; color: #fff; border-color: #2e8a4a; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .sections { grid-template-columns: 1fr !important; }
+    .skills-grid { grid-template-columns: 1fr 1fr !important; }
+    .skills-section { grid-column: auto !important; }
+    [style*="grid-column"] { grid-column: auto !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    .install-all-row { flex-direction: column; align-items: flex-start; }
+    .copy-all-btn { width: 100%; }
+    h1 { font-size: 2rem !important; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .skills-grid { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

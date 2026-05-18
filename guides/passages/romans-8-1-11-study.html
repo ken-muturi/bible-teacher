@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Romans 8:1–11 — Passage Study Panel</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -98,6 +99,24 @@
   @media print {
     body { background: #fff; padding: 0; }
     .panel { border: none; padding: 12px; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .main-grid { grid-template-columns: 1fr !important; }
+    .word-strip { grid-template-columns: 1fr 1fr !important; }
+    .xref-strip { grid-template-columns: 1fr 1fr !important; }
+    .then-now { grid-template-columns: 1fr !important; }
+    h1 { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .word-strip,
+    .xref-strip { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.6rem !important; }
   }
 </style>
 </head>

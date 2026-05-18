@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hosea — Sermon Structure</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -172,6 +173,26 @@
   .cta-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
   .cta-text { font-family: 'Special Elite', serif; font-size: 1.15rem; color: #fff; line-height: 1.6; }
   .cta-verse { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 8px; font-style: italic; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .grid-2 { grid-template-columns: 1fr !important; }
+    .names-row { grid-template-columns: 1fr !important; }
+    .pivot-block { grid-template-columns: 1fr !important; }
+    .pivot-spine { display: none; }
+    .then-now { grid-template-columns: 1fr !important; }
+    .tn-arrow { display: none; }
+    .name-card { width: 100%; }
+    .sermon-title { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .sermon-title { font-size: 1.6rem !important; }
+  }
 
 </style>
 </head>

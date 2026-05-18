@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2 Samuel 11 × Psalm 51 — The Fall and the Return</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -141,6 +142,24 @@
   .verb-row   { display: flex; align-items: baseline; gap: 7px; }
   .verb-heb   { font-family: 'Special Elite', serif; font-size: 0.85rem; color: #6c4bbf; min-width: 52px; }
   .verb-eng   { font-size: 0.8rem; color: #555; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .diptych { grid-template-columns: 1fr !important; }
+    .spine { display: none; }
+    .col-left  { padding-right: 0; }
+    .col-right { padding-left: 0; }
+    .bridge-row { grid-template-columns: 1fr 1fr !important; }
+    h1 { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .bridge-row { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

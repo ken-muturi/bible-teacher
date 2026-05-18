@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mark — The Gospel of the Servant in Motion</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -117,6 +118,22 @@
   .conf-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
   .conf-text { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
   .conf-note { font-size: 0.78rem; color: #555; margin-top: 5px; line-height: 1.35; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .sw-row,
+    .then-now-grid { grid-template-columns: 1fr !important; }
+    .word-card { width: 100%; }
+    h1, .book-title { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    h1, .book-title { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

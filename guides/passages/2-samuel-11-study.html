@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2 Samuel 11 — The Anatomy of a Fall</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -77,6 +78,21 @@
   .misread { background: #ffeaea; border: 1.5px solid #c0392b; border-radius: 3px; padding: 12px 14px; }
   .misread-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
   .misread-text { font-size: 0.88rem; color: #444; line-height: 1.4; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .then-now-grid { grid-template-columns: 1fr !important; }
+    .word-card { width: 100%; }
+    .ref { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .ref { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

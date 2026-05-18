@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Judges × Amos — Comparison Panel</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -84,6 +85,24 @@
   .verdict-label { font-size: 0.63rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
   .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; line-height: 1.45; }
   .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 5px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .main { grid-template-columns: 1fr !important; }
+    .shared-row { grid-template-columns: 1fr 1fr !important; }
+    .bottom { grid-template-columns: 1fr !important; }
+    .contrast-pair { grid-template-columns: 1fr !important; }
+    .contrast-vs { display: none; }
+    h1 { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .shared-row { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

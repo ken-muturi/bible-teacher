@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amos — Teaching Panel</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -216,6 +217,24 @@
   .bottom-strip { border-top: 2px solid #ddd; margin-top: 18px; padding-top: 13px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
   .strip-label { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 3px; }
   .strip-body { font-size: 0.92rem; line-height: 1.35; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .contrast-section,
+    .identity-row { grid-template-columns: 1fr !important; }
+    .visions-row { grid-template-columns: 1fr 1fr !important; }
+    .bottom-grid,
+    .bottom-strip { grid-template-columns: 1fr !important; }
+    h1 { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .visions-row { grid-template-columns: 1fr !important; }
+    h1 { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>

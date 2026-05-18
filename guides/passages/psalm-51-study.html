@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Psalm 51 — The Anatomy of Repentance</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -86,6 +87,21 @@
   /* superscription */
   .superscription { background: #e8e0d4; border: 1.5px solid #aaa398; border-radius: 3px; padding: 10px 14px; margin-bottom: 10px; font-size: 0.85rem; color: #555; font-style: italic; line-height: 1.5; }
   .sup-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #888; margin-bottom: 4px; font-style: normal; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .then-now-grid { grid-template-columns: 1fr !important; }
+    .word-card { width: 100%; }
+    .ref { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .ref { font-size: 1.6rem !important; }
+  }
 </style>
 </head>
 <body>
