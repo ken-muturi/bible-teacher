@@ -1,0 +1,41 @@
+{
+  "name": "Bible Teacher Skills",
+  "repo": "https://github.com/ken-muturi/bible-teacher",
+  "skills": [
+    {
+      "id": "install-skill",
+      "name": "Install Skill",
+      "description": "Meta-skill: install any skill (or all skills) from a URL.",
+      "trigger": "install skill <url> | install all skills: <url>",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md"
+    },
+    {
+      "id": "foundation",
+      "name": "Teacher Foundation",
+      "description": "Set your teaching tradition, translation, and theology once — all skills inherit it.",
+      "trigger": "Edit foundation/teacher-foundation/SKILL.md directly",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/foundation/teacher-foundation/SKILL.md"
+    },
+    {
+      "id": "book-overview-infographic",
+      "name": "Book Overview Infographic",
+      "description": "Generates a custom visual panel for any Bible book.",
+      "trigger": "book-overview <Book>",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/book-overview-infographic/SKILL.md"
+    },
+    {
+      "id": "passage-study",
+      "name": "Passage Study",
+      "description": "Quick overview or full deep-dive for any verse or chapter.",
+      "trigger": "passage-study <ref> [--deep]",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/passage-study/SKILL.md"
+    },
+    {
+      "id": "discussion-guide",
+      "name": "Discussion Guide",
+      "description": "Small-group study companion for any Bible book.",
+      "trigger": "discussion-guide <Book>",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/discussion-guide/SKILL.md"
+    }
+  ]
+}
