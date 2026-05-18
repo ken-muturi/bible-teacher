@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblical Timeline — Adam to Jesus</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 24px 16px 48px;
+    color: #2c2c2c;
+  }
+
+  .panel {
+    background: #faf7f2;
+    border: 3px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 32px 36px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  /* ── BACK LINK ── */
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    border-bottom: 1px dashed #aaa;
+    margin-bottom: 20px;
+  }
+  .back-link:hover { color: #2c2c2c; }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #2c2c2c;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  .header h1 {
+    font-family: 'Special Elite', serif;
+    font-size: 3.2rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+  .header .subtitle {
+    font-size: 1.25rem;
+    color: #444;
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+  .header .meta {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 6px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #e0ddd8;
+  }
+
+  section { margin-bottom: 40px; }
+
+  /* ══════════════════════════════════════════
+     SECTION 2 — ERA BANDS STRIP
+  ══════════════════════════════════════════ */
+  .era-strip {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid #2c2c2c;
+    height: 56px;
+    margin-bottom: 8px;
+  }
+  .era-band {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .era-band span {
+    font-family: 'Special Elite', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    line-height: 1.25;
+    padding: 0 4px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+    pointer-events: none;
+  }
+  .era-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 10px;
+  }
+  .era-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+  .era-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 3 — LIFESPAN TIMELINE
+  ══════════════════════════════════════════ */
+  .timeline-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .timeline-inner {
+    min-width: 700px;
+  }
+  .era-group {
+    margin-bottom: 18px;
+  }
+  .era-group-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 8px;
+  }
+  .bar-name {
+    width: 100px;
+    flex-shrink: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: right;
+    color: #333;
+    white-space: nowrap;
+  }
+  .bar-track {
+    flex: 1;
+    background: #e8e4dc;
+    border-radius: 2px;
+    height: 22px;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    min-width: 24px;
+  }
+  .bar-fill span {
+    font-size: 0.7rem;
+    color: #fff;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    overflow: hidden;
+  }
+  .bar-date {
+    font-size: 0.72rem;
+    color: #888;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 130px;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 4 — MESSIANIC FAMILY TREE
+  ══════════════════════════════════════════ */
+  .tree-scroll { overflow-x: auto; }
+  .tree-container {
+    min-width: 900px;
+    padding: 8px 0 16px;
+  }
+
+  /* Main vertical spine */
+  .tree-spine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .tree-node-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tree-connector {
+    width: 2px;
+    height: 22px;
+    background: #2c2c2c;
+    flex-shrink: 0;
+  }
+
+  .tree-node {
+    border: 2px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 5px 12px;
+    background: #faf7f2;
+    text-align: center;
+    min-width: 130px;
+    position: relative;
+  }
+  .tree-node .tn-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+  }
+  .tree-node .tn-badge {
+    display: inline-block;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-top: 2px;
+    color: #fff;
+  }
+  .tree-node .tn-date {
+    font-size: 0.7rem;
+    color: #777;
+    margin-top: 2px;
+  }
+
+  /* Branch group — horizontal row with branches */
+  .branch-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    justify-content: center;
+  }
+
+  .branch-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .branch-h-line {
+    height: 2px;
+    background: #aaa;
+    width: 40px;
+    margin-top: 14px; /* align to middle of node */
+    flex-shrink: 0;
+  }
+
+  .branch-node {
+    border: 2px dashed #aaa;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: #f0ede8;
+    text-align: center;
+    min-width: 100px;
+  }
+  .branch-node .bn-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  .branch-node .bn-note {
+    font-size: 0.65rem;
+    color: #888;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  .branch-connector-v {
+    width: 2px;
+    height: 14px;
+    background: #aaa;
+  }
+
+  /* Tribe chips */
+  .tribes-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .tribe-chip {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1.5px solid #6c4bbf;
+    background: #f2eefb;
+    color: #6c4bbf;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .tribe-chip.highlight {
+    background: #6c4bbf;
+    color: #fff;
+  }
+
+  /* Horizontal branch for Abraham */
+  .abr-branch {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .abr-col { display: flex; flex-direction: column; align-items: center; }
+  .abr-h { height: 2px; background: #aaa; width: 60px; margin-top: 15px; }
+
+  /* Kingdom split */
+  .kingdom-split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .ks-col { display: flex; flex-direction: column; align-items: center; }
+  .ks-h { height: 2px; background: #aaa; width: 70px; margin-top: 15px; }
+
+  /* ══════════════════════════════════════════
+     SECTION 5 — CONTEMPORARIES
+  ══════════════════════════════════════════ */
+  .contemporaries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .contemp-card {
+    border: 2px solid #e0ddd8;
+    border-radius: 4px;
+    padding: 12px 14px;
+    background: #faf7f2;
+  }
+  .contemp-era {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #fff;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .contemp-names {
+    font-family: 'Special Elite', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+    color: #2c2c2c;
+  }
+  .contemp-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .contemp-note {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #444;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 6 — BOOKS IN CONTEXT
+  ══════════════════════════════════════════ */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .books-card {
+    border: 2px solid;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .books-card-head {
+    padding: 7px 11px;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .books-card-body {
+    padding: 10px 12px;
+    background: #faf7f2;
+  }
+  .books-card-date {
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  .books-list {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  .books-list .book-pill {
+    display: inline-block;
+    background: #f0ede8;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin: 1px 2px 1px 0;
+    font-size: 0.78rem;
+  }
+  .books-note {
+    font-size: 0.78rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 7 — KEY EVENTS
+  ══════════════════════════════════════════ */
+  .events-timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+  .events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: linear-gradient(to bottom, #3b6fd4, #2e8a4a, #d4a017, #d47c1a, #6c4bbf, #c0392b, #8b1a1a, #7a8c2e, #888, #2e8a4a);
+    border-radius: 2px;
+  }
+  .event-item {
+    position: relative;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .event-dot {
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #faf7f2;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px currentColor;
+  }
+  .event-body {}
+  .event-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .event-date {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: 8px;
+  }
+  .event-note {
+    font-size: 0.82rem;
+    color: #555;
+    margin-top: 2px;
+    line-height: 1.35;
+  }
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .panel { padding: 20px 16px; }
+    .header h1 { font-size: 2.1rem; }
+    .header .subtitle { font-size: 1.05rem; }
+
+    .era-strip { height: 42px; }
+    .era-band span { font-size: 0.48rem; }
+
+    .contemporaries-grid,
+    .books-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .bar-name { width: 80px; font-size: 0.8rem; }
+    .bar-date { display: none; }
+
+    .tree-container { min-width: 700px; }
+
+    .events-timeline { padding-left: 28px; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 12px 8px 32px; }
+    .contemporaries-grid { grid-template-columns: 1fr; }
+    .books-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <a href="../index.html" class="back-link">← Back to index</a>
+
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════ -->
+  <div class="header">
+    <h1>Biblical Timeline</h1>
+    <div class="subtitle">Adam to Jesus — Who Lived When, and What Was Written</div>
+    <div class="meta">Conservative chronology · Anno Mundi dating · approximate BC equivalents</div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2: ERA BANDS STRIP
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Era Bands — Approximate Duration</div>
+
+    <div class="era-strip">
+      <!-- Total span ~4100 years: 4004 BC to AD 100
+           Antediluvian: 4004–2348 BC = 1656 yrs  → ~40%
+           Post-flood Patriarchs: 2348–1800 BC = 548 → ~13%
+           Sojourn & Exodus: 1800–1406 BC = 394 → ~9.5%
+           Conquest & Judges: 1406–1050 BC = 356 → ~8.5%
+           United Kingdom: 1050–930 BC = 120 → ~3%
+           Divided Kingdom: 930–586 BC = 344 → ~8.5%
+           Exile: 586–538 BC = 48 → ~1%
+           Post-exile: 538–430 BC = 108 → ~2.5%
+           Intertestamental: 430–5 BC = 425 → ~10%
+           NT: 5 BC – AD 100 = 105 → ~2.5%
+      -->
+      <div class="era-band" style="width:40%;background:#3b6fd4">
+        <span>Pre-Flood<br>Antediluvian</span>
+      </div>
+      <div class="era-band" style="width:13%;background:#2e8a4a">
+        <span>Post-Flood<br>Patriarchs</span>
+      </div>
+      <div class="era-band" style="width:9.5%;background:#d4a017">
+        <span>Egypt &amp;<br>Exodus</span>
+      </div>
+      <div class="era-band" style="width:8.5%;background:#d47c1a">
+        <span>Conquest<br>&amp; Judges</span>
+      </div>
+      <div class="era-band" style="width:3%;background:#6c4bbf">
+        <span style="font-size:0.48rem">United<br>Kingdom</span>
+      </div>
+      <div class="era-band" style="width:8.5%;background:#c0392b">
+        <span>Divided<br>Kingdom</span>
+      </div>
+      <div class="era-band" style="width:1.2%;background:#8b1a1a">
+        <span style="font-size:0.45rem">Exile</span>
+      </div>
+      <div class="era-band" style="width:2.5%;background:#7a8c2e">
+        <span style="font-size:0.5rem">Return</span>
+      </div>
+      <div class="era-band" style="width:10%;background:#888888">
+        <span>Between<br>Testaments</span>
+      </div>
+      <div class="era-band" style="width:3.8%;background:#2e8a4a">
+        <span style="font-size:0.55rem">New<br>Testament</span>
+      </div>
+    </div>
+
+    <div class="era-legend">
+      <div class="era-legend-item"><div class="era-dot" style="background:#3b6fd4"></div>Antediluvian (~4004–2348 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#2e8a4a"></div>Post-flood Patriarchs (~2348–1800 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#d4a017"></div>Sojourn &amp; Exodus (~1800–1406 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#d47c1a"></div>Conquest &amp; Judges (~1406–1050 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#6c4bbf"></div>United Kingdom (~1050–930 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#c0392b"></div>Divided Kingdom (~930–586 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#8b1a1a"></div>Exile (~586–538 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#7a8c2e"></div>Post-exile &amp; Return (~538–430 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#888"></div>Intertestamental (~430–5 BC)</div>
+      <div class="era-legend-item"><div class="era-dot" style="background:#2e8a4a"></div>New Testament (~5 BC – AD 100)</div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3: LIFESPAN TIMELINE
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Lifespan Timeline — Key Biblical Figures (scroll horizontally on mobile)</div>
+    <div class="timeline-wrap">
+      <div class="timeline-inner">
+
+        <!-- Axis label -->
+        <div style="display:flex;gap:8px;margin-bottom:6px;padding-left:108px;">
+          <div style="flex:1;font-size:0.65rem;color:#aaa;letter-spacing:0.08em;text-align:left;">4000 BC ←</div>
+          <div style="flex:1;font-size:0.65rem;color:#aaa;letter-spacing:0.08em;text-align:center;">2000 BC</div>
+          <div style="flex:1;font-size:0.65rem;color:#aaa;letter-spacing:0.08em;text-align:center;">1000 BC</div>
+          <div style="flex:1;font-size:0.65rem;color:#aaa;letter-spacing:0.08em;text-align:right;">→ AD 100</div>
+        </div>
+
+        <!-- ANTEDILUVIAN -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#3b6fd4">Antediluvian</div>
+
+          <!-- Total span visualised: 4004 BC to AD 100 ≈ 4104 years. Use % of this range.
+               left = (4004 - start_BC) / 4104 * 100
+               width = duration / 4104 * 100
+               Adam AM1–930: start=4004BC, end=3074BC → left=0%, width=22.6%
+          -->
+          <div class="bar-row">
+            <div class="bar-name">Adam</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#3b6fd4;left:0%;width:22.7%">
+                <span>Adam</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 1–930 (~4004–3074 BC)</div>
+          </div>
+
+          <!-- Seth AM130–1042: start=3874BC, end=2962BC → left=3.2%, width=22.2% -->
+          <div class="bar-row">
+            <div class="bar-name">Seth</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#3b6fd4;left:3.2%;width:22.2%">
+                <span>Seth</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 130–1042 (~3874–2962 BC)</div>
+          </div>
+
+          <!-- Enoch AM622–987: start=3382BC, end=3017BC → left=15.2%, width=8.9% — translated, did not die -->
+          <div class="bar-row">
+            <div class="bar-name">Enoch ✦</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#3b6fd4;left:15.2%;width:8.9%;border-right:2px dashed #fff">
+                <span>Enoch (translated)</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 622–987 (~3382–3017 BC)</div>
+          </div>
+
+          <!-- Methuselah AM687–1656: start=3317BC, end=2348BC → left=16.7%, width=23.6% -->
+          <div class="bar-row">
+            <div class="bar-name">Methuselah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#3b6fd4;left:16.7%;width:23.6%">
+                <span>Methuselah (969 yrs)</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 687–1656 (~3317–2348 BC)</div>
+          </div>
+
+          <!-- Noah AM1056–2006: start=2948BC, end=1998BC → left=25.7%, width=23.2% -->
+          <div class="bar-row">
+            <div class="bar-name">Noah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#3b6fd4;left:25.7%;width:23.2%">
+                <span>Noah (950 yrs)</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 1056–2006 (~2948–1998 BC)</div>
+          </div>
+        </div>
+
+        <!-- POST-FLOOD PATRIARCHS -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#2e8a4a">Post-Flood Patriarchs</div>
+
+          <!-- Shem AM1558–2158: start=2446BC, end=1846BC → left=38%, width=14.6% -->
+          <div class="bar-row">
+            <div class="bar-name">Shem</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:38%;width:14.6%">
+                <span>Shem (600 yrs)</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 1558–2158 (~2446–1846 BC)</div>
+          </div>
+
+          <!-- Abraham: ~1996–1821 BC → left=48.9%, width=4.3% -->
+          <div class="bar-row">
+            <div class="bar-name">Abraham</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:48.9%;width:4.3%">
+                <span>Abraham</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 2008–2183 (~1996–1821 BC)</div>
+          </div>
+
+          <!-- Isaac: ~1896–1716 BC → left=51.4%, width=4.4% -->
+          <div class="bar-row">
+            <div class="bar-name">Isaac</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:51.4%;width:4.4%">
+                <span>Isaac</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 2108–2288 (~1896–1716 BC)</div>
+          </div>
+
+          <!-- Jacob: ~1836–1689 BC → left=52.9%, width=3.6% -->
+          <div class="bar-row">
+            <div class="bar-name">Jacob</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:52.9%;width:3.6%">
+                <span>Jacob</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 2168–2315 (~1836–1689 BC)</div>
+          </div>
+
+          <!-- Joseph: ~1805–1695 BC → left=53.6%, width=2.7% -->
+          <div class="bar-row">
+            <div class="bar-name">Joseph</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:53.6%;width:2.7%">
+                <span>Joseph</span>
+              </div>
+            </div>
+            <div class="bar-date">AM 2199–2309 (~1805–1695 BC)</div>
+          </div>
+        </div>
+
+        <!-- SOJOURN & EXODUS -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#d4a017">Sojourn &amp; Exodus</div>
+
+          <!-- Moses: ~1526–1406 BC → left=60.4%, width=2.9% -->
+          <div class="bar-row">
+            <div class="bar-name">Moses</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d4a017;left:60.4%;width:2.9%">
+                <span>Moses</span>
+              </div>
+            </div>
+            <div class="bar-date">~1526–1406 BC (120 yrs)</div>
+          </div>
+
+          <!-- Aaron: ~1529–1407 BC → left=60.3%, width=3% -->
+          <div class="bar-row">
+            <div class="bar-name">Aaron</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d4a017;left:60.3%;width:3%">
+                <span>Aaron</span>
+              </div>
+            </div>
+            <div class="bar-date">~1529–1407 BC (123 yrs)</div>
+          </div>
+
+          <!-- Miriam: ~1533–1406 BC → left=60.2%, width=3.1% -->
+          <div class="bar-row">
+            <div class="bar-name">Miriam</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d4a017;left:60.2%;width:3.1%">
+                <span>Miriam</span>
+              </div>
+            </div>
+            <div class="bar-date">~1533–1406 BC</div>
+          </div>
+
+          <!-- Joshua: ~1500–1390 BC → left=61.1%, width=2.7% -->
+          <div class="bar-row">
+            <div class="bar-name">Joshua</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d4a017;left:61.1%;width:2.7%">
+                <span>Joshua</span>
+              </div>
+            </div>
+            <div class="bar-date">~1500–1390 BC (110 yrs)</div>
+          </div>
+        </div>
+
+        <!-- CONQUEST & JUDGES -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#d47c1a">Conquest &amp; Judges</div>
+
+          <!-- Deborah: ~1200 BC judged; bar 1215–1175 → left=68.9%, width=1% -->
+          <div class="bar-row">
+            <div class="bar-name">Deborah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d47c1a;left:68.9%;width:1%">
+                <span>Deborah</span>
+              </div>
+            </div>
+            <div class="bar-date">~1215–1175 BC (judged)</div>
+          </div>
+
+          <!-- Gideon: ~1162–1122 BC → left=69.9%, width=1% -->
+          <div class="bar-row">
+            <div class="bar-name">Gideon</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d47c1a;left:69.9%;width:1%">
+                <span>Gideon</span>
+              </div>
+            </div>
+            <div class="bar-date">~1162–1122 BC</div>
+          </div>
+
+          <!-- Samson: ~1118–1075 BC → left=71.1%, width=1% -->
+          <div class="bar-row">
+            <div class="bar-name">Samson</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d47c1a;left:71.1%;width:1%">
+                <span>Samson</span>
+              </div>
+            </div>
+            <div class="bar-date">~1118–1075 BC</div>
+          </div>
+
+          <!-- Ruth: ~1100 BC → left=71.8%, width=0.7% -->
+          <div class="bar-row">
+            <div class="bar-name">Ruth</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d47c1a;left:71.8%;width:0.7%">
+                <span>Ruth</span>
+              </div>
+            </div>
+            <div class="bar-date">~1120–1070 BC</div>
+          </div>
+
+          <!-- Samuel: ~1105–1022 BC → left=71.8%, width=2% -->
+          <div class="bar-row">
+            <div class="bar-name">Samuel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#d47c1a;left:71.8%;width:2%">
+                <span>Samuel</span>
+              </div>
+            </div>
+            <div class="bar-date">~1105–1022 BC</div>
+          </div>
+        </div>
+
+        <!-- UNITED & DIVIDED KINGDOM -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#6c4bbf">United &amp; Divided Kingdom</div>
+
+          <!-- Saul: ~1050–1010 BC → left=72.7%, width=1% -->
+          <div class="bar-row">
+            <div class="bar-name">Saul</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:72.7%;width:1%">
+                <span>Saul</span>
+              </div>
+            </div>
+            <div class="bar-date">~1050–1010 BC</div>
+          </div>
+
+          <!-- David: ~1040–970 BC → left=72.9%, width=1.7% -->
+          <div class="bar-row">
+            <div class="bar-name">David</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:72.9%;width:1.7%">
+                <span>David</span>
+              </div>
+            </div>
+            <div class="bar-date">~1040–970 BC</div>
+          </div>
+
+          <!-- Solomon: ~970–930 BC → left=73.9%, width=1% -->
+          <div class="bar-row">
+            <div class="bar-name">Solomon</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:73.9%;width:1%">
+                <span>Solomon</span>
+              </div>
+            </div>
+            <div class="bar-date">~970–930 BC</div>
+          </div>
+
+          <!-- Elijah: ~875–848 BC → left=75.9%, width=0.65% -->
+          <div class="bar-row">
+            <div class="bar-name">Elijah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:75.9%;width:0.65%">
+                <span>Elijah</span>
+              </div>
+            </div>
+            <div class="bar-date">~875–848 BC</div>
+          </div>
+
+          <!-- Elisha: ~848–797 BC → left=76.5%, width:1.24% -->
+          <div class="bar-row">
+            <div class="bar-name">Elisha</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:76.5%;width:1.24%">
+                <span>Elisha</span>
+              </div>
+            </div>
+            <div class="bar-date">~848–797 BC</div>
+          </div>
+
+          <!-- Isaiah: ~740–681 BC → left=79.1%, width:1.44% -->
+          <div class="bar-row">
+            <div class="bar-name">Isaiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:79.1%;width:1.44%">
+                <span>Isaiah</span>
+              </div>
+            </div>
+            <div class="bar-date">~740–681 BC</div>
+          </div>
+
+          <!-- Jeremiah: ~650–580 BC → left=81.5%, width:1.7% -->
+          <div class="bar-row">
+            <div class="bar-name">Jeremiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:81.5%;width:1.7%">
+                <span>Jeremiah</span>
+              </div>
+            </div>
+            <div class="bar-date">~650–580 BC</div>
+          </div>
+
+          <!-- Ezekiel: ~622–570 BC → left=82.4%, width:1.3% -->
+          <div class="bar-row">
+            <div class="bar-name">Ezekiel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:82.4%;width:1.3%">
+                <span>Ezekiel</span>
+              </div>
+            </div>
+            <div class="bar-date">~622–570 BC</div>
+          </div>
+
+          <!-- Daniel: ~620–536 BC → left=82.5%, width:2.1% -->
+          <div class="bar-row">
+            <div class="bar-name">Daniel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#8b1a1a;left:82.5%;width:2.1%">
+                <span>Daniel</span>
+              </div>
+            </div>
+            <div class="bar-date">~620–536 BC</div>
+          </div>
+        </div>
+
+        <!-- POST-EXILE -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#7a8c2e">Post-Exile &amp; Return</div>
+
+          <!-- Zerubbabel: ~560–510 BC → left=84.7%, width:1.2% -->
+          <div class="bar-row">
+            <div class="bar-name">Zerubbabel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:84.7%;width:1.2%">
+                <span>Zerubbabel</span>
+              </div>
+            </div>
+            <div class="bar-date">~560–510 BC</div>
+          </div>
+
+          <!-- Esther: ~520–460 BC → left=85.6%, width:1.5% -->
+          <div class="bar-row">
+            <div class="bar-name">Esther</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:85.6%;width:1.5%">
+                <span>Esther</span>
+              </div>
+            </div>
+            <div class="bar-date">~520–460 BC</div>
+          </div>
+
+          <!-- Ezra: ~480–440 BC → left=86.5%, width:1% -->
+          <div class="bar-row">
+            <div class="bar-name">Ezra</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:86.5%;width:1%">
+                <span>Ezra</span>
+              </div>
+            </div>
+            <div class="bar-date">~480–440 BC</div>
+          </div>
+
+          <!-- Nehemiah: ~445–400 BC → left=87.3%, width:1.1% -->
+          <div class="bar-row">
+            <div class="bar-name">Nehemiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:87.3%;width:1.1%">
+                <span>Nehemiah</span>
+              </div>
+            </div>
+            <div class="bar-date">~445–400 BC</div>
+          </div>
+
+          <!-- Malachi: ~450–400 BC → left=87.3%, width:1.2% -->
+          <div class="bar-row">
+            <div class="bar-name">Malachi</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:87.3%;width:1.2%">
+                <span>Malachi</span>
+              </div>
+            </div>
+            <div class="bar-date">~450–400 BC (last prophet)</div>
+          </div>
+        </div>
+
+        <!-- NEW TESTAMENT -->
+        <div class="era-group">
+          <div class="era-group-label" style="background:#2e8a4a">New Testament</div>
+
+          <!-- John the Baptist: ~6BC–AD29 → left=97.6%, width:0.85% -->
+          <div class="bar-row">
+            <div class="bar-name">John Bapt.</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:97.6%;width:0.85%">
+                <span>JtB</span>
+              </div>
+            </div>
+            <div class="bar-date">~6 BC – AD 29</div>
+          </div>
+
+          <!-- Jesus: ~6/4BC–AD30 → left:97.7%, width:0.85% -->
+          <div class="bar-row">
+            <div class="bar-name">Jesus ✦</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:97.7%;width:0.85%;border-right:2px solid gold">
+                <span>Jesus</span>
+              </div>
+            </div>
+            <div class="bar-date">~6/4 BC – AD 30</div>
+          </div>
+
+          <!-- Paul: AD5–67 → left:99.1%, width:1.6% — shown to edge -->
+          <div class="bar-row">
+            <div class="bar-name">Paul</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:99.1%;width:0.9%">
+                <span>Paul</span>
+              </div>
+            </div>
+            <div class="bar-date">~AD 5–67</div>
+          </div>
+
+          <!-- John Apostle: AD6–100 → left:99.2%, width:1% -->
+          <div class="bar-row">
+            <div class="bar-name">John Apos.</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#2e8a4a;left:99.2%;width:0.8%">
+                <span>John</span>
+              </div>
+            </div>
+            <div class="bar-date">~AD 6–100</div>
+          </div>
+        </div>
+
+      </div><!-- /timeline-inner -->
+    </div><!-- /timeline-wrap -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4: MESSIANIC FAMILY TREE
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">The Messianic Line — Genealogical Tree from Adam to Jesus</div>
+    <div class="tree-scroll">
+      <div class="tree-container">
+        <div class="tree-spine">
+
+          <!-- ADAM -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#3b6fd4">
+              <div class="tn-name">Adam</div>
+              <div><span class="tn-badge" style="background:#3b6fd4">First Man</span></div>
+              <div class="tn-date">AM 1 · ~4004 BC</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- SETH -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#3b6fd4">
+              <div class="tn-name">Seth</div>
+              <div><span class="tn-badge" style="background:#3b6fd4">Patriarch</span></div>
+              <div class="tn-date">AM 130 · ~3874 BC</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- ENOSH → ... → METHUSELAH → LAMECH (compressed) -->
+          <div style="background:#e8e4dc;border:1.5px dashed #aaa;border-radius:3px;padding:4px 20px;font-size:0.78rem;color:#666;text-align:center;margin-bottom:0;">
+            Enosh → Kenan → Mahalalel → Jared → Enoch → Methuselah → Lamech
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- NOAH -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#3b6fd4">
+              <div class="tn-name">Noah</div>
+              <div><span class="tn-badge" style="background:#3b6fd4">Ark Builder</span></div>
+              <div class="tn-date">AM 1056 · ~2948 BC</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- SHEM + branches for Ham & Japheth -->
+          <div class="abr-branch" style="width:100%;max-width:700px;margin:0 auto;">
+            <div class="abr-col">
+              <div class="branch-node">
+                <div class="bn-name">Japheth</div>
+                <div class="bn-note">Indo-European nations</div>
+              </div>
+            </div>
+            <div class="abr-h"></div>
+
+            <div class="abr-col">
+              <div class="tree-node" style="border-color:#2e8a4a">
+                <div class="tn-name">Shem</div>
+                <div><span class="tn-badge" style="background:#2e8a4a">Semitic Line</span></div>
+                <div class="tn-date">AM 1558 · ~2446 BC</div>
+              </div>
+              <div class="tree-connector"></div>
+            </div>
+
+            <div class="abr-h"></div>
+            <div class="abr-col">
+              <div class="branch-node">
+                <div class="bn-name">Ham</div>
+                <div class="bn-note">African &amp; Canaanite nations</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compressed Shem line -->
+          <div style="background:#e8e4dc;border:1.5px dashed #aaa;border-radius:3px;padding:4px 20px;font-size:0.78rem;color:#666;text-align:center;margin-bottom:0;">
+            Arphaxad → Shelah → Eber → Peleg → Reu → Serug → Nahor → Terah
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- ABRAHAM + Nahor + Haran branches -->
+          <div class="abr-branch" style="width:100%;max-width:700px;margin:0 auto;">
+            <div class="abr-col">
+              <div class="branch-node">
+                <div class="bn-name">Nahor</div>
+                <div class="bn-note">Aramaean tribes</div>
+              </div>
+            </div>
+            <div class="abr-h"></div>
+
+            <div class="abr-col">
+              <div class="tree-node" style="border-color:#2e8a4a">
+                <div class="tn-name">Abraham</div>
+                <div><span class="tn-badge" style="background:#2e8a4a">Father of Faith</span></div>
+                <div class="tn-date">~1996 BC</div>
+              </div>
+              <div class="tree-connector"></div>
+            </div>
+
+            <div class="abr-h"></div>
+            <div class="abr-col">
+              <div class="branch-node">
+                <div class="bn-name">Lot</div>
+                <div class="bn-note">Moab &amp; Ammon</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ISAAC + Ishmael branch -->
+          <div class="abr-branch" style="width:100%;max-width:600px;margin:0 auto;">
+            <div class="abr-col">
+              <div class="branch-node">
+                <div class="bn-name">Ishmael</div>
+                <div class="bn-note">Arab nations · 12 princes</div>
+              </div>
+            </div>
+            <div class="abr-h"></div>
+
+            <div class="abr-col">
+              <div class="tree-node" style="border-color:#2e8a4a">
+                <div class="tn-name">Isaac</div>
+                <div><span class="tn-badge" style="background:#2e8a4a">Covenant Son</span></div>
+                <div class="tn-date">~1896 BC</div>
+              </div>
+              <div class="tree-connector"></div>
+            </div>
+            <div style="width:100px"></div>
+          </div>
+
+          <!-- JACOB/ISRAEL + Esau branch -->
+          <div class="abr-branch" style="width:100%;max-width:600px;margin:0 auto;">
+            <div class="abr-col" style="min-width:120px">
+              <div class="branch-node">
+                <div class="bn-name">Esau</div>
+                <div class="bn-note">Edom · Red Sea peoples</div>
+              </div>
+            </div>
+            <div class="abr-h"></div>
+
+            <div class="abr-col">
+              <div class="tree-node" style="border-color:#2e8a4a">
+                <div class="tn-name">Jacob / Israel</div>
+                <div><span class="tn-badge" style="background:#2e8a4a">12 Tribes Father</span></div>
+                <div class="tn-date">~1836 BC</div>
+              </div>
+              <div class="tree-connector"></div>
+            </div>
+            <div style="width:120px"></div>
+          </div>
+
+          <!-- 12 TRIBES chips -->
+          <div style="margin-bottom:0;width:100%;">
+            <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#888;text-align:center;margin-bottom:6px;">12 Sons / 12 Tribes of Israel</div>
+            <div class="tribes-wrap">
+              <span class="tribe-chip highlight">Judah ★</span>
+              <span class="tribe-chip">Reuben</span>
+              <span class="tribe-chip">Simeon</span>
+              <span class="tribe-chip">Levi</span>
+              <span class="tribe-chip">Issachar</span>
+              <span class="tribe-chip">Zebulun</span>
+              <span class="tribe-chip">Dan</span>
+              <span class="tribe-chip">Naphtali</span>
+              <span class="tribe-chip">Gad</span>
+              <span class="tribe-chip">Asher</span>
+              <span class="tribe-chip">Joseph/Ephraim</span>
+              <span class="tribe-chip">Benjamin</span>
+            </div>
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- JUDAH -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#6c4bbf">
+              <div class="tn-name">Judah</div>
+              <div><span class="tn-badge" style="background:#6c4bbf">Kingly Tribe</span></div>
+              <div class="tn-date">Gen 49:10 · Sceptre promise</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- PEREZ → ... compressed -->
+          <div style="background:#e8e4dc;border:1.5px dashed #aaa;border-radius:3px;padding:4px 20px;font-size:0.78rem;color:#666;text-align:center;margin-bottom:0;">
+            Perez → Hezron → Ram → Amminadab → Nahshon → Salmon → Boaz → Obed
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- JESSE -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#6c4bbf">
+              <div class="tn-name">Jesse</div>
+              <div><span class="tn-badge" style="background:#6c4bbf">Father of David</span></div>
+              <div class="tn-date">~1060 BC · Bethlehem</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- DAVID + Kingdom split -->
+          <div class="tree-node-wrap" style="width:100%">
+            <div class="tree-node" style="border-color:#6c4bbf;background:#f2eefb;min-width:160px">
+              <div class="tn-name">David</div>
+              <div><span class="tn-badge" style="background:#6c4bbf">King · Covenant</span></div>
+              <div class="tn-date">~1040–970 BC · 2 Sam 7</div>
+            </div>
+            <div class="tree-connector"></div>
+          </div>
+
+          <!-- Kingdom split branches -->
+          <div class="kingdom-split">
+            <div class="ks-col">
+              <div class="branch-node">
+                <div class="bn-name">Northern Kingdom</div>
+                <div class="bn-note">Israel · 10 tribes<br>Falls 722 BC (Assyria)</div>
+              </div>
+            </div>
+            <div class="ks-h"></div>
+            <div class="ks-col">
+              <div class="tree-node" style="border-color:#6c4bbf">
+                <div class="tn-name">Solomon</div>
+                <div><span class="tn-badge" style="background:#6c4bbf">Temple Builder</span></div>
+                <div class="tn-date">~970–930 BC · 1 Kgs 1</div>
+              </div>
+              <div class="tree-connector"></div>
+            </div>
+            <div class="ks-h"></div>
+            <div class="ks-col">
+              <div class="branch-node">
+                <div class="bn-name">Southern Kingdom</div>
+                <div class="bn-note">Judah · 2 tribes<br>Falls 586 BC (Babylon)</div>
+              </div>
+            </div>
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- Compressed royal line -->
+          <div style="background:#e8e4dc;border:1.5px dashed #aaa;border-radius:3px;padding:4px 20px;font-size:0.78rem;color:#666;text-align:center;margin-bottom:0;">
+            Rehoboam → Abijah → Asa → Jehoshaphat → Joram → Uzziah → Jotham → Ahaz → Hezekiah → Manasseh → Amon → Josiah → Jeconiah
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- POST-EXILE Zerubbabel compressed -->
+          <div style="background:#e8e4dc;border:1.5px dashed #aaa;border-radius:3px;padding:4px 20px;font-size:0.78rem;color:#666;text-align:center;margin-bottom:0;">
+            Shealtiel → Zerubbabel → Abiud → Eliakim → Azor → Zadok → Achim → Eliud → Eleazar → Matthan → Jacob
+          </div>
+          <div class="tree-connector"></div>
+
+          <!-- JOSEPH (legal) -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#2e8a4a">
+              <div class="tn-name">Joseph</div>
+              <div><span class="tn-badge" style="background:#2e8a4a">Legal Father</span></div>
+              <div class="tn-date">~20 BC – AD 20 · Matt 1:16</div>
+            </div>
+            <div class="tree-connector" style="background:#d4a017"></div>
+          </div>
+
+          <!-- JESUS -->
+          <div class="tree-node-wrap">
+            <div class="tree-node" style="border-color:#d4a017;background:#fff8e8;box-shadow:0 0 0 3px #d4a017">
+              <div class="tn-name" style="font-size:1.1rem">Jesus the Messiah</div>
+              <div><span class="tn-badge" style="background:#d4a017;color:#2c2c2c">Son of God · Son of David · Son of Abraham</span></div>
+              <div class="tn-date">~6/4 BC – AD 30 · Matt 1:1</div>
+            </div>
+          </div>
+
+        </div><!-- /tree-spine -->
+      </div><!-- /tree-container -->
+    </div><!-- /tree-scroll -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5: CONTEMPORARIES
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Contemporaries — Who Was Alive at the Same Time</div>
+    <div class="contemporaries-grid">
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#3b6fd4">Antediluvian</span>
+        <div class="contemp-names">Adam &amp; Methuselah</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Adam lived 930 years. Methuselah was born when Adam was 687 years old (AM 687). They overlapped by 243 years — Methuselah almost certainly knew Adam personally and heard the account of Eden firsthand.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#3b6fd4">Pre-Flood</span>
+        <div class="contemp-names">Methuselah &amp; Noah</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Methuselah died in AM 1656 — the very year of the flood. As Noah's grandfather, he lived to see the ark under construction. He died either just before or as the waters rose.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#2e8a4a">Post-Flood Patriarchs</span>
+        <div class="contemp-names">Abraham &amp; Shem</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Shem (son of Noah) lived 600 years and outlived Abraham by 35 years. Abraham could have met the man who survived the flood. Some traditions identify Shem with Melchizedek, King of Salem.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#2e8a4a">Patriarchs</span>
+        <div class="contemp-names">Joseph &amp; Levi</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Joseph and his brother Levi were contemporaries. The founding of the Levitical priesthood line overlaps directly with Joseph's years in Egypt. Both were in Egypt at the same time.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#d4a017">Exodus</span>
+        <div class="contemp-names">Moses &amp; Joshua</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Joshua served as Moses' aide from his youth (Exod 33:11). Moses mentored Joshua across forty years of wilderness wandering, then commissioned him to complete what Moses was not permitted to finish — entering the land.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#d47c1a">Judges–Kingdom</span>
+        <div class="contemp-names">David &amp; Samuel</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Samuel anointed David as king while Saul still reigned (1 Sam 16). Their overlap is the precise hinge between the era of judges and the era of the monarchy. Samuel died before David's full coronation.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#c0392b">Divided Kingdom</span>
+        <div class="contemp-names">Isaiah &amp; Hezekiah</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Isaiah prophesied throughout Hezekiah's reign and his prophecies were fulfilled in real time — including the miraculous retreat of Sennacherib and fifteen additional years added to Hezekiah's life (Isa 38).</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#8b1a1a">Exile</span>
+        <div class="contemp-names">Jeremiah &amp; Daniel</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Both were alive during the fall of Jerusalem in 586 BC. Jeremiah remained in Jerusalem weeping (Lamentations). Daniel had already been taken to Babylon in 605 BC and served in Nebuchadnezzar's court.</div>
+      </div>
+
+      <div class="contemp-card">
+        <span class="contemp-era" style="background:#7a8c2e">Post-Exile</span>
+        <div class="contemp-names">Ezra &amp; Nehemiah</div>
+        <div class="contemp-label">They were alive at the same time</div>
+        <div class="contemp-note">Ezra and Nehemiah overlapped in Jerusalem during the reconstruction era. Ezra arrived first (~458 BC) to restore the Law. Nehemiah arrived ~445 BC to rebuild the walls. Their ministries are complementary and simultaneous.</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6: BOOKS IN CONTEXT
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Books in Context — When Was Each Era's Scripture Written?</div>
+    <div class="books-grid">
+
+      <div class="books-card" style="border-color:#3b6fd4">
+        <div class="books-card-head" style="background:#3b6fd4">Antediluvian</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~4004–2348 BC · AM 1–1656</div>
+          <div class="books-list">
+            <span class="book-pill">Genesis 1–11</span>
+          </div>
+          <div class="books-note">No canonical books written during this era. Genesis 1–11 covers it retrospectively — Moses wrote the account around 1450 BC based on oral tradition and divine revelation.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#2e8a4a">
+        <div class="books-card-head" style="background:#2e8a4a">Post-Flood Patriarchs</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~2348–1800 BC</div>
+          <div class="books-list">
+            <span class="book-pill">Genesis 12–50</span>
+          </div>
+          <div class="books-note">Written by Moses ~1450 BC, covering the events of ~2000–1700 BC. The accounts of Abraham, Isaac, Jacob, and Joseph likely preserved oral/written records.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#d4a017">
+        <div class="books-card-head" style="background:#d4a017">Sojourn &amp; Exodus</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~1800–1406 BC</div>
+          <div class="books-list">
+            <span class="book-pill">Exodus</span>
+            <span class="book-pill">Leviticus</span>
+            <span class="book-pill">Numbers</span>
+            <span class="book-pill">Deuteronomy</span>
+            <span class="book-pill">Job</span>
+          </div>
+          <div class="books-note">Moses wrote these c. 1446–1406 BC. Job may be the oldest book by content, set in the patriarchal period, possibly written by Moses or Job himself.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#d47c1a">
+        <div class="books-card-head" style="background:#d47c1a">Conquest &amp; Judges</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~1406–1050 BC</div>
+          <div class="books-list">
+            <span class="book-pill">Joshua</span>
+            <span class="book-pill">Judges</span>
+            <span class="book-pill">Ruth</span>
+          </div>
+          <div class="books-note">Joshua likely wrote the book bearing his name (with a final section by Eleazar or Phinehas). Judges and Ruth written or compiled by Samuel or a contemporary ~1050 BC.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#6c4bbf">
+        <div class="books-card-head" style="background:#6c4bbf">United Kingdom</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~1050–930 BC</div>
+          <div class="books-list">
+            <span class="book-pill">1–2 Samuel</span>
+            <span class="book-pill">1 Kings 1–11</span>
+            <span class="book-pill">1 Chronicles</span>
+            <span class="book-pill">Psalms (David)</span>
+            <span class="book-pill">Proverbs</span>
+            <span class="book-pill">Ecclesiastes</span>
+            <span class="book-pill">Song of Solomon</span>
+          </div>
+          <div class="books-note">David wrote most of the Psalms. Solomon authored Proverbs, Ecclesiastes, and Song of Solomon. Samuel began the historical narrative, completed by later prophets.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#c0392b">
+        <div class="books-card-head" style="background:#c0392b">Divided Kingdom</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~930–586 BC</div>
+          <div class="books-list">
+            <span class="book-pill">1–2 Kings</span>
+            <span class="book-pill">2 Chronicles</span>
+            <span class="book-pill">Isaiah</span>
+            <span class="book-pill">Jeremiah</span>
+            <span class="book-pill">Lamentations</span>
+            <span class="book-pill">Hosea</span>
+            <span class="book-pill">Joel</span>
+            <span class="book-pill">Amos</span>
+            <span class="book-pill">Obadiah</span>
+            <span class="book-pill">Jonah</span>
+            <span class="book-pill">Micah</span>
+            <span class="book-pill">Nahum</span>
+            <span class="book-pill">Habakkuk</span>
+            <span class="book-pill">Zephaniah</span>
+          </div>
+          <div class="books-note">The great prophetic literature — written by the named prophets during the era of Israel's and Judah's moral decline, exile, and judgment.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#8b1a1a">
+        <div class="books-card-head" style="background:#8b1a1a">Exile</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~605–538 BC</div>
+          <div class="books-list">
+            <span class="book-pill">Daniel</span>
+            <span class="book-pill">Ezekiel</span>
+            <span class="book-pill">Lamentations</span>
+          </div>
+          <div class="books-note">Daniel wrote from Babylon across 70 years of exile. Ezekiel prophesied to the exiles in Babylon. Lamentations is Jeremiah's lament over fallen Jerusalem.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#7a8c2e">
+        <div class="books-card-head" style="background:#7a8c2e">Post-Exile &amp; Return</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~538–430 BC</div>
+          <div class="books-list">
+            <span class="book-pill">Ezra</span>
+            <span class="book-pill">Nehemiah</span>
+            <span class="book-pill">Esther</span>
+            <span class="book-pill">Haggai</span>
+            <span class="book-pill">Zechariah</span>
+            <span class="book-pill">Malachi</span>
+          </div>
+          <div class="books-note">Malachi (~430 BC) closes the OT canon. After him, 400 years of prophetic silence follow until John the Baptist.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#888">
+        <div class="books-card-head" style="background:#888">Intertestamental Period</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~430 BC – ~5 BC</div>
+          <div class="books-list" style="font-style:italic;color:#777;font-size:0.85rem;">
+            No canonical books written.
+          </div>
+          <div class="books-note">400 years of silence. The Apocrypha (Maccabees, Sirach, Tobit, etc.) were written during this era but are not accepted as canonical in Protestant tradition. Rome fell to Greece (Alexander), Greece to Rome — setting the stage for the New Testament world.</div>
+        </div>
+      </div>
+
+      <div class="books-card" style="border-color:#2e8a4a">
+        <div class="books-card-head" style="background:#2e8a4a">New Testament</div>
+        <div class="books-card-body">
+          <div class="books-card-date">~AD 45–100</div>
+          <div class="books-list">
+            <span class="book-pill">Matthew</span>
+            <span class="book-pill">Mark</span>
+            <span class="book-pill">Luke</span>
+            <span class="book-pill">John</span>
+            <span class="book-pill">Acts</span>
+            <span class="book-pill">Romans–Jude</span>
+            <span class="book-pill">Revelation</span>
+          </div>
+          <div class="books-note">27 books written by eyewitnesses and apostolic companions. Paul's letters predate the Gospels (~AD 48–65). John's Revelation (~AD 95) closes the canon.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7: KEY EVENTS TIMELINE
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">15 Pivotal Events — The Spine of Biblical History</div>
+    <div class="events-timeline">
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#3b6fd4;background:#3b6fd4"></div>
+        <div class="event-body">
+          <span class="event-name">Creation</span>
+          <span class="event-date">AM 1 · ~4004 BC</span>
+          <div class="event-note">God creates the heavens, earth, and humanity in six days. Adam and Eve placed in Eden. Time begins.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#3b6fd4;background:#c0392b"></div>
+        <div class="event-body">
+          <span class="event-name">The Fall</span>
+          <span class="event-date">AM 1 · ~4004 BC</span>
+          <div class="event-note">Adam and Eve disobey God. Sin, death, and exile from Eden enter human history. The proto-evangelium (Gen 3:15) — the first promise of a Redeemer — is spoken.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#3b6fd4;background:#3b6fd4"></div>
+        <div class="event-body">
+          <span class="event-name">The Flood</span>
+          <span class="event-date">AM 1656 · ~2348 BC</span>
+          <div class="event-note">God judges the earth with a global flood. Noah, his family, and the animals are preserved in the ark. Methuselah dies this year. A new covenant is made with Noah (Gen 9).</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#2e8a4a;background:#2e8a4a"></div>
+        <div class="event-body">
+          <span class="event-name">Tower of Babel</span>
+          <span class="event-date">~2242 BC</span>
+          <div class="event-note">Humanity unites in rebellion. God confuses languages and scatters the nations. The 70 nations of Genesis 10 disperse across the earth.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#2e8a4a;background:#2e8a4a"></div>
+        <div class="event-body">
+          <span class="event-name">Call of Abraham</span>
+          <span class="event-date">AM 2083 · ~1921 BC</span>
+          <div class="event-note">God calls Abram out of Ur of the Chaldees. The Abrahamic covenant is established — land, seed, and blessing to all nations (Gen 12, 15, 17). The messianic line narrows.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#d4a017;background:#d4a017"></div>
+        <div class="event-body">
+          <span class="event-name">The Exodus</span>
+          <span class="event-date">~1446 BC</span>
+          <div class="event-note">God delivers Israel from 400 years of Egyptian bondage through Moses. Ten plagues, the Passover, and the crossing of the Red Sea. ~2–3 million people leave Egypt.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#d4a017;background:#d4a017"></div>
+        <div class="event-body">
+          <span class="event-name">The Law Given at Sinai</span>
+          <span class="event-date">~1446 BC</span>
+          <div class="event-note">God gives the Ten Commandments and the Mosaic Law to Israel at Mount Sinai. The tabernacle is constructed. The sacrificial system is established — a shadow of the coming atonement.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#6c4bbf;background:#6c4bbf"></div>
+        <div class="event-body">
+          <span class="event-name">David Anointed King</span>
+          <span class="event-date">~1010 BC</span>
+          <div class="event-note">Samuel anoints David king of Israel. The Davidic covenant is established (2 Sam 7) — promising an eternal throne and a coming son who will rule forever. This is the Messiah's title: Son of David.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#6c4bbf;background:#6c4bbf"></div>
+        <div class="event-body">
+          <span class="event-name">Solomon's Temple Built</span>
+          <span class="event-date">~966 BC</span>
+          <div class="event-note">Solomon builds the First Temple in Jerusalem, fulfilling what David desired. The ark of the covenant is placed in the holy of holies. The glory of God fills the temple (1 Kgs 8).</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#c0392b;background:#c0392b"></div>
+        <div class="event-body">
+          <span class="event-name">Kingdom Divides</span>
+          <span class="event-date">~930 BC</span>
+          <div class="event-note">After Solomon's death, Rehoboam's harsh rule splits the kingdom. Israel (10 tribes, North) under Jeroboam. Judah (2 tribes, South) under Rehoboam. The divided kingdom era begins.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#c0392b;background:#c0392b"></div>
+        <div class="event-body">
+          <span class="event-name">Fall of Samaria (Northern Kingdom)</span>
+          <span class="event-date">722 BC</span>
+          <div class="event-note">Assyria under Sargon II conquers the Northern Kingdom. The ten tribes are scattered — the "lost tribes." Fulfilled exactly as Amos and Hosea had prophesied.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#8b1a1a;background:#8b1a1a"></div>
+        <div class="event-body">
+          <span class="event-name">Fall of Jerusalem (Southern Kingdom)</span>
+          <span class="event-date">586 BC</span>
+          <div class="event-note">Nebuchadnezzar destroys Jerusalem and Solomon's Temple. The Davidic dynasty is suspended. Judah is carried into Babylonian exile — the 70-year captivity prophesied by Jeremiah begins.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#7a8c2e;background:#7a8c2e"></div>
+        <div class="event-body">
+          <span class="event-name">Return from Exile</span>
+          <span class="event-date">538 BC</span>
+          <div class="event-note">Cyrus the Great of Persia decrees that the Jews may return to Judah and rebuild the temple — fulfilling Isaiah's prophecy (Isa 44:28) written 150 years earlier, naming Cyrus by name.</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#2e8a4a;background:#2e8a4a"></div>
+        <div class="event-body">
+          <span class="event-name">Birth of Jesus</span>
+          <span class="event-date">~6/4 BC</span>
+          <div class="event-note">The eternal Son of God takes on human flesh in Bethlehem, born of the virgin Mary. Son of David. Son of Abraham. The 400-year silence ends. The angel declares: "For unto you is born this day in the city of David a Saviour, which is Christ the Lord" (Luke 2:11).</div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-dot" style="color:#d4a017;background:#d4a017"></div>
+        <div class="event-body">
+          <span class="event-name">Death &amp; Resurrection of Jesus</span>
+          <span class="event-date">~AD 30</span>
+          <div class="event-note">Jesus is crucified at Passover — the final Passover Lamb. On the third day he rises bodily from the dead, conquering sin and death. The new covenant is inaugurated in his blood. History's pivot point.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <div style="border-top:2px solid #2c2c2c;margin-top:16px;padding-top:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div style="font-size:0.72rem;color:#999;letter-spacing:0.1em;text-transform:uppercase;">
+      Biblical Timeline · Adam to Jesus · Full Overview
+    </div>
+    <div style="font-size:0.72rem;color:#bbb;letter-spacing:0.06em;">
+      Conservative chronology · Ussher &amp; Anstey dating · approximate dates only
+    </div>
+  </div>
+
+</div><!-- /panel -->
+</body>
+</html>

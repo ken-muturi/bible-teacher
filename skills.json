@@ -36,6 +36,13 @@
       "description": "Small-group study companion for any Bible book.",
       "trigger": "discussion-guide <Book>",
       "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/discussion-guide/SKILL.md"
+    },
+    {
+      "id": "bible-timeline",
+      "name": "Bible Timeline & Family Tree",
+      "description": "Family tree and lifespan timeline for any biblical figure or era — who lived when, contemporaries, and books written at the same time.",
+      "trigger": "bible-timeline <person|period|full>",
+      "url": "https://raw.githubusercontent.com/ken-muturi/bible-teacher/family-tree/bible-timeline/SKILL.md"
     }
   ]
 }
