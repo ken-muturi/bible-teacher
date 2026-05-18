@@ -119,6 +119,8 @@ Output: `guides/visuals/<book>-panel.html`
 - **Romans** (`--non-constrained`) — argument cascade, four movements flowing from the 1:16–17 thesis
 - **Leviticus** (`--non-constrained`) — two-part arc with ch.16 Day of Atonement as the red hinge
 
+![Judges Teaching Panel](guides/visuals/screenshots/judges-panel.png)
+
 ### Passage Studies
 Two modes for different use cases:
 
@@ -130,6 +132,8 @@ Full exegetical study: 3–5 word studies, historical context, 3–5 illustratio
 
 Output: `guides/passages/<book-chapter-verse>-study.html`
 
+![2 Samuel 12 Deep Study](guides/passages/screenshots/2-samuel-12-deep-study.png)
+
 ### Book & Passage Comparisons
 Side-by-side panels showing two books or passages in parallel.
 
@@ -138,12 +142,16 @@ Side-by-side panels showing two books or passages in parallel.
 
 Output: `guides/visuals/<name>-comparison.html` or `guides/passages/<name>.html`
 
+![2 Samuel 11 × Psalm 51 — The Fall and the Return](guides/visuals/screenshots/david-fall-and-return.png)
+
 ### Discussion Guides
 One-page printable HTML companion for small groups, classrooms, or self-study.
 
 Each guide includes: Before You Engage questions, Key Terms, Discussion Questions (tagged Observation / Context / Application), Going Deeper resources, and a Closing Thought.
 
 Output: `guides/discussions/<book>-discussion-guide.html`
+
+![Judges Discussion Guide](guides/discussions/screenshots/judges-discussion-guide.png)
 
 ---
 
