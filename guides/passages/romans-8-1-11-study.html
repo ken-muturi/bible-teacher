@@ -99,6 +99,17 @@
     body { background: #fff; padding: 0; }
     .panel { border: none; padding: 12px; }
   }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8;
+    border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive;
+    font-size: 1rem; cursor: pointer; z-index: 1000;
+    letter-spacing: 0.04em;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
 </style>
 </head>
 <body>
@@ -315,5 +326,7 @@
   </div>
 
 </div>
+
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
 </body>
 </html>
