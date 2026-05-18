@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Spine of Biblical History — 20 Pivotal Events</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 24px 16px 64px;
+    color: #2c2c2c;
+  }
+
+  .panel {
+    background: #faf7f2;
+    border: 3px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 32px 36px;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
+  /* BACK LINK */
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    border-bottom: 1px dashed #aaa;
+    margin-bottom: 20px;
+  }
+  .back-link:hover { color: #2c2c2c; }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #2c2c2c;
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+  }
+  .header h1 {
+    font-family: 'Special Elite', serif;
+    font-size: 3rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+  .header .subtitle {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid #ddd8d0;
+  }
+
+  section { margin-bottom: 52px; }
+
+  /* ══════════════════════════════
+     SECTION 1: CANON OVERVIEW
+  ══════════════════════════════ */
+  .canon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .canon-col {
+    background: #1a1a1a;
+    color: #e8e4dc;
+    padding: 22px 20px;
+  }
+  .canon-col h3 {
+    font-family: 'Special Elite', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #444;
+  }
+  .canon-col .book-count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d4a017;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .canon-col ul {
+    list-style: none;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #ccc;
+  }
+  .canon-col ul li::before { content: "· "; color: #666; }
+  .canon-col .basis {
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: #888;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .protestant-accent { border-top: 3px solid #3b6fd4; }
+  .catholic-accent { border-top: 3px solid #d4a017; }
+  .orthodox-accent { border-top: 3px solid #2e8a4a; }
+
+  /* ══════════════════════════════
+     SECTION 2: EVENT CARDS
+  ══════════════════════════════ */
+  .event-card {
+    border-left: 5px solid #888;
+    background: #faf7f2;
+    border-top: 1px solid #e0dbd0;
+    border-right: 1px solid #e0dbd0;
+    border-bottom: 1px solid #e0dbd0;
+    border-radius: 0 4px 4px 0;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .event-card.dark-card {
+    background: #1a1a1a;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: #e0dbd0;
+  }
+  .event-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .event-num {
+    font-family: 'Special Elite', serif;
+    font-size: 1.8rem;
+    color: #ccc;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .event-title {
+    font-family: 'Special Elite', serif;
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+  .event-date {
+    font-size: 0.82rem;
+    color: #888;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  /* Sub-section labels inside event cards */
+  .sub-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 14px;
+  }
+  .sub-label.insight   { color: #7a5c2e; }
+  .sub-label.books     { color: #6c4bbf; }
+  .sub-label.prophets  { color: #c0652b; }
+  .sub-label.converge  { color: #2970b8; }
+  .sub-label.excluded  { color: #888; }
+
+  .sub-content {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #3a3530;
+  }
+  .dark-card .sub-content { color: #ccc; }
+  .dark-card .sub-label.insight  { color: #c8a86a; }
+  .dark-card .sub-label.books    { color: #9d85e0; }
+  .dark-card .sub-label.prophets { color: #e09060; }
+  .dark-card .sub-label.converge { color: #6aa8e0; }
+  .dark-card .sub-label.excluded { color: #aaa; }
+  .dark-card .event-num { color: #555; }
+  .dark-card .event-title { color: #f0ebe0; }
+  .dark-card .event-date { color: #777; }
+
+  /* Pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+  .pill {
+    display: inline-block;
+    border: 1px solid #c8c2b8;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    background: #f0ede8;
+    color: #4a4540;
+    white-space: nowrap;
+  }
+  .pill.excluded-pill {
+    border-color: #bbb;
+    background: #eee;
+    color: #888;
+  }
+  .dark-card .pill {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+  }
+  .dark-card .pill.excluded-pill {
+    background: #222;
+    border-color: #444;
+    color: #777;
+  }
+  .excluded-chip {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #888;
+    color: #fff;
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .lost-chip {
+    background: #555;
+  }
+  .deutero-chip {
+    background: #c08030;
+  }
+  .pseudo-chip {
+    background: #b03030;
+  }
+
+  /* ══════════════════════════════
+     SECTION 3: CONVERGENCE MAP
+  ══════════════════════════════ */
+  .convergence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .conv-card {
+    border: 1.5px solid #ddd8d0;
+    border-radius: 4px;
+    padding: 16px 18px;
+    background: #f5f0e8;
+  }
+  .conv-card h4 {
+    font-family: 'Special Elite', serif;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px dashed #ccc;
+  }
+  .conv-book-list { list-style: none; }
+  .conv-book-list li {
+    font-size: 0.88rem;
+    padding: 3px 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.4;
+    display: flex;
+    gap: 8px;
+  }
+  .conv-book-list li:last-child { border-bottom: none; }
+  .conv-book-name {
+    font-weight: 700;
+    white-space: nowrap;
+    min-width: 120px;
+    color: #3b3028;
+  }
+  .conv-book-note { color: #666; font-size: 0.82rem; }
+
+  /* ══════════════════════════════
+     SECTION 4: BOOKS LEFT OUT
+  ══════════════════════════════ */
+  .books-out-section {
+    background: #1a1a1a;
+    border-radius: 4px;
+    padding: 28px 28px;
+    margin-bottom: 52px;
+  }
+  .books-out-section .section-label {
+    color: #666;
+    border-bottom-color: #333;
+  }
+  .books-out-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .book-out-card {
+    border-radius: 3px;
+    padding: 13px 14px;
+    border-top: 3px solid #555;
+  }
+  .book-out-card.lost-book {
+    background: #222;
+    border-top-color: #666;
+  }
+  .book-out-card.deutero-book {
+    background: #221a10;
+    border-top-color: #c08030;
+  }
+  .book-out-card.ethiopia-book {
+    background: #101a15;
+    border-top-color: #2e8a4a;
+  }
+  .book-out-card.rejected-book {
+    background: #1a1010;
+    border-top-color: #b03030;
+  }
+  .book-out-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.95rem;
+    color: #e8e0d0;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .book-out-era {
+    font-size: 0.72rem;
+    color: #777;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .book-out-why {
+    font-size: 0.82rem;
+    color: #aaa;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  .book-out-who {
+    font-size: 0.75rem;
+    color: #888;
+    font-style: italic;
+  }
+  .books-out-category-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 18px 0 8px;
+    grid-column: 1 / -1;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #333;
+  }
+
+  /* ══════════════════════════════
+     SECTION 5: CANON TIMELINE
+  ══════════════════════════════ */
+  .canon-timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+  .canon-timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b6fd4, #d4a017, #c0392b, #2e8a4a);
+    border-radius: 2px;
+  }
+  .canon-milestone {
+    position: relative;
+    margin-bottom: 22px;
+    padding-left: 4px;
+  }
+  .canon-milestone::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #2c2c2c;
+    background: #faf7f2;
+  }
+  .canon-milestone-date {
+    font-family: 'Special Elite', serif;
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  .canon-milestone-title {
+    font-family: 'Special Elite', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 3px;
+  }
+  .canon-milestone-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* Pivot cards — structural turning points inserted chronologically */
+  .pivot-card {
+    background: #f5f1ea;
+  }
+  .pivot-marker {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
+  @media (max-width: 900px) {
+    .panel { padding: 20px 16px; }
+    .header h1 { font-size: 2.1rem; }
+    .canon-grid { grid-template-columns: 1fr; gap: 0; }
+    .canon-col { border-top: none; }
+    .protestant-accent { border-top: 3px solid #3b6fd4; }
+    .catholic-accent { border-top: 3px solid #d4a017; }
+    .orthodox-accent { border-top: 3px solid #2e8a4a; }
+  }
+  @media (max-width: 768px) {
+    body { padding: 12px 8px 48px; }
+    .convergence-grid { grid-template-columns: 1fr; }
+    .books-out-grid { grid-template-columns: 1fr; }
+    .event-title { font-size: 1.2rem; }
+    .event-num { font-size: 1.4rem; }
+    .conv-book-list li { flex-direction: column; gap: 2px; }
+    .conv-book-name { min-width: unset; }
+  }
+  @media (max-width: 480px) {
+    .header h1 { font-size: 1.7rem; }
+    .header .subtitle { font-size: 1rem; }
+    .books-out-section { padding: 18px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="panel">
+
+  <a class="back-link" href="../../index.html">← Back to index</a>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>The Spine of Biblical History</h1>
+    <div class="subtitle">20 Pivotal Events — Books Written, Prophets Active, and What Was Left Out of the Canon</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1: CANON OVERVIEW
+  ══════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Section 1 — Canon Overview: Which Bible?</div>
+    <div class="canon-grid">
+
+      <div class="canon-col protestant-accent">
+        <h3>Protestant Canon</h3>
+        <div class="book-count">66 Books</div>
+        <ul>
+          <li>OT: 39 books — Hebrew Masoretic Text</li>
+          <li>NT: 27 books</li>
+          <li>Deuterocanonicals: excluded</li>
+        </ul>
+        <div class="basis">Basis: Hebrew originals; apostolic authorship; universal reception. Reformation principle: Scripture alone (sola scriptura) — only books in the Hebrew Jewish canon accepted for OT.</div>
+      </div>
+
+      <div class="canon-col catholic-accent">
+        <h3>Catholic Canon</h3>
+        <div class="book-count">73 Books</div>
+        <ul>
+          <li>OT: 46 books — includes 7 deuterocanonical</li>
+          <li>Tobit · Judith · 1–2 Maccabees</li>
+          <li>Wisdom · Sirach · Baruch</li>
+          <li>NT: 27 books</li>
+        </ul>
+        <div class="basis">Basis: Septuagint (LXX); Council of Trent 1546 formally affirmed the deuterocanonicals as canonical Scripture — partly in response to Protestant challenges.</div>
+      </div>
+
+      <div class="canon-col orthodox-accent">
+        <h3>Orthodox Canon</h3>
+        <div class="book-count">78 Books</div>
+        <ul>
+          <li>OT: 49 books — adds 4 beyond Catholic</li>
+          <li>1 Esdras · Prayer of Manasseh</li>
+          <li>Psalm 151 · 3 Maccabees</li>
+          <li>NT: 27 books</li>
+        </ul>
+        <div class="basis">Basis: Septuagint (LXX); broader reception in Eastern church. Ethiopian Orthodox (Tewahedo) extends further — includes 1 Enoch and Jubilees, making their canon ~81 books.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2: 20 PIVOTAL EVENTS
+  ══════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Section 2 — The Full Timeline: 20 Events + 10 Structural Pivots</div>
+
+    <!-- EVENT 1 -->
+    <div class="event-card" style="border-left-color: #3b6fd4;">
+      <div class="event-header">
+        <div class="event-num">01</div>
+        <div class="event-title">Creation</div>
+        <div class="event-date">~4004 BC · Antediluvian</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Genesis presents creation not as mythology but as ordered speech-act theology. The seven-day structure is not a scientific timeline but a liturgical framework — God is presented as the divine craftsman ordering chaos into a habitable temple. The repeated "it was good" (tôb) and the seventh-day rest establish the theological rhythm that runs through all of Scripture.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Genesis 1–2 (Moses, ~1445 BC)</span>
+        <span class="pill">Job 38 (God's creation speech from the whirlwind)</span>
+      </div>
+      <div class="sub-content" style="margin-top:5px; font-size:0.85rem; color:#777;">Note: Moses wrote about events ~2,500 years prior; Job may predate Moses as the oldest written book.</div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="sub-content">None yet established — the prophetic office had not been instituted.</div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Genesis 1 — seven-day liturgical framework</span>
+        <span class="pill">Genesis 2 — narrative garden account</span>
+        <span class="pill">Psalm 8</span>
+        <span class="pill">Psalm 104</span>
+        <span class="pill">John 1:1–3</span>
+        <span class="pill">Colossians 1:15–17</span>
+        <span class="pill">Hebrews 11:3</span>
+      </div>
+    </div>
+
+    <!-- EVENT 2 -->
+    <div class="event-card" style="border-left-color: #3b6fd4;">
+      <div class="event-header">
+        <div class="event-num">02</div>
+        <div class="event-title">The Fall</div>
+        <div class="event-date">~4004 BC · Antediluvian</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Genesis 3 is perhaps the most theologically loaded chapter in the Bible. The serpent's question ("Did God really say?") establishes the pattern of every human temptation. The proto-evangelium (Genesis 3:15 — "he will crush your head") is the first messianic promise, and every subsequent covenant is God's progressive answer to it.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Genesis 3 (Moses, ~1445 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="sub-content">None — the prophetic office had not been established.</div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Romans 5:12–21 — Adam as type of Christ</span>
+        <span class="pill">1 Corinthians 15:21–22</span>
+        <span class="pill">Revelation 12 — the serpent reappears</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="sub-content"><span class="pill excluded-pill">Life of Adam and Eve <span class="excluded-chip pseudo-chip">Pseudepigraphal</span></span></div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">Pseudepigraphal, ~1st century BC–AD. Dramatised retelling of the Fall with an elaborate repentance narrative. Widely read in Second Temple Judaism but never considered canonical by any major tradition.</div>
+    </div>
+
+    <!-- EVENT 3 -->
+    <div class="event-card" style="border-left-color: #3b6fd4;">
+      <div class="event-header">
+        <div class="event-num">03</div>
+        <div class="event-title">The Flood</div>
+        <div class="event-date">~2348 BC · Antediluvian</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The flood is simultaneously judgment and new creation — Noah's ark preserves a righteous remnant exactly as creation preserved life from chaos. The covenant after the flood (Gen 9) is the first formal covenant in Scripture, marked by a sign (rainbow). Importantly, Noah is not told to persuade anyone — he is told to build. The building is the sermon.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Genesis 6–9 (Moses, ~1445 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="sub-content">Noah himself — Peter calls him "a preacher of righteousness" (2 Peter 2:5).</div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Isaiah 54:9 — God swears by the flood</span>
+        <span class="pill">Matthew 24:37–39 — type of Christ's return</span>
+        <span class="pill">1 Peter 3:20–21 — ark as type of baptism</span>
+        <span class="pill">2 Peter 2:5; 3:6</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="pills">
+        <span class="pill excluded-pill">1 Enoch (Book of Enoch) <span class="excluded-chip pseudo-chip">Ethiopian only</span></span>
+        <span class="pill excluded-pill">Book of Jubilees <span class="excluded-chip pseudo-chip">Ethiopian only</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;"><strong>1 Enoch</strong> — expands the Nephilim story (Gen 6:1–4), portrays fallen angels as corrupters of humanity, includes vivid judgment scenes. Quoted directly in Jude 1:14–15. Found extensively at Qumran. Included in Ethiopian Orthodox canon (Tewahedo) only. <strong>Book of Jubilees</strong> — retells Genesis and Exodus with precise jubilee-year dating. Also found at Qumran; canonical only in Ethiopian Orthodoxy.</div>
+    </div>
+
+    <!-- EVENT 4 -->
+    <div class="event-card" style="border-left-color: #2e8a4a;">
+      <div class="event-header">
+        <div class="event-num">04</div>
+        <div class="event-title">The Call of Abraham</div>
+        <div class="event-date">~1921 BC · Patriarchal Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Genesis 12:1–3 is the pivot of the entire Old Testament. Everything before it is preamble; everything after it is outworking. The three promises — land, seed, blessing — structure the whole Pentateuch and are still being fulfilled in the New Testament. Galatians 3:16 argues the "seed" singular is Christ. Abraham is called a prophet in Genesis 20:7 — the first person given that title.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Genesis 12–25 (Moses, ~1445 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Abraham (Gen 20:7 — the first person called a prophet)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Romans 4 — faith before circumcision</span>
+        <span class="pill">Galatians 3 — Abrahamic covenant pre-dates Mosaic</span>
+        <span class="pill">Hebrews 11:8–19 — faith as leaving without knowing</span>
+        <span class="pill">James 2:21–23 — faith demonstrated by action</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Testament of Abraham <span class="excluded-chip pseudo-chip">Pseudepigraphal</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">~1st–2nd century AD. Depicts Abraham's death and soul journey with inventive angelology and judgment scenes. Outside all canons.</div>
+    </div>
+
+    <!-- PIVOT: MELCHIZEDEK -->
+    <div class="event-card pivot-card" style="border-left-color:#8b1a1a;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Melchizedek — The Priesthood Above Aaron</div>
+        <div class="event-date">Genesis 14:18–20 · ~1900 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">The Most Mysterious Figure in the OT</div>
+      <div class="sub-content">After Abraham's victory over the four kings, a man named Melchizedek appears without introduction. He is king of Salem (Jerusalem) and <em>priest of God Most High</em> — but no genealogy, no birth, no death. He brings bread and wine, blesses Abraham, and receives a tithe from him. He then vanishes from the narrative. The Hebrew writer reads his mysterious biography deliberately: <em>"without father or mother, without genealogy, without beginning of days or end of life, resembling the Son of God, he remains a priest forever."</em> (Hebrews 7:3)</div>
+      <div class="sub-label books">The Psalm 110 Connection</div>
+      <div class="sub-content">Psalm 110 is the most quoted OT chapter in the NT. Verse 4 — <em>"The LORD has sworn and will not change his mind: You are a priest forever, in the order of Melchizedek"</em> — is the hinge. Jesus cannot be a Levitical priest (he is from Judah, not Levi — Hebrews 7:14). But Psalm 110 predicts a coming king who also holds a priesthood older and greater than Aaron's. The argument in Hebrews 7 is airtight: Abraham — ancestor of Levi — paid tithes to Melchizedek. Therefore Melchizedek is greater than Abraham, and therefore greater than Levi. Jesus holds the greater priesthood.</div>
+      <div class="sub-label converge">King and Priest United</div>
+      <div class="sub-content">In Israel, the roles of king and priest were strictly separated — Saul was rebuked for offering sacrifice (1 Samuel 13), and Uzziah struck with leprosy for entering the temple (2 Chronicles 26). But Melchizedek held both simultaneously: king of Salem, priest of God Most High. Jesus, as the Melchizedekian priest-king, is the only person in redemptive history who legitimately holds both offices. The strict separation in Israel was never the final design — it was the scaffolding pointing to the one who would unite them.</div>
+      <div class="sub-label books">Scripture Chain</div>
+      <div class="pills">
+        <span class="pill">Genesis 14:18–20 — first appearance</span>
+        <span class="pill">Psalm 110:4 — the oath</span>
+        <span class="pill">Hebrews 5:6, 10 — applied to Jesus</span>
+        <span class="pill">Hebrews 7 — full argument</span>
+      </div>
+    </div>
+
+    <!-- PIVOT: SHECHEM / SIMEON & LEVI -->
+    <div class="event-card pivot-card" style="border-left-color:#c0392b;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Simeon and Levi at Shechem — Cursed and Redeemed</div>
+        <div class="event-date">Genesis 34 · 49:5–7 · ~1850 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">Why It Matters</div>
+      <div class="sub-content">After Dinah is violated by Shechem, her brothers Simeon and Levi deceive the men of the city into circumcision, then massacre them all while they are recovering. Jacob's reaction is not pride but fear — and his deathbed curse is unsparing: <em>"I will scatter them in Israel."</em> Two sons cursed to be scattered. Yet what happens to each curse is entirely different — and it explains one of the most important structural facts in the Bible.</div>
+      <div class="sub-label books">Simeon's Fate</div>
+      <div class="sub-content">The curse sticks. Simeon's territorial allotment is inside Judah's territory (Joshua 19:1 — the only tribe given land within another tribe's borders). Simeon gradually disappears, absorbed into Judah. By the time of the later monarchy, Simeon is barely mentioned. The curse was not redeemed.</div>
+      <div class="sub-label books">Levi's Redemption</div>
+      <div class="sub-content">The same curse — <em>scattered in Israel</em> — becomes the mechanism of priestly blessing. Levites receive no tribal territory; instead, 48 cities are distributed among them throughout all 12 tribal regions (Numbers 35). They are literally scattered — but now as God's priests among the people. The very characteristic that cursed Levi (fierce, undivided zeal) is redeemed at the golden calf when the Levites rally to Moses and execute judgment on the idolaters. Moses declares: <em>"You have been set apart to the LORD today."</em> (Exodus 32:29)</div>
+      <div class="sub-label converge">The Theological Pattern</div>
+      <div class="sub-content">The tribe of Levi is the Bible's most dramatic example of a curse becoming a calling. The same intensity that made them dangerous becomes, when submitted to God, the foundation of a priesthood. This pattern runs forward into Phinehas (Numbers 25), Paul ("a persecutor… yet by grace"), and ultimately the cross itself — where the instrument of curse (the tree, Deut 21:23) becomes the instrument of blessing.</div>
+    </div>
+
+    <!-- PIVOT: REUBEN FORFEITS BIRTHRIGHT -->
+    <div class="event-card pivot-card" style="border-left-color:#3b6fd4;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Reuben Forfeits the Birthright</div>
+        <div class="event-date">Genesis 35:22 · 49:3–4 · ~1840 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">Why It Matters</div>
+      <div class="sub-content">Reuben was Jacob's firstborn — he should have received the double inheritance and tribal leadership. He forfeited both by sleeping with his father's concubine Bilhah (Gen 35:22). Jacob's deathbed verdict is devastating: <em>"Unstable as water, you will no longer excel."</em> This single act redirects the entire course of the twelve tribes. The double portion passes to Joseph (two tribes: Ephraim + Manasseh). The leadership scepter eventually passes to Judah — the fourth son — only because sons two and three disqualify themselves first.</div>
+      <div class="sub-label books">Scripture</div>
+      <div class="pills">
+        <span class="pill">Genesis 35:22 — the act</span>
+        <span class="pill">Genesis 49:3–4 — Jacob's verdict</span>
+        <span class="pill">1 Chronicles 5:1–2 — explicit explanation</span>
+        <span class="pill">Deuteronomy 27:20 — the law it violated</span>
+      </div>
+      <div class="sub-label converge">The Chain Reaction</div>
+      <div class="sub-content">Reuben loses the birthright → Simeon and Levi disqualify themselves at Shechem → Judah (4th son) becomes the royal line → Joseph (next most deserving) receives the double portion → The 12 tribes are actually 13 children but restructured into 12 allotments. <em>1 Chronicles 5:2 states it plainly: "Judah was the strongest of his brothers and a ruler came from him, but the rights of the firstborn belonged to Joseph."</em></div>
+    </div>
+
+    <!-- PIVOT: JUDAH RECEIVES THE SCEPTER -->
+    <div class="event-card pivot-card" style="border-left-color:#6c4bbf;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Judah Receives the Scepter</div>
+        <div class="event-date">Genesis 49:8–12 · ~1700 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">Why It Matters</div>
+      <div class="sub-content">Jacob's blessing to Judah is the first explicit messianic prophecy in the form of a tribal appointment: <em>"The scepter will not depart from Judah, nor the ruler's staff from between his feet, until he to whom it belongs shall come and the obedience of the nations shall be his."</em> (Gen 49:10) Judah is the fourth son. He receives the scepter not because of birth order but because he is the eldest eligible after three disqualifications. Every king of Israel's legitimate line — from David to Jesus — comes from Judah.</div>
+      <div class="sub-label books">The Shiloh Question</div>
+      <div class="sub-content">The Hebrew שִׁילֹה (Shiloh) in Genesis 49:10 is one of the most debated words in the OT. Three main readings: <strong>(1)</strong> "until Shiloh comes" — a messianic name or title; <strong>(2)</strong> "until he to whom it belongs comes" (ESV/NIV footnote) — a legal claim on the scepter; <strong>(3)</strong> "until tribute comes to him" — royal homage from nations. All three readings point in the same direction: a coming ruler from Judah to whom ultimate dominion belongs. The NT resolves the debate — Revelation 5:5 calls Jesus "the Lion of the tribe of Judah."</div>
+      <div class="sub-label books">Scripture Chain</div>
+      <div class="pills">
+        <span class="pill">Gen 49:8–12 — Jacob's blessing</span>
+        <span class="pill">Ruth 4:18–22 — Judah → David genealogy</span>
+        <span class="pill">2 Samuel 7 — Davidic covenant</span>
+        <span class="pill">Matthew 1:1–16 — fulfilment in Jesus</span>
+        <span class="pill">Revelation 5:5 — Lion of Judah</span>
+        <span class="pill">Hebrews 7:14 — Jesus from Judah</span>
+      </div>
+    </div>
+
+    <!-- PIVOT: EPHRAIM OVER MANASSEH -->
+    <div class="event-card pivot-card" style="border-left-color:#2e8a4a;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Ephraim Over Manasseh — The Crossed Hands</div>
+        <div class="event-date">Genesis 48:8–20 · ~1700 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">Why It Matters</div>
+      <div class="sub-content">Jacob (Israel) is dying. Joseph brings his two sons for a blessing — Manasseh (elder, right hand due) and Ephraim (younger, left hand due). Jacob deliberately crosses his hands, placing his right on Ephraim. Joseph objects. Jacob refuses: <em>"I know, my son, I know. Nevertheless, his younger brother will be greater than he."</em> This is the fifth generation in a row where God bypasses the natural heir: Isaac over Ishmael, Jacob over Esau, Judah over Reuben, Ephraim over Manasseh. The pattern is unmistakable — God's election is not biological primogeniture.</div>
+      <div class="sub-label books">Consequence</div>
+      <div class="sub-content">Ephraim becomes the dominant northern tribe. When the kingdom splits in 930 BC, the Northern Kingdom is led by an Ephraimite king (Jeroboam — from Ephraim, 1 Kings 11:26). The Northern Kingdom is called <em>"Ephraim"</em> throughout the prophets — especially Hosea, where Ephraim is named 37 times. Joshua himself, who led the conquest, was from the tribe of Ephraim (Numbers 13:8).</div>
+      <div class="sub-label converge">Paul's Use of This Pattern</div>
+      <div class="sub-content">Romans 9:10–13 — <em>"Jacob I loved, but Esau I hated"</em> — Paul uses this repeated reversal pattern to argue that God's purposes run through election, not natural descent. The crossed hands of Genesis 48 are one of his key exhibits. The principle extends to the church: God chooses "the weak things of the world to shame the strong" (1 Corinthians 1:27).</div>
+    </div>
+
+    <!-- PIVOT: JOSEPH'S DOUBLE PORTION -->
+    <div class="event-card pivot-card" style="border-left-color:#2e8a4a;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Joseph's Double Portion — Why There Is No Tribe of Joseph</div>
+        <div class="event-date">Genesis 48:1–7 · ~1700 BC · Patriarchal Era</div>
+      </div>
+      <div class="sub-label insight">The Accounting Problem</div>
+      <div class="sub-content">Jacob had 12 sons. Yet when you list the 12 tribes in territorial allotments, "Joseph" disappears and is replaced by his two sons Ephraim and Manasseh. This is because Jacob formally adopted both of them: <em>"Ephraim and Manasseh will be mine, just as Reuben and Simeon are mine."</em> (Gen 48:5). Joseph receives the double portion (two tribes) — the portion that Reuben forfeited as firstborn. So the count is: 12 sons → 13 tribal names → 12 territorial allotments (Levi has no territory; Joseph is split into two).</div>
+      <div class="sub-label books">The Revelation Puzzle</div>
+      <div class="sub-content">Revelation 7 lists 12 tribes sealed — but the list is different from every OT list. Dan is absent. Manasseh is added. Joseph is listed but Ephraim is not. Scholars debate the reason for Dan's omission (early tradition associated Dan with apostasy and idol worship — Judges 18; 1 Kings 12:29). The point is that the 12-tribe structure is a theological symbol, not a fixed census list. Its number (12) matters more than its precise membership — 12 tribes, 12 apostles, 12 gates in the New Jerusalem.</div>
+    </div>
+
+    <!-- EVENT 5 -->
+    <div class="event-card" style="border-left-color: #d4a017;">
+      <div class="event-header">
+        <div class="event-num">05</div>
+        <div class="event-title">The Exodus</div>
+        <div class="event-date">~1446 BC · Sojourn / Exodus Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The Exodus is the defining event of the Old Testament — it is the act God cites when introducing himself at Sinai ("I am the LORD your God who brought you out of Egypt"). It appears as a reference point in over 120 OT passages. The Passover, instituted here, becomes the interpretive frame for the cross: Jesus is crucified at Passover, and Paul calls him "our Passover lamb" (1 Cor 5:7).</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Exodus (Moses, ~1445 BC)</span>
+        <span class="pill">Numbers (Moses, ~1406 BC)</span>
+        <span class="pill">Job (uncertain, possibly ~2000–1500 BC — may be the oldest written book)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Moses — the foundational prophet (Deut 34:10)</span>
+        <span class="pill">Aaron (Ex 7:1 — prophet to Moses)</span>
+        <span class="pill">Miriam (Ex 15:20 — prophetess)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Exodus — primary narrative</span>
+        <span class="pill">Numbers — wilderness from census angle</span>
+        <span class="pill">Deuteronomy — Moses' retrospective sermons</span>
+        <span class="pill">Psalm 78, 105, 106 — poetic retrospectives</span>
+        <span class="pill">Nehemiah 9 — corporate confession</span>
+        <span class="pill">Hebrews 3–4 — wilderness generation as warning</span>
+        <span class="pill">1 Corinthians 10:1–13 — types</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books (Referenced in Scripture — Now Lost)</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Book of Jashar <span class="excluded-chip lost-chip">Lost</span></span>
+        <span class="pill excluded-pill">Book of the Wars of the LORD <span class="excluded-chip lost-chip">Lost</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;"><strong>Book of Jashar</strong> — referenced in Joshua 10:13 and 2 Samuel 1:18 as an existing document containing poetic records of Israel's wars. Lost — no surviving copies. <strong>Book of the Wars of the LORD</strong> — referenced in Numbers 21:14. Also lost. These are not apocrypha — they are books named in Scripture itself that did not survive.</div>
+    </div>
+
+    <!-- EVENT 6 -->
+    <div class="event-card" style="border-left-color: #d4a017;">
+      <div class="event-header">
+        <div class="event-num">06</div>
+        <div class="event-title">The Law at Sinai</div>
+        <div class="event-date">~1446 BC · Sojourn / Exodus Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Sinai is not primarily a legal transaction — it is a marriage covenant. God enters into a binding relationship with Israel using the same covenantal language used in ancient Near Eastern suzerainty treaties. Deuteronomy is structured as exactly such a treaty: preamble, historical prologue, stipulations, blessings and curses, witnesses. The law is not the means of relationship but the shape of it.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Exodus 19–40 (Moses, ~1445 BC)</span>
+        <span class="pill">Leviticus (Moses, ~1445 BC)</span>
+        <span class="pill">Deuteronomy (Moses, ~1406 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Moses</span>
+        <span class="pill">Aaron</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Exodus 20 — Ten Commandments</span>
+        <span class="pill">Deuteronomy 5 — repeated with commentary</span>
+        <span class="pill">Galatians 3:19–25 — law as guardian until Christ</span>
+        <span class="pill">Romans 7 — law reveals sin</span>
+        <span class="pill">Hebrews 8–10 — Levitical system as shadow of Christ's priesthood</span>
+      </div>
+    </div>
+
+    <!-- PIVOT: LEVITES CONSECRATED AT THE GOLDEN CALF -->
+    <div class="event-card pivot-card" style="border-left-color:#d4a017;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">The Levites Consecrated at the Golden Calf</div>
+        <div class="event-date">Exodus 32:25–29 · ~1446 BC · Sojourn / Exodus Era</div>
+      </div>
+      <div class="sub-label insight">The Moment of Appointment</div>
+      <div class="sub-content">While Moses was on Sinai receiving the Law, Israel made the golden calf. When Moses descended and called out <em>"Whoever is for the LORD, come to me,"</em> only the Levites responded. They then executed judgment on approximately 3,000 idolaters — including their own brothers, companions, and neighbours. This act of costly obedience is Moses's warrant for declaring them set apart: <em>"You have been ordained for the service of the LORD today."</em> (Exodus 32:29)</div>
+      <div class="sub-label insight">Phinehas Confirms It</div>
+      <div class="sub-content">Numbers 25 provides a second, even more dramatic confirmation. Phinehas — Aaron's grandson — sees an Israelite man openly bring a Midianite woman into the camp during a period of sexual immorality and idol worship. He takes a spear and executes both of them, stopping a plague that had already killed 24,000 people. God's response: <em>"I am giving him my covenant of peace… a covenant of a lasting priesthood, because he was zealous for the honour of his God."</em> (Numbers 25:12–13). The same fierce, undivided zeal that cursed Levi at Shechem, redirected in service to God's holiness, establishes the priesthood permanently.</div>
+      <div class="sub-label converge">No Land, No Distraction</div>
+      <div class="sub-content">The Levites receive no tribal territory — <em>"I am their inheritance"</em> (Numbers 18:20). This is not a punishment but a consecration. Every other tribe has a land claim to protect, crops to tend, enemies to fight. Levi has one job: the presence of God. Distributed in 48 cities throughout Israel, they are simultaneously available to all tribes and distracted by none.</div>
+      <div class="sub-label books">NT Echo</div>
+      <div class="sub-content">Hebrews 7 argues that Jesus holds a priesthood <em>superior</em> to the Levitical, not by competing with it but by belonging to a different order entirely — the order of Melchizedek. The Levitical priesthood was always meant to be temporary scaffolding pointing toward something greater.</div>
+    </div>
+
+    <!-- PIVOT: MOSES CANNOT ENTER -->
+    <div class="event-card pivot-card" style="border-left-color:#d4a017;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Moses Cannot Enter — The Law's Limit</div>
+        <div class="event-date">Numbers 20:1–13 · ~1406 BC · Sojourn / Exodus Era</div>
+      </div>
+      <div class="sub-label insight">The Most Disproportionate Judgment in Scripture?</div>
+      <div class="sub-content">At Meribah, the people grumble for water. God tells Moses to <em>speak</em> to the rock. Moses, furious, <em>strikes</em> it twice with his staff. Water pours out. But God's verdict is immediate: <em>"Because you did not trust in me enough to honour me as holy in the sight of the Israelites, you will not bring this community into the land."</em> (Num 20:12). One strike too many — and the man who led Israel for 40 years dies within sight of the land.</div>
+      <div class="sub-label books">The Theological Design</div>
+      <div class="sub-content">This is not arbitrary harshness — it is structural theology. Moses represents the Law. The Law can bring Israel to the border of what God promises but cannot take them in. It takes <strong>Joshua</strong> — whose Hebrew name is Yĕhôšûaʿ, and whose Greek form is Iēsous (Jesus) — to lead them into the Promised Land. The name is not a coincidence. The book of Hebrews makes the connection explicit: <em>"For if Joshua had given them rest, God would not have spoken later about another day."</em> (Hebrews 4:8). The Joshua of the Old Testament pointed forward to the Jesus of the New.</div>
+      <div class="sub-label converge">Galatians and Hebrews</div>
+      <div class="sub-content">Galatians 3:24 — the Law is a guardian (paidagōgos) to lead us to Christ, not the destination. The guardian stops at the door. What the Law could not do — bring humanity into rest, into the land, into full covenant life — Jesus does. Moses' exclusion from Canaan is the enacted parable of the Law's structural limitation.</div>
+    </div>
+
+    <!-- EVENT 7 -->
+    <div class="event-card" style="border-left-color: #d47c1a;">
+      <div class="event-header">
+        <div class="event-num">07</div>
+        <div class="event-title">Conquest &amp; Entry into Canaan</div>
+        <div class="event-date">~1406 BC · Conquest / Judges Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The conquest raises the hardest ethical question in the OT — the command to utterly destroy (herem). The theological answer in Joshua is that Canaan's destruction was delayed judgment: Gen 15:16 — "the sin of the Amorites has not yet reached its full measure." The conquest is not ethnic cleansing — it is judicial execution after 400 years of deferred sentence. Rahab and Ruth (both non-Israelites) are saved, showing mercy runs through even the conquest narrative.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Joshua (Joshua / editors, ~1380 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Joshua (Num 27:18–20 — Spirit-filled successor to Moses)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Joshua — primary account</span>
+        <span class="pill">Judges 1 — partial second account with different outcomes</span>
+        <span class="pill">Hebrews 11:30–31 — Jericho and Rahab as faith examples</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books (Referenced in Scripture — Now Lost)</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Book of Jashar <span class="excluded-chip lost-chip">Lost</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">Referenced directly in Joshua 10:13 ("Is not this written in the Book of Jashar?"). Almost certainly covered the conquest era.</div>
+    </div>
+
+    <!-- EVENT 8 -->
+    <div class="event-card" style="border-left-color: #d47c1a;">
+      <div class="event-header">
+        <div class="event-num">08</div>
+        <div class="event-title">The Judges Period</div>
+        <div class="event-date">~1380–1050 BC · Conquest / Judges Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Judges is the most theologically honest book in the OT. The cycle (rest → rebellion → ruin → repentance → rescue → repeat) gets worse with each iteration — by the end, Israel has committed atrocities mirroring Sodom (Judges 19) and erupted in civil war. The book ends with two phrases repeated: "Israel had no king" and "everyone did what was right in his own eyes." This is not a cycle of hope — it is a downward spiral ending in the need for monarchy.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Judges (Samuel?, ~1050–1000 BC)</span>
+        <span class="pill">Ruth (Samuel?, ~1000 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Deborah (~1200 BC — prophetess and judge; the only woman to hold both offices)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="pills">
+        <span class="pill">Judges — full narrative of the cycle</span>
+        <span class="pill">1 Samuel 1–7 — overlaps at the end of the period</span>
+        <span class="pill">Ruth — set during judges, provides counter-narrative of covenant faithfulness</span>
+      </div>
+    </div>
+
+    <!-- PIVOT: SAUL REJECTED / DAVID ELECTED -->
+    <div class="event-card pivot-card" style="border-left-color:#6c4bbf;">
+      <div class="pivot-marker">◆ STRUCTURAL PIVOT</div>
+      <div class="event-header">
+        <div class="event-title">Saul Rejected, David Elected</div>
+        <div class="event-date">1 Samuel 13 · 15 · 16:1–13 · ~1025 BC · United Kingdom</div>
+      </div>
+      <div class="sub-label insight">Two Disqualifying Moments</div>
+      <div class="sub-content">Saul is disqualified not by moral scandal but by partial obedience. <strong>Moment 1 (1 Sam 13):</strong> Waiting for Samuel before battle, Saul grows impatient and offers the burnt offering himself. Samuel arrives immediately after. The verdict: <em>"Your kingdom will not endure."</em> <strong>Moment 2 (1 Sam 15):</strong> Commanded to destroy the Amalekites entirely, Saul spares King Agag and the best livestock. His explanation — he kept them for sacrifice — earns Samuel's most piercing line: <em>"To obey is better than sacrifice, and to heed is better than the fat of rams."</em> Saul is rejected as king.</div>
+      <div class="sub-label books">The Election of David</div>
+      <div class="sub-content">Samuel goes to Bethlehem looking for a king among Jesse's sons. Seven sons pass before him; none is chosen. The eighth — the youngest, tending sheep, not even invited to the ceremony — is the one. God's principle is stated explicitly: <em>"The LORD does not look at the things people look at. People look at the outward appearance, but the LORD looks at the heart."</em> (1 Sam 16:7). This is not a random choice — David is from Judah, from the line of Perez, from the genealogy of Ruth and Boaz. Every genealogical thread laid since Genesis 49:10 converges on this moment.</div>
+      <div class="sub-label converge">NT Use</div>
+      <div class="sub-content">Acts 13:22 — Paul quotes God's own testimony about David in his Pisidian Antioch sermon: <em>"I have found David son of Jesse, a man after my own heart; he will do everything I want him to do."</em> Paul immediately moves from this to Jesus as David's descendant. The rejection of Saul and election of David is the historical foundation on which the entire messianic promise rests.</div>
+    </div>
+
+    <!-- EVENT 9 -->
+    <div class="event-card" style="border-left-color: #6c4bbf;">
+      <div class="event-header">
+        <div class="event-num">09</div>
+        <div class="event-title">David's Covenant</div>
+        <div class="event-date">~1010 BC · United Kingdom</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">2 Samuel 7 is the second great pivot of the OT (after Gen 12). The Davidic covenant promises an eternal dynasty — "your throne will be established forever." This is the backbone of every messianic prophecy from Isaiah to Malachi. Remarkably, David receives the covenant not after a victory but after expressing a desire to build God a house. God replies: I don't need your house — I will build you one.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">1–2 Samuel (Samuel / Nathan / Gad, ~1000 BC)</span>
+        <span class="pill">1 Chronicles (Ezra?, ~450 BC)</span>
+        <span class="pill">Psalms — many by David (Ps 3, 18, 22, 23, 51, 72, etc.)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Nathan — delivers the covenant; confronts David over Bathsheba</span>
+        <span class="pill">Samuel — anoints David</span>
+        <span class="pill">Gad — David's personal seer</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">1–2 Samuel and 1 Chronicles cover the same events from two angles: Samuel is raw and prophetic (includes David's failures); Chronicles is priestly and selective (omits Bathsheba entirely, focuses on temple preparation). Both are canonical precisely because we need both perspectives.</div>
+
+      <div class="sub-label books">The Three Promises</div>
+      <div class="sub-content"><strong>1. A son (dynasty):</strong> "I will raise up your offspring to succeed you" — immediate fulfilment in Solomon, ultimate fulfilment in Jesus. <strong>2. A house (temple):</strong> Solomon builds it; Jesus is the new temple (John 2:19–21). <strong>3. A kingdom (eternal):</strong> The Davidic throne does not end at the exile — it is preserved through the genealogy and fulfilled in the one who "will reign over Jacob's descendants forever" (Luke 1:33). Gabriel quotes 2 Samuel 7 directly when announcing Jesus's birth to Mary.</div>
+      <div class="sub-label converge">Books that Expand It</div>
+      <div class="pills">
+        <span class="pill">Psalm 89 — covenant promises and crisis</span>
+        <span class="pill">Isaiah 9:6–7 — "on David's throne forever"</span>
+        <span class="pill">Isaiah 11:1 — "shoot from Jesse's stump"</span>
+        <span class="pill">Jeremiah 23:5 — "righteous Branch for David"</span>
+        <span class="pill">Ezekiel 34:23–24 — "my servant David"</span>
+        <span class="pill">Amos 9:11 — "fallen tent of David"</span>
+        <span class="pill">Luke 1:32–33 — Gabriel's announcement</span>
+        <span class="pill">Acts 2:30 — Peter's Pentecost sermon</span>
+        <span class="pill">Revelation 22:16 — "Root and Offspring of David"</span>
+      </div>
+    </div>
+
+    <!-- EVENT 10 -->
+    <div class="event-card" style="border-left-color: #6c4bbf;">
+      <div class="event-header">
+        <div class="event-num">10</div>
+        <div class="event-title">Solomon's Temple</div>
+        <div class="event-date">~966 BC · United Kingdom</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The temple is the resolution of Genesis 3 — God and humanity dwelling together again. The building instructions parallel the tabernacle, which parallel creation: seven speeches for the tabernacle, seven days for creation. When God's glory fills the temple (1 Kings 8:10–11), the priests cannot stand. The temple becomes the centre of the world in Israelite theology — and its destruction will be the greatest crisis the faith ever faces.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">1 Kings 1–11</span>
+        <span class="pill">2 Chronicles 1–9</span>
+        <span class="pill">Proverbs (Solomon, ~950 BC)</span>
+        <span class="pill">Ecclesiastes (Solomon?, ~950 BC)</span>
+        <span class="pill">Song of Solomon (Solomon?, ~950 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Nathan</span>
+        <span class="pill">Ahijah</span>
+      </div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Wisdom of Solomon <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">Deuterocanonical, ~100–50 BC. Attributed to Solomon but scholars date it far later — it shows knowledge of Greek Stoic philosophy. Included in Catholic and Orthodox canons; excluded by Protestants who follow the Hebrew canon.</div>
+    </div>
+
+    <!-- EVENT 11 -->
+    <div class="event-card" style="border-left-color: #c0392b;">
+      <div class="event-header">
+        <div class="event-num">11</div>
+        <div class="event-title">The Kingdom Divides</div>
+        <div class="event-date">~930 BC · Divided Kingdom / Prophets Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The split is the direct fulfilment of a prophetic word — Ahijah tears Jeroboam's garment into 12 pieces and gives him 10 (1 Kings 11:29–31). Rehoboam's foolishness is the human cause; divine judgment on Solomon's apostasy is the theological cause. The Northern Kingdom (Israel) will never return to Davidic rule. From this point, two parallel kingdoms run side by side — and two parallel prophetic streams address them.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">1 Kings 12 onwards</span>
+        <span class="pill">2 Chronicles 10 onwards (parallel accounts)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Ahijah — predicted the split</span>
+        <span class="pill">Shemaiah — confirmed the judgment</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">1 Kings and 2 Chronicles run in parallel from here — Kings focuses on both kingdoms with prophetic commentary; Chronicles focuses almost exclusively on Judah's kings from a priestly-temple angle. We need both to understand the era fully.</div>
+    </div>
+
+    <!-- EVENT 12 -->
+    <div class="event-card" style="border-left-color: #c0392b;">
+      <div class="event-header">
+        <div class="event-num">12</div>
+        <div class="event-title">The Writing Prophets: 8th Century</div>
+        <div class="event-date">~760–700 BC · Divided Kingdom / Prophets Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Five major writing prophets emerge within 60 years — Amos, Hosea, Jonah, Isaiah, Micah. This is the most concentrated outpouring of prophetic literature in history. They are contemporaries of each other and of the Assyrian crisis. Amos and Hosea address the Northern Kingdom; Isaiah and Micah address Judah. They share the same diagnosis (covenant failure) but different registers: Amos = justice, Hosea = love, Isaiah = glory, Micah = the poor.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Amos (~760 BC)</span>
+        <span class="pill">Hosea (~750–720 BC)</span>
+        <span class="pill">Jonah (~760 BC)</span>
+        <span class="pill">Isaiah (~740–681 BC)</span>
+        <span class="pill">Micah (~735–700 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active (All Contemporaries)</div>
+      <div class="pills">
+        <span class="pill">Amos — justice; farmer-prophet from Tekoa</span>
+        <span class="pill">Hosea — covenant love; marriage as metaphor</span>
+        <span class="pill">Isaiah — glory of God; most quoted OT prophet in the NT</span>
+        <span class="pill">Micah — justice for the poor; Bethlehem prophecy (5:2)</span>
+        <span class="pill">Jonah — reluctant mission to Nineveh</span>
+        <span class="pill">Obed (2 Chr 28:9) — Northern Kingdom</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">Amos and Hosea address the same Northern Kingdom crisis simultaneously from different angles. Isaiah 2:2–4 and Micah 4:1–3 are nearly identical — either one quoted the other, or both drew from a common prophetic source. This is the only clear parallel passage between two prophetic books.</div>
+    </div>
+
+    <!-- EVENT 13 -->
+    <div class="event-card" style="border-left-color: #c0392b;">
+      <div class="event-header">
+        <div class="event-num">13</div>
+        <div class="event-title">Fall of Samaria — Northern Kingdom</div>
+        <div class="event-date">722 BC · Divided Kingdom / Prophets Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The fall of the Northern Kingdom is the first fulfilment of covenant curse on a national scale (Deuteronomy 28). The Assyrians deport the leading citizens and import foreign peoples — creating the mixed-race Samaritans, who will still be a flashpoint in Jesus's day. The "10 lost tribes" narrative that follows spawned centuries of speculation (British Israelism, Lost Tribe theories), but the Bible is clear: they were scattered as judgment, not preserved as a secret community.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">2 Kings 17 — retrospective theological judgment</span>
+        <span class="pill">Isaiah — ongoing ministry through and beyond the fall</span>
+        <span class="pill">Hosea — prophecy partly fulfilled here</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Who Predicted It</div>
+      <div class="pills">
+        <span class="pill">Amos 5:27</span>
+        <span class="pill">Hosea 13:16</span>
+        <span class="pill">Isaiah 8:4</span>
+        <span class="pill">Micah 1:6</span>
+      </div>
+    </div>
+
+    <!-- EVENT 14 -->
+    <div class="event-card" style="border-left-color: #8b1a1a;">
+      <div class="event-header">
+        <div class="event-num">14</div>
+        <div class="event-title">Fall of Jerusalem</div>
+        <div class="event-date">586 BC · Exile Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The fall of Jerusalem is the theological catastrophe of the OT. The temple — the dwelling place of God, the resolution of Eden — is destroyed. Psalm 137 captures the disorientation: "How can we sing the LORD's song in a foreign land?" The exile forces the question of whether God has abandoned his covenant, been defeated by Babylonian gods, or is judging his own people. Jeremiah, Ezekiel, and Daniel each answer this question from different positions — Jerusalem, Babylon, and the royal court.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Lamentations (Jeremiah, eyewitness, ~586 BC)</span>
+        <span class="pill">Jeremiah 39–52</span>
+        <span class="pill">2 Kings 25</span>
+        <span class="pill">2 Chronicles 36 (retrospective)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active Simultaneously</div>
+      <div class="pills">
+        <span class="pill">Jeremiah — in Jerusalem, warning before and lamenting after</span>
+        <span class="pill">Ezekiel — in Babylon (first wave of exiles, 597 BC)</span>
+        <span class="pill">Daniel — in Babylon (first deportation, 605 BC)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence — Most Documented Single OT Event</div>
+      <div class="sub-content">Four canonical books cover the fall from different angles: <strong>2 Kings 25</strong> (historical record), <strong>2 Chronicles 36</strong> (priestly retrospective), <strong>Jeremiah 39–44</strong> (prophetic witness with personal grief), <strong>Lamentations</strong> (raw poetic lamentation — likely eyewitness). No other event in the OT receives this level of multi-source documentation.</div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Baruch <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+        <span class="pill excluded-pill">Letter of Jeremiah (Baruch 6) <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;"><strong>Baruch</strong> — purportedly written by Jeremiah's secretary Baruch in Babylon. Contains a penitential prayer and a wisdom poem. <strong>Letter of Jeremiah</strong> — a warning to exiles against idol worship, appears as chapter 6 of Baruch in Catholic Bibles. Both excluded from Protestant canon.</div>
+    </div>
+
+    <!-- EVENT 15 -->
+    <div class="event-card" style="border-left-color: #8b1a1a;">
+      <div class="event-header">
+        <div class="event-num">15</div>
+        <div class="event-title">The Exile in Babylon</div>
+        <div class="event-date">~605–538 BC · Exile Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The exile is both punishment and seminary. Daniel and Ezekiel, writing from Babylon, produce the most visionary and apocalyptic literature in the OT. Ezekiel's vision of dry bones (ch. 37) answers the exile's deepest question: can these bones live? Daniel's visions of four kingdoms and the Ancient of Days establish the theological framework that drives Revelation. The exile also produces a revolution in personal piety — synagogue worship develops when the temple is inaccessible.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Daniel (~605–536 BC)</span>
+        <span class="pill">Ezekiel (~593–570 BC)</span>
+        <span class="pill">Portions of Jeremiah (written in Egypt after 586 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Daniel — Babylon, royal court</span>
+        <span class="pill">Ezekiel — Babylon, among the exiles</span>
+        <span class="pill">Jeremiah — Egypt (after 586 BC)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">Daniel and Ezekiel are contemporaries — Ezekiel mentions Daniel three times (14:14, 14:20, 28:3) as a figure of righteousness, suggesting Daniel was already famous during Ezekiel's own lifetime. Their visions are complementary: Ezekiel's throne-chariot vision and Daniel's four-kingdom vision together form the apocalyptic foundation of Revelation.</div>
+
+      <div class="sub-label excluded">Excluded Books — Additions to Daniel</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Prayer of Azariah / Song of the Three Young Men <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+        <span class="pill excluded-pill">Susanna (Daniel 13) <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+        <span class="pill excluded-pill">Bel and the Dragon (Daniel 14) <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">These three additions appear in the Greek (LXX) version of Daniel but are absent from the Hebrew/Aramaic text. Catholics and Orthodox include them; Protestants follow the Hebrew/Aramaic text and exclude them. The additions contain Daniel exposing idolatry, acting as a young judge, and the three friends' prayer in the furnace.</div>
+    </div>
+
+    <!-- EVENT 16 -->
+    <div class="event-card" style="border-left-color: #7a8c2e;">
+      <div class="event-header">
+        <div class="event-num">16</div>
+        <div class="event-title">Return from Exile</div>
+        <div class="event-date">~538–444 BC · Post-Exile Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Only ~50,000 of perhaps 1–2 million exiles return — most Jews by this point are settled in Babylon and stay. The return is a second Exodus, and Ezra and Nehemiah frame it that way deliberately. But the temple they rebuild is smaller and less glorious — the old men who remembered Solomon's temple wept when they saw it (Ezra 3:12). The prophets Haggai and Zechariah have to encourage a community wondering whether God's promises still hold.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Ezra (~450 BC)</span>
+        <span class="pill">Nehemiah (~430 BC)</span>
+        <span class="pill">Esther (~480–470 BC events, written ~400 BC)</span>
+        <span class="pill">Haggai (520 BC)</span>
+        <span class="pill">Zechariah (~520–480 BC)</span>
+        <span class="pill">Malachi (~430 BC)</span>
+      </div>
+
+      <div class="sub-label prophets">Prophets Active</div>
+      <div class="pills">
+        <span class="pill">Haggai — two-month ministry, 520 BC (most precisely dated prophet)</span>
+        <span class="pill">Zechariah (~520–480 BC)</span>
+        <span class="pill">Malachi (~430 BC — last canonical prophet for 400 years)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">Ezra and Nehemiah were originally a single book (Ezra-Nehemiah) in the Hebrew canon — they cover the same period from complementary angles. Ezra focuses on rebuilding worship; Nehemiah focuses on rebuilding the city walls and social reform. Together they give a complete picture of the restoration.</div>
+
+      <div class="sub-label excluded">Excluded Books</div>
+      <div class="pills">
+        <span class="pill excluded-pill">1 Esdras <span class="excluded-chip deutero-chip">Catholic / Orthodox</span></span>
+        <span class="pill excluded-pill">2 Esdras / 4 Ezra <span class="excluded-chip pseudo-chip">Vulgate appendix only</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;"><strong>1 Esdras</strong> — a version of Ezra-Nehemiah with additional material, including the famous "debate of the three young men" (on wine, women, or truth — truth wins). Included in Catholic/Orthodox Bibles. <strong>2 Esdras / 4 Ezra</strong> — apocalyptic visions attributed to Ezra, written ~AD 100. Found in some Vulgate manuscripts but outside all canons.</div>
+    </div>
+
+    <!-- EVENT 17 -->
+    <div class="event-card" style="border-left-color: #888;">
+      <div class="event-header">
+        <div class="event-num">17</div>
+        <div class="event-title">400 Years of Silence</div>
+        <div class="event-date">~430–5 BC · Intertestamental Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">No canonical prophet speaks for 400 years after Malachi. This is not God's absence — it is the pause before the crescendo. During this period: Alexander the Great conquers the Near East (333 BC), the Septuagint is translated in Alexandria (~250–150 BC), the Maccabean revolt wins Jewish independence (167–160 BC), the Pharisees and Sadducees emerge as distinct parties, and Rome occupies Judea (63 BC). The world Jesus is born into is the product of these 400 years.</div>
+
+      <div class="sub-label books">Books Written (Canonical)</div>
+      <div class="sub-content" style="color:#888; font-style:italic;">None — the canon is silent for this period.</div>
+
+      <div class="sub-label books" style="margin-top:10px;">Deuterocanonical Books from This Period (Catholic / Orthodox)</div>
+      <div class="pills">
+        <span class="pill">1 Maccabees (~100 BC) — historical account of the Maccabean revolt</span>
+        <span class="pill">2 Maccabees (~100 BC) — theological retelling; adds resurrection, prayer for the dead</span>
+        <span class="pill">Tobit (~200 BC) — righteous exile and his son; angels and marriage</span>
+        <span class="pill">Judith (~150 BC) — widow who beheads an enemy general</span>
+        <span class="pill">Sirach / Ecclesiasticus (~180 BC, by Yeshua ben Sira)</span>
+        <span class="pill">Wisdom of Solomon (~100–50 BC) — written in Greek; Stoic influence</span>
+        <span class="pill">Baruch (~200–100 BC)</span>
+      </div>
+
+      <div class="sub-label excluded">Why Protestant Canon Excludes Them</div>
+      <div class="sub-content">(1) No Hebrew originals for several; (2) outside the period of canonical prophecy; (3) Jesus and NT authors never quote them as Scripture; (4) Jewish community at Jamnia (~AD 90) did not include them.</div>
+
+      <div class="sub-label converge" style="margin-top:10px;">Why Catholic / Orthodox Include Them</div>
+      <div class="sub-content">(1) Septuagint (used by the early church) includes them; (2) quoted extensively by early church fathers; (3) Council of Trent (1546) formally defined them as canonical; (4) the apostles used the LXX which contained them — approximately 300 of 350 OT quotes in the NT come from the LXX.</div>
+    </div>
+
+    <!-- EVENT 18 -->
+    <div class="event-card" style="border-left-color: #2e8a4a;">
+      <div class="event-header">
+        <div class="event-num">18</div>
+        <div class="event-title">Birth and Ministry of Jesus</div>
+        <div class="event-date">~6/4 BC – AD 30 · New Testament Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">Jesus is the most documented figure in ancient history — four independent Gospels, each with a distinct theological lens, written within a generation of his death by people who knew him or interviewed eyewitnesses. No other ancient figure has four biographies with this proximity. The four Gospels are not contradictory — they are complementary portraits: Matthew for Jews (kingdom, fulfilment), Mark for Romans (action, power), Luke for Greeks (universal humanity, history), John for everyone (deity, eternal life).</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Mark (~AD 50–55 — earliest Gospel)</span>
+        <span class="pill">Matthew (~AD 50–60)</span>
+        <span class="pill">Luke (~AD 60)</span>
+        <span class="pill">John (~AD 85–90)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence — Synoptic Problem</div>
+      <div class="sub-content">Matthew, Mark, and Luke (the Synoptics) share so much material that scholars have debated their literary relationship for 200 years. Markan priority is the most widely accepted solution: Mark was written first; Matthew and Luke both drew from Mark and a second source (the hypothetical "Q" document). John was written independently and much later.</div>
+
+      <div class="sub-label excluded">Excluded Gospels — Written but Not Canonical</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Gospel of Thomas (~AD 140–180) <span class="excluded-chip pseudo-chip">Gnostic</span></span>
+        <span class="pill excluded-pill">Gospel of Philip (~3rd cent AD) <span class="excluded-chip pseudo-chip">Gnostic</span></span>
+        <span class="pill excluded-pill">Gospel of Judas (~AD 130–180) <span class="excluded-chip pseudo-chip">Gnostic</span></span>
+        <span class="pill excluded-pill">Infancy Gospel of Thomas (~2nd cent AD) <span class="excluded-chip pseudo-chip">Rejected</span></span>
+        <span class="pill excluded-pill">Protevangelium of James (~2nd cent AD) <span class="excluded-chip pseudo-chip">Rejected</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;">Why excluded: Written 100–200 years after Jesus (no eyewitness connection); represent Gnostic theology foreign to Judaism and apostolic Christianity; not received by the early church. <strong>Gospel of Thomas</strong> (114 sayings, no narrative) was found at Nag Hammadi in 1945. <strong>Gospel of Judas</strong> portrays Judas as Jesus's most trusted disciple. <strong>Infancy Gospel of Thomas</strong> depicts boy Jesus striking children dead — theologically incompatible with the canonical portrait.</div>
+    </div>
+
+    <!-- EVENT 19 -->
+    <div class="event-card" style="border-left-color: #2e8a4a;">
+      <div class="event-header">
+        <div class="event-num">19</div>
+        <div class="event-title">The Apostolic Age / Early Church</div>
+        <div class="event-date">AD 30–100 · New Testament Era</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The NT letters were written before the Gospels — Paul's earliest letters (Galatians, 1 Thessalonians) predate the first Gospel by several years. The entire NT was written within 70 years of Jesus's death, most of it within 30–40 years. This is extraordinarily close to the events by ancient standards: Alexander the Great's earliest biography was written 400 years after his death. The NT is not myth — it is first-generation and second-generation testimony.</div>
+
+      <div class="sub-label books">Books Written</div>
+      <div class="pills">
+        <span class="pill">Paul's letters (~AD 48–68) — earliest NT writings</span>
+        <span class="pill">Acts (~AD 62)</span>
+        <span class="pill">Hebrews (~AD 60–70)</span>
+        <span class="pill">General Epistles (~AD 60–96)</span>
+        <span class="pill">Revelation (~AD 95–96)</span>
+      </div>
+
+      <div class="sub-label converge">Convergence</div>
+      <div class="sub-content">Acts and Paul's letters are the best example of convergence in the NT — Acts 13–28 covers the same missionary journeys described in Galatians, 1–2 Corinthians, Romans, Philippians, etc. Comparing them reveals detail and texture that neither gives alone. Scholars use this cross-referencing method to reconstruct the chronology of Paul's ministry.</div>
+
+      <div class="sub-label excluded">Excluded Early Christian Writings</div>
+      <div class="pills">
+        <span class="pill excluded-pill">Shepherd of Hermas (~AD 100–150) <span class="excluded-chip pseudo-chip">Post-Apostolic</span></span>
+        <span class="pill excluded-pill">1 Clement (~AD 96) <span class="excluded-chip pseudo-chip">Post-Apostolic</span></span>
+        <span class="pill excluded-pill">Didache (~AD 80–120) <span class="excluded-chip pseudo-chip">Post-Apostolic</span></span>
+        <span class="pill excluded-pill">Epistle of Barnabas (~AD 70–132) <span class="excluded-chip pseudo-chip">Post-Apostolic</span></span>
+      </div>
+      <div class="sub-content" style="margin-top:6px; font-size:0.88rem; color:#777;"><strong>Shepherd of Hermas</strong> — apocalyptic visions; included in Codex Sinaiticus (one of our earliest Bible manuscripts); considered Scripture by Origen and Irenaeus — ultimately excluded as post-apostolic. <strong>1 Clement</strong> — letter from Rome to Corinth, possibly by Peter's successor; widely respected. <strong>Didache</strong> — early church manual on baptism, Eucharist, church order; probably used before the NT canon was fixed. Why excluded: NT canon required apostolic authorship, universal reception, and theological consistency.</div>
+    </div>
+
+    <!-- EVENT 20 -->
+    <div class="event-card dark-card" style="border-left-color: #aaa;">
+      <div class="event-header">
+        <div class="event-num">20</div>
+        <div class="event-title">Canon Formation: How the Bible Was Assembled</div>
+        <div class="event-date">~250 BC – AD 1826 · Canon History</div>
+      </div>
+
+      <div class="sub-label insight">Deeper Insight</div>
+      <div class="sub-content">The canon was not created — it was recognised. The church did not invent the Bible; it identified what God had already inspired. This distinction is critical: authority lay in the books themselves, not in the councils that listed them. The councils were ratifying what communities of faith had already been treating as authoritative for generations.</div>
+
+      <div class="sub-label books" style="margin-top:14px;">Key Milestones</div>
+      <div class="sub-content" style="line-height:1.9;">
+        <strong>Jewish Canon (Tanakh)</strong> — Three sections: Torah, Nevi'im, Ketuvim. Widely agreed by ~100 BC. The Council of Jamnia (~AD 90) may have discussed canon but probably ratified rather than determined it.<br>
+        <strong>Septuagint (LXX)</strong> — Greek translation of OT, ~250–150 BC in Alexandria. Includes deuterocanonical books. Used by the early church — ~300 of 350 OT quotes in the NT come from the LXX.<br>
+        <strong>Marcion's Canon (~AD 144)</strong> — The heretic Marcion created the first closed NT canon: only Luke (edited) and 10 Paul letters, rejecting the OT entirely. His challenge forced the church to define its own canon more precisely.<br>
+        <strong>The Gnostic Challenge (2nd century)</strong> — Gnostic groups produced alternative gospels and epistles, forcing the church to articulate explicit criteria for canonicity: apostolic origin, universal reception, theological consistency.<br>
+        <strong>Athanasius's Festal Letter (AD 367)</strong> — First document listing exactly our 27 NT books. Not a council decision — one bishop's Easter letter that proved definitive.<br>
+        <strong>Council of Carthage (AD 397)</strong> — Affirmed the 66-book Protestant canon (plus deuterocanonicals for the broader church).<br>
+        <strong>Council of Trent (AD 1546)</strong> — Catholic Church formally declared the deuterocanonicals canonical Scripture, partly in response to Protestant exclusion.<br>
+        <strong>King James Bible (AD 1611)</strong> — Originally included the Apocrypha as a separate section between the Testaments. Removed from most printings around 1826.
+      </div>
+
+      <div class="sub-label converge">The Central Question</div>
+      <div class="sub-content">Did the church <em>create</em> the canon or <em>recognise</em> it? The historic Protestant answer: the church recognised what God had already inspired. The books carried their own authority before councils acknowledged it. A council listing the Gospels no more created their authority than a scientist naming gravity created its force.</div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3: BOOK CONVERGENCE MAP
+  ══════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Section 3 — Book Convergence Map: Events Covered by Multiple Books</div>
+    <div class="convergence-grid">
+
+      <div class="conv-card">
+        <h4>The Fall</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">Genesis 3</span><span class="conv-book-note">Primary narrative — the event itself</span></li>
+          <li><span class="conv-book-name">Romans 5:12–21</span><span class="conv-book-note">Paul's theological commentary — Adam as type of Christ</span></li>
+          <li><span class="conv-book-name">1 Corinthians 15</span><span class="conv-book-note">Death through Adam; life through Christ</span></li>
+          <li><span class="conv-book-name">Revelation 12</span><span class="conv-book-note">The serpent reappears — cosmic perspective on the Fall</span></li>
+          <li><span class="conv-book-name">Job 1–2</span><span class="conv-book-note">Satan as the adversary — same character, different role</span></li>
+        </ul>
+      </div>
+
+      <div class="conv-card">
+        <h4>The Exodus</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">Exodus</span><span class="conv-book-note">Primary narrative — events as they happened</span></li>
+          <li><span class="conv-book-name">Numbers</span><span class="conv-book-note">Wilderness journey — census, failures, complaints</span></li>
+          <li><span class="conv-book-name">Deuteronomy</span><span class="conv-book-note">Moses's retrospective sermons — the meaning of it all</span></li>
+          <li><span class="conv-book-name">Psalm 78, 105, 106</span><span class="conv-book-note">Three different poetic retrospectives on the same events</span></li>
+          <li><span class="conv-book-name">Hebrews 3–4</span><span class="conv-book-note">The wilderness generation as warning to NT believers</span></li>
+          <li><span class="conv-book-name">1 Corinthians 10</span><span class="conv-book-note">The Exodus as types for Christian life</span></li>
+        </ul>
+      </div>
+
+      <div class="conv-card">
+        <h4>David's Life</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">1–2 Samuel</span><span class="conv-book-note">Raw, prophetic account — includes failures (Bathsheba, Absalom)</span></li>
+          <li><span class="conv-book-name">1 Chronicles</span><span class="conv-book-note">Priestly account — selectively focuses on temple preparation</span></li>
+          <li><span class="conv-book-name">Psalms</span><span class="conv-book-note">David's own voice — prayer, worship, lament, confession</span></li>
+          <li><span class="conv-book-name">Acts 13:22</span><span class="conv-book-note">Paul's summary: "a man after God's own heart"</span></li>
+          <li><span class="conv-book-name">Hebrews 11:32</span><span class="conv-book-note">David listed in the hall of faith</span></li>
+        </ul>
+      </div>
+
+      <div class="conv-card">
+        <h4>Fall of Jerusalem (586 BC)</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">2 Kings 25</span><span class="conv-book-note">Historical record — what happened, blow by blow</span></li>
+          <li><span class="conv-book-name">2 Chronicles 36</span><span class="conv-book-note">Priestly retrospective — why it happened (apostasy)</span></li>
+          <li><span class="conv-book-name">Jeremiah 39–44</span><span class="conv-book-note">Eyewitness prophetic account with personal grief</span></li>
+          <li><span class="conv-book-name">Lamentations</span><span class="conv-book-note">Raw poetic lament — 5 poems of unfiltered grief</span></li>
+        </ul>
+      </div>
+
+      <div class="conv-card">
+        <h4>The Exile</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">Daniel</span><span class="conv-book-note">Royal court — faithfulness under imperial pressure</span></li>
+          <li><span class="conv-book-name">Ezekiel</span><span class="conv-book-note">Among the exiles — visions of God's glory departing and returning</span></li>
+          <li><span class="conv-book-name">Esther</span><span class="conv-book-note">Jewish life in diaspora — providence without explicit mention of God</span></li>
+          <li><span class="conv-book-name">Psalm 137</span><span class="conv-book-note">The emotional reality — "How can we sing the LORD's song?"</span></li>
+        </ul>
+      </div>
+
+      <div class="conv-card">
+        <h4>Life of Jesus</h4>
+        <ul class="conv-book-list">
+          <li><span class="conv-book-name">Mark (~AD 50–55)</span><span class="conv-book-note">For Romans — action, power, immediacy ("immediately")</span></li>
+          <li><span class="conv-book-name">Matthew (~AD 50–60)</span><span class="conv-book-note">For Jews — kingdom, fulfilment of OT prophecy</span></li>
+          <li><span class="conv-book-name">Luke (~AD 60)</span><span class="conv-book-note">For Greeks — universal humanity, historical precision</span></li>
+          <li><span class="conv-book-name">John (~AD 85–90)</span><span class="conv-book-note">For everyone — deity, eternal life, "I am" statements</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4: BOOKS LEFT OUT
+  ══════════════════════════════════════════ -->
+  <div class="books-out-section">
+    <div class="section-label">Section 4 — Books Left Out: Quick Reference Grid</div>
+    <div class="books-out-grid">
+
+      <!-- Category: Lost -->
+      <div class="books-out-category-label">Lost Books — Referenced in Scripture, No Surviving Copies</div>
+
+      <div class="book-out-card lost-book">
+        <div class="book-out-name">Book of Jashar <span class="excluded-chip lost-chip">Lost</span></div>
+        <div class="book-out-era">Conquest / Early Kingdom era</div>
+        <div class="book-out-why">Referenced in Joshua 10:13 and 2 Samuel 1:18. Contained poetic records of Israel's battles. No copies survived antiquity.</div>
+        <div class="book-out-who">No tradition includes it — simply lost</div>
+      </div>
+
+      <div class="book-out-card lost-book">
+        <div class="book-out-name">Book of the Wars of the LORD <span class="excluded-chip lost-chip">Lost</span></div>
+        <div class="book-out-era">Wilderness / Conquest era</div>
+        <div class="book-out-why">Referenced in Numbers 21:14 as an existing source. Likely a collection of early victory songs and battle records. Lost.</div>
+        <div class="book-out-who">No tradition includes it — simply lost</div>
+      </div>
+
+      <div class="book-out-card lost-book">
+        <div class="book-out-name">Acts of Solomon <span class="excluded-chip lost-chip">Lost</span></div>
+        <div class="book-out-era">United Kingdom era</div>
+        <div class="book-out-why">Referenced in 1 Kings 11:41. A royal chronicle of Solomon's deeds. The author of Kings explicitly says, "Are they not written in the book of the acts of Solomon?"</div>
+        <div class="book-out-who">No tradition includes it — simply lost</div>
+      </div>
+
+      <!-- Category: Deuterocanonical -->
+      <div class="books-out-category-label">Deuterocanonical Books — Catholic and Orthodox Include</div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">1 Maccabees <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental (~167–134 BC events)</div>
+        <div class="book-out-why">Historically reliable account of the Maccabean revolt. Written ~100 BC in Hebrew (only Greek survives). Closest in style to the historical books of the OT.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">2 Maccabees <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental</div>
+        <div class="book-out-why">Theological retelling of 1 Maccabees. Introduces doctrines of resurrection and prayer for the dead (12:44) — used by Catholics to support prayers for the departed.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Sirach / Ecclesiasticus <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental (~180 BC)</div>
+        <div class="book-out-why">Wisdom literature by Yeshua ben Sira. Closest deuterocanonical parallel to James. One of the most quoted deuterocanonical books by early church fathers. Hebrew original partially found at Masada.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Wisdom of Solomon <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental (~100–50 BC)</div>
+        <div class="book-out-why">Written in Greek in Alexandria — shows Stoic philosophical influence. Attributed to Solomon but dated centuries after him. Poetic and philosophical, not historical.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Tobit <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental (~200 BC)</div>
+        <div class="book-out-why">Story of a righteous exile and his son's journey. Teaches about angels (Raphael), prayer, and marriage covenants. Beloved in Catholic piety; Dead Sea Scroll fragments found in Aramaic and Hebrew.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Judith <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Intertestamental (~150 BC)</div>
+        <div class="book-out-why">Story of a widow who seduces and beheads Assyrian general Holofernes. Historical details do not match secular records (Nebuchadnezzar as Assyrian king). Possibly allegorical.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Baruch <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Exile / Post-exile (~200–100 BC)</div>
+        <div class="book-out-why">Attributed to Jeremiah's secretary Baruch. Contains penitential prayer, wisdom poem, and letter to exiles. Shows knowledge of Daniel — suggesting later authorship than claimed.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <div class="book-out-card deutero-book">
+        <div class="book-out-name">Additions to Daniel (×3) <span class="excluded-chip deutero-chip">Catholic + Orthodox</span></div>
+        <div class="book-out-era">Exile era (added ~2nd cent BC)</div>
+        <div class="book-out-why">Prayer of Azariah, Susanna, Bel and the Dragon — present in Greek LXX Daniel but absent from Hebrew/Aramaic text. Catholics include them; Protestants follow the Hebrew/Aramaic original.</div>
+        <div class="book-out-who">Catholic and Orthodox</div>
+      </div>
+
+      <!-- Category: Ethiopian -->
+      <div class="books-out-category-label">Ethiopian Orthodox Only</div>
+
+      <div class="book-out-card ethiopia-book">
+        <div class="book-out-name">1 Enoch (Book of Enoch) <span class="excluded-chip" style="background:#2e8a4a;">Ethiopian</span></div>
+        <div class="book-out-era">Pre-flood / Patriarchal era (~300–100 BC)</div>
+        <div class="book-out-why">Expands Genesis 6:1–4 (Nephilim). Portrays fallen Watchers as corruptors. Directly quoted in Jude 1:14–15. Extensively found at Qumran. Excluded by Protestant, Catholic, and most Orthodox traditions.</div>
+        <div class="book-out-who">Ethiopian Orthodox (Tewahedo) only</div>
+      </div>
+
+      <!-- Category: Rejected -->
+      <div class="books-out-category-label">Rejected — Pseudepigraphal / Gnostic: All Canons Exclude</div>
+
+      <div class="book-out-card rejected-book">
+        <div class="book-out-name">Gospel of Thomas <span class="excluded-chip pseudo-chip">All Canons Reject</span></div>
+        <div class="book-out-era">2nd century AD (~140–180)</div>
+        <div class="book-out-why">114 sayings of Jesus, no narrative. Gnostic theological framework. Found at Nag Hammadi 1945. Written 100+ years after Jesus with no eyewitness basis. Some sayings overlap canonical Gospels; others are clearly Gnostic inventions.</div>
+        <div class="book-out-who">No canon accepts it</div>
+      </div>
+
+      <div class="book-out-card rejected-book">
+        <div class="book-out-name">Gospel of Judas <span class="excluded-chip pseudo-chip">All Canons Reject</span></div>
+        <div class="book-out-era">2nd century AD (~130–180)</div>
+        <div class="book-out-why">Gnostic text portraying Judas as Jesus's most trusted disciple who helped liberate the divine spark. Condemned by Irenaeus in AD 180. Rediscovered 1978; published 2006. Pure 2nd-century Gnostic invention.</div>
+        <div class="book-out-who">No canon accepts it</div>
+      </div>
+
+      <div class="book-out-card rejected-book">
+        <div class="book-out-name">Shepherd of Hermas <span class="excluded-chip pseudo-chip">Early Use / Excluded</span></div>
+        <div class="book-out-era">1st–2nd century AD (~100–150)</div>
+        <div class="book-out-why">Apocalyptic visions and moral instruction from Rome. Included in Codex Sinaiticus. Considered Scripture by Origen and Irenaeus. Ultimately excluded: not apostolic authorship, too late. Still valuable for early church history.</div>
+        <div class="book-out-who">Excluded from all canons; historically important</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5: CANON FORMATION TIMELINE
+  ══════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Section 5 — Canon Formation Timeline: How the Bible as We Have It Was Assembled</div>
+    <div class="canon-timeline">
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">~250–150 BC</div>
+        <div class="canon-milestone-title">Septuagint (LXX) Translated in Alexandria</div>
+        <div class="canon-milestone-desc">The Hebrew OT is translated into Greek — and the deuterocanonical books are included. ~300 of the NT's 350 OT quotations come from the LXX. This Greek Bible becomes the Bible of the early church.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">~100 BC</div>
+        <div class="canon-milestone-title">Jewish Canon (Tanakh) Widely Agreed</div>
+        <div class="canon-milestone-desc">Torah (5 books), Nevi'im / Prophets (21 books), Ketuvim / Writings (13 books) = 39 books (counting as Protestants count). The three-section structure is firm. Jamnia (~AD 90) confirms rather than creates this.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">~AD 48</div>
+        <div class="canon-milestone-title">Paul's Letter to Galatians — Earliest NT Writing</div>
+        <div class="canon-milestone-desc">The NT canon begins not with a Gospel but with a letter. Paul's earliest letter (Galatians or 1 Thessalonians) is written 15–20 years after Jesus's death — within living memory of those who knew him.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">~AD 50–55</div>
+        <div class="canon-milestone-title">Mark Written — Earliest Gospel</div>
+        <div class="canon-milestone-desc">The first written account of Jesus's life and ministry. Almost certainly based on the preaching of Peter (early tradition: Papias, ~AD 130). Written in Rome for a Gentile audience. Matthew and Luke will draw from it.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">~AD 90</div>
+        <div class="canon-milestone-title">Council of Jamnia — Jewish Rabbis Discuss the Hebrew Canon</div>
+        <div class="canon-milestone-desc">After the destruction of Jerusalem (AD 70), rabbis meet at Jamnia to reconstitute Judaism without the temple. They discuss (and probably ratify) the Hebrew canon. The deuterocanonicals are explicitly excluded from the Jewish canon.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">AD 144</div>
+        <div class="canon-milestone-title">Marcion's Heretical Canon — The First Closed NT List</div>
+        <div class="canon-milestone-desc">The heretic Marcion produces a canon of only Luke (edited to remove Jewish elements) and 10 Paul letters — completely rejecting the OT and Jewish Scripture. His challenge forces the early church to articulate positive criteria for canonicity.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">AD 367</div>
+        <div class="canon-milestone-title">Athanasius's Festal Letter — First List of Exactly 27 NT Books</div>
+        <div class="canon-milestone-desc">Bishop Athanasius of Alexandria writes his annual Easter letter to Egyptian churches listing the exact 27 books that constitute our NT. Not a council — one bishop's letter. But it carries enormous authority and proves decisive.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">AD 397</div>
+        <div class="canon-milestone-title">Council of Carthage — Affirms the Canon</div>
+        <div class="canon-milestone-desc">The Council of Carthage formally affirms Athanasius's list of 27 NT books plus the OT including the deuterocanonicals. This is not the creation of the canon — it is the church formally recognising what had been authoritative for decades.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">AD 1546</div>
+        <div class="canon-milestone-title">Council of Trent — Catholic Church Formally Adds Deuterocanonicals</div>
+        <div class="canon-milestone-desc">In response to the Protestant Reformation and Luther's rejection of the deuterocanonicals, the Council of Trent formally defines them as canonical Scripture with the same authority as the Hebrew canon books. A polemical decision with lasting consequences.</div>
+      </div>
+
+      <div class="canon-milestone">
+        <div class="canon-milestone-date">AD 1611 → 1826</div>
+        <div class="canon-milestone-title">King James Bible — Apocrypha Included, Then Removed</div>
+        <div class="canon-milestone-desc">The original 1611 KJV included the Apocrypha (deuterocanonicals) as a separate section between the Testaments — not as Scripture but as edifying reading. By ~1826, most publishers stopped printing this section. Modern KJVs typically omit it entirely.</div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /panel -->
+</body>
+</html>
