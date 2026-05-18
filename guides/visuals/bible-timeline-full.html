@@ -533,12 +533,257 @@
     .tree-container { min-width: 700px; }
 
     .events-timeline { padding-left: 28px; }
+
+    .prophet-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .matrix-table { min-width: 700px; }
   }
 
   @media (max-width: 480px) {
     body { padding: 12px 8px 32px; }
     .contemporaries-grid { grid-template-columns: 1fr; }
     .books-grid { grid-template-columns: 1fr; }
+    .prophet-cards-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ══════════════════════════════════════════
+     SECTION 7 — PROPHETS & THEIR TIMES
+  ══════════════════════════════════════════ */
+
+  /* 7a — Prophet Timeline Strip */
+  .prophet-timeline-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 24px;
+  }
+  .prophet-timeline-inner {
+    min-width: 780px;
+  }
+  .prophet-era-group {
+    margin-bottom: 16px;
+  }
+  .prophet-era-group-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+  .prophet-axis {
+    display: flex;
+    padding-left: 110px;
+    margin-bottom: 6px;
+  }
+  .prophet-axis-tick {
+    flex: 1;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #aaa;
+    border-left: 1px dashed #ddd;
+    padding-left: 2px;
+  }
+
+  /* 7b — Prophet Cards Grid */
+  .prophet-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .prophet-card {
+    background: #faf7f2;
+    border: 2px solid #e0ddd8;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .prophet-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .prophet-name {
+    font-family: 'Special Elite', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    color: #2c2c2c;
+    line-height: 1.1;
+  }
+  .prophet-dates {
+    font-size: 0.72rem;
+    color: #888;
+    margin-top: 2px;
+    font-family: 'Caveat', cursive;
+  }
+  .prophet-era-chip {
+    display: inline-block;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Special Elite', serif;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .prophet-section-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #aaa;
+    margin-bottom: 2px;
+  }
+  .kings-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .kings-list li {
+    font-size: 0.75rem;
+    background: #f0ede8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1px 6px;
+    color: #444;
+  }
+  .kings-list li .kingdom-tag {
+    font-size: 0.6rem;
+    color: #999;
+    margin-left: 3px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .contemporaries-list {
+    font-size: 0.78rem;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .prophet-key-message {
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.45;
+    border-left: 3px solid #e0ddd8;
+    padding-left: 8px;
+  }
+  .prophet-books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .book-chip-prophet {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: #f0ede8;
+    border: 1.5px solid #c8c2b8;
+    color: #555;
+    font-family: 'Special Elite', serif;
+    letter-spacing: 0.04em;
+  }
+  .no-book-note {
+    font-size: 0.72rem;
+    color: #bbb;
+    font-style: italic;
+  }
+
+  /* 7c — Prophet-King Matrix */
+  .matrix-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .matrix-table {
+    border-collapse: collapse;
+    font-size: 0.72rem;
+    min-width: 900px;
+    width: 100%;
+  }
+  .matrix-table th {
+    font-family: 'Special Elite', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    padding: 5px 6px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .matrix-table th.prophet-col-head {
+    background: #2c2c2c;
+    text-align: left;
+    min-width: 110px;
+  }
+  .matrix-table td {
+    padding: 4px 5px;
+    border: 1px solid #e0ddd8;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .matrix-table td.prophet-row-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-align: left;
+    white-space: nowrap;
+    padding-left: 8px;
+    background: #faf7f2;
+    color: #2c2c2c;
+    border-right: 2px solid #ccc;
+  }
+  .matrix-table tr:nth-child(even) td.prophet-row-label {
+    background: #f3f0eb;
+  }
+  .matrix-table tr:nth-child(even) td {
+    background: #fafafa;
+  }
+  .matrix-dot {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .matrix-cell-primary {
+    background: rgba(192,57,43,0.18) !important;
+  }
+  .matrix-cell-contemporary {
+    background: rgba(192,57,43,0.06) !important;
+  }
+  .matrix-group-head {
+    font-family: 'Special Elite', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 6px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* Prophets section subsection heading */
+  .prophets-subsection-head {
+    font-family: 'Special Elite', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: #2c2c2c;
+    margin: 24px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e0ddd8;
+  }
+  .prophets-subsection-head:first-of-type {
+    margin-top: 0;
   }
 
   /* ── Extended family tree styles ── */
@@ -1941,6 +2186,1036 @@
       </div>
 
     </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — PROPHETS & THEIR TIMES
+  ════════════════════════════════════════ -->
+  <section>
+    <div class="section-label">Section 7 — Prophets &amp; Their Times</div>
+
+    <!-- ─── 7a : Prophet Timeline Strip ─── -->
+    <h3 class="prophets-subsection-head">7a — Prophet Timeline Strip</h3>
+    <div class="prophet-timeline-wrap">
+      <div class="prophet-timeline-inner">
+
+        <!-- Axis labels: key dates 1100 → 400 BC, normalised over 700-yr span -->
+        <div class="prophet-axis" style="padding-left:110px">
+          <div class="prophet-axis-tick">1100 BC</div>
+          <div class="prophet-axis-tick">1000 BC</div>
+          <div class="prophet-axis-tick">900 BC</div>
+          <div class="prophet-axis-tick">800 BC</div>
+          <div class="prophet-axis-tick">700 BC</div>
+          <div class="prophet-axis-tick">600 BC</div>
+          <div class="prophet-axis-tick">500 BC</div>
+          <div class="prophet-axis-tick">400 BC</div>
+        </div>
+
+        <!-- Span of chart: 1100 BC → 400 BC = 700 yrs
+             left%  = (1100 - start) / 700 * 100
+             width% = (start - end) / 700 * 100
+        -->
+
+        <!-- UNITED KINGDOM / EARLY PROPHETS -->
+        <div class="prophet-era-group">
+          <div class="prophet-era-group-label" style="background:#6c4bbf">United Kingdom &amp; Early Prophets</div>
+          <!-- Samuel ~1075–1012 BC: left=(1100-1075)/700=3.6%, width=(1075-1012)/700=9% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Samuel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:3.6%;width:9%"><span>~1075–1012</span></div>
+            </div>
+          </div>
+          <!-- Nathan ~1010–960 BC: left=(1100-1010)/700=12.9%, width=(1010-960)/700=7.1% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Nathan</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:12.9%;width:7.1%"><span>~1010–960</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRE-EXILIC / DIVIDED KINGDOM -->
+        <div class="prophet-era-group">
+          <div class="prophet-era-group-label" style="background:#c0392b">Divided Kingdom — Pre-Exilic</div>
+          <!-- Elijah ~875–848: left=(1100-875)/700=32.1%, width=(875-848)/700=3.9% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Elijah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:32.1%;width:3.9%"><span>~875–848</span></div>
+            </div>
+          </div>
+          <!-- Elisha ~848–795: left=(1100-848)/700=36%, width=(848-795)/700=7.6% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Elisha</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:36%;width:7.6%"><span>~848–795</span></div>
+            </div>
+          </div>
+          <!-- Obadiah ~850: left=35.7%, width=0.7% (single point, ~5 yr symbol) -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Obadiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:35.7%;width:1.4%"><span>~850</span></div>
+            </div>
+          </div>
+          <!-- Joel ~835: left=(1100-835)/700=37.9%, width=1.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Joel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#6c4bbf;left:37.9%;width:1.4%"><span>~835</span></div>
+            </div>
+          </div>
+          <!-- Jonah ~785–750: left=(1100-785)/700=45%, width=(785-750)/700=5% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Jonah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:45%;width:5%"><span>~785–750</span></div>
+            </div>
+          </div>
+          <!-- Amos ~760–750: left=(1100-760)/700=48.6%, width=(760-750)/700=1.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Amos</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:48.6%;width:1.4%"><span>~760–750</span></div>
+            </div>
+          </div>
+          <!-- Hosea ~755–715: left=(1100-755)/700=49.3%, width=(755-715)/700=5.7% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Hosea</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:49.3%;width:5.7%"><span>~755–715</span></div>
+            </div>
+          </div>
+          <!-- Isaiah ~740–681: left=(1100-740)/700=51.4%, width=(740-681)/700=8.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Isaiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:51.4%;width:8.4%"><span>~740–681</span></div>
+            </div>
+          </div>
+          <!-- Micah ~735–700: left=52.1%, width=5% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Micah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:52.1%;width:5%"><span>~735–700</span></div>
+            </div>
+          </div>
+          <!-- Nahum ~663–612: left=(1100-663)/700=62.4%, width=(663-612)/700=7.3% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Nahum</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:62.4%;width:7.3%"><span>~663–612</span></div>
+            </div>
+          </div>
+          <!-- Zephaniah ~640–609: left=(1100-640)/700=65.7%, width=(640-609)/700=4.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Zephaniah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:65.7%;width:4.4%"><span>~640–609</span></div>
+            </div>
+          </div>
+          <!-- Habakkuk ~609–605: left=(1100-609)/700=70.1%, width=(609-605)/700=0.6% → min 1.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Habakkuk</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:70.1%;width:1.4%"><span>~609–605</span></div>
+            </div>
+          </div>
+          <!-- Jeremiah ~627–585: left=(1100-627)/700=67.6%, width=(627-585)/700=6% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Jeremiah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#c0392b;left:67.6%;width:6%"><span>~627–585</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXILIC -->
+        <div class="prophet-era-group">
+          <div class="prophet-era-group-label" style="background:#8b1a1a">Exile</div>
+          <!-- Ezekiel ~593–571: left=(1100-593)/700=72.4%, width=(593-571)/700=3.1% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Ezekiel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#8b1a1a;left:72.4%;width:3.1%"><span>~593–571</span></div>
+            </div>
+          </div>
+          <!-- Daniel ~605–535: left=(1100-605)/700=70.7%, width=(605-535)/700=10% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Daniel</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#8b1a1a;left:70.7%;width:10%"><span>~605–535</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POST-EXILIC -->
+        <div class="prophet-era-group">
+          <div class="prophet-era-group-label" style="background:#7a8c2e">Post-Exile</div>
+          <!-- Haggai ~520: left=(1100-520)/700=82.9%, width=1.4% (short) -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Haggai</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:82.9%;width:1.4%"><span>~520</span></div>
+            </div>
+          </div>
+          <!-- Zechariah ~520–480: left=82.9%, width=(520-480)/700=5.7% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Zechariah</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#7a8c2e;left:82.9%;width:5.7%"><span>~520–480</span></div>
+            </div>
+          </div>
+          <!-- Malachi ~430: left=(1100-430)/700=95.7%, width=1.4% -->
+          <div class="bar-row">
+            <div class="bar-name" style="width:110px">Malachi</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="background:#888;left:95.7%;width:2%"><span>~430</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /prophet-timeline-inner -->
+    </div><!-- /prophet-timeline-wrap -->
+
+
+    <!-- ─── 7b : Prophet Cards Grid ─── -->
+    <h3 class="prophets-subsection-head">7b — Prophet Cards</h3>
+    <div class="prophet-cards-grid">
+
+      <!-- SAMUEL -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Samuel</div>
+            <div class="prophet-dates">~1075–1012 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#6c4bbf">United Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Saul<span class="kingdom-tag">Unified</span></li>
+            <li>David<span class="kingdom-tag">Unified</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">None listed</div>
+        </div>
+        <div class="prophet-key-message">"Anointed two kings; obedience over sacrifice"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <span class="no-book-note">narrative only (1–2 Samuel)</span>
+        </div>
+      </div>
+
+      <!-- NATHAN -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Nathan</div>
+            <div class="prophet-dates">~1010–960 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#6c4bbf">United Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>David<span class="kingdom-tag">Unified</span></li>
+            <li>Solomon<span class="kingdom-tag">Unified</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">None listed</div>
+        </div>
+        <div class="prophet-key-message">"You are the man — Davidic covenant messenger"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <span class="no-book-note">narrative only</span>
+        </div>
+      </div>
+
+      <!-- ELIJAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Elijah</div>
+            <div class="prophet-dates">~875–848 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Ahab<span class="kingdom-tag">Israel</span></li>
+            <li>Ahaziah<span class="kingdom-tag">Israel</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">None listed</div>
+        </div>
+        <div class="prophet-key-message">"Is there no God in Israel? — confronted Baal worship"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <span class="no-book-note">narrative only (1–2 Kings)</span>
+        </div>
+      </div>
+
+      <!-- ELISHA -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Elisha</div>
+            <div class="prophet-dates">~848–795 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Joram<span class="kingdom-tag">Israel</span></li>
+            <li>Jehu<span class="kingdom-tag">Israel</span></li>
+            <li>Jehoahaz<span class="kingdom-tag">Israel</span></li>
+            <li>Joash<span class="kingdom-tag">Israel</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">None listed</div>
+        </div>
+        <div class="prophet-key-message">"Double portion — 16 miracles, more than any prophet"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <span class="no-book-note">narrative only (2 Kings)</span>
+        </div>
+      </div>
+
+      <!-- OBADIAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Obadiah</div>
+            <div class="prophet-dates">~850 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jehoram<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Elijah, Elisha</div>
+        </div>
+        <div class="prophet-key-message">"Pride goes before your fall — Edom judged for watching Jerusalem burn"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Obadiah</span></div>
+        </div>
+      </div>
+
+      <!-- JOEL -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Joel</div>
+            <div class="prophet-dates">~835 BC (debated)</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Joash<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Elisha</div>
+        </div>
+        <div class="prophet-key-message">"Locust → Day of the Lord → Spirit poured out (Acts 2)"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Joel</span></div>
+        </div>
+      </div>
+
+      <!-- JONAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Jonah</div>
+            <div class="prophet-dates">~785–750 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jeroboam II<span class="kingdom-tag">Israel</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Amos, early Hosea</div>
+        </div>
+        <div class="prophet-key-message">"No borders on grace — Nineveh repents, Jonah sulks"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Jonah</span></div>
+        </div>
+      </div>
+
+      <!-- AMOS -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Amos</div>
+            <div class="prophet-dates">~760–750 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jeroboam II<span class="kingdom-tag">Israel</span></li>
+            <li>Uzziah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Hosea, Jonah, Isaiah (beginning)</div>
+        </div>
+        <div class="prophet-key-message">"Let justice roll down like waters — prosperity masks rottenness"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Amos</span></div>
+        </div>
+      </div>
+
+      <!-- HOSEA -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Hosea</div>
+            <div class="prophet-dates">~755–715 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jeroboam II → Hoshea<span class="kingdom-tag">Israel</span></li>
+            <li>Uzziah → Hezekiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Amos, Isaiah, Micah</div>
+        </div>
+        <div class="prophet-key-message">"How can I give you up? — covenant love outlasts covenant breaking"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Hosea</span></div>
+        </div>
+      </div>
+
+      <!-- ISAIAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Isaiah</div>
+            <div class="prophet-dates">~740–681 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Uzziah<span class="kingdom-tag">Judah</span></li>
+            <li>Jotham<span class="kingdom-tag">Judah</span></li>
+            <li>Ahaz<span class="kingdom-tag">Judah</span></li>
+            <li>Hezekiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Hosea, Micah, Amos (end)</div>
+        </div>
+        <div class="prophet-key-message">"Comfort my people — suffering servant opens the door"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Isaiah</span></div>
+        </div>
+      </div>
+
+      <!-- MICAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Micah</div>
+            <div class="prophet-dates">~735–700 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jotham<span class="kingdom-tag">Judah</span></li>
+            <li>Ahaz<span class="kingdom-tag">Judah</span></li>
+            <li>Hezekiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Isaiah, Hosea</div>
+        </div>
+        <div class="prophet-key-message">"Bethlehem — act justly, love mercy, walk humbly"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Micah</span></div>
+        </div>
+      </div>
+
+      <!-- NAHUM -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Nahum</div>
+            <div class="prophet-dates">~663–612 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Manasseh / Josiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Early Zephaniah</div>
+        </div>
+        <div class="prophet-key-message">"Nineveh's final verdict — 150 yrs after Jonah, no more repentance"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Nahum</span></div>
+        </div>
+      </div>
+
+      <!-- ZEPHANIAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Zephaniah</div>
+            <div class="prophet-dates">~640–609 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Josiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Jeremiah, Nahum, Habakkuk</div>
+        </div>
+        <div class="prophet-key-message">"The Lord your God is in your midst — he will quiet you with his love"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Zephaniah</span></div>
+        </div>
+      </div>
+
+      <!-- HABAKKUK -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Habakkuk</div>
+            <div class="prophet-dates">~609–605 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Jehoiakim<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Jeremiah, Zephaniah</div>
+        </div>
+        <div class="prophet-key-message">"The just shall live by faith — God is Lord even over Babylon"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Habakkuk</span></div>
+        </div>
+      </div>
+
+      <!-- JEREMIAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Jeremiah</div>
+            <div class="prophet-dates">~627–585 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#c0392b">Divided Kingdom</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Josiah<span class="kingdom-tag">Judah</span></li>
+            <li>Jehoahaz<span class="kingdom-tag">Judah</span></li>
+            <li>Jehoiakim<span class="kingdom-tag">Judah</span></li>
+            <li>Jehoiachin<span class="kingdom-tag">Judah</span></li>
+            <li>Zedekiah<span class="kingdom-tag">Judah</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Zephaniah, Habakkuk, early Ezekiel, early Daniel</div>
+        </div>
+        <div class="prophet-key-message">"New covenant written on hearts — wept for a city that wouldn't listen"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books">
+            <span class="book-chip-prophet">Jeremiah</span>
+            <span class="book-chip-prophet">Lamentations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EZEKIEL -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Ezekiel</div>
+            <div class="prophet-dates">~593–571 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#8b1a1a">Exile</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Nebuchadnezzar<span class="kingdom-tag">Babylon</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Daniel, late Jeremiah</div>
+        </div>
+        <div class="prophet-key-message">"Dry bones — glory departs, glory returns; watchman on the wall"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Ezekiel</span></div>
+        </div>
+      </div>
+
+      <!-- DANIEL -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Daniel</div>
+            <div class="prophet-dates">~605–535 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#8b1a1a">Exile</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Nebuchadnezzar<span class="kingdom-tag">Babylon</span></li>
+            <li>Belshazzar<span class="kingdom-tag">Babylon</span></li>
+            <li>Darius<span class="kingdom-tag">Persia</span></li>
+            <li>Cyrus<span class="kingdom-tag">Persia</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Ezekiel, late Jeremiah</div>
+        </div>
+        <div class="prophet-key-message">"God rules the kingdoms of men — four empires, one eternal kingdom"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Daniel</span></div>
+        </div>
+      </div>
+
+      <!-- HAGGAI -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Haggai</div>
+            <div class="prophet-dates">~520 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#7a8c2e">Post-Exile</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Darius I<span class="kingdom-tag">Persia</span></li>
+            <li>Zerubbabel<span class="kingdom-tag">Governor</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Zechariah</div>
+        </div>
+        <div class="prophet-key-message">"Build the house — misplaced priorities keep the blessing locked up"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Haggai</span></div>
+        </div>
+      </div>
+
+      <!-- ZECHARIAH -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Zechariah</div>
+            <div class="prophet-dates">~520–480 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#7a8c2e">Post-Exile</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Darius I<span class="kingdom-tag">Persia</span></li>
+            <li>Zerubbabel<span class="kingdom-tag">Governor</span></li>
+            <li>Joshua<span class="kingdom-tag">High Priest</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Haggai</div>
+        </div>
+        <div class="prophet-key-message">"Not by might nor by power — Messiah on a donkey, pierced, mourned"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Zechariah</span></div>
+        </div>
+      </div>
+
+      <!-- MALACHI -->
+      <div class="prophet-card">
+        <div class="prophet-card-header">
+          <div>
+            <div class="prophet-name">Malachi</div>
+            <div class="prophet-dates">~430 BC</div>
+          </div>
+          <span class="prophet-era-chip" style="background:#888">Intertestamental</span>
+        </div>
+        <div>
+          <div class="prophet-section-label">Kings Addressed</div>
+          <ul class="kings-list">
+            <li>Persian Governor<span class="kingdom-tag">Nehemiah era</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="prophet-section-label">Contemporaries</div>
+          <div class="contemporaries-list">Possibly Ezra, Nehemiah</div>
+        </div>
+        <div class="prophet-key-message">"Return to me and I will return to you — last OT word before 400 years of silence"</div>
+        <div>
+          <div class="prophet-section-label">Books</div>
+          <div class="prophet-books"><span class="book-chip-prophet">Malachi</span></div>
+        </div>
+      </div>
+
+    </div><!-- /prophet-cards-grid -->
+
+
+    <!-- ─── 7c : Prophet-King Matrix ─── -->
+    <h3 class="prophets-subsection-head">7c — Prophet-King Matrix</h3>
+    <p style="font-size:0.78rem;color:#888;margin-bottom:10px;">● = primary address / active during reign &nbsp;◦ = contemporary (alive during reign)</p>
+    <div class="matrix-scroll">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th class="prophet-col-head" rowspan="2">Prophet</th>
+            <!-- United Kingdom -->
+            <th colspan="3" class="matrix-group-head" style="background:#6c4bbf">United Kingdom</th>
+            <!-- Israel North -->
+            <th colspan="5" class="matrix-group-head" style="background:#c0392b">Israel (North)</th>
+            <!-- Judah South -->
+            <th colspan="11" class="matrix-group-head" style="background:#a93226">Judah (South)</th>
+            <!-- Foreign -->
+            <th colspan="2" class="matrix-group-head" style="background:#8b1a1a">Foreign / Exile</th>
+          </tr>
+          <tr>
+            <!-- United Kingdom kings -->
+            <th style="background:#7c5cd0">Saul</th>
+            <th style="background:#7c5cd0">David</th>
+            <th style="background:#7c5cd0">Solomon</th>
+            <!-- Israel North kings -->
+            <th style="background:#d4524a">Jeroboam I</th>
+            <th style="background:#d4524a">Ahab</th>
+            <th style="background:#d4524a">Jehu</th>
+            <th style="background:#d4524a">Jeroboam II</th>
+            <th style="background:#d4524a">Hoshea</th>
+            <!-- Judah South kings -->
+            <th style="background:#b83c31">Jehoshaphat</th>
+            <th style="background:#b83c31">Jehoram</th>
+            <th style="background:#b83c31">Joash</th>
+            <th style="background:#b83c31">Uzziah</th>
+            <th style="background:#b83c31">Jotham</th>
+            <th style="background:#b83c31">Ahaz</th>
+            <th style="background:#b83c31">Hezekiah</th>
+            <th style="background:#b83c31">Manasseh</th>
+            <th style="background:#b83c31">Josiah</th>
+            <th style="background:#b83c31">Jehoiakim</th>
+            <th style="background:#b83c31">Zedekiah</th>
+            <!-- Foreign -->
+            <th style="background:#8b1a1a">Nebuchadnezzar</th>
+            <th style="background:#9b3030">Darius I / Cyrus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Samuel: Saul ●, David ● -->
+          <tr>
+            <td class="prophet-row-label">Samuel</td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Nathan: David ●, Solomon ● -->
+          <tr>
+            <td class="prophet-row-label">Nathan</td>
+            <td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Elijah: Ahab ●, (Jehu ◦) -->
+          <tr>
+            <td class="prophet-row-label">Elijah</td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Elisha: Joram (Israel, not in list → map to Jehu era), Jehu ●, Jehoahaz → not in list, Joash Judah ◦ -->
+          <tr>
+            <td class="prophet-row-label">Elisha</td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Obadiah: Jehoram (Judah) ● -->
+          <tr>
+            <td class="prophet-row-label">Obadiah</td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Joel: Joash (Judah) ● -->
+          <tr>
+            <td class="prophet-row-label">Joel</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Jonah: Jeroboam II (Israel) ● -->
+          <tr>
+            <td class="prophet-row-label">Jonah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Amos: Jeroboam II (Israel) ●, Uzziah (Judah) ● -->
+          <tr>
+            <td class="prophet-row-label">Amos</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Hosea: Jeroboam II–Hoshea ●, Uzziah–Hezekiah ◦ -->
+          <tr>
+            <td class="prophet-row-label">Hosea</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Isaiah: Uzziah ●, Jotham ●, Ahaz ●, Hezekiah ● -->
+          <tr>
+            <td class="prophet-row-label">Isaiah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Micah: Jotham ●, Ahaz ●, Hezekiah ● -->
+          <tr>
+            <td class="prophet-row-label">Micah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Nahum: Manasseh/Josiah ● -->
+          <tr>
+            <td class="prophet-row-label">Nahum</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td><td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Zephaniah: Josiah ● -->
+          <tr>
+            <td class="prophet-row-label">Zephaniah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Habakkuk: Jehoiakim ● -->
+          <tr>
+            <td class="prophet-row-label">Habakkuk</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td>
+            <td></td><td></td>
+          </tr>
+          <!-- Jeremiah: Josiah ●, Jehoiakim ●, Zedekiah ●, (Jehoahaz Jehoiachin not in col list → map to Jehoiakim/Zedekiah columns) -->
+          <tr>
+            <td class="prophet-row-label">Jeremiah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td></td>
+          </tr>
+          <!-- Ezekiel: Nebuchadnezzar ● -->
+          <tr>
+            <td class="prophet-row-label">Ezekiel</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td></td>
+          </tr>
+          <!-- Daniel: Nebuchadnezzar ●, Darius/Cyrus ● -->
+          <tr>
+            <td class="prophet-row-label">Daniel</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+          </tr>
+          <!-- Haggai: Darius I / Cyrus ● -->
+          <tr>
+            <td class="prophet-row-label">Haggai</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+          </tr>
+          <!-- Zechariah: Darius I / Cyrus ● -->
+          <tr>
+            <td class="prophet-row-label">Zechariah</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-primary"><span class="matrix-dot">●</span></td>
+          </tr>
+          <!-- Malachi: Persian governor era, no specific king in table → all empty (post-Darius) -->
+          <tr>
+            <td class="prophet-row-label">Malachi</td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td>
+            <td class="matrix-cell-contemporary"><span class="matrix-dot">◦</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /matrix-scroll -->
+
   </section>
 
 
