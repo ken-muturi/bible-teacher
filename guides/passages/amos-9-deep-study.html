@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amos 9 — Deep Passage Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .companion-link { display: inline-block; font-size: 0.85rem; color: #d47c1a; text-decoration: none; border-bottom: 1px dashed #d47c1a; }
+  .companion-link:hover { opacity: 0.7; }
+  .back-link { display: inline-block; font-size: 0.85rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .back-link:hover { opacity: 0.7; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* identity */
+  .identity-card { background: #2c2c2c; color: #f5f0e8; border-radius: 4px; padding: 16px 20px; grid-column: 1 / -1; margin-bottom: 4px; }
+  .identity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
+  .id-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 3px; font-weight: 700; }
+  .id-value { font-size: 0.9rem; color: #f5f0e8; line-height: 1.45; }
+  .id-em { color: #d47c1a; font-style: italic; }
+
+  /* key verse */
+  .key-verse { background: #fff8f0; border: 2px solid #d47c1a; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* structure / beats */
+  .beat { border-left: 3px solid #d47c1a; padding-left: 11px; margin-bottom: 11px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.68rem; color: #d47c1a; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.85rem; color: #444; line-height: 1.4; }
+
+  /* word cards — teal/green strip */
+  .word-card { background: #f0faf5; border: 1.5px solid #2e8a4a; border-radius: 3px; padding: 12px 13px; margin-bottom: 9px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #2e8a4a; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.76rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.93rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.83rem; color: #555; line-height: 1.4; }
+
+  /* historical context — orange box */
+  .hist-box { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 13px 15px; margin-bottom: 9px; }
+  .hist-box:last-child { margin-bottom: 0; }
+  .hist-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .hist-text { font-size: 0.85rem; color: #444; line-height: 1.42; }
+
+  /* commentary shelf — dark cards */
+  .comm-card { background: #2c2c2c; color: #f5f0e8; border-radius: 4px; padding: 14px 16px; margin-bottom: 12px; }
+  .comm-card:last-child { margin-bottom: 0; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 1rem; color: #f5f0e8; }
+  .comm-tradition { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 8px; }
+  .comm-tag { display: inline-block; font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; margin-bottom: 6px; font-weight: 700; }
+  .comm-tag.conservative { background: #d47c1a; color: #fff; }
+  .comm-tag.critical { background: #3b6fd4; color: #fff; }
+  .comm-tag.pastoral { background: #2e8a4a; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; margin-bottom: 8px; font-size: 0.84rem; color: #e0d8cc; line-height: 1.4; }
+  .comm-point:last-child { margin-bottom: 0; }
+  .comm-quote { font-style: italic; font-size: 0.82rem; color: #bbb; }
+
+  /* pressure points — dark box */
+  .pressure-box { background: #1a1a1a; border-radius: 4px; padding: 14px 16px; }
+  .pressure-box .card-label { color: #aaa; }
+  .pressure { background: #2a2a2a; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .pressure:last-child { margin-bottom: 0; }
+  .pressure-q { font-size: 0.88rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.82rem; color: #ccc; line-height: 1.4; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #d47c1a; padding-left: 11px; margin-bottom: 11px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #d47c1a; margin-bottom: 3px; }
+  .illus-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+
+  /* cross-references — purple tint */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 8px; margin-bottom: 8px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #6c4bbf; }
+  .xref-note { font-size: 0.81rem; color: #555; margin-top: 2px; line-height: 1.35; }
+  .xref-card { background: #f5f2fc; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 14px 16px; }
+
+  /* then-now — purple left-bordered callout */
+  .then-now-block { border-left: 4px solid #6c4bbf; background: #f8f5fd; border-radius: 0 4px 4px 0; padding: 14px 16px; }
+  .then-now-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.92rem; line-height: 1.5; }
+
+  /* full-width row */
+  .full-row { grid-column: 1 / -1; }
+
+  /* section divider label */
+  .section-label {
+    grid-column: 1 / -1;
+    font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700;
+    color: #aaa; margin-top: 10px; margin-bottom: 2px;
+    border-bottom: 1px solid #ddd6c8; padding-bottom: 4px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .full-row,
+    .section-label { grid-column: auto !important; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .identity-card { overflow: visible; }
+    .id-value { white-space: normal; overflow: visible; }
+    .then-now-inner { grid-template-columns: 1fr !important; }
+    .ref { font-size: 2rem !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .ref { font-size: 1.6rem !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    .nav-links { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="ref">Amos 9</div>
+  <div class="title">From Inescapable Judgment to the Rebuilt Booth — The Hinge of the Book</div>
+  <span class="badge-deep">Deep Passage Study</span><br>
+  <span style="font-size:0.82rem; color:#888; display:inline-block; margin-top:4px;">Amos 9:1–15</span>
+  <div class="nav-links">
+    <a class="back-link" href="../../index.html">← Back to index</a>
+    <a class="companion-link" href="../visuals/amos-panel.html">Book overview panel</a>
+    <a class="companion-link" href="../discussions/amos-discussion-guide.html">Discussion guide</a>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- ========================================================
+       IDENTITY BLOCK — full width, dark
+       ======================================================== -->
+  <div class="identity-card full-row">
+    <div class="card-label" style="color:#aaa; margin-bottom:6px;">Passage Identity</div>
+    <div class="identity-grid">
+      <div>
+        <div class="id-label">Author &amp; Context</div>
+        <div class="id-value">Amos — shepherd and sycamore-fig farmer from Tekoa in Judah, <span class="id-em">sent to the northern kingdom</span> during Jeroboam II (~760–750 BC)</div>
+      </div>
+      <div>
+        <div class="id-label">Position in Book</div>
+        <div class="id-value">Climactic chapter — the fifth and final vision. <span class="id-em">The hinge</span>: from "you cannot escape" (vv.1–10) to "I will restore" (vv.11–15)</div>
+      </div>
+      <div>
+        <div class="id-label">Central Move</div>
+        <div class="id-value">No prophet ends in pure terror. After the most relentless judgment in Amos, the <span class="id-em">last word belongs to restoration</span></div>
+      </div>
+      <div>
+        <div class="id-label">Key Tension</div>
+        <div class="id-value">Is 9:11–15 authentic Amos or a Judahite addition? The debate shapes how you read the book's whole arc</div>
+      </div>
+      <div>
+        <div class="id-label">NT Reach</div>
+        <div class="id-value">Acts 15:16–17 — James quotes vv.11–12 at the Jerusalem Council. <span class="id-em">One verse from Amos determined the shape of world Christianity</span></div>
+      </div>
+      <div>
+        <div class="id-label">Book Context</div>
+        <div class="id-value">Five visions (7:1–9:4) frame the oracles. Three doxologies (4:13; 5:8–9; 9:5–6) escalate the portrait of the judge. Amos was expelled from Bethel (7:10–17) — the altar of 9:1 may be that very site</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       KEY VERSE
+       ======================================================== -->
+  <div class="full-row">
+    <div class="key-verse">
+      <div class="kv-label">Key Verse — Amos 9:11</div>
+      <div class="kv-text">"In that day I will restore the fallen booth of David, and repair its breaches, and raise up its ruins, and rebuild it as in the days of old."</div>
+      <div class="kv-ref">The pivot of the book — and the verse James quotes at Acts 15:16 to justify Gentile inclusion</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       STRUCTURE MAP
+       ======================================================== -->
+  <div class="card full-row">
+    <div class="card-label">Chapter Structure — 4 Movements</div>
+    <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:10px;">
+      <div class="beat">
+        <div class="beat-ref">9:1–4</div>
+        <div class="beat-title">The Fifth Vision — No Hiding</div>
+        <div class="beat-desc">The Lord stands at the altar — not in a dream, but present. The terrible litany: she'ol, Carmel, the sea floor, exile. Wherever you go, I will find you. Inescapability is the entire point.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">9:5–6</div>
+        <div class="beat-title">Doxology III — The Judge Identified</div>
+        <div class="beat-desc">Third of three doxologies (4:13; 5:8–9; 9:5–6). Each escalates. The God who melts the earth and builds his upper chambers in the heavens is not a regional deity. This is the one doing the judging.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">9:7–10</div>
+        <div class="beat-title">Particularity Reversed — Israel as Any Nation</div>
+        <div class="beat-desc">"Are you not like the Cushites to me?" The scandalous levelling. Philistines and Arameans also have their exodus stories. Sinful Israel will be sifted among the nations — but not all destroyed.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">9:11–15</div>
+        <div class="beat-title">Restoration Oracle — The Rebuilt Booth</div>
+        <div class="beat-desc">Booth of David rebuilt. Nations called by God's name. Agricultural reversal: plowman overtakes reaper, mountains drip wine. Permanent planting. James quotes vv.11–12 at the Jerusalem Council. Gentile inclusion fulfils Amos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       WORD STUDIES
+       ======================================================== -->
+  <div class="section-label">Deep Word Studies — 5 Terms</div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">סֻכָּה</div>
+    <div class="transliteration">sukkah — "booth / hut / temporary shelter" (v.11)</div>
+    <div class="word-gloss">Not the palace — a flimsy lean-to</div>
+    <div class="word-note">The Davidic dynasty has not merely fallen; it is described with the word for a harvest worker's temporary shed — the most modest of shelters. Not <em>hekal</em> (palace) or <em>bayit</em> (house) but <em>sukkah</em>.<br><br>
+    <strong>LXX:</strong> renders it σκηνή — tent/tabernacle. The tabernacle connection opens a cultic resonance: the dwelling place of God reduced to a field shelter.<br><br>
+    <strong>Acts 15:16:</strong> James quotes the LXX: "I will rebuild the tent (σκηνή) of David that has fallen." The restoration of this sukkah is, for James, the inclusion of Gentiles into the people of God.<br><br>
+    The word choice is deliberate: restoration is not return to former glory alone but the rebuilding of something that has been utterly humbled. God works with ruins, not monuments.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">שְׁאוֹל</div>
+    <div class="transliteration">she'ol — "the realm of the dead" (v.2)</div>
+    <div class="word-gloss">Rhetorical, not doctrinal — inescapability is the point</div>
+    <div class="word-note">Amos is not teaching a doctrine of the afterlife here. She'ol is deployed rhetorically: even if you dig to the deepest place human imagination can conceive — where the dead go, beyond all reach — I will find you there.<br><br>
+    <strong>Psalm 139:8</strong> uses the same move in reverse: "If I make my bed in she'ol, you are there." For the psalmist it is comfort; for Amos, it is warning. Same divine omnipresence — different register.<br><br>
+    The progression in vv.2–4 is spatial exhaustion: she'ol (depth), heaven (height), Carmel (horizontal hiding), sea floor (the other extreme). Every axis of escape is closed. The structure itself performs the inescapability it describes.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">כּוּשִׁים</div>
+    <div class="transliteration">Kushim — "Cushites / Ethiopians" (v.7)</div>
+    <div class="word-gloss">The most distant, foreign people imaginable to an Israelite</div>
+    <div class="word-note">Cush (modern Sudan/Ethiopia) represented the far edge of the known world — exotic, dark-skinned, geographically remote. When God says "Are you not like the Cushites to me, O people of Israel?" the devastating force is the <em>comparison itself</em>.<br><br>
+    Israel's election has been treated as a kind of cosmic immunity. Amos strips it: in terms of moral standing before the judge, there is no special tier. The Cushites are not lesser — they are simply others. Israel is being placed among others.<br><br>
+    <strong>Vv.7b–8:</strong> God then lists the exodus stories of Israel's enemies: Philistines from Caphtor, Arameans from Kir. Every nation has its providence. This makes Israel's privilege not a ground of security but a ground of greater responsibility — and greater accountability.</div>
+  </div>
+
+  <div class="word-card">
+    <div class="hebrew">נָפַל</div>
+    <div class="transliteration">naphal — "fallen / has fallen" (v.11)</div>
+    <div class="word-gloss">Perfect tense — already fallen, not merely at risk</div>
+    <div class="word-note">The Hebrew perfect tense in v.11 ("the fallen booth of David") is a prophetic perfect or a present reality: the dynasty is described as <em>already</em> in ruins at the moment of the promise.<br><br>
+    <strong>Historical tension:</strong> In Amos's lifetime (~760 BC), the Davidic line was still on Judah's throne (Uzziah reigned). The northern kingdom had broken from David's line in 930 BC (1 Kgs 12). So "fallen" may refer to the fracture of the Davidic empire — or it anticipates the coming collapse prophetically.<br><br>
+    The theological point: God does not promise to preserve the dynasty before it falls and then rebuild it. He lets it fall to a sukkah, and then builds from that lowly place. The rebuilding is resurrection, not maintenance.</div>
+  </div>
+
+  <div class="word-card">
+    <div class="hebrew">שׁוּב</div>
+    <div class="transliteration">shub — "restore / return / turn" (vv.14–15)</div>
+    <div class="word-gloss">The same root as "repentance" throughout the prophets</div>
+    <div class="word-note">"I will restore the fortunes of my people Israel" (v.14) uses the idiom <em>shub shĕbût</em> — literally "return the captivity" or "turn the turning." The word at the root of Israel's call to repent is now used of God's own action.<br><br>
+    <strong>Amos 4:6, 8, 9, 10, 11:</strong> Five times God says "yet you did not return (shub) to me." The refrain of the whole book. In 9:14–15, God now acts in the direction Israel refused to take. The God who called them to turn is himself the one who effects the turn of their fortunes.<br><br>
+    Same root: repentance (human turning to God) and restoration (God turning fortunes). Hebrew uses one word where English needs two — and the overlap is theologically intentional.</div>
+  </div>
+
+  <!-- ========================================================
+       HISTORICAL CONTEXT
+       ======================================================== -->
+  <div class="section-label">Historical Context</div>
+
+  <div class="card full-row">
+    <div class="card-label">Background — Text, History, Reception</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+
+      <div>
+        <div class="hist-box">
+          <div class="hist-label">Amos the Man</div>
+          <div class="hist-text">Amos was a <em>shepherd</em> (nōqēd — a specific term, possibly a sheep-breeder or livestock dealer) and a <em>dresser of sycamore figs</em> from Tekoa in Judah (1:1; 7:14). He was not a prophet by training or guild. He was sent by God to the northern kingdom — a southerner crossing political and religious boundaries to speak against Israel's royal shrine at Bethel.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">Jeroboam II — Peak Prosperity, Deep Failure</div>
+          <div class="hist-text">Israel under Jeroboam II (~786–746 BC) enjoyed its greatest territorial and economic expansion since Solomon (2 Kgs 14:25). The very success created the conditions Amos attacks: luxury built on injustice, religious activity without covenant faithfulness, the comfortable assumption that prosperity = divine approval. Amos chapters 2–6 are a systematic dismantling of that assumption.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">The Bethel Expulsion (7:10–17)</div>
+          <div class="hist-text">Amaziah the priest of Bethel expelled Amos from the royal sanctuary and told him to go back to Judah. Amos's response is one of the most defiant in prophetic literature: "I was no prophet, nor a prophet's son, but the LORD took me..." (7:14–15). The fifth vision in 9:1 — "I saw the Lord standing beside the altar" — likely places Amos back at the very altar from which he was removed, this time in vision.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hist-box">
+          <div class="hist-label">The "Booth of David" — Not the Temple</div>
+          <div class="hist-text">A common misreading: "booth of David" = the Jerusalem temple. But sukkah (temporary shelter) stands in sharp contrast to hekal (palace/temple). It likely refers to the Davidic dynasty itself — reduced from the unified empire of David and Solomon to a lean-to. The northern kingdom had broken away from Davidic rule in 930 BC (1 Kgs 12). The dynasty that once unified twelve tribes was now a split, humbled structure. God's promise is to rebuild <em>that</em> — royal, not cultic.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">MT vs. LXX at Verse 12 — High Stakes</div>
+          <div class="hist-text"><strong>MT:</strong> "that they may possess the remnant of Edom and all the nations who are called by my name." Israel possesses Edom and the nations.<br><br>
+          <strong>LXX:</strong> "that the remnant of mankind may seek the Lord, even all the Gentiles who are called by my name." The nations <em>seek</em> God — active, inward, personal.<br><br>
+          James in Acts 15:17 uses the LXX reading. The difference is not merely translational — it determines whether the text explicitly opens to Gentile inclusion. The LXX may reflect a different Hebrew source text, a deliberate theological translation, or an interpretive rendering. The stakes are enormous: one word in a translation shaped whether Gentiles could enter the church without circumcision.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">Acts 15 — One Verse Changed Everything</div>
+          <div class="hist-text">At the Jerusalem Council (Acts 15), the entire question was whether Gentile converts must be circumcised. After Peter and Paul reported Gentile conversions, James stood and quoted Amos 9:11–12 (LXX). His argument was not pragmatic or emotional — it was exegetical: <em>the prophet said this would happen</em>. The Gentile inclusion was not Plan B; it fulfilled what Amos had written 700 years earlier. One verse from an 8th-century shepherd-prophet determined the shape of world Christianity.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       ILLUSTRATIONS
+       ======================================================== -->
+  <div class="section-label">Teaching Illustrations</div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 1–2</div>
+
+    <div class="illus">
+      <div class="illus-title">A Condemned Building with a Restoration Order</div>
+      <div class="illus-text">An inspector condemns a building, posts notices, orders evacuation. That is Amos chapters 1–8 — a relentless litany of structural failures, each oracle another notice on the door. Chapter 9:1–10 is the demolition: the wrecking ball reaches the altar. But 9:11–15 is something no condemned building receives: new blueprints arrive. Same site. Entirely new structure. The restoration is not renovation of what was — it is construction from the rubble of what fell.</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">The Father Who Will Not Give Up (Hosea 11 and Amos 9 as a Pair)</div>
+      <div class="illus-text">Hosea 11 and Amos 9 are the same reality in different literary modes. Hosea gives the emotional register — "How can I give you up, Ephraim? How can I hand you over, Israel?" (11:8). His love is the inside of the story. Amos 9 gives the structural resolution — the fallen booth is rebuilt, the fortunes are restored. Same covenant love, different register. Preaching Amos 9:11–15 without Hosea 11 produces theology without affect. Preaching Hosea 11 without Amos 9 produces feeling without framework.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 3–4</div>
+
+    <div class="illus">
+      <div class="illus-title">Acts 15 — The Argument That Changed Everything</div>
+      <div class="illus-text">Imagine the room: the entire question of who can be saved and on what terms. Peter has spoken. Paul and Barnabas have told their stories. The debate is live. Then James stands. He does not say "it feels right" or "we should be inclusive." He says: "The prophets agree with this, as it is written..." and quotes an 8th-century shepherd from Tekoa. The argument that resolved the first great crisis of the church was not a theological innovation — it was an exegetical footnote from Amos. This is what happens when you know your minor prophets.</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">Agricultural Reversal as Covenant Re-Signing</div>
+      <div class="illus-text">Deuteronomy 28 is the covenant fine print: faithfulness produces agricultural abundance; unfaithfulness produces agricultural failure. The curses of Deut 28:38–42 read like an anti-harvest: you plant but locusts devour, you tend vineyards but worms eat them. Amos 9:13–15 reverses every element systematically: the plowman overtakes the reaper (harvest so abundant the next planting begins before the last is gathered), mountains drip with new wine, ruined cities are rebuilt. The restoration oracle is not just political — it is a covenant re-signing written in soil, vine, and grain. God is not merely forgiving the debt; he is publicly restoring the covenant in the language the covenant was originally written in.</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       COMMENTARY SHELF
+       ======================================================== -->
+  <div class="section-label">Commentary Shelf — 3 Sources</div>
+
+  <div class="full-row" style="display:grid; grid-template-columns: repeat(3,1fr); gap:12px;">
+
+    <div class="comm-card">
+      <div class="comm-author">Gary V. Smith</div>
+      <div class="comm-tradition">Amos: A Commentary · Mentor/Fearn · Conservative Evangelical</div>
+      <span class="comm-tag conservative">Conservative</span>
+      <div class="comm-point">Argues the restoration oracle (9:11–15) is <em>authentically Amosian</em> and not a later addition. The five-vision structure of the book requires a climax, and pure terror with no resolution would be unique among the canonical prophets.</div>
+      <div class="comm-point">On <em>sukkah</em>: connects the booth to the tabernacle tradition (LXX σκηνή). The restoration of the Davidic dynasty has cultic as well as royal dimensions — it points toward the one who is both king and temple.</div>
+      <div class="comm-point">On 9:7: "The rhetorical question does not deny Israel's election; it strips election of the distorted use Israel was making of it — as guaranteed immunity rather than covenant responsibility."</div>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Shalom Paul</div>
+      <div class="comm-tradition">Amos · Hermeneia · Fortress Press · Critical-Scholarly</div>
+      <span class="comm-tag critical">Critical</span>
+      <div class="comm-point">Provides the most detailed treatment of the MT/LXX divergence at v.12. The LXX reading ("the rest of mankind may seek the Lord") likely reflects either a different Hebrew <em>Vorlage</em> or a deliberate interpretive shift from "possess Edom" (<em>yîrĕšû ʾĕdôm</em>) to "may seek" (<em>yidrĕšû ʾādōm</em> — humans). The consonants are close; the theology is vast.</div>
+      <div class="comm-point">Treats 9:11–15 as a likely Judahite supplement, possibly post-exilic — a community that needed the restoration promise as an anchor after the fall of Jerusalem. This is a minority position among evangelical scholars but represents mainstream critical consensus.</div>
+      <div class="comm-point">Strongest on the Hebrew text: the spatial structure of 9:2–4 (she'ol / heaven / Carmel / sea floor / exile) is a deliberate exhaustion of all axes of escape. The rhetoric <em>enacts</em> what it describes.</div>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-tradition">The Message of Amos · BST · IVP · Pastoral &amp; Accessible</div>
+      <span class="comm-tag pastoral">Pastoral</span>
+      <div class="comm-point">On Amos 9 as the structural resolution of the whole book: <span class="comm-quote">"The God who judges without partiality is the same God who restores without limit."</span> The character revealed in the judgment oracles (chs. 1–2) and the doxologies is the same character behind the restoration promise.</div>
+      <div class="comm-point">Strong on the Then→Now bridge: the agricultural restoration (vv.13–15) is not merely a return to former conditions but a transformation of covenant geography. The land itself becomes the site of God's renewed pledge.</div>
+      <div class="comm-point">On Acts 15: insists the connection is not an NT imposition on Amos but the intended trajectory of the text — the "nations who are called by my name" (v.12 LXX) was always pointing beyond Israel's political restoration to something universal. James read Amos correctly.</div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       PRESSURE POINTS
+       ======================================================== -->
+  <div class="section-label">Interpretive Pressure Points</div>
+
+  <div class="pressure-box full-row">
+    <div class="card-label">Three Pressure Points — Where Interpreters Divide</div>
+
+    <div class="pressure">
+      <div class="pressure-q">1. Is 9:11–15 authentic Amos or a later addition?</div>
+      <div class="pressure-a">Critical scholars (Wellhausen, Wolff, Shalom Paul) suspect the restoration oracle is a Judahite or post-exilic addition, softening the relentless judgment of the book. Their argument: the oracle's tone is discontinuous with everything before 9:11, and similar hope-endings appear in other prophetic books also suspected of supplementation.<br><br>
+      Conservative scholars (Gary Smith, J.A. Motyer) argue the oracle is rhetorically necessary. Without it, Amos is unique among the canonical prophets in ending in pure destruction — no resolution, no covenant future. The five-vision structure builds to a climax that the restoration oracle provides. Furthermore, the three doxologies (4:13; 5:8–9; 9:5–6) establish a consistent interest in the identity of the judge — and a judge who is Lord of heaven and earth (9:6) is not restricted to destruction.<br><br>
+      The theological stakes: if 9:11–15 is authentic, Amos himself held judgment and hope in tension from the start. If it is a later addition, the book's movement from pure judgment to hope is editorial, not authorial. Either way, the canonical text holds both.</div>
+    </div>
+
+    <div class="pressure">
+      <div class="pressure-q">2. The MT/LXX Divergence at Verse 12 — Textual or Theological?</div>
+      <div class="pressure-a"><strong>MT (Hebrew):</strong> "that they may possess the remnant of Edom and all the nations who are called by my name" — Israel as subject, <em>yîrĕšû</em> (possess), <em>ʾĕdôm</em> (Edom).<br><br>
+      <strong>LXX (Greek):</strong> "that the remnant of mankind may seek the Lord, and all the Gentiles who are called by my name" — the nations as subject, <em>ĕkzētēsōsin</em> (seek), <em>anthrōpōn</em> (mankind).<br><br>
+      The Hebrew consonants for "Edom" (אדם) and "mankind" (אדם) are identical; only the vowels differ. "Possess" and "seek" involve different roots entirely, so the LXX may reflect a different source text or a deliberate theological rendering. James in Acts 15:17 uses the LXX reading, not the MT. This means the argument at the Jerusalem Council — that Gentile inclusion was prophesied — depends on a text that differs from the Hebrew Bible most Christians use. This is not a problem to explain away but a window into how the NT authors read Scripture: with freedom, within the canonical tradition, under the guidance of the Spirit.</div>
+    </div>
+
+    <div class="pressure">
+      <div class="pressure-q">3. Common Misreading: "Booth of David" = Temple</div>
+      <div class="pressure-a">Many readers assume "booth of David" refers to the Jerusalem temple or the Davidic worship system. The Hebrew sukkah sharply contradicts this: it is the word for a temporary shelter — a harvest worker's hut, the kind built during the Feast of Booths (Sukkot) and abandoned afterward.<br><br>
+      The contrast is with <em>hekal</em> (palace/temple) or <em>bayit</em> (house/dynasty). Sukkah is deliberately chosen to convey maximum humility: the Davidic line has been reduced not merely from greatness to ordinary but to something barely standing, like a lean-to in a field.<br><br>
+      The restoration is therefore of the Davidic <em>dynasty</em> — royal, not cultic. This is significant for NT interpretation: James reads the rebuilt booth as the Davidic kingship fulfilled in Jesus (who is both son of David and Lord). The temple question is secondary; the kingship question is primary.</div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       CROSS-REFERENCES — purple-tinted
+       ======================================================== -->
+  <div class="section-label">Cross-References — 5 Connections</div>
+
+  <div class="xref-card full-row">
+    <div class="card-label" style="color:#6c4bbf;">Cross-References</div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+      <div>
+        <div class="xref-item">
+          <div class="xref-ref">Acts 15:16–17 — James at the Jerusalem Council</div>
+          <div class="xref-note">James quotes Amos 9:11–12 (LXX) to justify Gentile inclusion without circumcision. The fallen booth of David rebuilt = the church opened to all nations. The argument that settled the first great theological crisis of Christianity came from these two verses. James does not say "I feel" — he says "the prophets agree, as it is written."</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">Isaiah 11:1 — "A shoot from the stump of Jesse"</div>
+          <div class="xref-note">The same Davidic restoration motif. Jesse's line appears entirely dead — not even a stump with life, but a cut-down tree. Yet a shoot comes from the root. Amos's sukkah and Isaiah's stump are the same image in different metaphors: the dynasty appears finished, and God works from its ruins. Both texts point toward the one who is David's son and David's Lord (Matt 22:45).</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">Deuteronomy 28:38–42 — The Covenant Curses</div>
+          <div class="xref-note">Amos 9:13–15 is a systematic reversal of the agricultural curses in Deut 28. Where Deut 28 lists sowing without harvest, tending vineyards that worms destroy, and olive trees that drop their fruit — Amos 9 reverses each: harvest so abundant the plowman begins before the reaper finishes, mountains dripping with wine, gardens flourishing. The restoration is written in the exact legal register of the covenant.</div>
+        </div>
+      </div>
+      <div>
+        <div class="xref-item">
+          <div class="xref-ref">Amos 7:10–17 — The Amaziah Confrontation</div>
+          <div class="xref-note">The immediate context of the fifth vision. Amaziah the priest of Bethel expelled Amos from the royal sanctuary, telling him to go back to Judah. Amos's response (7:14–17) is defiant: he was a layman sent by God, not a professional prophet. The vision in 9:1 — "I saw the Lord standing beside the altar" — may place Amos back at Bethel in vision. The altar that expelled him is the altar at which the final judgment vision now begins.</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">Revelation 21:1–5 — "Behold, I am making all things new"</div>
+          <div class="xref-note">The permanent planting of 9:15 ("they shall never again be uprooted from the land I have given them") finds its final form in the new creation. Amos's vision is not merely national restoration — it is an eschatological seed. The "never again uprooted" of Amos 9:15 is the ground beneath "death shall be no more" in Rev 21:4. What Amos envisions at the national level, Revelation restates at the cosmic level.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       THEN → NOW — purple left-bordered callout
+       ======================================================== -->
+  <div class="section-label">Then → Now</div>
+
+  <div class="then-now-block full-row">
+    <div class="card-label" style="color:#6c4bbf; margin-bottom:4px;">Then → Now Bridge</div>
+    <div class="then-now-inner">
+      <div class="tn-box tn-then">
+        <div class="tn-label">Then · ~760–750 BC</div>
+        <div class="tn-text">Amos chapter 9 was the final word to a prosperous, religiously active, socially unjust Israel at the height of Jeroboam II's reign. The judgment oracles of chapters 1–8 had been relentless — no nation spared, no class excused, religious activity specifically condemned. Chapter 9:1–10 seals it: there is no hiding place, not even in death.<br><br>
+        But the restoration oracle (9:11–15) was not comfort for the present moment. Israel was not being told "things will get better soon." It was a covenant anchor for after the storm — a promise that the Davidic line would not ultimately be extinguished, that the covenant God would have the last word even in the ruins.</div>
+      </div>
+      <div class="tn-box tn-now">
+        <div class="tn-label">Now — Fulfilment and Application</div>
+        <div class="tn-text">The New Testament reads Amos 9 as fulfilled in Christ and the Church. James's use of 9:11–12 at Acts 15 is not eisegesis — it is the text's own trajectory, as the LXX rendering suggests. Every Gentile believer, by James's argument, is living inside the rebuilt booth of David.<br><br>
+        The permanent planting of 9:15 ("they shall never again be uprooted") is not a promise about real estate — it is the ground beneath the Church's security in Christ. And the agricultural reversal (plowman overtaking reaper) becomes, in the light of the kingdom, the image of a harvest so abundant that proclamation and reaping run together — as Jesus himself uses harvest language in John 4:35.<br><br>
+        Amos 9 teaches the Church that judgment and mercy are not in tension in God's character — they are sequential chapters in one covenant story, authored by the same God who melts the earth and rebuilds fallen booths.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       VERDICT — full width, dark banner
+       ======================================================== -->
+  <div class="verdict full-row" style="margin-top:6px;">
+    <div class="verdict-label">Verdict — Amos 9</div>
+    <div class="verdict-text">
+      Amos 9 is the most structurally loaded chapter in a structurally loaded book. Five visions, three doxologies, five oracles against nations, a confrontation with the priest of Bethel — all of it has been building to this: the Lord standing at the altar, the litany of inescapability, and then, without apology or transition, the promise of the rebuilt booth.
+      <br><br>
+      The sukkah is the key. Not a palace. Not a temple. A lean-to. God does not promise to restore David's dynasty to what it was at Solomon's peak — he promises to rebuild it from the humblest possible starting point. And from that lean-to, James says, all the Gentiles come seeking the Lord. The whole arc of world mission runs through a tent in an 8th-century farmer's vision.
+      <br><br>
+      The preacher's task with Amos 9 is to hold the two halves together without collapsing either. The God who says "even if you dig to she'ol I will find you" is the same God who says "I will rebuild the fallen booth." The inescapability of judgment and the inescapability of grace belong to the same character. Neither should be domesticated, neither softened, neither isolated from the other.
+      <br><br>
+      The last word in Amos is not fire. It is land, vine, garden, and permanence: "they shall never again be uprooted." That is the anchor — not prosperity, not safety, but the unbreakable faithfulness of the God who plants, who repairs breaches, who raises ruins, and who keeps his word even in the ruins of his own people's failures.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amos — Discussion Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 32px;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #d47c1a;
+    text-decoration: none;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  .page {
+    background: #faf7f2;
+    border: 3px solid #2c2c2c;
+    border-radius: 4px;
+    padding: 32px 36px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header { border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; }
+  .header-top { display: flex; justify-content: space-between; align-items: baseline; }
+  .header h1 { font-family: 'Special Elite', serif; font-size: 2.4rem; letter-spacing: 0.12em; }
+  .series-tag {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #888; font-weight: 700;
+  }
+  .header .theme {
+    font-size: 1.05rem; color: #555; margin-top: 4px; font-style: italic;
+  }
+  .header .summary {
+    font-size: 0.95rem; color: #666; margin-top: 6px; line-height: 1.45;
+  }
+
+  /* SECTION */
+  .section { margin-bottom: 20px; }
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 700; color: #999; margin-bottom: 10px;
+    padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8;
+  }
+
+  /* BEFORE YOU ENGAGE */
+  .pre-q { margin-bottom: 9px; padding-left: 16px; position: relative; font-size: 1rem; line-height: 1.45; color: #333; }
+  .pre-q::before { content: '○'; position: absolute; left: 0; color: #aaa; font-size: 0.8rem; top: 3px; }
+
+  /* KEY TERMS */
+  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .term-item { border: 2px solid #e0ddd8; border-radius: 3px; padding: 8px 10px; background: #fff; }
+  .term-word { font-family: 'Special Elite', serif; font-size: 1rem; color: #1a1a1a; display: block; margin-bottom: 2px; }
+  .term-def { font-size: 0.88rem; color: #555; line-height: 1.35; }
+
+  /* DISCUSSION QUESTIONS */
+  .q-item { margin-bottom: 14px; }
+  .q-tag {
+    display: inline-block; font-size: 0.65rem; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 700; padding: 1px 6px;
+    border-radius: 2px; margin-bottom: 4px;
+  }
+  .tag-obs  { background: #3b6fd4; color: #fff; }
+  .tag-ctx  { background: #d47c1a; color: #fff; }
+  .tag-app  { background: #6c4bbf; color: #fff; }
+
+  .q-text { font-size: 1rem; color: #1a1a1a; line-height: 1.5; }
+
+  /* GOING DEEPER */
+  .deeper-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .deeper-item { border-left: 4px solid #e0ddd8; padding: 6px 10px; }
+  .deeper-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #aaa; margin-bottom: 3px; }
+  .deeper-item.book    { border-color: #3b6fd4; } .deeper-item.book    .deeper-label { color: #3b6fd4; }
+  .deeper-item.online  { border-color: #2e8a4a; } .deeper-item.online  .deeper-label { color: #2e8a4a; }
+  .deeper-item.passage { border-color: #6c4bbf; } .deeper-item.passage .deeper-label { color: #6c4bbf; }
+  .deeper-text { font-size: 0.9rem; color: #333; line-height: 1.35; }
+
+  /* CLOSING */
+  .closing {
+    border: 2.5px solid #2c2c2c; border-radius: 3px;
+    padding: 12px 16px; background: #f0ede8; text-align: center;
+  }
+  .closing-label { font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: #888; margin-bottom: 5px; }
+  .closing-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #1a1a1a; line-height: 1.45; }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1.5px solid #e0ddd8; margin-top: 20px; padding-top: 10px;
+    display: flex; justify-content: space-between;
+    font-size: 0.75rem; color: #bbb;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { border: none; box-shadow: none; max-width: 100%; padding: 20px; }
+    .back-link { display: none; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .terms-grid { grid-template-columns: 1fr !important; }
+    .deeper-grid { grid-template-columns: 1fr !important; }
+    .footer { flex-direction: column; gap: 4px; }
+    h1 { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    h1 { font-size: 1.6rem !important; }
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width: 780px; margin: 0 auto;">
+  <a class="back-link" href="../../index.html">← Back to index</a>
+</div>
+
+<div class="page">
+
+  <div class="header">
+    <div class="header-top">
+      <h1>AMOS</h1>
+      <span class="series-tag">The Prophets &nbsp;·&nbsp; Book 30 of 66</span>
+    </div>
+    <div class="theme">Justice that rolls like waters — the prophet of social conscience</div>
+    <div class="summary">A shepherd from the backwater town of Tekoa walks into the prosperous northern kingdom of Israel and delivers God's verdict: religious observance without justice is not worship — it is an offence.</div>
+  </div>
+
+  <!-- BEFORE YOU ENGAGE -->
+  <div class="section">
+    <div class="section-label">Before You Engage</div>
+    <div class="pre-q">Have you ever been in a community or organisation that looked successful on the outside — good numbers, confident leadership, the right rituals — but something underneath felt wrong? What gave it away?</div>
+    <div class="pre-q">When someone with no institutional power speaks an uncomfortable truth to a powerful group, what usually happens to them? What makes the rare exceptions different?</div>
+    <div class="pre-q">Think of a time you benefited from a system that worked well for you but poorly for someone else. How easy or hard was it to see it at the time?</div>
+  </div>
+
+  <!-- KEY TERMS -->
+  <div class="section">
+    <div class="section-label">Key Terms</div>
+    <div class="terms-grid">
+      <div class="term-item">
+        <span class="term-word">Day of the Lord</span>
+        <span class="term-def">Israel expected a coming day when God would vindicate them and defeat their enemies. Amos reverses it: that day will be darkness, not light — judgment begins with God's own people.</span>
+      </div>
+      <div class="term-item">
+        <span class="term-word">Covenant</span>
+        <span class="term-def">The binding agreement between God and Israel — not just a religious arrangement but a social contract. Oppressing the poor is not a political failure; it is a covenant violation.</span>
+      </div>
+      <div class="term-item">
+        <span class="term-word">Oracles against the Nations</span>
+        <span class="term-def">Speeches condemning surrounding peoples for their crimes. Amos opens with six of them — and then, in a rhetorical trap, turns the same formula on Israel itself.</span>
+      </div>
+      <div class="term-item">
+        <span class="term-word">Social Justice</span>
+        <span class="term-def">In Amos, this means fair courts, honest commerce, and protection of the poor — not an abstract ideal but a measurable test of whether the covenant is real.</span>
+      </div>
+      <div class="term-item">
+        <span class="term-word">Remnant</span>
+        <span class="term-def">A surviving portion — in Amos, a small, chastened group that passes through judgment. The idea holds open a future without softening the present verdict.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCUSSION QUESTIONS -->
+  <div class="section">
+    <div class="section-label">Discussion Questions</div>
+
+    <div class="q-item">
+      <span class="q-tag tag-obs">Observation</span>
+      <div class="q-text">Amos opens with oracles against Damascus, Gaza, Tyre, Edom, Ammon, and Moab — nations Israel would have heard condemned with satisfaction. Then he turns to Judah, and then to Israel itself, using the exact same formula. What effect does this rhetorical sequence create, and what does it reveal about how Amos expects his audience to listen?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-obs">Observation</span>
+      <div class="q-text">In chapter 7, Amaziah the priest tells Amos to go home and prophesy in Judah where he belongs. Amos replies: "I was no prophet, nor a prophet's son — I was a shepherd and a dresser of sycamore figs." What does Amos's insistence on his outsider credentials tell us about the authority he believes he has, and where it comes from?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-ctx">Context</span>
+      <div class="q-text">Amos 4:1 addresses the "cows of Bashan" — wealthy women of Samaria who are pressing their husbands for more wine while the poor are crushed. In the ancient Near East, Bashan cattle were a symbol of pampered prosperity. How does Amos use economic imagery to make a theological point, and is that kind of language effective or does it just alienate the people it targets?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-ctx">Context</span>
+      <div class="q-text">Amos 5:21–24 records God saying "I hate, I despise your feasts" and rejecting Israel's offerings, songs, and assemblies — despite these being practices God himself commanded. What does Amos say has made legitimate worship unacceptable? And what would it take, in his view, to make it acceptable again?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-app">Application</span>
+      <div class="q-text">The plumb line in chapter 7 is a builder's tool — it shows whether a wall is truly vertical, not whether it looks fine from a distance. If justice is Amos's plumb line for measuring a community's health, what would you put the plumb line against in your own context — your church, your workplace, your city? What might go out of true?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-app">Application</span>
+      <div class="q-text">Amos condemns Israel at its most prosperous — a time of military success, expanding borders, and thriving commerce (the reign of Jeroboam II). Prosperity, in Amos, doesn't signal divine favour; it can mask systemic injustice. How do we tell the difference between genuine flourishing and prosperity that has simply pushed its costs somewhere less visible?</div>
+    </div>
+
+    <div class="q-item">
+      <span class="q-tag tag-app">Application</span>
+      <div class="q-text">The book ends in 9:11–15 with an unexpected promise of restoration — vineyards replanted, cities rebuilt, the poor lifted up. It arrives without any resolution of the preceding judgment. Does a hope-filled ending make the hard words easier to receive, or does it risk undercutting the urgency of the critique? What do you do with a book that holds both without resolving the tension?</div>
+    </div>
+
+  </div>
+
+  <!-- GOING DEEPER -->
+  <div class="section">
+    <div class="section-label">Going Deeper</div>
+    <div class="deeper-grid">
+      <div class="deeper-item book">
+        <div class="deeper-label">Book</div>
+        <div class="deeper-text">Gary V. Smith, <em>Amos: A Commentary</em> (Mentor) — covers historical background, the Hebrew text, and the social ethics driving each oracle</div>
+      </div>
+      <div class="deeper-item online">
+        <div class="deeper-label">Resource</div>
+        <div class="deeper-text">The Bible Project's Amos video and study notes (thebibleproject.com) — a visual introduction to the book's structure, themes, and rhetorical design</div>
+      </div>
+      <div class="deeper-item passage">
+        <div class="deeper-label">Read Alongside</div>
+        <div class="deeper-text">Isaiah 1:10–17 — the same indictment of hollow worship from a different prophet; compare how each frames the relationship between sacrifice and justice</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING THOUGHT -->
+  <div class="section">
+    <div class="closing">
+      <div class="closing-label">Closing Thought</div>
+      <div class="closing-text">Amos establishes once for all that Israel's God cannot be kept in the sanctuary while the poor are sold for a pair of sandals in the street — justice is not the application of faith, it is the test of whether faith is real.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Amos &nbsp;·&nbsp; Discussion Guide</span>
+    <span>The Prophets</span>
+  </div>
+
+</div>
+
+</body>
+</html>
