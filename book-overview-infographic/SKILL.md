@@ -133,4 +133,5 @@ After saving, navigate the preview to the file and confirm with a clickable link
 - Do not fill gaps with content not in the research brief
 - Flag any claim that needs verification: **[VERIFY: what to check]**
 - Never fabricate cross-references or scholar positions
+- Every cited scholar or commentator must include: full name, book title, and one URL where the work can be accessed or purchased. Flag with **[VERIFY]** if the URL is uncertain. Include a tradition tag (conservative evangelical / reformed / critical-scholarly / pastoral / etc.)
 - The panel is a reference card, not a summary — it surfaces structure and key terms, not the full argument

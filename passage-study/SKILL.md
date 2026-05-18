@@ -55,7 +55,7 @@ Builds on Mode 1 and adds:
 - Historical/cultural context — specific, verifiable detail; cite sources; flag **[VERIFY]**
 - Full structure map (chiasm, argument cascade, narrative arc as appropriate)
 - 3–5 teaching illustrations (everyday / history / works for non-religious audience)
-- 2–3 cited commentaries — author, title, what they say about this specific text; tradition tag; **[VERIFY]** if uncertain
+- 2–3 cited commentaries — author, title, what they say about this specific text; tradition tag; source link (URL where the work or author’s ministry can be found); **[VERIFY]** if uncertain
 - Interpretive pressure points — main scholarly debate, most common misreading, open question
 - 3–5 cross-references with one sentence each
 - Then → Now bridge calibrated to teacher's AUDIENCE
@@ -63,7 +63,7 @@ Builds on Mode 1 and adds:
 **Additional panel sections (added to Mode 1 layout):**
 - Extended word study strip — 3–5 terms
 - Historical context box — orange
-- Full commentary shelf — 2–3 source cards with tradition tags
+- Full commentary shelf — 2–3 source cards with tradition tags and source links
 - Interpretive pressure points — dark box
 - Extended cross-reference strip
 
@@ -103,7 +103,7 @@ No length limit — write the full study. Cover everything:
 - Complete structure map with all movements labelled
 - 3–5 illustrations — fully developed, specific, no moralizing
 - Historical/cultural context — as much detail as is useful; cite sources; flag **[VERIFY]**
-- Commentary shelf — author, title, what they say about this specific text, tradition tag
+- Commentary shelf — author, title, what they say about this specific text, tradition tag, source link
 - Interpretive pressure points — main scholarly debate, most common misread, open question
 - 3–5 cross-references with full explanation
 - Then → Now bridge calibrated to the teacher's audience
@@ -118,4 +118,5 @@ After the chat brief, generate and save the HTML panel, then open the preview.
 ### Quality rules
 - Flag every unverified claim: **[VERIFY: what to check]**
 - Never fill a section with generic content — if no chiasm exists, don't force one
+- Every commentator card must include a source line: full name, book title, and one URL where it can be accessed or purchased. Flag with **[VERIFY]** if the URL is uncertain.
 - Never fabricate word meanings, commentary positions, or historical details
