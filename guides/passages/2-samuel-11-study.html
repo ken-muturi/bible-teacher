@@ -96,22 +96,14 @@
 </style>
 </head>
 <body>
-  <a href="../../index.html" class="home-btn">&#8962; Home</a>
-  <style>
-    .home-btn {
-      position: fixed; top: 14px; left: 16px; z-index: 9999;
-      font-family: 'Caveat', cursive; font-size: 0.95rem;
-      color: #2c2c2c; text-decoration: none;
-      background: #faf7f2; border: 1.5px solid #c8c2b8;
-      border-radius: 3px; padding: 4px 12px;
-      opacity: 0.88; transition: opacity 0.15s, background 0.15s;
-    }
-    .home-btn:hover { opacity: 1; background: #f0ebe0; }
-    @media print { .home-btn { display: none; } }
-  </style>
-
-
-
+  <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
+    <style>
+      .home-nav { padding: 14px 20px 0; }
+      .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+      .home-nav-link:hover { color: #555; }
+      @media print { .home-nav { display: none; } }
+    </style>
+  
 <div class="page-header">
   <div class="ref">2 Samuel 11</div>
   <div class="title">The Anatomy of a Fall</div>
