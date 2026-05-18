@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psalm 51 — Deep Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8; border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive; font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: #c0392b; text-decoration: none; border-bottom: 1px dashed #c0392b; }
+  .companion-link:hover { opacity: 0.7; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+  .card + .card { margin-top: 14px; }
+
+  /* structure */
+  .beat { border-left: 3px solid #6c4bbf; padding-left: 11px; margin-bottom: 11px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.68rem; color: #6c4bbf; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.85rem; color: #444; line-height: 1.4; }
+
+  /* word cards */
+  .word-card { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 12px 13px; margin-bottom: 9px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #6c4bbf; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.76rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.93rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.83rem; color: #555; line-height: 1.4; }
+
+  /* verb chain */
+  .verb-chain { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e0d8cc; }
+  .verb-row { display: flex; align-items: baseline; gap: 8px; }
+  .verb-heb { font-family: 'Special Elite', serif; font-size: 0.85rem; color: #6c4bbf; min-width: 54px; }
+  .verb-eng { font-size: 0.8rem; color: #555; }
+
+  /* teacher cards */
+  .teacher-card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 14px 16px; margin-bottom: 12px; }
+  .teacher-card:last-child { margin-bottom: 0; }
+  .teacher-name { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; }
+  .teacher-tradition { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 8px; }
+  .teacher-point { border-left: 3px solid #6c4bbf; padding-left: 10px; margin-bottom: 8px; font-size: 0.84rem; color: #333; line-height: 1.4; }
+  .teacher-point:last-child { margin-bottom: 0; }
+  .teacher-card.courson { border-color: #2e8a4a; }
+  .teacher-card.courson .teacher-point { border-color: #2e8a4a; }
+  .teacher-card.macarthur { border-color: #3b6fd4; }
+  .teacher-card.macarthur .teacher-point { border-color: #3b6fd4; }
+  .teacher-card.piper { border-color: #d47c1a; }
+  .teacher-card.piper .teacher-point { border-color: #d47c1a; }
+  .teacher-card.spurgeon { border-color: #c0392b; }
+  .teacher-card.spurgeon .teacher-point { border-color: #c0392b; }
+  .teacher-card.kidner { border-color: #888; }
+  .teacher-card.kidner .teacher-point { border-color: #888; }
+  .teacher-quote { font-style: italic; font-size: 0.82rem; color: #555; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #3b6fd4; padding-left: 11px; margin-bottom: 11px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #3b6fd4; margin-bottom: 3px; }
+  .illus-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .illus-attr { font-size: 0.72rem; color: #aaa; margin-top: 3px; font-style: italic; }
+
+  /* then-now */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.4; }
+
+  /* xref */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 8px; margin-bottom: 8px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #6c4bbf; }
+  .xref-note { font-size: 0.81rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* key verse */
+  .key-verse { background: #f0ecfb; border: 2px solid #6c4bbf; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6c4bbf; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* pressure points */
+  .pressure { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .pressure:last-child { margin-bottom: 0; }
+  .pressure-q { font-size: 0.88rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.82rem; color: #444; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.92rem; line-height: 1.5; }
+
+  /* superscription */
+  .superscription { background: #e8e0d4; border: 1.5px solid #aaa398; border-radius: 3px; padding: 10px 13px; margin-bottom: 10px; font-size: 0.84rem; color: #555; font-style: italic; line-height: 1.5; }
+  .sup-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.12em; color: #888; margin-bottom: 4px; font-style: normal; font-weight: 700; }
+
+  /* full-width row */
+  .full-row { grid-column: 1 / -1; }
+  .teachers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <div class="ref">Psalm 51</div>
+  <div class="title">The Anatomy of Repentance</div>
+  <span class="badge-deep">Deep Study</span><br>
+  <a class="companion-link" href="david-fall-and-return.html">← Read alongside 2 Samuel 11 × Psalm 51</a>
+</div>
+
+<div class="grid">
+
+  <!-- COL 1: Context + Structure + Word Studies -->
+  <div>
+
+    <div class="card">
+      <div class="card-label">Context</div>
+      <div class="superscription">
+        <div class="sup-label">Superscription</div>
+        "A psalm of David. When the prophet Nathan came to him after David had committed adultery with Bathsheba."
+      </div>
+      <div style="font-size:0.83rem; color:#555; line-height:1.45;">
+        One of 7 Penitential Psalms (6, 32, 38, 51, 102, 130, 143). The superscription is historically reliable — the vocabulary of specific crimes, the fear of losing God's Spirit (echoing Saul), and the vow to teach transgressors all match 2 Sam 11–12 precisely. This is not generic remorse: a named man, a named sin, a named confrontation.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Structure — 5 Movements</div>
+      <div class="beat">
+        <div class="beat-ref">VV. 1–2</div>
+        <div class="beat-title">Appeal</div>
+        <div class="beat-desc">Three cleansing verbs <em>before</em> any confession. The prayer begins with God's character (<em>ḥesed</em>, <em>raḥamîm</em>), not with guilt.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 3–5</div>
+        <div class="beat-title">Triple Confession</div>
+        <div class="beat-desc">"I know my transgressions" / "against you only" / "sinful from birth." Three angles: consciousness, direction, root.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 6–9</div>
+        <div class="beat-title">Deep Cleansing</div>
+        <div class="beat-desc">Request for truth in the inner parts, hyssop, snow. The cleansing must reach as far down as the sin went.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 10–12</div>
+        <div class="beat-title">The Creative Act</div>
+        <div class="beat-desc"><em>bārāʾ</em> — create a clean heart. Three Spirit petitions in three consecutive verses. The highest concentration of Spirit language in the Psalter.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 13–19</div>
+        <div class="beat-title">Vow &amp; Theology</div>
+        <div class="beat-desc">The forgiven man teaches other sinners. God's true sacrifice: the broken and contrite heart. Closes with prayer for Zion.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Word Studies</div>
+
+      <div class="word-card">
+        <div class="hebrew">חֶסֶד</div>
+        <div class="transliteration">ḥesed — "covenant / loyal love"</div>
+        <div class="word-gloss">The psalm's opening anchor (v.1)</div>
+        <div class="word-note">Not sentiment — covenant obligation. David reaches for God's character before naming his own guilt. Repentance begins by running toward God, not merely away from punishment.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">בָּרָא</div>
+        <div class="transliteration">bārāʾ — "create"</div>
+        <div class="word-gloss">The Genesis-1 verb (v.10)</div>
+        <div class="word-note">Used exclusively with God as subject throughout the OT. Ex nihilo creation. David isn't asking for repair — he's asking for replacement. Sin's damage cannot be patched; it must be re-created.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">רוּחַ</div>
+        <div class="transliteration">rûaḥ — "Spirit / breath"</div>
+        <div class="word-gloss">Three times in three verses (vv.10–12)</div>
+        <div class="word-note">"A steadfast spirit" (v.10) / "your Holy Spirit" (v.11) / "a willing spirit" (v.12). The cluster is remarkable for OT pneumatology — an anticipation of the Spirit-language of the prophets and the NT.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">דָּכָא</div>
+        <div class="transliteration">dākāʾ — "crushed / contrite"</div>
+        <div class="word-gloss">The psalm's final altar (v.17)</div>
+        <div class="word-note">Not theatrical self-deprecation — genuine breaking of self-sufficiency. A broken horse is not destroyed; it is surrendered. The energy remains, now directed.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">חַטָּאת</div>
+        <div class="transliteration">ḥaṭṭāʾt — "sin / sin offering"</div>
+        <div class="word-gloss">Same word carries both meanings</div>
+        <div class="word-note">The term names both the act (missing the mark) and the sacrificial provision for it. The solution is embedded in the word for the problem — pointing forward to the one who would be both.</div>
+      </div>
+
+      <div class="verb-chain">
+        <div style="font-size:0.62rem; text-transform:uppercase; letter-spacing:0.12em; color:#888; margin-bottom:3px;">Cleansing Sequence (vv.1–2, 7)</div>
+        <div class="verb-row"><div class="verb-heb">מָחָה</div><div class="verb-eng"><em>māḥâ</em> — blot out · erase the ledger</div></div>
+        <div class="verb-row"><div class="verb-heb">כָּבַס</div><div class="verb-eng"><em>kābaś</em> — wash · vigorous laundry scrubbing</div></div>
+        <div class="verb-row"><div class="verb-heb">טָהֵר</div><div class="verb-eng"><em>ṭāhēr</em> — cleanse · ritual purity restoration</div></div>
+        <div class="verb-row" style="margin-top:3px;"><div class="verb-heb" style="color:#2c2c2c;">↓ בָּרָא</div><div class="verb-eng" style="color:#6c4bbf; font-weight:600;"><em>bārāʾ</em> — create · new creation (v.10)</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COL 2: Teachers -->
+  <div>
+
+    <div class="card-label" style="margin-bottom:10px;">Master Teachers</div>
+
+    <div class="teacher-card courson">
+      <div class="teacher-name">Jon Courson</div>
+      <div class="teacher-tradition">Calvary Chapel · Application Commentary</div>
+      <div class="teacher-point">David doesn't make excuses — no "I was under stress" or "Bathsheba was partly to blame." The confession is completely owned. The relentless first-person runs through every verse.</div>
+      <div class="teacher-point">On v.12: <span class="teacher-quote">"He doesn't say 'restore my salvation' — he knows the salvation is secure. It's the joy that sin steals. You can be forgiven and still be joyless."</span></div>
+      <div class="teacher-point">On v.17 — the broken horse: when a horse is broken it is not destroyed but made usable. All the energy remains — now surrendered. The unbroken heart is powerful but unrideable.</div>
+    </div>
+
+    <div class="teacher-card macarthur">
+      <div class="teacher-name">John MacArthur</div>
+      <div class="teacher-tradition">Grace to You · Psalms Commentary · Reformed/Expository</div>
+      <div class="teacher-point">On v.4 — "Against you, you only": <span class="teacher-quote">"Every sin is first and foremost treason against God. David is not denying harm to Bathsheba and Uriah — he is standing in a different court. In God's court, all sin is primary rebellion against the King."</span></div>
+      <div class="teacher-point">On v.11 — the Spirit fear: David has watched Saul. He knows what it looks like when God's Spirit departs — the tormented king, the desperate spiritism at Endor, the death at Gilboa. The terror here is not abstract.</div>
+      <div class="teacher-point">On vv.16–17: <span class="teacher-quote">"God doesn't accept religious performance as a substitute for genuine contrition. The sacrificial system was never designed to maintain sin without cost."</span></div>
+    </div>
+
+    <div class="teacher-card piper">
+      <div class="teacher-name">John Piper</div>
+      <div class="teacher-tradition">Desiring God · Christian Hedonism · Calvinist</div>
+      <div class="teacher-point">On v.1: <span class="teacher-quote">"Genuine repentance is not fundamentally about how bad we feel. It begins with how great God is. The psalm opens with <em>ḥesed</em> — not with David's guilt."</span></div>
+      <div class="teacher-point">On <em>bārāʾ</em> (v.10): <span class="teacher-quote">"David doesn't ask God to fix his heart. He asks for a new one. You cannot sanctify yourself any more than you could justify yourself. Creation is always God's act."</span></div>
+      <div class="teacher-point">On v.12: <span class="teacher-quote">"The goal is not mere forgiveness — it's the restoration of delight in God. This is Christian Hedonism in the Psalms."</span></div>
+      <div class="teacher-point">On vv.13–15: <span class="teacher-quote">"Only the forgiven can effectively witness. You cannot teach sinners God's ways while your own conscience is defiled."</span></div>
+    </div>
+
+    <div class="teacher-card spurgeon">
+      <div class="teacher-name">C.H. Spurgeon</div>
+      <div class="teacher-tradition">Treasury of David · Metropolitan Tabernacle · 1865</div>
+      <div class="teacher-point">On v.7 — hyssop: the smallest plant in the ancient world (Solomon's encyclopedia spans cedar to hyssop — 1 Kings 4:33). It appeared at Passover (Ex 12:22), leper cleansing (Lev 14), and the crucifixion (John 19:29). David chose the humblest instrument. The gap between hyssop and snow is the distance grace travels.</div>
+      <div class="teacher-point"><span class="teacher-quote">"Whiter than snow — not <em>as</em> white as snow, but <em>whiter</em>. This is the superlative of grace."</span></div>
+      <div class="teacher-point"><span class="teacher-quote">"God has many costly sacrifices but only one altar — the broken and contrite heart is the altar on which he accepts them all."</span></div>
+    </div>
+
+    <div class="teacher-card kidner">
+      <div class="teacher-name">Derek Kidner</div>
+      <div class="teacher-tradition">Psalms 1–72 · Tyndale OT Commentary · IVP 1973</div>
+      <div class="teacher-point">Structural: the psalm addresses sin in three registers simultaneously — <em>legal</em> (blot out, transgression), <em>ceremonial</em> (wash, cleanse, hyssop), and <em>relational</em> (spirit, heart, presence). Three categories of damage, three vocabularies of restoration.</div>
+      <div class="teacher-point">On v.5 — "sinful from birth": <span class="teacher-quote">"David traces sin to its root, not its fruit. He is not excusing his acts by pointing to his nature — he refuses to treat them as surface events."</span></div>
+    </div>
+
+  </div>
+
+  <!-- COL 3: Illustrations + Then/Now + Pressure Points + Xrefs + Verdict -->
+  <div>
+
+    <div class="card">
+      <div class="card-label">Illustrations</div>
+
+      <div class="illus">
+        <div class="illus-title">The Court and the Hospital</div>
+        <div class="illus-text">"Against you only" doesn't erase Bathsheba and Uriah. David is in two courts simultaneously — the human and the divine. In the divine court, all sin is first treason against the King. The other court remains and will demand its accounting.</div>
+        <div class="illus-attr">MacArthur</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-title">Snow and Hyssop</div>
+        <div class="illus-text">Hyssop is the smallest thing in the botanical world; snow is the purest visible substance. The gap between them is enormous — and that's exactly the point. Grace doesn't travel a short distance.</div>
+        <div class="illus-attr">Spurgeon, Treasury of David</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-title">Forgiven but Not Joyful</div>
+        <div class="illus-text">After Nathan's confrontation, David was forgiven (2 Sam 12:13 — "The LORD has taken away your sin"). But Psalm 51 is still being written. Pardon and joy are not the same gift. This psalm is the prayer for the second one.</div>
+        <div class="illus-attr">Piper + Courson</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-title">Saul's Shadow</div>
+        <div class="illus-text">David has watched Saul be abandoned by God's Spirit (1 Sam 16:14). He knows what that looks like from the outside — the hollow eyes, the torment, the death at Gilboa. The terror in v.11 is not abstract theology. It is a living memory.</div>
+        <div class="illus-attr">MacArthur</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-title">The Broken Horse</div>
+        <div class="illus-text">A broken horse is not a destroyed horse. The spirit is not crushed — it is surrendered. All the power remains, now directed. The unbroken heart is like an unbroken horse: strong, but unable to carry anyone anywhere.</div>
+        <div class="illus-attr">Courson</div>
+      </div>
+    </div>
+
+    <div class="key-verse" style="margin-top:14px;">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"Create in me a clean heart, O God, and renew a right spirit within me."</div>
+      <div class="kv-ref">Psalm 51:10</div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Then → Now</div>
+      <div class="then-now-grid">
+        <div class="tn-box tn-then">
+          <div class="tn-label">Then · ~1000 BC</div>
+          <div class="tn-text">The Temple system offered sacrifice for sin. But David perceives something the ritual alone can't provide: interior transformation. "You do not delight in sacrifice" — the system was always pointing past itself.</div>
+        </div>
+        <div class="tn-box tn-now">
+          <div class="tn-label">Now</div>
+          <div class="tn-text">Catholic, Anglican, Lutheran, and Orthodox liturgies still use Psalm 51 as the primary penitential text — including as the daily opening prayer of the Divine Office. Three millennia. Same problem, same solution.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Pressure Points</div>
+
+      <div class="pressure">
+        <div class="pressure-q">"Against you only" — does this excuse harm to Bathsheba and Uriah?</div>
+        <div class="pressure-a">No — David is in God's court, not human court. All sin is primarily vertical. The horizontal damage is real and will be reckoned (2 Sam 12:10–12), but this is a different proceeding. (MacArthur)</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">"Sinful from birth" — is this deflecting blame onto original sin?</div>
+        <div class="pressure-a">No — David traces the root, not deflects the blame. He refuses to treat his acts as surface events. The confession gets larger, not smaller. (Kidner)</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">Can believers lose the Holy Spirit? (v.11)</div>
+        <div class="pressure-a">OT pneumatology differs from NT. In David's context, the Spirit came and departed (cf. Saul). The NT promise (John 14:16 — "forever") post-dates and supersedes this fear. David is praying out of OT experience; we stand on NT ground. (MacArthur, Piper)</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">"Whiter than snow" — is this hyperbole?</div>
+        <div class="pressure-a">No — it is precision. Forgiveness restores; grace goes beyond restoration to a state never previously achieved. The new creation of v.10 is not a return to pre-fall condition. (Spurgeon)</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Cross-References</div>
+
+      <div class="xref-item">
+        <div class="xref-ref">2 Samuel 11 &amp; 12:1–14</div>
+        <div class="xref-note">The sin and the confrontation — the events this psalm is praying through. Read them together.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Ezekiel 36:26–27</div>
+        <div class="xref-note">God's answer to this prayer from his own side: "I will give you a new heart." David asked; God announced he would do it unilaterally.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">2 Corinthians 5:17</div>
+        <div class="xref-note">"If anyone is in Christ, the new creation has come." The <em>bārāʾ</em> of v.10 lands here — accomplished in union with Christ.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Romans 3:4</div>
+        <div class="xref-note">Paul quotes v.4 ("so that you may be proved right when you speak") in his theodicy argument — the psalm's confession becomes the grounds for God's vindication.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Luke 18:13</div>
+        <div class="xref-note">The tax collector's prayer — "God, have mercy on me, a sinner" — is Psalm 51 in nine words. Jesus calls it the prayer God hears over the Pharisee's self-accounting.</div>
+      </div>
+    </div>
+
+    <div class="verdict" style="margin-top:14px;">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-text">Psalm 51 is not a confession poem — it is a theology of grace compressed into prayer. David understands that sin is primarily vertical (MacArthur), that the remedy is new creation not self-improvement (Piper), that the instrument of cleansing is humility not performance (Spurgeon), and that the forgiven man becomes the teacher (Courson). The psalm has outlasted every culture it has passed through because it is not culturally conditioned — it is structurally true.</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
