@@ -183,12 +183,25 @@ Visual panels showing who lived when, how they were related, who was alive at th
 Each panel includes:
 - **Era bands** — colour-coded from Antediluvian through New Testament
 - **Lifespan bars** — horizontal bars showing when each figure lived (AM + BC dates)
-- **Family tree** — genealogical connections with messianic line highlighted
+- **Family tree** — all children at every generation (Cain/Abel/Seth, Noah's sons with nations, Abraham's 8+ children, Jacob's 13 by mother, Jesse's 8 sons, David's line to the kingdom split)
 - **Contemporaries** — who was alive at the same time (e.g. Abraham could have met Shem; Jeremiah and Daniel were both alive at the fall of Jerusalem)
 - **Books in context** — which biblical books were written or set in each era
 - **Structural pivots** — why Levi became priests, why Judah holds the scepter, why Ephraim overtook Manasseh, the Melchizedek mystery, and more
+- **Prophets & Their Times** — timeline strip, prophet cards, and prophet-king matrix (see below)
 
 Also available: **The Spine of Biblical History** — 20 pivotal events with books written, prophets active, excluded/lost books, and the full canon formation story (Protestant 66 vs Catholic 73 vs Orthodox 78).
+
+### Prophets & Their Times
+
+The full `bible-timeline full` panel includes a dedicated prophets section with three views:
+
+| View | What it shows |
+|------|--------------|
+| **Timeline strip** | Horizontal bars for all 20 prophets (Samuel → Malachi) plotted from 1100–400 BC, coloured by era |
+| **Prophet cards** | One card per prophet — dates, era chip, kings they addressed (with kingdom label), contemporaries, key message, book(s) |
+| **Prophet-King matrix** | 20 prophets × 21 kings — ● primary address, ◦ contemporary reign, grouped by kingdom (United / Israel / Judah / Foreign) |
+
+![Prophets Timeline](guides/visuals/screenshots/prophets-timeline.png)
 
 Output: `guides/visuals/bible-timeline-<query>.html`
 
