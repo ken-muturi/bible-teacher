@@ -6,6 +6,16 @@ Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skil
 
 ---
 
+## See It First
+
+Browse sample outputs — every panel was generated from a single skill prompt:
+
+**[ken-muturi.github.io/bible-teacher](https://ken-muturi.github.io/bible-teacher/)**
+
+Book overviews, passage deep studies, discussion guides, timelines, family trees, and the full prophets section — all live examples you can generate yourself once the skills are installed.
+
+---
+
 ## Get Claude
 
 This toolkit runs on [Claude](https://claude.ai) by Anthropic.
