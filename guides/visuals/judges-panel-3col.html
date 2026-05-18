@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Judges — Teaching Panel (3-Column)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 26px 30px; max-width: 1260px; margin: 0 auto; }
+
+  /* TITLE */
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 20px; }
+  .title-bar h1 { font-family: 'Special Elite', serif; font-size: 3rem; letter-spacing: 0.15em; }
+  .title-bar .subtitle { font-size: 0.95rem; color: #666; margin-top: 3px; }
+
+  /* 3-COL GRID */
+  .grid { display: grid; grid-template-columns: 300px 1fr 260px; gap: 20px; align-items: start; }
+
+  /* SHARED */
+  .section-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 7px; padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8; }
+  .mb { margin-bottom: 14px; }
+
+  /* CYCLE DIAGRAM */
+  .cycle { border: 2.5px solid #2c2c2c; border-radius: 3px; background: #f0ede8; padding: 11px 13px; margin-bottom: 14px; }
+  .cycle-label { font-size: 0.65rem; letter-spacing: 0.13em; text-transform: uppercase; color: #888; font-weight: 700; margin-bottom: 8px; }
+  .cycle-steps { display: flex; flex-direction: column; gap: 4px; }
+  .cycle-step { border: 2px solid; border-radius: 3px; padding: 4px 8px; font-size: 0.88rem; font-weight: 600; }
+  .step-rest  { border-color: #2e8a4a; background: #edf7f1; color: #2e8a4a; }
+  .step-drift { border-color: #d47c1a; background: #fdf4e7; color: #d47c1a; }
+  .step-enemy { border-color: #c0392b; background: #fdf0ee; color: #c0392b; }
+  .step-cry   { border-color: #3b6fd4; background: #edf2fc; color: #3b6fd4; }
+  .step-judge { border-color: #6c4bbf; background: #f2eefb; color: #6c4bbf; }
+  .cycle-arrow { text-align: center; font-size: 0.9rem; color: #bbb; line-height: 1; margin: 1px 0; }
+  .cycle-note { margin-top: 7px; font-size: 0.82rem; color: #c0392b; font-style: italic; line-height: 1.35; }
+
+  /* IDENTITY BOX */
+  .identity { border: 2px solid #3b6fd4; border-radius: 3px; background: #edf2fc; padding: 10px 12px; margin-bottom: 14px; }
+  .identity-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #3b6fd4; font-weight: 700; margin-bottom: 5px; }
+  .identity-body { font-size: 0.88rem; line-height: 1.45; color: #2c2c2c; }
+
+  /* SETUP BOX */
+  .setup { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf4e7; padding: 10px 12px; margin-bottom: 14px; }
+  .setup-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .setup-body { font-size: 0.88rem; line-height: 1.45; color: #2c2c2c; }
+
+  /* PERIOD */
+  .period { border: 2px solid #2c2c2c; border-radius: 3px; background: #f5f0e8; padding: 9px 11px; }
+  .period-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; font-weight: 700; margin-bottom: 3px; }
+  .period-body { font-size: 0.88rem; color: #2c2c2c; line-height: 1.4; }
+
+  /* JUDGES */
+  .judge-card { border: 2px solid; border-radius: 3px; padding: 8px 11px; margin-bottom: 7px; }
+  .jc-0 { border-color: #2e8a4a; background: #f2fbf5; }
+  .jc-1 { border-color: #3b6fd4; background: #edf2fc; }
+  .jc-2 { border-color: #6c4bbf; background: #f2eefb; }
+  .jc-3 { border-color: #d47c1a; background: #fdf4e7; }
+  .jc-4 { border-color: #c0392b; background: #fdf0ee; }
+  .jc-5 { border-color: #1a1a1a; background: #f0ede8; }
+  .judge-top { display: flex; align-items: baseline; gap: 7px; margin-bottom: 3px; }
+  .judge-tag { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #fff; }
+  .tag-0 { background: #2e8a4a; }
+  .tag-1 { background: #3b6fd4; }
+  .tag-2 { background: #6c4bbf; }
+  .tag-3 { background: #d47c1a; }
+  .tag-4 { background: #c0392b; }
+  .tag-5 { background: #1a1a1a; }
+  .judge-name { font-family: 'Special Elite', serif; font-size: 1.0rem; color: #1a1a1a; }
+  .judge-chs { font-size: 0.72rem; color: #aaa; }
+  .judge-desc { font-size: 0.82rem; color: #333; line-height: 1.35; }
+  .judge-fail { font-size: 0.78rem; color: #888; font-style: italic; margin-top: 3px; line-height: 1.3; }
+
+  /* MINOR */
+  .minor { border: 2px dashed #bbb; border-radius: 3px; padding: 6px 10px; margin-bottom: 10px; font-size: 0.84rem; color: #777; background: #f8f7f4; }
+  .minor strong { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-right: 5px; }
+
+  /* KEY PASSAGE */
+  .callout { border-left: 5px solid #3b6fd4; background: #edf2fc; padding: 10px 13px; border-radius: 0 3px 3px 0; margin-bottom: 10px; }
+  .callout-label { font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase; color: #3b6fd4; font-weight: 700; margin-bottom: 4px; }
+  .callout-text { font-size: 0.95rem; color: #1a1a1a; line-height: 1.45; }
+  .callout-ref { font-size: 0.78rem; color: #888; margin-top: 3px; }
+
+  /* COLLAPSE */
+  .collapse { background: #1a1a1a; color: #f5f0e8; border-radius: 3px; padding: 12px 14px; }
+  .collapse-label { font-size: 0.65rem; letter-spacing: 0.13em; text-transform: uppercase; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
+  .collapse-title { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
+  .collapse-body { font-size: 0.82rem; color: #ccc; line-height: 1.45; }
+
+  /* RIGHT COLUMN */
+  .word-item { margin-bottom: 10px; }
+  .word-heb { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #1a1a1a; }
+  .word-gloss { font-size: 0.74rem; color: #888; font-style: italic; margin-left: 3px; }
+  .word-def { font-size: 0.82rem; color: #444; line-height: 1.35; margin-top: 2px; }
+
+  .conn-row { display: flex; align-items: baseline; gap: 5px; margin-bottom: 6px; font-size: 0.85rem; line-height: 1.35; }
+  .conn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; padding: 1px 5px; border-radius: 2px; white-space: nowrap; flex-shrink: 0; }
+  .conn-back { background: #d47c1a; color: #fff; }
+  .conn-fwd  { background: #2e8a4a; color: #fff; }
+  .conn-para { background: #6c4bbf; color: #fff; }
+
+  .then-now { border: 2px solid #6c4bbf; border-radius: 3px; background: #f2eefb; padding: 10px 12px; margin-bottom: 14px; }
+  .tn-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6c4bbf; font-weight: 700; margin-bottom: 5px; }
+  .tn-body { font-size: 0.84rem; line-height: 1.45; color: #2c2c2c; }
+
+  .misread { background: #1a1a1a; color: #f5f0e8; border-radius: 3px; padding: 10px 12px; margin-bottom: 14px; font-size: 0.84rem; line-height: 1.45; }
+  .misread strong { display: block; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #1a1a1a; border-radius: 3px; background: #1a1a1a; padding: 12px 14px; text-align: center; }
+  .verdict-label { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 5px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #fff; line-height: 1.4; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 5px; }
+
+  /* BOTTOM STRIP */
+  .bottom-strip { border-top: 2px solid #ddd; margin-top: 18px; padding-top: 13px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .strip-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 3px; }
+  .strip-body { font-size: 0.88rem; line-height: 1.4; color: #2c2c2c; }
+</style>
+</head>
+<body>
+<div class="panel">
+
+  <div class="title-bar">
+    <h1>JUDGES</h1>
+    <div class="subtitle">Series 2: The Story of Israel &nbsp;·&nbsp; Book 7 of 66 &nbsp;·&nbsp; A spiral, not a cycle</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT COLUMN: Identity + Cycle + Setup -->
+    <div>
+      <div class="section-label mb">Book Identity</div>
+
+      <div class="identity mb">
+        <div class="identity-label">← From Joshua</div>
+        <div class="identity-body">Joshua dies. No successor. 12 tribes, no central leadership. A loose confederation held together by a shared covenant nobody keeps.</div>
+      </div>
+
+      <div class="section-label mb">The Mechanism</div>
+      <div class="cycle mb">
+        <div class="cycle-label">Repeats 6×, each iteration ending worse</div>
+        <div class="cycle-steps">
+          <div class="cycle-step step-rest">Rest</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step step-drift">Abandon Covenant</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step step-enemy">Enemy Oppression</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step step-cry">Cry for Help</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step step-judge">God Raises a Judge</div>
+          <div class="cycle-arrow" style="color:#c0392b;">↘ worse</div>
+        </div>
+        <div class="cycle-note">Not a flat loop — a descent. Each rest is shorter; each judge is more compromised.</div>
+      </div>
+
+      <div class="setup mb">
+        <div class="setup-label">The Detail Everyone Misses</div>
+        <div class="setup-body">Baal worship was economically motivated — the Baals were fertility deities (rain, crops, livestock). Trusting Yahweh meant trusting an invisible God with your harvest. The temptation was practical, not stupid.</div>
+      </div>
+
+      <div class="period">
+        <div class="period-label">Period Covered</div>
+        <div class="period-body">~1380–1050 BC · approx. 300 years of pre-monarchy Israel</div>
+      </div>
+    </div>
+
+    <!-- CENTER COLUMN: Judges + Key Passage + Collapse -->
+    <div>
+      <div class="section-label mb">The Six Major Judges — Descending Quality</div>
+
+      <div class="judge-card jc-0">
+        <div class="judge-top"><span class="judge-tag tag-0">Major 1</span><span class="judge-name">Othniel</span><span class="judge-chs">Ch. 3</span></div>
+        <div class="judge-desc">Clean. Faithful. Delivers Israel, land rests 40 years. No personal failure recorded.</div>
+        <div class="judge-fail">The baseline — the only uncomplicated judge.</div>
+      </div>
+
+      <div class="judge-card jc-1">
+        <div class="judge-top"><span class="judge-tag tag-1">Major 2</span><span class="judge-name">Ehud</span><span class="judge-chs">Ch. 3</span></div>
+        <div class="judge-desc">Left-handed assassin. Kills Eglon (a very fat Moabite king) in his private chamber. Dark comedy — the text enjoys this story.</div>
+        <div class="judge-fail">Effective, morally ambiguous. The narrative tone has shifted.</div>
+      </div>
+
+      <div class="judge-card jc-2">
+        <div class="judge-top"><span class="judge-tag tag-2">Major 3</span><span class="judge-name">Deborah</span><span class="judge-chs">Chs. 4–5</span></div>
+        <div class="judge-desc">The only judge who actually functions as a wise leader — hearing cases, giving counsel. A woman. Her song (ch. 5) is some of the oldest Hebrew poetry in the Bible.</div>
+        <div class="judge-fail">No personal failure. The exception proving the rule.</div>
+      </div>
+
+      <div class="judge-card jc-3">
+        <div class="judge-top"><span class="judge-tag tag-3">Major 4</span><span class="judge-name">Gideon</span><span class="judge-chs">Chs. 6–8</span></div>
+        <div class="judge-desc">Tears down a Baal altar. Wins against 135,000 with 300 men. Refuses kingship: "The LORD will rule over you."</div>
+        <div class="judge-fail">Then builds an ephod that "became a snare to Gideon and to his family." (8:27) — the turn happens fast.</div>
+      </div>
+
+      <div class="judge-card jc-4">
+        <div class="judge-top"><span class="judge-tag tag-4">Major 5</span><span class="judge-name">Jephthah</span><span class="judge-chs">Chs. 11–12</span></div>
+        <div class="judge-desc">Outcast son of a prostitute, hired back to lead. Defeats Ammon. Makes a rash vow.</div>
+        <div class="judge-fail">His daughter pays for it. Two credible readings: sacrificed, or dedicated to perpetual virginity. Neither is comfortable.</div>
+      </div>
+
+      <div class="judge-card jc-5">
+        <div class="judge-top"><span class="judge-tag tag-5">Major 6</span><span class="judge-name">Samson</span><span class="judge-chs">Chs. 13–16</span></div>
+        <div class="judge-desc">Enormous strength. Almost no wisdom. Tells Delilah his secret after she has already handed him over three times.</div>
+        <div class="judge-fail">Used by God despite himself, not because of himself. Destroys more Philistines blind and dying than in his whole life.</div>
+      </div>
+
+      <div class="minor"><strong>Minor Judges:</strong> Shamgar · Tola · Jair · Ibzan · Elon · Abdon</div>
+
+      <div class="callout mb">
+        <div class="callout-label">Key Passage — Read Aloud</div>
+        <div class="callout-text">"And there arose another generation after them who did not know the LORD or the work that he had done for Israel."</div>
+        <div class="callout-ref">Judges 2:10 (ESV) — the hinge the whole book turns on</div>
+      </div>
+
+      <div class="collapse">
+        <div class="collapse-label">Chs. 17–21 — No Judge. No Deliverer. No Resolution.</div>
+        <div class="collapse-title">The Bottom of the Spiral</div>
+        <div class="collapse-body">No judge is raised. No one cries out to God. A private shrine, a gang rape, a civil war, mass abduction — the narrator offers no verdict except the last line of the book.</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Words + Links + Then/Now + Verdict -->
+    <div>
+      <div class="section-label mb">Key Words</div>
+      <div class="mb">
+        <div class="word-item">
+          <span class="word-heb">שׁוֹפֵט / Shofet <span class="word-gloss">(Judge)</span></span>
+          <div class="word-def">"Ruler / liberator" — closer to warlord than courtroom judge. Same root used for God as judge of nations.</div>
+        </div>
+        <div class="word-item">
+          <span class="word-heb">רוּחַ / Ruach <span class="word-gloss">(Spirit)</span></span>
+          <div class="word-def">Comes upon each major judge before a key act. Temporary empowerment for a task — not the indwelling Spirit of the NT.</div>
+        </div>
+        <div class="word-item">
+          <span class="word-heb">חֶסֶד / Hesed <span class="word-gloss">(Covenant loyalty)</span></span>
+          <div class="word-def">Notably absent from Judges. Ruth (same period) models it. The contrast is intentional.</div>
+        </div>
+      </div>
+
+      <div class="section-label mb">Cross-Bible Links</div>
+      <div class="mb">
+        <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Deut 6–8 — the warnings Israel fulfills, on schedule</span></div>
+        <div class="conn-row"><span class="conn-label conn-back">← OT</span><span>Numbers 25 — Baal worship at Peor; Judges shows it was not a one-time event</span></div>
+        <div class="conn-row"><span class="conn-label conn-fwd">NT →</span><span>1 Samuel 1–8 — the demand for a king comes directly out of this chaos</span></div>
+        <div class="conn-row"><span class="conn-label conn-fwd">NT →</span><span>Heb 11:32 — Gideon, Samson, Jephthah in the Hall of Faith</span></div>
+        <div class="conn-row"><span class="conn-label conn-para">≈</span><span>Ruth — same period, opposite posture; a Gentile models the hesed Israel abandoned</span></div>
+      </div>
+
+      <div class="misread mb">
+        <strong>Common Misread</strong>
+        The judges are not heroes to imitate. The book is not saying "be like Samson." It is showing what leadership looks like when a people loses its covenant bearings.
+      </div>
+
+      <div class="then-now mb">
+        <div class="tn-label">Then → Now</div>
+        <div class="tn-body">The drift isn't caused by choosing evil — it's caused by not choosing at all. Adding Baal alongside Yahweh. The modern equivalent: holding stated values while quietly organizing life around whatever the surrounding culture offers.</div>
+      </div>
+
+      <div class="verdict">
+        <div class="verdict-label">The Last Line</div>
+        <div class="verdict-text">"Everyone did what was right in his own eyes."</div>
+        <div class="verdict-ref">Judges 21:25 — a diagnosis, not a celebration</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom-strip">
+    <div>
+      <div class="strip-label">Series Position</div>
+      <div class="strip-body">Book 7 of 66 · Between Joshua (conquest) and Ruth (covenant faithfulness in the same dark period)</div>
+    </div>
+    <div>
+      <div class="strip-label">Question to Sit With</div>
+      <div class="strip-body">"Everyone did what was right in their own eyes" — what is the difference between healthy personal conviction and self-referential morality that just means doing what you want?</div>
+    </div>
+    <div>
+      <div class="strip-label">Next in Series</div>
+      <div class="strip-body">Ruth → same historical moment, completely different story. A Moabite woman chooses the covenant loyalty Israel abandoned. The contrast is the point.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
