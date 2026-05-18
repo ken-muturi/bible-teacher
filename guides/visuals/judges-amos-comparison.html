@@ -106,6 +106,20 @@
 </style>
 </head>
 <body>
+  <a href="../../index.html" class="home-btn">&#8962; Home</a>
+  <style>
+    .home-btn {
+      position: fixed; top: 14px; left: 16px; z-index: 9999;
+      font-family: 'Caveat', cursive; font-size: 0.95rem;
+      color: #2c2c2c; text-decoration: none;
+      background: #faf7f2; border: 1.5px solid #c8c2b8;
+      border-radius: 3px; padding: 4px 12px;
+      opacity: 0.88; transition: opacity 0.15s, background 0.15s;
+    }
+    .home-btn:hover { opacity: 1; background: #f0ebe0; }
+    @media print { .home-btn { display: none; } }
+  </style>
+
 <div class="panel">
 
   <!-- TITLE -->
