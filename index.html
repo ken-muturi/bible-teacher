@@ -188,10 +188,10 @@
       <div class="install-all-row">
         <div class="install-all-text">
           <div class="install-all-title">Install all skills at once</div>
-          <div class="install-all-sub">Copy the manifest URL, then tell Claude:</div>
-          <code class="install-all-cmd">install all skills: <span>https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/skills.json</span></code>
+          <div class="install-all-sub">Copy the repo URL, paste it to Claude and say:</div>
+          <code class="install-all-cmd">install skills from <span>https://github.com/ken-muturi/bible-teacher</span></code>
         </div>
-        <button class="copy-all-btn" onclick="copyAll(this)">Copy manifest URL</button>
+        <button class="copy-all-btn" onclick="copyAll(this)">Copy repo URL</button>
       </div>
 
       <!-- INDIVIDUAL SKILLS -->
@@ -232,14 +232,14 @@
   </div>
 
   <script>
-    const MANIFEST_URL = 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/skills.json';
+    const REPO_URL = 'https://github.com/ken-muturi/bible-teacher';
 
     function copyAll(btn) {
-      navigator.clipboard.writeText(MANIFEST_URL).then(() => {
+      navigator.clipboard.writeText(REPO_URL).then(() => {
         btn.textContent = '✓ Copied!';
         btn.classList.add('copied');
         setTimeout(() => {
-          btn.textContent = 'Copy manifest URL';
+          btn.textContent = 'Copy repo URL';
           btn.classList.remove('copied');
         }, 2500);
       });

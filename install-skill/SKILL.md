@@ -1,44 +1,54 @@
-# Install Skill — Fetch and install one skill or all skills from a URL
+# Install Skill — Install one skill or all skills from a URL
 
 ## Trigger
 Any message matching:
+- `install skills from <url>`
+- `install all skills: <url>`
 - `install skill <url>`
 - `install: <url>`
-- `install this skill: <url>`
-- `install all skills: <url>`
-- `install all skills from <url>`
-- User pastes a raw GitHub URL ending in `SKILL.md` or `skills.json` and says "install"
+- User pastes any GitHub URL (repo root, blob, or raw) and says "install"
 
 ---
 
-## Mode A — Install all skills from a manifest
+## Step 0 — Resolve the URL
 
-Triggered when the URL ends in `.json` or the message says "all skills".
+Before doing anything, normalise the URL:
 
-### Steps
+| What the user pastes | Resolve to |
+|---|---|
+| `https://github.com/<user>/<repo>` | `https://raw.githubusercontent.com/<user>/<repo>/main/skills.json` |
+| `https://github.com/<user>/<repo>/blob/<branch>/<path>` | `https://raw.githubusercontent.com/<user>/<repo>/<branch>/<path>` |
+| `https://raw.githubusercontent.com/...` | Use as-is |
+| Any URL ending in `skills.json` | Batch install mode |
+| Any URL ending in `SKILL.md` | Single install mode |
 
-1. **Fetch** the JSON manifest from the URL.
+When the URL is a **repo root** (no path after the repo name), always append `/main/skills.json` on the raw host.
 
+---
+
+## Mode A — Batch install from `skills.json`
+
+Triggered when the resolved URL ends in `skills.json`.
+
+1. **Fetch** the JSON manifest.
 2. **Parse** the `skills` array. Each item has:
-   - `id` — the directory name to create
-   - `name` — human-readable name
+   - `id` — directory name
+   - `name` — human label
    - `url` — raw URL to the SKILL.md
-
-3. **For each skill in the array**, in order:
-   - Check if `<id>/SKILL.md` already exists
-   - If it does, skip it (note it as "already installed")
-   - If not, fetch the URL and write to `<id>/SKILL.md`
-
-4. **Output a single confirmation table**:
+3. **For each skill**, in order:
+   - If `<id>/SKILL.md` already exists → skip, mark as "already installed"
+   - Otherwise fetch `url` and write to `<id>/SKILL.md`
+   - Special case: if `id` is `"foundation"`, write to `foundation/teacher-foundation/SKILL.md`
+4. **Output a confirmation table**:
 
 ```
-✓ Installed all Bible Teacher skills
+✓ Installed all skills from <repo>
 
-  ✓ install-skill        → install-skill/SKILL.md
-  ✓ foundation           → foundation/teacher-foundation/SKILL.md
-  ✓ book-overview-infographic → book-overview-infographic/SKILL.md
-  ✓ passage-study        → passage-study/SKILL.md
-  ✓ discussion-guide     → discussion-guide/SKILL.md
+  ✓ install-skill             install-skill/SKILL.md
+  ✓ foundation                foundation/teacher-foundation/SKILL.md
+  ✓ book-overview-infographic book-overview-infographic/SKILL.md
+  ✓ passage-study             passage-study/SKILL.md
+  ✓ discussion-guide          discussion-guide/SKILL.md
 
 Ready. Try:
   passage-study Romans 8:1–11
@@ -48,53 +58,30 @@ Ready. Try:
 
 ---
 
-## Mode B — Install a single skill from a SKILL.md URL
+## Mode B — Single install from `SKILL.md`
 
-Triggered when the URL ends in `SKILL.md`.
-
-### Steps
+Triggered when the resolved URL ends in `SKILL.md`.
 
 1. **Fetch** the content at the URL.
-
-2. **Determine the skill directory name**  
-   Read the first `# Heading`. Lowercase it, replace spaces with hyphens, strip subtitles after `—`.  
-   Fallback: use the path segment before `/SKILL.md` in the URL.
-
-3. **Check for existing install**  
-   If `<skill-name>/SKILL.md` already exists, ask:  
-   "Skill `<name>` is already installed. Overwrite? (yes / no)"  
-   Wait for confirmation before writing.
-
-4. **Write** the fetched content verbatim to `<skill-name>/SKILL.md`.
-
+2. **Determine the skill directory name**
+   - Read the first `# Heading`. Lowercase, replace spaces with hyphens, strip subtitles after `—`.
+   - Fallback: last path segment before `/SKILL.md`.
+3. **Check for existing install** — if `<skill-name>/SKILL.md` exists, ask to confirm overwrite.
+4. **Write** content verbatim to `<skill-name>/SKILL.md`.
 5. **Confirm**:
 
 ```
 ✓ Installed: <skill-name>
-  Source: <url>
   Location: <skill-name>/SKILL.md
 
-Try: <example-trigger>
+Try: <trigger from SKILL.md>
 ```
 
 ---
 
-## Special case — foundation skill
-
-The foundation skill writes to `foundation/teacher-foundation/SKILL.md` (not `foundation/SKILL.md`).  
-If the manifest `id` is `"foundation"`, write to `foundation/teacher-foundation/SKILL.md` and create the nested directory if needed.
-
----
-
 ## Edge cases
-
-- **Unreachable URL**: report the error and skip that skill. Complete all others first, then list failures at the end.
-- **Invalid content**: if fetched content has no `#` heading, warn but still write it if the user confirms.
-- **Partial manifest failure**: install everything that succeeds, report failures clearly.
-
----
-
-## Notes
+- **Unreachable URL**: report the error, skip that skill, complete all others, list failures at the end.
+- **No `skills.json` at repo root**: tell the user the repo doesn't have a skills manifest at `/main/skills.json` and ask them to provide the direct URL.
+- **Partial failure**: install everything that succeeds, report failures clearly.
 - Never modify fetched content — write verbatim.
 - Installs into the **current project** (where `.claude/` lives).
-- The manifest URL is: `https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/skills.json`
