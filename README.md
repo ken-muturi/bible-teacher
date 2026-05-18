@@ -6,7 +6,38 @@ Adapted from the [pastor-ai-skills](https://github.com/tkcostello/pastor-ai-skil
 
 ---
 
-## Quick Install
+## Get Claude
+
+This toolkit runs on [Claude](https://claude.ai) by Anthropic.
+
+**Option A — Claude.ai (browser, easiest)**
+1. Go to [claude.ai](https://claude.ai) and create a free account
+2. Upgrade to Claude Pro for best results (required for long research sessions)
+3. Create a **Project** — this keeps your teacher profile and skills persistent across conversations
+
+**Option B — Claude Desktop (recommended for most teachers)**
+1. Download the Claude desktop app for [Mac or Windows](https://claude.ai/download)
+2. Sign in with your Anthropic account (or create one)
+3. Create a **Project** and add your skill files — works identically to Claude.ai but as a native app
+4. Upgrade to Claude Pro for best results
+
+**Option C — Claude Code (terminal, for power users)**
+1. Install [Node.js](https://nodejs.org) if you don't have it
+2. Install Claude Code:
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+3. Authenticate:
+   ```bash
+   claude
+   ```
+   Follow the prompts to connect your Anthropic account.
+
+---
+
+## Install the Toolkit
+
+### Option 1 — Quick install (Claude Code)
 
 Open any Claude Code project and run:
 
@@ -14,13 +45,34 @@ Open any Claude Code project and run:
 install skills from https://github.com/ken-muturi/bible-teacher
 ```
 
-Claude fetches the skills manifest, creates the skill directories, and confirms everything is installed. That's it.
+Claude fetches the skills manifest, creates the skill directories, and confirms everything is installed.
 
 > **First time?** You need the `install-skill` skill to bootstrap the rest. Install it once manually:
 > ```
 > install skill https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md
 > ```
 > Then run the one-liner above to install everything else.
+
+### Option 2 — Git clone (full repo)
+
+Clone the repository and run Claude Code from inside it:
+
+```bash
+git clone https://github.com/ken-muturi/bible-teacher.git
+cd bible-teacher
+claude
+```
+
+Claude Code automatically reads all skill files in the directory. All generated guides are saved to `guides/` and browsable via `index.html`.
+
+Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/heads/main.zip) and unzip it.
+
+### Option 3 — Claude.ai / Claude Desktop Projects
+
+1. Create a new Project in Claude.ai or Claude Desktop
+2. Go to **Project instructions** and paste the contents of `foundation/teacher-foundation/SKILL.md`
+3. Add each skill file you want to use as a Project file (or paste into the instructions)
+4. Start a conversation and reference the skills by name
 
 ---
 
