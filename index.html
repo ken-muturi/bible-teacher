@@ -12,6 +12,7 @@
   .header { text-align: center; margin-bottom: 40px; }
   .header h1 { font-family: 'Special Elite', serif; font-size: 2.4rem; color: #2c2c2c; letter-spacing: 0.1em; }
   .header p { font-size: 1rem; color: #666; margin-top: 6px; }
+  .header .sub2 { font-size: 0.78rem; color: #aaa; margin-top: 4px; letter-spacing: 0.04em; }
 
   .sections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
 
@@ -90,12 +91,27 @@
 
   /* ── PROMPT CHIP ── */
   .card-prompt {
-    display: inline-block; margin-top: 7px;
-    font-size: 0.62rem; font-family: monospace; letter-spacing: 0.04em;
-    background: #1a1a1a; color: #7eb8f7;
-    border-radius: 2px; padding: 2px 7px;
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-top: 8px; cursor: pointer;
+    font-size: 0.6rem; font-family: monospace; letter-spacing: 0.03em;
+    background: transparent; color: #aaa;
+    border: 1px dashed #ccc; border-radius: 3px;
+    padding: 2px 7px 2px 6px;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    user-select: none;
   }
+  .card-prompt::before {
+    content: '⎘';
+    font-size: 0.68rem; opacity: 0.5; flex-shrink: 0;
+  }
+  .card-prompt:hover {
+    border-color: #999; color: #555; background: rgba(0,0,0,0.03);
+  }
+  .card-prompt.prompt-copied {
+    border-color: #2e8a4a; color: #2e8a4a; background: #f0faf4;
+  }
+  .card-prompt.prompt-copied::before { content: '✓'; opacity: 1; }
 
   /* ── GO TO TOWN STRIP ── */
   .cta-strip {
@@ -153,7 +169,8 @@
 
   <div class="header">
     <h1>Bible Teacher</h1>
-    <p>Sample outputs — every panel below was generated from a single skill prompt</p>
+    <p>Sample outputs — click any panel to open it</p>
+    <p class="sub2">Every guide below was generated from a single skill prompt — tap the dashed chip on each card to copy it</p>
   </div>
 
   <div class="sections">
@@ -405,6 +422,25 @@
         }, 2000);
       });
     }
+
+    // Prompt chips — click to copy, stop propagation so card link doesn't fire
+    document.querySelectorAll('.card-prompt').forEach(chip => {
+      chip.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const cmd = chip.textContent.trim();
+        navigator.clipboard.writeText(cmd).then(() => {
+          chip.classList.add('prompt-copied');
+          const orig = chip.textContent;
+          chip.dataset.orig = orig;
+          chip.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent = ' copied'; });
+          setTimeout(() => {
+            chip.classList.remove('prompt-copied');
+            chip.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent = ' ' + cmd; });
+          }, 2000);
+        });
+      });
+    });
   </script>
 
 </body>
