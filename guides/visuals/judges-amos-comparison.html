@@ -84,17 +84,6 @@
   .verdict-label { font-size: 0.63rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
   .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; line-height: 1.45; }
   .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 5px; }
-
-  .print-btn {
-    position: fixed; top: 16px; right: 16px;
-    background: #2c2c2c; color: #f5f0e8;
-    border: none; border-radius: 3px;
-    padding: 8px 18px; font-family: 'Caveat', cursive;
-    font-size: 1rem; cursor: pointer; z-index: 1000;
-    letter-spacing: 0.04em;
-  }
-  .print-btn:hover { background: #444; }
-  @media print { .print-btn { display: none !important; } }
 </style>
 </head>
 <body>
@@ -282,6 +271,6 @@
 
 </div>
 
-<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
 </body>
 </html>
