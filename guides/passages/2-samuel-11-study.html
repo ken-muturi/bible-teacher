@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2 Samuel 11 — The Anatomy of a Fall</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8;
+    border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive;
+    font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.15rem; color: #555; margin-top: 4px; }
+  .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4a33a0; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; max-width: 1060px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 16px 18px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* structure */
+  .beat { border-left: 3px solid #c0392b; padding-left: 12px; margin-bottom: 12px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.7rem; color: #c0392b; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.88rem; color: #444; line-height: 1.4; }
+
+  /* word study */
+  .word-card { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 12px 14px; margin-bottom: 10px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #d47c1a; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.78rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.95rem; color: #2c2c2c; font-weight: 700; margin: 4px 0 2px; }
+  .word-note { font-size: 0.85rem; color: #555; line-height: 1.4; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #3b6fd4; padding-left: 12px; margin-bottom: 12px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-text { font-size: 0.9rem; color: #333; line-height: 1.45; }
+
+  /* then-now */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.88rem; color: #333; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.95rem; line-height: 1.5; }
+
+  /* key verse */
+  .key-verse { background: #fdf3e3; border: 2px solid #d47c1a; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.75rem; color: #888; margin-top: 5px; }
+
+  /* xref */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 8px; margin-bottom: 8px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #c0392b; }
+  .xref-note { font-size: 0.82rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* slope diagram */
+  .slope { display: flex; flex-direction: column; gap: 4px; }
+  .slope-step { display: flex; align-items: center; gap: 8px; }
+  .slope-verb { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #c0392b; min-width: 60px; }
+  .slope-bar { height: 6px; background: #c0392b; border-radius: 2px; }
+  .slope-note { font-size: 0.78rem; color: #666; }
+
+  /* misread */
+  .misread { background: #ffeaea; border: 1.5px solid #c0392b; border-radius: 3px; padding: 12px 14px; }
+  .misread-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
+  .misread-text { font-size: 0.88rem; color: #444; line-height: 1.4; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <div class="ref">2 Samuel 11</div>
+  <div class="title">The Anatomy of a Fall</div>
+  <a class="companion-link" href="psalm-51-study.html">→ Read with Psalm 51 — The Anatomy of Repentance</a>
+</div>
+
+<div class="grid">
+
+  <!-- COL 1: Structure -->
+  <div>
+    <div class="card">
+      <div class="card-label">Structure — 3 Movements</div>
+
+      <div class="beat">
+        <div class="beat-ref">V.1</div>
+        <div class="beat-title">The Stay</div>
+        <div class="beat-desc">Spring — when kings go to war. David stays in Jerusalem. The fall begins not with the glance but with the abdication. Idleness at the peak of power is its own danger.</div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-ref">VV. 2–17</div>
+        <div class="beat-title">The Escalation</div>
+        <div class="beat-desc">No single dramatic moment of decision — only a slope. Saw → inquired → took → summoned → sinned → covered → arranged death. Each step is morally continuous with the one before.</div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-ref">VV. 26–27</div>
+        <div class="beat-title">The Verdict</div>
+        <div class="beat-desc">"The thing that David had done displeased the LORD." Seven words close the chapter cold. No punishment yet — only the divine notation. The storm is coming.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">The Slope of Sin</div>
+      <div class="slope">
+        <div class="slope-step">
+          <div class="slope-verb">Saw</div>
+          <div class="slope-bar" style="width:30px;"></div>
+          <div class="slope-note">v.2 — from the roof</div>
+        </div>
+        <div class="slope-step">
+          <div class="slope-verb">Inquired</div>
+          <div class="slope-bar" style="width:50px;"></div>
+          <div class="slope-note">v.3 — "Who is she?"</div>
+        </div>
+        <div class="slope-step">
+          <div class="slope-verb">Sent</div>
+          <div class="slope-bar" style="width:75px;"></div>
+          <div class="slope-note">v.4 — messengers to take her</div>
+        </div>
+        <div class="slope-step">
+          <div class="slope-verb">Took</div>
+          <div class="slope-bar" style="width:95px;"></div>
+          <div class="slope-note">v.4 — she came, he lay with her</div>
+        </div>
+        <div class="slope-step">
+          <div class="slope-verb">Covered</div>
+          <div class="slope-bar" style="width:120px;"></div>
+          <div class="slope-note">vv.6–13 — Uriah manoeuvred</div>
+        </div>
+        <div class="slope-step">
+          <div class="slope-verb">Killed</div>
+          <div class="slope-bar" style="width:148px; background:#8b0000;"></div>
+          <div class="slope-note">vv.14–17 — the letter sent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 2: Word Studies + Illustration -->
+  <div>
+    <div class="card">
+      <div class="card-label">Word Studies</div>
+
+      <div class="word-card">
+        <div class="hebrew">שָׁלַח</div>
+        <div class="transliteration">šālaḥ — "sent"</div>
+        <div class="word-gloss">The chapter's governing verb</div>
+        <div class="word-note">Appears 8× in the chapter. David sends messengers, sends Uriah home, sends the death-letter to Joab. The same royal authority that should protect becomes the instrument of destruction. The sceptre becomes a weapon.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">יָשַׁב</div>
+        <div class="transliteration">yāšab — "remained / stayed"</div>
+        <div class="word-gloss">The verb that starts the fall</div>
+        <div class="word-note">v.1: "But David remained at Jerusalem." The same verb used of Lot sitting in Sodom's gate (Gen 19:1). Position without engagement. The first domino falls silently.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Illustrations</div>
+
+      <div class="illus">
+        <div class="illus-text">The chapter has no ledge to step off — only a slope. Every choice is barely larger than the last. This is how most serious moral failures actually work: not a single catastrophic decision but a sequence of small yeses, each one feeling logically continuous with what came before.</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-text">Uriah's loyalty (vv.11–13) is the chapter's silent indictment. While David schemes to get him home and into bed with Bathsheba, Uriah refuses comfort on principle — "the ark and Israel and Judah are staying in tents." The soldier is more honourable than the king. The text never calls this out. It doesn't have to.</div>
+      </div>
+    </div>
+
+    <div class="key-verse" style="margin-top:14px;">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"But the thing that David had done displeased the LORD."</div>
+      <div class="kv-ref">2 Samuel 11:27b</div>
+    </div>
+  </div>
+
+  <!-- COL 3: Then/Now, Xrefs, Misread, Verdict -->
+  <div>
+    <div class="card">
+      <div class="card-label">Then → Now</div>
+      <div class="then-now-grid">
+        <div class="tn-box tn-then">
+          <div class="tn-label">Then · Israel ~1000 BC</div>
+          <div class="tn-text">The king holds absolute power of summons. Bathsheba cannot refuse. Uriah cannot know. The system that should protect the vulnerable is turned against them by its custodian.</div>
+        </div>
+        <div class="tn-box tn-now">
+          <div class="tn-label">Now</div>
+          <div class="tn-text">Power still removes friction. The mechanism is identical in boardrooms, churches, and households — proximity + authority + unchecked appetite. The only difference is the title.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Cross-References</div>
+
+      <div class="xref-item">
+        <div class="xref-ref">Deuteronomy 17:17</div>
+        <div class="xref-note">The Mosaic law for kings: "He must not take many wives, or his heart will be led astray." The warning was there before David was born.</div>
+      </div>
+
+      <div class="xref-item">
+        <div class="xref-ref">James 1:14–15</div>
+        <div class="xref-note">"Each person is tempted when they are dragged away by their own evil desire and enticed. Then, after desire has conceived, it gives birth to sin; and sin, when it is full-grown, gives birth to death." The New Testament anatomy of this exact chapter.</div>
+      </div>
+
+      <div class="xref-item">
+        <div class="xref-ref">2 Samuel 12:1–14</div>
+        <div class="xref-note">Nathan's parable — the reckoning this chapter earns. Read together: ch.11 is the case file; ch.12 is the court.</div>
+      </div>
+    </div>
+
+    <div class="misread" style="margin-top:14px;">
+      <div class="misread-label">Common Misread</div>
+      <div class="misread-text">This is sometimes framed as a moment of mutual weakness — "David and Bathsheba." But the power differential is absolute. David holds the army, the palace, the power of summons. Bathsheba is summoned and taken. The text gives her no speech, no agency, no choice. The responsibility is David's.</div>
+    </div>
+
+    <div class="verdict" style="margin-top:14px;">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-text">A man after God's own heart is capable of this. So is any leader with unchecked power and distance from accountability. The chapter is not an anomaly — it is a warning about the ordinary mechanics of abuse.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

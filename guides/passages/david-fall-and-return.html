@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2 Samuel 11 × Psalm 51 — The Fall and the Return</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8;
+    border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive;
+    font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  /* ── HEADER ── */
+  .page-header { text-align: center; margin-bottom: 24px; }
+  .page-header h1 { font-family: 'Special Elite', serif; font-size: 1.9rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .page-header .subtitle { font-size: 1rem; color: #666; margin-top: 4px; }
+
+  /* ── ARC STRIP ── */
+  .arc-strip {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; max-width: 860px; margin: 0 auto 24px; padding: 14px 20px;
+    background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px;
+  }
+  .arc-node {
+    text-align: center; flex: 1;
+  }
+  .arc-ref { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; }
+  .arc-title { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; margin-top: 2px; }
+  .arc-arrow {
+    font-size: 1.3rem; color: #aaa; padding: 0 8px; flex-shrink: 0;
+  }
+  .arc-node.fall .arc-title  { color: #c0392b; }
+  .arc-node.hinge .arc-title { color: #d47c1a; }
+  .arc-node.return .arc-title{ color: #6c4bbf; }
+
+  /* ── DIPTYCH GRID ── */
+  .diptych {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  /* centre spine */
+  .spine {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0; padding-top: 4px;
+  }
+  .spine-line { width: 2px; background: #d0c8bc; flex: 1; }
+  .spine-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #d0c8bc; flex-shrink: 0; margin: 4px 0;
+  }
+
+  /* columns */
+  .col { display: flex; flex-direction: column; gap: 14px; }
+  .col-left  { padding-right: 18px; }
+  .col-right { padding-left: 18px; }
+
+  /* ── SHARED CARD STYLES ── */
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* col-left accent = red */
+  .col-left .beat { border-left: 3px solid #c0392b; padding-left: 11px; margin-bottom: 11px; }
+  .col-left .beat:last-child { margin-bottom: 0; }
+  .col-left .beat-ref  { font-size: 0.68rem; color: #c0392b; font-weight: 700; letter-spacing: 0.08em; }
+  .col-left .word-card { background: #fff8f0; border: 1.5px solid #d47c1a; }
+  .col-left .hebrew    { color: #c0392b; }
+  .col-left .key-verse { background: #fdf3e3; border: 2px solid #d47c1a; }
+  .col-left .kv-label  { color: #d47c1a; }
+  .col-left .verdict   { border-top: 3px solid #c0392b; }
+
+  /* col-right accent = purple */
+  .col-right .beat { border-left: 3px solid #6c4bbf; padding-left: 11px; margin-bottom: 11px; }
+  .col-right .beat:last-child { margin-bottom: 0; }
+  .col-right .beat-ref  { font-size: 0.68rem; color: #6c4bbf; font-weight: 700; letter-spacing: 0.08em; }
+  .col-right .word-card { background: #f0ecfb; border: 1.5px solid #6c4bbf; }
+  .col-right .hebrew    { color: #6c4bbf; }
+  .col-right .key-verse { background: #f0ecfb; border: 2px solid #6c4bbf; }
+  .col-right .kv-label  { color: #6c4bbf; }
+  .col-right .verdict   { border-top: 3px solid #6c4bbf; }
+
+  /* shared internals */
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc  { font-size: 0.86rem; color: #444; line-height: 1.4; }
+
+  .word-card  { border-radius: 3px; padding: 11px 13px; margin-bottom: 9px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew     { font-size: 1.45rem; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.76rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.92rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note  { font-size: 0.84rem; color: #555; line-height: 1.4; }
+
+  .key-verse  { border-radius: 3px; padding: 13px 15px; }
+  .kv-label   { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; }
+  .kv-text    { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref     { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  .verdict    { background: #faf7f2; border-radius: 3px; padding: 12px 14px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; margin-bottom: 5px; }
+  .verdict-text  { font-size: 0.88rem; color: #333; line-height: 1.45; }
+
+  /* illus */
+  .illus { border-left: 3px solid #3b6fd4; padding-left: 11px; margin-bottom: 10px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-text { font-size: 0.87rem; color: #333; line-height: 1.45; }
+
+  /* ── BRIDGE ROW (full width) ── */
+  .bridge-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .bridge-card {
+    background: #2c2c2c; color: #f5f0e8;
+    border-radius: 3px; padding: 13px 14px;
+    text-align: center;
+  }
+  .bridge-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 5px; }
+  .bridge-title { font-family: 'Special Elite', serif; font-size: 0.95rem; margin-bottom: 4px; }
+  .bridge-text  { font-size: 0.8rem; line-height: 1.4; color: #ccc; }
+
+  /* col headers */
+  .col-header { text-align: center; padding: 10px 0 16px; }
+  .col-ref    { font-family: 'Special Elite', serif; font-size: 1.5rem; color: #2c2c2c; }
+  .col-subtitle { font-size: 0.85rem; color: #888; margin-top: 3px; }
+  .col-left  .col-ref { color: #c0392b; }
+  .col-right .col-ref { color: #6c4bbf; }
+
+  /* slope mini */
+  .slope { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; }
+  .slope-row { display: flex; align-items: center; gap: 6px; }
+  .slope-verb { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #c0392b; min-width: 54px; }
+  .slope-bar  { height: 5px; background: #c0392b; border-radius: 2px; }
+  .slope-note { font-size: 0.72rem; color: #777; }
+
+  /* verb chain */
+  .verb-chain { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; }
+  .verb-row   { display: flex; align-items: baseline; gap: 7px; }
+  .verb-heb   { font-family: 'Special Elite', serif; font-size: 0.85rem; color: #6c4bbf; min-width: 52px; }
+  .verb-eng   { font-size: 0.8rem; color: #555; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <h1>2 Samuel 11 × Psalm 51</h1>
+  <div class="subtitle">The Fall and the Return — same man, same God, 300 verses apart</div>
+</div>
+
+<!-- ARC STRIP -->
+<div class="arc-strip">
+  <div class="arc-node fall">
+    <div class="arc-ref">2 Samuel 11</div>
+    <div class="arc-title">The Fall</div>
+  </div>
+  <div class="arc-arrow">→</div>
+  <div class="arc-node hinge">
+    <div class="arc-ref">2 Samuel 12:1–14</div>
+    <div class="arc-title">The Confrontation</div>
+  </div>
+  <div class="arc-arrow">→</div>
+  <div class="arc-node return">
+    <div class="arc-ref">Psalm 51</div>
+    <div class="arc-title">The Return</div>
+  </div>
+</div>
+
+<div class="diptych">
+
+  <!-- LEFT: 2 Samuel 11 -->
+  <div class="col col-left">
+
+    <div class="col-header">
+      <div class="col-ref">2 Samuel 11</div>
+      <div class="col-subtitle">The Anatomy of a Fall</div>
+    </div>
+
+    <!-- Structure -->
+    <div class="card">
+      <div class="card-label">Structure — 3 Movements</div>
+      <div class="beat">
+        <div class="beat-ref">V. 1</div>
+        <div class="beat-title">The Stay</div>
+        <div class="beat-desc">Spring — when kings go to war. David remains. The fall begins not with the glance but with the abdication.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 2–17</div>
+        <div class="beat-title">The Escalation</div>
+        <div class="beat-desc">No single moment of decision — only a slope. Saw → inquired → took → covered → killed. Each step morally continuous with the last.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 26–27</div>
+        <div class="beat-title">The Verdict</div>
+        <div class="beat-desc">"The thing David had done displeased the LORD." Seven words. The storm is coming.</div>
+      </div>
+      <div class="slope">
+        <div class="slope-row"><div class="slope-verb">Saw</div><div class="slope-bar" style="width:22px;"></div><div class="slope-note">v.2</div></div>
+        <div class="slope-row"><div class="slope-verb">Inquired</div><div class="slope-bar" style="width:38px;"></div><div class="slope-note">v.3</div></div>
+        <div class="slope-row"><div class="slope-verb">Sent</div><div class="slope-bar" style="width:58px;"></div><div class="slope-note">v.4</div></div>
+        <div class="slope-row"><div class="slope-verb">Took</div><div class="slope-bar" style="width:76px;"></div><div class="slope-note">v.4</div></div>
+        <div class="slope-row"><div class="slope-verb">Covered</div><div class="slope-bar" style="width:96px;"></div><div class="slope-note">vv.6–13</div></div>
+        <div class="slope-row"><div class="slope-verb">Killed</div><div class="slope-bar" style="width:118px; background:#8b0000;"></div><div class="slope-note">vv.14–17</div></div>
+      </div>
+    </div>
+
+    <!-- Word studies -->
+    <div class="card">
+      <div class="card-label">Key Words</div>
+      <div class="word-card">
+        <div class="hebrew">שָׁלַח</div>
+        <div class="transliteration">šālaḥ — "sent"</div>
+        <div class="word-gloss">The chapter's governing verb</div>
+        <div class="word-note">Appears 8×. David sends for Bathsheba, sends Uriah home, sends the death-letter. Royal authority turned into a weapon.</div>
+      </div>
+      <div class="word-card">
+        <div class="hebrew">יָשַׁב</div>
+        <div class="transliteration">yāšab — "remained / stayed"</div>
+        <div class="word-gloss">The verb that starts everything</div>
+        <div class="word-note">v.1 — "But David remained in Jerusalem." Position without engagement. The first domino falls silently.</div>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="card">
+      <div class="card-label">Illustration</div>
+      <div class="illus">
+        <div class="illus-text">Uriah's loyalty (vv.11–13) is the chapter's silent indictment. While David schemes, Uriah refuses to go home: "The ark and Israel are staying in tents — how can I go to my house?" The soldier is more honourable than the king. The text never calls this out. It doesn't have to.</div>
+      </div>
+    </div>
+
+    <!-- Key verse -->
+    <div class="key-verse">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"But the thing that David had done displeased the LORD."</div>
+      <div class="kv-ref">2 Samuel 11:27b</div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="verdict">
+      <div class="verdict-label">What This Chapter Is</div>
+      <div class="verdict-text">A case study in how power corrupts — not through a single dramatic choice but through a sequence of small yeses, each one barely larger than the last. The chapter is not an anomaly. It is a warning about the ordinary mechanics of abuse.</div>
+    </div>
+
+  </div>
+
+  <!-- SPINE -->
+  <div class="spine">
+    <div class="spine-dot"></div>
+    <div class="spine-line"></div>
+    <div class="spine-dot"></div>
+    <div class="spine-line"></div>
+    <div class="spine-dot"></div>
+    <div class="spine-line"></div>
+    <div class="spine-dot"></div>
+    <div class="spine-line"></div>
+  </div>
+
+  <!-- RIGHT: Psalm 51 -->
+  <div class="col col-right">
+
+    <div class="col-header">
+      <div class="col-ref">Psalm 51</div>
+      <div class="col-subtitle">The Anatomy of Repentance</div>
+    </div>
+
+    <!-- Structure -->
+    <div class="card">
+      <div class="card-label">Structure — 3 Movements</div>
+      <div class="beat">
+        <div class="beat-ref">VV. 1–5</div>
+        <div class="beat-title">Appeal</div>
+        <div class="beat-desc">Ground the request in God's <em>ḥesed</em> — not David's track record. Full confession without minimising. Traces guilt back to birth.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 6–12</div>
+        <div class="beat-title">Request</div>
+        <div class="beat-desc">Outside-in: cleanse the deed → renew the heart → restore the Spirit. Three cleansing verbs give way to the one creative verb: <em>bārāʾ</em>.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">VV. 13–19</div>
+        <div class="beat-title">Vow</div>
+        <div class="beat-desc">The healed man becomes the teacher. "A broken and contrite heart, O God, you will not despise."</div>
+      </div>
+      <div class="verb-chain" style="margin-top:10px; border-top:1px solid #e0d8cc; padding-top:8px;">
+        <div style="font-size:0.62rem; text-transform:uppercase; letter-spacing:0.12em; color:#888; margin-bottom:4px;">The Cleansing Sequence</div>
+        <div class="verb-row"><div class="verb-heb">מָחָה</div><div class="verb-eng"><em>māḥâ</em> — blot out · erase the ledger</div></div>
+        <div class="verb-row"><div class="verb-heb">כָּבַס</div><div class="verb-eng"><em>kābaś</em> — wash · vigorous scrubbing</div></div>
+        <div class="verb-row"><div class="verb-heb">טָהֵר</div><div class="verb-eng"><em>ṭāhēr</em> — cleanse · ritual purity</div></div>
+        <div class="verb-row" style="margin-top:4px;"><div class="verb-heb" style="color:#2c2c2c; font-weight:700;">↓ בָּרָא</div><div class="verb-eng" style="color:#6c4bbf; font-weight:600;"><em>bārāʾ</em> — create · new creation</div></div>
+      </div>
+    </div>
+
+    <!-- Word studies -->
+    <div class="card">
+      <div class="card-label">Key Words</div>
+      <div class="word-card">
+        <div class="hebrew">חֶסֶד</div>
+        <div class="transliteration">ḥesed — "unfailing / covenant love"</div>
+        <div class="word-gloss">The psalm's first anchor (v.1)</div>
+        <div class="word-note">Repentance runs toward God's character, not merely away from punishment. The covenant is still the ground — David reaches for it even here.</div>
+      </div>
+      <div class="word-card">
+        <div class="hebrew">בָּרָא</div>
+        <div class="transliteration">bārāʾ — "create"</div>
+        <div class="word-gloss">The Genesis-1 verb (v.10)</div>
+        <div class="word-note">Used exclusively with God as subject in the Hebrew Bible. David isn't asking for moral improvement — he's asking for a new creation. Only God <em>bārāʾ</em>.</div>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="card">
+      <div class="card-label">Illustration</div>
+      <div class="illus">
+        <div class="illus-text">"Against you, you only, have I sinned" (v.4) is not denial of harm to Bathsheba and Uriah — it's theological precision. All sin is ultimately revolt against the Creator. David has already named those he hurt. This verse raises his eyes to see whose law he shattered. The confession gets larger, not smaller.</div>
+      </div>
+    </div>
+
+    <!-- Key verse -->
+    <div class="key-verse">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"Create in me a clean heart, O God, and renew a right spirit within me."</div>
+      <div class="kv-ref">Psalm 51:10</div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="verdict">
+      <div class="verdict-label">What This Psalm Is</div>
+      <div class="verdict-text">The template for genuine repentance: theological clarity about what sin is (revolt against God), what is needed (new creation — not self-improvement), and who alone can provide it. It has been the church's primary penitential text for three millennia because the problem and the solution haven't changed.</div>
+    </div>
+
+  </div>
+
+  <!-- BRIDGE ROW -->
+  <div class="bridge-row">
+    <div class="bridge-card">
+      <div class="bridge-label">The Gap Between</div>
+      <div class="bridge-title">2 Samuel 12</div>
+      <div class="bridge-text">Nathan's parable forces the hinge. Without the confrontation, there is no Psalm 51. The prophet is the bridge between the fall and the return.</div>
+    </div>
+    <div class="bridge-card">
+      <div class="bridge-label">Same Man, Opposite Direction</div>
+      <div class="bridge-title">šālaḥ → ḥesed</div>
+      <div class="bridge-text">Ch.11: David "sends" to take. Ps.51: David appeals to God's "steadfast love." The king who reached for what wasn't his now reaches toward the God who can give what he needs.</div>
+    </div>
+    <div class="bridge-card">
+      <div class="bridge-label">Same Verb, Different Subject</div>
+      <div class="bridge-title">בָּרָא (create)</div>
+      <div class="bridge-text">Genesis 1: God creates the world. Psalm 51:10: David asks God to create a new heart. The solution to the fall is not reformation — it's a new Genesis in the interior.</div>
+    </div>
+    <div class="bridge-card">
+      <div class="bridge-label">Cross-Bible Arc</div>
+      <div class="bridge-title">Ezekiel 36 → 2 Cor 5</div>
+      <div class="bridge-text">Ezek 36:26 answers the prayer from God's side. 2 Cor 5:17 announces its fulfilment: "the new creation has come." David prayed what Christ accomplished.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

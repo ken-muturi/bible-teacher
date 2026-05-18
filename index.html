@@ -35,6 +35,45 @@
   .badge-3col { background: #e0d8cc; color: #555; }
 
   .empty { font-size: 0.85rem; color: #aaa; font-style: italic; }
+
+  /* ── SKILLS SECTION ── */
+  .skills-section {
+    grid-column: 1 / -1;
+    background: #1a1a1a; border: 2.5px solid #1a1a1a;
+    border-radius: 4px; padding: 20px 22px;
+  }
+  .skills-section .section-label { color: #aaa; margin-bottom: 16px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+  .skill-card {
+    background: #2c2c2c; border-radius: 3px; padding: 13px 14px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .skill-name { font-family: 'Special Elite', serif; font-size: 1rem; color: #f5f0e8; }
+  .skill-desc { font-size: 0.75rem; color: #aaa; line-height: 1.35; }
+  .skill-trigger {
+    font-size: 0.7rem; color: #f5f0e8; background: #444;
+    border-radius: 2px; padding: 2px 7px; display: inline-block;
+    font-family: monospace; margin-top: 2px;
+  }
+  .skill-install {
+    display: flex; align-items: center; gap: 6px; margin-top: 4px;
+  }
+  .install-url {
+    font-size: 0.66rem; color: #888; font-family: monospace;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    flex: 1;
+  }
+  .copy-btn {
+    background: #3b6fd4; color: #fff; border: none; border-radius: 2px;
+    padding: 3px 9px; font-family: 'Caveat', cursive; font-size: 0.72rem;
+    cursor: pointer; flex-shrink: 0; transition: background 0.15s;
+  }
+  .copy-btn:hover { background: #2e5bb5; }
+  .copy-btn.copied { background: #2e8a4a; }
+  .install-hint {
+    font-size: 0.68rem; color: #666; margin-top: 2px; line-height: 1.3;
+  }
 </style>
 </head>
 <body>
@@ -79,17 +118,6 @@
       </div>
     </div>
 
-    <!-- COMPARISONS -->
-    <div class="section" style="grid-column: 1 / -1;">
-      <div class="section-label" style="color:#2e8a4a;">Book Comparisons</div>
-      <div class="guide-list" style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
-        <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/visuals/judges-amos-comparison.html">
-          <div class="card-book" style="color:#2c2c2c;">Judges × Amos</div>
-          <div class="card-type">Same failure, 300 years apart — neglect vs. injustice</div>
-        </a>
-      </div>
-    </div>
-
     <!-- DISCUSSION GUIDES -->
     <div class="section">
       <div class="section-label label-orange">Discussion Guides</div>
@@ -114,10 +142,105 @@
           <div class="card-book">Romans 8:1–11</div>
           <div class="card-type">Life in the Spirit</div>
         </a>
+        <a class="guide-card card-purple" href="guides/passages/2-samuel-11-study.html">
+          <div class="card-book">2 Samuel 11</div>
+          <div class="card-type">The anatomy of a fall</div>
+        </a>
+        <a class="guide-card card-purple" href="guides/passages/psalm-51-study.html">
+          <div class="card-book">Psalm 51</div>
+          <div class="card-type">The anatomy of repentance</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- COMPARISONS -->
+    <div class="section" style="grid-column: 1 / -1;">
+      <div class="section-label" style="color:#2e8a4a;">Book &amp; Passage Comparisons</div>
+      <div class="guide-list" style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
+        <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/visuals/judges-amos-comparison.html">
+          <div class="card-book" style="color:#2c2c2c;">Judges × Amos</div>
+          <div class="card-type">Same failure, 300 years apart — neglect vs. injustice</div>
+        </a>
+        <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/passages/david-fall-and-return.html">
+          <div class="card-book" style="color:#2c2c2c;">2 Samuel 11 × Psalm 51</div>
+          <div class="card-type">The fall and the return — same man, same God</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="skills-section">
+      <div class="section-label">Claude Code Skills — copy link · tell Claude "install this skill: [url]"</div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-name">Book Overview Infographic</div>
+          <div class="skill-desc">Generates a custom visual panel for any Bible book — layout adapts to the book's structure.</div>
+          <div class="skill-trigger">book-overview &lt;Book&gt;</div>
+          <div class="skill-install">
+            <span class="install-url">https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/book-overview-infographic/SKILL.md</span>
+            <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/book-overview-infographic/SKILL.md')">Copy</button>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-name">Passage Study</div>
+          <div class="skill-desc">Quick overview panel or full deep-dive for any verse or chapter — word studies, illustrations, Then→Now, xrefs.</div>
+          <div class="skill-trigger">passage-study &lt;ref&gt; [--deep]</div>
+          <div class="skill-install">
+            <span class="install-url">https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/passage-study/SKILL.md</span>
+            <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/passage-study/SKILL.md')">Copy</button>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-name">Discussion Guide</div>
+          <div class="skill-desc">Small-group study companion for any Bible book — questions, context, application, and facilitator notes.</div>
+          <div class="skill-trigger">discussion-guide &lt;Book&gt;</div>
+          <div class="skill-install">
+            <span class="install-url">https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/discussion-guide/SKILL.md</span>
+            <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/discussion-guide/SKILL.md')">Copy</button>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-name">Teacher Foundation</div>
+          <div class="skill-desc">Set your teaching tradition, preferred translation, and theology once — all skills inherit it automatically.</div>
+          <div class="skill-trigger">Edit foundation/teacher-foundation/SKILL.md</div>
+          <div class="skill-install">
+            <span class="install-url">https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/foundation/teacher-foundation/SKILL.md</span>
+            <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/foundation/teacher-foundation/SKILL.md')">Copy</button>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-name">Install Skill</div>
+          <div class="skill-desc">Meta-skill: install any skill from a URL. Fetch, write, confirm — one command.</div>
+          <div class="skill-trigger">install skill &lt;url&gt;</div>
+          <div class="skill-install">
+            <span class="install-url">https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md</span>
+            <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md')">Copy</button>
+          </div>
+          <div class="install-hint">Install this one first, then use it to install the rest.</div>
+        </div>
+
       </div>
     </div>
 
   </div>
+
+  <script>
+    function copySkill(btn, url) {
+      navigator.clipboard.writeText(url).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
 
 </body>
 </html>

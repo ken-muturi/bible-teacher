@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Psalm 51 — The Anatomy of Repentance</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8;
+    border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive;
+    font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.15rem; color: #555; margin-top: 4px; }
+  .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: #c0392b; text-decoration: none; border-bottom: 1px dashed #c0392b; }
+  .companion-link:hover { color: #8b0000; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; max-width: 1060px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 16px 18px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* structure */
+  .beat { border-left: 3px solid #6c4bbf; padding-left: 12px; margin-bottom: 12px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.7rem; color: #6c4bbf; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.88rem; color: #444; line-height: 1.4; }
+
+  /* word study */
+  .word-card { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 12px 14px; margin-bottom: 10px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #6c4bbf; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.78rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.95rem; color: #2c2c2c; font-weight: 700; margin: 4px 0 2px; }
+  .word-note { font-size: 0.85rem; color: #555; line-height: 1.4; }
+
+  /* cleansing verbs display */
+  .verb-chain { display: flex; flex-direction: column; gap: 6px; }
+  .verb-row { display: flex; align-items: baseline; gap: 8px; }
+  .verb-heb { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #6c4bbf; min-width: 60px; }
+  .verb-eng { font-size: 0.82rem; color: #555; }
+  .verb-arrow { color: #aaa; font-size: 0.8rem; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #2e8a4a; padding-left: 12px; margin-bottom: 12px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-text { font-size: 0.9rem; color: #333; line-height: 1.45; }
+
+  /* then-now */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.88rem; color: #333; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.95rem; line-height: 1.5; }
+
+  /* key verse */
+  .key-verse { background: #f0ecfb; border: 2px solid #6c4bbf; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6c4bbf; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.75rem; color: #888; margin-top: 5px; }
+
+  /* xref */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 8px; margin-bottom: 8px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #6c4bbf; }
+  .xref-note { font-size: 0.82rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* prayer movement diagram */
+  .prayer-move { display: flex; flex-direction: column; gap: 0; }
+  .pm-row { display: flex; align-items: stretch; gap: 0; }
+  .pm-verses { font-size: 0.72rem; color: #888; width: 52px; padding-top: 6px; text-align: right; padding-right: 8px; }
+  .pm-line { width: 3px; background: #6c4bbf; flex-shrink: 0; }
+  .pm-dot { width: 10px; height: 10px; border-radius: 50%; background: #6c4bbf; flex-shrink: 0; margin: 4px -3.5px 0 -3.5px; align-self: flex-start; margin-left: 0; }
+  .pm-content { padding: 4px 0 10px 10px; }
+  .pm-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; }
+  .pm-desc { font-size: 0.78rem; color: #555; }
+
+  /* superscription */
+  .superscription { background: #e8e0d4; border: 1.5px solid #aaa398; border-radius: 3px; padding: 10px 14px; margin-bottom: 10px; font-size: 0.85rem; color: #555; font-style: italic; line-height: 1.5; }
+  .sup-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #888; margin-bottom: 4px; font-style: normal; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <div class="ref">Psalm 51</div>
+  <div class="title">The Anatomy of Repentance</div>
+  <a class="companion-link" href="2-samuel-11-study.html">← Read with 2 Samuel 11 — The Anatomy of a Fall</a>
+</div>
+
+<div class="grid">
+
+  <!-- COL 1: Superscription + Structure -->
+  <div>
+    <div class="card">
+      <div class="card-label">Superscription</div>
+      <div class="superscription">
+        <div class="sup-label">Editorial Header</div>
+        "A psalm of David. When the prophet Nathan came to him after David had committed adultery with Bathsheba."
+      </div>
+      <div style="font-size:0.82rem; color:#666; line-height:1.4;">The psalm is anchored to a historical moment. This is not generic confession — it is the prayer of a specific man, crushed by a specific confrontation (2 Sam 12), for specific sins. The particularity makes it universal.</div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Structure — 3 Movements</div>
+
+      <div class="beat">
+        <div class="beat-ref">VV. 1–5</div>
+        <div class="beat-title">Appeal</div>
+        <div class="beat-desc">Ground the request in God's <em>ḥesed</em> and <em>raḥamîm</em> — not David's track record. Full confession without minimising: "my sin is always before me." Traces guilt back to birth.</div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-ref">VV. 6–12</div>
+        <div class="beat-title">Request</div>
+        <div class="beat-desc">Three cleansing verbs give way to the one creative verb. Outside-in: cleanse the deed → renew the heart → restore the Spirit. The great ask: "Create in me a clean heart."</div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-ref">VV. 13–19</div>
+        <div class="beat-title">Vow</div>
+        <div class="beat-desc">The healed man becomes the teacher of other sinners. Praise and testimony replace mere sacrifice. "A broken and contrite heart, O God, you will not despise."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 2: Word Studies + Cleansing Verbs + Illustration -->
+  <div>
+    <div class="card">
+      <div class="card-label">Word Studies</div>
+
+      <div class="word-card">
+        <div class="hebrew">חֶסֶד</div>
+        <div class="transliteration">ḥesed — "unfailing / covenant love"</div>
+        <div class="word-gloss">The psalm's first anchor (v.1)</div>
+        <div class="word-note">Repentance begins by running <em>toward</em> God's character, not merely away from punishment. David's appeal is not "I'm sorry, please don't punish me" but "Your <em>ḥesed</em> is the reason I can even ask this." The covenant remains the ground.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">בָּרָא</div>
+        <div class="transliteration">bārāʾ — "create"</div>
+        <div class="word-gloss">The Genesis-1 verb (v.10)</div>
+        <div class="word-note">In the Hebrew Bible, <em>bārāʾ</em> is used exclusively with God as subject. It describes creation from nothing — ex nihilo. David isn't asking for moral improvement or discipline. He's asking for a new creation. Only God does this.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">The Cleansing Sequence (vv.1–2, 7)</div>
+      <div class="verb-chain">
+        <div class="verb-row">
+          <div class="verb-heb">מָחָה</div>
+          <div class="verb-eng"><em>māḥâ</em> — blot out · like erasing a debt ledger</div>
+        </div>
+        <div class="verb-row">
+          <div class="verb-heb">כָּבַס</div>
+          <div class="verb-eng"><em>kābaś</em> — wash · vigorous laundry scrubbing</div>
+        </div>
+        <div class="verb-row">
+          <div class="verb-heb">טָהֵר</div>
+          <div class="verb-eng"><em>ṭāhēr</em> — cleanse · ritual purity restoration</div>
+        </div>
+        <div style="font-size:0.78rem; color:#888; margin-top:6px; border-top:1px solid #e0d8cc; padding-top:6px;">Three different images of removal → all converging on v.10: <strong>בָּרָא</strong> (create). The debris is cleared to expose what must be remade from the foundation.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Illustrations</div>
+
+      <div class="illus">
+        <div class="illus-text">"Against you, you only, have I sinned" (v.4) is not a denial of harm to Bathsheba and Uriah — it's theological precision. All sin is ultimately a revolt against the Creator. David has just admitted to Bathsheba and Uriah's names being on the ledger. This verse raises his eyes to see whose law he shattered.</div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-text">The psalm moves from plural washing verbs (blot, wash, cleanse — 3 different words in 2 verses) to a single request: one clean heart. The external debris is removed layer by layer to expose the core problem — not the acts, but the heart that generated them.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COL 3: Key Verse, Then/Now, Xrefs, Verdict -->
+  <div>
+    <div class="key-verse">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"Create in me a clean heart, O God, and renew a right spirit within me."</div>
+      <div class="kv-ref">Psalm 51:10</div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Then → Now</div>
+      <div class="then-now-grid">
+        <div class="tn-box tn-then">
+          <div class="tn-label">Then · ~1000 BC</div>
+          <div class="tn-text">The Temple system offered atoning sacrifice. But David perceives something the system alone can't provide: inner transformation. "You do not delight in sacrifice" (v.16) — the ritual points past itself.</div>
+        </div>
+        <div class="tn-box tn-now">
+          <div class="tn-label">Now</div>
+          <div class="tn-text">Catholic, Anglican, Lutheran, and Orthodox liturgies still use Psalm 51 as the primary penitential text. The mechanism hasn't changed: genuine repentance is the appeal to God's character, not religious performance.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">Cross-References</div>
+
+      <div class="xref-item">
+        <div class="xref-ref">Ezekiel 36:26–27</div>
+        <div class="xref-note">God's answer to this prayer from the other side: "I will give you a new heart and put a new spirit in you." David asks; Ezekiel announces God's intention to do exactly that — unilaterally.</div>
+      </div>
+
+      <div class="xref-item">
+        <div class="xref-ref">2 Corinthians 5:17</div>
+        <div class="xref-note">"If anyone is in Christ, the new creation has come." The <em>bārāʾ</em> of Psalm 51:10 lands here — the new-creation act David prayed for is accomplished in union with Christ.</div>
+      </div>
+
+      <div class="xref-item">
+        <div class="xref-ref">Luke 18:13</div>
+        <div class="xref-note">The tax collector's prayer — "God, have mercy on me, a sinner" — is the distillation of Psalm 51. Jesus calls it the prayer God hears over the Pharisee's self-accounting.</div>
+      </div>
+    </div>
+
+    <div class="verdict" style="margin-top:14px;">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-text">Psalm 51 teaches that genuine repentance is not self-flagellation or performance — it is theological clarity: knowing what sin is (revolt against God), knowing what we need (new creation), and knowing who can provide it (the God of <em>ḥesed</em>). David's prayer is the template because the problem and the solution haven't changed.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
