@@ -109,6 +109,7 @@ Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/h
 | **Passage Study** | `passage-study <ref>` | Quick overview panel for any verse or chapter |
 | **Passage Study (deep)** | `passage-study <ref> --deep` | Full exegetical study — word studies, commentaries, illustrations, chat brief + rich HTML panel |
 | **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any book |
+| **Bible Timeline & Family Tree** | `bible-timeline <query>` | Family tree + lifespan timeline for any biblical figure, era, or the full Adam-to-Jesus overview |
 | **Install Skill** | `install skill <url>` or `install skills from <repo>` | Installs one skill or all skills from a GitHub repo |
 
 ---
@@ -167,6 +168,29 @@ Side-by-side panels showing two books or passages in parallel.
 Output: `guides/visuals/<name>-comparison.html` or `guides/passages/<name>.html`
 
 ![2 Samuel 11 × Psalm 51 — The Fall and the Return](guides/visuals/screenshots/david-fall-and-return.png)
+
+### Timelines & Family Trees
+
+Visual panels showing who lived when, how they were related, who was alive at the same time, and which books were written during each era.
+
+| Query | What is generated |
+|-------|------------------|
+| `bible-timeline <person>` | Family tree + contemporaries + books for that figure (e.g. `bible-timeline Moses`) |
+| `bible-timeline <family>` | Genealogical tree for a clan (e.g. `bible-timeline Patriarchs`, `bible-timeline David's line`) |
+| `bible-timeline <period>` | All major figures in that era + books (e.g. `bible-timeline exile`) |
+| `bible-timeline full` | Full overview — Adam to Jesus |
+
+Each panel includes:
+- **Era bands** — colour-coded from Antediluvian through New Testament
+- **Lifespan bars** — horizontal bars showing when each figure lived (AM + BC dates)
+- **Family tree** — genealogical connections with messianic line highlighted
+- **Contemporaries** — who was alive at the same time (e.g. Abraham could have met Shem; Jeremiah and Daniel were both alive at the fall of Jerusalem)
+- **Books in context** — which biblical books were written or set in each era
+- **Structural pivots** — why Levi became priests, why Judah holds the scepter, why Ephraim overtook Manasseh, the Melchizedek mystery, and more
+
+Also available: **The Spine of Biblical History** — 20 pivotal events with books written, prophets active, excluded/lost books, and the full canon formation story (Protestant 66 vs Catholic 73 vs Orthodox 78).
+
+Output: `guides/visuals/bible-timeline-<query>.html`
 
 ### Discussion Guides
 One-page printable HTML companion for small groups, classrooms, or self-study.
