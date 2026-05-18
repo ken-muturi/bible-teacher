@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>God's Power to Raise — Amos 9:11 & Samson</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8; border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive; font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .sermon-title { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .sermon-sub { font-size: 1rem; color: #666; margin-top: 5px; }
+  .anchor-refs { font-size: 0.85rem; color: #2e8a4a; margin-top: 6px; font-weight: 700; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card + .card { margin-top: 14px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* big idea */
+  .big-idea { background: #1a1a1a; border-radius: 3px; padding: 14px 16px; }
+  .bi-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; margin-bottom: 6px; }
+  .bi-text { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #f5f0e8; line-height: 1.5; }
+
+  /* key verse */
+  .key-verse { background: #eaf4ee; border: 2px solid #2e8a4a; border-radius: 3px; padding: 13px 15px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #2e8a4a; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* word cards */
+  .word-card { background: #eaf4ee; border: 1.5px solid #2e8a4a; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .word-card.samson { background: #fff8f0; border-color: #d47c1a; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.4rem; font-weight: 700; direction: rtl; }
+  .word-card .hebrew { color: #2e8a4a; }
+  .word-card.samson .hebrew { color: #d47c1a; }
+  .transliteration { font-size: 0.74rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.9rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.81rem; color: #555; line-height: 1.4; }
+
+  /* samson arc */
+  .arc-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .arc-step:last-child { margin-bottom: 0; }
+  .arc-num { font-family: 'Special Elite', serif; font-size: 1.1rem; min-width: 22px; flex-shrink: 0; }
+  .arc-down { color: #c0392b; }
+  .arc-turn { color: #2e8a4a; }
+  .arc-content { flex: 1; }
+  .arc-ref { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; }
+  .arc-ref.down { color: #c0392b; }
+  .arc-ref.turn { color: #2e8a4a; }
+  .arc-title { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 2px; }
+  .arc-desc { font-size: 0.81rem; color: #444; line-height: 1.38; }
+  .arc-tragic { font-size: 0.78rem; color: #c0392b; font-style: italic; margin-top: 3px; }
+  .arc-key { font-size: 0.78rem; color: #2e8a4a; font-style: italic; margin-top: 3px; font-weight: 700; }
+
+  /* sermon movements */
+  .movement { border-left: 4px solid; padding: 11px 13px; margin-bottom: 11px; border-radius: 0 3px 3px 0; }
+  .movement:last-child { margin-bottom: 0; }
+  .mov-1 { border-color: #c0392b; background: #ffeaea; }
+  .mov-2 { border-color: #2e8a4a; background: #eaf4ee; }
+  .mov-3 { border-color: #3b6fd4; background: #eef2fb; }
+  .mov-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 3px; }
+  .mov-1 .mov-label { color: #c0392b; }
+  .mov-2 .mov-label { color: #2e8a4a; }
+  .mov-3 .mov-label { color: #3b6fd4; }
+  .mov-title { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; margin-bottom: 4px; }
+  .mov-anchors { font-size: 0.7rem; color: #888; margin-bottom: 5px; font-style: italic; }
+  .mov-desc { font-size: 0.83rem; color: #333; line-height: 1.42; }
+  .mov-illus { font-size: 0.78rem; color: #666; font-style: italic; border-left: 2px solid #ccc; padding-left: 8px; margin-top: 7px; line-height: 1.38; }
+
+  /* comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .compare-table th { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; padding: 5px 8px; text-align: left; border-bottom: 2px solid #2c2c2c; }
+  .compare-table td { padding: 6px 8px; border-bottom: 1px solid #e0d8cc; vertical-align: top; line-height: 1.35; color: #333; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .col-amos { color: #2e8a4a; font-weight: 700; font-family: 'Special Elite', serif; }
+  .col-samson { color: #d47c1a; font-weight: 700; font-family: 'Special Elite', serif; }
+
+  /* pressure points */
+  .pressure { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 10px 12px; margin-bottom: 8px; }
+  .pressure:last-child { margin-bottom: 0; }
+  .pressure-q { font-size: 0.86rem; color: #d47c1a; font-weight: 700; margin-bottom: 3px; }
+  .pressure-a { font-size: 0.8rem; color: #444; line-height: 1.38; }
+
+  /* then-now */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.83rem; color: #333; line-height: 1.4; }
+
+  /* xref */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 7px; margin-bottom: 7px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2e8a4a; }
+  .xref-note { font-size: 0.79rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.9rem; line-height: 1.52; }
+
+  /* tragic verse callout */
+  .tragic-verse { background: #ffeaea; border: 2px solid #c0392b; border-radius: 3px; padding: 12px 14px; }
+  .tv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
+  .tv-text { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .tv-note { font-size: 0.8rem; color: #555; margin-top: 6px; line-height: 1.38; }
+
+  /* hair verse callout */
+  .hair-verse { background: #eaf4ee; border: 2px solid #2e8a4a; border-radius: 3px; padding: 12px 14px; }
+  .hv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #2e8a4a; font-weight: 700; margin-bottom: 5px; }
+  .hv-text { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .hv-note { font-size: 0.8rem; color: #555; margin-top: 6px; line-height: 1.38; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <div class="sermon-title">God's Power to Raise</div>
+  <div class="sermon-sub">A Teaching on Restoration, Ruin, and the God Who Rebuilds</div>
+  <div class="anchor-refs">Amos 9:11 · Judges 13–16 (Samson)</div>
+</div>
+
+<div class="grid">
+
+  <!-- COL 1: Big Idea + Amos 9:11 words + Samson Arc -->
+  <div>
+
+    <div class="big-idea">
+      <div class="bi-label">The Big Idea</div>
+      <div class="bi-text">God does not abandon what He built just because it has collapsed. The fallen booth, the blind prisoner, the ruined life — these are not the end of the story. They are the setting for His most dramatic act of raising power.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Amos 9:11 — Key Words</div>
+
+      <div class="word-card">
+        <div class="hebrew">סֻכַּת</div>
+        <div class="transliteration">sukkāt — "booth / tent / shelter"</div>
+        <div class="word-gloss">Not the Temple — a field booth</div>
+        <div class="word-note">God deliberately chooses the humblest word. The Davidic dynasty is not called a palace — it is a leaky field shelter. He names the collapse for what it is before raising it.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">הַנֹּפֶלֶת</div>
+        <div class="transliteration">hannōpelet — "the fallen one"</div>
+        <div class="word-gloss">Active participle — currently fallen</div>
+        <div class="word-note">Not "was fallen." Present tense. God speaks the raising promise while the booth is still down. He does not wait for signs of life before announcing restoration.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">אָקִים</div>
+        <div class="transliteration">āqîm — "I will raise / lift up"</div>
+        <div class="word-gloss">God is the subject — not the booth</div>
+        <div class="word-note">The fallen booth does not raise itself. The verb's subject is entirely God. This is the grammar of grace — the initiative belongs to the one who raises, not the one who fell.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Samson's Arc — Judges 13–16</div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-turn">↑</div>
+        <div class="arc-content">
+          <div class="arc-ref turn">CH. 13</div>
+          <div class="arc-title">Set Apart</div>
+          <div class="arc-desc">Miraculous birth. Nazirite vow from the womb. The Spirit comes upon him (13:25). Built for purpose before he takes his first breath.</div>
+        </div>
+      </div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-down">↘</div>
+        <div class="arc-content">
+          <div class="arc-ref down">CHS. 14–15</div>
+          <div class="arc-title">Progressive Compromise</div>
+          <div class="arc-desc">Philistine wife. The riddle. Foxes and torches. Each entanglement deeper than the last. The Spirit still comes — but the choices grow darker.</div>
+        </div>
+      </div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-down">↓</div>
+        <div class="arc-content">
+          <div class="arc-ref down">16:1–16</div>
+          <div class="arc-title">The Three Lies</div>
+          <div class="arc-desc">Delilah asks the secret three times. Three lies — each one bringing the enemy closer. Then: <em>"with such nagging she prodded him day after day until he was sick to death of it."</em> Weariness is how the enemy gets the secret.</div>
+        </div>
+      </div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-down">↓</div>
+        <div class="arc-content">
+          <div class="arc-ref down">16:17–21</div>
+          <div class="arc-title">The Fall</div>
+          <div class="arc-desc">He tells her everything. The shaving. He wakes and shakes himself as before.</div>
+          <div class="arc-tragic">"He did not know that the LORD had left him." (16:20) — the most tragic verse in Judges</div>
+        </div>
+      </div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-turn">→</div>
+        <div class="arc-content">
+          <div class="arc-ref turn">16:22</div>
+          <div class="arc-title">The Hair Begins to Grow</div>
+          <div class="arc-desc">While he is still in prison. Before the prayer. Before any act of faith. The first movement of restoration is God's.</div>
+          <div class="arc-key">"But the hair of his head began to grow again." — the smallest verse with the biggest weight</div>
+        </div>
+      </div>
+
+      <div class="arc-step">
+        <div class="arc-num arc-turn">↑</div>
+        <div class="arc-content">
+          <div class="arc-ref turn">16:28–30</div>
+          <div class="arc-title">The Prayer and the Raising</div>
+          <div class="arc-desc">"Sovereign LORD, remember me. Please, God, strengthen me just once more." No bargaining. No promises. Just: <em>remember me.</em> God answers. The pillars fall. More in death than in life.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COL 2: Sermon Movements + Two Callouts + Compare Table -->
+  <div>
+
+    <div class="card">
+      <div class="card-label">Three Sermon Movements</div>
+
+      <div class="movement mov-1">
+        <div class="mov-label">Movement 1</div>
+        <div class="mov-title">God Names the Ruins Honestly</div>
+        <div class="mov-anchors">Amos 9:11a · Judges 16:20–21</div>
+        <div class="mov-desc">He doesn't call the booth a palace. He doesn't pretend Samson is still standing. The God who raises is also the God who sees clearly. He raises <em>from</em> the ruins — not around them. The honesty of "the fallen booth" and "he did not know the LORD had left him" is not condemnation — it is the prerequisite for genuine restoration.</div>
+        <div class="mov-illus">A surgeon who lies about the diagnosis cannot heal. God's willingness to name the collapse exactly is what makes his promise to raise it credible.</div>
+      </div>
+
+      <div class="movement mov-2">
+        <div class="mov-label">Movement 2</div>
+        <div class="mov-title">The Hair Begins to Grow</div>
+        <div class="mov-anchors">Judges 16:22 · Amos 9:11b</div>
+        <div class="mov-desc">Before the prayer. Before the act of faith. While Samson is still chained to the millstone. The first movement of restoration is God's — not ours. The booth does not prop itself up. The hair grows in the dark, unnoticed, unannounced. Something is being rebuilt before you can see it.</div>
+        <div class="mov-illus">Grace often precedes awareness. The restoration has begun before the prayer is formed. The "day" of Amos 9:11 is God's initiative, not Israel's recovery plan.</div>
+      </div>
+
+      <div class="movement mov-3">
+        <div class="mov-label">Movement 3</div>
+        <div class="mov-title">Strength for the Moment That Matters</div>
+        <div class="mov-anchors">Judges 16:28–30 · Amos 9:12 + Acts 15:16–17</div>
+        <div class="mov-desc">Samson doesn't get his eyes back. He doesn't walk out of prison as before. He gets strength <em>for the moment that counts</em>. The restored booth in Amos isn't Israel returning to Solomon's golden age — it's a remnant inheriting a bigger purpose. God raises things <em>forward</em>, not just back.</div>
+        <div class="mov-illus">James quotes Amos 9:11 at the Jerusalem Council to justify including Gentiles (Acts 15:16–17). The raised booth became the church — more than anyone who heard Amos originally imagined.</div>
+      </div>
+    </div>
+
+    <div class="tragic-verse" style="margin-top:14px;">
+      <div class="tv-label">The Most Dangerous Verse — Judges 16:20</div>
+      <div class="tv-text">"He did not know that the LORD had left him."</div>
+      <div class="tv-note">Sin's most dangerous effect is not guilt — it is anaesthesia. You stop feeling the absence. Samson shook himself "as at other times" — his muscle memory was intact, but the power was gone. The terrifying thing is not that God left. It is that Samson did not notice.</div>
+    </div>
+
+    <div class="hair-verse" style="margin-top:14px;">
+      <div class="hv-label">The Turning Verse — Judges 16:22</div>
+      <div class="hv-text">"But the hair of his head began to grow again after it had been shaved."</div>
+      <div class="hv-note">The shortest verse in the Samson narrative — and the most important. Placed before the prayer, before repentance, before anything Samson does. God moves first. The "but" (וַיָּחֶל) is the hinge of the whole story.</div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <div class="card-label">The Two Texts Side by Side</div>
+      <table class="compare-table">
+        <tr>
+          <th></th>
+          <th class="col-amos">Amos 9:11</th>
+          <th class="col-samson">Samson</th>
+        </tr>
+        <tr>
+          <td>What fell</td>
+          <td>David's dynasty — a nation</td>
+          <td>A consecrated man</td>
+        </tr>
+        <tr>
+          <td>Cause of fall</td>
+          <td>Covenant failure, injustice</td>
+          <td>Compromise, entanglement</td>
+        </tr>
+        <tr>
+          <td>Condition when God acts</td>
+          <td>Currently fallen (active participle)</td>
+          <td>Blind, chained, mocked</td>
+        </tr>
+        <tr>
+          <td>Who moves first</td>
+          <td>God — <em>āqîm</em> (I will raise)</td>
+          <td>God — hair grows before prayer</td>
+        </tr>
+        <tr>
+          <td>The outcome</td>
+          <td>Greater than before (Acts 15)</td>
+          <td>More in death than in life</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- COL 3: Key Verse + Pressure Points + Xrefs + Then/Now + Verdict -->
+  <div>
+
+    <div class="key-verse">
+      <div class="kv-label">Anchor Text — Amos 9:11</div>
+      <div class="kv-text">"In that day I will restore David's fallen shelter — I will repair its broken walls and restore its ruins — and will rebuild it as it used to be."</div>
+      <div class="kv-ref">Amos 9:11 (NIV)</div>
+    </div>
+
+    <div class="key-verse" style="margin-top:10px; background:#fdf3e3; border-color:#d47c1a;">
+      <div class="kv-label" style="color:#d47c1a;">Samson's Final Prayer — Judges 16:28</div>
+      <div class="kv-text">"Sovereign LORD, remember me. Please, God, strengthen me just once more."</div>
+      <div class="kv-ref">Judges 16:28 (NIV)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Pressure Points for the Teacher</div>
+
+      <div class="pressure">
+        <div class="pressure-q">Was Samson's death suicide or sacrifice?</div>
+        <div class="pressure-a">Judges gives no verdict — the text is intentionally ambiguous. The author focuses on the prayer and the result, not the ethics of the method. Hebrews 11:32 lists Samson among the heroes of faith without resolving this.</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">Did God restore Samson because of the prayer, or had it already begun (v.22)?</div>
+        <div class="pressure-a">Both. The hair growing (v.22) shows God's prior grace; the prayer (v.28) shows Samson's response to what he sensed. Grace precedes, response follows — neither cancels the other.</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">Amos 9:11 speaks to a nation — how does it apply to individuals?</div>
+        <div class="pressure-a">The principle is the character of God, not just the specific promise. A God who rebuilds fallen dynasties is the same God who rebuilds fallen people. Samson's story is the personal illustration of the national promise.</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">"Once more" — is this repentance or just a request for power?</div>
+        <div class="pressure-a">The prayer is minimal — "remember me" (covenant language) and "strengthen me." There is no elaborate confession. God answers anyway. This is not an endorsement of prayerlessness — it is evidence that even a cry from the ruins is enough.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Cross-References</div>
+
+      <div class="xref-item">
+        <div class="xref-ref">Acts 15:16–17</div>
+        <div class="xref-note">James quotes Amos 9:11 at the Jerusalem Council to justify Gentile inclusion. The raised booth of David = the church. God raised it bigger than it ever was.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Hebrews 11:32</div>
+        <div class="xref-note">Samson listed among the heroes of faith — alongside Gideon, Barak, David. The NT does not overlook the failure; it includes him anyway. That is the point.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Ezekiel 37:1–14</div>
+        <div class="xref-note">Valley of dry bones — the same raising power applied to a whole nation. "Can these bones live?" is the same question as "can this booth be raised?" Same answer.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Romans 8:11</div>
+        <div class="xref-note">"He who raised Christ from the dead will also give life to your mortal bodies." The raising power is not retired. It is resident.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Judges 16:30b</div>
+        <div class="xref-note">"He killed many more when he died than while he lived." The greatest act of raising power came through the ruins — not despite them.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Then → Now</div>
+      <div class="then-now-grid">
+        <div class="tn-box tn-then">
+          <div class="tn-label">Then</div>
+          <div class="tn-text">Amos preached to a prosperous, self-satisfied nation that could not imagine collapse. Samson had every gift and squandered them. Both are pictures of covenant people who experienced God's absence after sustained unfaithfulness.</div>
+        </div>
+        <div class="tn-box tn-now">
+          <div class="tn-label">Now</div>
+          <div class="tn-text">The sermon addresses anyone who has experienced gifting followed by failure — and is wondering if what collapsed can be raised. The answer from both texts: God raises things <em>forward</em>, not just back. The raised thing is often greater than the original.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict" style="margin-top:14px;">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-text">The God of Amos 9:11 is a God who walks into a field of rubble and says "I will rebuild this." The God of Judges 16 is a God who watches a man grind grain in the dark and starts growing his hair back before the man has even prayed. The ruins are not the verdict. They are the address where God shows up.</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

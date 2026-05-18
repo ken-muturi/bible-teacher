@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hosea — The Wounded Husband</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #2c2c2c; color: #f5f0e8; border: none; border-radius: 3px;
+    padding: 8px 18px; font-family: 'Caveat', cursive; font-size: 1rem; cursor: pointer; z-index: 1000;
+  }
+  .print-btn:hover { background: #444; }
+  @media print { .print-btn { display: none !important; } }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .book-title { font-family: 'Special Elite', serif; font-size: 2.4rem; color: #2c2c2c; letter-spacing: 0.08em; }
+  .book-subtitle { font-size: 1.1rem; color: #555; margin-top: 4px; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card + .card { margin-top: 14px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* identity */
+  .id-row { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #e8e0d0; padding-bottom: 5px; margin-bottom: 5px; }
+  .id-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .id-label { font-size: 0.72rem; color: #888; }
+  .id-value { font-size: 0.82rem; color: #2c2c2c; text-align: right; max-width: 62%; }
+
+  /* children names */
+  .child-card { border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .child-card:last-child { margin-bottom: 0; }
+  .child-down { background: #ffeaea; border: 1.5px solid #c0392b; }
+  .child-up   { background: #eaf4ee; border: 1.5px solid #2e8a4a; }
+  .child-hebrew { font-size: 1.2rem; font-weight: 700; direction: rtl; }
+  .child-down .child-hebrew { color: #c0392b; }
+  .child-up   .child-hebrew { color: #2e8a4a; }
+  .child-trans { font-size: 0.72rem; color: #888; font-style: italic; }
+  .child-meaning { font-size: 0.88rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .child-note { font-size: 0.8rem; line-height: 1.38; }
+  .child-down .child-note { color: #7a3030; }
+  .child-up   .child-note { color: #2a6040; }
+  .reversal { font-size: 0.74rem; color: #2e8a4a; margin-top: 4px; font-style: italic; font-weight: 700; }
+
+  /* marriage arc */
+  .marriage-step { border-left: 3px solid #c0392b; padding-left: 11px; margin-bottom: 10px; }
+  .marriage-step.restore { border-color: #2e8a4a; }
+  .marriage-step:last-child { margin-bottom: 0; }
+  .ms-ref { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: #c0392b; }
+  .marriage-step.restore .ms-ref { color: #2e8a4a; }
+  .ms-title { font-family: 'Special Elite', serif; font-size: 0.95rem; color: #2c2c2c; margin: 2px 0; }
+  .ms-desc { font-size: 0.83rem; color: #444; line-height: 1.4; }
+
+  /* key verse */
+  .key-verse { background: #ffeaea; border: 2px solid #c0392b; border-radius: 3px; padding: 13px 15px; }
+  .key-verse.tender { background: #eaf4ee; border-color: #2e8a4a; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; color: #c0392b; }
+  .key-verse.tender .kv-label { color: #2e8a4a; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* word cards */
+  .word-card { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.4rem; color: #6c4bbf; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.74rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.9rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.81rem; color: #555; line-height: 1.4; }
+
+  /* achor callout */
+  .achor { background: #1a1a1a; color: #f5f0e8; border-radius: 3px; padding: 13px 15px; }
+  .achor-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; margin-bottom: 5px; }
+  .achor-text { font-family: 'Special Elite', serif; font-size: 0.95rem; line-height: 1.5; font-style: italic; }
+  .achor-note { font-size: 0.8rem; color: #aaa; margin-top: 6px; line-height: 1.4; }
+
+  /* parent heart */
+  .parent-heart { background: #fdf3e3; border: 2px solid #d47c1a; border-radius: 3px; padding: 13px 15px; }
+  .ph-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 8px; }
+  .ph-line { border-left: 3px solid #d47c1a; padding-left: 10px; margin-bottom: 7px; font-size: 0.84rem; color: #333; line-height: 1.42; font-style: italic; }
+  .ph-line:last-child { margin-bottom: 0; }
+  .ph-ref { font-size: 0.68rem; color: #d47c1a; font-weight: 700; margin-bottom: 2px; }
+
+  /* then-now */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.83rem; color: #333; line-height: 1.4; }
+
+  /* xref */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 7px; margin-bottom: 7px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #c0392b; }
+  .xref-note { font-size: 0.79rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* misread */
+  .misread { background: #ffeaea; border: 1.5px solid #c0392b; border-radius: 3px; padding: 11px 13px; }
+  .misread-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
+  .misread-text { font-size: 0.83rem; color: #444; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.9rem; line-height: 1.52; }
+
+  /* amos link */
+  .amos-link { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 10px 13px; }
+  .al-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6c4bbf; font-weight: 700; margin-bottom: 4px; }
+  .al-text { font-size: 0.82rem; color: #444; line-height: 1.4; }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<div class="page-header">
+  <div class="book-title">Hosea</div>
+  <div class="book-subtitle">The Wounded Husband — Love That Will Not Let Go</div>
+</div>
+
+<div class="grid">
+
+  <!-- COL 1: Identity + Marriage Arc + Children's Names -->
+  <div>
+
+    <div class="card">
+      <div class="card-label">Identity</div>
+      <div class="id-row"><span class="id-label">Author</span><span class="id-value">Hosea ben Beeri — only writing prophet from the North</span></div>
+      <div class="id-row"><span class="id-label">Date</span><span class="id-value">~750–720 BC · longest 8th-century ministry</span></div>
+      <div class="id-row"><span class="id-label">Audience</span><span class="id-value">Northern Kingdom (Ephraim/Israel)</span></div>
+      <div class="id-row"><span class="id-label">Period ends</span><span class="id-value">Samaria falls to Assyria 722 BC</span></div>
+      <div class="id-row"><span class="id-label">Structure</span><span class="id-value">Chs.1–3 (marriage narrative) · Chs.4–14 (oracles)</span></div>
+      <div class="id-row"><span class="id-label">vs. Amos</span><span class="id-value">Amos diagnoses; Hosea personalises. Same patient, different register.</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">The Marriage — Chapters 1–3</div>
+
+      <div class="marriage-step">
+        <div class="ms-ref">CH. 1</div>
+        <div class="ms-title">The Command</div>
+        <div class="ms-desc">God commands Hosea to marry Gomer — a woman who will be unfaithful. The marriage is not illustration; it is the prophecy itself. Three children born, three names of descent.</div>
+      </div>
+
+      <div class="marriage-step">
+        <div class="ms-ref">CH. 2</div>
+        <div class="ms-title">The Lawsuit</div>
+        <div class="ms-desc">God brings a covenant lawsuit against Israel through the marriage imagery. Then — the turn: "I will allure her; I will lead her into the wilderness and speak tenderly to her." (2:14) The Valley of Achor becomes a door of hope.</div>
+      </div>
+
+      <div class="marriage-step restore">
+        <div class="ms-ref">CH. 3</div>
+        <div class="ms-title">The Redemption</div>
+        <div class="ms-desc">Hosea buys Gomer back from slavery — fifteen shekels of silver and barley. The price paid before she has done anything to earn it. God's covenant love enacted in cash and grain.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">The Three Children — Descent and Reversal</div>
+
+      <div class="child-card child-down">
+        <div class="child-hebrew">יִזְרְעֶאל</div>
+        <div class="child-trans">Yizreʿel — "God scatters / God sows"</div>
+        <div class="child-meaning">Judgment on Jehu's dynasty</div>
+        <div class="child-note">The place of Israel's most violent coup becomes the name of judgment. But <em>sows</em> holds a seed of hope.</div>
+        <div class="reversal">↑ Reversed in 2:22 — "I will plant her in the land"</div>
+      </div>
+
+      <div class="child-card child-down">
+        <div class="child-hebrew">לֹא רֻחָמָה</div>
+        <div class="child-trans">Lōʾ Ruḥāmâ — "Not loved / No mercy"</div>
+        <div class="child-meaning">God withdraws compassion</div>
+        <div class="child-note">The name says what the relationship has become. God no longer shows love to the Northern Kingdom as he once did.</div>
+        <div class="reversal">↑ Reversed in 2:23 — "I will show love to the one I called 'Not my loved one'"</div>
+      </div>
+
+      <div class="child-card child-down">
+        <div class="child-hebrew">לֹא עַמִּי</div>
+        <div class="child-trans">Lōʾ ʿAmmî — "Not my people"</div>
+        <div class="child-meaning">The covenant formula inverted</div>
+        <div class="child-note">"You are not my people and I am not your God" (1:9) — the Sinai covenant in reverse. The most devastating line in the book.</div>
+        <div class="reversal">↑ Reversed in 2:23 — "I will say, 'You are my people'" · Quoted by Paul (Rom 9:25–26)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COL 2: Key Verses + Parent Heart + Achor + Oracles -->
+  <div>
+
+    <div class="key-verse">
+      <div class="kv-label">The Diagnosis — 4:6</div>
+      <div class="kv-text">"My people are destroyed from lack of knowledge. Because you have rejected knowledge, I also reject you as my priests."</div>
+      <div class="kv-ref">Hosea 4:6</div>
+    </div>
+
+    <div class="key-verse" style="margin-top:10px;">
+      <div class="kv-label">The Indictment — 6:4</div>
+      <div class="kv-text">"Your love is like the morning mist, like the early dew that disappears."</div>
+      <div class="kv-ref">Hosea 6:4</div>
+    </div>
+
+    <div class="key-verse tender" style="margin-top:10px;">
+      <div class="kv-label">What God Desires — 6:6</div>
+      <div class="kv-text">"For I desire mercy (ḥesed), not sacrifice, and acknowledgment of God rather than burnt offerings."</div>
+      <div class="kv-ref">Hosea 6:6 — quoted by Jesus: Matthew 9:13 and 12:7</div>
+    </div>
+
+    <div class="parent-heart" style="margin-top:14px;">
+      <div class="ph-label">Hosea 11 — The Father's Heart</div>
+      <div class="ph-line"><div class="ph-ref">11:1</div>"When Israel was a child, I loved him, and out of Egypt I called my son."</div>
+      <div class="ph-line"><div class="ph-ref">11:3</div>"It was I who taught Ephraim to walk; it was I who took them by the arms."</div>
+      <div class="ph-line"><div class="ph-ref">11:4</div>"I led them with cords of human kindness, with ties of love."</div>
+      <div class="ph-line"><div class="ph-ref">11:8</div>"How can I give you up, Ephraim? How can I hand you over, Israel?... My heart is changed within me; all my compassion is aroused."</div>
+      <div class="ph-line"><div class="ph-ref">11:9</div>"For I am God, and not a man — the Holy One among you. I will not come against their cities."</div>
+    </div>
+
+    <div class="achor" style="margin-top:14px;">
+      <div class="achor-label">The Valley of Achor — 2:15</div>
+      <div class="achor-text">"I will make the Valley of Achor a door of hope."</div>
+      <div class="achor-note">Achor means "trouble." It is where Achan was executed after the sin at Jericho (Joshua 7) — Israel's most shameful place of judgment. God promises to turn the worst address into the threshold of hope. The ruins become the doorway.</div>
+    </div>
+
+    <div class="key-verse tender" style="margin-top:14px;">
+      <div class="kv-label">The Final Promise — 14:4</div>
+      <div class="kv-text">"I will heal their waywardness and love them freely, for my anger has turned away from them."</div>
+      <div class="kv-ref">Hosea 14:4</div>
+    </div>
+
+    <div class="amos-link" style="margin-top:14px;">
+      <div class="al-label">Amos → Hosea</div>
+      <div class="al-text">Amos (760 BC) prosecutes Israel in a courtroom — injustice, false worship, coming judgment. Hosea (750–720 BC) takes the same charges and makes them personal — a husband's grief, a father's agony. Amos asks: <em>what has Israel done?</em> Hosea asks: <em>what has this done to God?</em></div>
+    </div>
+
+  </div>
+
+  <!-- COL 3: Word Studies + Xrefs + Then/Now + Misread + Verdict -->
+  <div>
+
+    <div class="card">
+      <div class="card-label">Key Words</div>
+
+      <div class="word-card">
+        <div class="hebrew">חֶסֶד</div>
+        <div class="transliteration">ḥesed — "covenant / loyal love"</div>
+        <div class="word-gloss">What Israel lacks; what God embodies (4:1, 6:6)</div>
+        <div class="word-note">Used 6× in Hosea. The word Israel is called to practice but has abandoned. When Jesus quotes 6:6 to the Pharisees, he is saying: you have the sacrifice without the covenant loyalty behind it.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">דַּעַת</div>
+        <div class="transliteration">daʿat — "knowledge / knowing"</div>
+        <div class="word-gloss">Intimate, relational knowing (4:1, 4:6, 6:6)</div>
+        <div class="word-note">The same word used when Adam "knew" Eve. Israel knows the rituals; they do not know the God behind them. Destroyed "from lack of knowledge" — not ignorance of facts, but absence of relationship.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">שׁוּב</div>
+        <div class="transliteration">šûb — "return / repent"</div>
+        <div class="word-gloss">The book's governing verb (~12×)</div>
+        <div class="word-note">"Return to the LORD your God" (14:1) is the book's final call. The same verb runs through the whole narrative — Israel keeps returning to Baal; God keeps calling them to return to him.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">זָנָה</div>
+        <div class="transliteration">zānâ — "prostitute / be unfaithful"</div>
+        <div class="word-gloss">Gomer and Israel — the same word</div>
+        <div class="word-note">The marriage metaphor makes idolatry visceral. Baal worship is not a theological error — it is infidelity. The word charges the oracles with the emotional weight of a broken marriage.</div>
+      </div>
+
+      <div class="word-card">
+        <div class="hebrew">אָהַב</div>
+        <div class="transliteration">āhab — "love"</div>
+        <div class="word-gloss">God's love — the last word (14:4)</div>
+        <div class="word-note">"When Israel was a child, I loved him" (11:1). "I will love them freely" (14:4). The book opens with Hosea commanded to love; it ends with God loving freely. The word that frames everything.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Cross-References</div>
+
+      <div class="xref-item">
+        <div class="xref-ref">Matthew 2:15</div>
+        <div class="xref-note">"Out of Egypt I called my son" — Matthew applies Hosea 11:1 to Jesus. The son of God called out of Egypt is now the Son of God. Israel's history recapitulated in one person.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Matthew 9:13 · 12:7</div>
+        <div class="xref-note">Jesus quotes Hosea 6:6 twice — both times to rebuke religious performance without compassion. "I desire mercy (ḥesed), not sacrifice" becomes his definition of what God is after.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Romans 9:25–26</div>
+        <div class="xref-note">Paul quotes Hosea 2:23 to justify Gentile inclusion — "Not my people" becomes "my people." The reversal of the children's names becomes the theological basis for the church.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">1 Corinthians 15:55</div>
+        <div class="xref-note">"Where, O death, is your sting?" echoes Hosea 13:14. Paul reads Hosea's taunt over death as fulfilled in the resurrection.</div>
+      </div>
+      <div class="xref-item">
+        <div class="xref-ref">Joshua 7 (Achor)</div>
+        <div class="xref-note">The Valley of Achor — Achan's execution, Israel's deepest shame. Hosea 2:15 promises it becomes a door of hope. The worst place becomes the threshold.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Then → Now</div>
+      <div class="then-now-grid">
+        <div class="tn-box tn-then">
+          <div class="tn-label">Then · 750–720 BC</div>
+          <div class="tn-text">A prosperous Northern Kingdom practicing syncretism — Yahweh-worship mixed with Baal fertility religion. Political chaos: six kings in twenty years after Jeroboam II. Rich, unstable, religiously hollow. Hosea preaches until the end comes in 722 BC.</div>
+        </div>
+        <div class="tn-box tn-now">
+          <div class="tn-label">Now</div>
+          <div class="tn-text">The "morning mist" love of 6:4 is the contemporary condition — sincere but shallow, real but not lasting. Hosea speaks to any community practicing the form of faith while the relationship has evaporated. And to anyone wondering if they have gone too far to return.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="misread">
+      <div class="misread-label">Common Misread</div>
+      <div class="misread-text">Hosea is sometimes read primarily as a book about marriage or sexual faithfulness. The marriage is the vehicle — the destination is the covenant. Hosea uses the most intimate human betrayal to describe what Israel's idolatry does to God. The point is not the marriage; the point is the God who will not let go despite it.</div>
+    </div>
+
+    <div class="verdict" style="margin-top:14px;">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-text">Hosea is the book that dares to say God has feelings — that covenant betrayal wounds him, that Israel's "morning mist" love breaks something real. And then, impossibly, that none of it is enough to make him let go. "How can I give you up, Ephraim?" is not rhetorical. It is the sound of a love that has counted the cost and decided to pay it anyway.</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

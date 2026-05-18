@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hosea — Sermon Structure</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 48px 40px 80px; }
+
+  /* SAVE PDF */
+  .save-btn {
+    position: fixed; top: 18px; right: 22px; z-index: 100;
+    background: #1a1a1a; color: #f5f0e8; border: none; border-radius: 3px;
+    padding: 10px 18px; font-family: 'Caveat', cursive; font-size: 1rem;
+    cursor: pointer; letter-spacing: 0.04em;
+  }
+  .save-btn:hover { background: #333; }
+  @media print { .save-btn { display: none; } }
+
+  /* HEADER */
+  .sermon-header { text-align: center; margin-bottom: 44px; }
+  .sermon-label { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+  .sermon-title { font-family: 'Special Elite', serif; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .sermon-subtitle { font-size: 1.2rem; color: #666; margin-top: 6px; font-style: italic; }
+  .sermon-text { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-top: 8px; }
+
+  /* BIG IDEA */
+  .big-idea {
+    background: #1a1a1a; border-radius: 4px; padding: 26px 30px;
+    margin-bottom: 36px; max-width: 860px; margin-left: auto; margin-right: auto;
+  }
+  .big-idea-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin-bottom: 10px; }
+  .big-idea-text { font-family: 'Special Elite', serif; font-size: 1.45rem; color: #f5f0e8; line-height: 1.5; }
+
+  /* HOOK */
+  .hook-block {
+    background: #faf7f2; border: 2px solid #c0392b; border-radius: 4px;
+    padding: 20px 24px; margin-bottom: 36px; max-width: 860px;
+    margin-left: auto; margin-right: auto;
+  }
+  .hook-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: #c0392b; margin-bottom: 8px; }
+  .hook-text { font-size: 1.05rem; color: #2c2c2c; line-height: 1.6; }
+  .hook-text em { font-style: italic; color: #c0392b; }
+  .hook-ref { font-size: 0.72rem; color: #aaa; margin-top: 8px; letter-spacing: 0.06em; }
+
+  /* GRID */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto 32px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto 32px; }
+  .full { max-width: 1080px; margin: 0 auto 32px; }
+
+  /* MOVEMENT CARDS */
+  .movement {
+    background: #faf7f2; border: 2.5px solid; border-radius: 4px; padding: 20px 22px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .mv-1 { border-color: #c0392b; }
+  .mv-2 { border-color: #d47c1a; }
+  .mv-3 { border-color: #2e8a4a; }
+
+  .mv-number { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+  .mv-1 .mv-number { color: #c0392b; }
+  .mv-2 .mv-number { color: #d47c1a; }
+  .mv-3 .mv-number { color: #2e8a4a; }
+
+  .mv-title { font-family: 'Special Elite', serif; font-size: 1.2rem; color: #2c2c2c; }
+  .mv-chapters { font-size: 0.72rem; color: #888; letter-spacing: 0.08em; margin-top: -4px; }
+  .mv-verse {
+    border-left: 3px solid; padding: 8px 12px; font-style: italic;
+    font-size: 0.95rem; color: #2c2c2c; line-height: 1.5;
+  }
+  .mv-1 .mv-verse { border-color: #c0392b; background: #fdf0ee; }
+  .mv-2 .mv-verse { border-color: #d47c1a; background: #fdf3e3; }
+  .mv-3 .mv-verse { border-color: #2e8a4a; background: #eaf4ee; }
+  .mv-verse-ref { font-size: 0.68rem; color: #aaa; display: block; margin-top: 4px; font-style: normal; }
+  .mv-body { font-size: 0.88rem; color: #555; line-height: 1.6; }
+  .mv-point {
+    font-size: 0.82rem; color: #2c2c2c; font-weight: 600; line-height: 1.5;
+    padding-top: 6px; border-top: 1px dashed #ddd;
+  }
+  .mv-point::before { content: "→ "; }
+
+  /* NAME DESCENT / REVERSAL STRIP */
+  .names-strip {
+    background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px;
+    padding: 18px 22px; margin-bottom: 32px; max-width: 1080px;
+    margin-left: auto; margin-right: auto;
+  }
+  .names-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin-bottom: 14px; }
+  .names-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .name-card { border-radius: 3px; padding: 12px 14px; }
+  .name-down { background: #fdf0ee; border: 1.5px solid #c0392b; }
+  .name-up   { background: #eaf4ee; border: 1.5px solid #2e8a4a; }
+  .name-heb { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; direction: rtl; text-align: right; }
+  .name-trans { font-size: 0.72rem; color: #888; margin: 2px 0; font-style: italic; }
+  .name-meaning { font-size: 0.85rem; color: #2c2c2c; }
+  .name-reversal { font-size: 0.78rem; margin-top: 6px; }
+  .name-down .name-reversal { color: #c0392b; }
+  .name-up   .name-reversal { color: #2e8a4a; }
+  .name-arrow { text-align: center; font-size: 1.1rem; margin-top: 6px; }
+  .name-down .name-arrow { color: #c0392b; }
+  .name-up   .name-arrow   { color: #2e8a4a; }
+
+  /* PIVOT: VALLEY OF ACHOR */
+  .pivot-block {
+    background: #1a1a1a; border-radius: 4px; padding: 22px 26px;
+    margin-bottom: 32px; max-width: 1080px; margin-left: auto; margin-right: auto;
+    display: grid; grid-template-columns: 1fr 40px 1fr; gap: 0; align-items: center;
+  }
+  .pivot-left { color: #e88; }
+  .pivot-right { color: #7eb8f7; }
+  .pivot-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .pivot-text { font-family: 'Special Elite', serif; font-size: 1rem; line-height: 1.5; }
+  .pivot-sub { font-size: 0.78rem; color: #aaa; margin-top: 4px; line-height: 1.4; }
+  .pivot-spine { text-align: center; color: #555; font-size: 1.4rem; }
+  .pivot-verse { font-size: 0.72rem; color: #666; margin-top: 4px; font-style: italic; }
+
+  /* BUYBACK ILLUSTRATION */
+  .illus-block {
+    background: #faf7f2; border: 2px solid #6c4bbf; border-radius: 4px;
+    padding: 20px 24px; margin-bottom: 32px; max-width: 1080px;
+    margin-left: auto; margin-right: auto;
+  }
+  .illus-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: #6c4bbf; margin-bottom: 8px; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 1.15rem; color: #2c2c2c; margin-bottom: 8px; }
+  .illus-body { font-size: 0.9rem; color: #444; line-height: 1.65; }
+  .illus-body strong { color: #2c2c2c; }
+  .illus-body em { color: #6c4bbf; font-style: italic; }
+
+  /* SECTION HEADERS */
+  .section-head {
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #aaa; margin-bottom: 14px; max-width: 1080px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* SMALL CARDS (pressure, xref, etc.) */
+  .card {
+    background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px;
+    padding: 14px 16px;
+  }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 5px; }
+  .card-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin-bottom: 4px; }
+  .card-body { font-size: 0.82rem; color: #555; line-height: 1.55; }
+  .card-ref { font-size: 0.7rem; color: #aaa; margin-top: 6px; font-style: italic; }
+
+  /* PRESSURE POINTS */
+  .pressure { border-color: #c0392b; background: #fdf0ee; }
+  .pressure .card-label { color: #c0392b; }
+
+  /* CROSS-REFS */
+  .xref { border-color: #3b6fd4; background: #eef2fb; }
+  .xref .card-label { color: #3b6fd4; }
+  .xref .card-title { font-size: 0.88rem; }
+
+  /* THEN → NOW */
+  .then-now {
+    display: grid; grid-template-columns: 1fr 36px 1fr; gap: 0; align-items: start;
+    background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px;
+    padding: 18px 20px; max-width: 1080px; margin: 0 auto 32px;
+  }
+  .tn-col {}
+  .tn-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .tn-head { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin-bottom: 6px; }
+  .tn-body { font-size: 0.83rem; color: #555; line-height: 1.6; }
+  .tn-arrow { text-align: center; font-size: 1.3rem; color: #888; padding-top: 28px; }
+
+  /* VERDICT */
+  .verdict {
+    background: #faf7f2; border: 2.5px solid #2e8a4a; border-radius: 4px;
+    padding: 22px 26px; max-width: 1080px; margin: 0 auto 20px;
+  }
+  .verdict-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: #2e8a4a; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.6; }
+
+  /* CALL TO ACTION */
+  .cta-block {
+    background: #2e8a4a; border-radius: 4px; padding: 22px 26px;
+    max-width: 1080px; margin: 0 auto 20px;
+  }
+  .cta-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+  .cta-text { font-family: 'Special Elite', serif; font-size: 1.15rem; color: #fff; line-height: 1.6; }
+  .cta-verse { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 8px; font-style: italic; }
+
+</style>
+</head>
+<body>
+
+<button class="save-btn" onclick="window.print()">↓ Save as PDF</button>
+
+<!-- HEADER -->
+<div class="sermon-header">
+  <div class="sermon-label">Sermon Structure</div>
+  <div class="sermon-title">Hosea</div>
+  <div class="sermon-subtitle">Love That Will Not Let Go</div>
+  <div class="sermon-text">Primary Text: Hosea 1–3 · Supporting: 6:6 · 11:8–9 · 14:1–4</div>
+</div>
+
+<!-- BIG IDEA -->
+<div class="big-idea">
+  <div class="big-idea-label">Big Idea</div>
+  <div class="big-idea-text">God's covenant love is not passive sentiment — it is wounded, honest, and relentless enough to pursue, confront, and restore what has walked away.</div>
+</div>
+
+<!-- HOOK -->
+<div class="hook-block">
+  <div class="hook-label">Opening Hook — Hosea 1:2</div>
+  <div class="hook-text">
+    The most unexpected command God ever gave a prophet. Not <em>"go preach."</em> Not <em>"go warn."</em> Just this:
+    <em>"Go, marry a promiscuous woman."</em> God didn't give Hosea a message to deliver. He gave him a marriage to live.
+    Everything that was about to happen to Israel — the betrayal, the pursuit, the costly buying-back — Hosea was going
+    to feel it in his own chest first.
+  </div>
+  <div class="hook-ref">Hosea 1:2 · The marriage is not illustration — it is the prophecy itself.</div>
+</div>
+
+<!-- NAMES DESCENT / REVERSAL -->
+<div class="names-strip">
+  <div class="names-label">The Children's Names — A Sermon Within the Sermon (Chs. 1–2)</div>
+  <div class="names-row">
+
+    <div class="name-card name-down">
+      <div class="name-heb">יִזְרְעֶאל</div>
+      <div class="name-trans">Yizreʿel — "God scatters"</div>
+      <div class="name-meaning">Site of Jehu's bloodbath. A name that carries the smell of past violence.</div>
+      <div class="name-arrow">↓</div>
+      <div class="name-reversal">Reversed in 2:22 — "God plants"</div>
+    </div>
+
+    <div class="name-card name-down">
+      <div class="name-heb">לֹא רֻחָמָה</div>
+      <div class="name-trans">Lōʾ Ruḥāmâ — "Not loved"</div>
+      <div class="name-meaning">The daughter's name announces what Israel has forfeited: the mercy of God.</div>
+      <div class="name-arrow">↓</div>
+      <div class="name-reversal">Reversed in 2:23 — "I will show love"</div>
+    </div>
+
+    <div class="name-card name-down">
+      <div class="name-heb">לֹא עַמִּי</div>
+      <div class="name-trans">Lōʾ ʿAmmî — "Not my people"</div>
+      <div class="name-meaning">The lowest point. The covenant formula reversed: once "you are my people / I am your God" — now undone.</div>
+      <div class="name-arrow">↓</div>
+      <div class="name-reversal">Reversed in 2:23 — "You are my people" (Paul quotes: Rom 9:25–26)</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- THREE MOVEMENTS -->
+<div class="section-head">Three Sermon Movements</div>
+<div class="grid">
+
+  <!-- MOVEMENT 1 -->
+  <div class="movement mv-1">
+    <div class="mv-number">Movement 1 · Hosea 1–2:13</div>
+    <div class="mv-title">"He Knew She Would Leave"</div>
+    <div class="mv-chapters">The command · The descent · The lawsuit</div>
+    <div class="mv-verse">
+      "She said, 'I will go after my lovers, who give me my food and my water.'"
+      <span class="mv-verse-ref">Hosea 2:5</span>
+    </div>
+    <div class="mv-body">
+      God commands Hosea to marry knowing she will be unfaithful. This is not naivety —
+      it is deliberate love choosing to enter a breakable relationship. The three children's names
+      narrate the descent in real time: scatter → unloved → not my people. God does not
+      rewrite the indictment. He names it honestly.
+    </div>
+    <div class="mv-point">Love that is honest about betrayal is stronger than love that pretends not to see it.</div>
+  </div>
+
+  <!-- MOVEMENT 2 -->
+  <div class="movement mv-2">
+    <div class="mv-number">Movement 2 · Hosea 2:14–23</div>
+    <div class="mv-title">"He Allures Her Into the Wilderness"</div>
+    <div class="mv-chapters">The turn · The wilderness · The names reversed</div>
+    <div class="mv-verse">
+      "Therefore I will allure her; I will lead her into the wilderness and speak tenderly to her."
+      <span class="mv-verse-ref">Hosea 2:14</span>
+    </div>
+    <div class="mv-body">
+      The word <em>therefore</em> pivots everything. After all the evidence of guilt, God says
+      <em>therefore</em> — not "therefore I am done," but "therefore I will pursue." He doesn't
+      restore her in the crowd. He takes her to the wilderness where there is nothing between
+      them. The Valley of Achor (trouble) becomes a door of hope. All three children's names
+      are reversed.
+    </div>
+    <div class="mv-point">The wilderness is not punishment — it is where God does his most tender work.</div>
+  </div>
+
+  <!-- MOVEMENT 3 -->
+  <div class="movement mv-3">
+    <div class="mv-number">Movement 3 · Hosea 14:1–4</div>
+    <div class="mv-title">"I Will Heal Their Waywardness"</div>
+    <div class="mv-chapters">The final call · The free love · The garden ending</div>
+    <div class="mv-verse">
+      "I will heal their waywardness and love them freely, for my anger has turned away from them."
+      <span class="mv-verse-ref">Hosea 14:4</span>
+    </div>
+    <div class="mv-body">
+      The book that opens with a prostitute ends with a garden — lily, cedar, olive, dew (14:5–7).
+      The governing verb <em>šûb</em> (return) appears ~12× in Hosea. The final call is not
+      a legal demand but a tender invitation. "Love freely" — <em>āhab</em> with no qualifier,
+      no condition, no ledger. The healing is as unreasonable as the original command to marry.
+    </div>
+    <div class="mv-point">The God who began the book with a scandalous marriage ends it with a scandalous grace.</div>
+  </div>
+
+</div>
+
+<!-- VALLEY OF ACHOR PIVOT -->
+<div class="pivot-block">
+  <div class="pivot-left">
+    <div class="pivot-label">Before — 2:13</div>
+    <div class="pivot-text">She forgot me</div>
+    <div class="pivot-sub">Three children. Three descending names. The lawsuit. God names the ruin with precision.</div>
+    <div class="pivot-verse">עֵמֶק עָכוֹר — Valley of Achor (trouble)</div>
+  </div>
+  <div class="pivot-spine">→</div>
+  <div class="pivot-right">
+    <div class="pivot-label">After — 2:15</div>
+    <div class="pivot-text">Door of hope</div>
+    <div class="pivot-sub">The same valley becomes the entrance. Joshua 7: Achor = judgment. Hosea 2: Achor = threshold of restoration.</div>
+    <div class="pivot-verse">פֶּתַח תִּקְוָה — Door of hope (2:15)</div>
+  </div>
+</div>
+
+<!-- THE BUYBACK ILLUSTRATION -->
+<div class="illus-block">
+  <div class="illus-label">Central Illustration — Hosea 3:1–2</div>
+  <div class="illus-title">Fifteen Shekels of Silver and Some Barley</div>
+  <div class="illus-body">
+    Gomer has left. She is now on a slave block. God tells Hosea: <em>"Go, show your love to your wife again."</em>
+    Hosea goes to the market. He pays <strong>fifteen shekels of silver and about a homer and a lethek of barley</strong>
+    — roughly half the price of a slave (Exod 21:32 = thirty shekels). He pays <em>reduced market value</em> for a woman
+    who is <em>legally still his wife</em>. He does not have to pay anything. He pays anyway.<br><br>
+    This is the image the whole book has been building toward. Not Hosea rescuing a stranger —
+    <em>Hosea buying back what is already his</em>, at personal cost, with no guarantee she stays.
+    The gospel does not improve on this image. It fulfils it.
+  </div>
+</div>
+
+<!-- PRESSURE POINTS -->
+<div class="section-head">Pressure Points — Where the Sermon Should Land</div>
+<div class="grid">
+
+  <div class="card pressure">
+    <div class="card-label">The Prodigal Listener</div>
+    <div class="card-title">Too far gone to come back</div>
+    <div class="card-body">The person convinced their track record has disqualified them. Hosea 3 answers this directly — Hosea goes to where she ended up, not where she should be.</div>
+  </div>
+
+  <div class="card pressure">
+    <div class="card-label">The Religious Performer</div>
+    <div class="card-title">Sacrifice without daʿat</div>
+    <div class="card-body">Ritual intact. Relationship absent. Hosea 6:6 — God desires <em>ḥesed</em> (covenant loyalty) and <em>daʿat</em> (intimate knowing), not offerings. Jesus quotes this twice (Matt 9:13, 12:7).</div>
+  </div>
+
+  <div class="card pressure">
+    <div class="card-label">The Distracted Worshipper</div>
+    <div class="card-title">Morning mist love</div>
+    <div class="card-body">"Your love is like the morning mist, like the early dew that disappears" (6:4). Present at the start of the day, gone by mid-morning. Devotion that doesn't survive heat.</div>
+  </div>
+
+</div>
+
+<!-- THEN → NOW -->
+<div class="then-now">
+  <div class="tn-col">
+    <div class="tn-label">Then — Israel, 8th Century BC</div>
+    <div class="tn-head">Chasing Baal</div>
+    <div class="tn-body">Israel credited rain, harvest, and fertility to the Baals — the gods of the land. They kept the temple calendar; they simply outsourced the blessings to another address. God's indictment: not atheism, but divided allegiance — and a love that evaporates by noon.</div>
+  </div>
+  <div class="tn-arrow">→</div>
+  <div class="tn-col">
+    <div class="tn-label">Now — The Contemporary Church</div>
+    <div class="tn-head">Busy with religion, absent in the relationship</div>
+    <div class="tn-body">Attendance without intimacy. Service without knowing. We have not abandoned God's calendar — we've just stopped learning his face. Jesus quotes Hosea 6:6 to the Pharisees (Matt 9:13): the religion can be spotless and the relationship hollow. That is Hosea's warning for every generation.</div>
+  </div>
+</div>
+
+<!-- CROSS-REFERENCES -->
+<div class="section-head">Cross-References — Where Hosea Echoes in the New Testament</div>
+<div class="grid">
+
+  <div class="card xref">
+    <div class="card-label">Matthew 2:15</div>
+    <div class="card-title">"Out of Egypt I called my son"</div>
+    <div class="card-body">Matthew applies Hosea 11:1 to Jesus' return from Egypt. Hosea spoke of Israel's exodus. Matthew sees Jesus recapitulating Israel's story — and succeeding where Israel failed.</div>
+  </div>
+
+  <div class="card xref">
+    <div class="card-label">Matthew 9:13 · 12:7</div>
+    <div class="card-title">"I desire mercy, not sacrifice"</div>
+    <div class="card-body">Jesus quotes Hosea 6:6 twice — once defending table fellowship with sinners, once defending disciples eating grain on the Sabbath. Hosea is Jesus' go-to text when religion prioritizes form over relationship.</div>
+  </div>
+
+  <div class="card xref">
+    <div class="card-label">Romans 9:25–26</div>
+    <div class="card-title">"I will call them 'my people'"</div>
+    <div class="card-body">Paul quotes the reversal of Lōʾ ʿAmmî and Lōʾ Ruḥāmâ to argue that Gentiles — who were never "my people" — are now included in the covenant family. Hosea's reversal was bigger than Israel.</div>
+  </div>
+
+</div>
+
+<!-- VERDICT -->
+<div class="verdict">
+  <div class="verdict-label">Preacher's Verdict</div>
+  <div class="verdict-text">
+    Hosea is the book that makes grace dangerous. Not sentimental — costly. The prophet doesn't preach
+    what he hasn't lived. He goes to the slave market. He pays. He brings her home. And the God who told
+    him to do it has been doing it for longer than Hosea had been alive. That is the word this book
+    wants to leave in the room.
+  </div>
+</div>
+
+<!-- CALL TO ACTION -->
+<div class="cta-block">
+  <div class="cta-label">Closing Call · Hosea 14:1</div>
+  <div class="cta-text">
+    "Return, Israel, to the LORD your God. Your sins have been your downfall! Take words with you and return to the LORD."
+  </div>
+  <div class="cta-verse">šûb — return · The book's last word is not condemnation. It is an open door.</div>
+</div>
+
+</body>
+</html>

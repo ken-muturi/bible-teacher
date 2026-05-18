@@ -37,15 +37,25 @@ This toolkit runs on [Claude](https://claude.ai) by Anthropic.
 
 ## Install the Toolkit
 
-### Option 1 — Quick install (Claude Code)
+### Option 1 — Install all skills at once (Claude Code)
 
-Open any Claude Code project and run:
+Copy the repo URL, paste it to Claude and say:
 
 ```
 install skills from https://github.com/ken-muturi/bible-teacher
 ```
 
-Claude fetches the skills manifest, creates the skill directories, and confirms everything is installed.
+Claude fetches the skills manifest, creates all skill directories, and confirms everything is installed.
+
+**Skills installed:**
+
+| Skill | Trigger | What it does |
+|-------|---------|--------------|
+| **Book Overview** | `book-overview <Book>` | Visual panel for any Bible book — layout adapts to the book's structure |
+| **Passage Study** | `passage-study <ref> [--deep]` | Quick or full deep-dive for any verse or chapter — words, illustrations, xrefs |
+| **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any Bible book |
+| **Teacher Foundation** | Edit `SKILL.md` directly | Set tradition, translation, and theology once — all skills inherit it |
+| **Install Skill** | `install all skills: <url>` | Meta-skill: install one or all skills from a URL |
 
 > **First time?** You need the `install-skill` skill to bootstrap the rest. Install it once manually:
 > ```
