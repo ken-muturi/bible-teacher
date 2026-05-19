@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psalm 8 — Deep Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: #3b6fd4; text-decoration: none; border-bottom: 1px dashed #3b6fd4; }
+  .companion-link:hover { opacity: 0.7; }
+
+  .home-nav { padding: 0 0 14px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+  .card + .card { margin-top: 14px; }
+
+  /* identity */
+  .identity-card { background: #2c2c2c; color: #f5f0e8; border-radius: 4px; padding: 16px 20px; grid-column: 1 / -1; margin-bottom: 4px; }
+  .identity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
+  .id-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 3px; font-weight: 700; }
+  .id-value { font-size: 0.9rem; color: #f5f0e8; line-height: 1.45; }
+  .id-em { color: #7ab8f5; font-style: italic; }
+
+  /* structure */
+  .beat { border-left: 3px solid #3b6fd4; padding-left: 11px; margin-bottom: 11px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.68rem; color: #3b6fd4; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.85rem; color: #444; line-height: 1.4; }
+
+  /* word cards — teal/green strip */
+  .word-card { background: #eef7f4; border: 1.5px solid #2a9d7a; border-radius: 3px; padding: 12px 13px; margin-bottom: 9px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #1f7a5c; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.76rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.93rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.83rem; color: #555; line-height: 1.4; }
+
+  /* historical context — orange box */
+  .hist-box { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 12px 14px; margin-bottom: 9px; }
+  .hist-box:last-child { margin-bottom: 0; }
+  .hist-title { font-size: 0.8rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; letter-spacing: 0.04em; }
+  .hist-text { font-size: 0.83rem; color: #444; line-height: 1.42; }
+
+  /* teacher / commentary cards */
+  .teacher-card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 14px 16px; margin-bottom: 12px; }
+  .teacher-card:last-child { margin-bottom: 0; }
+  .teacher-name { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; }
+  .teacher-tradition { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 8px; }
+  .teacher-point { border-left: 3px solid #3b6fd4; padding-left: 10px; margin-bottom: 8px; font-size: 0.84rem; color: #333; line-height: 1.4; }
+  .teacher-point:last-child { margin-bottom: 0; }
+  .teacher-card.kidner { border-color: #888; }
+  .teacher-card.kidner .teacher-point { border-color: #888; }
+  .teacher-card.lewis { border-color: #c0392b; }
+  .teacher-card.lewis .teacher-point { border-color: #c0392b; }
+  .teacher-card.goldingay { border-color: #2a9d7a; }
+  .teacher-card.goldingay .teacher-point { border-color: #2a9d7a; }
+  .teacher-quote { font-style: italic; font-size: 0.82rem; color: #555; }
+  .source-link { display: inline-block; margin-top: 6px; font-size: 0.68rem; color: #888; text-decoration: none; border-bottom: 1px dashed #bbb; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #3b6fd4; border-bottom-color: #3b6fd4; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #3b6fd4; padding-left: 11px; margin-bottom: 11px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #3b6fd4; margin-bottom: 3px; }
+  .illus-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .illus-attr { font-size: 0.72rem; color: #aaa; margin-top: 3px; font-style: italic; }
+
+  /* then-now — purple left-bordered callout */
+  .then-now-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #f2eefb; border-left: 4px solid #6c4bbf; border-top: 1.5px solid #b9a8e0; border-right: 1.5px solid #b9a8e0; border-bottom: 1.5px solid #b9a8e0; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #6c4bbf; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.4; }
+
+  /* cross-references — purple-tinted cards */
+  .xref-item { background: #f5f2fb; border: 1.5px solid #b9a8e0; border-radius: 3px; padding: 10px 12px; margin-bottom: 8px; }
+  .xref-item:last-child { margin-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #6c4bbf; }
+  .xref-note { font-size: 0.81rem; color: #555; margin-top: 2px; line-height: 1.35; }
+
+  /* key verse */
+  .key-verse { background: #eef4fd; border: 2px solid #3b6fd4; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #3b6fd4; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* pressure points — dark box */
+  .pressure { background: #1a1a1a; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .pressure:last-child { margin-bottom: 0; }
+  .pressure-q { font-size: 0.88rem; color: #f5f0e8; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.82rem; color: #bbb; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.92rem; line-height: 1.5; }
+
+  /* inclusio callout */
+  .inclusio-bar { background: #3b6fd4; color: #fff; border-radius: 3px; padding: 10px 14px; text-align: center; font-size: 0.88rem; margin-bottom: 10px; letter-spacing: 0.02em; }
+  .inclusio-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #afd3f7; font-weight: 700; margin-bottom: 3px; }
+
+  /* full-width row */
+  .full-row { grid-column: 1 / -1; }
+  .teachers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .words-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+  /* section divider label */
+  .section-label {
+    grid-column: 1 / -1;
+    font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700;
+    color: #aaa; margin-top: 10px; margin-bottom: 2px;
+    border-bottom: 1px solid #ddd6c8; padding-bottom: 4px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .full-row,
+    .section-label { grid-column: auto !important; }
+    .teachers-grid,
+    .words-grid { grid-template-columns: 1fr !important; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .identity-card { overflow: visible; }
+    .id-value { white-space: normal; overflow: visible; }
+    .then-now-grid { grid-template-columns: 1fr !important; }
+    .word-card { width: 100%; }
+    .ref { font-size: 2rem !important; }
+    table { display: block; overflow-x: auto; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .ref { font-size: 1.6rem !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
+
+<div class="page-header">
+  <div class="ref">Psalm 8</div>
+  <div class="title">Creation Hymn — The Cosmic Question &amp; the Crowned Creature</div>
+  <span class="badge-deep">Deep</span><br>
+  <span style="font-size:0.82rem; color:#888; display:inline-block; margin-top:4px;">Psalm 8:1–9 · First of the "Enthronement of Man" Psalms</span><br>
+  <a class="companion-link" href="psalm-51-deep-study.html">Psalm 51 Deep Study →</a>
+</div>
+
+<div class="grid">
+
+  <!-- ========================================================
+       IDENTITY BLOCK — full width, dark
+       ======================================================== -->
+  <div class="identity-card full-row">
+    <div class="card-label" style="color:#aaa; margin-bottom:6px;">Identity</div>
+    <div class="identity-grid">
+      <div>
+        <div class="id-label">Author &amp; Superscription</div>
+        <div class="id-value">A Psalm of David · <span class="id-em">"According to the Gittith"</span> — possibly a Gittite instrument or a harvest/vintage tune (<em>gat</em> = winepress)</div>
+      </div>
+      <div>
+        <div class="id-label">Genre &amp; Place</div>
+        <div class="id-value">Creation hymn · First of the "enthronement of man" psalms · One complete structural inclusio (vv.1 &amp; 9 identical)</div>
+      </div>
+      <div>
+        <div class="id-label">Occasion</div>
+        <div class="id-value">Nocturnal meditation under the open sky — "when I consider your heavens, the work of your <em>fingers</em>" (v.3) implies a shepherd-king alone at night</div>
+      </div>
+      <div>
+        <div class="id-label">OT Background</div>
+        <div class="id-value">Genesis 1:26–28 in lyric form — <em>imago dei</em>, the dominion mandate, and the creational dignity of humanity turned into song</div>
+      </div>
+      <div>
+        <div class="id-label">NT Fulfilment</div>
+        <div class="id-value">Hebrews 2:6–9 · 1 Corinthians 15:27 · Matthew 21:16 — the psalm is quoted three times in the NT, each with a distinct Christological move</div>
+      </div>
+      <div>
+        <div class="id-label">Central Surprise</div>
+        <div class="id-value">The psalm does not confirm human smallness — it <span class="id-em">astonishes at human greatness</span>. The cosmos is the backdrop that makes the answer of vv.5–8 more explosive, not more modest.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       INCLUSIO CALLOUT — full width
+       ======================================================== -->
+  <div class="full-row">
+    <div class="inclusio-bar">
+      <div class="inclusio-label">Inclusio — The Frame of the Psalm</div>
+      "O LORD, our Lord, how majestic is your name in all the earth" — <strong>v.1a = v.9 · verbatim</strong> · The question of man (vv.3–8) is held inside a frame of worship. Every answer about human dignity is surrounded by doxology.
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PSALM STRUCTURE — full width, 5 movements
+       ======================================================== -->
+  <div class="card full-row">
+    <div class="card-label">Structure — 5 Movements</div>
+    <div style="display:grid; grid-template-columns: repeat(5,1fr); gap:10px;">
+      <div class="beat">
+        <div class="beat-ref">v.1a</div>
+        <div class="beat-title">Opening Doxology</div>
+        <div class="beat-desc">"O LORD our Lord, how majestic is your name in all the earth." The YHWH/Adonenu pairing: the covenant God is the universal sovereign. The psalm begins where it will end — in worship.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">vv.1b–2</div>
+        <div class="beat-title">Greatness Through Weakness</div>
+        <div class="beat-desc">Glory set above the heavens; yet strength established through babes and nursing infants. The psalm's governing paradox: God's power shows up in what the world considers too small to count.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">vv.3–4</div>
+        <div class="beat-title">The Question</div>
+        <div class="beat-desc">Infinite cosmos — moon, stars, "the work of your <em>fingers</em>" — then fragile <em>enosh</em>. The gap between Creator and creature is the argument: why would such a God attend to such a thing?</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">vv.5–8</div>
+        <div class="beat-title">The Astonishing Answer</div>
+        <div class="beat-desc">Crowned with glory and honour; dominion over fish, birds, beasts, "everything under his feet." Genesis 1:26–28 in song. Not a consolation — a coronation. The answer to the cosmic question is a throne.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">v.9</div>
+        <div class="beat-title">Closing Doxology</div>
+        <div class="beat-desc">Exact repetition of v.1a. The answer returns to worship. The question of man resolves not in a theological statement but in praise — the only adequate response to the news.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       KEY VERSE
+       ======================================================== -->
+  <div class="full-row">
+    <div class="key-verse">
+      <div class="kv-label">Key Verse</div>
+      <div class="kv-text">"What is man that you are mindful of him, and the son of man that you care for him? Yet you have made him a little lower than the heavenly beings and crowned him with glory and honour."</div>
+      <div class="kv-ref">Psalm 8:4–5 · The most startling question in the Psalter, and its most astonishing answer, in two verses</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       WORD STUDIES — section label
+       ======================================================== -->
+  <div class="section-label">Deep Word Studies · 5 Terms</div>
+
+  <!-- Word Cards Row 1 — 3 across -->
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">יְהוָה / אֲדֹנֵינוּ</div>
+    <div class="transliteration">YHWH / Adonenu — "LORD / our Lord" (vv.1, 9)</div>
+    <div class="word-gloss">The double bracket that frames the entire psalm</div>
+    <div class="word-note">YHWH = the covenant personal name of God, disclosed to Moses at Sinai (Exod 3:14). It is intimate — the name of relationship, not title. Adonenu = "our Master," the universal sovereign over all creation.<br><br>
+    The juxtaposition is deliberate and non-interchangeable: the God who is intimately our covenant-God is also the transcendent Ruler of the cosmos. Neither absorbs the other. He is near enough to enter covenant and high enough to set his glory above the heavens.<br><br>
+    The psalm opens and closes with this pairing. Everything in between — the question of man, the cosmos, the dominion — is held inside this double frame. The answer to "why does God care?" begins with who God is: YHWH, the one who binds himself in covenant to the small.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">אֱנוֹשׁ</div>
+    <div class="transliteration">enosh — "man / mortal / frail humanity" (v.4)</div>
+    <div class="word-gloss">Not the heroic word — the weak one</div>
+    <div class="word-note">Hebrew has several words for "man." David does not choose <em>gibor</em> (the warrior) or even the generic <em>adam</em>. He chooses <em>enosh</em> — rooted in a verb meaning to be weak, sick, or incurable (cf. 2 Sam 12:15). It is the word for fragile, mortal, <em>barely-there</em> humanity.<br><br>
+    Job uses the same word in Job 7:17: "What is <em>enosh</em> that you make so much of him?" — same question, inverted emotional register. Job asks it as a complaint; David asks it in wonder.<br><br>
+    The choice of <em>enosh</em> is theologically loaded. The dignity of vv.5–8 is not given to a strong creature who might deserve it. It is given to the weak one. That is why the answer is astonishing rather than expected.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">בֶּן־אָדָם</div>
+    <div class="transliteration">ben-adam — "son of man" (v.4)</div>
+    <div class="word-gloss">The creature of the dust — and the title of the coming king</div>
+    <div class="word-note"><em>Adam</em> = taken from the <em>adamah</em>, the ground (Gen 2:7). Son of man = a creature whose very name announces its origin in dust. The phrase is not prestigious; it underlines creaturely lowliness.<br><br>
+    But the phrase becomes eschatologically loaded: Daniel 7:13 uses it for the figure who comes on the clouds to receive an everlasting kingdom. Jesus adopts it as his primary self-designation — fusing the lowly creature of Psalm 8 with the heavenly ruler of Daniel 7.<br><br>
+    Hebrews 2:6 quotes both <em>enosh</em> and <em>ben-adam</em> from the LXX (ἄνθρωπος / υἱὸς ἀνθρώπου) and applies both to Jesus: the one who became the frail creature so that the crowned creature might be restored.</div>
+  </div>
+
+  <!-- Word Cards Row 2 -->
+  <div class="word-card">
+    <div class="hebrew">זָכַר</div>
+    <div class="transliteration">zakar — "mindful / remember" (v.4)</div>
+    <div class="word-gloss">Not passive awareness — covenantal, active attention</div>
+    <div class="word-note"><em>Zakar</em> in Hebrew is not memory as storage. It is memory as action. When God <em>zakar</em> in the OT, things happen:<br><br>
+    <strong>Gen 8:1:</strong> "God remembered Noah" — and the flood receded.<br>
+    <strong>Gen 30:22:</strong> "God remembered Rachel" — and she conceived.<br>
+    <strong>Exod 2:24:</strong> "God remembered his covenant" — and the exodus began.<br><br>
+    To be <em>zakar</em>-ed by God is to be the object of his purposeful intervention. It is not that God had forgotten and now recalls — it is that he turns toward you with active covenantal care. The question of v.4 is therefore explosive: that YHWH would do this, for <em>enosh</em>.</div>
+  </div>
+
+  <div class="word-card">
+    <div class="hebrew">פָּקַד</div>
+    <div class="transliteration">paqad — "care for / visit" (v.4)</div>
+    <div class="word-gloss">Purposeful divine intervention — God comes to you</div>
+    <div class="word-note">Paired with <em>zakar</em> in v.4, <em>paqad</em> intensifies the same thought. It means to visit with purposeful attention — specifically divine intervention that changes a situation:<br><br>
+    <strong>Exod 4:31:</strong> "God had visited (<em>paqad</em>) the people of Israel" — the exodus begins.<br>
+    <strong>1 Sam 2:21:</strong> "The LORD visited (<em>paqad</em>) Hannah" — she conceives Samuel.<br><br>
+    The two verbs together build a picture that is staggering in its implications: God does not merely know you exist (<em>zakar</em>). He comes to you (<em>paqad</em>). The God of the cosmos is not observing from a distance — he is present with purposeful intention toward the fragile creature.<br><br>
+    Hebrews 2:9 is the ultimate fulfilment: Jesus is the one who came.</div>
+  </div>
+
+  <!-- Empty slot — use for a note on elohim -->
+  <div class="word-card">
+    <div class="hebrew">אֱלֹהִים</div>
+    <div class="transliteration">elohim — "God / divine beings / angels" (v.5)</div>
+    <div class="word-gloss">The most contested word in the psalm</div>
+    <div class="word-note">The MT reads: "You have made him a little lower than <em>elohim</em>" — which most naturally means God himself, or the divine council of heavenly beings.<br><br>
+    The LXX translates <em>elohim</em> as <em>angelous</em> (angels). Hebrews 2:7 follows the LXX: "You made him for a little while lower than the angels." This shift enables the Christological reading: Jesus was made lower than the angels in the Incarnation; he is now crowned with glory and honour through the Resurrection.<br><br>
+    <strong>Both readings are canonically valid.</strong> The MT sets a higher bar for human dignity — humanity as almost-divine, image-bearing. The LXX/Hebrews reading grounds the Incarnation in the OT text without displacing the original. A teacher should acknowledge the divergence rather than suppress it.</div>
+  </div>
+
+  <!-- ========================================================
+       HISTORICAL / CULTURAL CONTEXT
+       ======================================================== -->
+  <div class="section-label">Historical &amp; Cultural Context</div>
+
+  <div class="card full-row">
+    <div class="card-label">Background — 4 Contexts</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+
+      <div class="hist-box">
+        <div class="hist-title">The Gittith Superscription</div>
+        <div class="hist-text">"According to the Gittith" — the term likely refers to an instrument from Gath (a Gittite lyre) or, alternatively, a vintage/harvest melody (<em>gat</em> = winepress). Some connect it to a joyful harvest celebration, which would give the psalm a creation-festival setting — fitting for a hymn that begins and ends with praise for God's name "in all the earth." Either way, the tune was festive, not funereal; the psalm was meant to be sung with joy.</div>
+      </div>
+
+      <div class="hist-box">
+        <div class="hist-title">The Night Sky of v.3 — No Light Pollution</div>
+        <div class="hist-text">Ancient darkness was absolute. The Milky Way blazed overhead with no city interference. Babylonian astronomers had star catalogues by 1200 BC; the cosmos was a known and overwhelming presence. For a shepherd under that sky — as David was before he was king — the smallness of v.4 was not poetic exaggeration. It was felt cosmology. The moon and stars were not decoration; they were the scale of reality against which <em>enosh</em> was measured. The Hubble Deep Field is the modern equivalent: a blank patch of sky the size of a grain of sand held at arm's length, containing 3,000 galaxies, each with hundreds of billions of stars. David had no telescope. He had the same data.</div>
+      </div>
+
+      <div class="hist-box">
+        <div class="hist-title">Genesis 1:26–28 — Psalm 8 as Theology in Song</div>
+        <div class="hist-text">Psalm 8 is Genesis 1:26–28 set to music. Both texts use the same movement: creation → human calling → dominion mandate. The Hebrew <em>radah</em> (to have dominion, rule) underlies both. Psalm 8 does not add to Genesis 1; it worships the God it reveals. The imago dei (image of God) carries the concept of a royal representative who rules on the Creator's behalf — a democratisation of a concept that in Egypt applied only to the Pharaoh. Psalm 8 says it applies to all humanity.</div>
+      </div>
+
+      <div class="hist-box">
+        <div class="hist-title">ANE Background — The Democratisation of Dignity</div>
+        <div class="hist-text">In ancient Egyptian theology, only the Pharaoh bore the image of the gods and held dominion. Ordinary human beings had no such standing. In Mesopotamian cosmology (Atrahasis, Enuma Elish), humans were created from the blood of a slain god — as servants to relieve the lesser gods of labour. Against this backdrop, Psalm 8's claim is revolutionary: the dignity Israel's neighbours reserved for the king alone belongs to every son of man. The corona and sceptre of creation-theology are given to <em>enosh</em> — the fragile, not-especially-impressive one.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       ILLUSTRATIONS
+       ======================================================== -->
+  <div class="section-label">Teaching Illustrations · 4</div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 1–2</div>
+
+    <div class="illus">
+      <div class="illus-title">The Hubble Deep Field</div>
+      <div class="illus-text">In 1995 NASA pointed the Hubble Space Telescope at a seemingly blank patch of sky — a piece of sky the size of a grain of sand held at arm's length. The image revealed 3,000 galaxies. Each galaxy contains hundreds of billions of stars. David had no Hubble, but he had the same sky. "When I consider your heavens, the work of your fingers, the moon and the stars, which you have set in place" — the psalm begins with precisely this data. The question of v.4 is not a crisis of faith. It is honest cosmology: <em>why would that God bother with us?</em> The Hubble Deep Field is the modern sermon illustration David wrote in 1000 BC.</div>
+      <div class="illus-attr">NASA Hubble Deep Field (1995) — public domain imagery</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">"Babes and Nursing Infants" — The Weak Confound the Strong (v.2)</div>
+      <div class="illus-text">Jesus quotes v.2 in Matthew 21:16 after the triumphal entry, when children are shouting "Hosanna" in the Temple and the chief priests are furious. The religious establishment — educated, powerful, controlling the Temple system — is silenced by children. Jesus cites Psalm 8 as the explanation: God ordains praise from the mouths of babes to silence the enemy and the avenger. This is the psalm's logic operating all the way down: the cosmic God shows up in what the world considers too small to count. It is the same logic as the Incarnation — the eternal Word arriving in a feeding trough.</div>
+      <div class="illus-attr">Matthew 21:15–16 · Jesus quoting Psalm 8:2</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 3–4</div>
+
+    <div class="illus">
+      <div class="illus-title">The Hebrews 2 Move — "But We See Jesus"</div>
+      <div class="illus-text">The writer of Hebrews quotes Psalm 8:4–6 and then pauses: we don't yet see humanity ruling over "all things" as v.6 promises. The dominion mandate is, by observation, unfinished. The world is not under our feet — creation groans (Rom 8:22). But then comes one of the most precise pivots in the NT: "But we see <em>Jesus</em>" (Heb 2:9). The one who was made a little lower than the angels (the Incarnation), who suffered death, who is now crowned with glory and honour (the Resurrection/Ascension). Psalm 8 is about human dignity; Hebrews 2 says that dignity has been restored, and its restoration has a face. The psalm does not merely describe humanity — it describes the one who reclaims what humanity lost.</div>
+      <div class="illus-attr">Hebrews 2:6–9 · "We see Jesus"</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">The Most Dangerous Question in Worship</div>
+      <div class="illus-text">"What is man?" asked wrongly produces nihilism: we are nothing, nothing matters, the universe is indifferent. Asked arrogantly it produces secular humanism: man is the measure of all things, the master of his fate. David asks it a third way — in the presence of God, looking up at a sky that dwarfs him. The answer is neither despair nor pride but <em>astonishment</em>: this God attends to this creature. That is not a comfortable middle ground. It is theologically explosive. The sermon on Psalm 8 should not produce a feeling of modest worth. It should produce the same thing the psalm produces: doxology. Not "I matter a little." But: "O LORD, our Lord, how majestic is your name in all the earth."</div>
+      <div class="illus-attr">Original illustration</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       COMMENTARY SHELF — full width, 3-col inner grid
+       ======================================================== -->
+  <div class="section-label">Commentary Shelf · 3 Voices</div>
+
+  <div class="full-row" style="background:#faf7f2; border:2px solid #2c2c2c; border-radius:4px; padding:15px 17px;">
+    <div class="card-label" style="margin-bottom:12px;">Three Perspectives on Psalm 8</div>
+    <div class="teachers-grid">
+
+      <div class="teacher-card kidner">
+        <div class="teacher-name">Derek Kidner</div>
+        <div class="teacher-tradition">Conservative Evangelical · Tyndale OT Commentaries · IVP</div>
+        <div class="teacher-point">On v.4: <span class="teacher-quote">"The question is not rhetorical despair but wondering gratitude — the poet is astonished that the transcendent God stoops to covenant relationship."</span> The smallness is the necessary backdrop for the surprise of the answer.</div>
+        <div class="teacher-point">On the <em>elohim</em> / angels divergence: careful on the LXX reading, but notes that Hebrews 2 is a legitimate development of the text's own logic — not an imposition but a fulfilment.</div>
+        <div class="teacher-point">On the inclusio: the psalm's structure enacts its theology — the question of man is held inside worship. You cannot ask the anthropological question outside the doxological frame.</div>
+        <a class="source-link" href="https://www.ivpress.com" target="_blank" rel="noopener">ivpress.com — Tyndale OT Commentaries, <em>Psalms 1–72</em> (IVP)</a>
+      </div>
+
+      <div class="teacher-card lewis">
+        <div class="teacher-name">C.S. Lewis</div>
+        <div class="teacher-tradition">Literary / Pastoral · <em>Reflections on the Psalms</em> · Harcourt / HarperCollins</div>
+        <div class="teacher-point">On Psalm 8's "double movement": the poet first feels overwhelmed by the cosmos (vv.3–4), then is astonished at what has been given to the creature (vv.5–8). Lewis notes this movement is not resolved by reducing either pole — the vastness remains vast, the dignity remains real.</div>
+        <div class="teacher-point"><span class="teacher-quote">"The most completely humble being is also the most majestic."</span> Lewis draws a direct line from Psalm 8 to the Incarnation — God himself takes the form of the creature the psalm celebrates. The poem prepares the category that the gospel fills.</div>
+        <div class="teacher-point">Not a commentary in the technical sense, but theologically precise: Psalm 8 shows that astonishment at human dignity and worship of God are not competing — they intensify each other.</div>
+        <a class="source-link" href="https://www.harpercollins.com" target="_blank" rel="noopener">harpercollins.com — <em>Reflections on the Psalms</em> (HarperCollins)</a>
+      </div>
+
+      <div class="teacher-card goldingay">
+        <div class="teacher-name">John Goldingay</div>
+        <div class="teacher-tradition">Critical-Evangelical · Baker Commentary on the OT Wisdom &amp; Psalms · Baker Academic</div>
+        <div class="teacher-point">Careful on the MT <em>elohim</em> vs. LXX <em>angelous</em>: argues the MT meaning (divine beings / God himself) should not be surrendered to the Hebrews 2 reading. Both readings are valid within their own canonical contexts and carry different theological freight.</div>
+        <div class="teacher-point">Strong on ANE background: compares with Egyptian creation texts where pharaoh alone bears the imago dei. Psalm 8 democratises this dignity to all humanity — a radical levelling in its original context.</div>
+        <div class="teacher-point">On the structure: the psalm is a complete meditation — it does not leave the question of v.4 in the air. The answer is given before the psalm closes, and the return to doxology in v.9 is the only theologically appropriate ending once the answer lands.</div>
+        <a class="source-link" href="https://www.bakerpublishinggroup.com" target="_blank" rel="noopener">bakerpublishinggroup.com — Baker Commentary on OT Wisdom &amp; Psalms, <em>Psalms Vol. 1</em> (Baker Academic)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PRESSURE POINTS — interpretive
+       ======================================================== -->
+  <div class="section-label">Interpretive Pressure Points · 3</div>
+
+  <div class="card full-row">
+    <div class="card-label">Where the Text Pushes Back</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+
+      <div class="pressure">
+        <div class="pressure-q">elohim — God or Angels?</div>
+        <div class="pressure-a">MT reads <em>elohim</em> (God / divine beings) in v.5. The LXX translates <em>angelous</em> (angels). Hebrews 2:7 follows the LXX. The MT sets a higher bar for human dignity — humanity is almost-divine, barely below God himself. The Hebrews reading grounds the Incarnation in the OT: Jesus was made lower than the angels. Both are canonically legitimate. Teachers should name the divergence, note that Hebrews is doing deliberate canonical interpretation, and resist collapsing one into the other. The MT reading is the higher doctrine of humanity; the NT reading is the deeper doctrine of Christology.</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">Primarily About Humanity — or About Christ?</div>
+        <div class="pressure-a">Hebrews 2 applies the psalm to Jesus as the one who fulfils the dominion mandate that humanity failed to complete. A typological reading sees the psalm as ultimately about Christ. A direct reading sees it as a genuine hymn about human dignity in creation — valuable in itself. These are not competing: typology assumes the literal meaning first and builds on it, not instead of it. Leading with Hebrews 2 alone can flatten the psalm's celebration of ordinary human dignity. Leading with the psalm alone misses the NT's sharpest interpretation. The best teaching holds both in sequence: this is what was given to humanity → this is what was accomplished for humanity in Jesus.</div>
+      </div>
+
+      <div class="pressure">
+        <div class="pressure-q">Common Misreading: "A Little Lower" as Humility</div>
+        <div class="pressure-a">The phrase "a little lower than elohim / the angels" is often quoted as modesty — "we're not much, just a little lower than the angels." But the psalm's logic is the opposite: the surprise of vv.5–8 is how <em>high</em> humanity is placed, not how low. The cosmic vastness of vv.3–4 is designed to make the coronation of vv.5–8 more explosive. When God crowns the creature who is next to nothing against the backdrop of the cosmos, that is not consolation — it is astonishment. The preacher who softens vv.5–8 into modest self-worth has missed the psalm entirely.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CROSS-REFERENCES — purple-tinted cards
+       ======================================================== -->
+  <div class="section-label">Cross-References · 5</div>
+
+  <div class="card">
+    <div class="card-label">OT Connections</div>
+
+    <div class="xref-item">
+      <div class="xref-ref">Genesis 1:26–28 — The Image of God &amp; the Dominion Mandate</div>
+      <div class="xref-note">Psalm 8 is Genesis 1 in lyric form. Same vocabulary, same movement from creation to human calling. The imago dei makes humanity the royal representative of God over creation. Psalm 8 does not extend Genesis 1 — it worships the God who declared it.</div>
+    </div>
+
+    <div class="xref-item">
+      <div class="xref-ref">Job 7:17–18 — The Same Question, Opposite Emotional Register</div>
+      <div class="xref-note">"What is <em>enosh</em> that you make so much of him?" — Job uses the same Hebrew phrase as Psalm 8:4, but as a complaint: <em>why won't you leave me alone?</em> The verbal echo is striking. Same words, opposite posture. David asks in wonder; Job asks in exhaustion. Both are asking the right question. Only one has the emotional capacity to receive the answer.</div>
+    </div>
+
+    <div class="xref-item">
+      <div class="xref-ref">Daniel 7:13–14 — "One Like a Son of Man"</div>
+      <div class="xref-note">The royal-cosmic creature of Psalm 8 becomes the apocalyptic Son of Man who comes on clouds and receives an everlasting kingdom. Jesus fuses both: the humility of Psalm 8's creature-of-dust with the majesty of Daniel's heavenly ruler.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-label">NT Connections</div>
+
+    <div class="xref-item">
+      <div class="xref-ref">Hebrews 2:6–9 — The Fullest NT Interpretation</div>
+      <div class="xref-note">Psalm 8:4–6 applied first to humanity's unfinished dominion ("we do not yet see everything subjected to him"), then to Jesus as the one who completes it through death and resurrection. "But we see <em>Jesus</em>" — the psalm finds its fullest referent.</div>
+    </div>
+
+    <div class="xref-item">
+      <div class="xref-ref">1 Corinthians 15:27 — The Resurrection Argument</div>
+      <div class="xref-note">Paul quotes Psalm 8:6 ("he put all things under his feet") in his resurrection argument. The "all things" subjected to Christ is the completion of the Psalm 8 dominion mandate — not cancelled by the Fall but reclaimed in Christ's resurrection and coming reign.</div>
+    </div>
+
+    <div class="xref-item">
+      <div class="xref-ref">Matthew 21:16 — Jesus Quoting v.2</div>
+      <div class="xref-note">When the chief priests object to children shouting "Hosanna," Jesus quotes Psalm 8:2: "From the lips of children and infants you, Lord, have called forth your praise." The psalm's paradox — God's strength displayed through the small — is at work in the Temple courts. The religious establishment is silenced by the thing it considers beneath its notice.</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       THEN → NOW — purple left-bordered callout, two columns
+       ======================================================== -->
+  <div class="section-label">Then → Now</div>
+
+  <div class="card full-row">
+    <div class="card-label">Then &amp; Now</div>
+    <div class="then-now-grid">
+      <div class="tn-box tn-then">
+        <div class="tn-label">Then · ~1000 BC · Under the Night Sky</div>
+        <div class="tn-text">David writes from under a night sky — no city lights, the Milky Way blazing overhead — and feels the weight of the cosmos. His question is not academic: with all this, why would the God of covenant attend to <em>enosh</em>, the fragile one? The answer he reaches is not consolation but astonishment: humanity is the creature God crowned and commissioned. The psalm returns to doxology because there is no other adequate response to the news. The question of man is answered not by reducing the cosmos but by revealing what the Maker of the cosmos decided to do with the creature in it.</div>
+      </div>
+      <div class="tn-box tn-now">
+        <div class="tn-label">Now · Statistics &amp; Scale</div>
+        <div class="tn-text">We live in an age of statistics. Eight billion people on a pale blue dot. Hundreds of billions of galaxies. Everything that conspires to make a person feel like a rounding error. Psalm 8 does not dispute the scale — it starts there, in vv.3–4, on purpose. But it ends with a crowned creature given authority over creation by the God who cannot stop attending to the weak. Hebrews 2 adds the sharpest update: the God who crowned humanity in the beginning sent his Son to become <em>enosh</em> — the frail one — so that the crown would not remain out of reach. The answer to the modern question of human worth is not therapy. It is the same doxology: O LORD, our Lord, how majestic is your name in all the earth.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       VERDICT — full width, dark
+       ======================================================== -->
+  <div class="verdict full-row" style="margin-top:6px;">
+    <div class="verdict-label">Verdict · cf. Hebrews 2:9; Mark 10:45</div>
+    <div class="verdict-text">
+      Psalm 8 is not primarily a psalm about human smallness. It is a psalm about divine astonishment — that the God who set his glory above the heavens chose to crown the creature of dust and attend to the frail one. The psalm asks the hardest cosmological question and answers it not with a philosophical argument but with a throne.
+      <br><br>
+      The two governing verbs of v.4 — <em>zakar</em> and <em>paqad</em> — are not passive. God does not observe from a distance. He remembers with action and visits with purpose. The wonder of the psalm is not that humanity is worth something in the abstract. It is that <em>this</em> God comes to <em>this</em> creature.
+      <br><br>
+      Hebrews 2 names the one in whom that visitation reached its fullest expression. Jesus is the answer to Psalm 8's question: "Why does God care about the son of man?" Because he became the Son of Man. The psalm that opens and closes in doxology finds in the Incarnation the reason doxology is the only fitting response.
+      <br><br>
+      The right ending to a sermon on Psalm 8 is not a bullet-point application. It is the verse the psalm itself ends with — spoken with the weight of everything that comes between the two bookends: <em>O LORD, our Lord, how majestic is your name in all the earth.</em>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
