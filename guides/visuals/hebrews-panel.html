@@ -268,10 +268,43 @@
   .warn-title { font-size: 0.78rem; color: #2c2c2c; font-weight: 700; margin-bottom: 3px; }
   .warn-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
 
+  /* ── CHAPTER-BY-CHAPTER ── */
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .chapter-card {
+    border: 2px solid;
+    border-radius: 3px;
+    background: #faf7f2;
+    padding: 11px 13px;
+  }
+  .chapter-card.era-angels   { border-color: #6c4bbf; }
+  .chapter-card.era-moses    { border-color: #3b6fd4; }
+  .chapter-card.era-priest   { border-color: #2e8a4a; }
+  .chapter-card.era-covenant { border-color: #d47c1a; }
+  .chapter-card.era-faith    { border-color: #c0392b; }
+  .ch-num {
+    font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700; margin-bottom: 3px;
+  }
+  .era-angels   .ch-num { color: #6c4bbf; }
+  .era-moses    .ch-num { color: #3b6fd4; }
+  .era-priest   .ch-num { color: #2e8a4a; }
+  .era-covenant .ch-num { color: #d47c1a; }
+  .era-faith    .ch-num { color: #c0392b; }
+  .ch-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 4px; }
+  .ch-summary { font-size: 0.74rem; color: #555; line-height: 1.38; margin-bottom: 5px; }
+  .ch-verse { font-size: 0.68rem; color: #888; font-style: italic; line-height: 1.35; }
+  .ch-warn { display: inline-block; font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; background: #c0392b; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 4px; font-weight: 700; }
+  .ch-type { display: inline-block; font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 4px; font-weight: 700; }
+
   /* ── COMMENTARY SHELF ── */
   .commentary-shelf {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin-bottom: 28px;
   }
@@ -285,9 +318,16 @@
   .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
   .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
   .trad-conservative { background: #3b6fd4; color: #fff; }
-  .trad-reformed { background: #6c4bbf; color: #fff; }
-  .trad-evangelical { background: #2e8a4a; color: #fff; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-evangelical  { background: #2e8a4a; color: #fff; }
+  .trad-puritan      { background: #8b1a1a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .comm-overview { font-size: 0.8rem; color: #c8c0b8; line-height: 1.45; margin-bottom: 10px; }
   .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 8px; }
+  .comm-chapters-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; font-weight: 700; margin: 10px 0 6px; }
+  .comm-chapter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .comm-chapter-tag { font-size: 0.68rem; background: #2c2c2c; border: 1px solid #444; color: #d0c8bc; padding: 2px 7px; border-radius: 2px; line-height: 1.3; }
+  .comm-chapter-tag strong { color: #f0c890; }
   .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
   .source-link:hover { color: #aaa; }
 
@@ -368,13 +408,15 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .word-strip, .warn-grid { grid-template-columns: repeat(3, 1fr); }
-    .commentary-shelf, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .chapter-grid { grid-template-columns: repeat(3, 1fr); }
+    .commentary-shelf, .xref-grid { grid-template-columns: 1fr; }
     .melch-points { grid-template-columns: 1fr; }
     .tn-cols { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) {
     .header-title { font-size: 2.8rem; }
     .word-strip, .warn-grid { grid-template-columns: 1fr 1fr; }
+    .chapter-grid { grid-template-columns: 1fr 1fr; }
     .commentary-shelf, .xref-grid { grid-template-columns: 1fr; }
     .melch-chain { flex-direction: column; align-items: flex-start; }
     .melch-connector { transform: rotate(90deg); }
@@ -588,6 +630,116 @@
     </div>
   </div>
 
+  <!-- ═══ CHAPTER BY CHAPTER ═══ -->
+  <div class="section-label">Chapter-by-Chapter Overview — All 13 Chapters</div>
+  <div class="chapter-grid">
+
+    <div class="chapter-card era-angels">
+      <div class="ch-num">Chapter 1 · Angels</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">The Son Above All</div>
+      <div class="ch-summary">Opens mid-sentence with the grand claim: God has spoken his final word in the Son. Seven OT quotations (Ps 2, 2 Sam 7, Deut 32, Ps 45, Ps 102, Ps 110) stack to prove one point — the Son is categorically above the angels who delivered the law. He is creator, eternal, seated at the right hand.</div>
+      <div class="ch-verse">Key verse: "He is the radiance of God's glory and the exact imprint of his nature." — 1:3</div>
+    </div>
+
+    <div class="chapter-card era-angels">
+      <div class="ch-num">Chapter 2 · Angels</div>
+      <span class="ch-warn">Warning 1</span>
+      <div class="ch-title">Flesh and Blood</div>
+      <div class="ch-summary">The first warning (2:1–4): if the law through angels demanded obedience, how shall we escape neglecting this? Then the stunning turn: the Son became lower than the angels — took on flesh and blood — specifically to taste death for everyone. Through suffering he was perfected as pioneer and became a merciful, sympathetic High Priest.</div>
+      <div class="ch-verse">Key verse: "Because he himself suffered when he was tempted, he is able to help those who are being tempted." — 2:18</div>
+    </div>
+
+    <div class="chapter-card era-moses">
+      <div class="ch-num">Chapter 3 · Moses</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">Greater than Moses</div>
+      <div class="ch-summary">Moses was faithful as a servant in God's house — the greatest human honour Israel knew. Jesus is faithful as a Son over God's house. Ps 95 is introduced: "Today, if you hear his voice, do not harden your hearts." The wilderness generation is the case study — they heard, hardened, and fell. We are the house, if we hold on.</div>
+      <div class="ch-verse">Key verse: "Christ is faithful as the Son over God's house. And we are his house." — 3:6</div>
+    </div>
+
+    <div class="chapter-card era-moses">
+      <div class="ch-num">Chapter 4 · Moses</div>
+      <span class="ch-warn">Warning 2 cont.</span>
+      <div class="ch-title">The Rest That Remains</div>
+      <div class="ch-summary">The Ps 95 warning continues. A Sabbath-rest remains for God's people — Canaan didn't exhaust it (Ps 95 was written long after Israel entered), and the Sabbath of Gen 2 points beyond itself. "Today" is still open. The Word of God is living and active. Pivots to hope: we have a great High Priest who sympathises — so draw near with confidence.</div>
+      <div class="ch-verse">Key verse: "Let us therefore approach the throne of grace with confidence." — 4:16</div>
+    </div>
+
+    <div class="chapter-card era-priest">
+      <div class="ch-num">Chapter 5 · High Priest</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">The Appointed Priest</div>
+      <div class="ch-summary">The criteria for High Priesthood: chosen from among men, appointed by God, offers for his own sins too. Jesus meets these differently: no sins of his own, but he "learned obedience through what he suffered" and was "made perfect." Ps 2:7 and Ps 110:4 are the divine appointment. Then the rebuke: you are dull of hearing — still needing milk, not solid food. Melchizedek first named.</div>
+      <div class="ch-verse">Key verse: "Although he was a son, he learned obedience from what he suffered." — 5:8</div>
+    </div>
+
+    <div class="chapter-card era-priest">
+      <div class="ch-num">Chapter 6 · High Priest</div>
+      <span class="ch-warn">Warning 3</span>
+      <div class="ch-title">Press On — and Hold the Anchor</div>
+      <div class="ch-summary">The sharpest warning: those who have been enlightened, tasted the heavenly gift, shared in the Spirit — and fall away — cannot be renewed. Not a description but a cliff-edge: this is where the logic leads. Then the pastoral pivot: "We are confident of better things in your case." God's oath to Abraham is unbreakable. Hope is an anchor for the soul. Melchizedek is coming.</div>
+      <div class="ch-verse">Key verse: "We have this hope as an anchor for the soul, firm and secure." — 6:19</div>
+    </div>
+
+    <div class="chapter-card era-priest">
+      <div class="ch-num">Chapter 7 · High Priest</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">Melchizedek's Order</div>
+      <div class="ch-summary">The full argument: Melchizedek received tithes from Abraham and blessed him — the lesser honours the greater. Levi (in Abraham's loins) effectively tithed to Melchizedek. If the Levitical priesthood could have completed the work, why does Ps 110:4 predict a different priest? A change of priesthood requires a change of law. Jesus holds his priesthood permanently, by the power of an indestructible life. He always lives to intercede.</div>
+      <div class="ch-verse">Key verse: "He is able to save completely those who come to God through him, because he always lives to intercede." — 7:25</div>
+    </div>
+
+    <div class="chapter-card era-covenant">
+      <div class="ch-num">Chapter 8 · Covenant</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">A Better Covenant</div>
+      <div class="ch-summary">Jesus ministers in the heavenly tabernacle — the real one. The earthly is a copy and shadow (Moses was told to make it "according to the pattern"). A better covenant, enacted on better promises. Then the decisive OT witness: Jeremiah 31:31–34, quoted in full — God himself said a new covenant was coming, which means he declared the old one obsolete. "What is obsolete and ageing will soon disappear."</div>
+      <div class="ch-verse">Key verse: "But in fact the ministry Jesus has received is as superior to theirs as the covenant of which he is mediator." — 8:6</div>
+    </div>
+
+    <div class="chapter-card era-covenant">
+      <div class="ch-num">Chapter 9 · Covenant</div>
+      <span class="ch-type">Exposition</span>
+      <div class="ch-title">The Blood of the Covenant</div>
+      <div class="ch-summary">The earthly tabernacle described: the outer court and the Most Holy Place, accessible only once a year, only with blood. The Holy Spirit signalled by this that the way was not yet open. Christ entered the greater and perfect tabernacle — not made with hands — once for all, with his own blood. He purifies the conscience from dead works. The covenant enacted by death, like a will. He will appear a second time — not to deal with sin, but to bring salvation.</div>
+      <div class="ch-verse">Key verse: "How much more... will the blood of Christ... cleanse our consciences from acts that lead to death." — 9:14</div>
+    </div>
+
+    <div class="chapter-card era-covenant">
+      <div class="ch-num">Chapter 10 · Covenant</div>
+      <span class="ch-warn">Warning 4</span>
+      <div class="ch-title">Once For All — Then Sat Down</div>
+      <div class="ch-summary">The law is a shadow; the same sacrifices offered endlessly could never perfect the worshipper. Proof: if they worked, they would have stopped. Jesus comes quoting Ps 40 (LXX): "A body you prepared for me... I have come to do your will." One sacrifice, once, then he sat down. Warning 4: deliberate sin after receiving the truth leaves no sacrifice remaining. "It is a dreadful thing to fall into the hands of the living God." Close: do not throw away your confidence.</div>
+      <div class="ch-verse">Key verse: "By one sacrifice he has made perfect forever those who are being made holy." — 10:14</div>
+    </div>
+
+    <div class="chapter-card era-faith">
+      <div class="ch-num">Chapter 11 · Faith</div>
+      <span class="ch-type">Exhortation</span>
+      <div class="ch-title">The Hall of Faith</div>
+      <div class="ch-summary">Faith defined: the substance (hypostasis) of things hoped for, the evidence of things not seen. Then the gallery: Abel, Enoch, Noah, Abraham (journeyed not knowing where), Sarah (received power to conceive), Isaac, Jacob, Joseph, Moses (chose suffering over the treasures of Egypt), Rahab, Gideon, Barak, Samson, Jephthah, David, Samuel, prophets, unnamed martyrs. All died without receiving the promise. They were waiting for us — "together with us they would be made perfect."</div>
+      <div class="ch-verse">Key verse: "Now faith is confidence in what we hope for and assurance about what we do not see." — 11:1</div>
+    </div>
+
+    <div class="chapter-card era-faith">
+      <div class="ch-num">Chapter 12 · Faith</div>
+      <span class="ch-warn">Warning 5</span>
+      <div class="ch-title">Fix Your Eyes on Jesus</div>
+      <div class="ch-summary">The cloud of witnesses as watching stadium. Throw off everything hindering and the sin that entangles. Run with perseverance. Fix your eyes on Jesus — pioneer and perfecter — who endured the cross for the joy set before him. God disciplines his sons — hardship is fatherly, not punitive. Sinai vs. Zion: you have come to the heavenly Jerusalem, to the mediator of a new covenant. Warning 5: do not refuse him who speaks. "Our God is a consuming fire."</div>
+      <div class="ch-verse">Key verse: "Fixing our eyes on Jesus, the pioneer and perfecter of faith." — 12:2</div>
+    </div>
+
+    <div class="chapter-card era-faith">
+      <div class="ch-num">Chapter 13 · Faith</div>
+      <span class="ch-type">Exhortation</span>
+      <div class="ch-title">Outside the Camp</div>
+      <div class="ch-summary">Final practical exhortations: brotherly love, hospitality (you may be hosting angels), care for prisoners, marriage honoured, contentment. "Jesus Christ is the same yesterday and today and forever" — the hinge verse. Do not be led astray by strange teachings. Go to Jesus outside the camp, bearing his reproach — the city we seek is still to come. Benediction: may the God of peace, who raised from the dead our Lord Jesus, equip you with everything good.</div>
+      <div class="ch-verse">Key verse: "Jesus Christ is the same yesterday and today and forever." — 13:8</div>
+    </div>
+
+  </div><!-- /chapter-grid -->
+
   <!-- ═══ WORD STUDIES ═══ -->
   <div class="section-label">Five Key Greek Terms</div>
   <div class="word-strip">
@@ -711,34 +863,97 @@
   </div><!-- /warn-grid -->
 
   <!-- ═══ COMMENTARY SHELF ═══ -->
-  <div class="section-label">Commentary Shelf</div>
+  <div class="section-label">Commentary Shelf — Five Voices</div>
   <div class="commentary-shelf">
 
     <div class="comm-card">
       <div class="comm-author">F. F. Bruce</div>
-      <div class="comm-title">The Epistle to the Hebrews (NICNT, 1990)</div>
+      <div class="comm-title">The Epistle to the Hebrews (NICNT, revised 1990)</div>
       <span class="comm-tradition trad-conservative">Conservative Evangelical</span>
-      <div class="comm-point">Bruce is the standard starting point. On the warning passages, he argues the people described in 6:4–6 show genuine experience of grace but the text does not require they are regenerate — the language is deliberately ambiguous to shock drifters back to seriousness without resolving the predestination question.</div>
-      <div class="comm-point">On Melchizedek: "The argument is typological, not allegorical — the silence of Scripture about his parentage is the theological point, not a claim about his ontology."</div>
-      <a href="https://www.eerdmans.com/Products/0068/the-epistle-to-the-hebrews.aspx" target="_blank" class="source-link">eerdmans.com — The Epistle to the Hebrews (NICNT) [VERIFY URL]</a>
+      <div class="comm-overview">The standard entry-level scholarly commentary for evangelicals. Bruce combines rigorous exegesis with accessibility — he takes every word seriously without losing the pastoral purpose of the book. Best first commentary for a teacher preparing to preach Hebrews.</div>
+      <div class="comm-point">Warning passages (chs. 6, 10): the language of 6:4–6 describes genuine experience of grace but does not require regeneration. Deliberately ambiguous — designed to warn drifters, not settle predestination debates.</div>
+      <div class="comm-point">Melchizedek (ch. 7): purely typological. "Without genealogy" = no genealogy recorded, which is the type. Not a claim about Melchizedek's literal ontology or a Christophany.</div>
+      <div class="comm-point">Authorship: almost certainly not Paul. The polished Greek and the theological angle point away from him. Bruce does not speculate beyond this.</div>
+      <div class="comm-chapters-label">Key contributions by chapter</div>
+      <div class="comm-chapter-row">
+        <span class="comm-chapter-tag"><strong>Ch 1</strong> Son vs. angels — OT quotation method</span>
+        <span class="comm-chapter-tag"><strong>Ch 7</strong> Melchizedek typology in full</span>
+        <span class="comm-chapter-tag"><strong>Ch 6</strong> Warning passage — best balanced treatment</span>
+        <span class="comm-chapter-tag"><strong>Ch 11</strong> Faith heroes — historical background on each</span>
+      </div>
+      <a href="https://www.eerdmans.com/products/the-epistle-to-the-hebrews-nicnt.html" target="_blank" class="source-link">eerdmans.com — The Epistle to the Hebrews, NICNT [VERIFY URL]</a>
     </div>
 
     <div class="comm-card">
       <div class="comm-author">Thomas Schreiner</div>
       <div class="comm-title">Commentary on Hebrews (BHAC, 2015)</div>
-      <span class="comm-tradition trad-reformed">Reformed / Conservative</span>
-      <div class="comm-point">Schreiner reads the warning passages as genuine warnings addressed to the visible community — some of whom are elect, some not. The warnings are God's means of preserving the elect, not evidence they can fall. Hebrews 6 describes those who were in the community but had not truly believed.</div>
-      <div class="comm-point">Especially useful on the "rest" theme in chs. 3–4: the rest is eschatological participation in God's own completed work — begun now in faith, fully realised in the new creation.</div>
-      <a href="https://www.bhacademic.com/product/commentary-on-hebrews/" target="_blank" class="source-link">bhacademic.com — Commentary on Hebrews (BHAC) [VERIFY URL]</a>
+      <span class="comm-tradition trad-reformed">Reformed / Conservative Evangelical</span>
+      <div class="comm-overview">Schreiner brings a Reformed systematic lens without losing the text's own concerns. Particularly strong on the warning passages (his position is carefully argued and eminently teachable) and on the eschatological "rest." Best commentary for a preacher in a Reformed or Baptist tradition who needs to teach the hard texts responsibly.</div>
+      <div class="comm-point">Warning passages: the community includes both elect and non-elect. The warnings are God's means of preserving the elect — they function, not as descriptions of apostasy that has occurred, but as means by which God prevents it. Those in ch. 6 were in the community but never truly believed.</div>
+      <div class="comm-point">Rest (chs. 3–4): the rest is eschatological — full participation in God's own completed Sabbath-rest. Begun now in faith, fully realised in the new creation. Neither Canaan nor Sabbath exhausts the concept.</div>
+      <div class="comm-point">Covenant (chs. 8–10): the "better covenant" argument is not supersessionism in a dismissive sense — the OT was always designed to be superseded; its own prophets said so (Jer 31).</div>
+      <div class="comm-chapters-label">Key contributions by chapter</div>
+      <div class="comm-chapter-row">
+        <span class="comm-chapter-tag"><strong>Ch 3–4</strong> The rest — most thorough treatment</span>
+        <span class="comm-chapter-tag"><strong>Ch 6</strong> Warning — Reformed position fully argued</span>
+        <span class="comm-chapter-tag"><strong>Ch 8–9</strong> Covenant structure and new covenant arrival</span>
+        <span class="comm-chapter-tag"><strong>Ch 12</strong> Discipline and the Sinai-Zion contrast</span>
+      </div>
+      <a href="https://www.bhacademic.com/product/commentary-on-hebrews/" target="_blank" class="source-link">bhacademic.com — Commentary on Hebrews, BHAC [VERIFY URL]</a>
     </div>
 
     <div class="comm-card">
-      <div class="comm-author">William Lane</div>
-      <div class="comm-title">Hebrews 1–8 &amp; 9–13 (Word Biblical Commentary, 1991)</div>
+      <div class="comm-author">William L. Lane</div>
+      <div class="comm-title">Hebrews 1–8 &amp; Hebrews 9–13 (WBC, 1991)</div>
       <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
-      <div class="comm-point">The most thorough technical commentary. Lane's two-volume WBC is essential for word studies — his treatment of τελειόω is definitive, showing how the term moves from OT cultic consecration (Ex 29) to Jesus's qualification through suffering.</div>
-      <div class="comm-point">On the sermon structure: Lane argues the book alternates exposition and exhortation with deliberate rhetorical design — each warning is calibrated to the preceding theological argument it follows.</div>
-      <a href="https://www.zondervan.com/hebrews-word-biblical-commentary" target="_blank" class="source-link">zondervan.com — Hebrews WBC [VERIFY URL]</a>
+      <div class="comm-overview">The most technically thorough commentary on Hebrews in English. Two volumes, dense Greek analysis, extensive survey of secondary literature. Not a preaching commentary — this is where you go when you need to know what a word actually means, what the rhetorical form is doing, or what every major scholar has said about a passage. Essential for serious word study.</div>
+      <div class="comm-point">τελειόω (ch. 2, 5, 10): Lane's treatment is definitive. The word's background is OT priestly consecration (Ex 29; Lev 8). Jesus was "perfected" through suffering in the sense of being fully qualified for his mediating work — not morally deficient before.</div>
+      <div class="comm-point">Rhetorical structure: Lane reads Hebrews as a deliberate alternation of exposition (the indicative: this is what Jesus is) and exhortation (the imperative: therefore, hold on). Each warning is calibrated to the theological argument that precedes it.</div>
+      <div class="comm-point">Sermon form: Lane takes 13:22 ("word of exhortation") as decisive — this is a written homily, not a standard letter. Its structure reflects synagogue preaching conventions.</div>
+      <div class="comm-chapters-label">Key contributions by chapter</div>
+      <div class="comm-chapter-row">
+        <span class="comm-chapter-tag"><strong>Ch 2</strong> τελειόω — the fullest word study</span>
+        <span class="comm-chapter-tag"><strong>Ch 5, 7</strong> Priestly appointment — OT background</span>
+        <span class="comm-chapter-tag"><strong>Ch 9–10</strong> Tabernacle and Day of Atonement details</span>
+        <span class="comm-chapter-tag"><strong>Ch 11</strong> Each faith hero — historical background</span>
+      </div>
+      <a href="https://www.zondervan.com/p/hebrews-1-8-word-biblical-commentary/" target="_blank" class="source-link">zondervan.com — Hebrews WBC, Vols. 47a &amp; 47b [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Owen</div>
+      <div class="comm-title">An Exposition of the Epistle to the Hebrews (1668–1684)</div>
+      <span class="comm-tradition trad-puritan">Reformed / Puritan Classic</span>
+      <div class="comm-overview">Seven volumes. The most exhaustive theological commentary on Hebrews ever produced — Owen spent over 20 years on it. Not for the faint-hearted, but there is no one who has thought more carefully or at greater length about this book. Every major passage is given theological, doctrinal, and practical treatment. Slow reading; high yield. Available free online through several Reformed archives.</div>
+      <div class="comm-point">Warning passages: Owen argues strongly that the people described in 6:4–6 were never truly regenerate — they had the external privileges of the covenant community but not the inward work of the Spirit. A landmark of the Reformed interpretation.</div>
+      <div class="comm-point">Priesthood (chs. 5–10): Owen's treatment of Christ's priestly work is unmatched for theological depth — his chapters on the heavenly intercession and the once-for-all sacrifice shaped Reformed soteriology for generations.</div>
+      <div class="comm-point">Practical application: despite the depth, Owen never loses the pastoral urgency of Hebrews. Each section ends with use — what does this truth demand of the reader?</div>
+      <div class="comm-chapters-label">Key contributions by chapter</div>
+      <div class="comm-chapter-row">
+        <span class="comm-chapter-tag"><strong>Ch 1</strong> Christology — divinity of the Son</span>
+        <span class="comm-chapter-tag"><strong>Ch 6</strong> Warning — the classic Reformed case</span>
+        <span class="comm-chapter-tag"><strong>Ch 7–10</strong> Priesthood — most thorough theological treatment</span>
+        <span class="comm-chapter-tag"><strong>Ch 11</strong> Saving faith — definition and examples</span>
+      </div>
+      <a href="https://www.ccel.org/ccel/owen/hebrews.html" target="_blank" class="source-link">ccel.org — Owen's Hebrews (free, full text) [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Craig R. Koester</div>
+      <div class="comm-title">Hebrews (Anchor Bible, 2001)</div>
+      <span class="comm-tradition trad-critical">Critical-Scholarly</span>
+      <div class="comm-overview">The best critical-scholarly commentary — informed by Greco-Roman rhetorical conventions, Second Temple Jewish background, and the full range of historical-critical questions. Less theologically committed than Bruce or Schreiner, but indispensable for understanding the book's world. Especially good on what a first-century Hellenistic Jewish reader would have heard.</div>
+      <div class="comm-point">Authorship: Koester is more agnostic than most — he considers Apollos, Priscilla, and others seriously, but ultimately treats the anonymity as deliberate and irreducible. He focuses on what the rhetoric itself achieves rather than who produced it.</div>
+      <div class="comm-point">LXX dependency: the most thorough treatment of how the author's arguments depend on LXX readings. The Ps 40:6 / "a body you prepared for me" issue in ch. 10 is handled with more nuance here than in any other commentary.</div>
+      <div class="comm-point">Greco-Roman rhetoric: Koester identifies the book's rhetorical genre as a "word of exhortation" with specific formal conventions — the alternating exposition/exhortation pattern reflects deliberate epideictic rhetoric, not an accident of composition.</div>
+      <div class="comm-chapters-label">Key contributions by chapter</div>
+      <div class="comm-chapter-row">
+        <span class="comm-chapter-tag"><strong>Ch 1</strong> OT quotation method — LXX vs. MT</span>
+        <span class="comm-chapter-tag"><strong>Ch 8</strong> New covenant — Second Temple context</span>
+        <span class="comm-chapter-tag"><strong>Ch 10</strong> Ps 40 / LXX dependency — fullest treatment</span>
+        <span class="comm-chapter-tag"><strong>Ch 11</strong> Greco-Roman exemplum lists — formal parallels</span>
+      </div>
+      <a href="https://yalebooks.yale.edu/book/9780385508391/hebrews/" target="_blank" class="source-link">yalebooks.yale.edu — Hebrews, Anchor Bible [VERIFY URL]</a>
     </div>
 
   </div><!-- /commentary-shelf -->
