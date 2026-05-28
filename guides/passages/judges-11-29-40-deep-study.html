@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judges 11:29–40 — Deep Passage Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 28px 24px; }
+
+  .page-header { text-align: center; margin-bottom: 28px; }
+  .ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .companion-link { display: inline-block; font-size: 0.85rem; color: #d47c1a; text-decoration: none; border-bottom: 1px dashed #d47c1a; }
+  .companion-link:hover { opacity: 0.7; }
+  .back-link { display: inline-block; font-size: 0.85rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .back-link:hover { opacity: 0.7; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; max-width: 1100px; margin: 0 auto; }
+
+  .card { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 4px; padding: 15px 17px; }
+  .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: #888; }
+
+  /* identity */
+  .identity-card { background: #2c2c2c; color: #f5f0e8; border-radius: 4px; padding: 16px 20px; grid-column: 1 / -1; margin-bottom: 4px; }
+  .identity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
+  .id-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 3px; font-weight: 700; }
+  .id-value { font-size: 0.9rem; color: #f5f0e8; line-height: 1.45; }
+  .id-em { color: #d47c1a; font-style: italic; }
+
+  /* key verse */
+  .key-verse { background: #fff8f0; border: 2px solid #d47c1a; border-radius: 3px; padding: 14px 16px; }
+  .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 6px; }
+  .kv-text { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; line-height: 1.5; font-style: italic; }
+  .kv-ref { font-size: 0.74rem; color: #888; margin-top: 5px; }
+
+  /* structure / beats */
+  .beat { border-left: 3px solid #d47c1a; padding-left: 11px; margin-bottom: 11px; }
+  .beat:last-child { margin-bottom: 0; }
+  .beat-ref { font-size: 0.68rem; color: #d47c1a; font-weight: 700; letter-spacing: 0.08em; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; margin: 2px 0; }
+  .beat-desc { font-size: 0.85rem; color: #444; line-height: 1.4; }
+
+  /* word cards — teal/green strip */
+  .word-card { background: #f0faf5; border: 1.5px solid #2e8a4a; border-radius: 3px; padding: 12px 13px; margin-bottom: 9px; }
+  .word-card:last-child { margin-bottom: 0; }
+  .hebrew { font-size: 1.5rem; color: #2e8a4a; font-weight: 700; direction: rtl; }
+  .transliteration { font-size: 0.76rem; color: #888; font-style: italic; }
+  .word-gloss { font-size: 0.93rem; color: #2c2c2c; font-weight: 700; margin: 3px 0 2px; }
+  .word-note { font-size: 0.83rem; color: #555; line-height: 1.4; }
+
+  /* historical context — orange box */
+  .hist-box { background: #fff8f0; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 13px 15px; margin-bottom: 9px; }
+  .hist-box:last-child { margin-bottom: 0; }
+  .hist-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .hist-text { font-size: 0.85rem; color: #444; line-height: 1.42; }
+
+  /* commentary shelf — dark cards */
+  .comm-card { background: #2c2c2c; color: #f5f0e8; border-radius: 4px; padding: 14px 16px; margin-bottom: 12px; }
+  .comm-card:last-child { margin-bottom: 0; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 1rem; color: #f5f0e8; }
+  .comm-tradition { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.1em; color: #aaa; margin-bottom: 8px; }
+  .comm-tag { display: inline-block; font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; margin-bottom: 6px; font-weight: 700; }
+  .comm-tag.conservative { background: #d47c1a; color: #fff; }
+  .comm-tag.critical { background: #3b6fd4; color: #fff; }
+  .comm-tag.pastoral { background: #2e8a4a; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; margin-bottom: 8px; font-size: 0.84rem; color: #e0d8cc; line-height: 1.4; }
+  .comm-point:last-child { margin-bottom: 0; }
+  .comm-quote { font-style: italic; font-size: 0.82rem; color: #bbb; }
+  .source-link { display: inline-block; margin-top: 6px; font-size: 0.68rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #d47c1a; border-bottom-color: #d47c1a; }
+
+  /* pressure points — dark box */
+  .pressure-box { background: #1a1a1a; border-radius: 4px; padding: 14px 16px; }
+  .pressure-box .card-label { color: #aaa; }
+  .pressure { background: #2a2a2a; border: 1.5px solid #d47c1a; border-radius: 3px; padding: 11px 13px; margin-bottom: 8px; }
+  .pressure:last-child { margin-bottom: 0; }
+  .pressure-q { font-size: 0.88rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.82rem; color: #ccc; line-height: 1.4; }
+
+  /* illustration */
+  .illus { border-left: 3px solid #d47c1a; padding-left: 11px; margin-bottom: 11px; }
+  .illus:last-child { margin-bottom: 0; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #d47c1a; margin-bottom: 3px; }
+  .illus-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+
+  /* cross-references — purple tint */
+  .xref-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 8px; margin-bottom: 8px; }
+  .xref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #6c4bbf; }
+  .xref-note { font-size: 0.81rem; color: #555; margin-top: 2px; line-height: 1.35; }
+  .xref-card { background: #f5f2fc; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 14px 16px; }
+
+  /* then-now — purple left-bordered callout */
+  .then-now-block { border-left: 4px solid #6c4bbf; background: #f8f5fd; border-radius: 0 4px 4px 0; padding: 14px 16px; }
+  .then-now-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .tn-box { padding: 10px 12px; border-radius: 3px; }
+  .tn-then { background: #e8e0d4; border: 1.5px solid #aaa398; }
+  .tn-now  { background: #eef2fb; border: 1.5px solid #3b6fd4; }
+  .tn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .tn-then .tn-label { color: #7a6f62; }
+  .tn-now  .tn-label { color: #3b6fd4; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.4; }
+
+  /* verdict */
+  .verdict { background: #2c2c2c; color: #f5f0e8; border-radius: 3px; padding: 14px 16px; }
+  .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+  .verdict-text { font-size: 0.92rem; line-height: 1.5; }
+
+  /* full-width row */
+  .full-row { grid-column: 1 / -1; }
+
+  /* section divider label */
+  .section-label {
+    grid-column: 1 / -1;
+    font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700;
+    color: #aaa; margin-top: 10px; margin-bottom: 2px;
+    border-bottom: 1px solid #ddd6c8; padding-bottom: 4px;
+  }
+
+  /* home nav */
+  .home-nav { text-align: center; margin-bottom: 10px; }
+  .home-nav-link { display: inline-block; font-size: 0.85rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { opacity: 0.7; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .grid { grid-template-columns: 1fr !important; }
+    .full-row,
+    .section-label { grid-column: auto !important; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .identity-card { overflow: visible; }
+    .id-value { white-space: normal; overflow: visible; }
+    .then-now-inner { grid-template-columns: 1fr !important; }
+    .ref { font-size: 2rem !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .identity-grid { grid-template-columns: 1fr !important; }
+    .ref { font-size: 1.6rem !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    .nav-links { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
+
+  <div class="page-header">
+    <div class="ref">Judges 11:29–40</div>
+    <div class="title">The Spirit Came Before the Vow — Grace, a Rash Oath, and a Daughter Who Walked Through the Door</div>
+    <span class="badge-deep">Deep Passage Study</span><br>
+    <span style="font-size:0.82rem; color:#888; display:inline-block; margin-top:4px;">Judges 11:29–40</span>
+    <div class="nav-links">
+      <a class="back-link" href="../../index.html">← Back to index</a>
+      <a class="companion-link" href="../discussions/judges-discussion-guide.html">Discussion guide</a>
+    </div>
+  </div>
+
+<div class="grid">
+
+  <!-- ========================================================
+       IDENTITY BLOCK — full width, dark
+       ======================================================== -->
+  <div class="identity-card full-row">
+    <div class="card-label" style="color:#aaa; margin-bottom:6px;">Passage Identity</div>
+    <div class="identity-grid">
+      <div>
+        <div class="id-label">Setting &amp; Context</div>
+        <div class="id-value">Climax of Jephthah's story — the outcast judge who wins the battle through <span class="id-em">a rash vow</span> and returns home to catastrophe. The darkest irony in Judges.</div>
+      </div>
+      <div>
+        <div class="id-label">Position in Judges</div>
+        <div class="id-value">The Judges cycle in miniature: <span class="id-em">rejection → desperation → Spirit → deliverance → catastrophic aftermath</span>. Jephthah is the man on whom the Spirit rested who destroyed his own house with his mouth.</div>
+      </div>
+      <div>
+        <div class="id-label">Central Irony</div>
+        <div class="id-value">The Spirit of the LORD came on Jephthah in v.29 — <span class="id-em">before the vow</span>. Victory was already secured by grace. The vow was entirely unnecessary, and entirely catastrophic.</div>
+      </div>
+      <div>
+        <div class="id-label">Key Tension</div>
+        <div class="id-value">Was Jephthah's daughter literally sacrificed or dedicated to perpetual virginity/temple service? The text is deliberately ambiguous — but either outcome is a tragedy caused entirely by a rash vow.</div>
+      </div>
+      <div>
+        <div class="id-label">NT Reach</div>
+        <div class="id-value">Hebrews 11:32 — Jephthah appears in the faith hall of fame. The NT distinguishes a person's faith at <span class="id-em">one moment</span> from the totality of their character. Both his faith in battle and his failure in the vow are simultaneously true.</div>
+      </div>
+      <div>
+        <div class="id-label">Jephthah's Background</div>
+        <div class="id-value">Son of Gilead and a prostitute (11:1). Driven out by his half-brothers. Recruited back <span class="id-em">only when Israel was desperate</span>. A man of the fringe, shaped by the borders — and by pagan vow customs.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       KEY VERSE
+       ======================================================== -->
+  <div class="full-row">
+    <div class="key-verse">
+      <div class="kv-label">Key Verse — Judges 11:35</div>
+      <div class="kv-text">"Alas, my daughter! You have brought me very low, and you have become the cause of great trouble to me. For I have opened my mouth to the LORD, and I cannot take back my vow."</div>
+      <div class="kv-ref">Jephthah blames his daughter for his own words — the moral failure is complete. He could have taken back the vow. He did not know — or would not admit — that the law had a door.</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       STRUCTURE MAP
+       ======================================================== -->
+  <div class="card full-row">
+    <div class="card-label">Passage Structure — 4 Movements</div>
+    <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:10px;">
+      <div class="beat">
+        <div class="beat-ref">11:29</div>
+        <div class="beat-title">The Spirit's Pre-emptive Grace</div>
+        <div class="beat-desc">The Spirit of the LORD comes on Jephthah. He advances through Gilead and Manasseh toward the Ammonites. The victory is already God's gift — before Jephthah opens his mouth. Grace moves first.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">11:30–31</div>
+        <div class="beat-title">The Unnecessary Vow</div>
+        <div class="beat-desc">"If you give the Ammonites into my hands, whatever comes out of my house first... I will sacrifice as a burnt offering." Bargaining with a God who has already moved. The vow envisioned something God had explicitly forbidden.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">11:32–33</div>
+        <div class="beat-title">The Victory — As Promised</div>
+        <div class="beat-desc">Jephthah defeats twenty Ammonite cities. "So the Ammonites were subdued before the people of Israel." God delivered exactly as He had already committed to do — entirely apart from the vow.</div>
+      </div>
+      <div class="beat">
+        <div class="beat-ref">11:34–40</div>
+        <div class="beat-title">The Cost of Words</div>
+        <div class="beat-desc">The daughter appears first — with tambourines and dancing. Jephthah tears his clothes. She accepts the vow. Two months mourning her virginity on the mountains. "He did to her as he had vowed." Annual commemoration begins.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       WORD STUDIES
+       ======================================================== -->
+  <div class="section-label">Deep Word Studies — 5 Terms</div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">רוּחַ יְהוָה</div>
+    <div class="transliteration">Ruach YHWH — "Spirit of the LORD" (v.29)</div>
+    <div class="word-gloss">The Spirit came before the vow — grace, not reward</div>
+    <div class="word-note">The Spirit's arrival in v.29 is the structural key to the entire passage. The victory was already God's gift before Jephthah uttered a single word of promise. His vow was not what moved God to act — God had already moved.<br><br>
+    <strong>Compare in Judges:</strong> Spirit on Othniel (3:10), Gideon (6:34), Samson (13:25; 14:6). In every case the Spirit precedes and enables — it is grace, not a reward for bargaining. The pattern is consistent: God moves first; the judge responds. Jephthah's response was a vow, not faith.<br><br>
+    <strong>The irony is structural:</strong> Jephthah bargained with a God who had already committed to act. He treated the Spirit's coming as a conditional promise rather than a given grace. He was making a deal with someone who had already signed the cheque.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">נָדַר</div>
+    <div class="transliteration">nadar — "to vow" (v.30)</div>
+    <div class="word-gloss">A solemn, binding promise to God — always treated with gravity</div>
+    <div class="word-note">Nadar appears 31 times in the OT and is never taken lightly. Numbers 30:2: "When a man makes a vow to the LORD... he shall not break his word." The gravity of the vow is not in question.<br><br>
+    <strong>But the law anticipated rash vows:</strong> Leviticus 5:4–6 provides a sin offering pathway for oaths made thoughtlessly. The vow was binding — but not irredeemable. Jephthah's claim that he "cannot take back" the vow was legally inaccurate. There was a door he did not walk through.<br><br>
+    <strong>Ecclesiastes 5:2:</strong> "Be not rash with your mouth, nor let your heart be hasty to utter a word before God... let your words be few." The wisdom tradition directly addresses the temptation Jephthah yielded to — the compulsion to manage God with words in a moment of desperation.</div>
+  </div>
+
+  <div class="word-card" style="margin-top:0;">
+    <div class="hebrew">עוֹלָה</div>
+    <div class="transliteration">olah — "burnt offering" (v.31)</div>
+    <div class="word-gloss">Total-consumption sacrifice — the most complete form; and for a human, the Canaanite abomination</div>
+    <div class="word-note">The olah was the whole-burnt offering — nothing held back, entirely consumed by fire. It represented total dedication and the highest form of sacrifice in Israelite worship.<br><br>
+    <strong>But olah of a human was never prescribed — it was explicitly forbidden:</strong> Deuteronomy 12:31 says of the surrounding nations, "they even burn their sons and daughters in the fire to their gods." This is the very practice the LORD calls an abomination. Jephthah's vow, in its form, replicated the religious customs of the nations Israel was sent to displace.<br><br>
+    <strong>Also see:</strong> Leviticus 18:21; 20:2–5; Deuteronomy 18:10. A vow to do something God has already forbidden is void from the start. The tragedy is that Jephthah either did not know this, or did not apply it — or was too proud to admit it.</div>
+  </div>
+
+  <div class="word-card">
+    <div class="hebrew">יָצָא</div>
+    <div class="transliteration">yatsa — "come out" (vv.31, 34)</div>
+    <div class="word-gloss">The same verb seals her fate — the door he vowed became the door she walked through</div>
+    <div class="word-note">Jephthah's vow: "whatever comes out (yatsa) of the doors of my house to meet me." His daughter: "his daughter came out (yatsa) to meet him, with tambourines and dancing."<br><br>
+    <strong>The repetition is exact and deliberate.</strong> The Hebrew author places the same verb in the vow and in the fulfilment. Jephthah vowed using the language of a door — and his only child walked through it. The text enacts what the vow required before anyone speaks a word of application.<br><br>
+    <strong>She was not a surprise.</strong> Daughters commonly came out to meet returning warriors — Miriam (Exod 15:20), the women at Saul's return (1 Sam 18:6). Jephthah vowed using the language of his own front door in a culture where this was the expected welcome. The vow was reckless at the point of its construction.</div>
+  </div>
+
+  <div class="word-card">
+    <div class="hebrew">בְּתוּלִים</div>
+    <div class="transliteration">betulim — "virginity" (vv.37–38)</div>
+    <div class="word-gloss">What she mourned — the key interpretive crux of the entire passage</div>
+    <div class="word-note">The daughter asked for two months "to go up and down on the mountains and weep for my virginity (betulim)." She did not ask to mourn her life, her death, or her youth — she mourned her virginity. This is the critical textual detail in the debate about her fate.<br><br>
+    <strong>If she was to be killed:</strong> mourning virginity would be poignant but secondary — one would expect mourning of life itself. <strong>If she was dedicated to perpetual service:</strong> mourning virginity makes primary sense — she is lamenting a life she will never have: marriage, children, covenant belonging in the ordinary way.<br><br>
+    <strong>The annual commemoration (v.40):</strong> The Hebrew תָּנָה (tanah) — "to rehearse/recount" — appears only here and in Judges 5:11. The daughters of Israel "rehearsed" the daughter of Jephthah. Some scholars (Marcus, Niditch) argue this is consistent with an ongoing figure who is alive in dedicated service; others (Block) note that lamentation for the dead was a common practice. The text holds both readings in tension — and that tension is itself the point.</div>
+  </div>
+
+  <!-- ========================================================
+       HISTORICAL CONTEXT
+       ======================================================== -->
+  <div class="section-label">Historical Context</div>
+
+  <div class="card full-row">
+    <div class="card-label">Background — Text, Culture, Law</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+
+      <div>
+        <div class="hist-box">
+          <div class="hist-label">Jephthah — The Man of the Margins</div>
+          <div class="hist-text">Jephthah was the son of Gilead and a prostitute (11:1). His half-brothers drove him out: "You shall not have an inheritance in our father's house, for you are the son of another woman." He settled in the land of Tob — a border region, far from the tabernacle, far from priestly instruction, near non-Israelite cultural influence. He was a man of the fringe in every sense. When Israel needed a military leader against Ammon, they came back to the man they had expelled. He is the Judges cycle in miniature: rejection, desperation, Spirit, deliverance, catastrophic aftermath.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">Vow Customs in the Ancient Near East</div>
+          <div class="hist-text">Conditional vows before battle were common across the ancient Near East — "if you give me victory, I will give you X." This was not an Israelite innovation; it was a pagan transaction model applied to deity. The Phoenician general Hamilcar reportedly vowed a human sacrifice before the Battle of Himera (480 BC). Jephthah's vow fits this pattern precisely. He was a man of the border regions, likely familiar with surrounding religious customs, and in the moment of battle pressure, he reached for the cultural tool closest to hand — rather than the covenant promise that had already been made.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">Human Sacrifice — Explicitly Forbidden</div>
+          <div class="hist-text">The Torah was unambiguous: Leviticus 18:21; 20:2–5; Deuteronomy 12:31; 18:10 all forbid the sacrifice of children as an abomination. A vow whose fulfilment would require something God has already prohibited is legally void from its inception. Jephthah's problem was not that God demanded a terrible price — God never asked for his daughter. The tragedy is that Jephthah didn't know the Father well enough to know the vow was already null. Or knowing, he couldn't admit it.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hist-box">
+          <div class="hist-label">The Levitical Exit — Jephthah Didn't Take</div>
+          <div class="hist-text">Leviticus 27:1–8 provided a specific mechanism for redeeming persons dedicated to the LORD. A woman aged 20–60 was valued at 30 shekels of silver — a fixed redemption price. Jephthah could have gone to Phinehas the priest (who was still alive at this period, Judges 20:28) and redeemed his daughter for a known, affordable sum.<br><br>
+          The Talmud (Taanit 4a) condemns both Jephthah and Phinehas for the pride that prevented this: Jephthah was too proud to go to Phinehas, and Phinehas was too proud to go to Jephthah. "Between the two of them, the poor girl perished."<br><br>
+          The legal exit existed. It was not taken.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">Jephthah in Hebrews 11:32 — The Hall of Faith</div>
+          <div class="hist-text">Hebrews 11:32 lists Jephthah alongside Gideon, Barak, Samson, David, and Samuel. The author does not cite the vow — he cites the deliverance: "who through faith... enforced justice, obtained promises, stopped the mouths of lions" (11:33). The New Testament distinguishes faith at one decisive moment from the totality of a person's character. Jephthah trusted God for the battle. He failed to trust God with the aftermath. The NT holds both truths without resolving the tension in either direction — a model for how we read the judges.</div>
+        </div>
+        <div class="hist-box">
+          <div class="hist-label">The Daughter — The Real Moral Centre</div>
+          <div class="hist-text">In most readings Jephthah receives all the interpretive attention. But his daughter is the still point of the story. She says "Do to me what you have vowed" (v.36) — not in resignation but in deliberate dignity. She asks only for two months on the mountains with her friends. She does not attempt to escape, does not argue with the vow's validity, does not appeal to the law. Her request is to grieve something she will never have. Her dignity, courage, and clarity in the face of her father's failure are the moral centre of the passage — and the text insists that her memory be rehearsed annually by the daughters of Israel.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       ILLUSTRATIONS
+       ======================================================== -->
+  <div class="section-label">Teaching Illustrations</div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 1–2</div>
+
+    <div class="illus">
+      <div class="illus-title">The Soldier Who Promised to Quit Smoking</div>
+      <div class="illus-text">A common phenomenon: soldiers, sailors, patients in surgery make promises to God under extreme pressure that they never intended as genuine worship. "God, if you get me through this, I'll..." The vow is an attempt to manage divine power — a transaction, not a relationship. Jephthah's vow fits this pattern. He treated the LORD as a transaction partner, not a covenant Father. The difference is not the form of the words; it is the understanding of who God is. A transaction partner can be bought. A Father has already moved in love before the child speaks.</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">The Father Who Already Put the Money in the Bank</div>
+      <div class="illus-text">A father has already deposited the funds for his child's university education — the account is open, the money is there. Then the child comes to him and says: "Dad, if you pay for my degree, I'll clean my room every week." The father has already acted in love. The bargain is beside the point — and it doesn't obligate the father to accept the child's rash terms. Jephthah's vow was made after the Spirit had already come. He bargained with a God who had already moved. The vow was unnecessary from the first syllable. And the tragedy is that Jephthah didn't know that — because he didn't know the God he was dealing with.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-label">Illustrations 3–4</div>
+
+    <div class="illus">
+      <div class="illus-title">Saul and Jonathan — The Same Structure, Different Outcome (1 Sam 14:24–46)</div>
+      <div class="illus-text">Saul made a nearly identical rash oath during the same battle season: "Cursed be the man who eats food until evening." Jonathan hadn't heard the oath and ate honey from a comb. Saul was prepared to execute his own son to honour the oath — but the people ransomed Jonathan: "As the LORD lives, there shall not one hair of his head fall to the ground, for he has worked with God today" (14:45). Same structure: battlefield oath, own child at risk, pride prevents the father from retreating. But unlike Jephthah, Jonathan survived — because the people intervened. Jephthah had no such community. The border man of Tob had no one to ransom his daughter.</div>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">The Daughter as Protagonist</div>
+      <div class="illus-text">When preaching Judges 11, the temptation is to make it all about Jephthah — his rash vow, his military faith, his tragic failure. But the text's final movement centres on the daughter. She is not a passive victim. She says "Do to me what you have vowed" with clarity and composure. She asks for two months — not to escape, not to fight, but to grieve something she will never have. The annual commemoration of Israel's daughters (v.40) is for her, not for him. The text insists that her courage be remembered. She is the moral centre of the story, and the preacher who passes over her to focus on Jephthah's psychology has missed what the narrator is doing.</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       COMMENTARY SHELF
+       ======================================================== -->
+  <div class="section-label">Commentary Shelf — 3 Sources</div>
+
+  <div class="full-row" style="display:grid; grid-template-columns: repeat(3,1fr); gap:12px;">
+
+    <div class="comm-card">
+      <div class="comm-author">Barry Webb</div>
+      <div class="comm-tradition">The Book of Judges · NICOT · Eerdmans · Conservative Evangelical</div>
+      <span class="comm-tag conservative">Conservative</span>
+      <div class="comm-point">Best narrative analysis of Judges available. On 11:29–40: the vow reveals Jephthah's <span class="comm-quote">"failure to trust in God's already-given commitment"</span> — the Spirit had already come; faith would have simply advanced. The vow was an act of distrust dressed as devotion.</div>
+      <div class="comm-point">Leans toward literal sacrifice but honestly acknowledges the textual ambiguity. The phrase "he did to her as he had vowed" (v.39) is the most direct indicator; the mourning of virginity (vv.37–38) is the strongest counter-evidence. Webb does not resolve the tension artificially.</div>
+      <div class="comm-point">Strongest on the Judges-cycle structure: Jephthah is the climactic example of the pattern. His story is the book in miniature — and the Spirit's pre-emptive arrival makes the vow all the more unnecessary and all the more revealing of his character.</div>
+      <a class="source-link" href="https://www.eerdmans.com" target="_blank" rel="noopener">eerdmans.com — NICOT series (Eerdmans)</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Daniel Block</div>
+      <div class="comm-tradition">Judges, Ruth · NAC · B&H Academic · Thorough Exegetical</div>
+      <span class="comm-tag conservative">Conservative</span>
+      <div class="comm-point">Argues strongly for literal human sacrifice: the vow explicitly specified "burnt offering" (olah), and v.39 says "he did to her as he had vowed." For Block, the grammar does not permit a soft reading — the text means what it says.</div>
+      <div class="comm-point">Troubled by Hebrews 11:32 but does not flinch: the NT citation is of Jephthah's faith in the battle, not an endorsement of the vow or its execution. A person can be cited for faith in one act while remaining morally accountable for another.</div>
+      <div class="comm-point">Strongest exegetical treatment of the olah language: the term is never used metaphorically in the Hebrew Bible for dedication to service. If Jephthah meant dedication rather than sacrifice, he used the wrong word.</div>
+      <a class="source-link" href="https://www.bhacademic.com" target="_blank" rel="noopener">bhacademic.com — NAC series (B&H Academic)</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Tremper Longman III</div>
+      <div class="comm-tradition">Judges · Story of God Bible Commentary · Zondervan · Pastoral-Scholarly</div>
+      <span class="comm-tag pastoral">Pastoral</span>
+      <div class="comm-point">Notes the annual female commemoration (v.40) suggests ongoing grief for a life unlived rather than a death — consistent with the "perpetual virginity/dedication" reading. The daughters of Israel "rehearsed" her story, which may imply a living figure being honoured rather than a dead one being mourned.</div>
+      <div class="comm-point">Points to Leviticus 27 as the obvious legal solution Jephthah bypassed: a woman could be redeemed from a vow of dedication for 30 shekels. Jephthah's failure was not legal inevitability — it was ignorance, pride, or both.</div>
+      <div class="comm-point">Pastoral focus: the passage is a warning against using religious language to dress up our own anxiety. Jephthah's vow was not worship — it was a control mechanism. God had already acted; Jephthah's words added nothing except tragedy.</div>
+      <a class="source-link" href="https://www.zondervan.com" target="_blank" rel="noopener">zondervan.com — Story of God Commentary series</a>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       PRESSURE POINTS
+       ======================================================== -->
+  <div class="section-label">Interpretive Pressure Points</div>
+
+  <div class="pressure-box full-row">
+    <div class="card-label">Three Pressure Points — Where Interpreters Divide</div>
+
+    <div class="pressure">
+      <div class="pressure-q">1. Was the daughter literally sacrificed or dedicated to perpetual temple service?</div>
+      <div class="pressure-a">The text says "he did to her as he had vowed" (v.39) and the vow specified a "burnt offering" (olah). This is the strongest argument for literal sacrifice. Block, Webb, and most conservative commentators hold this position, noting that olah is never used in the Hebrew Bible as a metaphor for dedication to service.<br><br>
+      The counter-evidence: she mourned her <em>virginity</em> — not her life (vv.37–38). If she was to be killed, mourning virginity would be secondary to mourning death itself. The annual commemoration (tanah, v.40) is language used for recounting the deeds of the living as well as grieving the dead. Some scholars (Marcus, Niditch) argue she was dedicated to a life of celibate tabernacle service — consistent with the mourning of betulim and with Leviticus 27's redemption mechanism.<br><br>
+      The debate has continued for 2,000 years. The text is deliberately ambiguous — which is itself the narrator's point. What is not ambiguous: <em>either</em> outcome is a tragedy entirely caused by a rash vow, and neither outcome was required by God.</div>
+    </div>
+
+    <div class="pressure">
+      <div class="pressure-q">2. Why is Jephthah in Hebrews 11:32 — the faith hall of fame?</div>
+      <div class="pressure-a">Hebrews 11:32 lists Jephthah alongside Gideon, Barak, Samson, David, and Samuel — none of them morally uncomplicated figures. The author of Hebrews does not cite the vow; he cites Jephthah's faith for the deliverance: "who through faith... enforced justice, obtained promises" (11:33).<br><br>
+      This is how the NT authors consistently read the judges and kings — they cite the moment of faith without endorsing the person's whole biography. Samson is in the same list, and Samson's record is no cleaner. The NT is not canonising these figures' characters; it is pointing to specific acts of trust in God's promise.<br><br>
+      The implication for preaching: Jephthah trusted God for the battle. He failed to trust God with the aftermath — specifically, he didn't trust that God didn't need the vow, didn't want the vow, and had provided a legal exit from the vow. His faith and his failure are simultaneously true, and the New Testament holds them both without harmonising away either.</div>
+    </div>
+
+    <div class="pressure">
+      <div class="pressure-q">3. Does the Spirit's coming indicate divine approval of the vow?</div>
+      <div class="pressure-a">Almost certainly not. The Spirit in Judges empowers leaders for specific military deliverances — it is not a character endorsement and it is explicitly not a reward for vows. The Spirit came on Samson (14:6, 19) immediately before acts of personal violence driven by private vengeance. The Spirit's presence in Judges indicates God's commitment to Israel's deliverance, not God's approval of everything the judge subsequently does.<br><br>
+      Critically: the Spirit came on Jephthah in v.29 and the vow was made in v.30. The vow was made <em>after</em> the Spirit came — it was entirely Jephthah's own addition to what God was already doing. There is no textual indication that the vow was Spirit-prompted, Spirit-approved, or Spirit-required.<br><br>
+      The structural message is exactly the opposite: the Spirit's pre-vow arrival demonstrates that Jephthah was bargaining with a God who had already acted. The Spirit does not ratify the vow; the Spirit's timing exposes the vow as unnecessary.</div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       CROSS-REFERENCES — purple-tinted
+       ======================================================== -->
+  <div class="section-label">Cross-References — 5 Connections</div>
+
+  <div class="xref-card full-row">
+    <div class="card-label" style="color:#6c4bbf;">Cross-References</div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+      <div>
+        <div class="xref-item">
+          <div class="xref-ref">Leviticus 27:1–8 — Redemption of Vowed Persons</div>
+          <div class="xref-note">The law provided a specific mechanism to redeem persons dedicated to the LORD. A woman aged 20–60 was valued at 30 shekels of silver. Jephthah could have gone to Phinehas the priest (still alive, Judg 20:28) and redeemed his daughter for a fixed, affordable sum. This was the legal exit he did not take. The Talmud (Taanit 4a) condemns both Jephthah and Phinehas for the pride that kept them apart. Between them, the poor girl perished.</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">Leviticus 5:4–6 — Sin Offering for Rash Oaths</div>
+          <div class="xref-note">"If anyone thoughtlessly takes an oath to do anything... he shall confess in what way he has sinned and bring a sin offering." The Torah anticipated rash vows — not as aberrations but as human predictabilities — and provided a pathway of confession and sacrifice. Jephthah's claim that he "cannot take back" the vow reflects either ignorance of this provision or an unwillingness to use it. The law had a door. He did not walk through it.</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">1 Samuel 14:24–46 — Saul's Parallel Rash Battle Oath</div>
+          <div class="xref-note">Saul vowed a fast during battle; Jonathan ate honey without knowing; Saul was prepared to kill his own son. Same structure as Judges 11: battlefield oath, own child at risk, father's pride prevents retreat. But the people ransomed Jonathan: "As the LORD lives, not one hair of his head shall fall to the ground." Jephthah had no community to intervene. The contrast is instructive — and it illuminates what Jephthah's isolation from priestly and community support cost his daughter.</div>
+        </div>
+      </div>
+      <div>
+        <div class="xref-item">
+          <div class="xref-ref">Hebrews 11:32 — Jephthah in the Faith Hall of Fame</div>
+          <div class="xref-note">"And what more shall I say? For time would fail me to tell of Gideon, Barak, Samson, Jephthah..." Jephthah is cited for his faith in the battle, not for the vow. The NT pattern throughout Hebrews 11 is to identify specific acts of trust — not to canonise the whole biography. Jephthah trusted God to deliver Israel from Ammon. He failed to trust God with the consequences. The hall of faith holds complexity.</div>
+        </div>
+        <div class="xref-item">
+          <div class="xref-ref">Ecclesiastes 5:2–6 — Be Not Rash With Your Mouth Before God</div>
+          <div class="xref-note">"Be not rash with your mouth, nor let your heart be hasty to utter a word before God, for God is in heaven and you are on earth. Therefore let your words be few... It is better that you should not vow than that you should vow and not pay." Qoheleth's wisdom directly addresses the Jephthah pattern — the compulsion to fill the silence before God with promises. The wisdom tradition knew this temptation was common. Jephthah is its most devastating illustration.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       THEN → NOW — purple left-bordered callout
+       ======================================================== -->
+  <div class="section-label">Then → Now</div>
+
+  <div class="then-now-block full-row">
+    <div class="card-label" style="color:#6c4bbf; margin-bottom:4px;">Then → Now Bridge</div>
+    <div class="then-now-inner">
+      <div class="tn-box tn-then">
+        <div class="tn-label">Then · Judges Era</div>
+        <div class="tn-text">Jephthah stood at the border of Ammon with the Spirit of the LORD already on him — the victory secured by grace before he spoke a word. He made a vow anyway. The vow was his attempt to guarantee what God had already given. He won the battle and walked home into a tragedy entirely of his own making.<br><br>
+        The law had a door out. Leviticus 27 was not obscure — it was the standard provision for exactly this situation. He didn't walk through it. Either because he didn't know it was there (a man of the margins, raised near Tob, far from Levitical instruction) or because his pride wouldn't let him go to Phinehas and confess a mistake. Between the two of them — judge and priest — a daughter was lost.</div>
+      </div>
+      <div class="tn-box tn-now">
+        <div class="tn-label">Now — Application and Warning</div>
+        <div class="tn-text">We are most dangerous to ourselves when we make deals with God in moments of desperation — and most foolish when we don't know the God we're dealing with well enough to know He has already moved.<br><br>
+        Jephthah's tragedy is not that God demanded a terrible price. God never wanted his daughter. The tragedy is that Jephthah didn't know the Father well enough to know he didn't have to pay.<br><br>
+        The passage asks us: Do you know God well enough to be silent when the battle hangs in the balance? Do you know that the Spirit's coming is grace, not a down payment requiring your words to complete the transaction? And when your rash words have already been spoken — do you know that confession and the sin offering were always available?<br><br>
+        The law had a door. It still does.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       VERDICT — full width, dark banner
+       ======================================================== -->
+  <div class="verdict full-row" style="margin-top:6px;">
+    <div class="verdict-label">Verdict — Judges 11:29–40</div>
+    <div class="verdict-text">
+      He opened his mouth to the LORD — and did not know how to close it.
+      <br><br>
+      Jephthah's story is the darkest irony in Judges: a man on whom the Spirit rested who destroyed his own house through his own mouth. The Spirit came in v.29. The vow came in v.30. Those two verses are the entire tragedy compressed into seven lines. God had already moved. Jephthah's words added nothing to the victory — and everything to the cost.
+      <br><br>
+      The law was not silent. Leviticus 27 provided the redemption price. Leviticus 5 provided the sin offering for rash oaths. Phinehas the priest was still alive. Every legal exit existed. None was taken. Whether from ignorance, pride, or both — the man who trusted God for the battle did not trust God with the aftermath. He is in Hebrews 11 for the first; he is a warning for the second.
+      <br><br>
+      And his daughter — whose name the text never gives — is the still point. She said "Do to me what you have vowed." She asked only to grieve on the mountains for two months with her friends. She returned on her father's word. Her dignity and courage are the moral centre of the story. The daughters of Israel remembered her every year. The text insists she be rehearsed. The preacher who moves past her to the theological questions about the vow has missed what the narrator never forgot.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
