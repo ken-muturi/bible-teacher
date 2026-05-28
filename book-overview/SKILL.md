@@ -73,5 +73,11 @@ Categorized as:
 
 ## After the Research Brief
 
-Run **book-overview-infographic** to generate a visual teaching panel (HTML) from this brief.
-The infographic draws directly from sections 1–7 above — complete the research first.
+1. **Save the brief** as `guides/briefs/<bookname-lowercase>-brief.md` — this is the source text for audio apps, future reference, and any revision of the visual panel.
+2. Run **book-overview-infographic** to generate a visual teaching panel (HTML) from this brief. The infographic draws directly from sections 1–7 above — complete the research first.
+
+The markdown brief should end with:
+```
+*Brief generated for: guides/visuals/<bookname>-panel.html*
+*Panel live at: https://ken-muturi.github.io/bible-teacher/guides/visuals/<bookname>-panel.html*
+```
