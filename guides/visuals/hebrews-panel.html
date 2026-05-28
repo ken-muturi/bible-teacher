@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hebrews — Book Overview Panel</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f0e8;
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  /* ── HOME NAV ── */
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  /* ── HEADER ── */
+  .header {
+    background: #1a1a1a;
+    color: #f5f0e8;
+    padding: 32px 40px 28px;
+  }
+  .header-series { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.22em; color: #888; margin-bottom: 8px; }
+  .header-title { font-family: 'Special Elite', serif; font-size: 4rem; line-height: 1; color: #f5f0e8; }
+  .header-subtitle { font-size: 1.05rem; color: #bbb; margin-top: 10px; font-style: italic; }
+  .header-meta { display: flex; gap: 28px; margin-top: 20px; flex-wrap: wrap; }
+  .header-chip {
+    font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em;
+    border: 1px solid #444; padding: 3px 10px; border-radius: 2px; color: #aaa;
+  }
+  .header-chip.chip-author { border-color: #6c4bbf; color: #c4b8f0; }
+  .header-chip.chip-date { border-color: #d47c1a; color: #f0c890; }
+  .header-chip.chip-genre { border-color: #2e8a4a; color: #90d4aa; }
+
+  /* ── MAIN WRAPPER ── */
+  .main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 60px; }
+
+  /* ── KEY PASSAGE CALLOUT ── */
+  .key-passage {
+    border-left: 5px solid #3b6fd4;
+    background: #eef2fc;
+    padding: 18px 22px;
+    margin-bottom: 32px;
+    border-radius: 0 3px 3px 0;
+  }
+  .kp-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #3b6fd4; font-weight: 700; margin-bottom: 6px; }
+  .kp-text { font-family: 'Special Elite', serif; font-size: 1.08rem; color: #2c2c2c; line-height: 1.55; font-style: italic; }
+  .kp-ref { font-size: 0.75rem; color: #3b6fd4; margin-top: 6px; font-weight: 700; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em;
+    font-weight: 700; color: #888; margin-bottom: 12px;
+  }
+
+  /* ═══════════════════════════════════════════════
+     THE ARGUMENT CASCADE — central visual spine
+  ═══════════════════════════════════════════════ */
+  .cascade-wrap {
+    margin-bottom: 36px;
+  }
+  .cascade-title {
+    font-family: 'Special Elite', serif;
+    font-size: 1.1rem; color: #2c2c2c;
+    text-align: center; margin-bottom: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  /* Each level = one "better than" step */
+  .cascade-level {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  /* connector arrow between levels */
+  .cascade-level + .cascade-level::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 2px; height: 100%;
+    background: transparent;
+    z-index: 0;
+  }
+  .cascade-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    flex-shrink: 0;
+    padding: 4px 0;
+    color: #aaa;
+    font-size: 1.2rem;
+  }
+  .cascade-arrow-line {
+    width: 2px;
+    flex: 1;
+    background: #ccc;
+    min-height: 18px;
+  }
+  .cascade-arrow-head {
+    font-size: 1rem;
+    line-height: 1;
+    color: #888;
+  }
+
+  .cascade-box {
+    flex: 1;
+    border: 2.5px solid;
+    border-radius: 3px;
+    padding: 14px 18px;
+    background: #faf7f2;
+    position: relative;
+    z-index: 1;
+  }
+  .cascade-box.level-angels { border-color: #6c4bbf; }
+  .cascade-box.level-moses  { border-color: #3b6fd4; }
+  .cascade-box.level-priest { border-color: #2e8a4a; }
+  .cascade-box.level-covenant { border-color: #d47c1a; }
+  .cascade-box.level-faith  { border-color: #c0392b; }
+  .cascade-box.level-jesus  { border-color: #1a1a1a; background: #1a1a1a; }
+
+  .cascade-chapters {
+    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em;
+    font-weight: 700; margin-bottom: 4px;
+  }
+  .level-angels .cascade-chapters  { color: #6c4bbf; }
+  .level-moses .cascade-chapters   { color: #3b6fd4; }
+  .level-priest .cascade-chapters  { color: #2e8a4a; }
+  .level-covenant .cascade-chapters { color: #d47c1a; }
+  .level-faith .cascade-chapters   { color: #c0392b; }
+  .level-jesus .cascade-chapters   { color: #888; }
+
+  .cascade-claim {
+    font-family: 'Special Elite', serif;
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  .level-angels .cascade-claim  { color: #2c2c2c; }
+  .level-moses .cascade-claim   { color: #2c2c2c; }
+  .level-priest .cascade-claim  { color: #2c2c2c; }
+  .level-covenant .cascade-claim { color: #2c2c2c; }
+  .level-faith .cascade-claim   { color: #2c2c2c; }
+  .level-jesus .cascade-claim   { color: #f5f0e8; }
+
+  .cascade-note {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+  .level-angels .cascade-note  { color: #555; }
+  .level-moses .cascade-note   { color: #555; }
+  .level-priest .cascade-note  { color: #555; }
+  .level-covenant .cascade-note { color: #555; }
+  .level-faith .cascade-note   { color: #555; }
+  .level-jesus .cascade-note   { color: #bbb; }
+
+  .cascade-key-verse {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.74rem;
+    font-style: italic;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .level-angels .cascade-key-verse  { background: #f0ebfc; color: #6c4bbf; }
+  .level-moses .cascade-key-verse   { background: #eef2fc; color: #3b6fd4; }
+  .level-priest .cascade-key-verse  { background: #ebf7ef; color: #2e8a4a; }
+  .level-covenant .cascade-key-verse { background: #fdf3e7; color: #d47c1a; }
+  .level-faith .cascade-key-verse   { background: #fce8e6; color: #c0392b; }
+  .level-jesus .cascade-key-verse   { background: #333; color: #f5f0e8; }
+
+  /* warning pulse — appears between levels */
+  .warning-strip {
+    margin: 6px 0 6px 48px;
+    border-left: 3px solid #c0392b;
+    background: #fff5f5;
+    padding: 7px 14px;
+    border-radius: 0 2px 2px 0;
+  }
+  .warning-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 2px; }
+  .warning-text { font-size: 0.78rem; color: #c0392b; line-height: 1.35; }
+
+  /* ── TWO-COL grid below cascade ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+
+  /* ── MELCHIZEDEK SPECIAL PANEL ── */
+  .melch-wrap {
+    border: 2.5px solid #2e8a4a;
+    border-radius: 3px;
+    background: #faf7f2;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+  .melch-title {
+    font-family: 'Special Elite', serif;
+    font-size: 1.05rem; color: #2e8a4a;
+    margin-bottom: 4px;
+  }
+  .melch-subtitle { font-size: 0.7rem; color: #888; margin-bottom: 12px; font-style: italic; }
+  .melch-chain {
+    display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin-bottom: 12px;
+  }
+  .melch-node {
+    text-align: center;
+    padding: 8px 12px;
+    border: 1.5px solid #2e8a4a;
+    border-radius: 3px;
+    background: #ebf7ef;
+    min-width: 90px;
+  }
+  .melch-node-title { font-family: 'Special Elite', serif; font-size: 0.78rem; color: #2e8a4a; }
+  .melch-node-note { font-size: 0.66rem; color: #555; margin-top: 2px; line-height: 1.3; }
+  .melch-connector { font-size: 1.2rem; color: #2e8a4a; padding: 0 6px; }
+  .melch-points { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .melch-point { font-size: 0.8rem; color: #333; line-height: 1.4; padding-left: 12px; border-left: 2px solid #2e8a4a; }
+
+  /* ── WORD STUDY STRIP ── */
+  .word-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .word-card {
+    border: 2px solid #2c2c2c;
+    border-radius: 3px;
+    background: #faf7f2;
+    padding: 12px 10px;
+  }
+  .word-greek { font-size: 1.1rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 4px; }
+  .word-count { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 6px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.35; }
+  .word-translations { font-size: 0.68rem; color: #888; margin-top: 5px; font-style: italic; }
+
+  /* ── WARNING PASSAGES (full breakdown) ── */
+  .warn-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .warn-card {
+    border: 2.5px solid #c0392b;
+    border-radius: 3px;
+    background: #fdf5f5;
+    padding: 12px 10px;
+  }
+  .warn-ref { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #c0392b; margin-bottom: 4px; }
+  .warn-intensity { display: flex; gap: 3px; margin-bottom: 6px; }
+  .warn-dot { width: 7px; height: 7px; border-radius: 50%; background: #c0392b; }
+  .warn-dot.empty { background: transparent; border: 1px solid #c0392b; }
+  .warn-title { font-size: 0.78rem; color: #2c2c2c; font-weight: 700; margin-bottom: 3px; }
+  .warn-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+
+  /* ── COMMENTARY SHELF ── */
+  .commentary-shelf {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .comm-card {
+    background: #1a1a1a;
+    border: 2.5px solid #2c2c2c;
+    border-radius: 3px;
+    padding: 14px;
+  }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-conservative { background: #3b6fd4; color: #fff; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #2e8a4a; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 8px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* ── PRESSURE POINTS ── */
+  .pressure-box {
+    background: #1a1a1a;
+    border: 2.5px solid #2c2c2c;
+    border-radius: 3px;
+    padding: 20px 22px;
+    margin-bottom: 28px;
+  }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #f5f0e8; margin-bottom: 14px; }
+  .pressure-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.88rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.4; }
+
+  /* ── CROSS-REFERENCES ── */
+  .xref-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .xref-card {
+    border: 2px solid;
+    border-radius: 3px;
+    background: #faf7f2;
+    padding: 12px 14px;
+  }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 4px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .xref-ref { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.76rem; color: #555; line-height: 1.35; }
+
+  /* ── THEN → NOW ── */
+  .then-now {
+    border: 2.5px solid #6c4bbf;
+    border-radius: 3px;
+    background: #f5f2fc;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+  }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 5px; }
+  .tn-text { font-size: 0.88rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.94rem; color: #6c4bbf; font-style: italic; }
+
+  /* ── VERDICT ── */
+  .verdict {
+    border: 3px solid #2c2c2c;
+    border-radius: 3px;
+    background: #faf7f2;
+    padding: 22px 26px;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 10px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.18rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.78rem; color: #888; margin-top: 8px; }
+
+  /* ── NEXT IN SERIES ── */
+  .next-strip {
+    display: flex; align-items: center; gap: 16px;
+    border: 2px dashed #ccc; border-radius: 3px; padding: 14px 18px;
+    background: #faf7f2; margin-bottom: 12px;
+  }
+  .next-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.16em; color: #aaa; font-weight: 700; flex-shrink: 0; }
+  .next-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; }
+  .next-note { font-size: 0.78rem; color: #888; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .word-strip, .warn-grid { grid-template-columns: repeat(3, 1fr); }
+    .commentary-shelf, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .melch-points { grid-template-columns: 1fr; }
+    .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .header-title { font-size: 2.8rem; }
+    .word-strip, .warn-grid { grid-template-columns: 1fr 1fr; }
+    .commentary-shelf, .xref-grid { grid-template-columns: 1fr; }
+    .melch-chain { flex-direction: column; align-items: flex-start; }
+    .melch-connector { transform: rotate(90deg); }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-series">New Testament · Epistle / Sermon · Book 58 of 66</div>
+  <div class="header-title">Hebrews</div>
+  <div class="header-subtitle">"Jesus is better — better than anything you'd go back to."</div>
+  <div class="header-meta">
+    <span class="header-chip chip-author">Author: Anonymous (possibly Apollos or Priscilla)</span>
+    <span class="header-chip chip-date">Date: ~60–65 AD (pre-destruction of Temple)</span>
+    <span class="header-chip chip-genre">Genre: Sermon / Theological homily</span>
+    <span class="header-chip">Audience: Jewish Christians under pressure to revert</span>
+    <span class="header-chip">Key word: κρείττων · better · ×13</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- KEY PASSAGE -->
+  <div class="key-passage">
+    <div class="kp-label">Key Passage</div>
+    <div class="kp-text">"Therefore, since we are surrounded by such a great cloud of witnesses, let us throw off everything that hinders and the sin that so easily entangles. And let us run with perseverance the race marked out for us, fixing our eyes on Jesus, the pioneer and perfecter of faith."</div>
+    <div class="kp-ref">Hebrews 12:1–2 (NIV)</div>
+  </div>
+
+  <!-- ═══ ARGUMENT CASCADE ═══ -->
+  <div class="cascade-wrap">
+    <div class="section-label">The Argument of Hebrews — A "Better Than" Cascade</div>
+    <div class="cascade-title">Each section builds a single claim: Jesus is the substance behind every shadow</div>
+
+    <!-- Level 1: Angels -->
+    <div class="cascade-level">
+      <div class="cascade-box level-angels">
+        <div class="cascade-chapters">Chapters 1–2</div>
+        <div class="cascade-claim">Jesus is better than angels</div>
+        <div class="cascade-note">Angels are mighty — they delivered the law (Gal 3:19), they are God's messengers. But Jesus is the Son: "You are my Son; today I have become your Father" (Ps 2:7). Angels worship him. He shared our flesh and blood to destroy death from inside it — something no angel could do.</div>
+        <span class="cascade-key-verse">"He sat down at the right hand of the Majesty in heaven." — 1:3</span>
+      </div>
+    </div>
+
+    <!-- Warning 1 -->
+    <div class="warning-strip">
+      <div class="warning-label">⚠ Warning 1 — 2:1–4</div>
+      <div class="warning-text">If the law given through angels demanded obedience, how much more does a word spoken by the Son? Do not drift.</div>
+    </div>
+
+    <!-- Arrow -->
+    <div style="display:flex; margin-bottom:0;">
+      <div style="width:48px; flex-shrink:0;"></div>
+      <div style="flex:1; display:flex; align-items:center; gap:8px; padding: 4px 0;">
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+        <span style="color:#888; font-size:1rem;">▼</span>
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+      </div>
+    </div>
+
+    <!-- Level 2: Moses -->
+    <div class="cascade-level">
+      <div class="cascade-box level-moses">
+        <div class="cascade-chapters">Chapters 3–4</div>
+        <div class="cascade-claim">Jesus is better than Moses</div>
+        <div class="cascade-note">Moses was faithful as a servant in God's house — the highest honour Israel could give a man. Jesus is faithful as a Son over God's house. Moses led Israel toward a rest they never fully entered. Jesus offers the rest that Canaan and the Sabbath both pointed toward but could not deliver.</div>
+        <span class="cascade-key-verse">"There remains, then, a Sabbath-rest for the people of God." — 4:9</span>
+      </div>
+    </div>
+
+    <!-- Warning 2 -->
+    <div class="warning-strip">
+      <div class="warning-label">⚠ Warning 2 — 3:7–4:13</div>
+      <div class="warning-text">Harden not your hearts — as in the wilderness. Their bodies fell in the desert. "Today, if you hear his voice..." The word of God judges even the thoughts of the heart.</div>
+    </div>
+
+    <div style="display:flex; margin-bottom:0;">
+      <div style="width:48px; flex-shrink:0;"></div>
+      <div style="flex:1; display:flex; align-items:center; gap:8px; padding: 4px 0;">
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+        <span style="color:#888; font-size:1rem;">▼</span>
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+      </div>
+    </div>
+
+    <!-- Level 3: High Priest -->
+    <div class="cascade-level">
+      <div class="cascade-box level-priest">
+        <div class="cascade-chapters">Chapters 5–7</div>
+        <div class="cascade-claim">Jesus is a better High Priest (after Melchizedek)</div>
+        <div class="cascade-note">The Levitical priests were appointed by genealogy, served until death, and offered sacrifices for their own sins before the people's. Jesus was appointed by God's sworn oath (Ps 110:4), holds his priesthood permanently because he lives forever, and needed no sacrifice for himself. His priesthood is of a different, older, superior order — Melchizedek's, which preceded Levi and received tithes from Abraham himself.</div>
+        <span class="cascade-key-verse">"He is able to save completely those who come to God through him, because he always lives to intercede." — 7:25</span>
+      </div>
+    </div>
+
+    <!-- Warning 3 -->
+    <div class="warning-strip">
+      <div class="warning-label">⚠ Warning 3 — 5:11–6:12 (the sharpest)</div>
+      <div class="warning-text">Those who have tasted the heavenly gift and fallen away — it is impossible to renew them again to repentance. This is the text everyone argues about. Do not be lazy; imitate those who through faith and patience inherit the promises.</div>
+    </div>
+
+    <div style="display:flex; margin-bottom:0;">
+      <div style="width:48px; flex-shrink:0;"></div>
+      <div style="flex:1; display:flex; align-items:center; gap:8px; padding: 4px 0;">
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+        <span style="color:#888; font-size:1rem;">▼</span>
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+      </div>
+    </div>
+
+    <!-- Level 4: Covenant -->
+    <div class="cascade-level">
+      <div class="cascade-box level-covenant">
+        <div class="cascade-chapters">Chapters 8–10</div>
+        <div class="cascade-claim">The New Covenant is better than the Old</div>
+        <div class="cascade-note">The Levitical sacrifices were a σκιά — a shadow. Shadows are not false; they point to the thing casting them. The Day of Atonement (Lev 16) had to be repeated every year — proof it could not finish the job. Jesus entered the heavenly sanctuary once, with his own blood, and sat down (no seat in the Tabernacle — the priest's work was never done). The new covenant Jeremiah promised (Jer 31:31–34) is here: law written on the heart, sins remembered no more.</div>
+        <span class="cascade-key-verse">"After he had provided purification for sins, he sat down at the right hand of the Majesty in heaven." — 1:3 / cf. 10:12</span>
+      </div>
+    </div>
+
+    <!-- Warning 4 -->
+    <div class="warning-strip">
+      <div class="warning-label">⚠ Warning 4 — 10:19–39</div>
+      <div class="warning-text">"If we deliberately keep on sinning after we have received the knowledge of the truth, no sacrifice for sins is left." Do not throw away your confidence — it will be richly rewarded.</div>
+    </div>
+
+    <div style="display:flex; margin-bottom:0;">
+      <div style="width:48px; flex-shrink:0;"></div>
+      <div style="flex:1; display:flex; align-items:center; gap:8px; padding: 4px 0;">
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+        <span style="color:#888; font-size:1rem;">▼</span>
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+      </div>
+    </div>
+
+    <!-- Level 5: Faith -->
+    <div class="cascade-level">
+      <div class="cascade-box level-faith">
+        <div class="cascade-chapters">Chapters 11–13</div>
+        <div class="cascade-claim">Faith in this Jesus sustains through suffering</div>
+        <div class="cascade-note">Chapter 11 is the gallery — men and women who held on to what was promised without receiving it: Abel, Enoch, Noah, Abraham, Sarah, Isaac, Jacob, Joseph, Moses, Rahab, Gideon, Barak, Samson, Jephthah, David, Samuel, the prophets. They were "commended for their faith, yet none of them received what had been promised" — they were waiting for us. Now surrounded by this cloud of witnesses, we run. We fix our eyes on Jesus — the pioneer (ἀρχηγός) who ran the race first and finished it.</div>
+        <span class="cascade-key-verse">"Now faith is the substance (hypostasis) of things hoped for, the evidence of things not seen." — 11:1 (KJV)</span>
+      </div>
+    </div>
+
+    <!-- Warning 5 -->
+    <div class="warning-strip">
+      <div class="warning-label">⚠ Warning 5 — 12:14–29 (the final, most severe)</div>
+      <div class="warning-text">Do not refuse him who is speaking. If those who refused Moses were not forgiven, how much less will we escape if we turn away from the one who speaks from heaven? "Our God is a consuming fire."</div>
+    </div>
+
+    <div style="display:flex; margin-bottom:12px;">
+      <div style="width:48px; flex-shrink:0;"></div>
+      <div style="flex:1; display:flex; align-items:center; gap:8px; padding: 4px 0;">
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+        <span style="color:#888; font-size:1rem;">▼</span>
+        <div style="height:1px; background:#ccc; flex:1;"></div>
+      </div>
+    </div>
+
+    <!-- Level: Jesus (final) -->
+    <div class="cascade-level">
+      <div class="cascade-box level-jesus">
+        <div class="cascade-chapters">The Conclusion</div>
+        <div class="cascade-claim">Therefore: fix your eyes on Jesus</div>
+        <div class="cascade-note">He is the pioneer and perfecter (ἀρχηγὸς καὶ τελειωτής) of faith. Not just the best option among many — the one to whom all the others were pointing. The argument is not "try harder." It is "see clearly." The exhortation flows from the exposition: once you see what Jesus is, going back is not safety — it is blindness.</div>
+        <span class="cascade-key-verse">"Jesus Christ is the same yesterday and today and forever." — 13:8</span>
+      </div>
+    </div>
+  </div><!-- /cascade -->
+
+  <!-- ═══ MELCHIZEDEK PANEL ═══ -->
+  <div class="melch-wrap">
+    <div class="section-label">The Melchizedek Argument (Chapters 5–7) — Why It Matters</div>
+    <div class="melch-title">Melchizedek: The Priest Before the Law</div>
+    <div class="melch-subtitle">Genesis 14 → Psalm 110 → Hebrews 7 — a thread spanning 1,500 years of Scripture</div>
+
+    <div class="melch-chain">
+      <div class="melch-node">
+        <div class="melch-node-title">Genesis 14:18</div>
+        <div class="melch-node-note">Melchizedek, king of Salem, priest of God Most High — no genealogy, no birth, no death recorded</div>
+      </div>
+      <div class="melch-connector">→</div>
+      <div class="melch-node">
+        <div class="melch-node-title">Psalm 110:4</div>
+        <div class="melch-node-note">"You are a priest forever, in the order of Melchizedek" — spoken to the Davidic king by God's sworn oath</div>
+      </div>
+      <div class="melch-connector">→</div>
+      <div class="melch-node">
+        <div class="melch-node-title">Hebrews 7</div>
+        <div class="melch-node-note">Proof that Jesus's priesthood predates, transcends, and supersedes Levi — it was always there in the text</div>
+      </div>
+      <div class="melch-connector">→</div>
+      <div class="melch-node" style="background:#ebf7ef; border-color:#2c2c2c;">
+        <div class="melch-node-title" style="color:#2c2c2c;">The Argument</div>
+        <div class="melch-node-note">Levi (in Abraham's loins) paid tithes to Melchizedek — the lesser honours the greater</div>
+      </div>
+    </div>
+
+    <div class="melch-points">
+      <div class="melch-point">Melchizedek was both king and priest — Israel's law strictly separated those offices (Uzziah was struck with leprosy for crossing it, 2 Chr 26). Jesus holds both permanently.</div>
+      <div class="melch-point">"Without genealogy" (Heb 7:3) — the silence is typological, not biographical. No recorded parentage = a type of eternal priesthood, unlike Levi whose service depended on proving his lineage.</div>
+      <div class="melch-point">The Levitical priesthood was imperfect — "if perfection had been attainable through the Levitical priesthood... what need would there have been for another priest?" (7:11). The OT itself implied the system was provisional.</div>
+      <div class="melch-point">A change in priesthood requires a change in law (7:12). This is the author's ground for the New Covenant — the priestly order has changed, and the law-covenant structure changes with it.</div>
+    </div>
+  </div>
+
+  <!-- ═══ WORD STUDIES ═══ -->
+  <div class="section-label">Five Key Greek Terms</div>
+  <div class="word-strip">
+
+    <div class="word-card">
+      <div class="word-greek">κρείττων</div>
+      <div class="word-translit">kreittōn</div>
+      <span class="word-count">×13 in Hebrews</span>
+      <div class="word-gloss">Better / Superior</div>
+      <div class="word-note">The book's structural spine-word. Not "slightly improved" — a legal/qualitative term for something of a higher order. Better covenant, better hope, better sacrifice, better resurrection.</div>
+      <div class="word-translations">ESV: "better" · NIV: "better" · NLT: "far better"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">τελειόω</div>
+      <div class="word-translit">teleioō</div>
+      <span class="word-count">×9 in Hebrews</span>
+      <div class="word-gloss">To perfect / complete</div>
+      <div class="word-note">Not moral perfection — cultic qualification. In the OT, priests were "perfected" through consecration rites. Jesus was "perfected through suffering" (2:10) — fully fitted for his mediating role by going through death.</div>
+      <div class="word-translations">ESV: "perfect" · NIV: "perfect" · NLT: "complete"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ὑπόστασις</div>
+      <div class="word-translit">hypostasis</div>
+      <span class="word-count">1:3 + 11:1</span>
+      <div class="word-gloss">Substance / Being / Assurance</div>
+      <div class="word-note">The Son is the "exact imprint of God's hypostasis" (1:3 — ontological). Faith is the "hypostasis of things hoped for" (11:1 — pastoral). The same word spans theology and lived trust.</div>
+      <div class="word-translations">ESV: "nature" / "assurance" · NIV: "being" / "confidence" · KJV: "substance" / "substance"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">σκιά</div>
+      <div class="word-translit">skia</div>
+      <span class="word-count">8:5 + 10:1</span>
+      <div class="word-gloss">Shadow</div>
+      <div class="word-note">The Levitical system is a shadow of heavenly realities. This is typological theology, not Platonic dualism — the shadow is not false, it was designed to point. The substance (σῶμα) has now arrived: Col 2:17 uses the same contrast.</div>
+      <div class="word-translations">ESV: "shadow" · NIV: "shadow" · NLT: "shadow"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀρχηγός</div>
+      <div class="word-translit">archēgos</div>
+      <span class="word-count">2:10 + 12:2</span>
+      <div class="word-gloss">Pioneer / Author / Founder</div>
+      <div class="word-note">A leader who blazes a trail and brings others through it. "Pioneer and perfecter of faith" — Jesus ran the race of faith to its completion first, then calls us to run it. He didn't just model faith; he founded it.</div>
+      <div class="word-translations">ESV: "founder" · NIV: "pioneer" · NLT: "champion" · KJV: "author"</div>
+    </div>
+
+  </div><!-- /word-strip -->
+
+  <!-- ═══ THE FIVE WARNING PASSAGES ═══ -->
+  <div class="section-label">The Five Warning Passages — Rising Intensity</div>
+  <div class="warn-grid">
+
+    <div class="warn-card">
+      <div class="warn-ref">2:1–4</div>
+      <div class="warn-intensity">
+        <div class="warn-dot"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+      </div>
+      <div class="warn-title">Do not drift</div>
+      <div class="warn-note">The word delivered through angels was binding. How shall we escape if we neglect so great a salvation? The mildest warning — but the question is severe.</div>
+    </div>
+
+    <div class="warn-card">
+      <div class="warn-ref">3:7–4:13</div>
+      <div class="warn-intensity">
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+      </div>
+      <div class="warn-title">Do not harden</div>
+      <div class="warn-note">Today, if you hear his voice — Ps 95. Israel hardened and fell in the desert. The rest remains; do not miss it. The Word of God is living and active, a two-edged sword.</div>
+    </div>
+
+    <div class="warn-card">
+      <div class="warn-ref">5:11–6:12</div>
+      <div class="warn-intensity">
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot empty"></div>
+        <div class="warn-dot empty"></div>
+      </div>
+      <div class="warn-title">The hardest text</div>
+      <div class="warn-note">Those who have tasted the heavenly gift and fallen away — impossible to renew. The most debated passage in Hebrews. Not a description of what has happened but a warning of where the logic leads.</div>
+    </div>
+
+    <div class="warn-card">
+      <div class="warn-ref">10:19–39</div>
+      <div class="warn-intensity">
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot empty"></div>
+      </div>
+      <div class="warn-title">Do not throw away confidence</div>
+      <div class="warn-note">Deliberate ongoing sin after receiving the truth leaves no sacrifice. "It is a dreadful thing to fall into the hands of the living God." But: do not throw away your confidence — great reward awaits.</div>
+    </div>
+
+    <div class="warn-card">
+      <div class="warn-ref">12:14–29</div>
+      <div class="warn-intensity">
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+        <div class="warn-dot"></div>
+      </div>
+      <div class="warn-title">Do not refuse him</div>
+      <div class="warn-note">Those who refused Moses had no escape. How much less us? We have come to Zion, to the heavenly Jerusalem, to the mediator of a new covenant. "Our God is a consuming fire."</div>
+    </div>
+
+  </div><!-- /warn-grid -->
+
+  <!-- ═══ COMMENTARY SHELF ═══ -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="commentary-shelf">
+
+    <div class="comm-card">
+      <div class="comm-author">F. F. Bruce</div>
+      <div class="comm-title">The Epistle to the Hebrews (NICNT, 1990)</div>
+      <span class="comm-tradition trad-conservative">Conservative Evangelical</span>
+      <div class="comm-point">Bruce is the standard starting point. On the warning passages, he argues the people described in 6:4–6 show genuine experience of grace but the text does not require they are regenerate — the language is deliberately ambiguous to shock drifters back to seriousness without resolving the predestination question.</div>
+      <div class="comm-point">On Melchizedek: "The argument is typological, not allegorical — the silence of Scripture about his parentage is the theological point, not a claim about his ontology."</div>
+      <a href="https://www.eerdmans.com/Products/0068/the-epistle-to-the-hebrews.aspx" target="_blank" class="source-link">eerdmans.com — The Epistle to the Hebrews (NICNT) [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Thomas Schreiner</div>
+      <div class="comm-title">Commentary on Hebrews (BHAC, 2015)</div>
+      <span class="comm-tradition trad-reformed">Reformed / Conservative</span>
+      <div class="comm-point">Schreiner reads the warning passages as genuine warnings addressed to the visible community — some of whom are elect, some not. The warnings are God's means of preserving the elect, not evidence they can fall. Hebrews 6 describes those who were in the community but had not truly believed.</div>
+      <div class="comm-point">Especially useful on the "rest" theme in chs. 3–4: the rest is eschatological participation in God's own completed work — begun now in faith, fully realised in the new creation.</div>
+      <a href="https://www.bhacademic.com/product/commentary-on-hebrews/" target="_blank" class="source-link">bhacademic.com — Commentary on Hebrews (BHAC) [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">William Lane</div>
+      <div class="comm-title">Hebrews 1–8 &amp; 9–13 (Word Biblical Commentary, 1991)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">The most thorough technical commentary. Lane's two-volume WBC is essential for word studies — his treatment of τελειόω is definitive, showing how the term moves from OT cultic consecration (Ex 29) to Jesus's qualification through suffering.</div>
+      <div class="comm-point">On the sermon structure: Lane argues the book alternates exposition and exhortation with deliberate rhetorical design — each warning is calibrated to the preceding theological argument it follows.</div>
+      <a href="https://www.zondervan.com/hebrews-word-biblical-commentary" target="_blank" class="source-link">zondervan.com — Hebrews WBC [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /commentary-shelf -->
+
+  <!-- ═══ INTERPRETIVE PRESSURE POINTS ═══ -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points — What Honest Teachers Can't Skip</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Who wrote Hebrews?</div>
+      <div class="pressure-a">Not Paul — the Greek is different, the theological categories are distinct, and no manuscript identifies him. Apollos (Luther), Priscilla (von Harnack), Barnabas (Tertullian), Luke, and others have been proposed. Origen's verdict still stands: "In truth, God knows." The anonymity is almost certainly intentional. Treat it as a significant, early Christian voice and move on.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Can genuine believers fall away? (6:4–6 and 10:26–31)</div>
+      <div class="pressure-a">The Reformed read: the language describes those who had real exposure to grace but were not truly regenerate. The Arminian read: genuine believers who have genuinely apostatised. A third read: the passage is a rhetorical thought-experiment — "if someone were to fall away, there'd be no renewing them" — designed to shock, not describe. Whatever your tradition, the passage is a real pastoral warning that demands engagement, not harmonising away.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Was Melchizedek a pre-incarnate Christ?</div>
+      <div class="pressure-a">A small but persistent minority tradition (some church fathers, some modern interpreters) reads Hebrews 7:3 as implying Melchizedek literally had no parents — i.e., was a theophany. The majority evangelical read: "without genealogy" means no genealogy is recorded in the text, which is the type. The argument is typological, not ontological. Hebrews says he was "made like the Son of God" (7:3) — a type resembles, it is not identical to, its antitype.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. The LXX-dependent arguments</div>
+      <div class="pressure-a">Key moves depend on LXX readings that differ from the Hebrew MT. Psalm 40:6: the MT has "you have opened my ears," the LXX (followed by Heb 10:5) has "a body you have prepared for me." The argument in ch. 10 requires the latter. This is not deception — the author wrote for a Greek-reading audience and used the Bible they had. But honest teaching acknowledges the textual complexity.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">5. What is the "rest" of chapters 3–4?</div>
+      <div class="pressure-a">Not just Canaan (Israel entered, yet Ps 95 was written later as an ongoing warning). Not only Sabbath (though the seventh-day pattern is invoked). The rest is eschatological — participation in God's own rest from completed work. It is available now through faith (4:3) and fully realised later. Joshua gave a rest; Jesus gives the rest Joshua gestured toward but could not deliver.</div>
+    </div>
+  </div>
+
+  <!-- ═══ CROSS-REFERENCES ═══ -->
+  <div class="section-label">Cross-Bible Connections</div>
+  <div class="xref-grid">
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Backward · OT Foundation</div>
+      <div class="xref-ref">Psalm 110:1, 4</div>
+      <div class="xref-note">Most-quoted OT text in the NT. Hebrews 1:13 and 7:21 — Jesus at the right hand, priest after Melchizedek's order. The entire book's Christology is anchored here.</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Backward · OT Foundation</div>
+      <div class="xref-ref">Leviticus 16 (Day of Atonement)</div>
+      <div class="xref-note">Hebrews 9–10 is a sustained meditation on Yom Kippur. The yearly repetition is the author's proof the sacrificial system was provisional. Jesus's once-for-all entry into the holy of holies ends the annual rehearsal.</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Backward · OT Foundation</div>
+      <div class="xref-ref">Jeremiah 31:31–34</div>
+      <div class="xref-note">The longest OT quotation in the NT (Heb 8:8–12). The new covenant Jeremiah promised: law on the heart, not stone; sins remembered no more. Hebrews announces its arrival.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Forward</div>
+      <div class="xref-ref">John 17 (High-Priestly Prayer)</div>
+      <div class="xref-note">Jesus's intercession at the Last Supper mirrors the ongoing heavenly intercession Hebrews describes — "he always lives to make intercession" (7:25). John shows us the moment; Hebrews shows us it never stops.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Forward</div>
+      <div class="xref-ref">Revelation 4–5</div>
+      <div class="xref-note">The heavenly sanctuary Hebrews describes — the true tabernacle — is the scene of Rev 4–5. The Lamb "standing as though slain" at the throne is the fulfilment of what Hebrews means by Jesus having entered with his own blood.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Thematic Parallel</div>
+      <div class="xref-ref">Colossians 2:16–17</div>
+      <div class="xref-note">"These are a shadow (σκιά) of the things to come, but the substance (σῶμα) belongs to Christ." The shadow/substance contrast of Hebrews 8:5 and 10:1 in a single sentence — the same argument from a different angle.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- ═══ THEN → NOW ═══ -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Audience</div>
+        <div class="tn-text">Jewish Christians in the 60s AD, under social and possibly legal pressure, tempted to drift back to the Levitical system that was still running — a visible, tangible, legally protected religion. Going back felt like safety. The author's point: it was always a shadow. Going back to the shadow now that the substance has arrived is not retreat to safety — it is choosing the copy over the original.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Equivalent</div>
+        <div class="tn-text">Any context where institutional religion, cultural Christianity, or familiar religious performance offers a comfortable alternative to costly, living relationship with Jesus. The exhausted Christian who stops engaging with Scripture, stops gathering with the community, stops pressing through difficulty — not because they denied Christ, but because they got tired. "Do not throw away your confidence; it will be richly rewarded" (10:35) was written for that moment.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: What familiar religious comfort — or what version of Christianity that asks less of you — are you tempted to run back to instead of pressing through?</div>
+  </div>
+
+  <!-- ═══ VERDICT ═══ -->
+  <div class="verdict">
+    <div class="verdict-label">Final Verdict — The Book's Controlling Idea</div>
+    <div class="verdict-text">"Since we have a great high priest who has ascended into heaven, Jesus the Son of God, let us hold firmly to the faith we profess."</div>
+    <div class="verdict-ref">Hebrews 4:14 — The book's pastoral hinge. Exposition leads to this; exhortation flows from it.</div>
+  </div>
+
+  <!-- ═══ NEXT IN SERIES ═══ -->
+  <div class="next-strip">
+    <div class="next-label">Next →</div>
+    <div>
+      <div class="next-title">James</div>
+      <div class="next-note">The necessary counterpoint: if Hebrews is all about what Jesus has done for us (the indicative), James is about what faith that is real must look like in practice (the imperative). "Faith without works is dead" — written to the same Jewish-Christian audience from the opposite angle.</div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+</body>
+</html>
