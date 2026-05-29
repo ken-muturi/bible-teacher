@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luke 18:1–8 — Persistent Prayer Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .back-link { font-family: 'Caveat', cursive; font-size: 0.85rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .back-link:hover { color: #555; }
+  .companion-link { font-family: 'Caveat', cursive; font-size: 0.85rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4a30a0; }
+
+  /* SECTION LABEL */
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout { border-left: 5px solid #6c4bbf; background: #f5f2fc; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.65; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #6c4bbf; margin-top: 8px; font-weight: 700; }
+
+  /* PLACEMENT */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.88rem; color: #333; line-height: 1.45; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.3rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.78rem; color: #555; line-height: 1.4; }
+  .word-translations { font-size: 0.7rem; color: #888; margin-top: 6px; font-style: italic; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; border-radius: 3px 0 0 3px; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #6c4bbf; }
+  .beat.b2 .beat-num { background: #c0392b; }
+  .beat.b3 .beat-num { background: #2e8a4a; }
+  .beat.b4 .beat-num { background: #3b6fd4; }
+  .beat.b1 .beat-body { border-color: #6c4bbf; }
+  .beat.b2 .beat-body { border-color: #c0392b; }
+  .beat.b3 .beat-body { border-color: #2e8a4a; }
+  .beat.b4 .beat-body { border-color: #3b6fd4; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 2px; }
+  .beat.b1 .beat-ref { color: #6c4bbf; }
+  .beat.b2 .beat-ref { color: #c0392b; }
+  .beat.b3 .beat-ref { color: #2e8a4a; }
+  .beat.b4 .beat-ref { color: #3b6fd4; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* COMPANION TEXT PANEL */
+  .companion-panel { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #faf7f2; padding: 18px 20px; margin: 4px 0 24px; }
+  .cp-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #6c4bbf; margin-bottom: 4px; }
+  .cp-sub { font-size: 0.7rem; color: #888; font-style: italic; margin-bottom: 12px; }
+  .cp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .cp-col-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6c4bbf; font-weight: 700; margin-bottom: 5px; }
+  .cp-text { font-size: 0.8rem; color: #333; line-height: 1.42; }
+  .cp-key { margin-top: 12px; border-left: 3px solid #6c4bbf; padding-left: 10px; font-size: 0.8rem; color: #444; line-height: 1.4; font-style: italic; }
+
+  /* TENSION STRIP */
+  .tension-strip { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .ts-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .ts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .ts-col-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; }
+  .ts-col.for .ts-col-label { color: #2e8a4a; }
+  .ts-col.against .ts-col-label { color: #c0392b; }
+  .ts-point { font-size: 0.78rem; color: #ccc; line-height: 1.4; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid; }
+  .ts-col.for .ts-point { border-color: #2e8a4a; }
+  .ts-col.against .ts-point { border-color: #c0392b; }
+  .ts-resolution { margin-top: 12px; padding-top: 12px; border-top: 1px solid #333; font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.8rem; color: #444; line-height: 1.4; }
+  .ot-quote { font-style: italic; color: #555; font-size: 0.78rem; margin-top: 5px; border-left: 2px solid #d47c1a; padding-left: 8px; }
+
+  /* ILLUSTRATIONS */
+  .illus-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .illus-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 14px; }
+  .illus-type { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; font-weight: 700; margin-bottom: 4px; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #d47c1a; margin-bottom: 5px; }
+  .illus-text { font-size: 0.8rem; color: #333; line-height: 1.42; }
+
+  /* COMMENTARY SHELF */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-conservative { background: #3b6fd4; color: #fff; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-pastoral     { background: #2e8a4a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.86rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.4; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.92rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid, .illus-grid { grid-template-columns: 1fr 1fr; }
+    .cp-cols, .ts-row, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid, .illus-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">Luke 18:1–8</div>
+  <div class="header-title">The Persistent Widow — A Study in Prayer That Doesn't Quit</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="luke-18-1-8-deep-study.html" class="back-link">← This study</a>
+    <a href="../briefs/persistent-prayer-brief.md" class="companion-link">⊕ Persistent Prayer brief (.md)</a>
+  </div>
+
+  <!-- PASSAGE -->
+  <div class="section-label">Passage — Luke 18:1–8 (NIV)</div>
+  <div class="passage-callout">
+    <div class="pc-label">Key Text</div>
+    <div class="pc-text">
+      Then Jesus told his disciples a parable to show them that they should always pray and not give up. He said: "In a certain town there was a judge who neither feared God nor cared what people thought. And there was a widow in that town who kept coming to him with the plea, 'Grant me justice against my adversary.'<br><br>
+      "For some time he refused. But finally he said to himself, 'Even though I don't fear God or care what people think, yet because this widow keeps bothering me, I will see that she gets justice, so that she won't eventually come and attack me!'"<br><br>
+      Then the Lord said, "Listen to what the unjust judge says. And will not God bring about justice for his chosen ones, who cry out to him day and night? Will he keep putting them off? I tell you, he will see that they get justice, and quickly. However, when the Son of Man comes, will he find faith on the earth?"
+    </div>
+    <div class="pc-ref">Luke 18:1–8 (NIV)</div>
+  </div>
+
+  <!-- PLACEMENT -->
+  <div class="placement">
+    <strong>Placement in Luke:</strong> This parable sits in the travel narrative (Luke 9:51–19:44) — Jesus on the long road to Jerusalem. It follows immediately after the apocalyptic discourse on the coming of the Son of Man (17:20–37), which explains the closing question: "when the Son of Man comes, will he find faith on the earth?" The parable is not just about prayer technique — it is about whether disciples will hold on in faith during the long, apparently God-silent stretch between Jesus's departure and his return.
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Five Key Terms</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">ἐκκακεῖν</div>
+      <div class="word-translit">ekkakein</div>
+      <span class="word-ref-badge">v.1 — "give up"</span>
+      <div class="word-gloss">To grow weary / lose heart / give up</div>
+      <div class="word-note">Literally: to become bad, to lose courage. Found also in 2 Cor 4:1, 16; Gal 6:9; Eph 3:13; 2 Thess 3:13 — always in contexts of endurance under pressure. The parable's stated purpose is to address this tendency: they should "always pray and not ekkakein." The enemy of persistent prayer is not rebellion but weariness.</div>
+      <div class="word-translations">ESV: "lose heart" · NIV: "give up" · NLT: "give up"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀναίδεια</div>
+      <div class="word-translit">anaideia</div>
+      <span class="word-ref-badge">Luke 11:8 — companion text</span>
+      <div class="word-gloss">Shameless boldness / persistent audacity</div>
+      <div class="word-note">The key word in the companion parable (Friend at Midnight, Lk 11:8). From a (without) + aidōs (shame). Not impudence but the bold refusal to be put off by social embarrassment. The man knocks at midnight because he is not deterred by the awkwardness. This is what Jesus commends — not cleverness, not volume, but unbothered persistence.</div>
+      <div class="word-translations">ESV: "impudence" · NIV: "shameless audacity" · NLT: "boldness"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἐκδίκησις</div>
+      <div class="word-translit">ekdikēsis</div>
+      <span class="word-ref-badge">v.3, 7, 8</span>
+      <div class="word-gloss">Justice / vindication / legal redress</div>
+      <div class="word-note">The widow is not asking for revenge — she is asking for legal vindication that the system owes her. The word runs throughout the passage (vv.3, 7, 8). God will bring about ekdikēsis for his chosen ones. Prayer in this parable is not primarily petition for personal blessings but the cry of the oppressed for justice — "Grant me justice against my adversary."</div>
+      <div class="word-translations">ESV: "justice" · NIV: "justice" · KJV: "avenge"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">πίστις</div>
+      <div class="word-translit">pistis</div>
+      <span class="word-ref-badge">v.8 — closing question</span>
+      <div class="word-gloss">Faith / faithfulness / trust</div>
+      <div class="word-note">The parable closes with the most searching question in the passage: "when the Son of Man comes, will he find pistis on the earth?" The persistent widow is the image of what pistis looks like — not intellectual belief but active, refusing-to-quit trust. The eschatological frame shows that persistent prayer is not a technique but evidence of whether faith has survived the long wait.</div>
+      <div class="word-translations">ESV: "faith" · NIV: "faith" · NLT: "faith"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ὑπωπιάζῃ</div>
+      <div class="word-translit">hypōpiazē</div>
+      <span class="word-ref-badge">v.5 — the judge's fear</span>
+      <div class="word-gloss">Wear out / strike under the eye / beat black and blue</div>
+      <div class="word-note">A vivid, almost comic word. Literally means "to give a black eye" — used in boxing contexts. The judge fears the widow will eventually "beat him up" (metaphorically) with her relentless coming. This earthy humour is deliberate: Jesus is painting a judge so worn down by a persistent woman that his only escape is to grant her justice. The a fortiori argument runs from this comic image to God's willing response.</div>
+      <div class="word-translations">ESV: "wear me out" · NIV: "wear me out" · NLT: "wear me out"</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- STRUCTURE MAP -->
+  <div class="section-label">Structure — Four Movements</div>
+  <div class="structure-map">
+
+    <div class="beat b1">
+      <div class="beat-num">1</div>
+      <div class="beat-body">
+        <div class="beat-ref">v.1 — The stated purpose</div>
+        <div class="beat-title">The Narrator's Frame: Pray and Don't Lose Heart</div>
+        <div class="beat-desc">Luke unusually tells us upfront what the parable means before we hear it. This is not a riddle — it is medicine for a specific illness: the tendency to stop praying when nothing seems to be happening. The parable exists to treat that illness. The entire narrative is shaped by this pastoral aim.</div>
+      </div>
+    </div>
+
+    <div class="beat b2">
+      <div class="beat-num">2</div>
+      <div class="beat-body">
+        <div class="beat-ref">vv.2–5 — The story</div>
+        <div class="beat-title">The Unjust Judge and the Persistent Widow</div>
+        <div class="beat-desc">The judge is introduced with two negatives: he neither fears God nor respects people — he is accountable to no one. He is the worst possible judge. The widow has no power, no advocate, no leverage — only her repeated presence. She "kept coming" (imperfect tense — ongoing action). Eventually the judge grants justice not out of conscience but out of self-preservation: she will "wear him out." The comedy is intentional.</div>
+      </div>
+    </div>
+
+    <div class="beat b3">
+      <div class="beat-num">3</div>
+      <div class="beat-body">
+        <div class="beat-ref">vv.6–8a — The argument</div>
+        <div class="beat-title">The A Fortiori Move: How Much More Will God Act?</div>
+        <div class="beat-desc">Jesus draws the lesson with an explicit lesser-to-greater argument. If even an unjust, God-fearing-nothing judge eventually responds to persistence — how much more will a just, caring, covenant-keeping God respond to his own chosen ones who cry to him day and night? The answer is emphatic: "he will see that they get justice, and quickly." The word "quickly" (en tachei) points to the suddenness of the final vindication, not necessarily the speed of each answer.</div>
+      </div>
+    </div>
+
+    <div class="beat b4">
+      <div class="beat-num">4</div>
+      <div class="beat-body">
+        <div class="beat-ref">v.8b — The closing question</div>
+        <div class="beat-title">The Eschatological Sting: Will He Find Faith?</div>
+        <div class="beat-desc">The parable does not end with encouragement — it ends with a question that cuts the other way. The problem is not whether God will answer; God will act, and quickly. The problem is whether his people will still be praying when he comes. The widow is the image of what faith looks like in the waiting period. The question "will he find faith on the earth?" hangs over the whole passage as a challenge, not a comfort.</div>
+      </div>
+    </div>
+
+  </div><!-- /structure-map -->
+
+  <!-- COMPANION TEXT -->
+  <div class="section-label">Companion Text — Luke 11:5–13 · The Friend at Midnight</div>
+  <div class="companion-panel">
+    <div class="cp-title">The Same Lesson, a Different Angle</div>
+    <div class="cp-sub">Luke 11 and Luke 18 are the two great persistent-prayer parables. Read together they are complete.</div>
+    <div class="cp-cols">
+      <div>
+        <div class="cp-col-label">Luke 11:5–13</div>
+        <div class="cp-text">A man knocks at his neighbour's door at midnight asking for bread for an unexpected guest. The neighbour refuses — door locked, family in bed. But the man keeps knocking. The neighbour eventually gets up not because of friendship but because of the man's <em>anaideia</em> (shameless boldness). Jesus follows with "Ask... seek... knock" — all present imperatives meaning <em>keep doing this</em>. Climax: if you, being evil, give good gifts to your children, how much more will the heavenly Father give the Holy Spirit to those who ask him.</div>
+      </div>
+      <div>
+        <div class="cp-col-label">What Luke 11 adds</div>
+        <div class="cp-text">
+          <strong>The object of prayer:</strong> Luke 11 ends with the Holy Spirit as the supreme gift — the parable is not about getting anything you want but about seeking God himself.<br><br>
+          <strong>Anaideia:</strong> The word Luke 11:8 uses is not the widow's legal cry but personal boldness — shameless refusal to be embarrassed into silence.<br><br>
+          <strong>Present imperatives:</strong> "Keep asking, keep seeking, keep knocking" — the Greek grammar of persistence that Luke 18 illustrates with the widow's story.
+        </div>
+      </div>
+    </div>
+    <div class="cp-key">"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you." — Luke 11:9. The verbs are present imperatives. Not a one-time act. A posture.</div>
+  </div>
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">Historical & OT Background — Where This Comes From</div>
+  <div class="ot-grid">
+
+    <div class="ot-card">
+      <div class="ot-ref">Genesis 32:22–32</div>
+      <div class="ot-title">Jacob Wrestling</div>
+      <div class="ot-note">The paradigm the tradition calls "prevailing prayer." Jacob wrestles through the night — receives a wound and a blessing — and refuses to release the man until he is blessed. "I will not let you go unless you bless me." He is named Israel: "you have striven with God and with men, and have prevailed." The church has read this as a model of prayer that holds on through the dark, refuses to quit, and emerges both wounded and blessed.</div>
+      <div class="ot-quote">"I will not let you go unless you bless me." — Gen 32:26</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">1 Kings 18:41–45</div>
+      <div class="ot-title">Elijah Prays Seven Times</div>
+      <div class="ot-note">After the confrontation on Carmel, Elijah prays for rain. He sends his servant to look toward the sea — seven times. On the seventh look: a cloud the size of a man's hand. Rain comes. James 5:17–18 holds this up as the normative model of persistent prayer, using the phrase "a human being like us" — this is not superhuman intercession but ordinary faith that refuses to stop praying until the answer appears.</div>
+      <div class="ot-quote">"Go back seven times." — 1 Kgs 18:43</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Daniel 10:2–13</div>
+      <div class="ot-title">21 Days of Prayer</div>
+      <div class="ot-note">Daniel prays and mourns for three weeks before the angel arrives, explaining the delay: the "prince of the Persian kingdom" resisted him for 21 days until Michael came to help. This passage became foundational for the idea that persistent prayer overcomes spiritual resistance in heavenly realms. Widely used in charismatic/intercessory traditions to explain unanswered prayer as spiritual warfare rather than divine silence.</div>
+      <div class="ot-quote">"From the first day... your words were heard." — Dan 10:12</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Exodus 32:9–14 · Numbers 14:11–20</div>
+      <div class="ot-title">Moses the Intercessor</div>
+      <div class="ot-note">Moses intercedes when God declares his intention to destroy Israel and start over. He does not pray once — he stands in the gap persistently, reasoning with God from his own character and covenant promises. "And the LORD relented from the disaster that he had spoken of bringing on his people." OT intercession models prayer that takes hold of God's own promises and refuses to let go until he acts consistently with who he has declared himself to be.</div>
+      <div class="ot-quote">"Remember your servants Abraham, Isaac and Israel..." — Exod 32:13</div>
+    </div>
+
+  </div><!-- /ot-grid -->
+
+  <!-- THE TENSION -->
+  <div class="section-label">The Critical Tension — Persistence vs. Repetition</div>
+  <div class="tension-strip">
+    <div class="ts-title">What the Parable Commends vs. What It Does Not Commend</div>
+    <div class="ts-row">
+      <div class="ts-col for">
+        <div class="ts-col-label">What Jesus commends</div>
+        <div class="ts-point">Faith that does not quit — returning to God repeatedly over time</div>
+        <div class="ts-point">Relational boldness — the widow comes because she knows the judge owes her justice</div>
+        <div class="ts-point">Crying out "day and night" — prayer as a posture of life, not an occasional act</div>
+        <div class="ts-point">Not losing heart (ekkakein) under apparent silence</div>
+        <div class="ts-point">The shameless audacity of Luke 11 — unbothered persistence, not embarrassed silence</div>
+      </div>
+      <div class="ts-col against">
+        <div class="ts-col-label">What the parable does not support</div>
+        <div class="ts-point">Mechanical repetition of the same words — Matthew 6:7 warns against this explicitly</div>
+        <div class="ts-point">The idea that God needs to be worn down or persuaded</div>
+        <div class="ts-point">Emotional escalation as a sign of valid prayer</div>
+        <div class="ts-point">Treating Acts 1:4 ("tarry") as a method for all prayer</div>
+        <div class="ts-point">The assumption that length of prayer increases the likelihood of answer</div>
+      </div>
+    </div>
+    <div class="ts-resolution">
+      <strong>The resolution:</strong> The widow's persistence is relational and legal — she keeps coming because she knows the judge is obligated to give her justice and she will not let him off the hook. This is the model for Christian prayer: returning to God not to wear him down but because we know his character and his covenant, and we hold him to his own promises. The contrast is with pagans who "think they will be heard because of their many words" (Matt 6:7) — prayer as manipulation rather than trust.
+    </div>
+  </div>
+
+  <!-- HISTORICAL TRADITION -->
+  <div class="section-label">Where the Practice "Pray Until Something Happens" Came From</div>
+  <div class="passage-callout" style="border-color:#d47c1a; background:#fdf8ef;">
+    <div class="pc-label" style="color:#d47c1a;">Historical Context</div>
+    <div class="pc-text" style="font-style:normal; font-size:0.86rem; line-height:1.5;">
+      <strong>The Holiness movement (19th c.)</strong> — Charles Finney's "new measures" revivals and the camp-meeting tradition embedded the idea that prayer is pressed through until a breakthrough comes. The doctrine of "entire sanctification" (a second definite work of grace) created the expectation of a specific, datable, felt experience that must be prayed into.<br><br>
+      <strong>The Pentecostal "tarrying" tradition (1906 onward)</strong> — The Azusa Street Revival under William Seymour established "tarrying meetings" based on Acts 1:4: "Do not leave Jerusalem, but wait for the gift my Father promised." The 120 waited ten days until Pentecost. Pentecostal revivalists taught believers to pray and wait until they received the same experience — the baptism of the Holy Spirit evidenced by tongues.<br><br>
+      <strong>The problem:</strong> Acts 1:4 is a specific historical instruction for a once-for-all event. Pentecost was not a template; it was the fulfilment of a promise. Treating it as a method for all believers to repeat misreads the genre of Acts. The biblical basis for persistent prayer is Luke 18 and 11, not Acts 1. Persistence in prayer is faith — not a technique for triggering an experience.<br><br>
+      <strong>What is genuinely biblical:</strong> The practice of sustained, corporate, expectant prayer has roots in Acts 1:14 (the disciples devoted themselves to prayer together), Acts 12:5 (the church praying earnestly for Peter), and Daniel 10. Extended prayer in community with expectant faith is thoroughly biblical. The question is whether the goal is relationship and justice (Luke 18) or a particular felt experience (Pentecostal tarrying).
+    </div>
+  </div>
+
+  <!-- ILLUSTRATIONS -->
+  <div class="section-label">Teaching Illustrations</div>
+  <div class="illus-grid">
+
+    <div class="illus-card">
+      <div class="illus-type">Everyday</div>
+      <div class="illus-title">The Parent Advocating for Their Child</div>
+      <div class="illus-text">A parent whose child has been wrongly treated by a school system keeps calling, keeps showing up at meetings, keeps writing letters — not because they think the headteacher needs to be worn down but because they know their child's case is just and they will not let the institution ignore it. They are not manipulating — they are refusing to allow injustice to go unaddressed. This is closer to what the widow is doing than the image of tearful, desperate repetition.</div>
+    </div>
+
+    <div class="illus-card">
+      <div class="illus-type">Historical / Literary</div>
+      <div class="illus-title">William Wilberforce — 20 Years in Parliament</div>
+      <div class="illus-text">Wilberforce introduced a bill to abolish the slave trade every year for nearly 20 years before it passed in 1807 — and lived to see slavery abolished entirely in 1833. He did not escalate his emotional state year by year; he simply kept returning, kept arguing, kept praying, with the same conviction that the cause was just and the outcome was inevitable. The widow of Luke 18, if she lived in 19th-century England, would have looked like this.</div>
+    </div>
+
+    <div class="illus-card">
+      <div class="illus-type">For a Non-Religious Audience</div>
+      <div class="illus-title">The Researcher Who Won't Stop</div>
+      <div class="illus-text">Every major scientific breakthrough has behind it someone who kept pursuing the same question when the field had moved on. Not because they were louder than everyone else, or worked themselves into emotional intensity — but because they were convinced the answer was there and refused to stop looking. Barbara McClintock worked on transposons for decades before the scientific community took her seriously. She received the Nobel Prize at 81. Persistence is not desperation — it is conviction that something is true.</div>
+    </div>
+
+  </div><!-- /illus-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+
+    <div class="comm-card">
+      <div class="comm-author">Darrell Bock</div>
+      <div class="comm-title">Luke 9:51–24:53 (BECNT, 1996)</div>
+      <span class="comm-tradition trad-conservative">Conservative Evangelical</span>
+      <div class="comm-point">On the eschatological frame: Bock emphasises that the closing question (v.8b) is the parable's sharpest point. The story is not primarily about getting answers to prayer — it is about whether disciples will maintain persistent faith during the long period between Jesus's ascension and return. Prayer is the evidence of living faith.</div>
+      <div class="comm-point">On hypōpiazē (v.5): Bock notes the boxing metaphor is deliberately humorous — Jesus uses comic exaggeration to make the a fortiori argument land. The unjust judge is a deliberately bad example to make the contrast with God as sharp as possible.</div>
+      <a href="https://www.bakeracademic.com/products/luke-9-51-24-53-baker-exegetical-commentary-on-the-new-testament" target="_blank" class="source-link">bakeracademic.com — Luke 9:51–24:53, BECNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Joel Green</div>
+      <div class="comm-title">The Gospel of Luke (NICNT, 1997)</div>
+      <span class="comm-tradition trad-conservative">Evangelical Scholarly</span>
+      <div class="comm-point">Green stresses the social world of the parable: the widow was among the most vulnerable members of ancient society — no legal advocate, no male protector, no social capital. Her only asset is her persistent presence. Jesus chooses her precisely because of her powerlessness: if persistence works for someone with nothing, it is available to everyone.</div>
+      <div class="comm-point">On ekdikēsis: Green notes that the widow's cry is for justice, not personal favour — and God's response in v.7 mirrors this. The prayer Jesus commends in this parable is not primarily request for blessings but the cry of the oppressed for God to act with justice in a world that delays it.</div>
+      <a href="https://www.eerdmans.com/products/the-gospel-of-luke-nicnt.html" target="_blank" class="source-link">eerdmans.com — The Gospel of Luke, NICNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">N. T. Wright</div>
+      <div class="comm-title">Luke for Everyone (2001)</div>
+      <span class="comm-tradition trad-pastoral">Pastoral / Anglican</span>
+      <div class="comm-point">Wright reads the parable in its immediate literary context — following ch. 17's apocalyptic discourse. The disciples have just been told that the Son of Man's coming will be sudden and unexpected. The parable is Jesus's answer to the implied question: what do we do in the meantime? You pray. You don't give up. You cry out for justice. You keep the faith that God will act.</div>
+      <div class="comm-point">On the closing question: "The issue is not whether God will act, but whether his people will still be praying — still be asking, still be trusting — when he does." Wright calls this one of the most challenging verses in the Gospels for the contemporary church.</div>
+      <a href="https://www.spckpublishing.co.uk/product/luke-for-everyone/" target="_blank" class="source-link">spckpublishing.co.uk — Luke for Everyone [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Kenneth Bailey</div>
+      <div class="comm-title">Poet and Peasant / Through Peasant Eyes (1976/1980)</div>
+      <span class="comm-tradition trad-critical">Middle Eastern Cultural Context</span>
+      <div class="comm-point">Bailey's contribution is irreplaceable for this parable. He shows that in the Middle Eastern honour-shame culture, the judge's fear of hypōpiazē ("giving him a black eye") was not physical but reputational — the widow would eventually come to him publicly, in front of witnesses, and humiliate him. The judge grants justice to protect his honour. This makes the a fortiori argument even sharper: God has no honour to protect by delay — he will act from pure covenant love.</div>
+      <div class="comm-point">On the widow: in Bailey's cultural reading, a widow repeatedly appearing before a public official would have been a remarkable act of social courage. She has already crossed every social boundary. This is what anaideia (shameless boldness) looks like embodied.</div>
+      <a href="https://www.eerdmans.com/products/poet-and-peasant-through-peasant-eyes.html" target="_blank" class="source-link">eerdmans.com — Poet and Peasant / Through Peasant Eyes [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-shelf -->
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does persistence change God's mind — or reveal our faith?</div>
+      <div class="pressure-a">The parable's logic is a fortiori — from lesser to greater. God is not like the unjust judge; he is the opposite. The judge needed to be worn down because he didn't care. God already cares — "will he keep putting them off?" implies the answer is no. Persistence in prayer is not the mechanism that moves God from reluctance to willingness; it is the evidence that we believe God is just and will act. It changes us — keeping us oriented toward God — more than it changes God's intention.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Does "quickly" (v.8) mean God always answers fast?</div>
+      <div class="pressure-a">En tachei ("quickly/speedily") in apocalyptic contexts usually refers to the suddenness of an event when it comes, not to how soon it comes. See Revelation 1:1 — "things that must soon take place" refers to events that will happen suddenly when triggered, not necessarily imminently. God's justice will come suddenly and decisively — but the parable itself acknowledges that the "day and night" period of crying out can be long. The answer to "quickly" is not "immediately" but "when he acts, it will be definitive."</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is the "tarrying" tradition a misreading of Acts 1?</div>
+      <div class="pressure-a">The Pentecostal practice of praying until you receive the Holy Spirit (based on Acts 1:4) treats a specific historical instruction as a repeatable template. Acts 1:4 was spoken to specific disciples in a specific moment — "wait in Jerusalem for the Promise." Pentecost was the once-for-all fulfilment of Joel's prophecy (Acts 2:16). The biblical model for persistent prayer is Luke 18 and 11, not Acts 1. Extended, expectant, corporate prayer is thoroughly biblical; the idea that the Spirit must be "prayed down" in every generation replicates a unique historical event as a method.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. Why does the parable end with a question about faith, not a promise about prayer?</div>
+      <div class="pressure-a">This is the sharpest turn in the passage. Jesus shifts from assurance (God will bring justice, and quickly) to challenge (will he find faith?). The issue is not God's reliability — that is settled. The issue is human endurance. Prayer is the form faith takes when it cannot yet see what it is waiting for. The closing question suggests that the real threat to the praying community is not that God won't answer but that people will stop asking before he does. The parable is a call to persistence, not a guarantee of specific outcomes.</div>
+    </div>
+
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Same theme</div>
+      <div class="xref-ref">Luke 11:5–13 · Friend at Midnight</div>
+      <div class="xref-note">The companion parable on persistent prayer. Adds anaideia (shameless boldness), the present imperatives ("keep asking, keep seeking"), and the climax: the Father gives the Holy Spirit to those who keep asking.</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT Background</div>
+      <div class="xref-ref">Genesis 32:22–32 · Jacob</div>
+      <div class="xref-note">The OT archetype of prevailing prayer — holding on through the night, wounded and blessed. The tradition of "wrestling prayer" flows from here.</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT Background</div>
+      <div class="xref-ref">1 Kings 18:41–45 · Elijah × 7</div>
+      <div class="xref-note">Prays seven times until the rain comes. James 5:17–18 uses this as the model of effective intercessory prayer — "a human being like us."</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Tension / Counterweight</div>
+      <div class="xref-ref">Matthew 6:7–8 · Don't Babble</div>
+      <div class="xref-note">"Do not keep on babbling like pagans, for they think they will be heard because of their many words." The same Jesus who commends persistence here warns against mechanical repetition. Persistence ≠ verbosity.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Application</div>
+      <div class="xref-ref">Philippians 4:6 · With thanksgiving</div>
+      <div class="xref-note">"In everything, by prayer and petition, with thanksgiving, present your requests to God." The persistent posture of Luke 18 combined with the thankful orientation of Phil 4 — neither grasping nor passive.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Application</div>
+      <div class="xref-ref">Romans 8:26–27 · The Spirit intercedes</div>
+      <div class="xref-note">"The Spirit intercedes for us with groans that words cannot express." We do not know what to pray for — the Spirit joins our persistence and makes it coherent before God. Persistent prayer is not solo effort.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Hearers</div>
+        <div class="tn-text">The disciples have just heard the apocalyptic discourse of ch. 17 — the Son of Man's coming, the days of Noah and Lot, the sudden catastrophic judgment. They would have been asking: when? how long? what do we do in the waiting? This parable is Jesus's direct pastoral answer: you pray. You do not give up. You cry for justice like a widow who has no one else to go to. You hold on to the covenant faithfulness of a God who is nothing like this unjust judge.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">Any believer or community in the long stretch between promise and fulfilment — praying for healing that hasn't come, for prodigals who haven't returned, for justice in situations that seem stalled, for revival that hasn't broken out. The temptation is ekkakein — not to rebel against God but simply to grow weary and quietly stop. The parable says: the problem is never whether God will act. The question is whether faith survives the wait. Keep coming. Keep crying out. Do not lose heart.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Is my persistence in prayer coming from faith that believes God is good and will act — or from a technique that assumes God needs to be worn down?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The problem is not whether God will bring justice. The problem is whether his people will still be praying — still trusting — when he does."</div>
+    <div class="verdict-ref">Luke 18:8b — "When the Son of Man comes, will he find faith on the earth?" The parable ends not with a promise but a question. Answer it with your life.</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
