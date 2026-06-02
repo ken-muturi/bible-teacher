@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birth Pangs — John 16:21–22 · Matt 24:7–8 · Mark 13:8 Deep Study</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 960px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* ── HEADER ── */
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2rem; color: #2c2c2c; letter-spacing: 0.05em; line-height: 1.2; }
+  .header-title { font-size: 1.05rem; color: #555; margin-top: 5px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; padding: 2px 8px; border-radius: 2px; margin-top: 7px; }
+  .badge-theme { display: inline-block; background: #c0392b; color: #fff; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; padding: 2px 8px; border-radius: 2px; margin-top: 7px; margin-left: 5px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .back-link { font-family: 'Caveat', cursive; font-size: 0.84rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .back-link:hover { color: #555; }
+
+  /* ── SECTION LABEL ── */
+  .section-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 30px; }
+
+  /* ── THREE-TEXT GRID ── */
+  .three-text-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .text-card { border-radius: 3px; padding: 14px 15px; }
+  .tc-john { border: 2.5px solid #6c4bbf; background: #f5f2fc; }
+  .tc-matt { border: 2.5px solid #c0392b; background: #fdf2f2; }
+  .tc-mark { border: 2.5px solid #d47c1a; background: #fdf8ef; }
+  .tc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 5px; }
+  .tc-john .tc-label { color: #6c4bbf; }
+  .tc-matt .tc-label { color: #c0392b; }
+  .tc-mark .tc-label { color: #d47c1a; }
+  .tc-text { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #2c2c2c; line-height: 1.55; font-style: italic; }
+  .tc-note { font-size: 0.72rem; color: #666; margin-top: 7px; line-height: 1.35; font-style: normal; }
+
+  /* ── PLACEMENT ── */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 15px 18px; margin: 4px 0 24px; }
+  .place-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .place-col-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: #888; margin-bottom: 5px; }
+  .place-text { font-size: 0.82rem; color: #333; line-height: 1.45; }
+  .place-thread { margin-top: 12px; border-top: 1px dashed #ccc; padding-top: 11px; font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; text-align: center; }
+
+  /* ── WORD STUDIES ── */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .word-greek { font-size: 1.25rem; color: #3b6fd4; font-weight: 700; margin-bottom: 1px; font-style: italic; }
+  .word-translit { font-size: 0.63rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-appears { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 7px; }
+  .wa-all  { background: #6c4bbf; color: #fff; }
+  .wa-john { background: #6c4bbf; color: #fff; }
+  .wa-syn  { background: #c0392b; color: #fff; }
+  .wa-paul { background: #2e8a4a; color: #fff; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.78rem; color: #555; line-height: 1.4; }
+  .word-translations { font-size: 0.68rem; color: #888; margin-top: 6px; font-style: italic; }
+  .word-lost { font-size: 0.72rem; color: #c0392b; margin-top: 5px; border-left: 2px solid #c0392b; padding-left: 7px; line-height: 1.35; }
+
+  /* ── STRUCTURE MAP ── */
+  .structure-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 24px; }
+  .struct-panel { border-radius: 3px; padding: 15px 16px; }
+  .sp-john { border: 2.5px solid #6c4bbf; background: #f5f2fc; }
+  .sp-olivet { border: 2.5px solid #c0392b; background: #fdf2f2; }
+  .sp-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 10px; }
+  .sp-john .sp-label { color: #6c4bbf; }
+  .sp-olivet .sp-label { color: #c0392b; }
+  .beat { display: flex; gap: 0; margin-bottom: 7px; align-items: stretch; }
+  .beat-num { width: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Special Elite', serif; font-size: 1rem; color: #fff; border-radius: 3px 0 0 3px; }
+  .sp-john .beat-num { background: #6c4bbf; }
+  .sp-olivet .beat-num { background: #c0392b; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 8px 11px; background: #faf7f2; }
+  .sp-john .beat-body { border-color: #6c4bbf; }
+  .sp-olivet .beat-body { border-color: #c0392b; }
+  .beat-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .sp-john .beat-ref { color: #6c4bbf; }
+  .sp-olivet .beat-ref { color: #c0392b; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 2px; }
+  .beat-desc { font-size: 0.76rem; color: #444; line-height: 1.38; }
+
+  /* ── OT ROOTS ── */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 12px 13px; }
+  .ot-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #d47c1a; margin-bottom: 2px; }
+  .ot-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.78rem; color: #444; line-height: 1.38; }
+  .ot-quote { font-style: italic; color: #666; font-size: 0.75rem; margin-top: 5px; border-left: 2px solid #d47c1a; padding-left: 8px; line-height: 1.35; }
+
+  /* ── RABBINIC BOX ── */
+  .rabbinic-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .rb-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 10px; }
+  .rb-text { font-size: 0.81rem; color: #ccc; line-height: 1.48; margin-bottom: 10px; }
+  .rb-quote { border-left: 3px solid #d47c1a; padding-left: 12px; font-size: 0.78rem; color: #d0c8bc; font-style: italic; line-height: 1.42; }
+  .rb-source { font-size: 0.65rem; color: #888; margin-top: 6px; }
+
+  /* ── ILLUSTRATIONS ── */
+  .illus-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .illus-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .illus-type { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #888; font-weight: 700; margin-bottom: 3px; }
+  .illus-title { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #d47c1a; margin-bottom: 5px; }
+  .illus-text { font-size: 0.79rem; color: #333; line-height: 1.4; }
+
+  /* ── COMMENTARY SHELF ── */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.68rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 9px; font-weight: 700; }
+  .trad-conservative { background: #3b6fd4; color: #fff; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-pastoral     { background: #2e8a4a; color: #fff; }
+  .trad-preaching    { background: #d47c1a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.42; margin-bottom: 8px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 8px; font-size: 0.63rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* ── PRESSURE POINTS ── */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 17px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 13px; padding-bottom: 13px; border-bottom: 1px solid #2e2e2e; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.84rem; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .pressure-a { font-size: 0.78rem; color: #bbb; line-height: 1.42; }
+
+  /* ── CROSS-REFERENCES ── */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.ot       { border-color: #d47c1a; }
+  .xref-card.parallel  { border-color: #6c4bbf; }
+  .xref-card.forward   { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .ot .xref-tag       { color: #d47c1a; }
+  .parallel .xref-tag  { color: #6c4bbf; }
+  .forward .xref-tag   { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+
+  /* ── THEN → NOW ── */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 17px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.84rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.9rem; color: #6c4bbf; font-style: italic; }
+
+  /* ── VERDICT ── */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.08rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 750px) {
+    .three-text-grid, .ot-grid, .illus-grid, .xref-grid, .word-grid { grid-template-columns: 1fr 1fr; }
+    .structure-two-col, .place-cols, .comm-grid, .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .three-text-grid, .ot-grid, .illus-grid, .xref-grid, .word-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">Birth Pangs</div>
+  <div class="header-title">John 16:21–22 · Matthew 24:7–8 · Mark 13:8 — One Metaphor in Two Registers</div>
+  <span class="badge-deep">Deep Study</span>
+  <span class="badge-theme">Thematic · Three Texts</span>
+
+  <!-- THREE PASSAGES -->
+  <div class="section-label">The Three Texts</div>
+  <div class="three-text-grid">
+
+    <div class="text-card tc-john">
+      <div class="tc-label">John 16:21–22 · Upper Room Discourse</div>
+      <div class="tc-text">
+        "A woman giving birth to a child has pain because her time has come; but when her baby is born she forgets the anguish because of her joy that a child is born into the world. So with you: Now is your time of grief, but I will see you again and you will rejoice, and no one will take away your joy."
+      </div>
+      <div class="tc-note"><strong>Context:</strong> Hours before Gethsemane. Jesus preparing the Twelve for his death, absence, and return. The birth metaphor is pastoral — the disciples' grief is purposeful labour.</div>
+    </div>
+
+    <div class="text-card tc-matt">
+      <div class="tc-label">Matthew 24:7–8 · Olivet Discourse</div>
+      <div class="tc-text">
+        "Nation will rise against nation, and kingdom against kingdom. There will be famines and earthquakes in various places. All these are the beginning of birth pains."
+      </div>
+      <div class="tc-note"><strong>Context:</strong> Mount of Olives, days before the cross. Disciples ask about the Temple's destruction and the end of the age. The birth metaphor is eschatological — cosmic suffering is purposeful labour.</div>
+    </div>
+
+    <div class="text-card tc-mark">
+      <div class="tc-label">Mark 13:8 · Olivet Discourse (Parallel)</div>
+      <div class="tc-text">
+        "Nation will rise against nation, and kingdom against kingdom. There will be earthquakes in various places, and famines. These are the beginning of birth pains."
+      </div>
+      <div class="tc-note"><strong>Note:</strong> Mark's account is tighter than Matthew's — fewer signs listed, same reframe. The birth-pains interpretation is the structural climax of the sign-list in both Synoptics. Mark omits "false prophets" and "lawlessness" (Matt 24:10–12) but preserves the key phrase verbatim.</div>
+    </div>
+
+  </div><!-- /three-text-grid -->
+
+  <!-- PLACEMENT -->
+  <div class="section-label">Placement — Why These Texts Belong Together</div>
+  <div class="placement">
+    <div class="place-cols">
+      <div>
+        <div class="place-col-label">John 16 — Pastoral Register</div>
+        <div class="place-text">The Upper Room Discourse (chs. 13–17) is Jesus's longest farewell speech — a sustained attempt to prepare the disciples for what is about to happen to him and to them. Chapter 16 specifically addresses their coming grief: "you will weep and mourn while the world rejoices" (v.20). The birth-pains image answers the question: <em>what does this grief mean?</em> Answer: it is labour. It has direction. Something is being born.</div>
+      </div>
+      <div>
+        <div class="place-col-label">Matthew 24 / Mark 13 — Eschatological Register</div>
+        <div class="place-text">The Olivet Discourse answers a different question: <em>what do the signs mean?</em> Wars, famines, earthquakes — are these evidence of collapse, of divine abandonment, of the end? Jesus's answer: no. These are the beginning of birth pains. The cosmic suffering has the same structure as the disciples' grief: purposeful, directional, leading to something new. The metaphor reframes catastrophe as labour.</div>
+      </div>
+    </div>
+    <div class="place-thread">The connecting thread: <strong>ὠδίν</strong> — the birth pang. Jesus applies the same image to personal grief and cosmic apocalypse, and says the same thing about both: <em>this pain has a purpose. Something is being born.</em></div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Five Key Terms</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">ὠδίν</div>
+      <div class="word-translit">ōdin (pl. ōdines)</div>
+      <span class="word-appears wa-all">All three texts</span>
+      <div class="word-gloss">Birth pang / labour pain</div>
+      <div class="word-note">The governing word of the study. Used in Matt 24:8, Mark 13:8, and conceptually in John 16:21 (where the verb <em>tiktō</em> carries it). In the LXX: Isaiah 26:17, 66:8; Micah 4:9–10; Jeremiah 4:31; Hosea 13:13 — always pain that is purposeful and directed toward birth. In the NT: 1 Thess 5:3 (sudden, inescapable); Rom 8:22 (cosmic scope); Rev 12:2 (the heavenly woman).</div>
+      <div class="word-lost">What is lost in English: "birth pains" or "labour pains" captures the physical reality, but the Greek carries a wider OT resonance — the concept of the <em>Chevlei Mashiach</em> (messianic birth pangs) that any Second Temple Jewish reader would instantly hear.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀρχή</div>
+      <div class="word-translit">archē</div>
+      <span class="word-appears wa-syn">Matt 24:8 · Mark 13:8</span>
+      <div class="word-gloss">Beginning / onset / first stage</div>
+      <div class="word-note">The most structurally important word in the Olivet birth-pangs verse. "These are the <em>beginning</em> of birth pains" — not the main event, not the delivery, not even the hard labour. The early contractions. Wars, famines, and earthquakes are the onset signal, not the climax. This single word prevents the signs from being read as the end — they are the approach to the beginning.</div>
+      <div class="word-translations">ESV / NIV / NLT: "beginning" · KJV: "beginning"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ὥρα</div>
+      <div class="word-translit">hōra</div>
+      <span class="word-appears wa-john">John 16:21</span>
+      <div class="word-gloss">Hour / appointed time</div>
+      <div class="word-note">John 16:21 says the woman has pain "because her <em>hōra</em> has come." Throughout John, <em>hē hōra</em> is the technical term for Jesus's death-glorification moment (2:4; 7:30; 12:23; 13:1; 17:1). The woman's "hour" is thus not random pain — it is the eschatological moment. The disciples' grief is the labour of the hour that changes everything.</div>
+      <div class="word-lost">What is lost in English: translating it "time" or "hour" loses the Johannine weight — this word carries the full freight of Jesus's theology of his own death and exaltation.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">χαρά</div>
+      <div class="word-translit">chara</div>
+      <span class="word-appears wa-john">John 16:22</span>
+      <div class="word-gloss">Joy / deep gladness</div>
+      <div class="word-note">The destination of the labour. Not "relief" (which is what you feel when pain stops) but <em>chara</em> — active, positive joy. And then the staggering qualifier: "no one will take your joy from you." The joy of the resurrection encounter is given — and it is permanent, irremovable, unassailable. This is the outcome the birth-pangs metaphor has been pointing toward.</div>
+      <div class="word-translations">ESV: "joy" · NIV: "joy" · NLT: "joy"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">τίκτω</div>
+      <div class="word-translit">tiktō</div>
+      <span class="word-appears wa-john">John 16:21</span>
+      <div class="word-gloss">To give birth / to bear a child</div>
+      <div class="word-note">The verb of delivery: not just pain, but the birth that follows. "When her baby is <em>born</em>" — the birth happens. The child exists. The joy is not hypothetical; it is the response to an event that has already occurred. In John's theological frame the event is the resurrection — "a child is born into the world" echoes John 1:9 ("the true light that gives light to everyone was coming into the world").</div>
+      <div class="word-lost">What is lost: the verb tiktō in the birth-context of John 16 quietly connects to John 1 — the world-entry language of the Prologue. The birth being laboured toward is the new-creation world of the resurrection.</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- STRUCTURE MAP -->
+  <div class="section-label">Structure — John 16 and the Olivet Discourse Side by Side</div>
+  <div class="structure-two-col">
+
+    <div class="struct-panel sp-john">
+      <div class="sp-label">John 16:21–22 · Three Moves</div>
+
+      <div class="beat">
+        <div class="beat-num">1</div>
+        <div class="beat-body">
+          <div class="beat-ref">v.21a — The analogy</div>
+          <div class="beat-title">Pain Because Her Hour Has Come</div>
+          <div class="beat-desc">The birth metaphor introduced. The pain is real — but its cause is <em>hōra</em>, the appointed moment. The pain is not random, not punishment, not meaningless. It belongs to the hour.</div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-num">2</div>
+        <div class="beat-body">
+          <div class="beat-ref">v.21b — The completion</div>
+          <div class="beat-title">She Forgets the Anguish</div>
+          <div class="beat-desc">When the child is born, the woman no longer <em>remembers</em> the anguish — not suppression but displacement. The joy is so complete it crowds out the pain. The word "forgets" is pastoral precision: the grief is real but it does not have the last word.</div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-num">3</div>
+        <div class="beat-body">
+          <div class="beat-ref">v.22 — The application</div>
+          <div class="beat-title">I Will See You Again · Joy No One Can Take</div>
+          <div class="beat-desc">"Now is your time of grief, but I will see you again." The resurrection appearance is the birth. The joy that follows is permanent — "no one will take your joy from you." Three certainties: grief now, seeing again, joy that cannot be stolen.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="struct-panel sp-olivet">
+      <div class="sp-label">Matt 24:7–8 / Mark 13:8 · Three Moves</div>
+
+      <div class="beat">
+        <div class="beat-num">1</div>
+        <div class="beat-body">
+          <div class="beat-ref">v.7 — The signs</div>
+          <div class="beat-title">Nation Against Nation · Famines · Earthquakes</div>
+          <div class="beat-desc">Three categories of catastrophe: political conflict, natural disaster, cosmic disruption. These are not invented — they describe the regular experience of the Roman world and every generation since. Their familiarity is the point: Jesus is not describing a future exception but interpreting present-tense suffering.</div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-num">2</div>
+        <div class="beat-body">
+          <div class="beat-ref">v.8 — The reframe</div>
+          <div class="beat-title">The Beginning of Birth Pains</div>
+          <div class="beat-desc">The interpretive turn. Not: these are evidence of collapse. Not: these prove God has abandoned the world. These are the <em>beginning</em> — <em>archē</em> — of birth pains. The suffering has a structure: early contractions announcing that something is coming to birth.</div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat-num">3</div>
+        <div class="beat-body">
+          <div class="beat-ref">Implicit — The logic of the metaphor</div>
+          <div class="beat-title">Birth Pangs End in Birth</div>
+          <div class="beat-desc">The metaphor cannot be used without carrying its resolution. You cannot say "birth pains" without implying "and then a child is born." Jesus does not state the resolution here — he lets the metaphor carry it. The cosmic suffering is not meaningless. Something is being born.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /structure-two-col -->
+
+  <!-- OT ROOTS -->
+  <div class="section-label">Old Testament Roots — The Metaphor Before Jesus</div>
+  <div class="ot-grid">
+
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 26:17–18</div>
+      <div class="ot-title">The Failed Labour</div>
+      <div class="ot-note">Israel like a pregnant woman who writhes in pain — "but we gave birth to wind; we have not brought salvation to the earth." Labour that produced nothing. Jesus's use of the same metaphor implies the contrast: this labour will not fail. The birth will happen.</div>
+      <div class="ot-quote">"We were with child, we writhed in labour, but we gave birth to wind."</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 66:7–9</div>
+      <div class="ot-title">Birth Before Labour</div>
+      <div class="ot-note">"Before she goes into labour, she gives birth... in one day a nation is born." The eschatological reversal — the new age comes suddenly and completely, before the pain that normally precedes it. The new creation breaks through. God asks: "Shall I bring to the moment of birth and not give delivery?"</div>
+      <div class="ot-quote">"Who has ever heard of such a thing? Can a country be born in a day?"</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Micah 4:9–10</div>
+      <div class="ot-title">Labour → Exile → Rescue</div>
+      <div class="ot-note">Daughter Zion cries out in pain like a woman in labour. "Writhe in agony... you will leave the city and camp in the open field... but there the LORD will rescue you." Pain → exile → rescue. The birth-pains schema in miniature — suffering is not the end of the story.</div>
+      <div class="ot-quote">"You will go to Babylon; there you will be rescued."</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Hosea 13:13</div>
+      <div class="ot-title">Refusing to Be Born</div>
+      <div class="ot-note">"Pains of a woman in childbirth come to him, but he is a child without wisdom; when the time arrives, he doesn't present himself at the opening of the womb." The birth pains come — but Ephraim refuses to emerge. An image of Israel resisting the moment of deliverance. The warning behind the promise.</div>
+      <div class="ot-quote">"He is an unwise son; when the time arrives, he doesn't come to the opening of the womb."</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Jeremiah 4:31</div>
+      <div class="ot-title">The Cry in Judgment</div>
+      <div class="ot-note">"I hear a cry as of a woman in labour, a groan as of one bearing her first child — the cry of Daughter Zion gasping for breath, stretching out her hands." Here the image describes Jerusalem under judgment. But even in catastrophe, the birth-pains metaphor carries its implicit logic: this is not a death cry but a labour cry.</div>
+      <div class="ot-quote">"Gasping for breath, stretching out her hands: 'Alas! I am fainting; my life is given over to murderers.'"</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Romans 8:22 · Revelation 12:2</div>
+      <div class="ot-title">Paul and John Extend the Metaphor</div>
+      <div class="ot-note">Paul: "the whole creation has been groaning as in the pains of childbirth right up to the present time" — the cosmos in labour, waiting for the new birth of resurrection. Revelation 12: the woman clothed with the sun, "crying out in birth pains and the agony of giving birth" — the cosmic birth of the Messiah and the new age. Both authors heard Jesus's metaphor and extended it to its fullest scope.</div>
+      <div class="ot-quote">"The whole creation groans and suffers the pains of childbirth together until now." — Rom 8:22</div>
+    </div>
+
+  </div><!-- /ot-grid -->
+
+  <!-- RABBINIC BACKGROUND -->
+  <div class="rabbinic-box">
+    <div class="rb-title">Chevlei Mashiach — The Messianic Birth Pangs</div>
+    <div class="rb-text">
+      The concept Jesus draws on was already well-developed in Second Temple Judaism. The Rabbis spoke of <em>Chevlei Mashiach</em> (חֶבְלֵי מָשִׁיחַ — the "birth pangs of the Messiah") as the period of intensified suffering that would precede the messianic age. The Talmud lists the signs: wars, famines, moral collapse, social disorder, family breakdown, leaders shaming their people. The Mishnah Sotah 9:15 gives the most detailed list: "In the generation when the son of David comes, the house of assembly will become a brothel... the face of the generation will be like the face of a dog..."
+    </div>
+    <div class="rb-text">
+      The key insight of this tradition: these sufferings are not evidence that God has abandoned the world or that history has lost its direction. They are <em>birth pains</em> — the pain of something new coming into existence. Jesus walks into this tradition in Matthew 24 / Mark 13 and essentially confirms it — yes, what you expect will come — but then gives it a decisive new shape: these are the <em>beginning</em> of birth pains (ἀρχὴ ὠδίνων), not the delivery itself. And crucially, the decisive birth has already occurred in his own death and resurrection.
+    </div>
+    <div class="rb-quote">
+      "In the footsteps of the Messiah, insolence will increase and honour diminish; the vine will yield its fruit but wine will be costly; the government will turn to heresy and there will be no one to rebuke them... the son will insult the father, the daughter rise against her mother... and the face of the generation will be as the face of a dog."
+    </div>
+    <div class="rb-source">Mishnah Sotah 9:15 · Babylonian Talmud Sanhedrin 98b</div>
+  </div>
+
+  <!-- ILLUSTRATIONS -->
+  <div class="section-label">Teaching Illustrations</div>
+  <div class="illus-grid">
+
+    <div class="illus-card">
+      <div class="illus-type">Everyday</div>
+      <div class="illus-title">The Maternity Ward at 3am</div>
+      <div class="illus-text">A first-time mother in hard labour might believe, at the peak of a contraction, that something is terribly wrong — that the pain is evidence of disaster. But the midwife reads the same pain differently: this is transition. You are close. The pain doesn't mean things are falling apart; it means you are almost there. The disciples in grief and the church in suffering need someone to reframe the pain — not deny it, but interpret it. That is what Jesus does with this metaphor.</div>
+    </div>
+
+    <div class="illus-card">
+      <div class="illus-type">Historical</div>
+      <div class="illus-title">The American Civil War as Labour</div>
+      <div class="illus-text">Frederick Douglass, speaking at the height of the war's bloodshed in 1862, refused to read the suffering as evidence of God's abandonment. He called the war "the nation's punishment and purification" — the agonising birth of a country that might finally live up to its founding ideals. He saw suffering with direction, not suffering without purpose. Whether you share his reading or not, the structure of his thinking is exactly the birth-pains logic: this is labour. Something is being born.</div>
+    </div>
+
+    <div class="illus-card">
+      <div class="illus-type">For a Non-Religious Audience</div>
+      <div class="illus-title">The Caterpillar in the Chrysalis</div>
+      <div class="illus-text">Inside the chrysalis, the caterpillar does not simply grow wings. It liquefies — its entire body breaks down into an undifferentiated biological soup, before being reorganised into a butterfly. From the outside it looks like destruction. From the inside it presumably feels like it. But it is the necessary precondition for the emergence of something entirely new. The birth-pains metaphor says something similar about history and personal grief: what looks like dissolution may be transformation.</div>
+    </div>
+
+  </div><!-- /illus-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf — Scholars and Preachers</div>
+  <div class="comm-grid">
+
+    <div class="comm-card">
+      <div class="comm-author">Tim Keller</div>
+      <div class="comm-title">Walking with God through Pain and Suffering (2013) · Redeemer sermons on John 16</div>
+      <span class="comm-tradition trad-preaching">Reformed Pastoral</span>
+      <div class="comm-point">Keller's central move on John 16:21–22 is to distinguish between <em>relief</em> and <em>joy</em>. Relief is what you feel when pain stops. Joy is what you feel when something good has arrived. The woman doesn't experience the end of pain and then feel relief — she sees the child and feels joy. The difference matters: relief is absence-of-pain, joy is presence-of-something-new. Keller uses this to argue that Christian hope is not the cessation of suffering but the arrival of something so real and so good that suffering loses its power to define the story.</div>
+      <div class="comm-point">On the Olivet birth-pains: Keller argues that the metaphor fundamentally reorients how Christians read history. "The world is not getting worse and worse toward a meaningless end. The world is in labour. And labour is terrible. But it has a direction." He links this to Romans 8:22 — creation itself is in the same labour — and argues this is the only framework that can hold together genuine lament and genuine hope without collapsing into either denial or despair.</div>
+      <div class="comm-point">On John 16:22's "no one will take your joy": Keller notes that Jesus does not say "nothing bad will happen to you" — the disciples will be scattered, imprisoned, and martyred. He says no one will <em>take</em> the joy. The joy is a given that suffering cannot subtract from. This is one of the most pastorally precise promises in the Gospels.</div>
+      <a href="https://www.penguinrandomhouse.com/books/313104/walking-with-god-through-pain-and-suffering-by-timothy-keller/" target="_blank" class="source-link">penguinrandomhouse.com — Walking with God through Pain and Suffering [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">The Gospel According to John (PNTC, 1991)</div>
+      <span class="comm-tradition trad-conservative">Conservative Evangelical</span>
+      <div class="comm-point">Carson notes that the woman in John 16:21 "no longer remembers" (οὐκέτι μνημονεύει) the anguish — not suppression but displacement. The joy does not merely coexist with the memory of pain; it replaces it. He argues this is theologically significant: the resurrection joy is not a patch over grief but a new reality so substantial that grief recedes. This is not how comfort normally works; it is how eschatological transformation works.</div>
+      <div class="comm-point">On the eschatological frame: Carson connects John 16:21 to the Johannine hour-language. The woman's "hour" is the same word Jesus uses for his death-glorification throughout John. The disciples' grief is not incidental suffering alongside the hour — it is part of the hour itself. They are inside the birth they cannot see from the inside.</div>
+      <a href="https://www.ivpress.com/the-gospel-according-to-john" target="_blank" class="source-link">ivpress.com — The Gospel According to John, PNTC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Metropolitan Tabernacle Pulpit · Multiple sermons on John 16 and Matthew 24</div>
+      <span class="comm-tradition trad-preaching">Victorian Baptist · Expository</span>
+      <div class="comm-point">Spurgeon on John 16:22 — "He says 'I will see you again.' Not 'you will see me' — though that is true — but 'I will see <em>you</em>.' The eye of Christ will be upon you in your grief. You are not suffering unobserved. And when he comes, his seeing you and your seeing him will produce a joy of which the world knows nothing." Spurgeon emphasises the mutuality of the resurrection encounter as the ground of permanent joy.</div>
+      <div class="comm-point">On the Olivet Discourse: Spurgeon preached that the signs of Matthew 24 should not produce panic in the believer but rather recognition — "these are the birth-throes of a new age." He often used the phrase "not dying but labouring" to describe the church's situation in a suffering world. The world looks like it is in agony; the believer sees labour.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Metropolitan Tabernacle Pulpit, full archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">N. T. Wright</div>
+      <div class="comm-title">Jesus and the Victory of God (1996) · John for Everyone (2002)</div>
+      <span class="comm-tradition trad-pastoral">Anglican Scholarly</span>
+      <div class="comm-point">Wright reads the Olivet birth-pains within first-century Jewish eschatology. The signs of Matt 24:7–8 are not abstract future predictions — they describe the actual events of AD 66–70 (the Jewish War, the siege of Jerusalem) as the "birth pains" of the new covenant community. The fall of the Temple is not the end of the story; it is the labour that gives birth to the new-age community of Jesus. This does not exhaust the text — a wider eschatological horizon remains — but it prevents the passage from being read as purely future.</div>
+      <div class="comm-point">On John 16:21–22: Wright notes that the woman "forgets" the anguish — a word that echoes the OT language of God "not remembering" sins. The forgetting is redemptive, not suppressive. And the child "born into the world" quietly echoes John 1:9 — the true light coming into the world. The birth being laboured toward in John 16 is the new-creation world of the resurrection.</div>
+      <a href="https://www.spckpublishing.co.uk/product/john-for-everyone-part-2/" target="_blank" class="source-link">spckpublishing.co.uk — John for Everyone, Part 2 [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Piper</div>
+      <div class="comm-title">Sermons on Matthew 24 · Desiring God Archive · Future Grace (1995)</div>
+      <span class="comm-tradition trad-reformed">Reformed Baptist</span>
+      <div class="comm-point">Piper's distinctive contribution on the birth-pains texts is the link between suffering, hope, and joy. He argues that the reason John 16:22 promises permanent joy — joy "no one can take from you" — is precisely because it is grounded in an objective, historical event (the resurrection) rather than in circumstances. Feelings of joy fluctuate with circumstances; the joy Jesus promises is anchored to something that cannot be undone. "Your joy is not dependent on what is happening around you. It is dependent on what has happened to Jesus."</div>
+      <div class="comm-point">On the Olivet Discourse: Piper reads the birth-pains image as a call to sober endurance rather than apocalyptic anxiety. "Jesus tells you these things will happen so that when they happen you will not be surprised, and therefore not swept away. The signs do not say: panic. They say: remember — this is what I told you would happen. Stay."</div>
+      <a href="https://www.desiringgod.org/books/future-grace" target="_blank" class="source-link">desiringgod.org — Future Grace and sermon archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-conservative">Conservative Evangelical · NT Scholar</span>
+      <div class="comm-point">France argues that the <em>archē</em> ("beginning") in Matt 24:8 is the structurally crucial word in the sign-list. The signs are not proof that the end has arrived — they are proof that it is approaching. This prevents two opposite misreadings: (1) treating every war and earthquake as the final sign; (2) dismissing them as irrelevant. They are real signs — but signs of onset, not signs of arrival. France also notes that wars, famines, and earthquakes are drawn from the conventional Jewish apocalyptic catalogue — Jesus is speaking a recognisable language his hearers already knew.</div>
+      <div class="comm-point">France places Matthew 24 on a two-horizon reading: a near horizon (the events of AD 66–70 and the Temple's destruction) and a far horizon (the final parousia). The birth-pains language bridges both — the labour is ongoing across both horizons until the final delivery.</div>
+      <a href="https://www.eerdmans.com/products/the-gospel-of-matthew-nicnt.html" target="_blank" class="source-link">eerdmans.com — The Gospel of Matthew, NICNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Martyn Lloyd-Jones</div>
+      <div class="comm-title">The Cross (1986) · Romans: The Final Perseverance of the Saints (1975) · Studies in the Sermon on the Mount</div>
+      <span class="comm-tradition trad-reformed">Reformed · Welsh Expository</span>
+      <div class="comm-point">Lloyd-Jones, preaching on Romans 8:22 (the wider birth-pangs context), insists that the groaning of creation is not evidence of God's defeat but of God's purpose. "Creation is not dying — it is labouring. There is all the difference in the world." He uses this to address the pastoral tendency to read world events as signs of collapse rather than as the painful onset of new creation. The birth-pangs framework, for Lloyd-Jones, is not an abstract doctrine but the pastoral resource that makes hope possible in a suffering world.</div>
+      <div class="comm-point">On John 16's "no one will take your joy": Lloyd-Jones connects this to his broader doctrine of assurance. The joy is objective before it is subjective — it is grounded in the resurrection, not in feelings. "The disciples' joy was not dependent on whether they felt joyful on a given morning. It was dependent on whether Christ had risen. He had. Therefore the joy was given — and could not be taken."</div>
+      <a href="https://www.mljtrust.org/sermons-online/" target="_blank" class="source-link">mljtrust.org — Lloyd-Jones sermon archive online [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">G. Campbell Morgan</div>
+      <div class="comm-title">The Gospel According to John (1933) · The Gospel According to Matthew (1929)</div>
+      <span class="comm-tradition trad-pastoral">Early 20th-Century Evangelical · Expository</span>
+      <div class="comm-point">Morgan's reading of John 16:21–22 centres on the phrase "a child is born <em>into the world</em>." He argues this is not incidental phrasing — it signals that what is born through the disciples' grief-labour is a new world-presence, a new world-order. "The resurrection did not restore the old world. It introduced a new one. The woman's joy is not the joy of going back to what was before; it is the joy of something utterly new having been born." Morgan sees the birth metaphor as John's statement that the resurrection is a genuinely new creation, not a resuscitation.</div>
+      <div class="comm-point">On Matt 24 / Mark 13: Morgan emphasises the pastoral intent of Jesus in giving the signs at all. "He does not give the signs to satisfy curiosity. He gives them so that when his people see them, they will recognise them — and not be moved. The shepherd describes the country so that the sheep can navigate it without panic."</div>
+      <a href="https://www.ccel.org/ccel/morgan" target="_blank" class="source-link">ccel.org — G. Campbell Morgan, Christian Classics Ethereal Library [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-grid -->
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Are the signs of Matthew 24 present-age constants or end-time-only events?</div>
+      <div class="pressure-a">The dominant futurist/dispensationalist reading treats Matt 24:7–8 as describing specific unprecedented events at history's end. But Jesus does not say "unprecedented" — he uses wars, famines, and earthquakes that were the regular experience of his hearers. The word <em>archē</em> ("beginning") suggests these are the onset of a pattern, not a specific future cluster. The two-horizon reading (France, Wright) is more textually grounded: a near horizon (AD 66–70) and a far horizon (final parousia), with the birth-pains logic applying across both. The pastoral implication: every generation lives inside the labour, not waiting for it to begin.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Does "no one will take away your joy" (John 16:22) promise unbroken emotional happiness?</div>
+      <div class="pressure-a">Some prosperity-adjacent readings use this verse to promise that Christians will always feel joyful. But the disciples were scattered, imprisoned, and martyred after Easter — and John himself was exiled. The promise is not continuous emotional euphoria but the permanent givenness of resurrection-grounded joy. The joy is objective before it is subjective — it is the joy <em>of the resurrection having happened</em>, not the joy <em>of always feeling it</em>. Keller, Lloyd-Jones, and Piper all make this distinction sharply. "No one can take it" because it is grounded in an event that cannot be undone, not in a mood that cannot be disturbed.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is John 16:21 about the disciples' specific grief at the crucifixion — or about all Christian suffering?</div>
+      <div class="pressure-a">The immediate referent is clearly the disciples' grief over Jesus's death and their joy at the resurrection (vv.19–20 establish this). But the metaphor is generative beyond its immediate context. John 16:33 extends the principle: "In this world you will have trouble (thlipsis). But take heart! I have overcome the world." The same logic — the labour is real, the victory is given — applies beyond the specific Easter event to all Christian experience of suffering. The hermeneutical question is how far to extend the application without losing the anchor in the specific resurrection event.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. Do the birth-pains texts teach that suffering always produces something good (progressive optimism)?</div>
+      <div class="pressure-a">The OT background complicates this: Isaiah 26:17–18 describes a labour that "gave birth to wind" — suffering without a corresponding birth. Not all pain is productive. The birth-pangs framework is not a blanket theodicy that says all suffering has visible fruit. Its claim is more specific: the suffering that is connected to the eschatological moment — the death and resurrection of Jesus, the coming of the new age — has the structure of labour. Suffering in general may or may not. Romans 8:28 ("all things work together for good") is the broader claim; John 16 and Matt 24 are specifically about suffering in the context of the kingdom's arrival.</div>
+    </div>
+
+  </div><!-- /pressure-box -->
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT Root</div>
+      <div class="xref-ref">Isaiah 26:17–18 · Failed Labour</div>
+      <div class="xref-note">Israel's labour produces "wind" — the foil to Jesus's promise that this birth will succeed. The contrast makes John 16 more emphatic.</div>
+    </div>
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT Root</div>
+      <div class="xref-ref">Micah 4:9–10 · Labour → Exile → Rescue</div>
+      <div class="xref-note">Pain → Babylon → rescue. The OT skeleton of the birth-pains logic that Jesus fills out in both the Upper Room and the Olivet Discourse.</div>
+    </div>
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT Root</div>
+      <div class="xref-ref">Hosea 13:13 · Refusing to Be Born</div>
+      <div class="xref-note">The warning: the birth-pains come but Ephraim refuses to emerge. The metaphor has a dark twin — you can resist the moment of deliverance.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Paul</div>
+      <div class="xref-ref">Romans 8:22–23 · All Creation Groaning</div>
+      <div class="xref-note">Paul extends the birth-pains metaphor to cosmic scope: not just disciples, not just Jerusalem — the whole creation in labour, waiting for the new birth of resurrection. The widest application of the theme.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Paul</div>
+      <div class="xref-ref">1 Thessalonians 5:3 · Sudden Labour</div>
+      <div class="xref-note">"Sudden destruction will come on them suddenly, as labour pains on a pregnant woman." The flip side: for those not expecting the birth, the pains come as catastrophe. The birth-pains image cuts both ways.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Revelation</div>
+      <div class="xref-ref">Revelation 12:1–5 · The Cosmic Birth</div>
+      <div class="xref-note">The woman clothed with the sun, crying out in labour, giving birth to the male child. The heavenly version of the birth-pangs theme — heaven and earth in labour together for the birth of the new age.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Application</div>
+      <div class="xref-ref">John 16:33 · Thlipsis and Triumph</div>
+      <div class="xref-note">"In this world you will have thlipsis (pressure/tribulation). But take heart — I have overcome the world." The birth-pains logic extended to all Christian experience. Labour is real. Victory is given.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Application</div>
+      <div class="xref-ref">2 Corinthians 4:17 · Momentary Troubles</div>
+      <div class="xref-note">"Our light and momentary troubles are achieving for us an eternal glory that far outweighs them all." Paul's version of the birth-pains calculus — the pain is real, the proportion is asymmetric. Labour vs. birth.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Application</div>
+      <div class="xref-ref">Hebrews 12:2 · Joy Set Before Him</div>
+      <div class="xref-note">"For the joy set before him he endured the cross." Jesus himself endured the labour for the joy of what lay beyond it — the same logic he teaches the disciples in John 16:21–22. He is not asking them to do what he has not done.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Hearers</div>
+        <div class="tn-text">For the Twelve in the Upper Room: Jesus is framing what is about to happen to him — and to them — as labour, not defeat. The crucifixion will feel like disaster. The three days will feel like the end. The birth-pains metaphor gives them a lens: this is purposeful pain. Hold on.<br><br>For the crowds on the Mount of Olives: the Temple will fall, Rome will destroy, the world will seem to collapse. But these are the beginning of birth pains — not the end of the story but the approach to it. The knowledge of the <em>Chevlei Mashiach</em> means: we expected this. We know what it means. We stay.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">Any person sitting with grief they cannot make sense of — loss, illness, betrayal, unanswered prayer, the slow grinding of years without resolution. The pastoral word from John 16 is not "it won't hurt" or "it will make sense soon." It is: your grief is labour. Something is being born. The birth has already happened once, definitively — in the resurrection. Everything since is after-labour, in the age of the Spirit, awaiting the final delivery.<br><br>Any church bewildered by social breakdown, political chaos, or cultural hostility. The pastoral word from Matthew 24 is not "panic, the end is here" or "relax, nothing is happening." It is: this is the beginning of birth pains. Read it correctly. Stay. Pray. Do not lose heart.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: What are you reading as evidence of collapse — that might actually be evidence of labour?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The world is not getting worse and worse toward a meaningless end. The world is in labour. And labour is terrible. But it has a direction — and the birth has already begun."</div>
+    <div class="verdict-ref">John 16:22 — "Now is your time of grief, but I will see you again and you will rejoice, and no one will take away your joy."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
