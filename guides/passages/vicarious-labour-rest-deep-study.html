@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For the Sake of the Child — Vicarious Labour & the Rest That Follows</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  .nav-links { display: flex; gap: 14px; margin-top: 8px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4a30a0; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 960px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-eyebrow { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 6px; }
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2.1rem; color: #2c2c2c; letter-spacing: 0.04em; line-height: 1.15; }
+  .header-sub { font-size: 1rem; color: #555; margin-top: 5px; }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .badge { display: inline-block; font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; padding: 2px 9px; border-radius: 2px; }
+  .badge-dark    { background: #1a1a1a; color: #f5f0e8; }
+  .badge-purple  { background: #6c4bbf; color: #fff; }
+  .badge-green   { background: #2e8a4a; color: #fff; }
+
+  /* SECTION LABEL */
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 30px; }
+
+  /* OPENING CALLOUT — FULL WIDTH */
+  .opening-callout { border-left: 6px solid #6c4bbf; background: #f5f2fc; padding: 20px 24px; margin: 18px 0 24px; border-radius: 0 3px 3px 0; }
+  .oc-text { font-family: 'Special Elite', serif; font-size: 1.02rem; color: #2c2c2c; line-height: 1.65; font-style: italic; }
+  .oc-ref { font-size: 0.72rem; color: #6c4bbf; margin-top: 8px; font-weight: 700; }
+
+  /* ASYMMETRY BOX */
+  .asymmetry-box { background: #faf7f2; border: 2.5px solid #2c2c2c; border-radius: 3px; padding: 18px 22px; margin: 4px 0 24px; }
+  .asym-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin-bottom: 12px; }
+  .asym-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .asym-col-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; }
+  .asym-col.mother .asym-col-label { color: #c0392b; }
+  .asym-col.child  .asym-col-label { color: #2e8a4a; }
+  .asym-text { font-size: 0.83rem; color: #333; line-height: 1.46; }
+  .asym-point { padding: 7px 10px; border-radius: 2px; margin-bottom: 6px; font-size: 0.8rem; line-height: 1.4; }
+  .asym-col.mother .asym-point { background: #fdf2f2; border-left: 3px solid #c0392b; color: #444; }
+  .asym-col.child  .asym-point { background: #f0faf4; border-left: 3px solid #2e8a4a; color: #444; }
+  .asym-insight { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; text-align: center; line-height: 1.5; }
+
+  /* THREE LABOURERS */
+  .labourers-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .labourer-card { border-radius: 3px; padding: 15px 15px; }
+  .lc-cross   { border: 2.5px solid #c0392b; background: #fdf2f2; }
+  .lc-paul    { border: 2.5px solid #3b6fd4; background: #f0f4fd; }
+  .lc-spirit  { border: 2.5px solid #6c4bbf; background: #f5f2fc; }
+  .lc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 4px; }
+  .lc-cross .lc-label  { color: #c0392b; }
+  .lc-paul .lc-label   { color: #3b6fd4; }
+  .lc-spirit .lc-label { color: #6c4bbf; }
+  .lc-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 6px; }
+  .lc-who { font-size: 0.66rem; color: #888; font-style: italic; margin-bottom: 8px; }
+  .lc-body { font-size: 0.8rem; color: #333; line-height: 1.42; }
+  .lc-quote { font-size: 0.77rem; border-left: 2px solid; padding-left: 9px; margin-top: 8px; color: #555; font-style: italic; line-height: 1.38; }
+  .lc-cross .lc-quote  { border-color: #c0392b; }
+  .lc-paul .lc-quote   { border-color: #3b6fd4; }
+  .lc-spirit .lc-quote { border-color: #6c4bbf; }
+
+  /* THREE-ACT SPINE */
+  .acts-spine { margin: 4px 0 24px; }
+  .act-row { display: grid; grid-template-columns: 80px 1fr; gap: 0; margin-bottom: 8px; align-items: stretch; }
+  .act-num { display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Special Elite', serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; padding: 12px 6px; border-radius: 3px 0 0 3px; text-align: center; line-height: 1.3; }
+  .act-body { border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 12px 16px; background: #faf7f2; }
+  .act1 .act-num { background: #c0392b; }
+  .act2 .act-num { background: #d47c1a; }
+  .act3 .act-num { background: #2e8a4a; }
+  .act1 .act-body { border-color: #c0392b; }
+  .act2 .act-body { border-color: #d47c1a; }
+  .act3 .act-body { border-color: #2e8a4a; }
+  .act-title { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-refs { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 5px; }
+  .act1 .act-refs { color: #c0392b; }
+  .act2 .act-refs { color: #d47c1a; }
+  .act3 .act-refs { color: #2e8a4a; }
+  .act-desc { font-size: 0.8rem; color: #444; line-height: 1.42; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 12px; }
+  .word-greek { font-size: 1.2rem; color: #3b6fd4; font-weight: 700; font-style: italic; margin-bottom: 1px; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 4px; }
+  .word-badge { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+  .wb-purple { background: #6c4bbf; color: #fff; }
+  .wb-red    { background: #c0392b; color: #fff; }
+  .wb-green  { background: #2e8a4a; color: #fff; }
+  .wb-blue   { background: #3b6fd4; color: #fff; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.87rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.77rem; color: #555; line-height: 1.38; }
+  .word-lost { font-size: 0.7rem; color: #c0392b; margin-top: 5px; border-left: 2px solid #c0392b; padding-left: 7px; line-height: 1.35; }
+
+  /* REST SECTION */
+  .rest-banner { background: #f0faf4; border: 2.5px solid #2e8a4a; border-radius: 3px; padding: 18px 22px; margin: 4px 0 14px; }
+  .rb-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2e8a4a; margin-bottom: 12px; }
+  .rest-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .rest-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #f0faf4; padding: 13px 14px; }
+  .rest-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2e8a4a; margin-bottom: 2px; }
+  .rest-title { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700; margin-bottom: 6px; }
+  .rest-note { font-size: 0.79rem; color: #333; line-height: 1.42; }
+  .rest-quote { font-style: italic; color: #2e8a4a; font-size: 0.75rem; margin-top: 6px; border-left: 2px solid #2e8a4a; padding-left: 8px; line-height: 1.38; }
+
+  /* NURSING MOTHER */
+  .nursing-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 22px; margin: 4px 0 24px; }
+  .nm-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .nm-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .nm-col-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; color: #2e8a4a; }
+  .nm-text { font-size: 0.8rem; color: #ccc; line-height: 1.45; }
+  .nm-quote { margin-top: 10px; font-style: italic; color: #bbb; font-size: 0.78rem; border-left: 2px solid #2e8a4a; padding-left: 9px; line-height: 1.4; }
+
+  /* COMMENTARY SHELF */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.67rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 9px; font-weight: 700; }
+  .trad-reformed    { background: #6c4bbf; color: #fff; }
+  .trad-preaching   { background: #d47c1a; color: #fff; }
+  .trad-pastoral    { background: #2e8a4a; color: #fff; }
+  .trad-lutheran    { background: #3b6fd4; color: #fff; }
+  .trad-feminist    { background: #c0392b; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.42; margin-bottom: 8px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 8px; font-size: 0.63rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
+  .source-link:hover { color: #aaa; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.ot       { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .ot .xref-tag       { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward .xref-tag  { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 18px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.83rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.9rem; color: #6c4bbf; font-style: italic; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 17px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 13px; padding-bottom: 13px; border-bottom: 1px solid #2e2e2e; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.84rem; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .pressure-a { font-size: 0.78rem; color: #bbb; line-height: 1.42; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 780px) {
+    .labourers-grid, .rest-grid, .xref-grid, .word-grid { grid-template-columns: 1fr 1fr; }
+    .asym-cols, .nm-cols, .comm-grid, .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .labourers-grid, .rest-grid, .xref-grid, .word-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+  <div class="nav-links">
+    <a href="john-16-21-22-birth-pangs-deep-study.html" class="companion-link">⊕ Birth Pangs overview study</a>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-eyebrow">Deep Study · Thematic</div>
+  <div class="header-ref">For the Sake of the Child</div>
+  <div class="header-sub">Vicarious Labour — pain carried for another — and the rest that it purchases</div>
+  <div class="badge-row">
+    <span class="badge badge-dark">Deep Study</span>
+    <span class="badge badge-purple">John 16:21 · Gal 4:19 · Isa 53 · Matt 11:28</span>
+    <span class="badge badge-green">Rest · Comfort · Nursing</span>
+  </div>
+
+  <!-- OPENING CALLOUT -->
+  <div class="opening-callout">
+    <div class="oc-text">
+      "A woman giving birth to a child has pain because her time has come; but when her baby is born she forgets the anguish because of her joy that a child is born into the world."
+    </div>
+    <div class="oc-ref">John 16:21 (NIV)</div>
+  </div>
+
+  <!-- THE ASYMMETRY -->
+  <div class="section-label">The Asymmetry — What Makes This Different from Ordinary Suffering</div>
+  <div class="asymmetry-box">
+    <div class="asym-title">The mother carries every bit of the cost. The child carries none of it.</div>
+    <div class="asym-cols">
+      <div class="asym-col mother">
+        <div class="asym-col-label">What belongs to the mother</div>
+        <div class="asym-point">The contractions — all of them</div>
+        <div class="asym-point">The tearing, the exhaustion, the risk</div>
+        <div class="asym-point">The hours of labour before the birth</div>
+        <div class="asym-point">The anguish that is later forgotten</div>
+        <div class="asym-point">The cost of the child's existence</div>
+      </div>
+      <div class="asym-col child">
+        <div class="asym-col-label">What belongs to the child</div>
+        <div class="asym-point">Life — received, not earned</div>
+        <div class="asym-point">The world they are born into</div>
+        <div class="asym-point">The arms that receive them</div>
+        <div class="asym-point">The nourishment that follows</div>
+        <div class="asym-point">A life that cost them nothing</div>
+      </div>
+    </div>
+    <div class="asym-insight">
+      This is not suffering with a silver lining. This is suffering whose entire purpose exists in <em>someone else</em>.<br>
+      The mother does not labour to produce something for herself. She labours so that another can live.
+    </div>
+  </div>
+
+  <!-- THREE ACT SPINE -->
+  <div class="section-label">Three Acts — The Full Arc of the Metaphor</div>
+  <div class="acts-spine">
+
+    <div class="act-row act1">
+      <div class="act-num">Act I<br>Labour</div>
+      <div class="act-body">
+        <div class="act-refs">John 16:21a · Gal 4:19 · Isa 53:4–6 · Rom 8:26 · Matt 27:45–46</div>
+        <div class="act-title">The Agony Carried for Another</div>
+        <div class="act-desc">Someone is in pain. But the pain does not belong to them in the ordinary sense — it is pain taken on <em>for</em> someone else's sake. Jesus on the cross bears what the disciples, and the world, could not bear for themselves. Paul in Galatians 4 is "again in the pains of childbirth" for the Galatians — his anguish is entirely for them. The Spirit "groans" on our behalf in Romans 8:26 with words we cannot form ourselves. In each case: the labourer carries pain that belongs to, or is for, another.</div>
+      </div>
+    </div>
+
+    <div class="act-row act2">
+      <div class="act-num">Act II<br>Birth</div>
+      <div class="act-body">
+        <div class="act-refs">John 16:21b · Isa 53:10–11 · John 19:30 · Gal 4:19b</div>
+        <div class="act-title">The Child Is Born — "It Is Finished"</div>
+        <div class="act-desc">The labour ends. Not in defeat but in delivery. Isaiah 53:11 — "after he has suffered, he will see the light of life and be satisfied." Jesus on the cross: "It is finished" (τετέλεσται — <em>tetelestai</em>, perfect tense: completed, accomplished, permanently done). The child is born into the world. The Servant sees the fruit of his travail. Paul's labour finds its goal when "Christ is formed in you." The birth is an event — actual, datable, irreversible.</div>
+      </div>
+    </div>
+
+    <div class="act-row act3">
+      <div class="act-num">Act III<br>Rest</div>
+      <div class="act-body">
+        <div class="act-refs">Matt 11:28–30 · Isa 66:12–13 · Isa 49:15 · Heb 4:14–16 · John 16:22</div>
+        <div class="act-title">The Child Rests in the Arms That Laboured</div>
+        <div class="act-desc">After the birth, the mother holds the child. The same body that bore the labour now becomes the place of comfort, warmth, and rest. In Isaiah 66, God says: "I will extend peace to her like a river... As a mother comforts her child, so I will comfort you." In Matthew 11, Jesus — who has himself borne the cost — invites the exhausted to come to him and rest. The one who laboured for others is also the one who gives rest to others. The comfort given is the comfort of the one who paid the price of the child's life.</div>
+      </div>
+    </div>
+
+  </div><!-- /acts-spine -->
+
+  <!-- WHO IS LABOURING FOR WHOM -->
+  <div class="section-label">Who Is Labouring For Whom — Three Dimensions</div>
+  <div class="labourers-grid">
+
+    <div class="labourer-card lc-cross">
+      <div class="lc-label">The Cross</div>
+      <div class="lc-ref">Jesus labours for the world</div>
+      <div class="lc-who">Isaiah 53 · John 16:21 · Hebrews 12:2</div>
+      <div class="lc-body">The cross is vicarious birth-labour at its most absolute. Jesus bears pain that entirely belongs to others — "he was pierced for our transgressions, crushed for our iniquities" (Isa 53:5). His suffering produces nothing for himself. What it produces is the life of all who are born from it. Hebrews 12:2 — "for the joy set before him he endured the cross." The joy was not his own relief. The joy was the children who would live because of his labour.</div>
+      <div class="lc-quote">"By his wounds we are healed." — Isaiah 53:5</div>
+    </div>
+
+    <div class="labourer-card lc-paul">
+      <div class="lc-label">The Minister</div>
+      <div class="lc-ref">Paul labours for the Galatians</div>
+      <div class="lc-who">Galatians 4:19 · Col 1:24 · Rom 9:1–3</div>
+      <div class="lc-body">Galatians 4:19 is the most explicit use of birth-pain language for vicarious ministry: "My dear children, for whom I am <em>again</em> in the pains of childbirth until Christ is formed in you." Paul places himself in the position of the labouring mother — his anguish has no benefit for himself. Its sole purpose is that the Galatians arrive at full Christ-formed life. In Romans 9:1–3 the same logic reaches its extreme: "I could wish that I myself were cursed and cut off from Christ — for the sake of my people."</div>
+      <div class="lc-quote">"I am again in the pains of childbirth until Christ is formed in you." — Galatians 4:19</div>
+    </div>
+
+    <div class="labourer-card lc-spirit">
+      <div class="lc-label">The Spirit</div>
+      <div class="lc-ref">The Spirit labours for us</div>
+      <div class="lc-who">Romans 8:26–27</div>
+      <div class="lc-body">Romans 8:26 — "the Spirit intercedes for us with groans (στεναγμοῖς — <em>stenagmois</em>) that words cannot express." The same groaning/labouring word that runs through Romans 8 (creation groaning in birth-pains, v.22; we groan inwardly, v.23) is now applied to the Spirit himself. Even now, in the midst of our weakness and incomprehension, Someone is in labour on our behalf — carrying the anguish of our prayers when we cannot form the words ourselves. We are never alone in the labour.</div>
+      <div class="lc-quote">"The Spirit intercedes for us with groans that words cannot express." — Romans 8:26</div>
+    </div>
+
+  </div><!-- /labourers-grid -->
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Four Key Terms</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">עָמָל</div>
+      <div class="word-translit">amal (Hebrew)</div>
+      <span class="word-badge wb-red">Isaiah 53:11</span>
+      <div class="word-gloss">Travail / toil / anguish</div>
+      <div class="word-note">KJV translates: "the travail of his soul." The word carries both physical and emotional labour — exhausting, costly, purposeful work. The LXX uses <em>ponos</em> (painful toil). Isaiah 53:11 says the Servant will "see the fruit (or light) of his travail and be satisfied." The amal is entirely for others; the satisfaction is seeing them live.</div>
+      <div class="word-lost">What is lost: modern translations ("suffering," "anguish") lose the labour-and-birth resonance. The KJV's "travail" preserves the link to the birth-pains tradition that runs through both Testaments.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ὠδίνω</div>
+      <div class="word-translit">ōdinō</div>
+      <span class="word-badge wb-purple">Galatians 4:19</span>
+      <div class="word-gloss">To be in labour / to travail in birth</div>
+      <div class="word-note">The verbal form of ōdin (birth pang). Paul uses it of himself — he is "ōdinō-ing" for the Galatians. This is extraordinary: a man describing his ministry anguish as birth-labour, placing himself in the position of the labouring mother. The word elsewhere describes literal birth-pain (Rev 12:2) and cosmic suffering (Rom 8:22). Paul claims the same category for pastoral intercession.</div>
+      <div class="word-lost">What is lost: "in the pains of childbirth" (NIV) is good but makes it sound like a simile. In Greek it is direct — Paul <em>is</em> in labour, not <em>like</em> a woman in labour. He has taken the mother's place.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀναπαύω</div>
+      <div class="word-translit">anapauō</div>
+      <span class="word-badge wb-green">Matthew 11:28</span>
+      <div class="word-gloss">To give rest / to refresh / to cause to cease from labour</div>
+      <div class="word-note">"I will give you rest" — the verb Jesus uses in Matthew 11:28 is <em>anapauō</em>: to cause to stop labouring, to provide relief from toil, to refresh. The word appears in the LXX for the Sabbath rest (Exod 20:11 — God "rested"). The rest Jesus offers is not inactivity but the cessation of striving under a burden you were never meant to carry alone — because someone else has already carried the heaviest part.</div>
+      <div class="word-lost">What is lost: "I will give you rest" sounds passive. The Greek is active and causal — Jesus will make you rest, will produce the rest in you. It is a gift, not a state you achieve by trying to relax.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">παράκλησις</div>
+      <div class="word-translit">paraklēsis</div>
+      <span class="word-badge wb-blue">2 Cor 1:3–7</span>
+      <div class="word-gloss">Comfort / consolation / coming-alongside</div>
+      <div class="word-note">From <em>para</em> (beside) + <em>kaleō</em> (to call) — literally "a calling-alongside." Not sympathy from a distance but presence in the same space. The same root as <em>Paraclete</em> (Jn 14:16 — the Holy Spirit as the one called alongside). 2 Corinthians 1:3–7 uses it ten times in five verses: God comforts us in our suffering so that we can comfort others with the same comfort. Comfort received is comfort given.</div>
+      <div class="word-lost">What is lost: "comfort" in English is mild. Paraklēsis is active, personal, and embodied — someone comes to where you are and stands with you. It is not an emotion but a presence.</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- HOW THIS BRINGS REST -->
+  <div class="section-label">How Vicarious Labour Brings Rest — Six Movements</div>
+
+  <div class="rest-banner">
+    <div class="rb-title">The rest the child receives is not rest that the child earned. It is rest purchased by the mother's labour.</div>
+  </div>
+
+  <div class="rest-grid">
+
+    <div class="rest-card">
+      <div class="rest-ref">Matthew 11:28–30</div>
+      <div class="rest-title">Come to the One Who Has Already Laboured</div>
+      <div class="rest-note">"Come to me, all you who are weary and burdened, and I will give you rest." Jesus does not say "try harder" or "endure better." He says "come to me." The one who invites rest is the one who has already borne the burden that produced the new world. His yoke is easy — not because following him requires nothing, but because he has already borne the weight of what our standing before God requires. We are invited to rest in a completed work, not to replicate it.</div>
+      <div class="rest-quote">"Come to me... and I will give you rest." — Matt 11:28</div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-ref">Isaiah 53:5</div>
+      <div class="rest-title">His Wounds, Our Healing</div>
+      <div class="rest-note">The Servant's suffering does not produce his own healing — it produces ours. "By his wounds we are healed." The wound belongs to the Servant. The healing belongs to us. This is the asymmetry in its most concentrated form. The comfort available to us is not comfort that we earned through suffering alongside him — it is comfort that flows directly from his having suffered in our place. The child rests because the mother laboured, not because the child also laboured.</div>
+      <div class="rest-quote">"By his wounds we are healed." — Isaiah 53:5</div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-ref">Isaiah 66:12–13</div>
+      <div class="rest-title">The Comforting Mother After the Birth</div>
+      <div class="rest-note">After the birth of the new Jerusalem, God says: "As a mother comforts her child, so I will comfort you; and you will be comforted in Jerusalem." The one who bore the labour of bringing the new creation to birth is also the one who then holds and nurses the child. The comfort is not from a stranger — it is from the one who paid the cost of the child's existence. That is what makes it wholly safe. The arms that hold you are the arms that bore the birth-pains for you.</div>
+      <div class="rest-quote">"As a mother comforts her child, so I will comfort you." — Isa 66:13</div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-ref">Hebrews 4:14–16</div>
+      <div class="rest-title">The Sympathetic High Priest</div>
+      <div class="rest-note">We can approach the throne of grace with confidence because our high priest "is not unable to empathise with our weaknesses" — he has been in the place of suffering, of temptation, of the full weight of human agony. He has carried what we carry, and more. Because he has laboured through it, we can approach him not with shame but with confidence — "so that we may receive mercy and find grace to help us in our time of need." The one who laboured for us is also the one we run to when we struggle.</div>
+      <div class="rest-quote">"Let us then approach the throne of grace with confidence." — Heb 4:16</div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-ref">John 16:22</div>
+      <div class="rest-title">Joy That Cannot Be Taken — The Security of the Born Child</div>
+      <div class="rest-note">"No one will take away your joy." The born child does not need to perform to maintain its existence — it simply lives, in the life purchased by the mother's labour. The joy Jesus promises is permanent not because circumstances will be good but because the resurrection that produced it cannot be undone. The child's life is secure. Nothing can un-birth what has been born. This is what "no one will take it from you" means — not that nothing bad will happen, but that nothing can revoke the birth.</div>
+      <div class="rest-quote">"No one will take away your joy." — John 16:22</div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-ref">2 Corinthians 1:3–7</div>
+      <div class="rest-title">Comfort Received Becomes Comfort Given</div>
+      <div class="rest-note">The birth-pain structure does not end with the child resting. It continues: "the God of all comfort, who comforts us in all our troubles, so that we can comfort those in any trouble with the comfort we ourselves receive from God." The child who was carried by another's labour eventually enters the same pattern — comforting others with the comfort they have received. Vicarious love reproduces itself. The birth-pains and the rest are both given to be passed on.</div>
+      <div class="rest-quote">"We can comfort those in any trouble with the comfort we ourselves receive." — 2 Cor 1:4</div>
+    </div>
+
+  </div><!-- /rest-grid -->
+
+  <!-- NURSING MOTHER -->
+  <div class="nursing-box">
+    <div class="nm-title">The Nursing Mother — The Image Behind the Image</div>
+    <div class="nm-cols">
+      <div>
+        <div class="nm-col-label">Isaiah 49:15 — "Can a mother forget?"</div>
+        <div class="nm-text">God uses the nursing mother as the image of his most indestructible commitment: "Can a mother forget the baby at her breast and have no compassion on the child she has borne? Though she may forget, I will not forget you." The nursing image follows the birth-labour: the same body that bore the pain of birth now holds the child and feeds it. The bond formed in labour is the bond that sustains in nursing.</div>
+        <div class="nm-quote">"Though she may forget, I will not forget you. See, I have engraved you on the palms of my hands." — Isaiah 49:15–16</div>
+      </div>
+      <div>
+        <div class="nm-col-label">The Comfort of the Breast</div>
+        <div class="nm-text">The nursing child does not strive. It does not earn the milk. It simply receives from the one who bore the cost of its existence. This is the posture that vicarious labour makes possible — the child at rest at the breast of the one who laboured for it. Isaiah 66:11 uses this image for the restored Jerusalem: "For you will nurse and be satisfied at her comforting breasts; you will drink deeply and delight in her overflowing abundance." The rest is not earned. It is drunk.</div>
+        <div class="nm-quote">"You will nurse and be satisfied at her comforting breasts; you will drink deeply and delight in her overflowing abundance." — Isaiah 66:11</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf — Scholars and Preachers</div>
+  <div class="comm-grid">
+
+    <div class="comm-card">
+      <div class="comm-author">Tim Keller</div>
+      <div class="comm-title">Jesus the King (2011) · The Reason for God (2008) · Walking with God through Pain and Suffering (2013)</div>
+      <span class="comm-tradition trad-preaching">Reformed Pastoral</span>
+      <div class="comm-point">Keller on vicarious suffering and rest: "Christianity is the only religion that says God himself has entered fully into suffering — not to observe it from above but to absorb it from within. The rest Jesus offers in Matthew 11 is not a spiritual technique. It is the rest that flows from resting in a completed work. You stop striving because Someone Else has done the striving that counted."</div>
+      <div class="comm-point">On Galatians 4:19: Keller notes that Paul's birth-pains language for ministry is "one of the most emotionally candid things Paul ever wrote." It shows that genuine pastoral care is not professional service but vicarious identification — bearing the spiritual formation of others in your own body. "You know you are really praying for someone when it costs you something."</div>
+      <div class="comm-point">On the comfort that follows: "The comfort God gives is not the comfort of someone who understands your pain from the outside. It is the comfort of someone who has been inside it — further inside it than you have — and come out the other side with the scars to prove it."</div>
+      <a href="https://www.penguinrandomhouse.com/books/313104/walking-with-god-through-pain-and-suffering-by-timothy-keller/" target="_blank" class="source-link">penguinrandomhouse.com — Walking with God through Pain and Suffering [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Martin Luther</div>
+      <div class="comm-title">Lectures on Galatians (1535) · The Freedom of a Christian (1520)</div>
+      <span class="comm-tradition trad-lutheran">Lutheran · Reformation</span>
+      <div class="comm-point">Luther on the "happy exchange" (fröhlicher Wechsel): "Christ takes our sin, our guilt, our labour — and gives us his righteousness, his standing, his rest. Like a rich bridegroom who takes on the debts of his poor bride, and in exchange gives her all his wealth." This is the vicarious structure in its most concentrated form. The bride (the church) did not labour for what she receives. The groom laboured. The exchange is entirely asymmetric — which is what makes the rest so absolute.</div>
+      <div class="comm-point">On Galatians 4:19 specifically: Luther says Paul shows that a minister is not a dispenser of information but a bearer of persons — "he carries the congregation in his body as a mother carries a child." This is not metaphor for Luther; it is the literal description of what faithful pastoral labour looks like. The minister's suffering has a direction: the formation of Christ in the hearers.</div>
+      <a href="https://www.ccel.org/ccel/luther/freedom.html" target="_blank" class="source-link">ccel.org — The Freedom of a Christian, Luther [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Metropolitan Tabernacle Pulpit · "The Weeping Prophet" · "Come Unto Me" sermons</div>
+      <span class="comm-tradition trad-preaching">Victorian Baptist · Expository</span>
+      <div class="comm-point">Spurgeon on Matthew 11:28: "He does not say 'Endure.' He says 'Come.' He does not say 'Keep striving until the weariness passes.' He says 'Come to me and I will give you rest.' The rest is a gift — given by the One who bore the labour that your standing before God required. You have not been summoned to repeat that labour. You have been summoned to receive its fruit."</div>
+      <div class="comm-point">On the nursing mother image: Spurgeon preached that Isaiah 49:15 represents "the most absolute pledge in Scripture." He pointed out that God does not say "I am like a mother who remembers" — he says "even if a mother forgets, I will not forget you." The comparison is set up only to be surpassed. The labour of the cross has engraved us on the palms of his hands — the nail-marks are the engraving. We are written there in scars.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Metropolitan Tabernacle Pulpit, full archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Fleming Rutledge</div>
+      <div class="comm-title">The Crucifixion: Understanding the Death of Jesus Christ (2015)</div>
+      <span class="comm-tradition trad-pastoral">Anglican · Systematic-Pastoral</span>
+      <div class="comm-point">Rutledge argues that the heart of the atonement is precisely the vicarious structure — "substitution" is not a cold legal transaction but the most intimate act of love imaginable: someone taking the place of another so the other does not have to go there. Her chapter on "The Descent into Hell" uses the birth-pains logic: the deepest suffering was entered by Christ so we would not have to enter it alone or unredeemed. "He went all the way down so that there is no depth into which you can fall where he has not already been."</div>
+      <div class="comm-point">On comfort: Rutledge insists that the comfort the gospel offers is not cheap reassurance but "the comfort of the last word." Because Christ has gone through death and come out the other side, death is not the last word over anyone he has laboured for. The rest available to the believer is eschatological rest — not the absence of suffering but the certainty that suffering is not the end.</div>
+      <a href="https://www.eerdmans.com/products/the-crucifixion.html" target="_blank" class="source-link">eerdmans.com — The Crucifixion: Understanding the Death of Jesus Christ [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on Galatians (1548) · Institutes of the Christian Religion (1559)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Genevan</span>
+      <div class="comm-point">On Galatians 4:19 — Calvin says Paul's labour image shows that "the minister of the gospel is not merely a teacher but a midwife — he does not simply transmit information but labours for the new birth of hearers in Christ." He notes Paul says "until Christ is formed in you" — the labour has a goal and a terminus. It is not endless anguish but directional suffering aimed at a specific outcome: the Galatians arriving at full Christlikeness.</div>
+      <div class="comm-point">On rest and assurance: Calvin grounds Christian rest not in experience but in the objective completed work of Christ. "The troubled conscience finds no rest in anything it can do or feel. It finds rest only in the alien righteousness of Christ — a righteousness that does not belong to it, that it received entirely from outside itself, that it could not produce by any amount of labour." The rest is precisely <em>alien</em> — it comes from another's labour, not our own.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom41.html" target="_blank" class="source-link">ccel.org — Calvin's Commentary on Galatians [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Tish Harrison Warren</div>
+      <div class="comm-title">Prayer in the Night (2021)</div>
+      <span class="comm-tradition trad-pastoral">Anglican · Contemporary Pastoral</span>
+      <div class="comm-point">Warren's book, written through a season of grief and loss (including a miscarriage), engages the vicarious-suffering theme through the Compline prayer "Be present, O merciful God, and protect us through the hours of this night." She argues that the great gift of the Christian tradition in suffering is not explanations but <em>company</em> — the presence of the one who has been where you are and further. "We are not comforted by reasons. We are comforted by presence — the presence of the one who went through the darkest night ahead of us and left the door open."</div>
+      <div class="comm-point">On the nursing-mother image: Warren draws on Isaiah 49 in her chapter on grief — "what the nursing image gives us is not a God who fixes things from above but a God who holds us from below. The comfort is physical, immediate, embodied. The child does not need to understand the nourishment. It simply receives."</div>
+      <a href="https://ivpress.com/prayer-in-the-night" target="_blank" class="source-link">ivpress.com — Prayer in the Night [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-grid -->
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does vicarious suffering mean suffering is always for someone else — that self-directed suffering has no meaning?</div>
+      <div class="pressure-a">No — the birth-pains metaphor in John 16:21–22 and Matthew 24:7–8 also addresses suffering that is in some sense one's own (the disciples' own grief, the church's own tribulation). The vicarious dimension is a specific and profound subset of how the metaphor functions — not its only register. Jesus's cross is uniquely and exhaustively vicarious; Paul's labour is vicariously shaped but not identical to the atonement; the Spirit's groaning is for us; and ordinary human suffering can also have vicarious fruit without being primarily defined by it. The three registers work together: suffering can be purposeful for oneself (endurance), purposeful for others (vicarious), and both simultaneously.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Doesn't Colossians 1:24 ("filling up Christ's afflictions") suggest the atonement was incomplete?</div>
+      <div class="pressure-a">This is the hardest verse in this cluster. Paul cannot mean that Christ's atoning work was insufficient — that is ruled out by Hebrews 1:3, 9:12, 10:10–14 ("once for all"). The most defensible reading is that "Christ's afflictions" in Colossians 1:24 are not the atoning sufferings of the cross but the ongoing sufferings of the body of Christ in the world — the continuation of the ministry of the crucified Servant through those who carry his name. Paul fills up what is "lacking" in the sense that the full harvest of that one completed birth-labour is still being gathered in, through the ongoing vicarious ministry of those who preach and suffer for the sake of the church.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is the "rest" of Matthew 11:28–30 passive — does it mean doing nothing?</div>
+      <div class="pressure-a">Jesus says "take my yoke upon you" in the same breath as "I will give you rest." A yoke is a working implement. The rest is not the absence of effort but the transformation of its character. Yoked to Jesus, the burden is shared — "my yoke is easy and my burden is light" because he is pulling alongside. The striving that produces the rest has already been done at the cross. What remains is the lighter, collaborative, Spirit-enabled work of those who labour from a position of security rather than toward one. The child at rest in the mother's arms is not inert — it feeds, it grows, it eventually walks. But it does so from a foundation of received life, not earned existence.</div>
+    </div>
+
+  </div><!-- /pressure-box -->
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT · Labour</div>
+      <div class="xref-ref">Isaiah 53:4–6, 10–11</div>
+      <div class="xref-note">The Servant bears what belongs to others. "He was pierced for our transgressions." The travail (amal) of his soul produces the justification of many. The OT foundation of vicarious suffering.</div>
+    </div>
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT · Comfort</div>
+      <div class="xref-ref">Isaiah 49:15 · Isaiah 66:12–13</div>
+      <div class="xref-note">The nursing-mother image of God's comfort. "Though a mother may forget, I will not forget you." After the birth-labour of redemption, God holds the child with a mother's tenderness.</div>
+    </div>
+
+    <div class="xref-card ot">
+      <div class="xref-tag">← OT · Intercessor</div>
+      <div class="xref-ref">Exodus 32:30–32 · Moses</div>
+      <div class="xref-note">"If you will forgive their sin — but if not, please blot me out of the book you have written." Moses offers himself vicariously for Israel. The intercessor's willingness to carry what others deserve.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Paul</div>
+      <div class="xref-ref">Galatians 4:19 · Romans 9:1–3</div>
+      <div class="xref-note">Paul in labour for the Galatians; willing to be accursed for Israel. The two clearest NT instances of vicarious ministerial/intercessory suffering outside the cross itself.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Spirit</div>
+      <div class="xref-ref">Romans 8:26–27 · Intercession</div>
+      <div class="xref-note">The Spirit groans (stenagmois — the labour-word) on our behalf when we cannot form the words. Even now, someone is in vicarious labour for us before the Father.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Exchange</div>
+      <div class="xref-ref">2 Corinthians 5:21</div>
+      <div class="xref-note">"God made him who had no sin to be sin for us, so that in him we might become the righteousness of God." The asymmetric exchange in its most concentrated form — he takes what belongs to us, we receive what belongs to him.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Rest</div>
+      <div class="xref-ref">Matthew 11:28–30 · Come to Me</div>
+      <div class="xref-note">"Come to me, all who are weary and burdened, and I will give you rest." The invitation issued by the one who has already borne the heaviest burden. Rest as gift, not achievement.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Rest</div>
+      <div class="xref-ref">Hebrews 4:9–11, 14–16</div>
+      <div class="xref-note">A Sabbath rest remains for the people of God. We enter rest by ceasing from our own works. Access to the throne of grace because our high priest has gone through the suffering first.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">NT → Passed On</div>
+      <div class="xref-ref">2 Corinthians 1:3–7</div>
+      <div class="xref-note">"The God of all comfort comforts us in our troubles so that we can comfort those in any trouble." Comfort received from vicarious labour becomes comfort given. The pattern reproduces itself.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Hearers</div>
+        <div class="tn-text">The disciples in the Upper Room were hours from watching Jesus enter his agony — alone, in darkness, carrying something they could not carry with him. John 16:21 gives them a frame for understanding it afterward: what they watched him go through was labour — not for himself but for them. The birth he was labouring toward was their new life. Every time they later looked at a nursing mother they were meant to understand what the cross was doing.<br><br>For the Galatians, receiving Paul's letter: "I am in birth-pains for you" — the apostle who founded them and is now geographically absent is carrying them in his body. They were not simply recipients of teaching; they were being born.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">For anyone who has struggled to receive grace — who feels they must earn their standing, perform their salvation, re-justify their place in God's family: the birth-labour image cuts through this at the root. You did not labour to be born. You were born through Another's agony. Your standing is not the fruit of your own striving. It is the fruit of his. The rest available to you is not something you achieve — it is something you return to, again and again, by remembering whose labour produced your life.<br><br>For those who intercede for others — parents, pastors, friends, intercessors — Galatians 4:19 names what you are doing. Your sleepless nights, your unanswered prayers, your sustained grief over another person's spiritual state: this is birth-labour. It is the shape of love when love has a long way to go.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Are you trying to earn a life that has already been purchased for you — or are you learning to rest in the arms of the One whose labour brought you into existence?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">
+      "The child does not rest because the labour was easy.<br>
+      The child rests because the labour is finished —<br>
+      and Someone else did all of it."
+    </div>
+    <div class="verdict-ref">John 16:21 · Isaiah 53:11 · Matthew 11:28 — "Come to me... and I will give you rest."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
