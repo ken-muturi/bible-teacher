@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ephesians — The Mystery and the Body</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 1020px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* ── HEADER ── */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 20px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .header-book { font-family: 'Special Elite', serif; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.04em; line-height: 1; }
+  .header-sub { font-size: 1.05rem; color: #555; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+  .meta-row strong { color: #2c2c2c; }
+  .header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Special Elite', serif; font-size: 1rem; color: #3b6fd4; text-align: center; letter-spacing: 0.02em; }
+
+  /* ── SECTION LABEL ── */
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* ── KEY PASSAGE CALLOUT ── */
+  .passage-callout { border-left: 6px solid #3b6fd4; background: #eef3fd; padding: 18px 22px; margin: 4px 0 20px; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 7px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.72rem; color: #3b6fd4; margin-top: 7px; font-weight: 700; }
+
+  /* ── THE HINGE — MAIN LAYOUT ── */
+  .hinge-layout { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin: 4px 0 24px; align-items: stretch; }
+  .half { border: 2.5px solid; border-radius: 3px; padding: 18px 18px; }
+  .half-doc { border-color: #3b6fd4; background: #eef3fd; }
+  .half-prac { border-color: #2e8a4a; background: #edf8f1; }
+  .half-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; margin-bottom: 10px; }
+  .half-doc .half-label { color: #3b6fd4; }
+  .half-prac .half-label { color: #2e8a4a; }
+  .half-chapters { font-family: 'Special Elite', serif; font-size: 1.3rem; color: #2c2c2c; margin-bottom: 10px; }
+  .half-theme { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 12px; font-style: italic; }
+  .unit { padding: 7px 10px; border-radius: 2px; margin-bottom: 6px; }
+  .unit-doc  { background: #dce8fb; border-left: 3px solid #3b6fd4; }
+  .unit-prac { background: #d4edd9; border-left: 3px solid #2e8a4a; }
+  .unit-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .unit-doc .unit-ref  { color: #3b6fd4; }
+  .unit-prac .unit-ref { color: #2e8a4a; }
+  .unit-title { font-family: 'Special Elite', serif; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 1px; }
+  .unit-desc { font-size: 0.74rem; color: #444; line-height: 1.35; }
+  /* hinge column */
+  .hinge-col { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+  .hinge-word { font-family: 'Special Elite', serif; font-size: 0.75rem; writing-mode: vertical-rl; text-orientation: mixed; color: #fff; background: #c0392b; padding: 16px 8px; border-radius: 2px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .hinge-ref { font-size: 0.6rem; color: #888; margin-top: 6px; text-align: center; writing-mode: vertical-rl; }
+
+  /* ── MYSTERY THREAD ── */
+  .mystery-thread { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .mt-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .mt-verse-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .mt-verse { border: 1px solid #444; border-radius: 2px; padding: 8px 9px; background: #222; }
+  .mt-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6c4bbf; font-weight: 700; margin-bottom: 3px; }
+  .mt-content { font-size: 0.73rem; color: #ccc; line-height: 1.35; }
+
+  /* ── IN CHRIST TRACKER ── */
+  .in-christ { background: #3b6fd4; border-radius: 3px; padding: 14px 20px; margin: 4px 0 24px; }
+  .ic-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #fff; margin-bottom: 10px; }
+  .ic-dots { display: flex; flex-wrap: wrap; gap: 5px; }
+  .ic-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.58rem; font-weight: 700; color: #fff; cursor: default; }
+  .ic-dot.ch1 { background: rgba(255,255,255,0.35); }
+  .ic-dot.ch2 { background: rgba(255,255,255,0.28); }
+  .ic-dot.ch3 { background: rgba(255,255,255,0.21); }
+  .ic-dot.ch4 { background: rgba(255,255,255,0.30); }
+  .ic-dot.ch5 { background: rgba(255,255,255,0.23); }
+  .ic-dot.ch6 { background: rgba(255,255,255,0.18); }
+  .ic-note { font-size: 0.72rem; color: rgba(255,255,255,0.8); margin-top: 8px; }
+
+  /* ── WALK COMMANDS ── */
+  .walk-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 4px 0 24px; }
+  .walk-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 10px 11px; }
+  .walk-num { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2e8a4a; margin-bottom: 2px; }
+  .walk-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700; margin-bottom: 3px; }
+  .walk-title { font-size: 0.76rem; color: #2c2c2c; font-weight: 600; margin-bottom: 2px; }
+  .walk-desc { font-size: 0.7rem; color: #555; line-height: 1.32; }
+
+  /* ── TWO PRAYERS ── */
+  .prayers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 24px; }
+  .prayer-card { border-left: 5px solid #6c4bbf; background: #f5f2fc; padding: 16px 18px; border-radius: 0 3px 3px 0; }
+  .pr-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.15em; color: #6c4bbf; font-weight: 700; margin-bottom: 5px; }
+  .pr-ref { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 8px; }
+  .pr-asks { margin-bottom: 0; }
+  .pr-ask { font-size: 0.77rem; color: #444; line-height: 1.38; padding: 5px 8px 5px 0; border-bottom: 1px dashed #d0c0f0; }
+  .pr-ask:last-child { border-bottom: none; }
+  .pr-ask strong { color: #6c4bbf; }
+
+  /* ── WORD STUDIES ── */
+  .word-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 11px; }
+  .word-greek { font-size: 1.1rem; color: #3b6fd4; font-weight: 700; font-style: italic; margin-bottom: 1px; }
+  .word-translit { font-size: 0.6rem; color: #888; font-style: italic; margin-bottom: 3px; }
+  .word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; background: #2c2c2c; color: #f5f0e8; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.73rem; color: #555; line-height: 1.38; }
+
+  /* ── ARMOUR ── */
+  .armour-strip { margin: 4px 0 24px; }
+  .armour-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; margin-bottom: 10px; background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 10px 14px; }
+  .armour-pieces { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .armour-piece { border: 2px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 10px 10px; text-align: center; }
+  .ap-icon { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #c0392b; font-weight: 700; margin-bottom: 4px; }
+  .ap-name { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 3px; }
+  .ap-means { font-size: 0.7rem; color: #555; line-height: 1.3; }
+  .armour-note { margin-top: 10px; font-size: 0.78rem; color: #555; border-left: 3px solid #c0392b; padding-left: 10px; line-height: 1.4; background: #fdf2f2; padding: 8px 10px 8px 13px; border-radius: 0 2px 2px 0; }
+
+  /* ── HARDEST MOMENT ── */
+  .hard-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .hard-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+  .hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .hard-q { font-size: 0.82rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+
+  /* ── CROSS-BIBLE ── */
+  .xbible-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xbible-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 12px; }
+  .xbc-ot      { border-color: #d47c1a; }
+  .xbc-parallel { border-color: #6c4bbf; }
+  .xbc-forward  { border-color: #2e8a4a; }
+  .xb-tag { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 700; margin-bottom: 3px; }
+  .xbc-ot .xb-tag      { color: #d47c1a; }
+  .xbc-parallel .xb-tag { color: #6c4bbf; }
+  .xbc-forward .xb-tag  { color: #2e8a4a; }
+  .xb-ref  { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xb-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+
+  /* ── COMMENTARY ── */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.66rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed    { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-pastoral    { background: #2e8a4a; color: #fff; }
+  .trad-preaching   { background: #d47c1a; color: #fff; }
+  .trad-critical    { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.76rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
+  .source-link:hover { color: #aaa; }
+
+  /* ── THEN → NOW ── */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 17px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.82rem; color: #333; line-height: 1.44; }
+  .tn-question { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.9rem; color: #6c4bbf; font-style: italic; }
+
+  /* ── VERDICT ── */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 820px) {
+    .hinge-layout { grid-template-columns: 1fr; }
+    .hinge-col { flex-direction: row; padding: 8px 0; }
+    .hinge-word { writing-mode: horizontal-tb; padding: 6px 16px; }
+    .hinge-ref { writing-mode: horizontal-tb; }
+    .walk-row { grid-template-columns: repeat(3, 1fr); }
+    .word-grid { grid-template-columns: repeat(3, 1fr); }
+    .mt-verse-row { grid-template-columns: repeat(3, 1fr); }
+    .armour-pieces { grid-template-columns: repeat(3, 1fr); }
+    .comm-grid, .tn-cols, .prayers-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .walk-row, .word-grid, .armour-pieces, .xbible-grid { grid-template-columns: 1fr 1fr; }
+    .mt-verse-row { grid-template-columns: 1fr 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <div class="header-top">
+      <div>
+        <div class="header-book">Ephesians</div>
+        <div class="header-sub">Book 49 of 66 · Paul's Prison Epistle · ~AD 60–62</div>
+      </div>
+      <div class="header-meta">
+        <div class="meta-row"><strong>Author:</strong> Paul (from prison — Rome or Caesarea)</div>
+        <div class="meta-row"><strong>Recipients:</strong> The church at Ephesus (possibly circular)</div>
+        <div class="meta-row"><strong>Key city:</strong> Ephesus — commercial hub, temple of Artemis</div>
+        <div class="meta-row"><strong>Companions:</strong> Colossians, Philemon, Philippians (Prison Epistles)</div>
+        <div class="meta-row"><strong>Genre:</strong> Doctrinal-Pastoral Letter → Circular</div>
+      </div>
+    </div>
+    <div class="header-char">
+      "The cosmic scope of salvation — all things in heaven and on earth united in Christ —<br>
+      and the church as the community that makes it visible"
+    </div>
+  </div>
+
+  <!-- KEY PASSAGE -->
+  <div class="section-label">Controlling Verse — The Mystery in One Sentence</div>
+  <div class="passage-callout">
+    <div class="pc-label">Ephesians 1:9–10 · The thesis of the letter</div>
+    <div class="pc-text">
+      "He made known to us the mystery of his will according to his good pleasure, which he purposed in Christ, to be put into effect when the times reach their fulfilment — to bring unity to all things in heaven and on earth under Christ."
+    </div>
+    <div class="pc-ref">Ephesians 1:9–10 (NIV) — ἀνακεφαλαιώσασθαι τὰ πάντα ἐν τῷ Χριστῷ</div>
+  </div>
+
+  <!-- THE HINGE LAYOUT -->
+  <div class="section-label">The Letter's Structure — Doctrine → Therefore → Practice</div>
+  <div class="hinge-layout">
+
+    <div class="half half-doc">
+      <div class="half-label">Doctrine — What God Has Done</div>
+      <div class="half-chapters">Chapters 1 – 3</div>
+      <div class="half-theme">"Seated with Christ in the heavenly realms"</div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">1:1–2 · Greeting</div>
+        <div class="unit-title">Grace and peace from God our Father</div>
+        <div class="unit-desc">The standard Pauline opening — but saturated with theological freight from the first word.</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">1:3–14 · The Berakah</div>
+        <div class="unit-title">Every Spiritual Blessing in Christ</div>
+        <div class="unit-desc">One long sentence in Greek (vv.3–14). Election, adoption, redemption, forgiveness, the mystery of his will, the Spirit as deposit. The entire sweep of salvation compressed into a single doxology. All three persons of the Trinity present.</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">1:15–23 · First Prayer</div>
+        <div class="unit-title">The Spirit of Wisdom and Revelation</div>
+        <div class="unit-desc">Paul prays that they would <em>know</em> what they have been given — hope, riches, incomparable power. Closes with Christ as head over all things for the church, which is his body, "the fullness of him who fills everything in every way."</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">2:1–10 · Death to Life</div>
+        <div class="unit-title">Dead in Sin → Made Alive by Grace</div>
+        <div class="unit-desc">The sharpest statement of the human condition and the grace that reverses it. "By grace you have been saved, through faith — this is not from yourselves, it is the gift of God — not by works." But v.10: "created in Christ Jesus to do good works."</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">2:11–22 · One New Humanity</div>
+        <div class="unit-title">The Dividing Wall Demolished</div>
+        <div class="unit-desc">Jews and Gentiles — "far" and "near" — brought into one body. The "hostility" (the Mosaic law as a dividing barrier) abolished in the flesh of Christ. One new humanity from two. A dwelling place for God by the Spirit.</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">3:1–13 · The Mystery Revealed</div>
+        <div class="unit-title">Gentiles Are Co-Heirs, Members Together</div>
+        <div class="unit-desc">The "mystery hidden for ages" is now disclosed: Gentiles are co-heirs, members of the same body, sharers in the promise. Paul is the prisoner who carries this mystery. The church makes the wisdom of God known — even to "the rulers and authorities in heavenly realms" (v.10).</div>
+      </div>
+
+      <div class="unit unit-doc">
+        <div class="unit-ref">3:14–21 · Second Prayer</div>
+        <div class="unit-title">Rooted and Grounded in Love</div>
+        <div class="unit-desc">Paul kneels — unusual. He prays for inner strengthening, for Christ to dwell in their hearts by faith, for them to grasp the four dimensions of Christ's love, to be filled to "all the fullness of God." Closes with the doxology: "immeasurably more than we ask or imagine."</div>
+      </div>
+    </div>
+
+    <!-- HINGE COLUMN -->
+    <div class="hinge-col">
+      <div class="hinge-word">Therefore</div>
+      <div class="hinge-ref" style="writing-mode:vertical-rl; font-size:0.58rem; color:#888; margin-top:6px; text-align:center;">4:1</div>
+    </div>
+
+    <div class="half half-prac">
+      <div class="half-label">Practice — How We Are to Walk</div>
+      <div class="half-chapters">Chapters 4 – 6</div>
+      <div class="half-theme">"Walking worthy of the calling"</div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">4:1–16 · Walk Worthy</div>
+        <div class="unit-title">Unity and Diversity in the Body</div>
+        <div class="unit-desc">The hinge verse: "I urge you to walk in a manner worthy of the calling." Seven unities (one body, one Spirit, one hope, one Lord, one faith, one baptism, one God). Then diversity: the ascended Christ gives gifts — apostles, prophets, evangelists, pastors-teachers — to equip the body to build itself up in love.</div>
+      </div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">4:17–32 · Old Self / New Self</div>
+        <div class="unit-title">Put Off / Be Renewed / Put On</div>
+        <div class="unit-desc">The gentile way of life contrasted with the way of Christ: darkened understanding, hardened heart, sensuality, impurity. In contrast: put off the old self, be renewed in the spirit of your minds, put on the new self. Specific commands: speak truth, be angry and sin not, give, use words that build up. "Be kind and compassionate... forgiving each other, just as in Christ God forgave you."</div>
+      </div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">5:1–21 · Walk in Love · Light · Wisdom</div>
+        <div class="unit-title">Three "Walk" Commands in One Chapter</div>
+        <div class="unit-desc">Walk in love (5:2 — as Christ loved and gave himself). Walk in light (5:8 — you were darkness, now light). Walk carefully/wisely (5:15 — making the most of every opportunity). Culminates: "be filled with the Spirit" — the driving power of all three walks. The Spirit-filled life expressed in mutual submission (5:21 — the overlooked verse).</div>
+      </div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">5:22–6:9 · Household Codes</div>
+        <div class="unit-title">Wives · Husbands · Children · Parents · Workers · Masters</div>
+        <div class="unit-desc">Three pairs of relationships, each transformed by the gospel. Wives/husbands: the marriage relationship as the icon of Christ and the church (5:31–32 — "this is a profound mystery"). Children/parents: "honour your father and mother" — the first commandment with a promise. Workers/masters: serve as to the Lord, not to men — radical humanisation of the workplace.</div>
+      </div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">6:10–20 · The Armour of God</div>
+        <div class="unit-title">Stand Against the Schemes of the Devil</div>
+        <div class="unit-desc">The letter does not end with exhortations to niceness — it ends with warfare. "Our struggle is not against flesh and blood, but against rulers, against authorities, against the powers of this dark world." Six pieces of armour. The repeated command: stand. The armour is defensive — holding the ground already won by Christ — except the sword of the Spirit (the Word) and prayer.</div>
+      </div>
+
+      <div class="unit unit-prac">
+        <div class="unit-ref">6:21–24 · Closing</div>
+        <div class="unit-title">Peace and Grace to All Who Love Christ</div>
+        <div class="unit-desc">Tychicus will deliver the letter and tell them Paul's news. The blessing: "Peace to all who love our Lord Jesus Christ with an undying love." The word "undying" (incorruptibility) is the letter's last note — the eschatological permanence of grace.</div>
+      </div>
+    </div>
+  </div><!-- /hinge-layout -->
+
+  <!-- THE MYSTERY THREAD -->
+  <div class="section-label">The Mystery Thread — μυστήριον Running Through the Letter</div>
+  <div class="mystery-thread">
+    <div class="mt-title">μυστήριον (mystērion) — "mystery" appears 6 times. In Paul, mystery = formerly hidden, now revealed. Not a puzzle but a disclosure.</div>
+    <div class="mt-verse-row">
+      <div class="mt-verse">
+        <div class="mt-ref">1:9</div>
+        <div class="mt-content">The mystery of his will — to unite all things in Christ. The thesis. The cosmic plan of the ages.</div>
+      </div>
+      <div class="mt-verse">
+        <div class="mt-ref">3:3–4</div>
+        <div class="mt-content">The mystery made known to Paul by revelation — Gentiles co-heirs. Hidden for generations, now disclosed.</div>
+      </div>
+      <div class="mt-verse">
+        <div class="mt-ref">3:9</div>
+        <div class="mt-content">The administration (oikonomia) of this mystery — hidden in God from before creation, now revealed through the church.</div>
+      </div>
+      <div class="mt-verse">
+        <div class="mt-ref">5:32</div>
+        <div class="mt-content">Marriage as mystery — "I am talking about Christ and the church." The household code's theological summit.</div>
+      </div>
+      <div class="mt-verse">
+        <div class="mt-ref">6:19</div>
+        <div class="mt-content">Pray that Paul may fearlessly make known the mystery of the gospel — the letter closes still in the grip of the mystery.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN CHRIST TRACKER -->
+  <div class="section-label">The Governing Location — "In Christ" / "In Him" (~36 Occurrences)</div>
+  <div class="in-christ">
+    <div class="ic-title">Ephesians is saturated with the phrase "in Christ," "in him," "in the Lord." Paul uses it to describe where the believer exists — a location, not merely a relationship.</div>
+    <div class="ic-dots">
+      <!-- Chapter 1: 1:1,3,4,6,7,9,10,11,12,13(×2),15,20 -->
+      <div class="ic-dot ch1" title="1:1">1:1</div>
+      <div class="ic-dot ch1" title="1:3">1:3</div>
+      <div class="ic-dot ch1" title="1:4">1:4</div>
+      <div class="ic-dot ch1" title="1:6">1:6</div>
+      <div class="ic-dot ch1" title="1:7">1:7</div>
+      <div class="ic-dot ch1" title="1:9">1:9</div>
+      <div class="ic-dot ch1" title="1:10">1:10</div>
+      <div class="ic-dot ch1" title="1:11">1:11</div>
+      <div class="ic-dot ch1" title="1:12">1:12</div>
+      <div class="ic-dot ch1" title="1:13a">1:13</div>
+      <div class="ic-dot ch1" title="1:15">1:15</div>
+      <div class="ic-dot ch1" title="1:20">1:20</div>
+      <!-- Chapter 2 -->
+      <div class="ic-dot ch2" title="2:6">2:6</div>
+      <div class="ic-dot ch2" title="2:7">2:7</div>
+      <div class="ic-dot ch2" title="2:10">2:10</div>
+      <div class="ic-dot ch2" title="2:13">2:13</div>
+      <div class="ic-dot ch2" title="2:15">2:15</div>
+      <div class="ic-dot ch2" title="2:16">2:16</div>
+      <div class="ic-dot ch2" title="2:21">2:21</div>
+      <div class="ic-dot ch2" title="2:22">2:22</div>
+      <!-- Chapter 3 -->
+      <div class="ic-dot ch3" title="3:6">3:6</div>
+      <div class="ic-dot ch3" title="3:11">3:11</div>
+      <div class="ic-dot ch3" title="3:12">3:12</div>
+      <div class="ic-dot ch3" title="3:21">3:21</div>
+      <!-- Chapter 4 -->
+      <div class="ic-dot ch4" title="4:1">4:1</div>
+      <div class="ic-dot ch4" title="4:17">4:17</div>
+      <div class="ic-dot ch4" title="4:32">4:32</div>
+      <!-- Chapter 5 -->
+      <div class="ic-dot ch5" title="5:8">5:8</div>
+      <div class="ic-dot ch5" title="5:19">5:19</div>
+      <div class="ic-dot ch5" title="5:20">5:20</div>
+      <!-- Chapter 6 -->
+      <div class="ic-dot ch6" title="6:1">6:1</div>
+      <div class="ic-dot ch6" title="6:10">6:10</div>
+      <div class="ic-dot ch6" title="6:21">6:21</div>
+    </div>
+    <div class="ic-note">Each dot = one "in Christ / in him / in the Lord" occurrence. Lighter dots = earlier chapters; darker = later. The phrase is most dense in ch.1 (the berakah). The key insight: salvation in Ephesians is a location. The believer does not merely believe certain things about Christ — they exist in him, as a place.</div>
+  </div>
+
+  <!-- WALK COMMANDS -->
+  <div class="section-label">The Six "Walk" Commands — Περιπατέω (peripateō) in Chapters 4–6</div>
+  <div class="walk-row">
+    <div class="walk-card">
+      <div class="walk-num">①</div>
+      <div class="walk-ref">4:1</div>
+      <div class="walk-title">Walk Worthy</div>
+      <div class="walk-desc">Of the calling you have received. The hinge of the whole letter.</div>
+    </div>
+    <div class="walk-card">
+      <div class="walk-num">②</div>
+      <div class="walk-ref">4:17</div>
+      <div class="walk-title">Don't Walk as Gentiles</div>
+      <div class="walk-desc">In futility of mind, darkened understanding. The negative — what to leave.</div>
+    </div>
+    <div class="walk-card">
+      <div class="walk-num">③</div>
+      <div class="walk-ref">5:2</div>
+      <div class="walk-title">Walk in Love</div>
+      <div class="walk-desc">As Christ loved us and gave himself up — a fragrant offering to God.</div>
+    </div>
+    <div class="walk-card">
+      <div class="walk-num">④</div>
+      <div class="walk-ref">5:8</div>
+      <div class="walk-title">Walk in Light</div>
+      <div class="walk-desc">You were darkness, now you are light. Live as children of light.</div>
+    </div>
+    <div class="walk-card">
+      <div class="walk-num">⑤</div>
+      <div class="walk-ref">5:15</div>
+      <div class="walk-title">Walk Carefully / Wisely</div>
+      <div class="walk-desc">Not as unwise but as wise, making the most of every opportunity.</div>
+    </div>
+    <div class="walk-card">
+      <div class="walk-num">⑥</div>
+      <div class="walk-ref">6:10–11</div>
+      <div class="walk-title">Stand (in armour)</div>
+      <div class="walk-desc">The walk becomes a stand. Against the schemes of the devil. Hold the ground.</div>
+    </div>
+  </div>
+
+  <!-- TWO PRAYERS -->
+  <div class="section-label">Two Great Prayers — Paul on His Knees for the Church</div>
+  <div class="prayers-grid">
+
+    <div class="prayer-card">
+      <div class="pr-label">First Prayer · Ephesians 1:15–23</div>
+      <div class="pr-ref">The Prayer of Knowing</div>
+      <div class="pr-asks">
+        <div class="pr-ask"><strong>①</strong> That they would receive <em>the Spirit of wisdom and revelation</em> in knowing God</div>
+        <div class="pr-ask"><strong>②</strong> That the eyes of their hearts would be enlightened — to know the <em>hope</em> of his calling</div>
+        <div class="pr-ask"><strong>③</strong> To know the <em>riches</em> of his glorious inheritance in the saints</div>
+        <div class="pr-ask"><strong>④</strong> To know the <em>incomparably great power</em> at work in those who believe — the resurrection power</div>
+        <div class="pr-ask">The prayer is entirely about knowing what you already have. The problem is not lack of blessing — it is lack of awareness of blessing already given.</div>
+      </div>
+    </div>
+
+    <div class="prayer-card">
+      <div class="pr-label">Second Prayer · Ephesians 3:14–21</div>
+      <div class="pr-ref">The Prayer of Being Filled</div>
+      <div class="pr-asks">
+        <div class="pr-ask"><strong>①</strong> That they would be <em>strengthened with power</em> through his Spirit in the inner being</div>
+        <div class="pr-ask"><strong>②</strong> That Christ would <em>dwell in your hearts</em> through faith</div>
+        <div class="pr-ask"><strong>③</strong> That they would be <em>rooted and grounded in love</em></div>
+        <div class="pr-ask"><strong>④</strong> To <em>grasp</em> the four dimensions of Christ's love — wide, long, high, deep</div>
+        <div class="pr-ask"><strong>⑤</strong> To be <em>filled to all the fullness of God</em></div>
+        <div class="pr-ask">The two prayers bracket the doctrine section. The first is for knowledge; the second for experience. Together they describe the full Christian life: knowing and being filled.</div>
+      </div>
+    </div>
+
+  </div><!-- /prayers-grid -->
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Five Key Words — The Vocabulary of Ephesians</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">πλήρωμα</div>
+      <div class="word-translit">plēroma</div>
+      <span class="word-count">4× in letter</span>
+      <div class="word-gloss">Fullness / completeness / that which fills</div>
+      <div class="word-note">The controlling word. The church is "the fullness of him who fills everything in every way" (1:23). Paul prays they be filled to "all the fullness of God" (3:19). The body grows "to the measure of the fullness of Christ" (4:13). Fullness is both the origin (God's fullness in Christ) and the destination (the church arriving at that fullness).</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">μυστήριον</div>
+      <div class="word-translit">mystērion</div>
+      <span class="word-count">6× in letter</span>
+      <div class="word-gloss">Mystery / formerly hidden, now revealed</div>
+      <div class="word-note">Not a puzzle but a disclosure. The mystery in Ephesians has two layers: (1) cosmic — all things united in Christ (1:9-10); (2) social — Jew and Gentile together in one body (3:3-6). Both were hidden from ages; both now disclosed through the church's existence. Marriage is also called mystery (5:32) — pointing to Christ and the church.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">οἰκονομία</div>
+      <div class="word-translit">oikonomia</div>
+      <span class="word-count">3× in letter</span>
+      <div class="word-gloss">Stewardship / administration / plan</div>
+      <div class="word-note">From oikos (house) + nomos (law/management). The "economy" of grace — God's management plan for history. "The administration of the mystery" (3:9). The whole of history is a managed plan with a goal: the unity of all things in Christ at "the fullness of times" (1:10). God is not reacting to history. He is administering it.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">περιπατέω</div>
+      <div class="word-translit">peripateō</div>
+      <span class="word-count">8× in letter</span>
+      <div class="word-gloss">To walk / to conduct one's life</div>
+      <div class="word-note">The key verb of the practice section (4-6). Six explicit "walk" commands shaping the second half of the letter. The word is Jewish — in Hebrew, halakah (the walk of life, how to live) is the practical application of Torah. Paul's "walk" commands are his halakah for the new-covenant community: walk worthy, walk in love, walk in light, walk wisely.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀνακεφαλαιόω</div>
+      <div class="word-translit">anakephalaiōsasthai</div>
+      <span class="word-count">1:10 · Thesis</span>
+      <div class="word-gloss">To sum up / recapitulate / unite under one head</div>
+      <div class="word-note">Used only twice in the NT (here and Rom 13:9). From kephalē (head). To bring everything under one head — like the summary (recapitulation) of an argument. The whole of history is moving toward a recapitulation in Christ: all things in heaven and on earth gathered up and headed by him. This word contains the letter's entire theology in one verb.</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- ARMOUR OF GOD -->
+  <div class="section-label">The Full Armour of God — Ephesians 6:10–18</div>
+  <div class="armour-strip">
+    <div class="armour-title">Six Pieces + Prayer · "Stand firm" (repeated 3× in 4 verses). The posture is not advance but holding the ground won by Christ.</div>
+    <div class="armour-pieces">
+      <div class="armour-piece">
+        <div class="ap-icon">6:14a</div>
+        <div class="ap-name">Belt of Truth</div>
+        <div class="ap-means">Truthfulness / integrity as the foundation of the Christian's stance. Nothing stands without it.</div>
+      </div>
+      <div class="armour-piece">
+        <div class="ap-icon">6:14b</div>
+        <div class="ap-name">Breastplate of Righteousness</div>
+        <div class="ap-means">Christ's righteousness credited — covering the vital organs. Not moral achievement but imputed standing.</div>
+      </div>
+      <div class="armour-piece">
+        <div class="ap-icon">6:15</div>
+        <div class="ap-name">Feet Fitted with Peace</div>
+        <div class="ap-means">Readiness that comes from the gospel of peace. The soldier is mobile because they stand on sure ground.</div>
+      </div>
+      <div class="armour-piece">
+        <div class="ap-icon">6:16</div>
+        <div class="ap-name">Shield of Faith</div>
+        <div class="ap-means">The large Roman scutum — can protect the whole body. Extinguishes "all the flaming arrows of the evil one."</div>
+      </div>
+      <div class="armour-piece">
+        <div class="ap-icon">6:17a</div>
+        <div class="ap-name">Helmet of Salvation</div>
+        <div class="ap-means">Protecting the mind — the assurance of salvation as armour against the mind-targeting attacks of the enemy.</div>
+      </div>
+      <div class="armour-piece">
+        <div class="ap-icon">6:17b–18</div>
+        <div class="ap-name">Sword of the Spirit + Prayer</div>
+        <div class="ap-means">The only offensive piece — the Word of God. Prayer is the atmosphere in which all the armour operates.</div>
+      </div>
+    </div>
+    <div class="armour-note">
+      <strong>Context note:</strong> Clinton Arnold's research (Ephesians: Power and Magic) shows that Ephesus was the centre of magical arts and power religion in Asia Minor (Acts 19:18–19 — the book-burning). Paul's armour passage speaks directly into a culture saturated with the language of powers, spirits, and cosmic conflict. The armour is not metaphor for abstract spiritual disciplines — it is the equipment for engagement with real spiritual opposition in a city that took that opposition seriously.
+    </div>
+  </div>
+
+  <!-- HARDEST MOMENTS -->
+  <div class="hard-box">
+    <div class="hard-title">Hardest Interpretive Moments in Ephesians</div>
+
+    <div class="hard-item">
+      <div class="hard-q">1. Predestination in 1:4–5, 11 — does Ephesians teach individual election to salvation?</div>
+      <div class="hard-a">Eph 1:4 — "chosen in him before the foundation of the world." The election language is real and should not be smoothed away. The primary debate: is the election corporate (God chose the church in Christ, and individuals participate by being in Christ through faith) or individual (God chose specific persons for salvation before time)? Reformed readers (Lloyd-Jones, O'Brien) take the individual reading; some evangelical readers prefer the corporate-in-Christ frame. Both acknowledge the sovereignty of grace; they differ on whether the election is of persons or of a body. The key anchor: the election is always "in him" — never apart from Christ.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">2. "Wives, submit to your husbands as to the Lord" (5:22) — the household code debate</div>
+      <div class="hard-a">The most contested passage in the letter. Three things often missed: (a) 5:21 — "submit to one another out of reverence for Christ" — mutual submission precedes and frames the specific codes; (b) the husband's instruction (5:25–33) is the longer and more demanding: "love your wives as Christ loved the church and gave himself up for her" — a call to self-giving sacrifice, not patriarchal control; (c) the codes radically humanised existing structures by placing them under Christ and extending dignity to wives, children, and slaves in ways that were counter-cultural. The debate is between complementarian and egalitarian readings. Both agree the text requires husbandly self-sacrifice; they differ on whether a functional ordering persists in marriage.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">3. "The church is his body, the fullness of him who fills everything in every way" (1:23) — what does fullness mean here?</div>
+      <div class="hard-a">One of the most debated verses in Ephesians. Three readings: (a) the church completes Christ — he is somehow incomplete without his body (the active sense of plēroma); (b) the church is filled by Christ — he pours his fullness into it (passive sense); (c) the church is the community in which Christ's all-pervading presence is expressed and displayed. Most commentators (O'Brien, Hoehner, Lincoln) prefer option (b) or (c). The point is not that Christ needs us to complete him, but that the church is the community that makes the fullness of Christ visible in the world.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">4. "Filling up all the fullness of God" (3:19) — is this possible?</div>
+      <div class="hard-a">Paul prays that believers "may be filled to all the fullness of God" (εἰς πᾶν τὸ πλήρωμα τοῦ θεοῦ). This is one of the most ambitious prayers in the NT. It does not mean becoming divine — but it does mean a participation in God's life so complete that there is no area of human existence left untransformed by his presence. The doxology that follows (3:20–21) acknowledges this exceeds anything we can ask or imagine — which is precisely why it is a prayer, not a self-improvement programme.</div>
+    </div>
+
+  </div><!-- /hard-box -->
+
+  <!-- CROSS-BIBLE -->
+  <div class="section-label">Cross-Bible Links</div>
+  <div class="xbible-grid">
+
+    <div class="xbible-card xbc-ot">
+      <div class="xb-tag">← OT Background</div>
+      <div class="xb-ref">Isaiah 57:19 · "Peace to those far and near"</div>
+      <div class="xb-note">Paul quotes this in Eph 2:17 — "he came and preached peace to you who were far away and peace to those who were near." Gentiles are the "far off" whom Isaiah promised God would bring near. The Jew/Gentile wall of ch.2 is the fulfilment of Isaiah's vision.</div>
+    </div>
+
+    <div class="xbible-card xbc-ot">
+      <div class="xb-tag">← OT Background</div>
+      <div class="xb-ref">Psalm 68:18 · The Ascending Warrior</div>
+      <div class="xb-note">Paul applies Ps 68 to the ascension in 4:8 — "when he ascended on high he led captives in his train and gave gifts to people." The warrior-king who ascends after victory distributes the spoils. Christ's ascension is the basis for the distribution of gifts to the church.</div>
+    </div>
+
+    <div class="xbible-card xbc-ot">
+      <div class="xb-tag">← OT Background</div>
+      <div class="xb-ref">Genesis 2:24 · One Flesh</div>
+      <div class="xb-note">Paul quotes the foundational marriage verse in 5:31 and immediately says "this is a profound mystery — I am talking about Christ and the church." Marriage was always meant to point beyond itself. The one-flesh union of husband and wife is an icon of the union between Christ and his church.</div>
+    </div>
+
+    <div class="xbible-card xbc-parallel">
+      <div class="xb-tag">≈ Parallel · Colossians</div>
+      <div class="xb-ref">Colossians 1:15–20 · The Cosmic Christ</div>
+      <div class="xb-note">Colossians is Ephesians' closest companion letter — probably written at the same time from the same imprisonment. Col 1 parallels Eph 1's cosmic Christology. Colossians focuses on Christ as the head of the cosmos; Ephesians on the church as his body. The two letters are the two sides of the same coin.</div>
+    </div>
+
+    <div class="xbible-card xbc-parallel">
+      <div class="xb-tag">≈ Parallel · Romans</div>
+      <div class="xb-ref">Romans 8:28–39 · Predestined, Called, Justified, Glorified</div>
+      <div class="xb-note">Romans 8 and Ephesians 1 are the two great election passages. Romans 8 presents the golden chain from predestination to glorification. Ephesians 1 presents the same scope but from the doxological angle — as praise, not argument. Both insist: election is in Christ, not apart from him.</div>
+    </div>
+
+    <div class="xbible-card xbc-parallel">
+      <div class="xb-tag">≈ Parallel · 1 Corinthians</div>
+      <div class="xb-ref">1 Corinthians 12–14 · Gifts and the Body</div>
+      <div class="xb-note">1 Cor 12 and Eph 4 both treat the body metaphor and spiritual gifts. But there is a shift: 1 Cor 12 focuses on diversity within the body (any gift, each member matters); Eph 4 focuses on specific leadership gifts for equipping the body to maturity. The two passages complete each other.</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">NT → Fulfilment</div>
+      <div class="xb-ref">Revelation 21:1–4 · All Things New</div>
+      <div class="xb-note">Eph 1:9–10 — all things united in Christ — finds its ultimate fulfilment in Revelation's new creation. "Behold, I am making all things new." The mystery disclosed in Ephesians is the plan that Revelation reveals as complete. The church is the firstfruits (Eph 1:12–14) of what Revelation 21 shows in full.</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">NT → Application</div>
+      <div class="xb-ref">John 17:20–23 · That They May Be One</div>
+      <div class="xb-note">Jesus's High Priestly Prayer is the foundation of the unity Ephesians describes. "May they be brought to complete unity to let the world know that you sent me." The one new humanity of Eph 2 is the answer to the prayer of John 17. The broken wall is the answer to "may they be one."</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">NT → Theme</div>
+      <div class="xb-ref">Galatians 3:26–29 · Neither Jew nor Greek</div>
+      <div class="xb-note">"There is neither Jew nor Gentile, neither slave nor free, nor is there male and female, for you are all one in Christ Jesus." Galatians 3:28 is the thesis that Ephesians 2:11–22 unpacks at length. The abolition of the dividing wall is the social expression of the cosmic mystery.</div>
+    </div>
+
+  </div><!-- /xbible-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-grid">
+
+    <div class="comm-card">
+      <div class="comm-author">Martyn Lloyd-Jones</div>
+      <div class="comm-title">Exposition of Ephesians — 8 volumes (Banner of Truth, 1974–1982)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Welsh Expository</span>
+      <div class="comm-point">The most comprehensive expository series on Ephesians in English — 232 sermons preached at Westminster Chapel across twelve years. Lloyd-Jones treats every verse with doctrinal depth and pastoral warmth. His volumes on chapters 1–3 are among the finest works on the doctrine of salvation in print.</div>
+      <div class="comm-point">On 1:3–14 (the berakah): Lloyd-Jones argues the entire doxology must be read as the foundation before any application is attempted. "You cannot walk worthy of the calling if you do not know what the calling is. The whole of chapters 1–3 must be understood before a single command in chapters 4–6 can be obeyed with power."</div>
+      <div class="comm-point">On 2:8–9: "The most important word in the Christian gospel is the word 'gift.' Grace means gift. You contribute nothing to your salvation — not even the faith, which is itself given. To add anything — any human effort, any merit — is to destroy the entire structure."</div>
+      <a href="https://www.banneroftruth.org/us/products/ephesians-set-of-8-volumes/" target="_blank" class="source-link">banneroftruth.org — Ephesians 8-volume set [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">God's New Society: The Message of Ephesians (BST, IVP, 1979)</div>
+      <span class="comm-tradition trad-evangelical">Anglican Evangelical · Pastoral</span>
+      <div class="comm-point">Stott's volume in the BST series remains one of the most accessible full treatments of Ephesians. His organising theme is that Ephesians is fundamentally about the church — specifically the church as "God's new society," the community that embodies the reconciliation of Jew and Gentile and makes the wisdom of God visible to cosmic powers.</div>
+      <div class="comm-point">On 2:11–22 (the dividing wall): Stott argues this is the pastoral heart of Ephesians and the most politically explosive passage in the NT. "The church is the only community on earth where the most ancient, deep, and bitter divisions among human beings are transcended — not by political negotiation but by the cross." He challenges churches to ask whether they actually look like what Eph 2 describes.</div>
+      <div class="comm-point">On the household codes: Stott is complementarian but insists the husband's command (self-sacrificial love as Christ loved) is the more demanding half. "The headship Paul describes is not dominance — it is the servant leadership of the one who gave himself up."</div>
+      <a href="https://www.ivpress.com/god-s-new-society" target="_blank" class="source-link">ivpress.com — God's New Society: The Message of Ephesians [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Peter O'Brien</div>
+      <div class="comm-title">The Letter to the Ephesians (PNTC, Baker/Eerdmans, 1999)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical · Exegetical</span>
+      <div class="comm-point">The standard conservative evangelical technical commentary on Ephesians. O'Brien provides careful Greek exegesis with theological depth. On authorship: firmly Pauline, with detailed responses to the pseudonymous-authorship arguments. Essential for anyone preaching the letter.</div>
+      <div class="comm-point">On 1:23 (the fullness question): O'Brien argues for the passive reading — the church is the one being filled by Christ, not the one completing him. "The church's task is not to fill a gap in Christ but to receive and express his presence. The fullness flows from him to it, not the reverse."</div>
+      <div class="comm-point">On 6:10–18 (the armour): O'Brien reads the conflict as genuinely cosmic — Paul has in view the structures of evil that stand behind human sin and suffering. "The Christian is not fighting people but the invisible powers that manipulate and distort human life. The armour is for that engagement, not for interpersonal conflict."</div>
+      <a href="https://www.eerdmans.com/products/the-letter-to-the-ephesians-pntc.html" target="_blank" class="source-link">eerdmans.com — The Letter to the Ephesians, PNTC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Tim Keller</div>
+      <div class="comm-title">Redeemer Sermon Series on Ephesians · The Meaning of Marriage (2011, Dutton) — draws heavily on Eph 5</div>
+      <span class="comm-tradition trad-preaching">Reformed Pastoral · Preaching</span>
+      <div class="comm-point">Keller's sermon series on Ephesians at Redeemer Presbyterian is among his most theologically rich preaching. On 2:1–10 (dead to alive): "You were not sick. You were not struggling. You were not just a bit confused. You were dead. And the only thing that can change a corpse is not a programme — it is resurrection power." He uses the deadness language to address the common Christian tendency to treat salvation as a self-improvement project.</div>
+      <div class="comm-point">On 2:14 (the dividing wall): Keller argues this is the most radical sociological claim in the ancient world. Jews and Gentiles — with two thousand years of mutual hostility — are made one new person in Christ. "The church is not a collection of people who happen to agree with each other. It is a community of people who have nothing in common except that they have all been saved by the same cross."</div>
+      <div class="comm-point">On Eph 5 and marriage (from The Meaning of Marriage): "The gospel — a husband loving sacrificially, a wife responding in trust — is not a picture Paul uses to illustrate marriage. Marriage is the picture God designed from the beginning to illustrate the gospel." The order of logic matters: the gospel illuminates marriage, not the other way round.</div>
+      <a href="https://www.penguinrandomhouse.com/books/307652/the-meaning-of-marriage-by-timothy-keller-with-kathy-keller/" target="_blank" class="source-link">penguinrandomhouse.com — The Meaning of Marriage [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Clinton Arnold</div>
+      <div class="comm-title">Ephesians: Power and Magic (SNTSMS, 1989) · Ephesians (ZECNT, Zondervan, 2010)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Cultural-Historical</span>
+      <div class="comm-point">Arnold's distinctive contribution is the Ephesian cultural background. He demonstrates from archaeological and literary sources that Ephesus was the centre of magical arts and power religion in the ancient world. The city's famous "Ephesian letters" (amulets with magical formulae) and the book-burning of Acts 19 provide the backdrop for understanding why Paul's power language and armour passage would have registered so sharply with original readers.</div>
+      <div class="comm-point">On 1:20–23 (Christ above every power and authority): Arnold shows that Paul's list of cosmic powers corresponds precisely to the hierarchy of spiritual beings that Ephesian magical texts describe. Paul's claim is pointed: Christ is seated above every one of them. The believers' fear of cosmic powers — a live anxiety in Ephesus — is addressed by the fact that they are "in him" who is above them all.</div>
+      <a href="https://www.zondervan.com/9780310243427/ephesians-zecnt/" target="_blank" class="source-link">zondervan.com — Ephesians, ZECNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Harold Hoehner</div>
+      <div class="comm-title">Ephesians: An Exegetical Commentary (Baker Academic, 2002)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical · Technical</span>
+      <div class="comm-point">At 900+ pages, Hoehner's commentary is the most exhaustive conservative treatment of Ephesians in English. Essential for detailed word studies, syntactical analysis, and engagement with the scholarly literature. His treatment of the Greek sentence structure of 1:3–14 (one sentence in Greek) is definitive.</div>
+      <div class="comm-point">On "in Christ" (en Christō): Hoehner catalogues all 36 occurrences and argues that the phrase consistently functions as a locative — describing the sphere in which God's blessings exist and in which the believer now lives. "The believer does not receive blessings and then later enter Christ — they receive the blessings by virtue of already being located in him."</div>
+      <a href="https://www.bakeracademic.com/products/ephesians-an-exegetical-commentary" target="_blank" class="source-link">bakeracademic.com — Ephesians: An Exegetical Commentary [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — The Ephesian Church</div>
+        <div class="tn-text">Ephesus was a city of competing powers — the temple of Artemis, one of the seven wonders of the ancient world; the magical arts of Acts 19; the imperial cult; the social stratification of slave and free, Jew and Gentile. Paul writes to a church embedded in this context. His pastoral concern: that they know the full scope of what they have been given in Christ — power that exceeds every competing power, a new humanity that transcends every social division, a cosmic identity that puts the Roman emperor's claims in their proper (tiny) place.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">The Ephesian situation is not distant. Contemporary Christians live in cultures with competing powers (ideological, political, technological, spiritual), competing identities, and competing accounts of what makes human community possible. Ephesians addresses all of it: your identity is "in Christ" before it is in any social, ethnic, or political category. The church is God's demonstration project — the community that makes visible the unity-of-all-things-in-Christ that history is moving toward. The armour passage speaks to the reality that the battle is cosmic before it is personal.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Does the church I am part of look like what Ephesians 2:11–22 describes — a community where the most ancient human divisions are actually being overcome — or does it look like a gathering of people who simply agree with each other?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea · The Final Verdict</div>
+    <div class="verdict-text">
+      "God's plan — hidden for ages, disclosed in Christ, embodied in the church —<br>
+      is to unite all things in heaven and on earth under one head.<br>
+      The church is not the audience for that plan. It is the demonstration of it."
+    </div>
+    <div class="verdict-ref">Ephesians 1:9–10 · 3:10–11 — "His intent was that now, through the church, the manifold wisdom of God should be made known to the rulers and authorities in the heavenly realms."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
