@@ -154,6 +154,31 @@
   .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
   .source-link:hover { color: #aaa; }
 
+  /* ── CHAPTER CROSS-MAP ── */
+  .chap-map { margin: 4px 0 24px; }
+  .chap-row { display: grid; grid-template-columns: 80px 1fr 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .chap-num { background: #2c2c2c; color: #f5f0e8; font-family: 'Special Elite', serif; font-size: 0.84rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; line-height: 1.2; }
+  .chap-cell { padding: 8px 10px; border-left: 1px solid #ddd; background: #faf7f2; }
+  .chap-cell:nth-child(even) { background: #f5f0e8; }
+  .cc-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .cc-ot   { color: #d47c1a; }
+  .cc-nt   { color: #2e8a4a; }
+  .cc-theme { color: #6c4bbf; }
+  .cc-text { font-size: 0.73rem; color: #333; line-height: 1.35; }
+  .cc-refs { font-size: 0.67rem; color: #888; font-style: italic; margin-top: 2px; }
+
+  /* ── PASSAGE DEEP NOTES ── */
+  .deep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .deep-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #faf7f2; padding: 14px 15px; }
+  .dc-ref { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #3b6fd4; margin-bottom: 2px; }
+  .dc-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #888; font-weight: 700; margin-bottom: 7px; }
+  .dc-verse { font-style: italic; font-size: 0.79rem; color: #555; border-left: 3px solid #3b6fd4; padding-left: 8px; margin-bottom: 8px; line-height: 1.4; }
+  .dc-note { font-size: 0.78rem; color: #333; line-height: 1.42; margin-bottom: 5px; }
+  .dc-preach { font-size: 0.72rem; color: #6c4bbf; border-left: 2px solid #6c4bbf; padding-left: 8px; line-height: 1.38; margin-top: 6px; font-style: italic; }
+
+  /* ── ADDITIONAL COMMENTARIES ── */
+  .comm-wide { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+
   /* ── THEN → NOW ── */
   .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 17px 22px; margin: 4px 0 24px; }
   .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
@@ -178,11 +203,16 @@
     .word-grid { grid-template-columns: repeat(3, 1fr); }
     .mt-verse-row { grid-template-columns: repeat(3, 1fr); }
     .armour-pieces { grid-template-columns: repeat(3, 1fr); }
-    .comm-grid, .tn-cols, .prayers-grid { grid-template-columns: 1fr; }
+    .comm-grid, .comm-wide, .tn-cols, .prayers-grid, .deep-grid { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 60px 1fr; }
+    .chap-row .chap-cell:nth-child(4) { display: none; }
   }
   @media (max-width: 520px) {
     .walk-row, .word-grid, .armour-pieces, .xbible-grid { grid-template-columns: 1fr 1fr; }
     .mt-verse-row { grid-template-columns: 1fr 1fr; }
+    .chap-row { grid-template-columns: 1fr; }
+    .chap-num { border-radius: 3px 3px 0 0; padding: 8px; }
+    .chap-cell { border-left: none; border-top: 1px solid #ddd; }
   }
   </style>
 </head>
@@ -710,6 +740,266 @@
     </div>
 
   </div><!-- /comm-grid -->
+
+  <!-- CHAPTER CROSS-MAP -->
+  <div class="section-label">Chapter Cross-Map — OT Roots · NT Echoes · Theme Thread</div>
+  <div class="chap-map">
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 1<br>Blessing &amp;<br>Election</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">Deut 7:6 — chosen people; Deut 10:15 — the LORD set his love on your fathers. Isa 46:10 — "I make known the end from the beginning." The election language of ch.1 is saturated with Deuteronomy's covenant-choice vocabulary.</div>
+        <div class="cc-refs">Also: Gen 12:3 (blessing for all nations) · Exod 19:5–6 (kingdom of priests) · Ps 2 (the son enthroned over all)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">Rom 8:28–30 — the golden chain (predestined, called, justified, glorified). Col 1:15–20 — cosmic Christ parallel. John 1:1–14 — "In the beginning was the Word" echoes the pre-creation election of Eph 1:4. 1 Pet 1:1–5 — elect exiles, living hope.</div>
+        <div class="cc-refs">2 Tim 1:9 · Tit 1:2 · Rev 13:8 (the Lamb slain before foundation)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">The Trinity in salvation: Father elects (v.4), Son redeems (v.7), Spirit seals (v.13). The three stanzas of the berakah each end with "to the praise of his glory/grace" — doxology is the goal of election, not status. The resurrection power of v.19–20 is the same power at work in believers.</div>
+      </div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 2<br>Dead to<br>Alive · One<br>New Humanity</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">Ezek 37:1–14 — valley of dry bones, the Spirit brings the dead to life. Gen 2:7 — God breathes life into Adam. The "made alive" of Eph 2:5 echoes both. Isa 57:19 — "peace to those far and near" — Paul quotes directly in 2:17. The Gentiles as "far off" is Isaiah's language.</div>
+        <div class="cc-refs">Ps 51:10 (create in me a clean heart) · Isa 9:6 (Prince of Peace) · Exod 25:8 (God dwelling among his people)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">John 5:24 — passed from death to life. Rom 5:6–11 — while we were still sinners. Col 2:13 — made alive with him. Gal 3:28 — neither Jew nor Greek. John 10:16 — one flock, one shepherd. Acts 10 (Peter and Cornelius) — the wall coming down in narrative form. Rev 21:22 — no temple, God himself is the temple.</div>
+        <div class="cc-refs">1 Cor 3:16 · 2 Cor 6:16 · 1 Pet 2:4–5 (living stones)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">The sequence: formerly (vv.1–3) → but God (v.4) → now (vv.5–10) → therefore remember (v.11) → but now (v.13). The "but God" of v.4 is the gospel hinge of the whole letter. Grace is not the absence of judgment — it is God acting despite the full reality of what we were. The "one new humanity" (v.15) is Paul's most political claim: a third ethnicity created by the cross.</div>
+      </div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 3<br>The Mystery<br>Revealed</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">The mystery "hidden for ages" (v.9) — in the OT, Gentile inclusion was always present but not fully understood: Gen 12:3 (all peoples blessed), Isa 49:6 (light to the nations), Ruth (a Moabite in the genealogy of David), Jonah (God's concern for Nineveh). These were shadows; Eph 3 names the thing itself.</div>
+        <div class="cc-refs">Isa 60:1–3 · Ps 22:27 · Zech 8:23 (ten men grabbing the robe of a Jew)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">Rom 16:25–26 — mystery now revealed. Col 1:26–27 — "Christ in you, the hope of glory." John 17:20–23 — "may they be one" — the prayer answered by Eph 2–3. Acts 15 — Jerusalem Council: Gentiles included without circumcision. Rev 7:9 — every nation, tribe, tongue before the throne.</div>
+        <div class="cc-refs">Gal 3:28 · Rom 10:12 · Acts 10:34–35</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">The second prayer (3:14–21) reaches the highest elevation of any prayer in the NT. Paul prays for four dimensions of Christ's love (wide — embracing all peoples; long — through all time; high — raised to God's right hand; deep — descending to our lowest point). The doxology of 3:20–21 is the letter's emotional peak: "immeasurably more than all we ask or imagine."</div>
+      </div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 4<br>Walk Worthy<br>· Gifts · New<br>Self</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">Ps 68:18 — "when he ascended on high, he took many captives; he received gifts from people" — Paul quotes and applies to Christ's ascension and gift-giving (4:8). The warrior-king ascends and distributes spoils. Prov 4:14–15 — "do not set foot on the path of the wicked" (the "walk" language of 4:17). Lev 19:11 — truth-telling in the community of God's people.</div>
+        <div class="cc-refs">Isa 52:7 (beautiful feet) · Deut 6:4 (the one God — basis for "one Lord" in 4:5–6)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">Rom 12:4–8 — gifts and the body. 1 Cor 12–14 — gifts, body, love. Col 3:9–10 — put off/put on (parallel to Eph 4:22–24). Phil 2:1–11 — the humility Jesus embodied (basis for 4:2). 2 Cor 10:3–5 — taking every thought captive (renewing of the mind, Eph 4:23).</div>
+        <div class="cc-refs">Rom 8:29 (conformed to image) · 1 Cor 13 (love as the binding) · Heb 5:12–14 (maturity)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">The put off/put on structure (4:22–24) is a baptismal pattern — the Christian life is a continual disrobing of the old and clothing in the new. The gifts in 4:11 are not status titles — they are equipping tools: the goal is that the body "builds itself up in love" (4:16). The measure of maturity is not individual heroism but corporate Christlikeness — "the whole body... grows and builds itself up in love."</div>
+      </div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 5<br>Walk in<br>Love · Light<br>· Wisdom</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">Gen 2:24 — "one flesh" quoted in 5:31 and applied to Christ-church mystery. Exod 20:12 — "honour father and mother" (first commandment with a promise, 6:2). Ps 128 — family flourishing as covenant blessing. Isa 5:20 — woe to those who call light dark and dark light (the contrast of 5:8). Prov 31:30 — character over appearance in marriage.</div>
+        <div class="cc-refs">Song of Songs (the model of love as delight and pursuit) · Hos 3:1 (love the adulteress — the gospel shape of marriage)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">John 3:19–21 — light has come into the world. 1 John 1:5–7 — walk in the light. Rom 13:11–14 — put on Christ, armour of light. Col 3:18–4:1 — parallel household codes. Rev 19:7–9 — the bride of Christ made ready (the marriage metaphor consummated). Titus 2:11–14 — grace teaches us to live soberly.</div>
+        <div class="cc-refs">1 Cor 6:19–20 (body as temple) · 1 Pet 3:1–7 (household parallel)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">5:21 ("submit to one another") is the overlooked verse that frames everything following. The household codes do not stand alone — they are applications of mutual submission in a Spirit-filled community. Husbands: the more demanding text (love as Christ loved = cruciform self-sacrifice). The marriage-as-mystery (5:32) means every marriage is a living sermon on Christ and the church — for better or worse.</div>
+      </div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch. 6<br>Armour ·<br>Prayer ·<br>Stand</div>
+      <div class="chap-cell">
+        <div class="cc-label cc-ot">← OT Roots</div>
+        <div class="cc-text">Isa 59:17 — "He put on righteousness as his breastplate and the helmet of salvation on his head" — Paul's armour is God's own armour from Isaiah, now given to the believer. Isa 52:7 — "beautiful feet of those who bring good news" (Eph 6:15). Ps 91 — the protection of the Most High. Dan 10 — spiritual conflict behind earthly events. Exod 14:13–14 — "stand firm and see the salvation of the LORD."</div>
+        <div class="cc-refs">2 Kgs 6:15–17 (Elisha — more with us than with them) · Josh 1:9 (be strong and courageous)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-nt">NT Echoes →</div>
+        <div class="cc-text">1 Pet 5:8–9 — the devil prowls like a lion; resist him, standing firm. Jas 4:7 — submit to God, resist the devil. Luke 10:17–20 — authority over demons, but rejoice that your name is written. Rev 12:10–11 — overcame by the blood of the Lamb and the word of their testimony. 2 Cor 10:3–5 — weapons not of this world, demolishing strongholds.</div>
+        <div class="cc-refs">John 16:33 (take heart, I have overcome the world) · Rom 8:37 (more than conquerors)</div>
+      </div>
+      <div class="chap-cell">
+        <div class="cc-label cc-theme">Theme Thread</div>
+        <div class="cc-text">The armour passage does not end with armour — it ends with prayer (6:18–20). Prayer is the atmosphere in which the armour operates. Paul's own request is striking: "pray that I may fearlessly make known the mystery of the gospel" — the imprisoned apostle asks for boldness, not release. The letter that began with cosmic blessing (1:3) ends with a soldier in chains asking for courage to speak. The mystery must be proclaimed even from prison.</div>
+      </div>
+    </div>
+
+  </div><!-- /chap-map -->
+
+  <!-- PASSAGE DEEP NOTES -->
+  <div class="section-label">Key Passage Deep Notes — The Eight Texts Every Preacher Needs</div>
+  <div class="deep-grid">
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 1:3–14</div>
+      <div class="dc-title">The Berakah — Blessing God for Every Spiritual Blessing</div>
+      <div class="dc-verse">"Praise be to the God and Father of our Lord Jesus Christ, who has blessed us in the heavenly realms with every spiritual blessing in Christ."</div>
+      <div class="dc-note">One sentence in Greek (vv.3–14). Structure: three stanzas each ending "to the praise of his glory/grace" — Father elects (vv.3–6), Son redeems (vv.7–12), Spirit seals (vv.13–14). The phrase "in the heavenly realms" (ἐν τοῖς ἐπουρανίοις) — the sphere above earthly conflict where the believer is already located. Tense: past (we have been blessed, chosen, predestined) — not future gifts we are waiting for.</div>
+      <div class="dc-note">Key word: ἐκλέγω (eklegō) — "chose us in him before the foundation of the world." The election is in Christ — not abstract, not arbitrary. To be in Christ is to be in the one who was chosen before creation. The sequence: chosen (v.4) → predestined for adoption (v.5) → redemption and forgiveness (v.7) → sealed with the Spirit (v.13). All accomplished; the Spirit's sealing is the present guarantee.</div>
+      <div class="dc-preach">Preaching angle: What does it mean to already possess "every spiritual blessing"? The first prayer (1:15–23) is that they would KNOW what they have. The problem is not poverty — it is ignorance of riches. Preach the gap between what believers possess and what they experience, and call them to know.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 2:1–10</div>
+      <div class="dc-title">Dead in Sins → Made Alive by Grace → Created for Good Works</div>
+      <div class="dc-verse">"But because of his great love for us, God, who is rich in mercy, made us alive with Christ even when we were dead in transgressions — it is by grace you have been saved."</div>
+      <div class="dc-note">"Dead" (νεκρός) — not sick, not struggling, not confused. Corpse-dead. No spiritual capacity, no self-generated movement toward God. The grammar of v.1 is deliberately stark — "and you were dead" — before any verb of divine action intervenes. Then "But God" (v.4) — the two most important words in the passage. Three past-tense verbs: made alive, raised, seated (vv.5–6). All in the aorist — completed, done, fixed.</div>
+      <div class="dc-note">The sequence of vv.8–10 is often misread. v.8–9: not by works. v.10: created FOR good works, prepared in advance. The logical flow: grace produces salvation which produces good works. Good works are the result, never the cause. "The God who saved us without our works then prepared works for us to walk in." Salvation is entirely God's; the life that follows is entirely God's gift — walking in works he already prepared.</div>
+      <div class="dc-preach">Preaching angle: "But God" (v.4) — two words that changed everything. Preach the contrast: the full weight of the "dead in sins" section, then the explosive reversal. The people who feel spiritually dead need to hear that deadness is not the last word — it is the exact condition where resurrection power works.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 2:11–22</div>
+      <div class="dc-title">The Dividing Wall Demolished — One New Humanity</div>
+      <div class="dc-verse">"For he himself is our peace, who has made the two groups one and has destroyed the barrier, the dividing wall of hostility."</div>
+      <div class="dc-note">The "dividing wall" (τὸ μεσότοιχον τοῦ φραγμοῦ) — possibly a reference to the literal stone barrier in the Jerusalem Temple beyond which Gentiles could not pass on pain of death. An inscription from this wall has been found: "Let no Gentile enter within the balustrade... Whoever is caught will be responsible for his subsequent death." Paul says this barrier — physical and theological — has been demolished in the body of Christ. Not modified. Abolished (v.15 — καταργήσας).</div>
+      <div class="dc-note">The result: not two groups in peaceful coexistence but "one new humanity" (ἕνα καινὸν ἄνθρωπον — one new person). The church is a new ethnic category — not Jew, not Gentile, but in Christ. The building metaphor (vv.19–22): joined together, growing into a holy temple. Each local church is a construction site for this cosmic building project.</div>
+      <div class="dc-preach">Preaching angle: What walls still stand in our church? The text does not allow the dividing wall to exist between cultural groups, economic classes, or racial categories in the body of Christ. Preach both the cosmic fact (wall demolished at the cross) and the local application (is our church a demonstration of this?).</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 3:14–21</div>
+      <div class="dc-title">The Second Prayer — Rooted, Grounded, Filled to the Fullness of God</div>
+      <div class="dc-verse">"I pray that you, being rooted and established in love, may have power... to grasp how wide and long and high and deep is the love of Christ — and to know this love that surpasses knowledge."</div>
+      <div class="dc-note">Paul kneels (v.14) — unusual; most prayer in the ancient world was standing. The posture signals urgency and depth. He asks for five things: strengthening in the inner person (v.16), Christ dwelling in the heart through faith (v.17a), rootedness in love (v.17b), comprehension of the four dimensions of Christ's love (v.18), filling to all the fullness of God (v.19). Note the paradox: "to know this love that surpasses knowledge" — the goal is beyond cognitive achievement, only possible through the Spirit's strengthening.</div>
+      <div class="dc-note">The four dimensions: wide (embracing all peoples, Jew and Gentile, the scope of ch.2–3), long (through all time — before creation to consummation), high (raised to God's right hand — the exaltation of 1:20), deep (the descent — incarnation, death, "descended into the lower parts of the earth" 4:9). Christ's love has already mapped the entire universe. There is no corner of human experience it has not entered.</div>
+      <div class="dc-preach">Preaching angle: The doxology (3:20–21) — "immeasurably more than all we ask or imagine." The word ὑπερεκπερισσοῦ (hyperekperissou) appears only here in the NT — "exceeding abundantly above and beyond." Preach that the ceiling of God's ability is infinitely above the floor of our asking. Our problem is not that we ask too much — it is that we ask too little.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 4:1–16</div>
+      <div class="dc-title">Walk Worthy — Unity, Gifts, the Mature Body</div>
+      <div class="dc-verse">"I urge you to walk in a manner worthy of the calling to which you have been called, with all humility and gentleness, with patience, bearing with one another in love."</div>
+      <div class="dc-note">The "therefore" of 4:1 carries all of chapters 1–3. The calling (κλῆσις) was established in eternity (1:4), revealed in grace (2:8), and made known as mystery (3:3). The walk must be worthy of all that. The four virtues of v.2 — humility, gentleness, patience, bearing with one another — are not the foundations of church unity; they are the maintenance of a unity already given ("the unity of the Spirit," v.3 — it exists; we are to keep it). The seven unities of vv.4–6 ground the appeal.</div>
+      <div class="dc-note">The gifts of 4:11 are not spiritual gifts in the 1 Cor 12 sense — they are gifted persons given to the church: apostles, prophets, evangelists, pastors-teachers. Their function: "equip his people for works of service, so that the body of Christ may be built up." The goal: every member doing ministry, growing to "the whole measure of the fullness of Christ" (v.13). The target is corporate maturity, not individual spiritual achievement.</div>
+      <div class="dc-preach">Preaching angle: The church grows "as each part does its work" (v.16). The health of the body depends on every member functioning, not on the performance of professional ministers. Preach that every believer is a minister — the five-fold gifts exist to release the whole church into ministry, not to replace it.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 5:15–21</div>
+      <div class="dc-title">Be Filled with the Spirit — The Driving Power of the Whole Walk</div>
+      <div class="dc-verse">"Do not get drunk on wine, which leads to debaclery. Instead, be filled with the Spirit, speaking to one another with psalms, hymns, and songs from the Spirit."</div>
+      <div class="dc-note">The command "be filled with the Spirit" (πληροῦσθε ἐν πνεύματι) is present passive imperative — "keep being filled," continuously, repeatedly, by the Spirit's agency (passive). The contrast with drunkenness is instructive: both involve being under the control of something beyond yourself. The drunk is controlled by wine; the Spirit-filled person is controlled by the Spirit. The evidence of Spirit-filling: speaking (psalms, hymns), singing, making music, giving thanks, submitting to one another.</div>
+      <div class="dc-note">The fruit of Spirit-filling (vv.19–21) flows directly into the household codes (5:22–6:9). The Spirit-filled life is not primarily mystical — it is expressed in relationships: how spouses treat each other, how children honour parents, how workers serve. The most Spirit-filled room in the letter is the household at peace.</div>
+      <div class="dc-preach">Preaching angle: How do you get filled? Not by trying harder but by yielding — speaking, singing, giving thanks. The filling comes as you orient yourself toward God in worship and toward others in service. The command is to be filled, not to fill yourself. Surrender to the One who fills is the posture.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 5:22–33</div>
+      <div class="dc-title">Marriage as Mystery — The Gospel on Display</div>
+      <div class="dc-verse">"'For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh.' This is a profound mystery — but I am talking about Christ and the church."</div>
+      <div class="dc-note">Paul's logic runs backward from theology to practice, not forward: marriage does not illustrate the gospel; the gospel illuminates what marriage was always designed to be. Gen 2:24 was always pointing to Christ and the church. This is why marriage matters so much — and why its distortion grieves so deeply. The husband as head: kephalē (head) in Paul's usage carries both authority and responsibility; the husband's model is Christ who "gave himself up for her" (v.25). The most demanding instruction in the passage is to the husband.</div>
+      <div class="dc-note">The sanctification language (vv.26–27) is remarkable: Christ cleanses the church "by the washing with water through the word." The husband's role includes a sanctifying function — his leadership should make the wife more holy, not less. The goal: "to present her to himself as a radiant church, without stain or wrinkle." The measure of faithful headship is the holiness of the one led, not the obedience of the one following.</div>
+      <div class="dc-preach">Preaching angle: Every marriage is preaching a sermon. The question is whether it is preaching the gospel or a counterfeit. Preach both the beauty of the design and the weight of the responsibility — especially for husbands, whose model is the self-emptying of the cross.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ephesians 6:10–20</div>
+      <div class="dc-title">The Full Armour of God — Stand in the Victory Already Won</div>
+      <div class="dc-verse">"Finally, be strong in the Lord and in his mighty power. Put on the full armour of God, so that you can take your stand against the devil's schemes."</div>
+      <div class="dc-note">"Be strong in the Lord" — the verb (ἐνδυναμοῦσθε) is passive: be strengthened. Not self-generated power but received power. The same power language as 1:19–20 (the resurrection power). The armour is God's own armour — Isaiah 59:17 shows God himself wearing breastplate and helmet of salvation. The believer puts on what God has already worn. The struggle is "not against flesh and blood" (v.12) — the primary conflict is invisible before it becomes visible. Principalities, powers, world-rulers, spiritual forces — Paul's list corresponds to the hierarchies of the Ephesian magical world.</div>
+      <div class="dc-note">"Stand" (στῆτε) is the dominant verb — repeated in vv.11, 13, 14. The posture is not advance but holding. The ground won by Christ at the cross is what the believer defends. The armour is entirely defensive except the sword (the Word of God). All six pieces protect; only one cuts. This means the primary Christian posture in spiritual warfare is not aggressive conquest but faithful maintenance of a position already won.</div>
+      <div class="dc-preach">Preaching angle: You are not fighting for victory — you are fighting from victory. The armour is given (you put it on; you did not make it). The ground is won (you stand; you do not conquer). The battle is real (Paul is in prison when he writes this). The outcome is certain (Christ is already seated above every power, 1:20–21). Stand.</div>
+    </div>
+
+  </div><!-- /deep-grid -->
+
+  <!-- ADDITIONAL COMMENTARIES -->
+  <div class="section-label">Expanded Commentary Shelf — Pastoral, Pentecostal, and Classic Voices</div>
+  <div class="comm-wide">
+
+    <div class="comm-card">
+      <div class="comm-author">Pastor Chris Oyakhilome</div>
+      <div class="comm-title">Rhapsody of Realities · Your Rights in Christ · The Power of Your Mind · Christ Embassy / BelieversLoveWorld teaching series</div>
+      <span class="comm-tradition trad-preaching">Charismatic Pentecostal · Word of Faith · Global African</span>
+      <div class="comm-point">Pastor Chris's teaching on Ephesians centres almost entirely on the believer's present-tense position "in Christ." On Eph 1:3 — "Every spiritual blessing in heavenly places in Christ Jesus" — he insists this is not future and not conditional: "You have already been blessed with every spiritual blessing. Not some — every. Not when you become holy enough — now. Your job is not to obtain the blessings; it is to recognise that you already possess them."</div>
+      <div class="comm-point">On Eph 2:6 (seated in heavenly places): "Right now, at this moment, you are seated in heavenly places in Christ Jesus — above principalities, above powers, above every name that is named. You are not fighting to get there. You are there. The battle is fought from a position of enthronement, not from the valley looking up." This present-tense positional reality is the foundation of his teaching on authority and spiritual warfare.</div>
+      <div class="comm-point">On Eph 3:16–19 (the four dimensions of love and being filled to all the fullness of God): Pastor Chris teaches that the "width, length, height, and depth" of Christ's love is not a sentimental description but a cosmic boundary marker — Christ's love has mapped the entire universe. "There is no situation, no circumstance, no level of failure or darkness that falls outside the reach of that love." On being filled to all the fullness — "this is your inheritance, not your aspiration."</div>
+      <div class="comm-point">On Eph 6:10–18 (the armour): "You are not wearing the armour to become strong — you wear the armour because you are strong in the Lord. The armour is not for acquiring victory; it is for expressing the victory that is already yours. Put on what God has already provided. Stand where Christ has already placed you."</div>
+      <a href="https://www.christembassy.org" target="_blank" class="source-link">christembassy.org — Christ Embassy / BelieversLoveWorld · Pastor Chris Oyakhilome teaching library [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">David Jeremiah</div>
+      <div class="comm-title">Overcomer: 8 Ways to Live a Life of Unstoppable Strength, Unmovable Faith, and Unbelievable Power (Thomas Nelson, 2018) · The Jeremiah Study Bible · Turning Point Radio Ministry</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Expository-Applicational</span>
+      <div class="comm-point">Jeremiah's "Overcomer" is the most comprehensive popular treatment of Ephesians 6:10–18 in recent years. He develops each piece of armour as both a theological reality and a practical discipline for contemporary life. On the belt of truth (v.14): "In an age of fake news, alternative facts, and endless moral relativism, the believer's first defence is simply the truth. Not your truth. Not my truth. The truth — revealed in the Word of God. Without it, everything else falls apart."</div>
+      <div class="comm-point">On the shield of faith (v.16): "The Roman scutum was large enough to protect the whole body and could interlock with other shields to form a wall. Faith works the same way — it is not a solo weapon. When believers stand together in faith, the arrows that would pierce one are deflected for all. The most powerful prayer meeting is when shields interlock." He emphasises corporate faith as protective, not just individual faith.</div>
+      <div class="comm-point">On Eph 1:3 (every spiritual blessing): "Every spiritual blessing that God has to give has already been given to us in Christ. The question is not whether God has given — he has given everything. The question is whether we have taken hold of what is ours." On Eph 3:20: "God can do immeasurably more than we ask or imagine. The problem is not the ceiling of God's power. The problem is the floor of our asking — we ask too small, we pray too timidly, we expect too little."</div>
+      <div class="comm-point">On the household codes (Eph 5–6): Jeremiah reads them as protective structures — God's design for ordered relationships that shield against cultural chaos. "The family is the basic unit of civilisation. When Paul instructs husbands, wives, children, and workers, he is not enforcing hierarchy — he is protecting the community structures through which love can be expressed and flourished."</div>
+      <a href="https://www.davidjeremiah.org/overcomer" target="_blank" class="source-link">davidjeremiah.org — Overcomer and Turning Point series on Ephesians [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Warren Wiersbe</div>
+      <div class="comm-title">Be Rich: Are You Losing the Things That Money Can't Buy? (Ephesians) — BE Series, David C. Cook, 1976</div>
+      <span class="comm-tradition trad-evangelical">Baptist · Expository-Pastoral</span>
+      <div class="comm-point">Wiersbe's title captures the letter's controlling irony: the believers in Ephesus — living in one of the wealthiest cities in the Roman world — are rich in ways money cannot buy, and Paul wants them to know it. His organising metaphor: "Ephesians 1–3 tells you what you have in your spiritual bank account. Ephesians 4–6 tells you how to draw on it." The book is written for the average church member who suspects the Christian life should be more than they are experiencing.</div>
+      <div class="comm-point">On Eph 2:8–9: "Salvation is not a reward for the righteous — it is a gift for the guilty. You do not earn a gift; you receive it. The moment you try to earn it, it ceases to be a gift and becomes a wage. And wages you can lose; a gift, once given, is yours." Wiersbe is particularly good at translating Greek concepts into accessible images without dumbing them down.</div>
+      <div class="comm-point">On the armour (Eph 6): Wiersbe notes that the Christian soldier does not manufacture his own weapons. "The Roman soldier did not go to the blacksmith and design his own armour — he was issued it by the army. The Christian does not invent spiritual resources — he receives them from God and uses them. The failure to stand is never God's failure to supply — it is the soldier's failure to take up what was provided."</div>
+      <a href="https://www.davidccook.org/catalog/be-rich-ephesians/" target="_blank" class="source-link">davidccook.org — Be Rich: Are You Losing the Things That Money Can't Buy? [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">F. F. Bruce</div>
+      <div class="comm-title">The Epistles to the Colossians, to Philemon, and to the Ephesians (NICNT, Eerdmans, 1984)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical · NT Scholar</span>
+      <div class="comm-point">Bruce's NICNT volume treats Ephesians alongside its companion letters, allowing illuminating comparison throughout. He holds Pauline authorship while engaging seriously with the critical arguments. His introduction to Ephesians argues that "at Ephesus" (1:1) was absent from the original and that the letter circulated among multiple churches — making it a deliberate compendium of Pauline theology rather than a situational letter.</div>
+      <div class="comm-point">On 1:9–10 (anakephalaiōsasthai — to recapitulate/unite): Bruce argues this verb carries the full weight of Irenaeus's concept of recapitulation — Christ as the second Adam who sums up and restores what the first Adam scattered. "The whole creation, which was fragmented and disordered by sin, is to be gathered together under Christ as head — not annihilated but restored to its intended unity and harmony." This makes Ephesians' scope cosmic and the gospel's goal re-creation, not mere escape.</div>
+      <div class="comm-point">On the mystery of Eph 3: Bruce situates Paul's disclosure within the wider Pauline mystery-motif (Rom 16:25, Col 1:26–27). The mystery is not that Israel would be saved but that Gentiles would be included as equals — "fellow heirs, members of the same body, sharers in the promise" (3:6). This was not merely unexpected — it was hidden in God from before the ages (3:9), accessible only through the Spirit's revelation.</div>
+      <a href="https://www.eerdmans.com/products/the-epistles-to-the-colossians-to-philemon-and-to-the-ephesians-nicnt.html" target="_blank" class="source-link">eerdmans.com — Colossians, Philemon, Ephesians, NICNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Tony Evans</div>
+      <div class="comm-title">Tony Evans' Ephesians Commentary · Kingdom Authority (2018) · Sermons at Oak Cliff Bible Fellowship · The Urban Alternative teaching library</div>
+      <span class="comm-tradition trad-evangelical">Reformed Baptist · Kingdom Theology · African-American</span>
+      <div class="comm-point">Tony Evans reads Ephesians through his "kingdom" framework — the church as the visible outpost of God's rule on earth. On Eph 2:6 (seated in heavenly places): "You carry kingdom authority not because of who you are but because of whose you are. A citizen of the United States does not need to be powerful personally to carry the weight of that nation's authority. They carry it by virtue of their citizenship. You are seated with Christ — and that changes what you can do on earth."</div>
+      <div class="comm-point">On the armour (Eph 6): Evans uses the image of a football team. "A football player doesn't go onto the field deciding whether to wear equipment. The decision was made in the locker room. You show up equipped, or you don't show up. Too many Christians are entering spiritual battles in street clothes — and then wondering why they keep getting hurt. Put on the full armour. Every piece. Every day." He emphasises the daily discipline of conscious appropriation of each piece.</div>
+      <div class="comm-point">On Eph 2:11–22 (the dividing wall): Evans, writing as an African-American pastor in Dallas, applies this with particular force to racial reconciliation. "The church of Jesus Christ is the only institution in America — or anywhere — that has a theological mandate to cross the racial divide. Not as a social programme. As a demonstration of the gospel. If the church does not look like Ephesians 2, we are preaching a different gospel from Paul's."</div>
+      <a href="https://tonyevans.org/resource-library/" target="_blank" class="source-link">tonyevans.org — The Urban Alternative, Tony Evans resource library [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Hodge</div>
+      <div class="comm-title">A Commentary on the Epistle to the Ephesians (1856; Banner of Truth reprint · Free at CCEL)</div>
+      <span class="comm-tradition trad-reformed">Old Princeton Reformed · Classic Exegetical</span>
+      <div class="comm-point">Hodge's 19th-century commentary remains one of the best technical Reformed treatments of Ephesians available, and it is free online (CCEL). His strength is in the doctrine of grace (chs.1–2) and in precise syntactical analysis. On Eph 2:8: "This passage asserts not merely that faith is the means of salvation, but that faith itself is the gift of God... the faith by which we embrace Christ is not something we produce out of our own strength — it is the fruit of divine operation in the soul. To add human merit at any point is to overthrow the entire structure of grace."</div>
+      <div class="comm-point">On Eph 1:4 (election): Hodge argues strongly for individual unconditional election — "chosen before the foundation of the world, not because God foresaw we would be holy, but that we should be holy. Holiness is the design of election, not its ground." He carefully distinguishes election unto salvation from the broader election of Israel as a nation, arguing Paul has individual persons in view throughout the berakah.</div>
+      <div class="comm-point">On Eph 3:18 (the four dimensions): Hodge argues the four dimensions are not about the cross specifically but about Christ's love in its full scope — "broad enough to embrace all men, long enough to extend through all time, deep enough to reach the most sunken, high enough to exalt to glory." Each dimension corresponds to an aspect of the redemptive work and its reach. His treatment of the second prayer remains one of the most devotionally rich sections of the commentary.</div>
+      <a href="https://www.ccel.org/ccel/hodge/ephesians.html" target="_blank" class="source-link">ccel.org — A Commentary on the Epistle to the Ephesians, Charles Hodge — free online [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-wide -->
 
   <!-- THEN → NOW -->
   <div class="then-now">
