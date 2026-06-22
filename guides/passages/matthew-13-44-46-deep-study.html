@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew 13:44–46 — Treasure & Pearl Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.06em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Caveat', cursive; font-size: 0.85rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4a30a0; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout { border-left: 5px solid #6c4bbf; background: #f5f2fc; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.65; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #6c4bbf; margin-top: 8px; font-weight: 700; }
+
+  /* PLACEMENT */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.88rem; color: #333; line-height: 1.45; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.3rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.78rem; color: #555; line-height: 1.4; }
+  .word-translations { font-size: 0.7rem; color: #888; margin-top: 6px; font-style: italic; }
+
+  /* TWIN PARABLE COMPARE */
+  .twin-panel { border: 2.5px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 18px 20px; margin: 4px 0 24px; }
+  .twin-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #d47c1a; margin-bottom: 4px; }
+  .twin-sub { font-size: 0.7rem; color: #888; font-style: italic; margin-bottom: 12px; }
+  .twin-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .twin-col-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 5px; }
+  .twin-text { font-size: 0.8rem; color: #333; line-height: 1.42; }
+  .twin-key { margin-top: 12px; border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.8rem; color: #444; line-height: 1.4; font-style: italic; }
+
+  /* TWO READINGS — TENSION */
+  .tension-strip { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .ts-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .ts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .ts-col-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 6px; }
+  .ts-col.belief .ts-col-label { color: #3b6fd4; }
+  .ts-col.christ .ts-col-label { color: #2e8a4a; }
+  .ts-headline { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #f5f0e8; margin-bottom: 8px; }
+  .ts-point { font-size: 0.78rem; color: #ccc; line-height: 1.4; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid; }
+  .ts-col.belief .ts-point { border-color: #3b6fd4; }
+  .ts-col.christ .ts-point { border-color: #2e8a4a; }
+  .ts-resolution { margin-top: 12px; padding-top: 12px; border-top: 1px solid #333; font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; border-radius: 3px 0 0 3px; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #6c4bbf; }
+  .beat.b2 .beat-num { background: #c0392b; }
+  .beat.b3 .beat-num { background: #2e8a4a; }
+  .beat.b1 .beat-body { border-color: #6c4bbf; }
+  .beat.b2 .beat-body { border-color: #c0392b; }
+  .beat.b3 .beat-body { border-color: #2e8a4a; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 2px; }
+  .beat.b1 .beat-ref { color: #6c4bbf; }
+  .beat.b2 .beat-ref { color: #c0392b; }
+  .beat.b3 .beat-ref { color: #2e8a4a; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.8rem; color: #444; line-height: 1.4; }
+  .ot-quote { font-style: italic; color: #555; font-size: 0.78rem; margin-top: 5px; border-left: 2px solid #d47c1a; padding-left: 8px; }
+
+  /* COMMENTARY SHELF */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-evangelical  { background: #3b6fd4; color: #fff; }
+  .trad-preaching    { background: #c0392b; color: #fff; }
+  .trad-pastoral     { background: #2e8a4a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .trad-patristic    { background: #8a6d2a; color: #fff; }
+  .read-tag { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin: 0 0 8px 5px; font-weight: 700; }
+  .read-christ { background: #2e8a4a; color: #fff; }
+  .read-belief { background: #3b6fd4; color: #fff; }
+  .read-both   { background: #d47c1a; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.86rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.4; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.92rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .twin-cols, .ts-row, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">Matthew 13:44–46</div>
+  <div class="header-title">The Hidden Treasure &amp; the Pearl of Great Price — Who is the "man"?</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="matthew-13-44-46-study.html" class="companion-link">⊕ Simple one-page version</a>
+  </div>
+
+  <!-- PASSAGE -->
+  <div class="section-label">Passage — Matthew 13:44–46 (NIV)</div>
+  <div class="passage-callout">
+    <div class="pc-label">The Two Twin Parables</div>
+    <div class="pc-text">
+      "The kingdom of heaven is like treasure hidden in a field. When a man found it, he hid it again, and then in his joy went and sold all he had and bought that field.<br><br>
+      "Again, the kingdom of heaven is like a merchant looking for fine pearls. When he found one of great value, he went away and sold everything he had and bought it."
+    </div>
+    <div class="pc-ref">Matthew 13:44–46 (NIV)</div>
+  </div>
+
+  <!-- PLACEMENT -->
+  <div class="placement">
+    <strong>Placement in Matthew:</strong> These are the fifth and sixth of the seven kingdom parables in Matthew 13 — the third of Matthew's five great discourses. They form a matched pair at the centre of the chapter, set between the Mustard Seed/Leaven (the kingdom's growth) and the Dragnet (the kingdom's final sorting). Crucially, just six verses earlier (13:38) Jesus interprets the Parable of the Weeds and states plainly: <em>"the field is the world."</em> That single line is the strongest interpretive control on the question "who is the man?" — because if the field is the world, the man who buys the whole field to obtain the treasure hidden in it looks far more like the world's Redeemer than like an individual seeker buying his own salvation.
+  </div>
+
+  <!-- TWIN PANEL -->
+  <div class="section-label">The Pair — Same Shape, One Key Difference</div>
+  <div class="twin-panel">
+    <div class="twin-title">Why Jesus Tells It Twice</div>
+    <div class="twin-sub">Twin parables in Matthew reinforce a single point from two angles. The doubling is emphasis, not repetition.</div>
+    <div class="twin-cols">
+      <div>
+        <div class="twin-col-label">Treasure (v.44) — Found by Surprise</div>
+        <div class="twin-text">A labourer, probably a hired hand ploughing a field he does not own, strikes buried treasure <em>by accident</em>. In a land repeatedly overrun by armies, burying valuables was common (cf. the buried talent, Matt 25:25). He has not been looking. The discovery is sheer grace — it falls on him.</div>
+      </div>
+      <div>
+        <div class="twin-col-label">Pearl (vv.45–46) — Found by Searching</div>
+        <div class="twin-text">A wholesale merchant (<em>emporos</em>) is a professional, <em>deliberately seeking</em> fine pearls. Pearls were among the most prized treasures of the ancient world — Pliny ranked them above all gems. This man knows value when he sees it, and the supreme pearl ends his search.</div>
+      </div>
+    </div>
+    <div class="twin-key">The shared core in both: a discovery of supreme worth → the selling of <strong>everything</strong> → the buying of the prize, all driven by <strong>joy</strong>. The difference (accident vs. search) is exactly what lets the pair be read two ways — and is why the "who is the man?" question is genuinely open.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Five Key Terms</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">ἀγοράζω</div>
+      <div class="word-translit">agorazō</div>
+      <span class="word-ref-badge">v.44, 46 — "bought"</span>
+      <div class="word-gloss">To buy / purchase / redeem</div>
+      <div class="word-note">The hinge word of the whole debate. From <em>agora</em> (marketplace). The NT repeatedly uses it for Christ purchasing his people: "you were <em>bought</em> with a price" (1 Cor 6:20; 7:23), "Christ <em>redeemed</em> us" (Gal 3:13), and the redeemed are those "<em>purchased</em> from the earth" (Rev 5:9; 14:3–4). The fact that the man <em>buys</em> tilts the parable toward Christ — and away from the believer, who cannot buy salvation.</div>
+      <div class="word-translations">ESV/NIV: "bought" · KJV: "buyeth"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἀγρός</div>
+      <div class="word-translit">agros</div>
+      <span class="word-ref-badge">v.44 — "field"</span>
+      <div class="word-gloss">Field / open country / the world</div>
+      <div class="word-note">The same word Jesus defines in 13:38: "the field (<em>agros</em>) is the world (<em>kosmos</em>)." This is decisive context. If the field is the world, the man buys the <em>entire</em> world to secure the treasure hidden in it — which fits Christ redeeming the world to win his people, far better than a believer buying a field he wants for himself.</div>
+      <div class="word-translations">ESV/NIV: "field" · 13:38 "the field is the world"</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">θησαυρός</div>
+      <div class="word-translit">thēsauros</div>
+      <span class="word-ref-badge">v.44 — "treasure"</span>
+      <div class="word-gloss">Treasure / stored-up wealth</div>
+      <div class="word-note">In the OT, Israel is God's <em>segullah</em> — his "treasured possession" (Exod 19:5; Deut 7:6; Mal 3:17). The image of God's people as his hidden treasure has deep roots. Read this way, the treasure is the church/the elect, hidden in the field of the world, which Christ comes to recover. The same root gives "treasure in heaven" (Matt 6:21).</div>
+      <div class="word-translations">ESV/NIV: "treasure" · LXX Exod 19:5 segullah</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">μαργαρίτης</div>
+      <div class="word-translit">margaritēs</div>
+      <span class="word-ref-badge">vv.45–46 — "pearl"</span>
+      <div class="word-gloss">Pearl — singular, supreme</div>
+      <div class="word-note">A pearl is unique among treasures: it is organic, formed slowly inside a living oyster around a wound or irritant, and cannot be cut or improved — only found whole. Many of the Fathers saw the church born from Christ's pierced side as the one pearl, costly and singular. Note: it is <em>one</em> pearl, not many — a single, unified, beloved people.</div>
+      <div class="word-translations">ESV/NIV: "pearl" · cf. Rev 21:21 pearly gates</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">χαρά</div>
+      <div class="word-translit">chara</div>
+      <span class="word-ref-badge">v.44 — "in his joy"</span>
+      <div class="word-gloss">Joy / gladness</div>
+      <div class="word-note">The motive of the sale is joy, not grim sacrifice. He sells "in his joy." This single word echoes Hebrews 12:2 — "for the <em>joy</em> set before him he endured the cross." On the Christ reading, the joy that drove Calvary is the joy of this man buying the field. On the believer reading, it is the gladness that makes radical discipleship feel like gain, not loss (cf. Phil 3:7–8).</div>
+      <div class="word-translations">ESV/NIV: "in his joy" · cf. Heb 12:2</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- TWO READINGS — TENSION -->
+  <div class="section-label">The Core Question — Who is the "Man"?</div>
+  <div class="tension-strip">
+    <div class="ts-title">Two Readings of the Buyer</div>
+    <div class="ts-row">
+      <div class="ts-col belief">
+        <div class="ts-col-label">Reading A — The Man is the Believer</div>
+        <div class="ts-headline">The kingdom is worth everything you have</div>
+        <div class="ts-point">Intuitive and common in devotional preaching: when you truly see the kingdom's worth, you gladly give up all to gain it.</div>
+        <div class="ts-point">Fits Paul "counting all things loss" for Christ (Phil 3:7–8) and the call to forsake all (Luke 14:33).</div>
+        <div class="ts-point">Honours real human response — repentance, discipleship, wholehearted commitment.</div>
+        <div class="ts-point"><strong>Problem 1:</strong> You cannot <em>buy</em> the kingdom — it is free (Isa 55:1; Rom 6:23; Eph 2:8–9). A purchase sits awkwardly with grace.</div>
+        <div class="ts-point"><strong>Problem 2:</strong> "None seeks for God" (Rom 3:11) — yet this reading makes the human the worthy seeker.</div>
+      </div>
+      <div class="ts-col christ">
+        <div class="ts-col-label">Reading B — The Man is Christ</div>
+        <div class="ts-headline">Christ gave all to buy his people</div>
+        <div class="ts-point">The treasure / pearl = the church, the redeemed; the buyer = Christ, who "sold all he had" (Phil 2:7) to buy them.</div>
+        <div class="ts-point">Anchored in 13:38: "the field is the world" — he buys the whole world to secure the treasure in it.</div>
+        <div class="ts-point">"For the joy set before him" (Heb 12:2) maps exactly onto the man who buys "in his joy."</div>
+        <div class="ts-point">The price is his blood (Acts 20:28; 1 Pet 1:18–19; Rev 5:9) — <em>agorazō</em> is the redemption verb.</div>
+        <div class="ts-point">Keeps grace intact: <em>he</em> pays; <em>we</em> are the treasure he counted worth everything.</div>
+      </div>
+    </div>
+    <div class="ts-resolution">
+      <strong>The judgment of this study:</strong> Reading B (Christ as buyer) is the more defensible, for three reasons — (1) Matthew 13:38 already tells us the field is the world; (2) the gospel does not let anyone purchase the kingdom; (3) "sold all… for joy" maps cleanly onto Philippians 2 and Hebrews 12:2. But Reading A is not <em>false</em> — the kingdom truly is worth everything, and that call is genuinely taught in Scripture; it is simply better drawn from Luke 14:33 or Philippians 3 than from the buyer in these two parables. The best sermon holds both: <em>the kingdom is so valuable a person would give everything for it — and the deeper wonder is that Christ already did, and you were the treasure he bought.</em>
+    </div>
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Three Beats (Identical in Both)</div>
+  <div class="structure-map">
+
+    <div class="beat b1">
+      <div class="beat-num">1</div>
+      <div class="beat-body">
+        <div class="beat-ref">The Discovery</div>
+        <div class="beat-title">Something of Supreme Worth is Found</div>
+        <div class="beat-desc">Treasure in a field; the one perfect pearl. In both, the value of the find is so far beyond everything else that comparison ends. On the Christ reading: the Son sees his people and counts them worth everything. On the believer reading: the soul finally sees what the kingdom is.</div>
+      </div>
+    </div>
+
+    <div class="beat b2">
+      <div class="beat-num">2</div>
+      <div class="beat-body">
+        <div class="beat-ref">The Cost</div>
+        <div class="beat-title">He Sells ALL That He Has</div>
+        <div class="beat-desc">No half-measures, no negotiation — total divestment. "Sold all he had" / "sold everything." On the Christ reading this is Philippians 2:7, the self-emptying to the point of the cross. On the believer reading it is Luke 14:33, the cost of discipleship. The word "all" is absolute either way.</div>
+      </div>
+    </div>
+
+    <div class="beat b3">
+      <div class="beat-num">3</div>
+      <div class="beat-body">
+        <div class="beat-ref">The Purchase — driven by joy</div>
+        <div class="beat-title">He Buys It</div>
+        <div class="beat-desc">The transaction completes "in his joy." The cost is real but never grudging — it is gladly paid because the prize is worth infinitely more. This joy is the emotional engine of both parables and the strongest tie to Hebrews 12:2.</div>
+      </div>
+    </div>
+
+  </div><!-- /structure-map -->
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">Biblical Background — God's "Treasured Possession"</div>
+  <div class="ot-grid">
+
+    <div class="ot-card">
+      <div class="ot-ref">Exodus 19:5 · Deut 7:6 · 26:18</div>
+      <div class="ot-title">Israel as God's Segullah</div>
+      <div class="ot-note">God repeatedly calls Israel his <em>segullah</em> — "treasured possession," the personal treasure a king keeps for himself above all his holdings. This is the deep OT root for reading the treasure as <em>God's people</em>, not as an abstract "kingdom." The treasure in the field already has a biblical identity: it is the covenant people.</div>
+      <div class="ot-quote">"You will be my treasured possession out of all nations." — Exod 19:5</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Malachi 3:17</div>
+      <div class="ot-title">"They Will Be Mine… My Treasured Possession"</div>
+      <div class="ot-note">In the very last book of the OT, God promises that on the day he acts, the faithful "will be mine… my treasured possession (<em>segullah</em>)." The hope that God will one day gather and claim his hidden treasure stands directly behind the parable of a man who buys a field to recover the treasure in it.</div>
+      <div class="ot-quote">"They will be my treasured possession… I will spare them." — Mal 3:17</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">1 Peter 2:9 · Titus 2:14</div>
+      <div class="ot-title">The Church as the Purchased People</div>
+      <div class="ot-note">The NT applies the same language to the church: "a people for his own possession" (1 Pet 2:9), "a people that are his very own" whom Christ "gave himself to redeem" (Titus 2:14). The treasure motif lands on the redeemed community — bought at cost, treasured by God.</div>
+      <div class="ot-quote">"…a people for his own possession." — 1 Pet 2:9</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 53:11 · Hebrews 12:2</div>
+      <div class="ot-title">The Joy That Drove the Cost</div>
+      <div class="ot-note">"Out of the anguish of his soul he shall see and be satisfied" (Isa 53:11); "for the joy set before him he endured the cross" (Heb 12:2). The buyer's joy in v.44 is not incidental — it matches the scriptural portrait of a Redeemer who paid the ultimate price gladly, for the sake of those he was winning.</div>
+      <div class="ot-quote">"For the joy set before him he endured the cross." — Heb 12:2</div>
+    </div>
+
+  </div><!-- /ot-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf — Both Readings Represented</div>
+  <div class="comm-shelf">
+
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span><span class="read-tag read-belief">Reading A</span>
+      <div class="comm-point">France reads the man as the disciple and resists allegorising every detail. The point of the pair is the <em>overwhelming worth</em> of the kingdom and the wholehearted, glad response it demands — the selling of all is not a transaction earning salvation but a picture of total reorientation around the kingdom's supreme value.</div>
+      <div class="comm-point">On the accident-vs-search contrast: France notes the pair deliberately covers both the person who stumbles on the kingdom unawares and the lifelong seeker — so that no one is excluded by how they came to it.</div>
+      <a href="https://www.eerdmans.com/9780802825018/the-gospel-of-matthew/" target="_blank" class="source-link">eerdmans.com — Matthew, NICNT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">Matthew (Expositor's Bible Commentary, 1984)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical</span><span class="read-tag read-belief">Reading A</span>
+      <div class="comm-point">Carson argues the buyer is the person who grasps the kingdom's worth; the "selling all" expresses the radical, joyful renunciation discipleship requires. He cautions strongly against the Christ-buys-us allegory on the grounds that it makes the kingdom something Christ <em>purchases</em> rather than something he <em>brings</em> — and risks confusing the parable's plain thrust.</div>
+      <div class="comm-point">On joy: Carson stresses that the renunciation is glad, not reluctant — "the man is so happy he can hardly believe his good fortune." The kingdom is gain, not deprivation.</div>
+      <a href="https://www.zondervan.com/9780310531951/matthew/" target="_blank" class="source-link">zondervan.com — Matthew, EBC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Sermons / The Treasure Hid in the Field (1890s)</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span><span class="read-tag read-christ">Reading B</span>
+      <div class="comm-point">Spurgeon preaches the man as <strong>Christ</strong>: "Who is the merchantman? It is the Lord Jesus… He sold all that He had to buy us." The treasure and the pearl are the church, and the price is Calvary. He delights that we were valued so highly that the Son emptied heaven to obtain us.</div>
+      <div class="comm-point">He also preached the believer reading on other occasions — for Spurgeon both are true, but the Christ reading is the deeper and more humbling, because it makes <em>us</em> the prize rather than the purchaser.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Sermon archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Nolland</div>
+      <div class="comm-title">The Gospel of Matthew (NIGTC, 2005)</div>
+      <span class="comm-tradition trad-critical">Critical / Exegetical</span><span class="read-tag read-belief">Reading A</span>
+      <div class="comm-point">Nolland anchors the pair in the response of the hearer: the kingdom so eclipses all competing values that letting go of everything else becomes the only rational, joyful choice. He treats the two parables as a unit emphasising the surpassing worth that reorders a life.</div>
+      <div class="comm-point">He observes the parables say nothing about <em>earning</em> — the "buying" is a vivid picture of cost and commitment within the story world, not a doctrine of purchased salvation; pressing the economics too hard distorts the genre.</div>
+      <a href="https://www.eerdmans.com/9780802823892/the-gospel-of-matthew/" target="_blank" class="source-link">eerdmans.com — Matthew, NIGTC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Tim Keller</div>
+      <div class="comm-title">King's Cross / Preaching the Parables</div>
+      <span class="comm-tradition trad-reformed">Reformed · Pastoral</span><span class="read-tag read-both">Both — held together</span>
+      <div class="comm-point">Keller's signature move: read it first as Reading A, then turn it. Yes, Jesus is the treasure worth selling all to gain — but the gospel twist is that "Jesus is the one who sold <em>everything</em> he had to get <em>you</em>. You were the treasure he saw and the pearl he bought with his blood." Grace, not effort, is the engine.</div>
+      <div class="comm-point">He warns that if you preach only Reading A, you produce anxious strivers; the relief comes when the hearer realises they are the bought treasure, not the buyer who must somehow afford the kingdom.</div>
+      <a href="https://gospelinlife.com/" target="_blank" class="source-link">gospelinlife.com — Keller sermons [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Augustine &amp; the Fathers</div>
+      <div class="comm-title">Patristic readings (Tertullian, Augustine, Gregory)</div>
+      <span class="comm-tradition trad-patristic">Patristic</span><span class="read-tag read-christ">Reading B</span>
+      <div class="comm-point">A strong early stream read Christ as the merchant and the church as the one pearl, often noting the pearl's formation within a wounded, living shell as an image of the church born from Christ's pierced side. The "selling of all" was read as the incarnation and the cross.</div>
+      <div class="comm-point">Caution: the Fathers freely allegorised, and not every detail they pressed (the precise identity of field, treasure, pearl) is warranted by the text. Their instinct that the buyer is Christ, however, aligns with 13:38 and the <em>agorazō</em> word-field.</div>
+      <a href="https://www.ccel.org/" target="_blank" class="source-link">ccel.org — Church Fathers (CCEL) [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-shelf -->
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Doesn't "the field is the world" (13:38) settle it for the Christ reading?</div>
+      <div class="pressure-a">It is the single strongest argument for Reading B, and it comes from Jesus' own lips in the same chapter. If the field is the world, the buyer purchases the <em>whole</em> world to obtain the treasure hidden in it — which fits Christ redeeming the world to secure his people far better than an individual buying a field he personally wants. The honest counter: Jesus interprets the <em>weeds</em> parable in 13:38, not necessarily these two; parables can reuse imagery differently. But the burden of proof sits on anyone who wants "field" to mean something different just a few verses later.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. If we cannot buy salvation, how can the believer be the buyer?</div>
+      <div class="pressure-a">This is Reading A's deepest problem. Scripture is emphatic that salvation is free and unpurchasable (Isa 55:1; Rom 6:23; Eph 2:8–9). Defenders of Reading A answer that the "buying" is not a price paid <em>to God</em> but a picture within the story of total cost and commitment — the same way Jesus elsewhere demands we "count the cost" (Luke 14:28–33). The "selling of all" is surrender, not payment. That is coherent — but it requires reading the purchase non-literally, which is precisely the move that makes Reading B (where the buyer really does pay a real price) feel more natural to the imagery.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Does the accident/search difference between the two parables matter?</div>
+      <div class="pressure-a">Yes, and it is often missed. The treasure is found by a man not looking for it (grace breaking in unbidden); the pearl is found by a lifelong professional seeker. On Reading A this beautifully covers both conversion stories — the surprised and the searching. On Reading B the nuance shifts: Christ "stumbles" on no one, so the pair is better read as two angles on the <em>same</em> redeeming act rather than two types of buyer. The difference is real either way, and a good sermon names it rather than flattening the two parables into one.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. Is it cheating to preach both readings at once?</div>
+      <div class="pressure-a">No — provided you order them rightly. Preach Reading A as the surface call (the kingdom is worth everything), then turn to Reading B as the deeper ground (you could never afford it, but Christ already paid — and you were the treasure). This is Keller's pattern, and it guards against two errors: legalism (if only Reading A) and passivity (if only Reading B). The text's own joy-language and <em>agorazō</em> support the move. What you should <em>not</em> do is claim the text unambiguously teaches only one; the "man" is genuinely contested, and saying so is more honest than false certainty.</div>
+    </div>
+
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Same chapter · Jesus' key</div>
+      <div class="xref-ref">Matthew 13:38</div>
+      <div class="xref-note">"The field is the world." Jesus' own interpretation of field — the controlling context for "who buys the field."</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Exodus 19:5 · Mal 3:17</div>
+      <div class="xref-note">God's people as his <em>segullah</em>, his "treasured possession." The treasure already has a biblical identity.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The buyer's price</div>
+      <div class="xref-ref">Acts 20:28 · 1 Pet 1:18–19</div>
+      <div class="xref-note">The church "obtained with his own blood"; redeemed "with the precious blood of Christ." The purchase price of the field.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The buyer's joy</div>
+      <div class="xref-ref">Hebrews 12:2 · Phil 2:7</div>
+      <div class="xref-note">"For the joy set before him he endured the cross"; he "emptied himself." The man who sold all, in his joy.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Reading A's home</div>
+      <div class="xref-ref">Luke 14:33 · Phil 3:7–8</div>
+      <div class="xref-note">"Any of you who does not give up everything…"; Paul counts all "loss" for Christ. Where the disciple-cost theme is taught directly.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The redeemed treasure</div>
+      <div class="xref-ref">1 Pet 2:9 · Titus 2:14 · Rev 5:9</div>
+      <div class="xref-note">A "people for his own possession," redeemed by his blood, "purchased (<em>agorazō</em>) for God from every tribe." The treasure named.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Hearers</div>
+        <div class="tn-text">A Galilean crowd who knew that treasure really was buried in fields during invasions, and that a single great pearl could cost a fortune. They heard a story about a once-in-a-lifetime find worth liquidating everything to secure. Against the backdrop of Israel as God's "treasured possession," the more theologically alert would have caught the echo: God has always been the one who treasures and gathers a people.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">We instinctively make ourselves the hero of every parable — the seeker, the buyer, the one who gets it right. These twin parables resist that. Read at their deepest, they put us in the unfamiliar position of being the <em>prize</em>, not the purchaser — the treasure Christ saw, the pearl he bought at the cost of everything. That reframes both our worth (we are treasured) and our security (the price is already paid).</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: When I read these parables, do I see myself as the one who must somehow afford the kingdom — or as the treasure Christ already gave everything to buy?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The kingdom is so valuable that a person would give everything for it — and the deeper wonder is that Christ already did, and you were the treasure he bought."</div>
+    <div class="verdict-ref">Matthew 13:44 — "in his joy he went and sold all he had and bought that field." The most defensible reading: the man is Christ; the treasure is you.</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
