@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ezekiel 47:1–12 — The River & The Four Depths</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.04em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Caveat', cursive; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
+  .companion-link:hover { color: #1c5c30; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; line-height: 1.65; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
+
+  /* PLACEMENT */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.88rem; color: #333; line-height: 1.45; }
+
+  /* THE DEPTH LADDER — HERO */
+  .depth-hero { margin: 4px 0 16px; }
+  .depth-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .depth-col { border: 2px solid #2e8a4a; border-radius: 3px; background: #fff; overflow: hidden; display: flex; flex-direction: column; }
+  .depth-head { background: #2e8a4a; color: #fff; text-align: center; padding: 8px 6px; }
+  .depth-stage-num { font-family: 'Special Elite', serif; font-size: 0.7rem; letter-spacing: 0.1em; opacity: 0.85; }
+  .depth-stage-name { font-family: 'Special Elite', serif; font-size: 1rem; }
+  .depth-measure { font-size: 0.66rem; color: rgba(255,255,255,0.85); margin-top: 2px; }
+  /* water fill visual */
+  .depth-vis { position: relative; height: 110px; background: linear-gradient(#eaf6ef, #f5f0e8); border-bottom: 1px solid #cde3d4; }
+  .depth-water { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(#6fc28d, #3a9c63); opacity: 0.9; }
+  .d1 .depth-water { height: 18%; }
+  .d2 .depth-water { height: 42%; }
+  .d3 .depth-water { height: 66%; }
+  .d4 .depth-water { height: 100%; }
+  .depth-figure { position: absolute; left: 50%; bottom: 4px; transform: translateX(-50%); font-size: 1.5rem; z-index: 2; }
+  .depth-greek { text-align: center; padding: 8px 8px 4px; }
+  .depth-heb { font-size: 1.15rem; color: #2e8a4a; font-weight: 700; direction: rtl; }
+  .depth-translit { font-size: 0.6rem; color: #888; font-style: italic; }
+  .depth-body { padding: 6px 11px 12px; }
+  .depth-mean { font-size: 0.74rem; color: #444; line-height: 1.36; }
+  .depth-caption { font-size: 0.78rem; color: #555; font-style: italic; border-left: 3px solid #2e8a4a; padding: 8px 12px; margin-top: 12px; background: #edf8f1; line-height: 1.45; }
+
+  /* MIRACLE BOX */
+  .miracle-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .mb-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 8px; }
+  .mb-text { font-size: 0.82rem; color: #ccc; line-height: 1.5; }
+  .mb-text strong { color: #6fc28d; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-heb { font-size: 1.35rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; direction: rtl; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.78rem; color: #555; line-height: 1.4; }
+
+  /* STAGES INTERPRETED */
+  .stages-map { margin: 4px 0 24px; }
+  .stage { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .stage-tag { width: 92px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-family: 'Special Elite', serif; color: #fff; border-radius: 3px 0 0 3px; padding: 6px; }
+  .stage-tag .st-d { font-size: 0.95rem; }
+  .stage-tag .st-m { font-size: 0.58rem; opacity: 0.85; margin-top: 2px; }
+  .stage-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .stage.s1 .stage-tag { background: #9bd3af; } .stage.s1 .stage-body { border-color: #9bd3af; }
+  .stage.s2 .stage-tag { background: #6fc28d; } .stage.s2 .stage-body { border-color: #6fc28d; }
+  .stage.s3 .stage-tag { background: #3a9c63; } .stage.s3 .stage-body { border-color: #3a9c63; }
+  .stage.s4 .stage-tag { background: #1c6b3f; } .stage.s4 .stage-body { border-color: #1c6b3f; }
+  .stage-title { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .stage-desc { font-size: 0.82rem; color: #444; line-height: 1.44; }
+  .stage-desc strong { color: #1c6b3f; }
+
+  /* HEALING GRID */
+  .heal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .heal-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 13px 14px; }
+  .heal-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2e8a4a; margin-bottom: 3px; }
+  .heal-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .heal-note { font-size: 0.8rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY SHELF */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-evangelical  { background: #3b6fd4; color: #fff; }
+  .trad-preaching    { background: #c0392b; color: #fff; }
+  .trad-pastoral     { background: #2e8a4a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.86rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.4; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .heal-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .depth-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid, .depth-row { grid-template-columns: 1fr; }
+    .stage-tag { width: 74px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">Ezekiel 47:1–12</div>
+  <div class="header-title">The River From the Temple — Ankle, Knee, Waist, and Waters to Swim In</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../visuals/ezekiel-panel.html" class="companion-link">⊕ Ezekiel book overview (deep dive)</a>
+  </div>
+
+  <!-- PASSAGE -->
+  <div class="section-label">Passage — Ezekiel 47:1–12 (NIV, abridged)</div>
+  <div class="passage-callout">
+    <div class="pc-label">The Measured River</div>
+    <div class="pc-text">
+      The man brought me back to the entrance to the temple, and I saw water coming out from under the threshold… toward the east. As the man went eastward with a measuring line in his hand, he measured off a thousand cubits and then led me through water that was <strong>ankle-deep</strong>. He measured off another thousand cubits and led me through water that was <strong>knee-deep</strong>. He measured off another thousand and led me through water that was up to the <strong>waist</strong>. He measured off another thousand, but now it was a <strong>river that I could not cross, because the water had risen and was deep enough to swim in</strong>—a river that no one could cross.<br><br>
+      He asked me, "Son of man, do you see this?"… He said to me, "This water flows toward the eastern region and goes down into the Arabah, where it enters the Dead Sea. When it empties into the sea, the salt water there becomes fresh… where the river flows everything will live."… "Fruit trees of all kinds will grow on both banks… Their fruit will serve for food and their leaves for healing."
+    </div>
+    <div class="pc-ref">Ezekiel 47:1–12 (NIV)</div>
+  </div>
+
+  <!-- PLACEMENT -->
+  <div class="placement">
+    <strong>Placement:</strong> This is the climax of Ezekiel's closing temple vision (chapters 40–48) and very nearly the last word of the whole book. The glory of God has just returned to fill the new temple (43:1–5). Now, from beneath that restored Presence, water begins to trickle — and the book that opened with a glory <em>leaving</em> a defiled temple ends with life <em>flowing out</em> of a filled one. The river is what God's recovered presence <em>does</em>: it does not stay put; it moves outward and heals a dead world.
+  </div>
+
+  <!-- THE FOUR DEPTHS — HERO -->
+  <div class="section-label">The Four Measurements — Ezekiel 47:3–5</div>
+  <div class="depth-hero">
+    <div class="depth-row">
+
+      <div class="depth-col d1">
+        <div class="depth-head">
+          <div class="depth-stage-num">1,000 cubits</div>
+          <div class="depth-stage-name">Ankles</div>
+          <div class="depth-measure">v.3</div>
+        </div>
+        <div class="depth-vis"><div class="depth-water"></div><div class="depth-figure">🧍</div></div>
+        <div class="depth-greek"><div class="depth-heb">אׇפְסָיִם</div><div class="depth-translit">ʾophsayim</div></div>
+        <div class="depth-body"><div class="depth-mean">Feet wet, fully in control. You walk where you choose; the river barely touches you.</div></div>
+      </div>
+
+      <div class="depth-col d2">
+        <div class="depth-head">
+          <div class="depth-stage-num">+1,000 cubits</div>
+          <div class="depth-stage-name">Knees</div>
+          <div class="depth-measure">v.4a</div>
+        </div>
+        <div class="depth-vis"><div class="depth-water"></div><div class="depth-figure">🧍</div></div>
+        <div class="depth-greek"><div class="depth-heb">בִּרְכָּיִם</div><div class="depth-translit">birkayim</div></div>
+        <div class="depth-body"><div class="depth-mean">Walking gets harder; you feel the pull. The posture of the knee is the posture of prayer.</div></div>
+      </div>
+
+      <div class="depth-col d3">
+        <div class="depth-head">
+          <div class="depth-stage-num">+1,000 cubits</div>
+          <div class="depth-stage-name">Waist</div>
+          <div class="depth-measure">v.4b</div>
+        </div>
+        <div class="depth-vis"><div class="depth-water"></div><div class="depth-figure">🧍</div></div>
+        <div class="depth-greek"><div class="depth-heb">מׇתְנָיִם</div><div class="depth-translit">motnayim — "loins"</div></div>
+        <div class="depth-body"><div class="depth-mean">The current takes your strength and your stability. You can stand, but barely — and not for long.</div></div>
+      </div>
+
+      <div class="depth-col d4">
+        <div class="depth-head">
+          <div class="depth-stage-num">+1,000 cubits</div>
+          <div class="depth-stage-name">Swimming</div>
+          <div class="depth-measure">v.5</div>
+        </div>
+        <div class="depth-vis"><div class="depth-water"></div><div class="depth-figure">🏊</div></div>
+        <div class="depth-greek"><div class="depth-heb">מֵי שָׂחוּ</div><div class="depth-translit">mê sachu</div></div>
+        <div class="depth-body"><div class="depth-mean">Feet off the bottom. You no longer walk — you are carried. Control is surrendered to the river.</div></div>
+      </div>
+
+    </div>
+    <div class="depth-caption">Four equal measurements — each 1,000 cubits (roughly a third of a mile / ~500 m). The distances are identical, but the depth keeps rising: a deliberate, measured, four-stage progression from <em>touched</em> by the water to <em>carried</em> by it.</div>
+  </div>
+
+  <!-- THE MIRACLE -->
+  <div class="miracle-box">
+    <div class="mb-title">The Quiet Miracle — A River That Deepens With No Tributaries</div>
+    <div class="mb-text">Every natural river behaves the opposite way: it begins as a torrent in the hills and grows <em>shallower</em> and slower as it spreads toward the sea, fed and then drained. Ezekiel's river receives <strong>no tributaries</strong> — nothing flows into it — yet over four equal stretches it goes from a trickle at the threshold to an uncrossable flood. <strong>The increase comes entirely from the source.</strong> The further it travels from the Presence, the deeper it gets. This is not hydrology; it is theology. Grace flowing from God does not dissipate with distance — it multiplies.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Language of the River</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-heb">נַחַל</div>
+      <div class="word-translit">naḥal</div>
+      <span class="word-ref-badge">v.5 — "river"</span>
+      <div class="word-gloss">Wadi / torrent / stream-bed</div>
+      <div class="word-note">A naḥal is normally a desert wadi — bone-dry most of the year, a raging flash-flood after rain. The irony is sharp: the one place you expect emptiness becomes a permanent, swelling river. By v.5 it has become a naḥal "that could not be passed over" — the dry gulch has turned into an impassable flood that runs all year.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">מַיִם</div>
+      <div class="word-translit">mayim</div>
+      <span class="word-ref-badge">v.1 — "water"</span>
+      <div class="word-gloss">Water / life-source</div>
+      <div class="word-note">In a land where water meant the difference between life and death, "living water" (flowing, not stagnant) was the supreme image of God's provision. The water comes specifically from <em>under the threshold</em> of the temple — life originates at the place of God's presence, not from the land's own resources.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">שָׂחוּ</div>
+      <div class="word-translit">sachu</div>
+      <span class="word-ref-badge">v.5 — "to swim"</span>
+      <div class="word-gloss">Waters of swimming</div>
+      <div class="word-note">A rare word — "waters of swimming" (mê sachu). The point of swimming is that your feet leave the ground. Up to the waist you are still walking, still steering. To swim is to give the river your full weight and let it carry you. The vision climbs deliberately to this loss of footing — the highest stage is the one you cannot control.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">רָפָא</div>
+      <div class="word-translit">rapaʾ</div>
+      <span class="word-ref-badge">v.8 — "healed"</span>
+      <div class="word-gloss">To heal / make whole / cure</div>
+      <div class="word-note">The water "heals" (rapaʾ) the Dead Sea — the same verb used of God healing diseases and restoring his people. The deadest, saltiest water on earth (~10× the ocean, where nothing lives) is not merely diluted but <em>cured</em>. The leaves of the trees, too, are "for healing" (terufah, v.12) — a word echoed in Revelation 22:2.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">מִקְדָּשׁ</div>
+      <div class="word-translit">miqdash</div>
+      <span class="word-ref-badge">v.12 — "sanctuary"</span>
+      <div class="word-gloss">Sanctuary / holy place</div>
+      <div class="word-note">The trees flourish and bear fruit every month because "the water from the sanctuary (miqdash) flows to them." The fruitfulness is not the trees' own achievement — it is owed entirely to the source of the water. Sever the connection to the sanctuary and the whole green corridor dies.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">קֶדֶם</div>
+      <div class="word-translit">qedem</div>
+      <span class="word-ref-badge">v.8 — "eastward"</span>
+      <div class="word-gloss">East / the front / ancient time</div>
+      <div class="word-note">The river flows <em>east</em> — the same direction the glory departed (10:19) and returned (43:4), and the direction of Eden's entrance (Gen 3:24). The water retraces the path back toward the garden humanity was exiled from. It flows to the Arabah and the Dead Sea — the lowest, most lifeless point on the planet.</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- STAGES INTERPRETED -->
+  <div class="section-label">The Four Depths as Stages — A Long Teaching Tradition</div>
+  <div class="placement" style="border-color:#2e8a4a; background:#edf8f1;">
+    Preachers across the centuries have read the four measured depths as four stages of a person's life with God and his Spirit — a movement from cautious, controlled contact to total, carried surrender. The text does not <em>allegorise itself</em> this way (its plain sense is the literal, swelling river of the restored temple), but the progression it describes lends itself naturally to this application, and it has fed countless sermons on going "deeper."
+  </div>
+  <div class="stages-map">
+
+    <div class="stage s1">
+      <div class="stage-tag"><span class="st-d">Ankles</span><span class="st-m">v.3</span></div>
+      <div class="stage-body">
+        <div class="stage-title">Touched — but still in charge</div>
+        <div class="stage-desc">The water reaches you, but you set the pace and the direction. You can step in and step out at will. <strong>Many never move past ankle-deep:</strong> close enough to feel something of God, careful never to let it cost control. Faith on your own terms.</div>
+      </div>
+    </div>
+
+    <div class="stage s2">
+      <div class="stage-tag"><span class="st-d">Knees</span><span class="st-m">v.4a</span></div>
+      <div class="stage-body">
+        <div class="stage-title">Walking gets harder — the posture of prayer</div>
+        <div class="stage-desc">Now you feel resistance; the current begins to push against you. The knee is the place of prayer and dependence. Here a person starts to reckon with the fact that they cannot simply stride through life under their own steam — and begins, literally and spiritually, to <strong>bend the knee</strong>.</div>
+      </div>
+    </div>
+
+    <div class="stage s3">
+      <div class="stage-tag"><span class="st-d">Waist</span><span class="st-m">v.4b</span></div>
+      <div class="stage-body">
+        <div class="stage-title">The current takes your strength</div>
+        <div class="stage-desc">"Loins" in Hebrew — the seat of strength and self-reliance (cf. "gird up your loins"). At waist depth the river presses on the very center of your power; you can still stand, but you feel how easily you'd be swept off your feet. This is the threshold of crisis: <strong>keep your footing, or let go?</strong></div>
+      </div>
+    </div>
+
+    <div class="stage s4">
+      <div class="stage-tag"><span class="st-d">Swim</span><span class="st-m">v.5</span></div>
+      <div class="stage-body">
+        <div class="stage-title">Carried — feet off the bottom</div>
+        <div class="stage-desc">Past the waist there is no standing. To go further you must lift your feet and let the river bear your full weight. You no longer choose the direction — <strong>the river does.</strong> This is surrender: not the end of effort but the end of self-determination. And it is the only stage where you finally <em>move at the river's speed instead of your own.</em></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- THE HEALING -->
+  <div class="section-label">What the River Does — Healing a Dead World</div>
+  <div class="heal-grid">
+
+    <div class="heal-card">
+      <div class="heal-ref">v.8 — Into the Arabah</div>
+      <div class="heal-title">It Flows to the Lowest Place</div>
+      <div class="heal-note">The river runs down to the Arabah and the Dead Sea — the lowest point on the surface of the earth (~430 m below sea level) and the most lifeless. Grace deliberately seeks out the deadest, most hopeless place to do its work. It does not flow toward the already-fertile; it flows toward the salt and the silence.</div>
+    </div>
+
+    <div class="heal-card">
+      <div class="heal-ref">v.8–9 — The salt sea made fresh</div>
+      <div class="heal-title">The Dead Sea Lives</div>
+      <div class="heal-note">A sea so saline nothing survives in it is not just freshened but <em>healed</em>. "Swarms of living creatures" appear; "where the river flows everything will live." The defining image of death in Israel's geography becomes a place teeming with life — the most extreme reversal imaginable.</div>
+    </div>
+
+    <div class="heal-card">
+      <div class="heal-ref">v.10 — Fishermen on the shore</div>
+      <div class="heal-title">From En Gedi to En Eglaim</div>
+      <div class="heal-note">Fishermen stand along the once-dead shore; the fish are "of many kinds, like the fish of the Mediterranean." Ordinary, abundant, working life returns to a place of barrenness. (Jesus' call to make his disciples "fishers of men" echoes in the same key.)</div>
+    </div>
+
+    <div class="heal-card">
+      <div class="heal-ref">v.12 — Trees on both banks</div>
+      <div class="heal-title">Fruit Monthly, Leaves for Healing</div>
+      <div class="heal-note">Evergreen trees bear fresh fruit every month — perpetual, not seasonal — and "their leaves for healing." This is Eden restored and the New Jerusalem anticipated (Rev 22:2 borrows this line almost word for word). Endless fruit and healing flow from proximity to the sanctuary.</div>
+    </div>
+
+    <div class="heal-card">
+      <div class="heal-ref">v.11 — The exception</div>
+      <div class="heal-title">The Swamps Left for Salt</div>
+      <div class="heal-note">A sober note: the marshes and swamps "will not become fresh; they will be left for salt." Not everything is swept into life automatically. There remain places that stay outside the river's reach — a quiet warning that the offer of healing can be left untaken.</div>
+    </div>
+
+    <div class="heal-card">
+      <div class="heal-ref">v.12 — The secret of the fruit</div>
+      <div class="heal-title">"Because the Water Flows From the Sanctuary"</div>
+      <div class="heal-note">The text names its own engine: the trees never fail "because the water from the sanctuary flows to them." Fruitfulness is not self-generated; it is the overflow of connection to the Presence. Abide in the source, and the fruit takes care of itself (cf. John 15).</div>
+    </div>
+
+  </div>
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+
+    <div class="comm-card">
+      <div class="comm-author">Daniel I. Block</div>
+      <div class="comm-title">The Book of Ezekiel (NICOT, 1998)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Standard Reference</span>
+      <div class="comm-point">Block reads the river as the visible sign that Yahweh's presence in the new temple is life-giving, not merely cultic. He stresses the deliberate, measured staging of the depths as the vision's way of dramatising the ever-increasing, source-fed abundance of God's life.</div>
+      <div class="comm-point">Cautions against over-allegorising the four depths into a fixed "spiritual ladder" — the plain sense is the swelling, healing river — while granting that the progression rightly preaches the call to ever-deeper dependence.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Ezekiel, NICOT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Christopher J. H. Wright</div>
+      <div class="comm-title">The Message of Ezekiel (BST, 2001)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Wright highlights the reversal of Eden's exile: the river flows east, back toward the garden, healing the curse-ground. The vision answers the whole Bible's longing — God's presence at the centre, life radiating outward to the nations and the most barren places.</div>
+      <div class="comm-point">Draws the straight line to Revelation 22: Ezekiel's river, trees, and healing leaves are taken up almost verbatim in the New Jerusalem — this is the canon's settled picture of the end.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Ezekiel [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Sermons on "the river of God" (Victorian)</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span>
+      <div class="comm-point">Spurgeon delighted in the deepening river as a picture of grace that grows the further it runs and of a believer's call to leave the shallows. His refrain: do not be content to paddle at the ankles when there are waters to swim in — "give yourself to the stream of grace and be borne along."</div>
+      <div class="comm-point">He pressed the "swimming" stage as glad surrender: the safest place is not where you can touch bottom but where you have entrusted your whole weight to God.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Sermon archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Iain M. Duguid</div>
+      <div class="comm-title">Ezekiel (NIV Application Commentary, 1999)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Application</span>
+      <div class="comm-point">Duguid frames 47 as the goal of the entire book: the presence lost in ch.10 now overflows in blessing. He connects the river directly to Christ as the temple (John 2:21) and the giver of living water (John 4, 7), so the vision's fulfilment is a person, not a building.</div>
+      <div class="comm-point">Notes the pastoral edge of v.11 (swamps left for salt): grace floods outward, but it does not coerce — there are those who remain in the marshes by choice.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Ezekiel, NIVAC [VERIFY URL]</a>
+    </div>
+
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Is the "four stages of spiritual depth" reading actually in the text?</div>
+      <div class="pressure-a">Honest answer: the <em>application</em> is more than the <em>exegesis</em>. The plain sense of 47:3–5 is a literal river that swells as the guide measures eastward — Ezekiel is reporting what he saw, not teaching four levels of discipleship. So the ankle/knee/waist/swim sermon is a legitimate and time-honoured <em>illustration drawn from</em> the text's structure, not the verse's own claim. Preach it as application ("the river's deepening pictures a call to ever-deeper surrender"), not as "this verse means four stages." Used that way it is faithful; presented as the verse's literal meaning it overreaches.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Why does the river deepen when nothing flows into it?</div>
+      <div class="pressure-a">This is the vision's deliberate signal that it is supernatural. Natural rivers gain volume from tributaries and lose depth as they spread; this one has no inflow yet becomes uncrossable. The increase can only come from the source under the threshold. Theologically: the life of God does not run out or thin as it travels — it multiplies with distance from its origin, which is the opposite of every created resource. The miracle is the point.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is this a literal future temple, or a symbol fulfilled in Christ?</div>
+      <div class="pressure-a">The same debate as the whole temple vision (40–48). Dispensational readers expect a literal millennial river; most across traditions read it Christologically and eschatologically: Jesus is the true temple from whom living water flows (John 7:37–39, explicitly the Spirit), and the vision climaxes in Revelation 22's river of life in a city that needs no temple "for the Lord God is its temple." Either way, the river's <em>meaning</em> is stable — God's presence becomes the source of healing for a dead world.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. What about the swamps "left for salt" (v.11)?</div>
+      <div class="pressure-a">It is a startling exception in a vision of total renewal. Some take it literally (salt was needed for the cult and for trade, so a supply is preserved); others hear a sober theological note — the river heals all it reaches, but there remain marshy places that stay outside its flow. Read pastorally, it guards against presumption: the offer of life is genuine and overwhelming, but it can be resisted. Not every swamp insists on becoming a sea.</div>
+    </div>
+
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References — The River Across Scripture</div>
+  <div class="xref-grid">
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Eden</div>
+      <div class="xref-ref">Genesis 2:10</div>
+      <div class="xref-note">"A river watering the garden flowed from Eden." Ezekiel's river flows east, back toward the garden — the curse being reversed at its source.</div>
+    </div>
+
+    <div class="xref-card backward">
+      <div class="xref-tag">← Psalm</div>
+      <div class="xref-ref">Psalm 46:4</div>
+      <div class="xref-note">"There is a river whose streams make glad the city of God." The temple-river tradition Ezekiel's vision crowns.</div>
+    </div>
+
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Prophets</div>
+      <div class="xref-ref">Joel 3:18 · Zech 14:8</div>
+      <div class="xref-note">A fountain flowing from the LORD's house; "living water" flowing out of Jerusalem. The same end-time temple-river hope in Ezekiel's contemporaries and heirs.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Jesus</div>
+      <div class="xref-ref">John 7:37–39</div>
+      <div class="xref-note">"Rivers of living water will flow from within him" — and John adds, "by this he meant the Spirit." Jesus is the temple-source; the river is the Spirit.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Jesus</div>
+      <div class="xref-ref">John 4:13–14 · 2:19–21</div>
+      <div class="xref-note">The water that becomes "a spring welling up to eternal life"; Jesus' body as the true temple. The threshold the river flows from is, finally, a person.</div>
+    </div>
+
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Consummation</div>
+      <div class="xref-ref">Revelation 22:1–2</div>
+      <div class="xref-note">"The river of the water of life… on each side the tree of life… and the leaves of the tree are for the healing of the nations." Ezekiel 47, brought home.</div>
+    </div>
+
+  </div><!-- /xref-grid -->
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Exiles Who Lost the Temple</div>
+        <div class="tn-text">To a people whose temple was rubble and whose homeland felt like a dead sea, Ezekiel shows a temple restored and a river pouring from it that turns the saltiest water sweet. The message: God's presence is not just coming back — when it does, it will not sit still behind walls. It will flow out and make the deadest place you know teem with life.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Wading In</div>
+        <div class="tn-text">The river is still measured in stages, and most of us are standing somewhere in it — ankle-deep, content to feel God without losing control; or knee-deep, just learning to pray; or waist-deep, feeling the current take our strength and wondering whether to keep our footing. The invitation of the vision is always the same: go further out, until your feet leave the bottom and the river carries you where you could never walk.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: How deep have I actually waded — and what would it cost me to stop standing and let the river carry me?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The same depths that make the river safe to wade are the depths that keep you in control. It is only past the waist — where your feet leave the ground and the current takes your weight — that the river finally carries you. Grace flows from the Presence; the deeper you go, the less you steer and the more you are borne."</div>
+    <div class="verdict-ref">Ezekiel 47:5 — "a river that I could not cross, because the water had risen and was deep enough to swim in."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
