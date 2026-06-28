@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ezekiel — The Glory That Leaves and Returns</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 1020px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 20px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .header-book { font-family: 'Special Elite', serif; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.04em; line-height: 1; }
+  .header-sub { font-size: 1.05rem; color: #555; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+  .meta-row strong { color: #2c2c2c; }
+  .header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Special Elite', serif; font-size: 1rem; color: #6c4bbf; text-align: center; letter-spacing: 0.02em; }
+
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* KEY PASSAGE CALLOUT */
+  .passage-callout { border-left: 6px solid #6c4bbf; background: #f5f2fc; padding: 18px 22px; margin: 4px 0 20px; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 7px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.72rem; color: #6c4bbf; margin-top: 7px; font-weight: 700; }
+
+  /* THREE-ACT STRUCTURE */
+  .acts-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .act { border: 2.5px solid; border-radius: 3px; padding: 16px 15px; }
+  .act-1 { border-color: #c0392b; background: #fdf2f2; }
+  .act-2 { border-color: #d47c1a; background: #fdf8ef; }
+  .act-3 { border-color: #2e8a4a; background: #edf8f1; }
+  .act-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; margin-bottom: 8px; }
+  .act-1 .act-label { color: #c0392b; } .act-2 .act-label { color: #d47c1a; } .act-3 .act-label { color: #2e8a4a; }
+  .act-chapters { font-family: 'Special Elite', serif; font-size: 1.2rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-theme { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 10px; font-style: italic; }
+  .unit { padding: 6px 9px; border-radius: 2px; margin-bottom: 5px; }
+  .unit-1 { background: #f7dcdc; border-left: 3px solid #c0392b; }
+  .unit-2 { background: #f7e6cc; border-left: 3px solid #d47c1a; }
+  .unit-3 { background: #d4edd9; border-left: 3px solid #2e8a4a; }
+  .unit-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 1px; }
+  .unit-1 .unit-ref { color: #c0392b; } .unit-2 .unit-ref { color: #d47c1a; } .unit-3 .unit-ref { color: #2e8a4a; }
+  .unit-title { font-family: 'Special Elite', serif; font-size: 0.78rem; color: #2c2c2c; margin-bottom: 1px; }
+  .unit-desc { font-size: 0.7rem; color: #444; line-height: 1.32; }
+  .pivot-note { font-size: 0.74rem; color: #555; background: #faf7f2; border: 2px dashed #888; border-radius: 3px; padding: 9px 13px; margin: 0 0 24px; line-height: 1.4; }
+  .pivot-note strong { color: #2c2c2c; }
+
+  /* GLORY SPINE */
+  .glory-spine { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .gs-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 4px; }
+  .gs-sub { font-size: 0.72rem; color: #999; margin-bottom: 14px; font-style: italic; }
+  .gs-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .gs-stop { border: 1px solid #444; border-radius: 2px; padding: 9px; background: #222; text-align: center; position: relative; }
+  .gs-stop.enter  { border-color: #d4a017; }
+  .gs-stop.leave  { border-color: #c0392b; }
+  .gs-stop.absent { border-color: #555; }
+  .gs-stop.return { border-color: #2e8a4a; }
+  .gs-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 4px; }
+  .gs-stop.enter .gs-ref { color: #e0b53a; }
+  .gs-stop.leave .gs-ref { color: #e0796b; }
+  .gs-stop.absent .gs-ref { color: #999; }
+  .gs-stop.return .gs-ref { color: #4cae6a; }
+  .gs-stage { font-family: 'Special Elite', serif; font-size: 0.74rem; color: #f5f0e8; margin-bottom: 3px; }
+  .gs-text { font-size: 0.66rem; color: #bbb; line-height: 1.32; }
+
+  /* RECOGNITION FORMULA BAR */
+  .know-bar { background: #6c4bbf; border-radius: 3px; padding: 14px 20px; margin: 4px 0 24px; }
+  .kb-title { font-family: 'Special Elite', serif; font-size: 0.88rem; color: #fff; margin-bottom: 10px; }
+  .kb-dots { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+  .kb-dot { width: 13px; height: 13px; border-radius: 50%; background: rgba(255,255,255,0.42); }
+  .kb-note { font-size: 0.72rem; color: rgba(255,255,255,0.85); line-height: 1.4; }
+
+  /* GREAT VISIONS */
+  .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .vision-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #faf7f2; padding: 14px 16px; }
+  .vc-ref { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #6c4bbf; margin-bottom: 1px; }
+  .vc-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #888; font-weight: 700; margin-bottom: 8px; }
+  .vc-text { font-size: 0.79rem; color: #333; line-height: 1.42; margin-bottom: 6px; }
+  .vc-key { font-size: 0.73rem; color: #6c4bbf; border-left: 2px solid #6c4bbf; padding-left: 8px; line-height: 1.38; font-style: italic; }
+
+  /* SIGN-ACTS STRIP */
+  .sign-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 4px 0 24px; }
+  .sign-card { border: 2px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 11px 12px; }
+  .sign-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.1em; color: #c0392b; font-weight: 700; margin-bottom: 3px; }
+  .sign-title { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 3px; }
+  .sign-desc { font-size: 0.71rem; color: #555; line-height: 1.34; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .word-heb { font-size: 1.35rem; color: #6c4bbf; font-weight: 700; margin-bottom: 1px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 3px; }
+  .word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; background: #2c2c2c; color: #f5f0e8; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 5px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.73rem; color: #555; line-height: 1.38; }
+
+  /* CHAPTER CROSS-MAP */
+  .chap-map { margin: 4px 0 24px; }
+  .chap-row { display: grid; grid-template-columns: 90px 1fr 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .chap-num { background: #2c2c2c; color: #f5f0e8; font-family: 'Special Elite', serif; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; line-height: 1.2; }
+  .chap-cell { padding: 8px 10px; border-left: 1px solid #ddd; background: #faf7f2; }
+  .chap-cell:nth-child(even) { background: #f5f0e8; }
+  .cc-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .cc-ot   { color: #d47c1a; }
+  .cc-nt   { color: #2e8a4a; }
+  .cc-theme { color: #6c4bbf; }
+  .cc-text { font-size: 0.72rem; color: #333; line-height: 1.34; }
+  .cc-refs { font-size: 0.66rem; color: #888; font-style: italic; margin-top: 2px; }
+
+  /* PASSAGE DEEP NOTES */
+  .deep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .deep-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #faf7f2; padding: 14px 15px; }
+  .dc-ref { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #6c4bbf; margin-bottom: 2px; }
+  .dc-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #888; font-weight: 700; margin-bottom: 7px; }
+  .dc-verse { font-style: italic; font-size: 0.79rem; color: #555; border-left: 3px solid #6c4bbf; padding-left: 8px; margin-bottom: 8px; line-height: 1.4; }
+  .dc-note { font-size: 0.78rem; color: #333; line-height: 1.42; margin-bottom: 5px; }
+  .dc-preach { font-size: 0.72rem; color: #2e8a4a; border-left: 2px solid #2e8a4a; padding-left: 8px; line-height: 1.38; margin-top: 6px; font-style: italic; }
+
+  /* HARDEST MOMENT */
+  .hard-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .hard-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+  .hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .hard-q { font-size: 0.82rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+
+  /* CROSS-BIBLE */
+  .xbible-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xbible-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 12px; }
+  .xbc-ot      { border-color: #d47c1a; }
+  .xbc-parallel { border-color: #6c4bbf; }
+  .xbc-forward  { border-color: #2e8a4a; }
+  .xb-tag { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 700; margin-bottom: 3px; }
+  .xbc-ot .xb-tag      { color: #d47c1a; }
+  .xbc-parallel .xb-tag { color: #6c4bbf; }
+  .xbc-forward .xb-tag  { color: #2e8a4a; }
+  .xb-ref  { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xb-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+
+  /* COMMENTARY */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-wide { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.66rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed    { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-pastoral    { background: #2e8a4a; color: #fff; }
+  .trad-preaching   { background: #d47c1a; color: #fff; }
+  .trad-critical    { background: #555; color: #fff; }
+  .trad-jewish      { background: #b8860b; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.76rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 17px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.82rem; color: #333; line-height: 1.44; }
+  .tn-question { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.9rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 820px) {
+    .acts-layout { grid-template-columns: 1fr; }
+    .gs-track { grid-template-columns: 1fr 1fr; }
+    .sign-row { grid-template-columns: 1fr; }
+    .word-grid { grid-template-columns: repeat(2, 1fr); }
+    .vision-grid, .deep-grid, .comm-grid, .comm-wide, .tn-cols, .xbible-grid { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 70px 1fr; }
+    .chap-row .chap-cell:nth-child(4) { display: none; }
+  }
+  @media (max-width: 520px) {
+    .word-grid { grid-template-columns: 1fr; }
+    .gs-track { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 1fr; }
+    .chap-num { border-radius: 3px 3px 0 0; padding: 8px; }
+    .chap-cell { border-left: none; border-top: 1px solid #ddd; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <div class="header-top">
+      <div>
+        <div class="header-book">Ezekiel</div>
+        <div class="header-sub">Book 26 of 66 · The Exilic Prophet · ~593–571 BC</div>
+      </div>
+      <div class="header-meta">
+        <div class="meta-row"><strong>Author:</strong> Ezekiel son of Buzi — a priest, deported to Babylon</div>
+        <div class="meta-row"><strong>Where:</strong> Tel-Abib, by the Kebar (Chebar) canal, Babylonia</div>
+        <div class="meta-row"><strong>Audience:</strong> The exiles of 597 BC — and, at a distance, Jerusalem</div>
+        <div class="meta-row"><strong>Contemporaries:</strong> Jeremiah (in Judah), Daniel (in Babylon's court)</div>
+        <div class="meta-row"><strong>Genre:</strong> Visionary prophecy · sign-acts · apocalyptic</div>
+        <div class="meta-row"><strong>Length:</strong> 48 chapters, precisely dated oracles</div>
+      </div>
+    </div>
+    <div class="header-char">
+      "The glory of the LORD departs from a defiled temple — and the whole book strains forward<br>
+      to the day it returns, and the city is renamed: <em>The LORD Is There</em>"
+    </div>
+  </div>
+
+  <!-- KEY PASSAGE -->
+  <div class="section-label">Controlling Promise — The Heart of the Book in One Sentence</div>
+  <div class="passage-callout">
+    <div class="pc-label">Ezekiel 36:26–27 · The new heart and the indwelling Spirit</div>
+    <div class="pc-text">
+      "I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh. And I will put my Spirit in you and move you to follow my decrees and be careful to keep my laws."
+    </div>
+    <div class="pc-ref">Ezekiel 36:26–27 (NIV) — the gospel promised six centuries early</div>
+  </div>
+
+  <!-- THREE ACTS -->
+  <div class="section-label">The Architecture — Three Movements Around the Fall of Jerusalem</div>
+  <div class="acts-layout">
+
+    <div class="act act-1">
+      <div class="act-label">Act 1 — Judgment on Judah</div>
+      <div class="act-chapters">Chapters 1 – 24</div>
+      <div class="act-theme">"The end has come" — before the fall</div>
+      <div class="unit unit-1">
+        <div class="unit-ref">1–3 · The Call</div>
+        <div class="unit-title">Throne-Chariot &amp; the Scroll</div>
+        <div class="unit-desc">The vision of the glory; Ezekiel eats the scroll and is made a watchman.</div>
+      </div>
+      <div class="unit unit-1">
+        <div class="unit-ref">4–7 · Sign-Acts</div>
+        <div class="unit-title">The Siege Dramatised</div>
+        <div class="unit-desc">Brick, bound on his side, rationed food, shaved hair — Jerusalem's doom acted out.</div>
+      </div>
+      <div class="unit unit-1">
+        <div class="unit-ref">8–11 · The Glory Leaves</div>
+        <div class="unit-title">Idolatry in the Temple</div>
+        <div class="unit-desc">Vision-tour of temple corruption; the glory rises and departs eastward.</div>
+      </div>
+      <div class="unit unit-1">
+        <div class="unit-ref">12–24 · Indictment</div>
+        <div class="unit-title">No Escape, No Excuse</div>
+        <div class="unit-desc">False prophets, the useless vine, the two sisters, individual responsibility (18), the death of Ezekiel's wife (24).</div>
+      </div>
+    </div>
+
+    <div class="act act-2">
+      <div class="act-label">Act 2 — Oracles vs. the Nations</div>
+      <div class="act-chapters">Chapters 25 – 32</div>
+      <div class="act-theme">God is Lord of all peoples, not Israel only</div>
+      <div class="unit unit-2">
+        <div class="unit-ref">25 · The Neighbours</div>
+        <div class="unit-title">Ammon · Moab · Edom · Philistia</div>
+        <div class="unit-desc">Judgment on those who gloated over Jerusalem's fall.</div>
+      </div>
+      <div class="unit unit-2">
+        <div class="unit-ref">26–28 · Tyre</div>
+        <div class="unit-title">The Fall of the Merchant Prince</div>
+        <div class="unit-desc">The proud trading city; the lament over its king (28) reaching back to Eden.</div>
+      </div>
+      <div class="unit unit-2">
+        <div class="unit-ref">29–32 · Egypt</div>
+        <div class="unit-title">The Broken Reed</div>
+        <div class="unit-desc">The superpower Judah trusted instead of God, brought down to the pit.</div>
+      </div>
+      <div class="unit unit-2">
+        <div class="unit-ref">Function</div>
+        <div class="unit-title">The Hinge of the Book</div>
+        <div class="unit-desc">Placed between doom and hope: before Israel can be restored, the proud powers must fall.</div>
+      </div>
+    </div>
+
+    <div class="act act-3">
+      <div class="act-label">Act 3 — Restoration &amp; Hope</div>
+      <div class="act-chapters">Chapters 33 – 48</div>
+      <div class="act-theme">"You will know that I am the LORD" — after the fall</div>
+      <div class="unit unit-3">
+        <div class="unit-ref">33–34 · Re-commission</div>
+        <div class="unit-title">Watchman Again · The Shepherds</div>
+        <div class="unit-desc">News of the fall arrives; God indicts false shepherds and promises one Shepherd-David.</div>
+      </div>
+      <div class="unit unit-3">
+        <div class="unit-ref">36–37 · New Life</div>
+        <div class="unit-title">New Heart · Dry Bones · One Stick</div>
+        <div class="unit-desc">The Spirit promised within; the valley of bones lives; the divided nation reunited.</div>
+      </div>
+      <div class="unit unit-3">
+        <div class="unit-ref">38–39 · Gog</div>
+        <div class="unit-title">The Last Enemy Defeated</div>
+        <div class="unit-desc">A final assault from "Gog of Magog" — and God's decisive vindication.</div>
+      </div>
+      <div class="unit unit-3">
+        <div class="unit-ref">40–48 · The Vision</div>
+        <div class="unit-title">New Temple · River · "The LORD Is There"</div>
+        <div class="unit-desc">The glory returns; a healing river flows out; the land is reapportioned. Final word: Yahweh-Shammah.</div>
+      </div>
+    </div>
+
+  </div><!-- /acts-layout -->
+
+  <div class="pivot-note">
+    <strong>The structural key — chapter 33:21.</strong> The whole book pivots on one dated line: "a man who had escaped from Jerusalem came to me and said, 'The city has fallen!'" Before that verse, Ezekiel's message is almost relentlessly judgment; after it, almost entirely hope. God refuses to comfort with false hope while the city still stands — but the moment judgment is complete, the tone transforms. The fall is not the end of the story; it is the hinge of it. (Note: the nations-oracles of 25–32 are dated <em>around</em> this pivot but gathered together as a literary bridge.)
+  </div>
+
+  <!-- GLORY SPINE -->
+  <div class="section-label">The Spine of the Book — Where Is the Glory? (kavod)</div>
+  <div class="glory-spine">
+    <div class="gs-title">The kavod — God's visible presence — moves five times. Track it, and you have the whole book.</div>
+    <div class="gs-sub">More than any other prophet, Ezekiel organises everything around the location of God's presence.</div>
+    <div class="gs-track">
+      <div class="gs-stop enter">
+        <div class="gs-ref">Ch 1–3</div>
+        <div class="gs-stage">ARRIVES in Babylon</div>
+        <div class="gs-text">The glory appears to the exiles by a foreign canal — God is not trapped in Jerusalem.</div>
+      </div>
+      <div class="gs-stop leave">
+        <div class="gs-ref">Ch 8–10</div>
+        <div class="gs-stage">RISES from the temple</div>
+        <div class="gs-text">Because of idolatry, the glory lifts from the cherubim to the threshold.</div>
+      </div>
+      <div class="gs-stop leave">
+        <div class="gs-ref">Ch 10–11</div>
+        <div class="gs-stage">LEAVES the city</div>
+        <div class="gs-text">It pauses at the east gate, then departs over the Mount of Olives. The temple is now empty.</div>
+      </div>
+      <div class="gs-stop absent">
+        <div class="gs-ref">Ch 12–39</div>
+        <div class="gs-stage">ABSENT</div>
+        <div class="gs-text">The long middle: judgment, exile, the nations — a world where the presence has withdrawn.</div>
+      </div>
+      <div class="gs-stop return">
+        <div class="gs-ref">Ch 43:1–5</div>
+        <div class="gs-stage">RETURNS</div>
+        <div class="gs-text">The glory comes back from the east, fills the new temple, and never leaves again.</div>
+      </div>
+    </div>
+    <div class="kb-note" style="margin-top:12px; color:#bbb;">It leaves by the east gate (10:19) and returns by the east gate (43:4). The same door it walked out of, it walks back through. Ezekiel 48:35 gives the city its new and final name: <strong style="color:#4cae6a;">Yahweh-Shammah — "The LORD Is There."</strong></div>
+  </div>
+
+  <!-- RECOGNITION FORMULA -->
+  <div class="section-label">The Refrain — "Then You Will Know That I Am the LORD"</div>
+  <div class="know-bar">
+    <div class="kb-title">The recognition formula appears around 70 times — the single most repeated phrase in the book.</div>
+    <div class="kb-dots">
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+      <span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span><span class="kb-dot"></span>
+    </div>
+    <div class="kb-note">The goal of <em>both</em> judgment and salvation is identical: that Israel and the nations would truly <em>know Yahweh</em>. God does not act merely to punish or to rescue — he acts so that he will be rightly known. Knowing God, not comfort or survival, is the point of everything that happens in the book. The same phrase seals an oracle of doom and an oracle of restoration.</div>
+  </div>
+
+  <!-- GREAT VISIONS -->
+  <div class="section-label">The Four Great Visions — Ezekiel's Vision-Frame</div>
+  <div class="vision-grid">
+
+    <div class="vision-card">
+      <div class="vc-ref">Ezekiel 1 · The Chariot-Throne</div>
+      <div class="vc-title">The Merkabah — Glory on the Move</div>
+      <div class="vc-text">Four living creatures, wheels within wheels full of eyes, a crystal expanse, and above it a throne with a figure "like a man" wrapped in fire and rainbow. It is deliberately overwhelming — Ezekiel can only stack "the likeness of… the appearance of…" The point: God's mobile throne has come to Babylon. He is not confined to the temple.</div>
+      <div class="vc-key">The wheels mean the throne goes anywhere — even into exile. God is present with his people in the unclean land.</div>
+    </div>
+
+    <div class="vision-card">
+      <div class="vc-ref">Ezekiel 8–11 · The Temple Tour</div>
+      <div class="vc-title">What Drove the Glory Out</div>
+      <div class="vc-text">Carried in vision to Jerusalem, Ezekiel sees idol-worship hidden in the temple's chambers — the image of jealousy, elders worshipping creatures in the dark, women weeping for Tammuz, men bowing to the sun with their backs to God. Only then does the glory leave. The departure is <em>caused</em>: the presence withdraws from a house that has filled itself with rival gods.</div>
+      <div class="vc-key">God does not abandon arbitrarily. The glory leaves a temple that has already, in effect, evicted him.</div>
+    </div>
+
+    <div class="vision-card">
+      <div class="vc-ref">Ezekiel 37 · The Valley of Dry Bones</div>
+      <div class="vc-title">Can These Bones Live?</div>
+      <div class="vc-text">A valley of sun-bleached bones — the exiles' own verdict on themselves: "our hope is gone, we are cut off." Ezekiel prophesies; bones rattle together, gain sinew and flesh — but stay dead until the <em>ruach</em> (breath/Spirit) enters. Two stages: reassembly, then life. Israel's national resurrection — and a window onto the resurrection of the dead.</div>
+      <div class="vc-key">Restoration is not self-improvement. The corpse cannot revive itself; only the in-breathed Spirit makes the dead live.</div>
+    </div>
+
+    <div class="vision-card">
+      <div class="vc-ref">Ezekiel 40–48 · The New Temple &amp; River</div>
+      <div class="vc-title">The Glory Returns — and a River Flows Out</div>
+      <div class="vc-text">An immense, meticulously measured temple; the glory returns through the east gate to fill it; and from under the threshold a river trickles, then deepens — ankle, knee, waist, then "deep enough to swim in" — flowing east to heal the Dead Sea and line its banks with fruit trees. The book ends with the land re-shared and the city renamed.</div>
+      <div class="vc-key">Presence is not static. Where God dwells, life flows outward and deepens, healing even the deadest water.</div>
+    </div>
+
+  </div><!-- /vision-grid -->
+
+  <!-- SIGN-ACTS -->
+  <div class="section-label">The Sign-Acts — Prophecy Performed With His Body</div>
+  <div class="sign-row">
+    <div class="sign-card">
+      <div class="sign-ref">4:1–3</div>
+      <div class="sign-title">The Brick &amp; Iron Pan</div>
+      <div class="sign-desc">Ezekiel draws Jerusalem on a clay brick and lays siege to it with a model army and an iron griddle — a toy city under real wrath.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-ref">4:4–8</div>
+      <div class="sign-title">Bound on His Side</div>
+      <div class="sign-desc">He lies on his left side 390 days, then his right 40 — bearing the years of the nation's guilt in his own immobilised body.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-ref">4:9–17</div>
+      <div class="sign-title">Rationed Bread</div>
+      <div class="sign-desc">Weighed food and measured water cooked over fuel — the starvation diet of a besieged city, enacted daily.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-ref">5:1–4</div>
+      <div class="sign-title">The Shaved Head</div>
+      <div class="sign-desc">He shaves hair and beard, weighs it, burns a third, strikes a third, scatters a third — the fate of the population divided three ways.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-ref">12:1–7</div>
+      <div class="sign-title">The Exile's Baggage</div>
+      <div class="sign-desc">He digs through a wall and carries out a refugee's bundle at dusk — packing for a deportation the people still deny is coming.</div>
+    </div>
+    <div class="sign-card">
+      <div class="sign-ref">24:15–27</div>
+      <div class="sign-title">The Wife Not Mourned</div>
+      <div class="sign-desc">His wife dies — "the delight of his eyes" — and God forbids him to grieve, a sign that the loss of the temple will be too deep for ordinary mourning.</div>
+    </div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Six Key Words — The Vocabulary of Ezekiel</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-heb">כָּבוֹד</div>
+      <div class="word-translit">kavod — "glory"</div>
+      <span class="word-count">~19× in book</span>
+      <div class="word-gloss">Glory / weight / visible presence</div>
+      <div class="word-note">From a root meaning "heavy, weighty." The kavod is the manifest, almost tangible presence of God. Its movement (arrive → leave → return) is the structural backbone of the book. To lose the glory is to lose everything; its return is the climax of all hope.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">רוּחַ</div>
+      <div class="word-translit">ruach — "spirit/wind/breath"</div>
+      <span class="word-count">~52× in book</span>
+      <div class="word-gloss">Spirit / wind / breath</div>
+      <div class="word-note">One word, three senses, all in play. The ruach lifts Ezekiel between visions, animates the wheels of the chariot, is breathed into the dry bones, and is the new Spirit God places within his people (36:27). Ezekiel is the great prophet of the Spirit's life-giving power.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">בֶּן־אָדָם</div>
+      <div class="word-translit">ben-adam — "son of man"</div>
+      <span class="word-count">~93× in book</span>
+      <div class="word-gloss">Son of man / mortal / son of dust</div>
+      <div class="word-note">God's near-constant address to the prophet. It stresses his frailty before the glory — "mere mortal." The phrase keeps the human small and the vision large. Centuries later Jesus adopts "the Son of Man" as his favourite self-title, drawing on both Ezekiel and Daniel 7.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">לֵב</div>
+      <div class="word-translit">lev — "heart"</div>
+      <span class="word-count">key in 11, 18, 36</span>
+      <div class="word-gloss">Heart / inner self / will</div>
+      <div class="word-note">The diagnosis and the cure. The problem is a "heart of stone" — hard, unresponsive, idolatrous. The promise is a "heart of flesh," responsive and alive, with God's own Spirit inside it (36:26). The new covenant is fundamentally a heart transplant, not a behaviour-management programme.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">תּוֹעֵבָה</div>
+      <div class="word-translit">to'evah — "abomination"</div>
+      <span class="word-count">~43× in book</span>
+      <div class="word-gloss">Abomination / detestable thing</div>
+      <div class="word-note">Ezekiel's word for the idolatry that defiled the temple and provoked the glory's departure. It names worship and conduct that are not merely wrong but repugnant to God's holiness. The sheer frequency shows why the judgment is so severe: the holy place had been saturated with the detestable.</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-heb">נָשִׂיא</div>
+      <div class="word-translit">nasi — "prince"</div>
+      <span class="word-count">key in 34, 37, 44–48</span>
+      <div class="word-gloss">Prince / leader / one lifted up</div>
+      <div class="word-note">Ezekiel mostly avoids "king" (melek) for the future ruler, preferring nasi — "prince." After the failure of Judah's kings, the coming Davidic ruler is cast more humbly, as shepherd and prince under God's kingship (34:24; 37:25). Royal hope, chastened and re-rooted in David.</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- CHAPTER CROSS-MAP -->
+  <div class="section-label">Cross-Map — Ezekiel's Roots Backward and Echoes Forward</div>
+  <div class="chap-map">
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 1<br>Chariot</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The cherubim over the ark; Sinai's fire and cloud — the throne of the unseen God.</div><div class="cc-refs">Exod 25:18–22 · 24:16–17</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">John's throne vision — four living creatures, the rainbow, the crystal sea — is built directly on this.</div><div class="cc-refs">Rev 4:1–11</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">God enthroned, holy, and mobile — present even in exile.</div></div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 34<br>Shepherds</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Israel's leaders as shepherds who feed themselves while the flock scatters.</div><div class="cc-refs">Jer 23:1–4 · Ps 23</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">"I am the good shepherd" — Jesus claims to be the one Shepherd God promised to come himself.</div><div class="cc-refs">John 10:11–16</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">God will shepherd his people personally, through David's heir.</div></div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 36<br>New Heart</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The promised new covenant — law written on the heart, sins remembered no more.</div><div class="cc-refs">Jer 31:31–34 · Deut 30:6</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">"You must be born again… of water and the Spirit" — Jesus expects Nicodemus to know this text.</div><div class="cc-refs">John 3:5–10 · 2 Cor 3:3</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Cleansing with water + a new Spirit within = regeneration.</div></div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 37<br>Dry Bones</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">God forms man from dust and breathes life; the breath that animates the lifeless.</div><div class="cc-refs">Gen 2:7 · Ps 104:29–30</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Resurrection life by the Spirit; the dead raised; the Spirit poured out at Pentecost.</div><div class="cc-refs">Rom 8:11 · Acts 2</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Only the in-breathed Spirit can make the dead live.</div></div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 38–39<br>Gog</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The "enemy from the north"; the LORD's day of battle against the proud nations.</div><div class="cc-refs">Joel 2 · Isa 14</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">"Gog and Magog" gathered for the last battle and decisively defeated.</div><div class="cc-refs">Rev 20:7–10</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">The final enemy will rage — and be destroyed without a contest.</div></div>
+    </div>
+
+    <div class="chap-row">
+      <div class="chap-num">Ch 47<br>River</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The river of Eden watering the garden; the river that makes glad the city of God.</div><div class="cc-refs">Gen 2:10 · Ps 46:4</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">The river of the water of life from God's throne, trees bearing fruit, leaves for healing.</div><div class="cc-refs">Rev 22:1–2 · John 7:38</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">From God's presence, life flows out and heals the world.</div></div>
+    </div>
+
+  </div><!-- /chap-map -->
+
+  <!-- PASSAGE DEEP NOTES -->
+  <div class="section-label">Deep Notes — Eight Passages Worth Preaching</div>
+  <div class="deep-grid">
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 2:8–3:3</div>
+      <div class="dc-title">Eat the Scroll</div>
+      <div class="dc-verse">"Then I ate it, and it tasted as sweet as honey in my mouth."</div>
+      <div class="dc-note">Before he can speak God's word, Ezekiel must internalise it — even though it is written front and back with "lament and mourning and woe." The hard word, taken in, still tastes sweet.</div>
+      <div class="dc-preach">Preach: you cannot deliver a word you have not first swallowed. The messenger is shaped by the message before the audience ever hears it. (Cf. Rev 10:9–10.)</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 3:16–21</div>
+      <div class="dc-title">The Watchman's Accountability</div>
+      <div class="dc-verse">"…I will hold you accountable for their blood."</div>
+      <div class="dc-note">The watchman is judged not by whether people heed the warning but by whether he sounds it. Silence in the face of danger makes him complicit; faithful warning clears him regardless of response.</div>
+      <div class="dc-preach">Preach: faithfulness is measured by obedience, not outcomes. We are responsible to warn, not to convert.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 10:18–19</div>
+      <div class="dc-title">The Glory at the Threshold</div>
+      <div class="dc-verse">"Then the glory of the LORD departed from over the threshold of the temple."</div>
+      <div class="dc-note">The most devastating sentence in the book — and it happens quietly, in stages. The greatest tragedy is not the building's destruction but the presence's departure. An empty temple is just architecture.</div>
+      <div class="dc-preach">Preach: Ichabod — "the glory has departed." A church can keep its forms long after the presence has gone. The question is never the building; it is whether God is there.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 18:30–32</div>
+      <div class="dc-title">Each One Accountable</div>
+      <div class="dc-verse">"Get a new heart and a new spirit… Why will you die?"</div>
+      <div class="dc-note">Against the fatalistic proverb ("our parents sinned, we suffer"), God insists each person stands or falls on their own response — and pleads, "I take no pleasure in the death of anyone… Repent and live!"</div>
+      <div class="dc-preach">Preach: God's judgment is just and personal, and his heart is not eager to condemn but longing to give life. The command to "get a new heart" (18) becomes the promise to give one (36).</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 34:11–16</div>
+      <div class="dc-title">"I Myself Will Search"</div>
+      <div class="dc-verse">"I myself will search for my sheep and look after them."</div>
+      <div class="dc-note">After indicting the shepherds who fed themselves, God announces he will do the shepherding personally — seek the lost, bind the injured, strengthen the weak — and set "my servant David" over them.</div>
+      <div class="dc-preach">Preach: when human leadership fails the flock, God does not abandon the sheep — he comes himself. Jesus reads this chapter as his own job description (John 10; Luke 15).</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 36:25–27</div>
+      <div class="dc-title">The Heart Transplant</div>
+      <div class="dc-verse">"I will give you a new heart… and put my Spirit in you."</div>
+      <div class="dc-note">Three movements: cleansing (sprinkled water), replacement (stone heart → heart of flesh), and indwelling (God's own Spirit). This is the gospel of regeneration, promised in the OT and fulfilled at Pentecost.</div>
+      <div class="dc-preach">Preach: real change is not trying harder with a stone heart; it is receiving a new one. The initiative is entirely God's — "I will… I will… I will."</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 37:1–14</div>
+      <div class="dc-title">Can These Bones Live?</div>
+      <div class="dc-verse">"Our bones are dried up and our hope is gone; we are cut off."</div>
+      <div class="dc-note">God meets the exiles' deepest despair — their own self-diagnosis as the walking dead — and answers it with two-stage resurrection: reassembly by the word, then life by the breath. National restoration that opens toward bodily resurrection.</div>
+      <div class="dc-preach">Preach: no situation is too dead for the Spirit. But preach honestly — the bones were truly dead; this is resurrection, not first aid.</div>
+    </div>
+
+    <div class="deep-card">
+      <div class="dc-ref">Ezekiel 47:1–12</div>
+      <div class="dc-title">The River From the Temple</div>
+      <div class="dc-verse">"Where the river flows everything will live."</div>
+      <div class="dc-note">A river that deepens as it goes and grows fresher the farther it flows — healing the Dead Sea, lining its banks with ever-fruiting trees whose leaves are for healing. Presence overflows into a world made alive.</div>
+      <div class="dc-preach">Preach: God's presence is never for hoarding. Where he dwells, life flows outward and deepens. The trajectory of grace is always from the sanctuary to the dead sea.</div>
+    </div>
+
+  </div><!-- /deep-grid -->
+
+  <!-- HARDEST MOMENTS -->
+  <div class="hard-box">
+    <div class="hard-title">The Hardest Passages — Where Honest Readers Wrestle</div>
+
+    <div class="hard-item">
+      <div class="hard-q">1. The graphic, violent imagery of chapters 16 and 23</div>
+      <div class="hard-a">Ezekiel portrays Jerusalem and Samaria as unfaithful wives in language so explicit it has shocked readers for millennia. The imagery is deliberately offensive — it forces a complacent people to feel the obscenity of idolatry as betrayal, not as a tidy theological error. These chapters demand pastoral care in teaching: name the metaphor's purpose (covenant treachery felt as marital betrayal), acknowledge how the violent-marriage imagery can wound abuse survivors, and refuse to use it to excuse any real-world cruelty. The target is Israel's sin, never a licence for human violence.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">2. The departing glory — does God abandon his people?</div>
+      <div class="hard-a">The glory's departure (ch.10) is not capricious. Chapters 8–9 show <em>why</em>: the temple had been filled with idols and "abominations." God withdraws from a house that has already evicted him. And even the departure is mercy in disguise — the same chapters reveal the glory has appeared to the exiles in Babylon (ch.1). He leaves the building but not the people. The withdrawal is judgment; the relocation is grace.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">3. Gog and Magog (38–39) — when and who?</div>
+      <div class="hard-a">Interpreters divide sharply. Some read Gog as a symbolic figure for the archetypal end-time enemy (Revelation 20 takes it this way); others attempt historical or future-political identifications. The text itself is more interested in the <em>outcome</em> than the identity: a final, overwhelming assault on God's restored people that God defeats so completely the weapons become firewood and the point is, once more, "they shall know that I am the LORD." Caution against confident geopolitical date-setting; the certainty is God's victory, not the headlines.</div>
+    </div>
+
+    <div class="hard-item">
+      <div class="hard-q">4. The temple vision (40–48) — literal blueprint or symbol?</div>
+      <div class="hard-a">A long-running debate. (a) <em>Literalist/dispensational</em>: a future physical temple in a millennial age — but then the reinstated animal sacrifices (43:18–27) are hard to square with Hebrews' "once for all." (b) <em>Symbolic/ecclesial</em>: the perfected presence of God with his people, fulfilled in Christ and the church, climaxing in Revelation 21–22 (note: that city has <em>no</em> temple, "for the Lord God is its temple"). (c) <em>Idealised</em>: a visionary pattern of holiness, never meant as construction plans. Most across traditions read it Christologically: the measured temple and healing river find their fulfilment in Christ and the new creation, however one handles the details.</div>
+    </div>
+
+  </div>
+
+  <!-- CROSS-BIBLE -->
+  <div class="section-label">Cross-Bible — Ezekiel's Reach Across Scripture</div>
+  <div class="xbible-grid">
+
+    <div class="xbible-card xbc-ot">
+      <div class="xb-tag">← Backward · Roots</div>
+      <div class="xb-ref">Leviticus 26 · Deut 28</div>
+      <div class="xb-note">The covenant blessings and curses Ezekiel sees coming true — exile as the contracted consequence of covenant-breaking, restoration as covenant mercy.</div>
+    </div>
+
+    <div class="xbible-card xbc-parallel">
+      <div class="xb-tag">≈ Parallel · Contemporary</div>
+      <div class="xb-ref">Jeremiah &amp; Daniel</div>
+      <div class="xb-note">Jeremiah preaches the same fall from inside Judah; Daniel serves in Babylon's court. Three angles on one catastrophe — temple, palace, and exile camp.</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">→ Forward · Jesus</div>
+      <div class="xb-ref">John 10 · John 2 · John 7</div>
+      <div class="xb-note">Jesus is the Shepherd of Ezek 34, the true Temple where God's presence dwells (John 2:19–21), and the source of the living-water river (John 7:38).</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">→ Forward · "Son of Man"</div>
+      <div class="xb-ref">The Gospels</div>
+      <div class="xb-note">Jesus' favourite self-title fuses Ezekiel's "son of man" (the mortal before the glory) with Daniel 7's "one like a son of man" (the glorified ruler) — humility and majesty in one name.</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">→ Forward · Revelation</div>
+      <div class="xb-ref">Rev 4 · 20 · 21–22</div>
+      <div class="xb-note">No book shapes Revelation more: the throne-creatures, eating the scroll, Gog and Magog, the measured city, and the river of life all come from Ezekiel.</div>
+    </div>
+
+    <div class="xbible-card xbc-forward">
+      <div class="xb-tag">→ Forward · New Heart</div>
+      <div class="xb-ref">John 3 · 2 Cor 3 · Rom 8</div>
+      <div class="xb-note">The "new heart and new Spirit" of ch.36 becomes new-birth (John 3), the Spirit who writes on hearts (2 Cor 3), and resurrection life (Rom 8:11).</div>
+    </div>
+
+  </div><!-- /xbible-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf — The Major Voices on Ezekiel</div>
+  <div class="comm-grid">
+
+    <div class="comm-card">
+      <div class="comm-author">Daniel I. Block</div>
+      <div class="comm-title">The Book of Ezekiel, 2 vols. (NICOT, 1997–98)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Standard Reference</span>
+      <div class="comm-point">The benchmark evangelical commentary — exhaustive on the Hebrew, the ancient Near Eastern background, and the theology. Block's organising insight: Ezekiel is relentlessly <em>theocentric</em> — every oracle exists so that God will be known and his holiness vindicated.</div>
+      <div class="comm-point">Strong on the recognition formula ("you will know that I am the LORD") as the book's theological engine, and on the glory's movement as its structural spine.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Ezekiel, NICOT [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Christopher J. H. Wright</div>
+      <div class="comm-title">The Message of Ezekiel (BST, 2001)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">The most accessible serious treatment — built for preachers and teachers. Wright keeps the book's strangeness in view while drawing out its pastoral and missional weight: God's concern for his own name among the nations, and the call to be a community marked by his presence.</div>
+      <div class="comm-point">Excellent on handling chapters 16 and 23 responsibly, and on reading the temple vision as fulfilled in Christ and the new creation rather than as a literal blueprint.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Ezekiel, BST [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Iain M. Duguid</div>
+      <div class="comm-title">Ezekiel (NIV Application Commentary, 1999)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Application</span>
+      <div class="comm-point">Bridges the ancient text to contemporary life with unusual skill. Duguid reads Ezekiel through the lens of God's presence lost and regained, and consistently points to Christ as the true temple, shepherd, and source of the new heart.</div>
+      <div class="comm-point">Especially helpful for moving from Ezekiel's bizarre imagery to clear, Christ-centred application without flattening the text.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Ezekiel, NIVAC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Walther Zimmerli</div>
+      <div class="comm-title">Ezekiel, 2 vols. (Hermeneia, ET 1979–83)</div>
+      <span class="comm-tradition trad-critical">Critical · Form-Critical</span>
+      <div class="comm-point">The towering critical commentary of the 20th century. Zimmerli's analysis of the recognition formula ("Erkenntnisformel") and the book's redactional growth set the agenda for a generation of scholarship. Indispensable for the technical history of interpretation.</div>
+      <div class="comm-point">Read critically by conservatives — its redaction theories are debated — but unmatched on the form and function of Ezekiel's recurring formulae.</div>
+      <a href="https://fortresspress.com/" target="_blank" class="source-link">fortresspress.com — Ezekiel, Hermeneia [VERIFY URL]</a>
+    </div>
+
+  </div>
+
+  <div class="comm-wide">
+    <div class="comm-card">
+      <div class="comm-author">John B. Taylor</div>
+      <div class="comm-title">Ezekiel (Tyndale OT Commentaries)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">A compact, reliable entry point — ideal for those who want a trustworthy overview before going deep. Clear on structure and the glory-presence theme without the technical apparatus.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Ezekiel, TOTC [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Patristic &amp; Reformation</div>
+      <div class="comm-title">Gregory the Great · John Calvin</div>
+      <span class="comm-tradition trad-reformed">Historical</span>
+      <div class="comm-point">Gregory's <em>Homilies on Ezekiel</em> (esp. on the chariot and the watchman) shaped medieval pastoral theology. Calvin's lectures (unfinished, to ch.20) model careful, God-centred exposition and resist allegorical excess.</div>
+      <a href="https://www.ccel.org/" target="_blank" class="source-link">ccel.org — Calvin / Gregory on Ezekiel [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Jewish Tradition</div>
+      <div class="comm-title">Merkabah mysticism · Rashi · the Rabbis</div>
+      <span class="comm-tradition trad-jewish">Jewish</span>
+      <div class="comm-point">Ezekiel 1 (the merkabah / chariot) became the foundation of early Jewish mysticism — so revered that the Mishnah restricted who could study it. Rashi's medieval commentary remains a key window into traditional Jewish reading of the visions and the temple.</div>
+      <a href="https://www.sefaria.org/Ezekiel.1" target="_blank" class="source-link">sefaria.org — Ezekiel with Rashi [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — The Exiles by the Kebar</div>
+        <div class="tn-text">A deported people, their temple about to be rubble, asking the question every refugee asks: is our God still with us, or did we leave him behind in the ruins? Ezekiel's answer is the throne on wheels — God has come to Babylon. The presence they thought was tied to a building has followed them into exile, and one day will fill a house made new. Their identity was not in the land or the temple but in the God who is "there."</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — A Church After Loss</div>
+        <div class="tn-text">Ezekiel speaks to any believer or congregation that has watched something collapse — a ministry, a reputation, a season of vitality — and wonders whether the glory has quietly slipped out the door. The book refuses both denial and despair: it names what drove the presence away, and it stakes everything on the promise that the same God who left by the east gate will return by it. Real hope begins not by pretending the bones aren't dry, but by asking the Spirit to breathe.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If the measure of a place is not its size or success but simply "the LORD is there," what in my life or church would change if that became the only question that mattered?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"Ezekiel watches the glory of God leave a temple that had filled itself with idols — and spends the rest of the book insisting it will return. The hope is not a restored building, a revived nation, or even resurrected bones, but a recovered Presence: the city's last name is 'The LORD Is There.'"</div>
+    <div class="verdict-ref">Ezekiel 10:18 (departs) · 43:4 (returns) · 48:35 (Yahweh-Shammah) · 36:27 (the Spirit within)</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
