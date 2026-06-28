@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Day of the Lord — Deep Study (OT & NT)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-ref { font-family: 'Special Elite', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.04em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Caveat', cursive; font-size: 0.85rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4a30a0; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout { border-left: 5px solid #6c4bbf; background: #f5f2fc; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #2c2c2c; line-height: 1.65; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #6c4bbf; margin-top: 8px; font-weight: 700; }
+
+  /* PLACEMENT / INTRO */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.88rem; color: #333; line-height: 1.45; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.3rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.78rem; color: #555; line-height: 1.4; }
+  .word-translations { font-size: 0.7rem; color: #888; margin-top: 6px; font-style: italic; }
+
+  /* TWO EDGES */
+  .edges-panel { border: 2.5px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 0; margin: 4px 0 24px; overflow: hidden; }
+  .edges-row { display: grid; grid-template-columns: 1fr 1fr; }
+  .edge { padding: 16px 18px; }
+  .edge.dark { background: #1a1a1a; }
+  .edge.light { background: #eef7f0; }
+  .edge-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 8px; }
+  .edge.dark .edge-label { color: #e0796b; }
+  .edge.light .edge-label { color: #2e8a4a; }
+  .edge-head { font-family: 'Special Elite', serif; font-size: 0.95rem; margin-bottom: 8px; }
+  .edge.dark .edge-head { color: #f5f0e8; }
+  .edge.light .edge-head { color: #1a4a2a; }
+  .edge-point { font-size: 0.78rem; line-height: 1.4; margin-bottom: 6px; padding-left: 10px; border-left: 2px solid; }
+  .edge.dark .edge-point { color: #ccc; border-color: #c0392b; }
+  .edge.light .edge-point { color: #2c4c38; border-color: #2e8a4a; }
+
+  /* TIMELINE / DEVELOPMENT */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Special Elite', serif; font-size: 0.72rem; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #d47c1a; } .beat.b1 .beat-body { border-color: #d47c1a; } .beat.b1 .beat-ref { color: #d47c1a; }
+  .beat.b2 .beat-num { background: #c0392b; } .beat.b2 .beat-body { border-color: #c0392b; } .beat.b2 .beat-ref { color: #c0392b; }
+  .beat.b3 .beat-num { background: #6c4bbf; } .beat.b3 .beat-body { border-color: #6c4bbf; } .beat.b3 .beat-ref { color: #6c4bbf; }
+  .beat.b4 .beat-num { background: #2e8a4a; } .beat.b4 .beat-body { border-color: #2e8a4a; } .beat.b4 .beat-ref { color: #2e8a4a; }
+  .beat.b5 .beat-num { background: #3b6fd4; } .beat.b5 .beat-body { border-color: #3b6fd4; } .beat.b5 .beat-ref { color: #3b6fd4; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.81rem; color: #444; line-height: 1.42; }
+
+  /* OT TEXT GRID */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.8rem; color: #444; line-height: 1.4; }
+  .ot-quote { font-style: italic; color: #555; font-size: 0.78rem; margin-top: 5px; border-left: 2px solid #d47c1a; padding-left: 8px; }
+
+  /* NT TEXT GRID (blue) */
+  .nt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .nt-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 13px 14px; }
+  .nt-ref { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #3b6fd4; margin-bottom: 3px; }
+  .nt-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .nt-note { font-size: 0.8rem; color: #444; line-height: 1.4; }
+  .nt-quote { font-style: italic; color: #555; font-size: 0.78rem; margin-top: 5px; border-left: 2px solid #3b6fd4; padding-left: 8px; }
+
+  /* THE SHIFT BOX */
+  .shift-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .shift-title { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #f5f0e8; margin-bottom: 12px; }
+  .shift-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-bottom: 10px; }
+  .shift-from, .shift-to { padding: 8px 10px; border-radius: 3px; font-size: 0.8rem; line-height: 1.35; }
+  .shift-from { background: #2a2118; color: #e7c9a0; border: 1px solid #6b4f2a; }
+  .shift-to { background: #16242e; color: #a9cfe6; border: 1px solid #2f5a72; }
+  .shift-arrow { color: #888; font-size: 1.1rem; font-family: 'Special Elite', serif; }
+  .shift-note { font-size: 0.78rem; color: #bbb; line-height: 1.42; margin-top: 10px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* COMMENTARY SHELF */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Special Elite', serif; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed     { background: #6c4bbf; color: #fff; }
+  .trad-evangelical  { background: #3b6fd4; color: #fff; }
+  .trad-preaching    { background: #c0392b; color: #fff; }
+  .trad-pastoral     { background: #2e8a4a; color: #fff; }
+  .trad-critical     { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.78rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Caveat', cursive; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Special Elite', serif; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.86rem; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.4; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #9880d8; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.86rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c4b0f0; font-family: 'Special Elite', serif; font-size: 0.92rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid { grid-template-columns: 1fr 1fr; }
+    .ot-grid, .nt-grid, .comm-shelf, .tn-cols, .edges-row { grid-template-columns: 1fr; }
+    .shift-row { grid-template-columns: 1fr; }
+    .shift-arrow { transform: rotate(90deg); justify-self: center; }
+    .beat-num { width: 70px; }
+  }
+  @media (max-width: 480px) {
+    .word-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">The Day of the Lord</div>
+  <div class="header-title">From Amos to Revelation — One Theme Across Both Testaments</div>
+  <span class="badge-deep">Deep Study</span>
+
+  <!-- KEY TEXT -->
+  <div class="section-label">Anchor Texts — Old & New</div>
+  <div class="passage-callout">
+    <div class="pc-label">The OT Warning</div>
+    <div class="pc-text">
+      "Woe to you who long for the day of the LORD! Why do you long for the day of the LORD? That day will be darkness, not light. It will be as though a man fled from a lion only to meet a bear… Will not the day of the LORD be darkness, not light — pitch-dark, without a ray of brightness?"
+    </div>
+    <div class="pc-ref">Amos 5:18–20 (NIV) — the earliest sustained "Day of the LORD" text</div>
+  </div>
+  <div class="passage-callout" style="border-color:#3b6fd4; background:#eef2fb;">
+    <div class="pc-label" style="color:#3b6fd4;">The NT Echo</div>
+    <div class="pc-text">
+      "For you know very well that the day of the Lord will come like a thief in the night. While people are saying, 'Peace and safety,' destruction will come on them suddenly… But you, brothers and sisters, are not in darkness so that this day should surprise you like a thief."
+    </div>
+    <div class="pc-ref" style="color:#3b6fd4;">1 Thessalonians 5:2–4 (NIV)</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="placement">
+    <strong>The big idea:</strong> "The Day of the LORD" (Hebrew <em>yôm YHWH</em>) is the Bible's name for the moment God personally steps into history to <em>judge</em> his enemies and <em>save</em> his people. It is not first a date on a calendar but an <em>event of divine intervention</em>. In the OT it appears as both near, in-history judgments (a locust plague, the fall of Babylon, the fall of Jerusalem) and as a final, cosmic, world-ending Day. The NT takes this exact phrase, attaches it to <strong>Jesus Christ</strong> — "the Day of the Lord," "the Day of Christ," "the Day of the Lord Jesus" — and locates it at his second coming. The single most important interpretive key is that the OT's <em>yôm YHWH</em> (the Day of <em>Yahweh</em>) becomes, in the NT, the day of <em>Jesus</em> — a quiet but enormous claim about who Jesus is.</div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of the Day</div>
+  <div class="word-grid">
+
+    <div class="word-card">
+      <div class="word-greek">יוֹם יְהוָה</div>
+      <div class="word-translit">yôm YHWH</div>
+      <span class="word-ref-badge">OT — "Day of the LORD"</span>
+      <div class="word-gloss">The Day of Yahweh</div>
+      <div class="word-note">Appears ~19× explicitly, plus many variants ("that day," "the day," "a day of the LORD"). <em>Yôm</em> ("day") need not be 24 hours — it marks a decisive time of divine action. The phrase likely arose from "holy war" imagery: the day Yahweh marches out as Warrior. Amos shockingly turns it <em>against</em> Israel.</div>
+      <div class="word-translations">Amos 5:18 · Joel 1:15 · Zeph 1:14 · Mal 4:5</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἡμέρα κυρίου</div>
+      <div class="word-translit">hēmera kyriou</div>
+      <span class="word-ref-badge">NT — "Day of the Lord"</span>
+      <div class="word-gloss">The Day of the Lord (= Jesus)</div>
+      <div class="word-note">The Septuagint rendered <em>yôm YHWH</em> as <em>hēmera kyriou</em>. The NT uses the identical phrase — but <em>kyrios</em> ("Lord") now refers to Jesus. The OT's Day of Yahweh has become the day of the returning Christ. Variants: "day of Christ" (Phil 1:10), "day of the Lord Jesus" (1 Cor 5:5).</div>
+      <div class="word-translations">1 Thess 5:2 · 2 Pet 3:10 · 1 Cor 1:8 · 2 Thess 2:2</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">παρουσία</div>
+      <div class="word-translit">parousia</div>
+      <span class="word-ref-badge">NT — "coming/presence"</span>
+      <div class="word-gloss">Arrival of a king/royal visit</div>
+      <div class="word-note">The standard NT word for Christ's second coming. In the Greco-Roman world it named the official visit of an emperor to a city — preparations, fanfare, accountability. The Day of the Lord is the <em>parousia</em> of King Jesus: the royal arrival that both vindicates the loyal and judges the rebel.</div>
+      <div class="word-translations">Matt 24:27 · 1 Thess 4:15 · 2 Thess 2:8 · Jas 5:8</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">חֹשֶׁךְ</div>
+      <div class="word-translit">ḥōšek</div>
+      <span class="word-ref-badge">Amos 5:18 — "darkness"</span>
+      <div class="word-gloss">Darkness, gloom</div>
+      <div class="word-note">Amos's deliberate reversal: Israel assumed the Day would be <em>light</em> (their vindication, enemies crushed). Amos says it will be <em>ḥōšek</em> — darkness, for <em>them</em>. The Day is not automatically good news; it is good news only for the righteous. Cosmic darkening (sun, moon, stars) becomes a stock image of the Day (Joel 2:31; Matt 24:29).</div>
+      <div class="word-translations">Amos 5:18, 20 · Joel 2:2 · Zeph 1:15</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">יוֹם נָקָם</div>
+      <div class="word-translit">yôm nāqām</div>
+      <span class="word-ref-badge">Isa 61:2 — "day of vengeance"</span>
+      <div class="word-gloss">Day of vengeance / vindication</div>
+      <div class="word-note">The Day has two edges in one breath: "the year of the LORD's favor and the day of vengeance of our God." When Jesus reads this in Luke 4:18–19 he stops <em>before</em> "the day of vengeance" — signalling that his first coming inaugurated the favor; the vengeance edge awaits his return. One prophecy, split across two comings.</div>
+      <div class="word-translations">Isa 61:2 · Isa 34:8 · cf. Luke 4:18–21</div>
+    </div>
+
+    <div class="word-card">
+      <div class="word-greek">ἡ ὀργή</div>
+      <div class="word-translit">hē orgē</div>
+      <span class="word-ref-badge">NT — "the wrath"</span>
+      <div class="word-gloss">The (coming) wrath</div>
+      <div class="word-note">The NT names the judgment-edge of the Day as "the wrath to come" (1 Thess 1:10) — and announces that believers are "not appointed… to wrath but to obtain salvation through our Lord Jesus" (1 Thess 5:9). The cross is where the wrath of the Day fell on Christ in the place of his people.</div>
+      <div class="word-translations">1 Thess 1:10 · 5:9 · Rom 2:5 · Rev 6:17</div>
+    </div>
+
+  </div><!-- /word-grid -->
+
+  <!-- THE TWO EDGES -->
+  <div class="section-label">The Two Edges — One Day, Two Outcomes</div>
+  <div class="edges-panel">
+    <div class="edges-row">
+      <div class="edge dark">
+        <div class="edge-label">Edge 1 — Judgment</div>
+        <div class="edge-head">Darkness for the proud &amp; the enemy</div>
+        <div class="edge-point">Against unfaithful Israel — Amos 5; Zeph 1</div>
+        <div class="edge-point">Against the nations — Babylon (Isa 13), Egypt (Ezek 30), Edom (Obad 15)</div>
+        <div class="edge-point">Cosmic undoing — sun, moon, stars darkened (Joel 2:31)</div>
+        <div class="edge-point">NT: "sudden destruction," "the wrath to come" (1 Thess 5:3; 1:10)</div>
+        <div class="edge-point">Final: the great white throne (Rev 20:11–15)</div>
+      </div>
+      <div class="edge light">
+        <div class="edge-label">Edge 2 — Salvation</div>
+        <div class="edge-head">Light &amp; rescue for the faithful</div>
+        <div class="edge-point">"Everyone who calls on the name of the LORD will be saved" (Joel 2:32)</div>
+        <div class="edge-point">The Spirit poured out on all flesh (Joel 2:28–29)</div>
+        <div class="edge-point">"The sun of righteousness will rise with healing" (Mal 4:2)</div>
+        <div class="edge-point">NT: "salvation through our Lord Jesus" (1 Thess 5:9)</div>
+        <div class="edge-point">Final: new heavens &amp; new earth (2 Pet 3:13; Rev 21)</div>
+      </div>
+    </div>
+  </div>
+  <div class="placement" style="border-color:#6c4bbf;">
+    <strong>The hinge:</strong> The Day of the Lord is never <em>only</em> wrath or <em>only</em> rescue — it is always both, and which edge you meet depends on whose side you are on. This is why Amos rebukes those who "long for" the Day: they assumed they were safe. The gospel's answer is that at the cross, the judgment-edge of the Day fell on Christ, so that for those in him only the salvation-edge remains (Rom 8:1; 1 Thess 5:9).
+  </div>
+
+  <!-- DEVELOPMENT TIMELINE -->
+  <div class="section-label">How the Theme Develops — Five Stages</div>
+  <div class="structure-map">
+
+    <div class="beat b1">
+      <div class="beat-num">760 BC<br>Amos</div>
+      <div class="beat-body">
+        <div class="beat-ref">Stage 1 — The Shocking Reversal</div>
+        <div class="beat-title">The Day Turns Against God's Own People</div>
+        <div class="beat-desc">Israel expected the Day of the LORD to be the day their enemies were crushed. Amos detonates that assumption: because of <em>their</em> injustice and empty worship, the Day will be darkness for them. The first lesson of the theme is that covenant membership is no shield against the Judge.</div>
+      </div>
+    </div>
+
+    <div class="beat b2">
+      <div class="beat-num">8th–6th c.<br>Prophets</div>
+      <div class="beat-body">
+        <div class="beat-ref">Stage 2 — Near and Far</div>
+        <div class="beat-title">Historical Judgments as Previews of the Final Day</div>
+        <div class="beat-desc">Isaiah calls the fall of Babylon "the day of the LORD" (Isa 13:6,9); Ezekiel calls the fall of Egypt "the day of the LORD" (Ezek 30:3); Zephaniah aims it at Judah. Each in-history catastrophe is a real Day of the Lord <em>and</em> a rehearsal for the one final Day. This "already/not-yet" pattern is built into the OT itself.</div>
+      </div>
+    </div>
+
+    <div class="beat b3">
+      <div class="beat-num">Joel</div>
+      <div class="beat-body">
+        <div class="beat-ref">Stage 3 — The Pivot Text</div>
+        <div class="beat-title">Locusts, the Spirit, and "Whoever Calls"</div>
+        <div class="beat-desc">Joel reads a locust plague as a Day of the LORD, then telescopes outward to the cosmic Day — and promises that beforehand God will pour out his Spirit "on all flesh," so that "everyone who calls on the name of the LORD will be saved." Joel becomes the bridge the NT walks across at Pentecost.</div>
+      </div>
+    </div>
+
+    <div class="beat b4">
+      <div class="beat-num">Pentecost<br>Acts 2</div>
+      <div class="beat-body">
+        <div class="beat-ref">Stage 4 — Inaugurated</div>
+        <div class="beat-title">Peter: "This Is That" — the Day Has Begun</div>
+        <div class="beat-desc">Peter quotes Joel and declares the Spirit's outpouring is its fulfilment — the last-days Day of the Lord has been <em>inaugurated</em> in Jesus' death, resurrection, and the gift of the Spirit. Strikingly, "calls on the name of the LORD" (Joel) becomes "calls on the name of Jesus" (Acts 2:21,36). The Day already has a face.</div>
+      </div>
+    </div>
+
+    <div class="beat b5">
+      <div class="beat-num">Parousia<br>&amp; Rev</div>
+      <div class="beat-body">
+        <div class="beat-ref">Stage 5 — Consummated</div>
+        <div class="beat-title">The Day of Christ — Still to Come, Suddenly</div>
+        <div class="beat-desc">The NT keeps the final edge future: the Day will arrive "like a thief" (1 Thess 5:2; 2 Pet 3:10), with the heavens dissolved and all things made new. The OT's Day of Yahweh is now the <em>parousia</em> of the Lord Jesus — judgment for the rebel, rescue and resurrection for his people.</div>
+      </div>
+    </div>
+
+  </div><!-- /structure-map -->
+
+  <!-- OT TEXTS -->
+  <div class="section-label">Old Testament — The Major Day-of-the-LORD Texts</div>
+  <div class="ot-grid">
+
+    <div class="ot-card">
+      <div class="ot-ref">Amos 5:18–20</div>
+      <div class="ot-title">The Reversal</div>
+      <div class="ot-note">The foundational text. The Day is darkness, not light, for a complacent, unjust people. You cannot outrun it — flee the lion, meet the bear. It exposes the danger of assuming you are on God's side.</div>
+      <div class="ot-quote">"Why do you long for the day of the LORD?" — 5:18</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Joel 1–2 · 2:28–32</div>
+      <div class="ot-title">The Pivot</div>
+      <div class="ot-note">A locust plague read as the Day; then cosmic darkening; then the Spirit poured out on all flesh and the promise "everyone who calls… will be saved." The OT's clearest link between the Day, the Spirit, and salvation.</div>
+      <div class="ot-quote">"The great and dreadful day of the LORD." — 2:31</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Zephaniah 1:14–18</div>
+      <div class="ot-title">The Great Day</div>
+      <div class="ot-note">The most concentrated description: "a day of wrath, a day of distress and anguish, a day of trouble and ruin, a day of darkness and gloom, a day of clouds and blackness." The medieval hymn <em>Dies Irae</em> ("Day of Wrath") is drawn from here.</div>
+      <div class="ot-quote">"The great day of the LORD is near." — 1:14</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 2:12–22 · 13:6–13</div>
+      <div class="ot-title">Against Pride &amp; Babylon</div>
+      <div class="ot-note">A Day "against all that is proud and lofty" — every height brought low so that "the LORD alone will be exalted." Isaiah 13 then applies "the day of the LORD" to the fall of Babylon: a real historical Day, painted in cosmic colors.</div>
+      <div class="ot-quote">"The day of the LORD Almighty… against all that is proud." — 2:12</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Obadiah 15 · Ezekiel 30:3</div>
+      <div class="ot-title">Against the Nations</div>
+      <div class="ot-note">"The day of the LORD is near for all nations" (Obad 15) — turning the Day outward against Edom and the surrounding peoples. Ezekiel names the fall of Egypt "the day of the LORD." The Day is God's universal reckoning, not Israel's private weapon.</div>
+      <div class="ot-quote">"As you have done, it will be done to you." — Obad 15</div>
+    </div>
+
+    <div class="ot-card">
+      <div class="ot-ref">Malachi 4:1–6 · Zech 14</div>
+      <div class="ot-title">The Last Word of the OT</div>
+      <div class="ot-note">The OT ends pointing forward: a Day "burning like a furnace" for the arrogant, but "the sun of righteousness will rise with healing in its wings" for those who fear God — and Elijah will come "before that great and dreadful day." Zechariah 14: "On that day the LORD will be king over all the earth."</div>
+      <div class="ot-quote">"…before the great and dreadful day of the LORD." — Mal 4:5</div>
+    </div>
+
+  </div><!-- /ot-grid -->
+
+  <!-- THE CHRISTOLOGICAL SHIFT -->
+  <div class="section-label">The Decisive Shift — From the Day of Yahweh to the Day of Jesus</div>
+  <div class="shift-box">
+    <div class="shift-title">The OT Phrase, Re-Aimed at Christ</div>
+
+    <div class="shift-row">
+      <div class="shift-from">Joel 2:32 — "Everyone who calls on the name of <strong>the LORD</strong> (Yahweh) will be saved."</div>
+      <div class="shift-arrow">→</div>
+      <div class="shift-to">Acts 2:21 / Rom 10:13 — Peter &amp; Paul apply this to calling on <strong>Jesus</strong> as Lord.</div>
+    </div>
+
+    <div class="shift-row">
+      <div class="shift-from">OT — <em>yôm YHWH</em>, the Day Yahweh comes to judge and save.</div>
+      <div class="shift-arrow">→</div>
+      <div class="shift-to">NT — "the day of the Lord," "the day of Christ" (Phil 1:10; 2:16): the day <strong>Jesus</strong> returns.</div>
+    </div>
+
+    <div class="shift-row">
+      <div class="shift-from">Isa 45:23 — "Before <strong>me</strong> every knee will bow" (Yahweh speaking).</div>
+      <div class="shift-arrow">→</div>
+      <div class="shift-to">Phil 2:10–11 — every knee bows to <strong>Jesus</strong> as Lord, on his Day.</div>
+    </div>
+
+    <div class="shift-note"><strong>Why this matters:</strong> The NT writers do not invent a new theme — they take the OT's Day of <em>Yahweh</em> and, without apology, make it the Day of <em>Jesus</em>. This is one of the strongest implicit claims to Christ's full deity in the NT: the Day that belonged to Yahweh alone now belongs to the risen Lord Jesus. To meet Jesus on that Day is to meet God himself.</div>
+  </div>
+
+  <!-- NT TEXTS -->
+  <div class="section-label">New Testament — The Day Becomes the Day of Christ</div>
+  <div class="nt-grid">
+
+    <div class="nt-card">
+      <div class="nt-ref">Acts 2:16–21</div>
+      <div class="nt-title">Inaugurated at Pentecost</div>
+      <div class="nt-note">Peter quotes Joel: the Spirit's outpouring means the "last days" Day of the Lord has begun in Jesus. The salvation-edge of the Day is now open to "everyone who calls" — and the name to call on is Jesus.</div>
+      <div class="nt-quote">"This is what was spoken by the prophet Joel." — 2:16</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">1 Thessalonians 5:1–11</div>
+      <div class="nt-title">Like a Thief — Stay Awake</div>
+      <div class="nt-note">The Day comes suddenly on the complacent ("peace and safety"), but believers are "children of the day" — not destined for wrath but for salvation through Jesus. The response is not date-setting but watchfulness and sober hope.</div>
+      <div class="nt-quote">"…the day of the Lord will come like a thief." — 5:2</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">2 Thessalonians 2:1–12</div>
+      <div class="nt-title">Not Yet — Don't Be Deceived</div>
+      <div class="nt-note">Some claimed the Day had already come. Paul corrects them: certain things precede it (the rebellion, the man of lawlessness). The Day is future and unmistakable — guarding against both panic and complacency.</div>
+      <div class="nt-quote">"…that day will not come until the rebellion occurs." — 2:3</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">2 Peter 3:10–13</div>
+      <div class="nt-title">The Heavens Dissolved</div>
+      <div class="nt-note">The most vivid NT description: the Day will come "like a thief," the heavens disappear with a roar, the elements melt — and out of it comes "a new heaven and a new earth, where righteousness dwells." Judgment serves re-creation.</div>
+      <div class="nt-quote">"…we are looking forward to a new heaven and a new earth." — 3:13</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">1 Cor 1:8 · 5:5 · Phil 1:6,10</div>
+      <div class="nt-title">The Day of Christ — for the Church</div>
+      <div class="nt-note">For believers the Day is not terror but goal: God will keep them "blameless on the day of our Lord Jesus" and complete the work he began "until the day of Christ Jesus." The same Day that judges the world perfects the church.</div>
+      <div class="nt-quote">"…carry it on to completion until the day of Christ Jesus." — Phil 1:6</div>
+    </div>
+
+    <div class="nt-card">
+      <div class="nt-ref">Matt 24:29–31 · Rev 6:12–17</div>
+      <div class="nt-title">Cosmic Signs &amp; the Great Day</div>
+      <div class="nt-note">Jesus reuses Day-of-the-Lord imagery (sun darkened, stars falling, Joel/Isaiah) for his coming. Revelation calls it "the great day of their wrath" — and asks "who can withstand it?" The OT colors are poured directly onto the parousia.</div>
+      <div class="nt-quote">"…the great day of their wrath has come." — Rev 6:17</div>
+    </div>
+
+  </div><!-- /nt-grid -->
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary &amp; Theology Shelf</div>
+  <div class="comm-shelf">
+
+    <div class="comm-card">
+      <div class="comm-author">G. K. Beale</div>
+      <div class="comm-title">A New Testament Biblical Theology (2011)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Biblical Theology</span>
+      <div class="comm-point">Beale's "already/not yet": the Day of the Lord was <em>inaugurated</em> at Christ's first coming (the "latter days" began) and will be <em>consummated</em> at his return. We live <em>between</em> the two edges of the one Day — the salvation already tasted, the final judgment still ahead.</div>
+      <div class="comm-point">He stresses that NT writers read OT Day-of-the-Lord texts as fulfilled in Christ without flattening them — the historical Days (Babylon, Jerusalem) were genuine partial enactments of the final one.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — A NT Biblical Theology [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Gerhard von Rad</div>
+      <div class="comm-title">Old Testament Theology, vol. 2 (1965)</div>
+      <span class="comm-tradition trad-critical">Critical · OT Theology</span>
+      <div class="comm-point">Von Rad's influential thesis: the Day of the Lord originated in Israel's "holy war" traditions — the day Yahweh comes as Warrior to fight. Amos's genius was to turn this cherished hope of <em>victory</em> into a threat of <em>judgment</em> against Israel itself.</div>
+      <div class="comm-point">He traces how the concept expands from concrete battle to cosmic, eschatological catastrophe across the prophetic corpus.</div>
+      <a href="https://www.westminsterjohnknox.com/" target="_blank" class="source-link">wjkbooks.com — OT Theology, vol. 2 [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">N. T. Wright</div>
+      <div class="comm-title">Surprised by Hope (2008) / Paul commentaries</div>
+      <span class="comm-tradition trad-pastoral">Pastoral · NT Scholarship</span>
+      <div class="comm-point">Wright frames the Day as the <em>parousia</em> — the royal arrival of King Jesus to put the whole world right (judgment + new creation), not the destruction of the world but its rescue and renewal. The goal is the new heavens and new earth, not escape from earth.</div>
+      <div class="comm-point">He cautions against reading "thief in the night" and cosmic imagery woodenly — they are apocalyptic ways of speaking about a real, decisive, world-transforming event.</div>
+      <a href="https://www.spckpublishing.co.uk/" target="_blank" class="source-link">spckpublishing.co.uk — Surprised by Hope [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Sermons on the Second Advent</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span>
+      <div class="comm-point">Spurgeon preached the Day with two voices: terror for the unprepared ("the day of the Lord cometh… who shall abide it?") and unshakeable comfort for the believer, for whom that Day is the dawn of unbroken fellowship with Christ. The same sunrise that scorches the stubble warms the sheltered.</div>
+      <div class="comm-point">His pastoral aim was always readiness now — "be ye also ready" — not speculation about timing.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Sermon archive [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">Geerhardus Vos</div>
+      <div class="comm-title">The Pauline Eschatology (1930)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Eschatology</span>
+      <div class="comm-point">Vos showed that for Paul the whole Christian life is oriented toward "the Day." The resurrection of Christ is the firstfruits that guarantees the harvest of the Day; the Spirit is the "down payment" of the age the Day will fully bring. Eschatology is not an appendix to Paul's gospel — it is its structure.</div>
+      <a href="https://www.ccel.org/" target="_blank" class="source-link">ccel.org / reprints — The Pauline Eschatology [VERIFY URL]</a>
+    </div>
+
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of Thessalonians (BST, 1991)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Pastoral</span>
+      <div class="comm-point">On 1 Thess 5: Stott balances certainty and ignorance — the Day is <em>certain</em> but its timing is <em>unknown</em>, so the only fitting posture is wakeful, sober holiness, not date-setting or fearful paralysis. Believers are "children of the day" already living in its light.</div>
+      <div class="comm-point">He underlines 5:9 — "God did not appoint us to suffer wrath but to receive salvation" — as the believer's settled assurance about the Day.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Thessalonians [VERIFY URL]</a>
+    </div>
+
+  </div><!-- /comm-shelf -->
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">1. Is the Day of the Lord one event or many?</div>
+      <div class="pressure-a">Both — and holding the tension is the key. The OT applies "the day of the LORD" to multiple in-history judgments (Babylon, Egypt, Judah), <em>and</em> to a final cosmic Day. The pattern is "prophetic foreshortening": near judgments are real Days <em>and</em> previews of the ultimate one. The NT continues this — Jesus blends the fall of Jerusalem (AD 70) and his final coming in one discourse (Matt 24). So the Day is a recurring <em>pattern</em> of divine intervention that climaxes in one final, unrepeatable Day.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">2. Has the Day already happened, or is it still future?</div>
+      <div class="pressure-a">The NT says "yes" to both, carefully. It was <em>inaugurated</em> — Pentecost fulfils Joel (Acts 2), the "last days" have begun, the salvation-edge is open now. But it is not <em>consummated</em> — Paul insists the Day is still future (2 Thess 2), Peter says it "will come like a thief" (2 Pet 3:10). The error to avoid is the Thessalonian one: thinking the final Day has already passed. We live between the dawn and the noon of the same Day.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is the Day good news or bad news?</div>
+      <div class="pressure-a">It depends entirely on whose side you are on — which is exactly Amos's point. For the proud, complacent, and unjust it is darkness and wrath. For those who "call on the name of the Lord" it is rescue, resurrection, and the sun of righteousness rising with healing. The gospel resolves the dread: at the cross the judgment-edge of the Day fell on Jesus in the place of his people, so that for those in Christ "there is now no condemnation" (Rom 8:1) — only the salvation-edge remains.</div>
+    </div>
+
+    <div class="pressure-item">
+      <div class="pressure-q">4. Should the imagery (sun darkened, heavens melting) be read literally?</div>
+      <div class="pressure-a">These are stock <em>apocalyptic</em> images, drawn from a shared OT vocabulary (Joel, Isaiah) and reused by Jesus and the apostles. They communicate the cosmic, world-shaking, decisive character of God's intervention — the unmaking and remaking of the created order. Whether one reads them as literal cosmic events or as vivid symbolic language for real divine action, the theological point is the same: the Day is the end of the world as it is and the birth of the world as it should be. Interpreters differ; the certainty of the event does not.</div>
+    </div>
+
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Original Hearers</div>
+        <div class="tn-text">Amos's hearers <em>wanted</em> the Day — they were sure it meant their enemies' ruin and their own vindication. Amos shattered that false security. Joel's hearers, devastated by locusts, were taught to read disaster as a summons to return to God before the greater Day. The Thessalonians, anxious about loved ones who had died, were reassured that the Day means resurrection and reunion, not loss, for those in Christ.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Modern Context</div>
+        <div class="tn-text">Two opposite errors persist: the complacent assume judgment will never come ("peace and safety"), and the fearful obsess over end-times charts and dates. The biblical posture is neither — it is wakeful, sober, hopeful readiness. The Day is certain, its timing hidden, its outcome (for those in Christ) already secured. We live as "children of the day," letting its coming light shape how we live in the dark.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If the Day of the Lord came today, would it meet me as darkness or as dawn — and on what is my confidence resting?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The Day of the Lord is the moment God steps in to judge and to save. The OT awaited the Day of Yahweh; the NT announces it is the Day of Jesus — already dawning, soon to break in full. For those in Christ, the wrath has already fallen on him, and only the dawn remains."</div>
+    <div class="verdict-ref">Amos 5:18 · Joel 2:32 · Acts 2:21 · 1 Thess 5:9 · 2 Pet 3:13</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
