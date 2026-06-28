@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Bait of Satan (John Bevere) — A Deep Review</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .review-header { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 24px 18px; margin-bottom: 8px; }
+  .rh-top { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .rh-cover { width: 96px; flex-shrink: 0; border: 2px solid #2c2c2c; border-radius: 2px; background: #c0392b; color: #fff; padding: 14px 10px; text-align: center; }
+  .rh-cover-title { font-family: 'Special Elite', serif; font-size: 0.82rem; line-height: 1.2; }
+  .rh-cover-bait { font-size: 1.5rem; display: block; margin: 6px 0; }
+  .rh-cover-author { font-size: 0.6rem; opacity: 0.85; margin-top: 8px; }
+  .rh-meta { flex: 1; min-width: 240px; }
+  .rh-title { font-family: 'Special Elite', serif; font-size: 1.9rem; color: #2c2c2c; line-height: 1.05; }
+  .rh-sub { font-size: 1rem; color: #555; margin: 4px 0 10px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-bottom: 8px; }
+  .meta-row { font-size: 0.76rem; color: #666; margin-bottom: 2px; }
+  .meta-row strong { color: #2c2c2c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* THESIS CALLOUT */
+  .thesis { border-left: 5px solid #c0392b; background: #fdf2f2; padding: 18px 22px; margin: 16px 0 20px; border-radius: 0 3px 3px 0; }
+  .th-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 8px; }
+  .th-text { font-family: 'Special Elite', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.6; }
+
+  /* VERDICT-AT-A-GLANCE SCORECARD */
+  .scorecard { border: 2.5px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 16px 20px; margin: 4px 0 24px; }
+  .sc-overall { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px dashed #ccc; }
+  .sc-score { font-family: 'Special Elite', serif; font-size: 2rem; color: #c0392b; }
+  .sc-score small { font-size: 1rem; color: #888; }
+  .sc-verdict { font-size: 0.9rem; color: #444; line-height: 1.4; }
+  .sc-row { display: grid; grid-template-columns: 150px 1fr 38px; gap: 10px; align-items: center; margin-bottom: 7px; }
+  .sc-dim { font-size: 0.78rem; color: #333; font-weight: 600; }
+  .sc-bar { height: 12px; background: #e6ded2; border-radius: 6px; overflow: hidden; }
+  .sc-fill { height: 100%; border-radius: 6px; }
+  .sc-num { font-size: 0.74rem; color: #888; text-align: right; font-family: 'Special Elite', serif; }
+  .f-green { background: #2e8a4a; } .f-blue { background: #3b6fd4; } .f-orange { background: #d47c1a; } .f-red { background: #c0392b; } .f-purple { background: #6c4bbf; }
+
+  /* SKANDALON HERO */
+  .skandalon { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 22px; margin: 4px 0 24px; }
+  .sk-greek { font-size: 1.8rem; color: #e0796b; font-weight: 700; font-style: italic; }
+  .sk-translit { font-size: 0.74rem; color: #999; font-style: italic; margin-bottom: 10px; }
+  .sk-text { font-size: 0.84rem; color: #ccc; line-height: 1.5; margin-bottom: 8px; }
+  .sk-text strong { color: #e0b53a; }
+  .sk-flag { font-size: 0.78rem; color: #d0c8bc; border-left: 3px solid #d47c1a; padding-left: 10px; line-height: 1.45; margin-top: 10px; }
+
+  /* ARGUMENT MAP */
+  .arg-map { margin: 4px 0 24px; }
+  .arg-beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .arg-num { width: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Special Elite', serif; font-size: 1.1rem; color: #fff; background: #c0392b; border-radius: 3px 0 0 3px; }
+  .arg-body { flex: 1; border: 2px solid #c0392b; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .arg-title { font-family: 'Special Elite', serif; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 3px; }
+  .arg-desc { font-size: 0.81rem; color: #444; line-height: 1.42; }
+
+  /* CONCEPTS GRID */
+  .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .concept-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 15px; }
+  .cc-name { font-family: 'Special Elite', serif; font-size: 0.92rem; color: #c0392b; margin-bottom: 4px; }
+  .cc-note { font-size: 0.79rem; color: #444; line-height: 1.42; }
+
+  /* SCRIPTURE TABLE */
+  .scrip-row { display: grid; grid-template-columns: 130px 1fr 70px; gap: 10px; align-items: start; padding: 9px 0; border-bottom: 1px solid #e0d8cc; }
+  .scrip-row:last-child { border-bottom: none; }
+  .scrip-ref { font-family: 'Special Elite', serif; font-size: 0.82rem; color: #2c2c2c; }
+  .scrip-use { font-size: 0.77rem; color: #555; line-height: 1.38; }
+  .scrip-fit { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; text-align: center; border-radius: 2px; padding: 3px 4px; align-self: center; }
+  .fit-strong { background: #2e8a4a; color: #fff; }
+  .fit-ok     { background: #d47c1a; color: #fff; }
+  .fit-weak   { background: #c0392b; color: #fff; }
+
+  /* TWO-COLUMN STRENGTHS / WEAKNESSES */
+  .sw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 24px; }
+  .sw-col { border: 2px solid; border-radius: 3px; padding: 14px 16px; }
+  .sw-str { border-color: #2e8a4a; background: #edf8f1; }
+  .sw-weak { border-color: #c0392b; background: #fdf2f2; }
+  .sw-head { font-family: 'Special Elite', serif; font-size: 0.92rem; margin-bottom: 10px; }
+  .sw-str .sw-head { color: #2e8a4a; } .sw-weak .sw-head { color: #c0392b; }
+  .sw-item { font-size: 0.79rem; color: #333; line-height: 1.4; margin-bottom: 9px; padding-left: 16px; position: relative; }
+  .sw-item:last-child { margin-bottom: 0; }
+  .sw-str .sw-item::before { content: '+'; position: absolute; left: 0; color: #2e8a4a; font-weight: 700; }
+  .sw-weak .sw-item::before { content: '–'; position: absolute; left: 0; color: #c0392b; font-weight: 700; }
+
+  /* DEEP DIVE / CAUTION BOXES */
+  .deepbox { border: 2.5px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 16px 20px; margin: 4px 0 24px; }
+  .deepbox.caution { border-color: #d47c1a; background: #fdf8ef; }
+  .db-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 8px; }
+  .deepbox .db-label { color: #2c2c2c; }
+  .deepbox.caution .db-label { color: #d47c1a; }
+  .db-title { font-family: 'Special Elite', serif; font-size: 1rem; color: #2c2c2c; margin-bottom: 8px; }
+  .db-text { font-size: 0.83rem; color: #333; line-height: 1.5; margin-bottom: 8px; }
+  .db-text:last-child { margin-bottom: 0; }
+  .db-text strong { color: #c0392b; }
+
+  /* COMPARISON SHELF */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .compare-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 13px 15px; }
+  .comp-title { font-family: 'Special Elite', serif; font-size: 0.86rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comp-author { font-size: 0.68rem; color: #aaa; font-style: italic; margin-bottom: 7px; }
+  .comp-note { font-size: 0.76rem; color: #d0c8bc; line-height: 1.42; }
+
+  /* WHO SHOULD READ */
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 24px; }
+  .who-col { border-left: 4px solid; padding: 4px 0 4px 14px; }
+  .who-yes { border-color: #2e8a4a; } .who-no { border-color: #c0392b; }
+  .who-head { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 8px; }
+  .who-yes .who-head { color: #2e8a4a; } .who-no .who-head { color: #c0392b; }
+  .who-item { font-size: 0.79rem; color: #333; line-height: 1.4; margin-bottom: 7px; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; text-align: center; }
+  .verdict-text { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-text strong { color: #c0392b; }
+
+  @media (max-width: 700px) {
+    .concept-grid, .sw-grid, .compare-grid, .who-grid { grid-template-columns: 1fr; }
+    .sc-row { grid-template-columns: 110px 1fr 34px; }
+    .scrip-row { grid-template-columns: 92px 1fr 60px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="review-header">
+    <div class="rh-top">
+      <div class="rh-cover">
+        <div class="rh-cover-title">THE BAIT OF</div>
+        <span class="rh-cover-bait">🪤</span>
+        <div class="rh-cover-title">SATAN</div>
+        <div class="rh-cover-author">John Bevere</div>
+      </div>
+      <div class="rh-meta">
+        <span class="badge-deep">Deep Review</span>
+        <div class="rh-title">The Bait of Satan</div>
+        <div class="rh-sub">Living Free from the Deadly Trap of Offense</div>
+        <div class="meta-row"><strong>Author:</strong> John Bevere (Messenger International)</div>
+        <div class="meta-row"><strong>First published:</strong> 1994 · Charisma House (20th-anniversary ed. 2014)</div>
+        <div class="meta-row"><strong>Genre:</strong> Popular pastoral / Christian living · charismatic-evangelical</div>
+        <div class="meta-row"><strong>Core topic:</strong> Offense as a spiritual trap → bitterness, unforgiveness, captivity</div>
+        <div class="meta-row"><strong>Reach:</strong> One of the best-selling Christian books on the subject; widely used with its study/video curriculum</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THESIS -->
+  <div class="thesis">
+    <div class="th-label">The Book in One Sentence</div>
+    <div class="th-text">Offense is the bait Satan uses to trap believers: whether the hurt was real or only perceived, harbouring it breeds bitterness and unforgiveness that quietly imprison the soul — and the only way out is the deliberate, unconditional choice to forgive.</div>
+  </div>
+
+  <!-- SCORECARD -->
+  <div class="section-label">Verdict at a Glance</div>
+  <div class="scorecard">
+    <div class="sc-overall">
+      <div class="sc-score">7.5<small>/10</small></div>
+      <div class="sc-verdict">A genuinely useful, convicting book on a neglected and destructive problem — best read with discernment about its proof-texting and its potential misuse in abusive contexts.</div>
+    </div>
+    <div class="sc-row"><div class="sc-dim">Accessibility</div><div class="sc-bar"><div class="sc-fill f-green" style="width:95%"></div></div><div class="sc-num">9.5</div></div>
+    <div class="sc-row"><div class="sc-dim">Pastoral urgency</div><div class="sc-bar"><div class="sc-fill f-green" style="width:90%"></div></div><div class="sc-num">9.0</div></div>
+    <div class="sc-row"><div class="sc-dim">Practical usefulness</div><div class="sc-bar"><div class="sc-fill f-blue" style="width:85%"></div></div><div class="sc-num">8.5</div></div>
+    <div class="sc-row"><div class="sc-dim">Exegetical rigour</div><div class="sc-bar"><div class="sc-fill f-orange" style="width:55%"></div></div><div class="sc-num">5.5</div></div>
+    <div class="sc-row"><div class="sc-dim">Theological depth</div><div class="sc-bar"><div class="sc-fill f-orange" style="width:55%"></div></div><div class="sc-num">5.5</div></div>
+    <div class="sc-row"><div class="sc-dim">Care for the wronged</div><div class="sc-bar"><div class="sc-fill f-orange" style="width:60%"></div></div><div class="sc-num">6.0</div></div>
+    <div class="sc-row"><div class="sc-dim">Originality</div><div class="sc-bar"><div class="sc-fill f-blue" style="width:75%"></div></div><div class="sc-num">7.5</div></div>
+  </div>
+
+  <!-- SKANDALON — THE CENTRAL MOVE -->
+  <div class="section-label">The Hinge of the Whole Book — σκάνδαλον</div>
+  <div class="skandalon">
+    <div class="sk-greek">σκάνδαλον</div>
+    <div class="sk-translit">skandalon — the Greek word behind "offense"</div>
+    <div class="sk-text">Bevere builds everything on one word study. <strong>Skandalon</strong> originally named the bait-stick or trigger of an animal trap — the moving stick to which the bait is fixed, that springs the snare when touched. From it we get the English "scandal." Jesus warns that "offenses (skandala) will surely come" (Luke 17:1), and that in the last days "many will be offended" (Matt 24:10). Bevere's striking claim: <strong>offense is literally bait</strong> — Satan baits the trap, and the moment we "take" it (take the bait), the snare closes. The image is vivid, memorable, and the etymology is broadly legitimate (lexicons gloss skandalon as "a trap, a cause of stumbling").</div>
+    <div class="sk-flag"><strong>But watch the bridge.</strong> In the New Testament the skandalon word-group usually means "a cause of <em>stumbling into sin</em> or <em>falling away from faith</em>" — not the modern English sense of "taking offense" (hurt feelings, umbrage). Matt 24:10's "many will be offended" most naturally means "many will fall away / apostatise." Bevere quietly maps the modern emotional sense onto the biblical word. There is real overlap — harboured hurt genuinely can lead to falling away — but the equation is looser than the book implies. This single move is the source of most of the book's strengths <em>and</em> most of its exegetical weaknesses.</div>
+  </div>
+
+  <!-- ARGUMENT MAP -->
+  <div class="section-label">The Argument — How the Book Moves</div>
+  <div class="arg-map">
+    <div class="arg-beat">
+      <div class="arg-num">1</div>
+      <div class="arg-body">
+        <div class="arg-title">Offense is a trap, and no one is exempt</div>
+        <div class="arg-desc">Jesus said offenses <em>will</em> come (Luke 17:1). The question is not whether we'll be offended but what we do with it. The bait is set; the only safety is in how we respond.</div>
+      </div>
+    </div>
+    <div class="arg-beat">
+      <div class="arg-num">2</div>
+      <div class="arg-body">
+        <div class="arg-title">Two kinds of offended people — same prison</div>
+        <div class="arg-desc">(a) Those genuinely wronged, and (b) those who only believe they were wronged. Bevere argues both end up in the same trap of bitterness — and that being <em>right</em> about the offense doesn't make the captivity any less real.</div>
+      </div>
+    </div>
+    <div class="arg-beat">
+      <div class="arg-num">3</div>
+      <div class="arg-body">
+        <div class="arg-title">The offended hide it well — often behind religion</div>
+        <div class="arg-desc">Hurt curdles into self-justification, withdrawal, gossip, and a wounded identity. Many don't even know they're offended. The people who hurt us most are usually those closest — family, friends, church leaders.</div>
+      </div>
+    </div>
+    <div class="arg-beat">
+      <div class="arg-num">4</div>
+      <div class="arg-body">
+        <div class="arg-title">Unforgiveness is the lock — and it's spiritually lethal</div>
+        <div class="arg-desc">Using the parable of the unforgiving servant (Matt 18) and Jesus' words on forgiveness, Bevere presses that refusing to forgive hands us over to "the tormentors" and severs our own experience of God's forgiveness.</div>
+      </div>
+    </div>
+    <div class="arg-beat">
+      <div class="arg-num">5</div>
+      <div class="arg-body">
+        <div class="arg-title">The way out: forgive, release, and (where possible) reconcile</div>
+        <div class="arg-desc">Forgiveness is a decision, not a feeling, and is required unconditionally. Bevere distinguishes forgiveness (unilateral, always commanded) from reconciliation (mutual, requires the other's repentance) — a genuinely helpful distinction. He calls readers to confront, forgive, and walk free, often using his own ministry wounds as illustration.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY CONCEPTS -->
+  <div class="section-label">Key Concepts Worth Keeping</div>
+  <div class="concept-grid">
+    <div class="concept-card">
+      <div class="cc-name">"Taking the bait"</div>
+      <div class="cc-note">The central metaphor: offense only traps you if you pick it up. The offense will come; the choice to seize and nurse it is yours. Memorable and genuinely clarifying.</div>
+    </div>
+    <div class="concept-card">
+      <div class="cc-name">Right but still imprisoned</div>
+      <div class="cc-note">Even a fully justified grievance can become a cage. Being the wronged party doesn't exempt you from the spiritual damage of harboured bitterness. A hard but important truth.</div>
+    </div>
+    <div class="concept-card">
+      <div class="cc-name">Forgiveness ≠ reconciliation</div>
+      <div class="cc-note">Forgiveness is unilateral and always commanded; reconciliation needs two parties and repentance. This distinction (clearer in later editions) prevents the book from demanding victims re-enter unsafe relationships.</div>
+    </div>
+    <div class="concept-card">
+      <div class="cc-name">Hidden / unconscious offense</div>
+      <div class="cc-note">Many carry offense without naming it — it leaks out as coldness, criticism, or spiritual dryness. Naming the unnamed wound is the book's real pastoral gift.</div>
+    </div>
+    <div class="concept-card">
+      <div class="cc-name">Wounded by the closest</div>
+      <div class="cc-note">The deepest offenses come from family, friends, and leaders — precisely because trust was highest. Realistic about where church people actually get hurt.</div>
+    </div>
+    <div class="concept-card">
+      <div class="cc-name">Forgiveness as decision</div>
+      <div class="cc-note">Not a feeling to wait for but a choice to make, then live into. Liberating for those stuck waiting to "feel" forgiving — though it can underplay the slow work of healing.</div>
+    </div>
+  </div>
+
+  <!-- KEY SCRIPTURES -->
+  <div class="section-label">Bevere's Key Texts — and How Well They Carry the Weight</div>
+  <div style="background:#faf7f2; border:2px solid #2c2c2c; border-radius:3px; padding:14px 18px; margin:4px 0 24px;">
+    <div class="scrip-row">
+      <div class="scrip-ref">Luke 17:1</div>
+      <div class="scrip-use">"Offenses will come." Used as proof that offense is inevitable — the trap is always set.</div>
+      <div class="scrip-fit fit-strong">Strong</div>
+    </div>
+    <div class="scrip-row">
+      <div class="scrip-ref">Matthew 18:21–35</div>
+      <div class="scrip-use">The unforgiving servant handed to the tormentors. The book's engine for the lethality of unforgiveness.</div>
+      <div class="scrip-fit fit-strong">Strong</div>
+    </div>
+    <div class="scrip-row">
+      <div class="scrip-ref">Hebrews 12:15</div>
+      <div class="scrip-use">The "root of bitterness" that defiles many. Solid support for offense-turned-bitterness.</div>
+      <div class="scrip-fit fit-strong">Strong</div>
+    </div>
+    <div class="scrip-row">
+      <div class="scrip-ref">Matthew 24:10</div>
+      <div class="scrip-use">"Many will be offended." Used for an end-times epidemic of personal offense.</div>
+      <div class="scrip-fit fit-ok">Stretched</div>
+    </div>
+    <div class="scrip-row">
+      <div class="scrip-ref">Proverbs 18:19</div>
+      <div class="scrip-use">"A brother offended is harder to win than a strong city." Apt illustration of how offense fortifies.</div>
+      <div class="scrip-fit fit-ok">Stretched</div>
+    </div>
+    <div class="scrip-row">
+      <div class="scrip-ref">skandalon etymology</div>
+      <div class="scrip-use">The "bait-stick of a trap" sense carried into every NT use of the word.</div>
+      <div class="scrip-fit fit-weak">Over-pressed</div>
+    </div>
+  </div>
+
+  <!-- STRENGTHS / WEAKNESSES -->
+  <div class="section-label">The Honest Ledger</div>
+  <div class="sw-grid">
+    <div class="sw-col sw-str">
+      <div class="sw-head">What It Gets Right</div>
+      <div class="sw-item">Names a real, under-addressed, community-destroying sin — harboured offense — with unusual directness.</div>
+      <div class="sw-item">Refuses to let "I was right" excuse bitterness; this is a genuinely countercultural and freeing message.</div>
+      <div class="sw-item">The bait/trap metaphor is vivid and sticky; readers remember it and use it on themselves.</div>
+      <div class="sw-item">Strong, clear, unconditional call to forgive — grounded in Matt 18 and the gospel of having been forgiven.</div>
+      <div class="sw-item">The forgiveness-vs-reconciliation distinction protects against the worst misreadings.</div>
+      <div class="sw-item">Self-implicating: Bevere indicts himself with his own ministry failures, not just others.</div>
+      <div class="sw-item">Accessible to anyone; pairs well with small-group discussion and has freed many from long-held resentment.</div>
+    </div>
+    <div class="sw-col sw-weak">
+      <div class="sw-head">Where to Read With Care</div>
+      <div class="sw-item">Builds heavily on an English-word bridge: "offense" (emotional) ≠ biblical skandalon (cause of stumbling/apostasy). Proof-texting follows.</div>
+      <div class="sw-item">Can shift the burden onto the victim — telling the genuinely wronged that their pain is "Satan's bait" may silence legitimate grievance.</div>
+      <div class="sw-item">Under-distinguishes sinful bitterness from righteous lament, holy anger, and the pursuit of justice.</div>
+      <div class="sw-item">Thin on confronting sin, protecting the vulnerable, and church discipline — forgiveness is not the same as tolerating ongoing abuse.</div>
+      <div class="sw-item">Forgiveness can sound like sheer willpower; light on the slow, grief-laden process of healing.</div>
+      <div class="sw-item">Theologically popular rather than rigorous — limited grounding in union with Christ, the cross, and the Spirit's work.</div>
+      <div class="sw-item">Repetitive and anecdote-driven; the same point is pressed many times.</div>
+    </div>
+  </div>
+
+  <!-- THE EXEGETICAL DEEP DIVE -->
+  <div class="deepbox">
+    <div class="db-label">The Central Exegetical Question</div>
+    <div class="db-title">Does "offense" in the Bible mean hurt feelings?</div>
+    <div class="db-text">This is the question on which the book stands or falls. Modern English "offense" covers a spectrum: at one end, being emotionally hurt or insulted; at the other, being caused to stumble into sin or abandon faith. The Greek skandalon / skandalizō lives at the <em>second</em> end. When Jesus says it would be better to have a millstone hung around your neck than to "cause one of these little ones to stumble (skandalisē)" (Matt 18:6), he is not talking about hurting their feelings — he means causing them to fall into sin or away from God.</div>
+    <div class="db-text">Bevere's book mostly addresses the <em>first</em> sense — the wounded, resentful, "I can't believe they did that to me" experience — but draws its biblical authority from texts about the <em>second</em>. The two are related (nursed offense really can lead someone to fall away — which is exactly Hebrews 12:15's "root of bitterness"), so the book is not simply wrong. But the clean identification "offense = the bait of Satan, proven by every NT use of skandalon" is <strong>more than the texts will bear</strong>. A careful reader keeps the pastoral insight (bitterness is a trap) while loosening the word-study certainty.</div>
+  </div>
+
+  <!-- THE PASTORAL CAUTION -->
+  <div class="deepbox caution">
+    <div class="db-label">A Necessary Pastoral Caution</div>
+    <div class="db-title">When this book is used as a weapon</div>
+    <div class="db-text">Because <em>The Bait of Satan</em> tells the offended person "your offense is the real problem — deal with your own heart," it can be, and has been, <strong>misused by unhealthy leaders to silence legitimate complaint.</strong> An abuser or a controlling church culture can hand a victim this book to reframe their entirely justified protest as a spiritual failing ("you've taken the bait of Satan"), deflecting all accountability onto the wounded party.</div>
+    <div class="db-text">The book's own forgiveness-vs-reconciliation distinction is the corrective: forgiveness releases the offender from <em>your</em> judgment; it does <em>not</em> require restoring an unsafe relationship, dropping a just accusation, or pretending no wrong occurred. Teach it alongside the Bible's strong commands to confront sin (Matt 18:15–17), protect the vulnerable, expose darkness (Eph 5:11), and seek justice (Micah 6:8). <strong>Forgiveness and accountability are not opposites.</strong> Read with that balance, the book heals; read without it, it can wound the already-wounded.</div>
+  </div>
+
+  <!-- COMPARISON SHELF -->
+  <div class="section-label">Read Alongside / Instead</div>
+  <div class="compare-grid">
+    <div class="compare-card">
+      <div class="comp-title">Total Forgiveness</div>
+      <div class="comp-author">R. T. Kendall</div>
+      <div class="comp-note">A deeper, more theologically careful treatment of the same terrain — what forgiveness is and isn't, and the inner work of releasing offenders. The best companion to Bevere.</div>
+    </div>
+    <div class="compare-card">
+      <div class="comp-title">Forgive: Why Should I and How Can I?</div>
+      <div class="comp-author">Timothy Keller</div>
+      <div class="comp-note">Grounds forgiveness in the gospel and the cross with more rigour, and handles the justice dimension Bevere under-treats. Strong on "forgiveness vs. excusing."</div>
+    </div>
+    <div class="compare-card">
+      <div class="comp-title">The Peacemaker</div>
+      <div class="comp-author">Ken Sande</div>
+      <div class="comp-note">The practical manual for actually resolving conflict biblically — confrontation, mediation, reconciliation. Fills exactly the gap Bevere leaves on confronting sin.</div>
+    </div>
+    <div class="compare-card">
+      <div class="comp-title">Unoffendable</div>
+      <div class="comp-author">Brant Hansen</div>
+      <div class="comp-note">A lighter, more contemporary take arguing Christians have no right to hold onto anger. Pairs well thematically, though it raises its own questions about righteous anger.</div>
+    </div>
+  </div>
+
+  <!-- WHO SHOULD READ -->
+  <div class="section-label">Who Should Read It — and How</div>
+  <div class="who-grid">
+    <div class="who-col who-yes">
+      <div class="who-head">Reach for it if…</div>
+      <div class="who-item">You're carrying a grudge you keep replaying and justifying.</div>
+      <div class="who-item">You sense coldness or bitterness in yourself but haven't named its source.</div>
+      <div class="who-item">You lead a small group and want an accessible, convicting study on forgiveness.</div>
+      <div class="who-item">You know you were wronged — and you're ready to stop letting it own you.</div>
+    </div>
+    <div class="who-col who-no">
+      <div class="who-head">Be cautious if…</div>
+      <div class="who-item">You're a victim of abuse and someone is using this book to silence you — get the forgiveness/justice balance first.</div>
+      <div class="who-item">You want careful exegesis; treat the word-study claims as illustration, not proof.</div>
+      <div class="who-item">You're in a controlling church being told your concerns are "offense" — read it with Matt 18:15–17 open beside it.</div>
+      <div class="who-item">You need help <em>confronting</em> a wrong, not just releasing it — pair with Sande's <em>The Peacemaker</em>.</div>
+    </div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Final Verdict</div>
+    <div class="verdict-text"><em>The Bait of Satan</em> is a <strong>genuinely valuable, convicting book</strong> on a real and corrosive problem the church rarely addresses head-on: the offense we nurse and the bitterness it breeds. Its central insight — that harboured offense imprisons us regardless of who was right — has set many free. Read it for its pastoral punch and its memorable trap metaphor; read it <em>critically</em> where it presses a word study past its limits, and read it <em>carefully</em> where it could be turned into a tool for silencing the genuinely wronged. Take the medicine; leave the over-claim. <strong>7.5 / 10.</strong></div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
