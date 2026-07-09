@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ezekiel — Discussion Guide</title>
+<title>The Glory That Leaves — and Comes Back — Discussion Guide</title>
 <style>
   html { font-size: 18px; }
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
@@ -11,77 +11,57 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 32px; }
 
-  .page { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 32px 36px; max-width: 780px; margin: 0 auto; }
+  .page { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
 
-  /* HEADER */
-  .header { border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; }
-  .header-top { display: flex; justify-content: space-between; align-items: baseline; }
-  .header h1 { font-family: 'Special Elite', serif; font-size: 2.4rem; letter-spacing: 0.12em; }
-  .series-tag { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #888; font-weight: 700; }
-  .header .theme { font-size: 1.05rem; color: #555; margin-top: 4px; font-style: italic; }
-  .header .summary { font-size: 0.95rem; color: #666; margin-top: 6px; line-height: 1.45; }
+  /* TITLE */
+  .guide-title { font-family: 'Special Elite', serif; font-size: 1.5rem; color: #2c2c2c; text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
 
-  /* SECTION */
-  .section { margin-bottom: 20px; }
-  .section-label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #999; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8; }
+  /* MEETING SECTION */
+  .msec { margin-bottom: 20px; }
+  .msec-head { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #2c2c2c; display: flex; align-items: baseline; gap: 8px; }
+  .msec-rom { color: #c0392b; }
+  .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; line-height: 1.7; margin-top: 6px; padding-left: 4px; }
 
-  /* BEFORE YOU ENGAGE */
-  .pre-q { margin-bottom: 9px; padding-left: 16px; position: relative; font-size: 1rem; line-height: 1.45; color: #333; }
-  .pre-q::before { content: '○'; position: absolute; left: 0; color: #aaa; font-size: 0.8rem; top: 3px; }
+  /* LESSON TIME */
+  .lesson { border: 2px solid #2c2c2c; border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
+  .qblock { margin-top: 16px; }
+  .qtag { display: inline-block; font-family: 'Special Elite', serif; font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
+  .qtag-obs { background: #3b6fd4; }
+  .qtag-app { background: #6c4bbf; }
+  .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
+  .q-num { font-weight: 700; color: #888; flex-shrink: 0; min-width: 18px; }
 
-  /* KEY TERMS */
-  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .term-item { border: 2px solid #e0ddd8; border-radius: 3px; padding: 8px 10px; background: #fff; }
-  .term-word { font-family: 'Special Elite', serif; font-size: 1rem; color: #1a1a1a; display: block; margin-bottom: 2px; }
-  .term-def { font-size: 0.88rem; color: #555; line-height: 1.35; }
+  /* PRAYER / QUOTE / MEMORY */
+  .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
+  .extra-label { font-family: 'Special Elite', serif; font-size: 0.86rem; margin-bottom: 4px; }
+  .prayer .extra-label { color: #2e8a4a; }
+  .quote .extra-label  { color: #d47c1a; }
+  .memory .extra-label { color: #c0392b; }
+  .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid #2e8a4a; }
+  .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid #d47c1a; }
+  .quote-author { font-size: 0.85rem; color: #888; margin-top: 3px; }
+  .memory-text { font-size: 1.05rem; color: #2c2c2c; padding-left: 12px; border-left: 3px solid #c0392b; }
+  .memory-text .mv-ref { font-family: 'Special Elite', serif; font-size: 0.92rem; }
 
-  /* DISCUSSION QUESTIONS */
-  .q-item { margin-bottom: 14px; }
-  .q-tag { display: inline-block; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; padding: 1px 6px; border-radius: 2px; margin-bottom: 4px; }
-  .tag-obs  { background: #3b6fd4; color: #fff; }
-  .tag-ctx  { background: #d47c1a; color: #fff; }
-  .tag-app  { background: #6c4bbf; color: #fff; }
-  .q-text { font-size: 1rem; color: #1a1a1a; line-height: 1.5; }
-
-  /* GOING DEEPER */
-  .deeper-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .deeper-item { border-left: 4px solid #e0ddd8; padding: 6px 10px; }
-  .deeper-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #aaa; margin-bottom: 3px; }
-  .deeper-item.book    { border-color: #3b6fd4; } .deeper-item.book    .deeper-label { color: #3b6fd4; }
-  .deeper-item.online  { border-color: #2e8a4a; } .deeper-item.online  .deeper-label { color: #2e8a4a; }
-  .deeper-item.passage { border-color: #6c4bbf; } .deeper-item.passage .deeper-label { color: #6c4bbf; }
-  .deeper-text { font-size: 0.9rem; color: #333; line-height: 1.35; }
-
-  /* CLOSING */
-  .closing { border: 2.5px solid #2c2c2c; border-radius: 3px; padding: 12px 16px; background: #f0ede8; text-align: center; }
-  .closing-label { font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: #888; margin-bottom: 5px; }
-  .closing-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #1a1a1a; line-height: 1.45; }
-
-  /* FOOTER */
-  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 20px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
+  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
 
   @media print {
     body { background: #fff; padding: 0; }
-    .page { border: none; box-shadow: none; max-width: 100%; padding: 20px; }
+    .page { border: none; max-width: 100%; padding: 18px; }
     .home-nav { display: none; }
   }
   @media (max-width: 768px) {
-    body { padding: 20px 16px 60px; }
-    .terms-grid { grid-template-columns: 1fr !important; }
-    .deeper-grid { grid-template-columns: 1fr !important; }
+    body { padding: 18px 14px 50px; }
+    .page { padding: 22px 20px 26px; }
+    .guide-title { font-size: 1.2rem; }
     .footer { flex-direction: column; gap: 4px; }
-    h1 { font-size: 2rem !important; }
-  }
-  @media (max-width: 480px) {
-    body { padding: 16px 12px 48px; }
-    h1 { font-size: 1.6rem !important; }
   }
 </style>
 </head>
 <body>
   <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
     <style>
-      .home-nav { padding: 0 0 14px; max-width: 780px; margin: 0 auto; }
+      .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
       .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
       .home-nav-link:hover { color: #555; }
       @media print { .home-nav { display: none; } }
@@ -89,125 +69,86 @@
 
 <div class="page">
 
-  <div class="header">
-    <div class="header-top">
-      <h1>EZEKIEL</h1>
-      <span class="series-tag">The Prophets &nbsp;·&nbsp; Book 26 of 66</span>
-    </div>
-    <div class="theme">The glory that leaves — and comes back: God's presence in a ruined world</div>
-    <div class="summary">A priest deported to Babylon becomes a watchman to the exiles. Through bizarre visions and stranger street-theatre, he announces that Jerusalem will fall because God's glory has left it — and then promises that the same glory will return, a valley of dead bones will live, and a river will flow from a new temple to heal the world.</div>
+  <div class="guide-title">The Glory That Leaves — and Comes Back<br>The Book of Ezekiel</div>
+
+  <!-- I. CONNECTING -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">I.</span> Connecting</div>
+    <div class="framing">Share what happened in your lives during the last week. Use an ice-breaker or other approach to get to know each other better.</div>
   </div>
 
-  <!-- BEFORE YOU ENGAGE -->
-  <div class="section">
-    <div class="section-label">Before You Engage</div>
-    <div class="pre-q">Have you ever stayed loyal to an institution or relationship long after the thing that made it worth belonging to had quietly drained away? What finally made the absence undeniable?</div>
-    <div class="pre-q">When you need people to grasp something they're determined not to hear, words often fail. Have you ever seen someone get a hard truth across by <em>doing</em> something strange rather than saying it?</div>
-    <div class="pre-q">Is there any situation in your life right now that feels like a "valley of dry bones" — so far gone that recovery seems not just unlikely but physically impossible? What would it take for you to believe it could live again?</div>
+  <!-- II. SEEKING GOD -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">II.</span> Seeking God</div>
+    <div class="framing">(If your group is larger than 8 persons, break into groups of 3–4 for this.) Discuss any personal roadblocks, challenges, or fears that threaten your ability to walk by faith. Pray about things that will really make a difference in your life today.</div>
   </div>
 
-  <!-- KEY TERMS -->
-  <div class="section">
-    <div class="section-label">Key Terms</div>
-    <div class="terms-grid">
-      <div class="term-item">
-        <span class="term-word">Glory of the LORD (kavod)</span>
-        <span class="term-def">God's visible, weighty presence. Ezekiel's spine: the glory enters in ch.1, leaves the temple in ch.10, and returns to a new temple in ch.43. The whole book tracks where God's presence is.</span>
+  <!-- III. LESSON TIME -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">III.</span> Lesson Time</div>
+    <div class="lesson">
+
+      <div class="qblock">
+        <span class="qtag qtag-obs">Observation</span>
+        <div class="q"><span class="q-num">1.</span><span>In chapters 8–11 the glory of God rises from the holy place, pauses at the threshold, moves to the east gate, and finally leaves the city. Why do you think the departure is shown in stages rather than all at once, and what might that pacing reveal about God?</span></div>
+        <div class="q"><span class="q-num">2.</span><span>In the valley of dry bones (ch.37) the bones first come together and are covered with flesh, but stay dead until the breath (<em>ruach</em>) enters them. Why is the vision staged in two steps — assembly first, then breath — and what does that say about what real restoration requires?</span></div>
+        <div class="q"><span class="q-num">3.</span><span>God promises to remove the "heart of stone" and give a "heart of flesh," putting his own Spirit within (36:26). Look closely at the wording: who does the acting in that promise, and what does the people's part appear to be?</span></div>
+        <div class="q"><span class="q-num">4.</span><span>The phrase "you will know that I am the LORD" recurs around seventy times, after both judgment and rescue. What does it tell us that God gives the same goal for wrecking a city and for raising the dead?</span></div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Son of Man (ben adam)</span>
-        <span class="term-def">God's name for Ezekiel — "mortal," "son of dust" — used ~93 times. It keeps the prophet small before the overwhelming glory. Jesus later takes the title and fills it with new meaning.</span>
+
+      <div class="qblock">
+        <span class="qtag qtag-app">Application</span>
+        <div class="q"><span class="q-num">1.</span><span>Chapter 36 promises not that God will help people try harder, but that he will give them a new heart. Where have you been leaning on willpower to change something that may actually need a change of heart you cannot manufacture?</span></div>
+        <div class="q"><span class="q-num">2.</span><span>Ezekiel watches the glory leave a temple where all the religious forms are still running. What is the practical difference between keeping the outward forms of faith and actually having God's presence among us — and how would you tell the two apart?</span></div>
+        <div class="q"><span class="q-num">3.</span><span>Think of a "valley of dry bones" situation in your own life or in this group — something that seems past recovery. Going by Ezekiel 37, what would it take for those bones to be assembled, and what would it take for them to actually breathe again?</span></div>
+        <div class="q"><span class="q-num">4.</span><span><strong>True or False:</strong> A person can be faithfully keeping every religious practice and still be a place God's presence has quietly left.</span></div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Sign-Act</span>
-        <span class="term-def">Prophecy performed, not just spoken. Ezekiel lies bound for months, eats rationed food, shaves his head, packs an exile's bag — his own body becomes the message Israel won't hear in words.</span>
+
+      <div class="extra prayer">
+        <div class="extra-label">Prayer</div>
+        <div class="prayer-text">
+          Father, we confess we cannot make ourselves new; only you can.<br>
+          Take out our hearts of stone and give us hearts of flesh.<br>
+          Put your Spirit within us, and breathe your life into what has died in us.<br>
+          Come and dwell among us, so that we and others would know that you are the LORD.
+        </div>
       </div>
-      <div class="term-item">
-        <span class="term-word">"You will know that I am the LORD"</span>
-        <span class="term-def">The recognition formula — repeated ~70 times. The goal of both judgment and rescue is the same: that people would truly know who God is. Knowing God, not mere survival, is the point.</span>
+
+      <div class="extra quote">
+        <div class="extra-label">Quote</div>
+        <div class="quote-text">"What comes into our minds when we think about God is the most important thing about us."</div>
+        <div class="quote-author">— A. W. Tozer, <em>The Knowledge of the Holy</em></div>
       </div>
-      <div class="term-item">
-        <span class="term-word">New Heart / New Spirit</span>
-        <span class="term-def">God's promise (36:26) to remove the "heart of stone" and give a "heart of flesh," putting his own Spirit within. The internal transformation the New Testament ties to being born again.</span>
+
+      <div class="extra memory">
+        <div class="extra-label">Memory Verse</div>
+        <div class="memory-text"><span class="mv-ref">Ezekiel 36:26</span> — "I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh."</div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Watchman</span>
-        <span class="term-def">Ezekiel's job description (ch.3, 33): a lookout responsible to sound the alarm. If he stays silent, the people's blood is on his hands — a sober model of accountable truth-telling.</span>
-      </div>
-    </div>
-  </div>
 
-  <!-- DISCUSSION QUESTIONS -->
-  <div class="section">
-    <div class="section-label">Discussion Questions</div>
-
-    <div class="q-item">
-      <span class="q-tag tag-obs">Observation</span>
-      <div class="q-text">In chapters 8–11 Ezekiel is given a vision-tour of the corrupt worship happening inside the temple, and then watches the glory of God rise from the holy place, pause at the threshold, move to the east gate, and finally leave the city entirely. Why do you think the departure is shown as slow and reluctant — in stages — rather than all at once? What might that pacing be communicating about God?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-obs">Observation</span>
-      <div class="q-text">In the valley of dry bones (ch.37), God asks Ezekiel, "Can these bones live?" and Ezekiel answers, "Sovereign LORD, you alone know." Then the bones come together, get flesh, but remain dead until the breath (ruach) enters them. Why is the vision staged in two distinct steps — assembly first, then breath — and what does that two-stage process suggest about what real restoration requires?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-ctx">Context</span>
-      <div class="q-text">Ezekiel's first audience were exiles who believed Jerusalem and its temple were untouchable because God lived there. For chapters on end Ezekiel insists the city <em>will</em> fall — and then, the moment news arrives that it has (ch.33), his message flips almost entirely to hope. Why would God withhold the comfort until after the disaster rather than before? What does that timing reveal about the difference between false hope and real hope?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-ctx">Context</span>
-      <div class="q-text">In chapter 18 Ezekiel confronts a proverb the exiles were repeating — "The parents eat sour grapes, and the children's teeth are set on edge" — their way of saying they were being punished for their ancestors' sins. God's reply insists each person is accountable for their own choices. What was attractive about the proverb to people in exile, and where do we hear modern versions of the same move today?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">God tells Ezekiel that even when no one listens, "they will know that a prophet has been among them" (2:5). His faithfulness is measured by his obedience, not his results. Where in your own life have you assumed that the value of doing the right thing depends on whether it "works" or whether people respond? How would it change things to be responsible only for the speaking, not the outcome?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">The promise of chapter 36 is not that God will help people try harder, but that he will replace the heart of stone with a heart of flesh and put his Spirit inside them. Is there an area where you've been relying on willpower to change something that may actually require a change of heart you can't manufacture? What's the difference, practically, between behaviour modification and a new heart?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">Ezekiel ends with a river flowing from the temple that gets deeper the farther it goes and turns even the Dead Sea fresh and full of life (ch.47), and the city's final name is "The LORD Is There" (48:35). After 47 chapters that include some of the most disturbing imagery in the Bible, why do you think the book lands on <em>presence</em> as its last word — and what would it mean for a community today to be defined not by its programs or success but simply by "the LORD is there"?</div>
-    </div>
-
-  </div>
-
-  <!-- GOING DEEPER -->
-  <div class="section">
-    <div class="section-label">Going Deeper</div>
-    <div class="deeper-grid">
-      <div class="deeper-item book">
-        <div class="deeper-label">Book</div>
-        <div class="deeper-text">Christopher J. H. Wright, <em>The Message of Ezekiel</em> (The Bible Speaks Today) — accessible, pastoral, and strong on how the book's structure carries its theology</div>
-      </div>
-      <div class="deeper-item online">
-        <div class="deeper-label">Resource</div>
-        <div class="deeper-text">The Bible Project's two Ezekiel videos and study notes (bibleproject.com) — a visual walk through the book's structure, the glory theme, and its strange imagery</div>
-      </div>
-      <div class="deeper-item passage">
-        <div class="deeper-label">Read Alongside</div>
-        <div class="deeper-text">Revelation 4 and 21–22 — John's throne vision and the river of life draw directly on Ezekiel; compare how each pictures God's presence with his people</div>
-      </div>
     </div>
   </div>
 
-  <!-- CLOSING THOUGHT -->
-  <div class="section">
-    <div class="closing">
-      <div class="closing-label">Closing Thought</div>
-      <div class="closing-text">Ezekiel watches the glory of God walk out of a compromised temple — and stakes everything on the promise that it will walk back into a place made new. The book's last word is not judgment but an address: "The LORD Is There."</div>
-    </div>
+  <!-- IV. ACCOUNTABILITY -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">IV.</span> Accountability</div>
+    <div class="framing">Break into small groups of 3–4 persons. Recite your four memory verses from the last four weeks. Share what you have done/learned in your daily devotion times. Share how you have sought opportunities to build relationships with unbelievers on your evangelism list, and the outcome of this.</div>
+  </div>
+
+  <!-- V. BUILDING COMMUNITY -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">V.</span> Building Community</div>
+    <div class="framing">Do an exercise or have a discussion that builds stronger and deeper relationships. Make announcements and plans that affect the entire group.</div>
+  </div>
+
+  <!-- VI. CLOSING -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">VI.</span> Closing</div>
+    <div class="framing">Close in prayer. Enjoy refreshments and fellowship.</div>
   </div>
 
   <div class="footer">
-    <span>Ezekiel &nbsp;·&nbsp; Discussion Guide</span>
-    <span>The Prophets</span>
+    <span>The Glory That Leaves and Returns &nbsp;·&nbsp; Discussion Guide</span>
+    <span>The Book of Ezekiel</span>
   </div>
 
 </div>

@@ -3,274 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hosea — Discussion Guide</title>
+<title>Love That Will Not Let Go — Discussion Guide</title>
 <style>
   html { font-size: 18px; }
   @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Special+Elite&display=swap');
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Caveat', cursive; padding: 32px; }
 
-  body {
-    background: #f5f0e8;
-    font-family: 'Caveat', cursive;
-    padding: 32px;
-  }
+  .page { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
 
-  .back-link {
-    display: inline-block;
-    font-size: 0.85rem;
-    color: #c0392b;
-    text-decoration: none;
-    letter-spacing: 0.06em;
-    margin-bottom: 16px;
-    font-weight: 600;
-  }
-  .back-link:hover { text-decoration: underline; }
+  /* TITLE */
+  .guide-title { font-family: 'Special Elite', serif; font-size: 1.5rem; color: #2c2c2c; text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
 
-  .page {
-    background: #faf7f2;
-    border: 3px solid #2c2c2c;
-    border-radius: 4px;
-    padding: 32px 36px;
-    max-width: 780px;
-    margin: 0 auto;
-  }
+  /* MEETING SECTION */
+  .msec { margin-bottom: 20px; }
+  .msec-head { font-family: 'Special Elite', serif; font-size: 1.05rem; color: #2c2c2c; display: flex; align-items: baseline; gap: 8px; }
+  .msec-rom { color: #c0392b; }
+  .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; line-height: 1.7; margin-top: 6px; padding-left: 4px; }
 
-  /* HEADER */
-  .header { border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; }
-  .header-top { display: flex; justify-content: space-between; align-items: baseline; }
-  .header h1 { font-family: 'Special Elite', serif; font-size: 2.4rem; letter-spacing: 0.12em; }
-  .series-tag {
-    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: #888; font-weight: 700;
-  }
-  .header .theme {
-    font-size: 1.05rem; color: #555; margin-top: 4px; font-style: italic;
-  }
-  .header .summary {
-    font-size: 0.92rem; color: #777; margin-top: 6px; line-height: 1.45;
-  }
+  /* LESSON TIME */
+  .lesson { border: 2px solid #2c2c2c; border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
+  .qblock { margin-top: 16px; }
+  .qtag { display: inline-block; font-family: 'Special Elite', serif; font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
+  .qtag-obs { background: #3b6fd4; }
+  .qtag-app { background: #6c4bbf; }
+  .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
+  .q-num { font-weight: 700; color: #888; flex-shrink: 0; min-width: 18px; }
 
-  /* SECTION */
-  .section { margin-bottom: 20px; }
-  .section-label {
-    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
-    font-weight: 700; color: #999; margin-bottom: 10px;
-    padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8;
-  }
+  /* PRAYER / QUOTE / MEMORY */
+  .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
+  .extra-label { font-family: 'Special Elite', serif; font-size: 0.86rem; margin-bottom: 4px; }
+  .prayer .extra-label { color: #2e8a4a; }
+  .quote .extra-label  { color: #d47c1a; }
+  .memory .extra-label { color: #c0392b; }
+  .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid #2e8a4a; }
+  .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid #d47c1a; }
+  .quote-author { font-size: 0.85rem; color: #888; margin-top: 3px; }
+  .memory-text { font-size: 1.05rem; color: #2c2c2c; padding-left: 12px; border-left: 3px solid #c0392b; }
+  .memory-text .mv-ref { font-family: 'Special Elite', serif; font-size: 0.92rem; }
 
-  /* BEFORE YOU ENGAGE */
-  .pre-q { margin-bottom: 9px; padding-left: 16px; position: relative; font-size: 1rem; line-height: 1.45; color: #333; }
-  .pre-q::before { content: '○'; position: absolute; left: 0; color: #aaa; font-size: 0.8rem; top: 3px; }
-
-  /* KEY TERMS */
-  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .term-item {
-    border: 2.5px solid #e0ddd8;
-    border-radius: 3px;
-    padding: 8px 10px;
-    background: #fff;
-  }
-  .term-item.accent { border-color: #c0392b; }
-  .term-word { font-family: 'Special Elite', serif; font-size: 1rem; color: #1a1a1a; display: block; margin-bottom: 2px; }
-  .term-word.accent { color: #c0392b; }
-  .term-def { font-size: 0.88rem; color: #555; line-height: 1.35; }
-
-  /* DISCUSSION QUESTIONS */
-  .q-item { margin-bottom: 14px; }
-  .q-tag {
-    display: inline-block; font-size: 0.65rem; letter-spacing: 0.1em;
-    text-transform: uppercase; font-weight: 700; padding: 1px 6px;
-    border-radius: 2px; margin-bottom: 4px;
-  }
-  .tag-obs  { background: #c0392b; color: #fff; }
-  .tag-ctx  { background: #d47c1a; color: #fff; }
-  .tag-app  { background: #6c4bbf; color: #fff; }
-
-  .q-text { font-size: 1rem; color: #1a1a1a; line-height: 1.5; }
-
-  /* GOING DEEPER */
-  .deeper-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .deeper-item { border-left: 4px solid #e0ddd8; padding: 6px 10px; }
-  .deeper-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: #aaa; margin-bottom: 3px; }
-  .deeper-item.book    { border-color: #c0392b; } .deeper-item.book    .deeper-label { color: #c0392b; }
-  .deeper-item.online  { border-color: #2e8a4a; } .deeper-item.online  .deeper-label { color: #2e8a4a; }
-  .deeper-item.passage { border-color: #6c4bbf; } .deeper-item.passage .deeper-label { color: #6c4bbf; }
-  .deeper-text { font-size: 0.9rem; color: #333; line-height: 1.35; }
-  .source-link { display: inline-block; margin-top: 6px; font-size: 0.68rem; color: #888; text-decoration: none; border-bottom: 1px dashed #bbb; font-family: 'Caveat', cursive; }
-  .source-link:hover { color: #3b6fd4; border-bottom-color: #3b6fd4; }
-
-  /* CLOSING */
-  .closing {
-    border: 2.5px solid #c0392b;
-    border-radius: 3px;
-    padding: 12px 16px; background: #fdf0ee; text-align: center;
-  }
-  .closing-label { font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: #c0392b; margin-bottom: 5px; }
-  .closing-text { font-family: 'Special Elite', serif; font-size: 1.1rem; color: #1a1a1a; line-height: 1.45; }
-
-  /* FOOTER */
-  .footer {
-    border-top: 1.5px solid #e0ddd8; margin-top: 20px; padding-top: 10px;
-    display: flex; justify-content: space-between;
-    font-size: 0.75rem; color: #bbb;
-  }
+  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
 
   @media print {
     body { background: #fff; padding: 0; }
-    .page { border: none; box-shadow: none; max-width: 100%; padding: 20px; }
-    .back-link { display: none; }
+    .page { border: none; max-width: 100%; padding: 18px; }
+    .home-nav { display: none; }
   }
-
-  /* RESPONSIVE */
   @media (max-width: 768px) {
-    body { padding: 20px 16px 60px; }
-    .terms-grid { grid-template-columns: 1fr !important; }
-    .deeper-grid { grid-template-columns: 1fr !important; }
+    body { padding: 18px 14px 50px; }
+    .page { padding: 22px 20px 26px; }
+    .guide-title { font-size: 1.2rem; }
     .footer { flex-direction: column; gap: 4px; }
-    h1 { font-size: 2rem !important; }
-    table { display: block; overflow-x: auto; }
-  }
-
-  @media (max-width: 480px) {
-    body { padding: 16px 12px 48px; }
-    h1 { font-size: 1.6rem !important; }
   }
 </style>
 </head>
 <body>
   <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
     <style>
-      .home-nav { padding: 14px 20px 0; }
+      .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
       .home-nav-link { font-family: 'Caveat', cursive; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
       .home-nav-link:hover { color: #555; }
       @media print { .home-nav { display: none; } }
     </style>
-  
-<div style="max-width: 780px; margin: 0 auto;">
-  </div>
 
 <div class="page">
 
-  <div class="header">
-    <div class="header-top">
-      <h1>HOSEA</h1>
-      <span class="series-tag">The Prophets &nbsp;·&nbsp; Minor Prophets 1 of 12</span>
-    </div>
-    <div class="theme">Love that will not let go — covenant faithfulness against covenant betrayal</div>
-    <div class="summary">God commands the prophet Hosea to marry an unfaithful woman, and through that marriage gives Israel — and us — a lived parable of what it costs to love someone who keeps leaving, and why love pursues anyway.</div>
+  <div class="guide-title">Love That Will Not Let Go<br>The Book of Hosea</div>
+
+  <!-- I. CONNECTING -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">I.</span> Connecting</div>
+    <div class="framing">Share what happened in your lives during the last week. Use an ice-breaker or other approach to get to know each other better.</div>
   </div>
 
-  <!-- BEFORE YOU ENGAGE -->
-  <div class="section">
-    <div class="section-label">Before You Engage</div>
-    <div class="pre-q">Have you ever stayed loyal to someone — a friend, a family member, a colleague — who repeatedly let you down? What made you stay, and what was the cost of staying?</div>
-    <div class="pre-q">Is there a difference between being loyal to someone and performing loyalty? How would you tell them apart from the outside — and from the inside?</div>
-    <div class="pre-q">Does love have conditions? Is unconditional love actually possible, or is that just something people say?</div>
+  <!-- II. SEEKING GOD -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">II.</span> Seeking God</div>
+    <div class="framing">(If your group is larger than 8 persons, break into groups of 3–4 for this.) Discuss any personal roadblocks, challenges, or fears that threaten your ability to walk by faith. Pray about things that will really make a difference in your life today.</div>
   </div>
 
-  <!-- KEY TERMS -->
-  <div class="section">
-    <div class="section-label">Key Terms</div>
-    <div class="terms-grid">
-      <div class="term-item accent">
-        <span class="term-word accent">Hesed</span>
-        <span class="term-def">Steadfast love or covenant loyalty — the word that defines what God offers Israel and what Israel fails to return. In Hosea, its absence (6:6) is the root diagnosis of everything else that goes wrong.</span>
+  <!-- III. LESSON TIME -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">III.</span> Lesson Time</div>
+    <div class="lesson">
+
+      <div class="qblock">
+        <span class="qtag qtag-obs">Observation</span>
+        <div class="q"><span class="q-num">1.</span><span>God tells Hosea to marry Gomer, a woman who will be unfaithful to him (chapters 1–3). Why do you think God asks the prophet to live out the message with his own marriage rather than only preach it? What does the marriage show that a sermon could not?</span></div>
+        <div class="q"><span class="q-num">2.</span><span>Hosea's three children are given the names Jezreel, Lo-Ruhamah ("not loved"), and Lo-Ammi ("not my people"). Later God reverses each name. What is God saying about Israel through these names, and what changes when they are turned around?</span></div>
+        <div class="q"><span class="q-num">3.</span><span>In 11:8 God cries out, "How can I give you up, Ephraim?" Look at the language around it. What does this moment reveal about what is going on inside God as he faces the choice to judge his people?</span></div>
+        <div class="q"><span class="q-num">4.</span><span>In 6:6 God says, "I desire mercy, not sacrifice." The people were still offering their sacrifices. What is God rejecting, and what is the Hebrew word <em>hesed</em> (steadfast, covenant love) pointing them toward instead?</span></div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Whoredom / Harlotry</span>
-        <span class="term-def">Hosea's sustained metaphor for Israel's religious infidelity — worshipping Baal and other gods while still formally attached to God. Not primarily a sexual term here, but a relational and political one.</span>
+
+      <div class="qblock">
+        <span class="qtag qtag-app">Application</span>
+        <div class="q"><span class="q-num">1.</span><span>Hosea pictures a God who keeps pursuing people who keep leaving. When you sit with the idea that God pursues the persistently unfaithful, what does that stir up in you — comfort, discomfort, or both? Why?</span></div>
+        <div class="q"><span class="q-num">2.</span><span>What is the difference between religious performance — doing the right things, showing up — and the steadfast love (<em>hesed</em>) God says he actually wants? Where do you notice that gap in your own life?</span></div>
+        <div class="q"><span class="q-num">3.</span><span>Hosea repeatedly calls Israel to "return" to God. In everyday terms, what does returning to God actually look like for someone who has drifted? What makes it hard to begin?</span></div>
+        <div class="q"><span class="q-num">4.</span><span><strong>True or False:</strong> If someone keeps failing God in the same way, there comes a point where God stops pursuing them. Talk through where you land and why.</span></div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Da'at (Knowledge of God)</span>
-        <span class="term-def">Not intellectual knowledge but intimate, covenant knowledge — the kind shared between partners. Hosea's charge against Israel (4:1, 6) is a lack of this knowing: they have religion without relationship.</span>
+
+      <div class="extra prayer">
+        <div class="extra-label">Prayer</div>
+        <div class="prayer-text">
+          Father, your love reaches for us even when we turn away.<br>
+          We admit that we wander, chasing things that cannot hold us.<br>
+          Thank you that you will not let us go, and that you keep calling us home.<br>
+          Turn our hearts back to you today, and teach us to return.
+        </div>
       </div>
-      <div class="term-item">
-        <span class="term-word">Šûb (Return / Repentance)</span>
-        <span class="term-def">Literally "to turn back." Hosea uses it more than any other prophet. It captures both Israel's recurring failure to return and God's persistent invitation to do so, culminating in ch 14.</span>
+
+      <div class="extra quote">
+        <div class="extra-label">Quote</div>
+        <div class="quote-text">"To be loved but not known is comforting but superficial. To be known and not loved is our greatest fear. But to be fully known and truly loved is a lot like being loved by God."</div>
+        <div class="quote-author">— Timothy Keller, <em>The Meaning of Marriage</em></div>
       </div>
-      <div class="term-item" style="grid-column: 1 / -1;">
-        <span class="term-word">Valley of Achor</span>
-        <span class="term-def">The site of Achan's sin and execution in Joshua 7 — a place of shame and judgment in Israel's memory. Hosea 2:15 reframes it as a "door of hope," turning a symbol of catastrophe into a starting point for restoration.</span>
+
+      <div class="extra memory">
+        <div class="extra-label">Memory Verse</div>
+        <div class="memory-text"><span class="mv-ref">Hosea 6:6</span> — "For I desire mercy, not sacrifice, and acknowledgment of God rather than burnt offerings."</div>
       </div>
-    </div>
-  </div>
 
-  <!-- DISCUSSION QUESTIONS -->
-  <div class="section">
-    <div class="section-label">Discussion Questions</div>
-
-    <div class="q-item">
-      <span class="q-tag tag-obs">Observation</span>
-      <div class="q-text">Hosea's three children are named Jezreel ("God scatters"), Lo-Ruhamah ("No mercy"), and Lo-Ammi ("Not my people") — and then in chapter 2 each name is reversed. What does the reversal of these names tell you about how the book understands judgment and restoration: are they opposites, or something more complicated?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-obs">Observation</span>
-      <div class="q-text">In chapter 3, Hosea buys Gomer back for fifteen pieces of silver and a measure of barley — roughly half the price of a slave. Then he tells her to stay with him and wait. What is this scene doing in the book? What does it add that the speeches and oracles cannot?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-ctx">Context</span>
-      <div class="q-text">Hosea 6:6 — "I desire hesed and not sacrifice, and the knowledge of God rather than burnt offerings" — comes right after 6:1–3, a speech of repentance that sounds sincere. What does the context suggest about why God rejects it? Is the problem the words, the timing, or something else?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-ctx">Context</span>
-      <div class="q-text">In chapter 2, God says he will "allure" Israel into the wilderness and "speak tenderly to her" — the same language used of courtship. The wilderness is also the place Israel spent forty years in judgment. What does it mean for tenderness and discipline to use the same geography? How does that tension shape the book's portrait of God?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">Hosea 11:1–9 shifts the metaphor from husband to parent: God as a father who taught Israel to walk, carried them, and cannot bring himself to give them up. "My heart recoils within me; my compassion grows warm and tender. I will not execute my burning anger." What does this portrait say about the relationship between justice and love — and where do you find yourself in it?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">Hosea's charge in chapter 4 is that there is "no faithfulness, no hesed, and no knowledge of God in the land" — and that the priests are partly responsible because they have withheld knowledge from the people. What does it look like when religious communities produce performance rather than genuine knowing? How would you recognize it from the inside?</div>
-    </div>
-
-    <div class="q-item">
-      <span class="q-tag tag-app">Application</span>
-      <div class="q-text">Hosea 14 ends with an open invitation: "Return, O Israel, to the Lord your God." No guarantee of outcome is given, just an invitation to bring words and return. If you were writing a response to that invitation — honest rather than polished — what would it say?</div>
-    </div>
-
-  </div>
-
-  <!-- GOING DEEPER -->
-  <div class="section">
-    <div class="section-label">Going Deeper</div>
-    <div class="deeper-grid">
-      <div class="deeper-item book">
-        <div class="deeper-label">Book</div>
-        <div class="deeper-text">Derek Kidner, <em>The Message of Hosea</em> (BST) — accessible and pastoral, with close attention to the Hebrew; the best starting point for non-specialists</div>
-        <a class="source-link" href="https://www.ivpress.com" target="_blank" rel="noopener">IVP — <em>The Message of Hosea</em> (Bible Speaks Today series)</a>
-      </div>
-      <div class="deeper-item online">
-        <div class="deeper-label">Resource</div>
-        <div class="deeper-text">Tim Keller's sermon series on Hosea, available through Gospel in Life — <a href="https://gospelinlife.com" style="color: #2e8a4a;">gospelinlife.com</a> [search "Hosea"] — applies the book's themes of grace and return to contemporary life <em style="color:#aaa; font-size:0.82rem;">[verify link]</em></div>
-        <a class="source-link" href="https://gospelinlife.com" target="_blank" rel="noopener">gospelinlife.com — Gospel in Life (Hosea sermon series) [VERIFY]</a>
-      </div>
-      <div class="deeper-item passage">
-        <div class="deeper-label">Read Alongside</div>
-        <div class="deeper-text">Jeremiah 31:31–34 — the new covenant promise that answers what Hosea diagnoses: God writing his law inwardly rather than relying on external performance</div>
-      </div>
     </div>
   </div>
 
-  <!-- CLOSING THOUGHT -->
-  <div class="section">
-    <div class="closing">
-      <div class="closing-label">Closing Thought</div>
-      <div class="closing-text">Hosea insists that the gospel begins not with human seeking but with divine pursuit — a love that absorbs betrayal, bears cost, and keeps calling from the wilderness.</div>
-    </div>
+  <!-- IV. ACCOUNTABILITY -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">IV.</span> Accountability</div>
+    <div class="framing">Break into small groups of 3–4 persons. Recite your four memory verses from the last four weeks. Share what you have done/learned in your daily devotion times. Share how you have sought opportunities to build relationships with unbelievers on your evangelism list, and the outcome of this.</div>
+  </div>
+
+  <!-- V. BUILDING COMMUNITY -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">V.</span> Building Community</div>
+    <div class="framing">Do an exercise or have a discussion that builds stronger and deeper relationships. Make announcements and plans that affect the entire group.</div>
+  </div>
+
+  <!-- VI. CLOSING -->
+  <div class="msec">
+    <div class="msec-head"><span class="msec-rom">VI.</span> Closing</div>
+    <div class="framing">Close in prayer. Enjoy refreshments and fellowship.</div>
   </div>
 
   <div class="footer">
-    <span>Hosea &nbsp;·&nbsp; Discussion Guide</span>
-    <span>The Prophets &nbsp;·&nbsp; Minor Prophets</span>
+    <span>Love That Will Not Let Go &nbsp;·&nbsp; Discussion Guide</span>
+    <span>The Book of Hosea</span>
   </div>
 
 </div>
+
 </body>
 </html>
