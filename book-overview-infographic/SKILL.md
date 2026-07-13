@@ -92,9 +92,11 @@ These are present regardless of layout:
 ## Visual Style (consistent across all 66 books)
 
 **Typography**
-- Body / labels: Caveat (Google Fonts) — handwritten feel
-- Titles / book name / section headers: Special Elite (Google Fonts) — serif weight
-- Both loaded via `@import url(...)` in the `<style>` block
+- One serif family throughout: **Gentium Book Plus** (Google Fonts) — a Bible-typesetting serif (SIL) with high readability and full Greek/Hebrew coverage
+- Body / labels / verses: Gentium roman
+- Book name / titles: letter-spaced caps (the "PROVERBS" look); section subheads: italic of the same family
+- Distinguish headings by size, weight (700), caps, or italic — not by a second font family
+- Loaded via `@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');` in the `<style>` block
 
 **Color system**
 | Color | Hex | Use |

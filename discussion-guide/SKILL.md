@@ -113,10 +113,12 @@ Save to: `guides/discussions/<passage-or-topic-slug>-discussion-guide.html`
 (e.g., `matthew-16-24-26-discussion-guide.html`)
 
 Match the house visual style used across the site:
-- Fonts: `Caveat` (body) + `Special Elite` (headings), Google Fonts import, 18px base
+- Font: one serif family throughout — `Gentium Book Plus` (a Bible-typesetting serif, SIL),
+  Google Fonts import, 18px base:
+  `@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');`
 - Background `#f5f0e8`, page card `#faf7f2`, borders `2–3px solid #2c2c2c`
-- Roman-numeral section headings in `Special Elite`; the standard framing text in small,
-  letter-spaced caps (as in the source sheet); questions and prose in `Caveat`
+- Roman-numeral section headings in Gentium (bold/roman); the standard framing text in small,
+  letter-spaced caps (as in the source sheet); questions and prose in Gentium roman
 - Tag Observation vs Application blocks; number questions within each
 - `.home-nav` back-to-index link; `@media print` hides nav and fits one to two pages
 

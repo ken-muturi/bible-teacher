@@ -77,7 +77,7 @@ For each era in scope, list:
 ### Step 4 — Build the HTML panel
 
 Use the visual style system:
-- **Fonts**: Caveat (body) + Special Elite (headings) from Google Fonts
+- **Font**: Gentium Book Plus — one serif family throughout (a Bible-typesetting serif, SIL, high readability + Greek/Hebrew) from Google Fonts: `@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');`. Distinguish headings by size/weight/caps, not a second family.
 - **Background**: `#f5f0e8`
 - **Card background**: `#faf7f2`
 - **Borders**: `2px solid #2c2c2c`

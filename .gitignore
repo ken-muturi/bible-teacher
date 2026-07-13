@@ -1,2 +1,7 @@
 .DS_Store
 guides/**/*.pdf
+
+# Large generated artifacts — kept local, not committed
+guides/audio/
+models/
+scripts/

@@ -74,7 +74,7 @@ Save to: `guides/passages/<book-chapter-verse>-study.html`
 
 ## Visual Style (both modes)
 
-- Fonts: Caveat (body/labels) + Special Elite (titles/headers) via Google Fonts `@import`
+- Font: Gentium Book Plus — one serif family throughout (body, labels, titles, headers) via Google Fonts `@import`. A Bible-typesetting serif (SIL) chosen for high readability and full Greek/Hebrew coverage: `@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');`. Distinguish headings by size, weight (700), letter-spaced caps, or italic — not by a second font family.
 - Colors: blue #3b6fd4 (structural), green #2e8a4a (positive), red #c0392b (tension), orange #d47c1a (context), purple #6c4bbf (application), dark #2c2c2c (spine), bg #faf7f2
 - Borders: 2.5px, 3px radius, matching tinted fills
 - Passage callout: left border only, 5px
