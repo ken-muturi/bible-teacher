@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew 7 — The Sermon on the Mount (Part 3) Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.04em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #d47c1a; text-decoration: none; border-bottom: 1px dashed #d47c1a; }
+  .companion-link:hover { color: #a95e0c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 74px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #3b6fd4; } .beat.b1 .beat-body { border-color: #3b6fd4; } .beat.b1 .beat-ref { color: #3b6fd4; }
+  .beat.b2 .beat-num { background: #2e8a4a; } .beat.b2 .beat-body { border-color: #2e8a4a; } .beat.b2 .beat-ref { color: #2e8a4a; }
+  .beat.b3 .beat-num { background: #d47c1a; } .beat.b3 .beat-body { border-color: #d47c1a; } .beat.b3 .beat-ref { color: #d47c1a; }
+  .beat.b4 .beat-num { background: #c0392b; } .beat.b4 .beat-body { border-color: #c0392b; } .beat.b4 .beat-ref { color: #c0392b; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* FOUR PAIRS GRID */
+  .pairs-map { margin: 4px 0 24px; }
+  .pair-row { display: grid; grid-template-columns: 92px 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .pair-topic { background: #2c2c2c; color: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.74rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8px 6px; line-height: 1.25; }
+  .pair-topic .pr-ref { font-size: 0.58rem; color: #aaa; font-weight: 400; margin-top: 3px; }
+  .pair-cell { padding: 8px 11px; border-left: 1px solid #ddd; }
+  .pair-life { background: #edf8f1; } .pair-death { background: #fdf2f2; }
+  .pair-label { font-size: 0.52rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 3px; }
+  .pair-life .pair-label { color: #2e8a4a; } .pair-death .pair-label { color: #c0392b; }
+  .pair-text { font-size: 0.75rem; color: #333; line-height: 1.36; }
+
+  /* ASK SEEK KNOCK STRIP */
+  .ask-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 16px; }
+  .ask-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 12px 14px; text-align: center; }
+  .ask-verb { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.05rem; color: #2e8a4a; margin-bottom: 3px; }
+  .ask-note { font-size: 0.74rem; color: #555; line-height: 1.36; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.2rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.76rem; color: #555; line-height: 1.4; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #e0b53a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .ask-row { grid-template-columns: 1fr; }
+    .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .pair-row { grid-template-columns: 68px 1fr; }
+    .pair-row .pair-death { grid-column: 2; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Matthew 7</div>
+  <div class="header-title">The Sermon on the Mount, Part 3 — The Response It Demands: Hearing and Doing</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../discussions/matthew-7-discussion-guide.html" class="companion-link">⊕ Matthew 7 discussion guide</a>
+    <a href="matthew-6-deep-study.html" class="companion-link">← Matthew 6 (Part 2)</a>
+  </div>
+
+  <div class="section-label">Controlling Verses — The Sermon's Closing Demand</div>
+  <div class="passage-callout">
+    <div class="pc-label">Matthew 7:24 · The whole Sermon comes down to one thing</div>
+    <div class="pc-text">
+      "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock… But everyone who hears these words of mine and does not put them into practice is like a foolish man who built his house on sand."
+    </div>
+    <div class="pc-ref">Matthew 7:24, 26 (NIV) — the hinge is not hearing, but doing</div>
+  </div>
+
+  <div class="placement">
+    <strong>Placement:</strong> Matthew 7 concludes the Sermon on the Mount. Having described kingdom <em>character</em> (ch.5) and the God-ward <em>heart</em> (ch.6), Jesus now presses for a <em>verdict</em>. The chapter gathers a set of pointed teachings — on judging (7:1–6), persistent prayer (7:7–11), the Golden Rule that sums up the Law (7:12) — and then drives to a great two-ways finale (7:13–27): four stark pairs (two gates, two trees, two confessions, two builders) that force every hearer to decide. The Sermon does not end with admiration but with a storm and a question: <em>will you build your life on these words, or merely applaud them?</em> The crowds are left "astonished," because he taught "as one who had authority" (7:28–29).
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Four Movements to a Verdict</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">7:1–6</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 1 — Judging</div>
+        <div class="beat-title">The Plank and the Speck</div>
+        <div class="beat-desc">Do not judge hypocritically — you will be measured by your own measure. Take the plank from your own eye first; <em>then</em> you see clearly to help your brother. Yet also use discernment (v.6: don't throw pearls to pigs).</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">7:7–11</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 2 — Asking</div>
+        <div class="beat-title">Ask, Seek, Knock — the Good Father</div>
+        <div class="beat-desc">Living this life requires help you must request. Keep asking, seeking, knocking. If evil parents give good gifts, how much more will the Father give good things to those who ask him?</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">7:12</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 3 — The Summary</div>
+        <div class="beat-title">The Golden Rule</div>
+        <div class="beat-desc">"Whatever you wish that others would do to you, do also to them." Jesus calls this the sum of "the Law and the Prophets" — the whole ethic of the Sermon distilled into one active, other-centred principle.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">7:13–27</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 4 — The Verdict</div>
+        <div class="beat-title">Two Gates · Two Trees · Two Claims · Two Builders</div>
+        <div class="beat-desc">Four images, one demand: choose. The narrow gate, the good tree, the doer of the Father's will, the house on the rock — all describe the person who not only hears but <em>does</em>. The Sermon ends by forcing a decision.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASK SEEK KNOCK -->
+  <div class="section-label">Ask, Seek, Knock — Present Imperatives (7:7–8)</div>
+  <div class="ask-row">
+    <div class="ask-card"><div class="ask-verb">Ask</div><div class="ask-note">"and it will be given to you" — the posture of dependence. Bring your need to the Father.</div></div>
+    <div class="ask-card"><div class="ask-verb">Seek</div><div class="ask-note">"and you will find" — dependence that moves, that actively pursues. Not passive waiting.</div></div>
+    <div class="ask-card"><div class="ask-verb">Knock</div><div class="ask-note">"and the door will be opened" — dependence that persists at the door until it opens.</div></div>
+  </div>
+  <div class="placement" style="border-color:#2e8a4a; background:#edf8f1;">
+    All three verbs are <strong>present imperatives</strong> — "keep on asking, keep on seeking, keep on knocking." This is not a formula for getting whatever you want; note what the Father gives: "<em>good</em> things" (Matt 7:11), which Luke's parallel names as "the Holy Spirit" (Luke 11:13). Placed here, right after the impossibly high demands of the Sermon, ask-seek-knock is the lifeline: the righteousness Jesus requires is not self-generated — it is <em>asked for</em> and given by a generous Father.
+  </div>
+
+  <!-- FOUR PAIRS -->
+  <div class="section-label">The Great Finale — Four Pairs, One Decision (7:13–27)</div>
+  <div class="pairs-map">
+    <div class="pair-row">
+      <div class="pair-topic">Two Gates<span class="pr-ref">13–14</span></div>
+      <div class="pair-cell pair-life"><div class="pair-label">Leads to life</div><div class="pair-text">The narrow gate and hard road — few find it. Costly, deliberate, entered one at a time.</div></div>
+      <div class="pair-cell pair-death"><div class="pair-label">Leads to destruction</div><div class="pair-text">The wide gate and easy road — many go that way. Effortless, crowded, and fatal.</div></div>
+    </div>
+    <div class="pair-row">
+      <div class="pair-topic">Two Trees<span class="pr-ref">15–20</span></div>
+      <div class="pair-cell pair-life"><div class="pair-label">Good tree / good fruit</div><div class="pair-text">A healthy tree bears good fruit. True prophets are known not by claims but by what they produce.</div></div>
+      <div class="pair-cell pair-death"><div class="pair-label">Bad tree / bad fruit</div><div class="pair-text">False prophets in sheep's clothing, inwardly wolves. "By their fruit you will recognise them."</div></div>
+    </div>
+    <div class="pair-row">
+      <div class="pair-topic">Two Claims<span class="pr-ref">21–23</span></div>
+      <div class="pair-cell pair-life"><div class="pair-label">Does the Father's will</div><div class="pair-text">Not everyone who says "Lord, Lord" enters — but the one who does the will of the Father.</div></div>
+      <div class="pair-cell pair-death"><div class="pair-label">"Lord, Lord" + works only</div><div class="pair-text">Prophecy, exorcism, miracles "in your name" — yet: "I never knew you. Away from me, you evildoers."</div></div>
+    </div>
+    <div class="pair-row">
+      <div class="pair-topic">Two Builders<span class="pr-ref">24–27</span></div>
+      <div class="pair-cell pair-life"><div class="pair-label">Hears &amp; does — the rock</div><div class="pair-text">The wise builder digs deep and builds on rock. The storm comes; the house stands.</div></div>
+      <div class="pair-cell pair-death"><div class="pair-label">Hears only — the sand</div><div class="pair-text">The foolish builder skips the doing. Same storm; "it fell — and great was its fall."</div></div>
+    </div>
+  </div>
+  <div class="placement" style="border-color:#c0392b; background:#fdf2f2;">
+    <strong>Notice the pattern.</strong> In every pair, the difference is <em>not</em> what is heard, seen, or claimed. Both builders hear the same words; both roads start with a gate; both prophets look the part; both confessors say "Lord, Lord" and even do mighty works. The dividing line is always the same: <em>doing</em> the will of the Father. The Sermon that began with grace ("blessed are the poor in spirit") ends with a summons to obedient response — hearing that becomes doing.
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Six Key Terms</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">κρίνω</div>
+      <div class="word-translit">krinō</div>
+      <span class="word-ref-badge">7:1 · "judge"</span>
+      <div class="word-gloss">To judge / condemn / pass sentence</div>
+      <div class="word-note">Ranges from "discern" to "condemn." Context decides: 7:1 forbids the censorious, condemning judgment that plays God, while 7:6, 15–20 <em>require</em> discernment. Jesus bans the judge's robe, not the use of eyes.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">δοκός</div>
+      <div class="word-translit">dokos</div>
+      <span class="word-ref-badge">7:3 · "plank"</span>
+      <div class="word-gloss">A beam / roof-timber / log</div>
+      <div class="word-note">A load-bearing timber — deliberate, almost comic hyperbole against the "speck" (karphos), a tiny wood-chip. The image: someone squinting to remove a splinter while a rafter juts from their own eye. Self-blindness is the real problem.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">αἰτέω</div>
+      <div class="word-translit">aiteō</div>
+      <span class="word-ref-badge">7:7 · "ask"</span>
+      <div class="word-gloss">To ask / request (present imperative)</div>
+      <div class="word-note">"Keep on asking." The tense signals persistent, ongoing dependence, not a one-off. Paired with "seek" and "knock" to build intensity — the disciple's continual reliance on the Father for what the Sermon demands.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">καρπός</div>
+      <div class="word-translit">karpos</div>
+      <span class="word-ref-badge">7:16–20 · "fruit"</span>
+      <div class="word-gloss">Fruit / product / what a life yields</div>
+      <div class="word-note">The test for false prophets. Fruit = the observable outcome of a life and teaching — character and conduct over time, not charisma or claims. What a tree <em>is</em> shows in what it <em>produces</em>; you cannot fake a harvest indefinitely.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἀνομία</div>
+      <div class="word-translit">anomia</div>
+      <span class="word-ref-badge">7:23 · "lawlessness"</span>
+      <div class="word-gloss">Lawlessness / evildoing</div>
+      <div class="word-note">Jesus' verdict on the "Lord, Lord" workers: "you who practise <em>anomia</em>." Strikingly, people who did miracles "in his name" are called lawless — because for all their activity, they never did the Father's <em>will</em>. Works without obedience is lawlessness in disguise.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἐξουσία</div>
+      <div class="word-translit">exousia</div>
+      <span class="word-ref-badge">7:29 · "authority"</span>
+      <div class="word-gloss">Authority / right to command</div>
+      <div class="word-note">The crowds were astonished because Jesus taught "as one having <em>exousia</em>, and not as their scribes." The scribes cited authorities; Jesus <em>was</em> the authority — "but I say to you." The Sermon's whole weight rests on who is speaking.</div>
+    </div>
+  </div>
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">Old Testament Roots</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Deuteronomy 30:15–20</div>
+      <div class="ot-title">The Two Ways Set Before You</div>
+      <div class="ot-note">Moses ends his covenant charge with a choice: "I have set before you life and death… choose life." Jesus ends his charter of the kingdom the same way — two gates, two roads, life or destruction. The Sermon is the new covenant's "choose life."</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Psalm 1</div>
+      <div class="ot-title">The Two Ways &amp; the Fruitful Tree</div>
+      <div class="ot-note">"Blessed is the man…" who is like a tree yielding fruit, versus the wicked like chaff — "the way of the righteous / the way that leads to destruction." Both the good-tree and two-ways images of Matthew 7 draw on this founding psalm.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Leviticus 19:18</div>
+      <div class="ot-title">Love Your Neighbour</div>
+      <div class="ot-note">The Golden Rule (7:12) actively restates "love your neighbour as yourself." Where Rabbi Hillel had famously put it negatively ("what is hateful to you, do not do to another"), Jesus turns it positive — not merely refrain from harm, but actively do good.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Ezekiel 13:10–16</div>
+      <div class="ot-title">The Wall the Storm Exposes</div>
+      <div class="ot-note">False prophets who whitewash a flimsy wall — until the storm and flood tear it down and expose the shoddy foundation. The imagery stands directly behind both the false-prophets warning and the two builders whose storm reveals the truth.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of the Sermon on the Mount (BST, 1978)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott reads 7:13–27 as a series of alternatives that permit no neutrality: two ways, two teachers, two claims, two builders. Jesus "will not allow us to remain in a fog of indecision" — the Sermon demands a verdict.</div>
+      <div class="comm-point">On judging: the prohibition is of censoriousness, not of the discernment 7:6 and 7:15–20 explicitly require. To be uncritical is not a virtue.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">D. Martyn Lloyd-Jones</div>
+      <div class="comm-title">Studies in the Sermon on the Mount (1959–60)</div>
+      <span class="comm-tradition trad-preaching">Reformed · Preaching</span>
+      <div class="comm-point">Lloyd-Jones drives home 7:21–23 as the most solemn passage in the Sermon: it is possible to be busy in Christ's name and still be unknown by him. Profession and even power are no substitute for a regenerate life doing the Father's will.</div>
+      <div class="comm-point">On the two builders: both may look identical in fair weather; only the storm — trial and finally judgment — reveals the foundation. Build now, before the flood.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Studies in the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-critical">Evangelical Scholarly</span>
+      <div class="comm-point">France notes the Golden Rule (7:12) is framed as an <em>inclusio</em> with 5:17 — "this is the Law and the Prophets" — bracketing the whole body of the Sermon: everything between is what fulfilled Law looks like in practice.</div>
+      <div class="comm-point">On "I never knew you": the issue is relationship, not merit. The rejected are not irreligious; they are self-deceived — mistaking activity in Jesus' name for knowing and being known by him.</div>
+      <a href="https://www.eerdmans.com/9780802825018/the-gospel-of-matthew/" target="_blank" class="source-link">eerdmans.com — Matthew, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">Jesus' Sermon on the Mount (1978) / Matthew (EBC)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical</span>
+      <div class="comm-point">Carson warns against sentimentalising ask-seek-knock into a blank cheque: the promise is that the Father gives "good things," interpreted by his wisdom and the Sermon's kingdom priorities — not a guarantee of whatever we name.</div>
+      <div class="comm-point">Stresses that the narrow gate is entered by grace through the demand of the whole Sermon — which, honestly faced, drives us back to poverty of spirit (5:3) and to asking (7:7).</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Matthew, EBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Dietrich Bonhoeffer</div>
+      <div class="comm-title">The Cost of Discipleship (1937)</div>
+      <span class="comm-tradition trad-pastoral">Lutheran · Discipleship</span>
+      <div class="comm-point">For Bonhoeffer the two builders are the whole point: "the only proper response to this word which Jesus brings… is to do it." Hearing that does not become doing is the great self-deception the Sermon exists to shatter.</div>
+      <a href="https://www.fortresspress.com/" target="_blank" class="source-link">fortresspress.com — The Cost of Discipleship [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Augustine of Hippo</div>
+      <div class="comm-title">Our Lord's Sermon on the Mount (c. 393)</div>
+      <span class="comm-tradition trad-preaching">Patristic</span>
+      <div class="comm-point">Augustine takes the closing house-on-rock as proof that the blessed life is found only in <em>doing</em> what has been heard, and reads the whole Sermon as an ordered ascent that ends, fittingly, in the stability of the obedient life founded on Christ's words.</div>
+      <a href="https://www.newadvent.org/fathers/16012.htm" target="_blank" class="source-link">newadvent.org — Our Lord's Sermon on the Mount, Bk 2 [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. "Do not judge" (7:1) — does this forbid all moral evaluation?</div>
+      <div class="pressure-a">No — and the immediate context proves it. Verse 5 tells you to remove your own plank <em>so that</em> you can see clearly to remove your brother's speck (a judgment of sorts). Verse 6 requires discerning "dogs" and "pigs," and 7:15–20 commands recognising false prophets by their fruit. What Jesus forbids is <em>hypocritical, condemning</em> judgment — playing God, censuring others while excusing yourself. Humble, self-aware moral discernment is not only permitted but commanded; the plank must simply come out first.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. "Ask and it will be given" (7:7) — does God grant whatever we request?</div>
+      <div class="pressure-a">The promise is carefully worded: the Father gives "<em>good</em> things" (7:11) to those who ask — filtered through his fatherly wisdom, not our every whim. Luke's parallel specifies the supreme gift as "the Holy Spirit" (Luke 11:13). Read in context — right after the Sermon's towering demands — this is the promise that God supplies the grace to live the life he commands. It is a charter for persistent, trusting prayer aligned with the kingdom, not a formula for guaranteed wish-fulfilment.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is the narrow gate needlessly exclusive?</div>
+      <div class="pressure-a">The "narrow gate" language sounds harsh to modern ears, but it functions as sober honesty, not elitism: Jesus loves people enough to tell them the easy, crowded road ends in destruction. The gate is narrow (entered by grace, one at a time, leaving self-righteousness behind) but it is <em>open</em> — the whole Sermon is an invitation to come through it. And the same Jesus who names the narrow way is the one who calls "come to me, all who are weary" (11:28). Exclusive in path, universal in offer.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. "I never knew you" (7:21–23) — can someone do miracles and still be lost?</div>
+      <div class="pressure-a">Yes, and it is meant to sober us. Jesus says people will point to prophecy, exorcism, and miracles "in your name" — and hear "I never knew you." The point is not that works are bad but that they are no substitute for a real relationship expressed in doing the Father's will. Spiritual activity, gifting, even apparent power can coexist with a heart Jesus does not know. The test is not the résumé but relationship and obedience — which is exactly why the Sermon ends here, and why 7:7 (ask!) precedes it.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Doesn't "hear and do" (7:24) turn the gospel into works-righteousness?</div>
+      <div class="pressure-a">Only if you forget where the Sermon began. It opened with "blessed are the poor in spirit" — the empty-handed — and its centre is a Father who gives good gifts to those who ask (7:7–11). The obedience of 7:24 is not the <em>root</em> of salvation but its <em>fruit</em>: the doing that a genuinely grace-changed life produces, exactly as James later argues (Jas 1:22–25, 2:14–26). The builders differ in doing because doing is the visible sign of a foundation actually laid. Grace first, then the obedience grace makes possible.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · same finale</div>
+      <div class="xref-ref">Luke 6:43–49</div>
+      <div class="xref-note">Luke's version of the good tree/bad fruit and the two builders — "why do you call me 'Lord, Lord' and not do what I say?"</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Deuteronomy 30:15–20</div>
+      <div class="xref-note">"I set before you life and death… choose life." The covenant two-ways charge Jesus echoes in the two gates.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Psalm 1</div>
+      <div class="xref-note">The two ways and the fruitful tree vs. the chaff — the founding wisdom pattern behind Matthew 7's images.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">James 1:22–25</div>
+      <div class="xref-note">"Be doers of the word, and not hearers only, deceiving yourselves." James is the two-builders principle turned into an epistle.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">1 John 3:7–10</div>
+      <div class="xref-note">"By their fruit" ecclesial edition: the children of God and the children of the devil are distinguished by what they practise.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The heart of it</div>
+      <div class="xref-ref">Matthew 22:37–40</div>
+      <div class="xref-note">Love God and neighbour — "on these hang all the Law and the Prophets," the same summary the Golden Rule (7:12) gives.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Astonished on the Mountain</div>
+        <div class="tn-text">The crowds had heard rabbis their whole lives — always citing earlier authorities, hedging every ruling. Then a Galilean carpenter finishes with "everyone who hears these words of <em>mine</em>," calmly assuming that a life's stability hangs on obeying him. No wonder they were astonished: he taught not <em>about</em> authority but <em>with</em> it. The Sermon's last note is a claim about the speaker.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Admirers or Builders</div>
+        <div class="tn-text">The Sermon on the Mount is perhaps the most admired religious text on earth — quoted by people who never darken a church door. And that is exactly its danger for us. Jesus anticipated a world of hearers who applaud and do not build. The storm still comes for every life; the only question the chapter leaves us is whether we have merely heard these words beautifully — or actually done them.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Of everything in the Sermon on the Mount I have heard, what is the one thing I already know I must start <em>doing</em> — and what has kept me at hearing?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The Sermon ends not with applause but with a storm. Two builders hear the very same words; only one does them — and only one house stands. Grace gives the foundation, asking supplies the strength, and obedience is the doing that proves the rock is really there."</div>
+    <div class="verdict-ref">Matthew 7:24 — "everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

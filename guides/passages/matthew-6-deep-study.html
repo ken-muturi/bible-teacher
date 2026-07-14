@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew 6 — The Sermon on the Mount (Part 2) Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.04em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #d47c1a; text-decoration: none; border-bottom: 1px dashed #d47c1a; }
+  .companion-link:hover { color: #a95e0c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 74px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #6c4bbf; } .beat.b1 .beat-body { border-color: #6c4bbf; } .beat.b1 .beat-ref { color: #6c4bbf; }
+  .beat.b2 .beat-num { background: #3b6fd4; } .beat.b2 .beat-body { border-color: #3b6fd4; } .beat.b2 .beat-ref { color: #3b6fd4; }
+  .beat.b3 .beat-num { background: #d47c1a; } .beat.b3 .beat-body { border-color: #d47c1a; } .beat.b3 .beat-ref { color: #d47c1a; }
+  .beat.b4 .beat-num { background: #2e8a4a; } .beat.b4 .beat-body { border-color: #2e8a4a; } .beat.b4 .beat-ref { color: #2e8a4a; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* THREE ACTS STRIP */
+  .acts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 16px; }
+  .act-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 12px 14px; }
+  .act-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6c4bbf; font-weight: 700; margin-bottom: 3px; }
+  .act-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.95rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-note { font-size: 0.76rem; color: #555; line-height: 1.38; }
+  .acts-pattern { font-size: 0.8rem; color: #555; font-style: italic; border-left: 3px solid #6c4bbf; padding: 8px 12px; background: #f5f2fc; line-height: 1.45; margin-bottom: 24px; }
+
+  /* LORD'S PRAYER GRID */
+  .lp-wrap { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 16px 18px; margin: 4px 0 24px; }
+  .lp-half-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin: 4px 0 8px; }
+  .lp-godward { color: #3b6fd4; } .lp-usward { color: #2e8a4a; }
+  .lp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .lp-pet { border-radius: 2px; padding: 9px 11px; }
+  .lp-pet.g { background: #eef2fb; border-left: 3px solid #3b6fd4; }
+  .lp-pet.u { background: #edf8f1; border-left: 3px solid #2e8a4a; }
+  .lp-line { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.8rem; color: #2c2c2c; margin-bottom: 2px; }
+  .lp-gloss { font-size: 0.72rem; color: #555; line-height: 1.34; }
+  .lp-note { font-size: 0.78rem; color: #555; line-height: 1.44; border-top: 1px dashed #ccc; padding-top: 10px; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.2rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.76rem; color: #555; line-height: 1.4; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #e0b53a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .acts-row, .lp-grid { grid-template-columns: 1fr; }
+    .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Matthew 6</div>
+  <div class="header-title">The Sermon on the Mount, Part 2 — An Audience of One: Devotion, Treasure &amp; Worry</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../discussions/matthew-6-discussion-guide.html" class="companion-link">⊕ Matthew 6 discussion guide</a>
+    <a href="matthew-5-deep-study.html" class="companion-link">← Matthew 5 (Part 1)</a>
+  </div>
+
+  <div class="section-label">Controlling Verse — The Climax of the Chapter</div>
+  <div class="passage-callout">
+    <div class="pc-label">Matthew 6:33 · The single priority that reorders everything</div>
+    <div class="pc-text">
+      "But seek first his kingdom and his righteousness, and all these things will be given to you as well."
+    </div>
+    <div class="pc-ref">Matthew 6:33 (NIV) — the answer to piety-for-show, greed, and anxiety alike</div>
+  </div>
+
+  <div class="placement">
+    <strong>Placement:</strong> Matthew 6 is the middle section of the Sermon on the Mount. Where chapter 5 defined kingdom <em>character</em> (Beatitudes) and the higher <em>righteousness</em> (the antitheses), chapter 6 turns to the <em>God-ward orientation of the heart</em> — the invisible motives underneath the visible life. Its unifying question is: <em>who are you living for?</em> The chapter treats three arenas — religious devotion (6:1–18), possessions (6:19–24), and anxiety (6:25–34) — and answers all three the same way: live before the Father who sees in secret, store treasure in heaven, and seek first his kingdom. At its centre stands the <strong>Lord's Prayer</strong> (6:9–13), the model of a heart rightly ordered toward God.
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Four Movements</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">6:1–18</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 1 — Devotion</div>
+        <div class="beat-title">Piety Before the Father, Not the Crowd</div>
+        <div class="beat-desc">Three acts — giving, praying, fasting — each with the same structure: don't perform for people's applause; do it in secret for the Father who sees. Reward comes from him, not from being noticed.</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">6:9–13</div>
+      <div class="beat-body">
+        <div class="beat-ref">Centre — The Model Prayer</div>
+        <div class="beat-title">The Lord's Prayer</div>
+        <div class="beat-desc">Set inside the teaching on prayer, the pattern for all praying: God's name, kingdom, and will first; then our bread, forgiveness, and deliverance. Followed by a pointed word on forgiving others (6:14–15).</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">6:19–24</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 2 — Treasure</div>
+        <div class="beat-title">Two Treasures, Two Eyes, Two Masters</div>
+        <div class="beat-desc">Store treasure in heaven, not on earth, "for where your treasure is, there your heart will be." A healthy eye fills the body with light. And the verdict: "You cannot serve both God and money."</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">6:25–34</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 3 — Worry</div>
+        <div class="beat-title">Do Not Be Anxious; Seek First the Kingdom</div>
+        <div class="beat-desc">Because the Father feeds the birds and clothes the lilies, anxiety over food and clothing is needless and pagan. Seek first the kingdom, and the Father will provide. "Do not worry about tomorrow."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE ACTS -->
+  <div class="section-label">Three Acts of Devotion — The Same Pattern Three Times (6:1–18)</div>
+  <div class="acts-row">
+    <div class="act-card">
+      <div class="act-ref">6:2–4 · Giving</div>
+      <div class="act-name">When you give…</div>
+      <div class="act-note">Don't sound a trumpet as the hypocrites do. Give so quietly your left hand doesn't know what your right is doing. The Father who sees in secret will reward you.</div>
+    </div>
+    <div class="act-card">
+      <div class="act-ref">6:5–15 · Praying</div>
+      <div class="act-name">When you pray…</div>
+      <div class="act-note">Don't pray to be seen, or heap up empty phrases like the pagans. Go into your room, shut the door, pray to your Father in secret — who already knows what you need.</div>
+    </div>
+    <div class="act-card">
+      <div class="act-ref">6:16–18 · Fasting</div>
+      <div class="act-name">When you fast…</div>
+      <div class="act-note">Don't look gloomy to advertise your fasting. Wash your face, look normal, so that only your Father sees. He who sees in secret will reward you.</div>
+    </div>
+  </div>
+  <div class="acts-pattern"><strong>The repeated logic:</strong> each act assumes the disciple <em>will</em> do it ("<em>when</em> you give / pray / fast," not "if") — the issue is never whether, but for whom. The same refrain closes each: reward is either the shallow applause of people (received in full, now) or the Father's reward (from the One who sees in secret). Every act of devotion is a fork between two audiences.</div>
+
+  <!-- LORD'S PRAYER -->
+  <div class="section-label">The Lord's Prayer — A Heart Rightly Ordered (6:9–13)</div>
+  <div class="lp-wrap">
+    <div class="lp-half-label lp-godward">First — God-ward: his name, reign, and will</div>
+    <div class="lp-grid">
+      <div class="lp-pet g"><div class="lp-line">"Hallowed be your name"</div><div class="lp-gloss">That God's name — his very self — be honoured as holy. Worship before request.</div></div>
+      <div class="lp-pet g"><div class="lp-line">"Your kingdom come"</div><div class="lp-gloss">That God's reign break in — now in part, fully at the end. The great longing of the Sermon.</div></div>
+      <div class="lp-pet g"><div class="lp-line">"Your will be done"</div><div class="lp-gloss">On earth as in heaven — surrender before supply. Prayer aligns us to God, not God to us.</div></div>
+    </div>
+    <div class="lp-half-label lp-usward">Then — us-ward: bread, pardon, protection</div>
+    <div class="lp-grid">
+      <div class="lp-pet u"><div class="lp-line">"Give us… daily bread"</div><div class="lp-gloss">Dependence for today's needs (epiousios) — enough, not excess; asked one day at a time.</div></div>
+      <div class="lp-pet u"><div class="lp-line">"Forgive us… as we forgive"</div><div class="lp-gloss">Pardon received and passed on. The one petition Jesus circles back to (6:14–15).</div></div>
+      <div class="lp-pet u"><div class="lp-line">"Lead us not into temptation"</div><div class="lp-gloss">Protection from testing and "the evil one" — a plea of humility, not self-confidence.</div></div>
+    </div>
+    <div class="lp-note"><strong>The order is the teaching.</strong> Three God-ward petitions come <em>before</em> three human-ward ones: we approach as "Our Father," honour his name, long for his kingdom, and yield to his will — and only then bring our needs. Prayer is not primarily getting God to do our will; it is being re-ordered to his. Note too that it is "<em>Our</em> Father… give <em>us</em>… forgive <em>us</em>" — never a solo prayer, always prayed as family.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Six Key Terms</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">ὑποκριτής</div>
+      <div class="word-translit">hypokritēs</div>
+      <span class="word-ref-badge">6:2, 5, 16 · "hypocrite"</span>
+      <div class="word-gloss">Stage-actor / play-actor</div>
+      <div class="word-note">Originally an actor speaking behind a mask. Jesus' repeated label for those who perform righteousness for an audience: their whole religious life is a role played for spectators. The reward — applause — is all they get.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">πατήρ</div>
+      <div class="word-translit">patēr</div>
+      <span class="word-ref-badge">throughout ch.6 · "Father"</span>
+      <div class="word-gloss">Father</div>
+      <div class="word-note">The controlling word of the chapter, used ~12 times. Every remedy — for hypocrisy, greed, and worry — is grounded in the fatherhood of God: a Father who sees in secret, knows what you need, and feeds the birds. Intimacy, not performance.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἐπιούσιος</div>
+      <div class="word-translit">epiousios</div>
+      <span class="word-ref-badge">6:11 · "daily"</span>
+      <div class="word-gloss">Daily / for the coming day / needful</div>
+      <div class="word-note">A famously rare word — virtually unknown outside this prayer. Likely "bread for the coming day" or "the bread we need." Whatever the nuance, it teaches day-at-a-time dependence, echoing the manna that could not be hoarded (Exod 16).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">μαμωνᾶς</div>
+      <div class="word-translit">mamōnas</div>
+      <span class="word-ref-badge">6:24 · "money/mammon"</span>
+      <div class="word-gloss">Wealth personified as a rival master</div>
+      <div class="word-note">An Aramaic term for wealth/property. Jesus personifies it as a would-be <em>lord</em> demanding service. The issue is not having money but being <em>mastered</em> by it — you cannot serve two lords with undivided loyalty.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">μεριμνάω</div>
+      <div class="word-translit">merimnaō</div>
+      <span class="word-ref-badge">6:25–34 · "be anxious"</span>
+      <div class="word-gloss">To worry / be pulled apart with care</div>
+      <div class="word-note">Repeated six times in this section. The root sense is a divided, distracted mind torn between concerns. Jesus does not forbid foresight or work — he forbids the corrosive anxiety that betrays distrust of the Father.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ζητέω</div>
+      <div class="word-translit">zēteō</div>
+      <span class="word-ref-badge">6:33 · "seek"</span>
+      <div class="word-gloss">To seek / pursue as a life-aim</div>
+      <div class="word-note">Present imperative — a continual, governing pursuit. "Seek <em>first</em>" (prōton) is not first-in-sequence but first-in-priority: make the kingdom the organising centre, and the anxious "all these things" fall into their proper place.</div>
+    </div>
+  </div>
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">Old Testament Roots</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Exodus 16</div>
+      <div class="ot-title">Manna — Bread for the Day</div>
+      <div class="ot-note">Israel gathered manna one day at a time; hoarded manna bred worms. "Give us this day our daily bread" and "do not worry about tomorrow" both breathe the manna logic: trust the Father's provision daily rather than storing up against him.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Ezekiel 36:22–23</div>
+      <div class="ot-title">"Hallowed Be Your Name"</div>
+      <div class="ot-note">God acts to vindicate the holiness of his name profaned among the nations. The prayer's first petition — that God's name be treated as holy — takes up this deep OT concern for the honour of the Name above all else.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Psalm 37 · Proverbs 30:8</div>
+      <div class="ot-title">Do Not Fret; Give Me My Portion</div>
+      <div class="ot-note">"Do not fret because of evildoers" (Ps 37:1); "give me neither poverty nor riches, but only my daily bread" (Prov 30:8). The wisdom tradition of trusting provision and refusing anxious striving stands behind 6:25–34.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">1 Kings 3:9–13</div>
+      <div class="ot-title">Seek First — and the Rest Is Added</div>
+      <div class="ot-note">Solomon asks not for wealth or long life but for wisdom to govern God's people — and God adds the rest. A living illustration of 6:33: seek the kingdom's priority first, and "all these things" follow.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of the Sermon on the Mount (BST, 1978)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott frames ch.6 around the Christian's relationship to God as Father — the antidote to both religious hypocrisy and material anxiety. Devotion, money, and worry are all tests of whether we truly believe God is our Father.</div>
+      <div class="comm-point">On 6:1 vs 5:16: no contradiction — the difference is <em>motive and direction</em>. Let others see your good works so they glorify God (5:16); never parade them so they glorify you (6:1).</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">D. Martyn Lloyd-Jones</div>
+      <div class="comm-title">Studies in the Sermon on the Mount (1959–60)</div>
+      <span class="comm-tradition trad-preaching">Reformed · Preaching</span>
+      <div class="comm-point">Lloyd-Jones treats worry as fundamentally a matter of <em>little faith</em> and false thinking. His remedy is to "talk to yourself" rather than listen to yourself — preaching the truths of the Father's care to your own anxious heart.</div>
+      <div class="comm-point">On the Lord's Prayer: the order is everything — we are not fit to bring our petitions until we have first been reoriented by "hallowed be your name."</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Studies in the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-critical">Evangelical Scholarly</span>
+      <div class="comm-point">France highlights the "secret / reward" structure of 6:1–18 and the eschatological weight of "treasure in heaven": the disciple invests in the age to come, ordering earthly resources by heavenly return.</div>
+      <div class="comm-point">On epiousios: canvasses the options ("for today," "for tomorrow," "necessary") and concludes the practical thrust is simple daily dependence, whatever the precise etymology.</div>
+      <a href="https://www.eerdmans.com/9780802825018/the-gospel-of-matthew/" target="_blank" class="source-link">eerdmans.com — Matthew, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">Jesus' Sermon on the Mount (1978) / Matthew (EBC)</div>
+      <span class="comm-tradition trad-evangelical">Conservative Evangelical</span>
+      <div class="comm-point">Carson stresses that the Lord's Prayer is a <em>model</em> ("pray like this"), not a magic formula, and that 6:14–15 makes forgiving others the evidence — not the cause — of having been forgiven by God.</div>
+      <div class="comm-point">On "do not worry": distinguishes carefully between godless anxiety (forbidden) and responsible foresight (assumed elsewhere in Scripture). The target is trust, not planning.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Matthew, EBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Institutes III.20 / Harmony of the Gospels</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin's exposition of the Lord's Prayer (Institutes III.20) is a classic: the three first petitions concern God's glory, the three latter our welfare, and even our own needs are to be sought ultimately for God's glory.</div>
+      <a href="https://www.ccel.org/ccel/calvin/institutes" target="_blank" class="source-link">ccel.org — Institutes III.20 [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Augustine of Hippo</div>
+      <div class="comm-title">Our Lord's Sermon on the Mount (c. 393)</div>
+      <span class="comm-tradition trad-preaching">Patristic</span>
+      <div class="comm-point">Augustine reads 6:1–18 as the cure for the love of human praise, "that most subtle" of sins, and connects the seven petitions of the prayer to the Beatitudes and the gifts of the Spirit in an ordered spiritual ascent.</div>
+      <a href="https://www.newadvent.org/fathers/16012.htm" target="_blank" class="source-link">newadvent.org — Our Lord's Sermon on the Mount, Bk 2 [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does 6:1 ("do not do your righteousness before others") contradict 5:16 ("let your light shine before others")?</div>
+      <div class="pressure-a">No — the two verses target opposite motives. 5:16 wants good works to be visible <em>so that people glorify the Father</em>; 6:1 forbids parading them <em>so that people admire you</em>. Same visible act, opposite aim. The question is never whether others see, but whose glory you are seeking. Good works will be seen; the sin is doing them <em>in order</em> to be seen.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Is the Lord's Prayer a fixed formula to recite, or a model to follow?</div>
+      <div class="pressure-a">Both, rightly held. Jesus says "pray <em>like this</em>" (a pattern) immediately after warning against "empty phrases" and vain repetition (6:7) — so it is first a model that shapes all our praying: worship, then kingdom, then needs. Yet the church has always also prayed the words themselves, and there is nothing wrong with that <em>provided</em> the heart is engaged. The danger Jesus names is not repetition but <em>mindless</em> repetition.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is God's forgiveness of us conditional on our forgiving others (6:14–15)?</div>
+      <div class="pressure-a">This is the sharpest verse in the chapter. Scripture is clear elsewhere that forgiveness is by grace through faith, not earned. The best reading: our forgiving others is the necessary <em>evidence</em> that we have truly received God's forgiveness — an unforgiving heart shows it has never grasped its own pardon (cf. the unforgiving servant, Matt 18). It is not that we buy God's mercy by forgiving, but that received mercy always overflows; a heart that refuses to forgive reveals it has not been melted by grace.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Does "do not worry" forbid planning, saving, and insurance?</div>
+      <div class="pressure-a">No. The Greek <em>merimnaō</em> targets corrosive <em>anxiety</em> that betrays distrust, not responsible foresight. Scripture commends the ant's planning (Prov 6), Joseph's grain storage (Gen 41), and providing for one's household (1 Tim 5:8). Jesus himself assumes work ("your heavenly Father feeds them" — but birds still forage). The command forbids the anxious, faithless grasping that makes provision an idol; it does not forbid prudent stewardship done in trust.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. "Seek first the kingdom, and all these things will be added" — is this a prosperity guarantee?</div>
+      <div class="pressure-a">No. The "all these things" are explicitly the basics of 6:25–32 — food, drink, clothing — not wealth or success. And the promise is corporate and providential, not a personal transaction (faithful believers have gone hungry; Heb 11). The verse assures the disciple that a Father who feeds sparrows will not abandon his children to want as they pursue his kingdom — it is a call to reordered priorities under a caring Father, not a formula for guaranteed abundance.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · shorter form</div>
+      <div class="xref-ref">Luke 11:1–13</div>
+      <div class="xref-note">Luke's version of the Lord's Prayer, given in answer to "teach us to pray," followed by the friend at midnight and ask-seek-knock.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Exodus 16</div>
+      <div class="xref-note">Manna gathered daily, not hoarded — the logic behind "daily bread" and "do not worry about tomorrow."</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Proverbs 30:7–9</div>
+      <div class="xref-note">"Give me neither poverty nor riches — only my daily bread," lest wealth make me deny God or want make me steal.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">Philippians 4:6–7</div>
+      <div class="xref-note">"Do not be anxious about anything, but in everything by prayer… present your requests." Paul's pastoral application of 6:25–34.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">1 Timothy 6:6–10, 17–19</div>
+      <div class="xref-note">Godliness with contentment; store up treasure as a firm foundation for the age to come — 6:19–24 worked out.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">Colossians 3:1–2</div>
+      <div class="xref-note">"Set your hearts on things above" — the treasure-and-heart principle of 6:21 restated for the risen life.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Devotion on Display</div>
+        <div class="tn-text">In a culture where public almsgiving, street-corner prayer, and disfigured fasting-faces earned real social honour, Jesus quietly detonates the whole economy of religious reputation. The Father in secret, not the watching crowd, is the audience that counts. And to peasants who lived hand-to-mouth, "do not worry" was not naïve advice but a call to trust the God who feeds the birds.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Curated Piety &amp; Chronic Anxiety</div>
+        <div class="tn-text">We have industrialised the very thing Jesus warned about — devotion performed for an audience, now with metrics. And we are perhaps the most anxious generation about money and the future ever to read these words. Matthew 6 still asks the two questions underneath it all: whose applause are you living for, and whom do you actually trust with tomorrow?</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If no one ever saw my giving, praying, or serving — and if I truly believed the Father would provide — what in my life would change?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"Piety, possessions, and worry are all symptoms of one question — who are you living for? The cure for all three is a Father who sees in secret, provides day by day, and is worth seeking first."</div>
+    <div class="verdict-ref">Matthew 6:33 — "Seek first his kingdom and his righteousness, and all these things will be given to you as well."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
