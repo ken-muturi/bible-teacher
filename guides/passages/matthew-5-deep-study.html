@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew 5 — The Sermon on the Mount (Part 1) Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.2rem; color: #2c2c2c; letter-spacing: 0.04em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #d47c1a; text-decoration: none; border-bottom: 1px dashed #d47c1a; }
+  .companion-link:hover { color: #a95e0c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* PASSAGE CALLOUT */
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.98rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  /* PLACEMENT */
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 74px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #3b6fd4; } .beat.b1 .beat-body { border-color: #3b6fd4; } .beat.b1 .beat-ref { color: #3b6fd4; }
+  .beat.b2 .beat-num { background: #2e8a4a; } .beat.b2 .beat-body { border-color: #2e8a4a; } .beat.b2 .beat-ref { color: #2e8a4a; }
+  .beat.b3 .beat-num { background: #d47c1a; } .beat.b3 .beat-body { border-color: #d47c1a; } .beat.b3 .beat-ref { color: #d47c1a; }
+  .beat.b4 .beat-num { background: #c0392b; } .beat.b4 .beat-body { border-color: #c0392b; } .beat.b4 .beat-ref { color: #c0392b; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* BEATITUDES GRID */
+  .beat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .bt-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 12px 14px; }
+  .bt-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; color: #3b6fd4; font-weight: 700; margin-bottom: 3px; }
+  .bt-blessed { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 2px; }
+  .bt-promise { font-size: 0.76rem; color: #2e8a4a; font-style: italic; margin-bottom: 5px; }
+  .bt-note { font-size: 0.75rem; color: #555; line-height: 1.38; }
+
+  /* SALT & LIGHT */
+  .sl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .sl-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 14px 16px; }
+  .sl-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #d47c1a; margin-bottom: 5px; }
+  .sl-note { font-size: 0.8rem; color: #444; line-height: 1.44; }
+
+  /* ANTITHESES TABLE */
+  .anti-map { margin: 4px 0 24px; }
+  .anti-row { display: grid; grid-template-columns: 96px 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .anti-topic { background: #c0392b; color: #fff; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.76rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 6px; line-height: 1.2; }
+  .anti-cell { padding: 8px 11px; border-left: 1px solid #ddd; }
+  .anti-heard { background: #faf7f2; }
+  .anti-said { background: #eef2fb; }
+  .anti-label { font-size: 0.52rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 3px; }
+  .anti-heard .anti-label { color: #888; }
+  .anti-said .anti-label { color: #3b6fd4; }
+  .anti-text { font-size: 0.75rem; color: #333; line-height: 1.36; }
+  .anti-ref { font-size: 0.6rem; color: #aaa; font-style: italic; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.25rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.64rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.1em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.77rem; color: #555; line-height: 1.4; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY SHELF */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #d47c1a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #e0b53a; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 700px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr 1fr; }
+    .beat-grid, .sl-grid, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .anti-row { grid-template-columns: 70px 1fr; }
+    .anti-row .anti-said { grid-column: 2; }
+  }
+  @media (max-width: 480px) {
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-ref">Matthew 5</div>
+  <div class="header-title">The Sermon on the Mount, Part 1 — Kingdom Character &amp; the Higher Righteousness</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../discussions/matthew-5-discussion-guide.html" class="companion-link">⊕ Matthew 5 discussion guide</a>
+  </div>
+
+  <!-- CONTROLLING VERSES -->
+  <div class="section-label">Controlling Verses — The Hinge of the Chapter</div>
+  <div class="passage-callout">
+    <div class="pc-label">Matthew 5:17, 20 · Fulfilment &amp; the higher righteousness</div>
+    <div class="pc-text">
+      "Do not think that I have come to abolish the Law or the Prophets; I have not come to abolish them but to fulfil them… For I tell you that unless your righteousness surpasses that of the Pharisees and the teachers of the law, you will certainly not enter the kingdom of heaven."
+    </div>
+    <div class="pc-ref">Matthew 5:17, 20 (NIV) — the interpretive key to the whole Sermon</div>
+  </div>
+
+  <!-- PLACEMENT -->
+  <div class="placement">
+    <strong>Placement:</strong> Matthew 5 opens the <em>Sermon on the Mount</em> (chapters 5–7), the first of the five great teaching discourses around which Matthew structures his Gospel. Jesus goes <em>up on a mountain</em> and sits to teach — Matthew is deliberately painting him as a new and greater Moses, delivering the charter of the kingdom from a new Sinai. The audience is the disciples, with the crowds listening in (5:1; 7:28). Chapter 5 moves in four movements: the <strong>Beatitudes</strong> (the character of kingdom people), <strong>salt &amp; light</strong> (their influence), Jesus and the <strong>Law</strong> (5:17–20, the thesis), and six <strong>antitheses</strong> that show what "surpassing righteousness" actually looks like — reaching past the action to the heart.
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Four Movements</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">5:3–12</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 1 — Character</div>
+        <div class="beat-title">The Beatitudes</div>
+        <div class="beat-desc">Eight (or nine) pronouncements of blessing on the least likely people — the poor in spirit, mourners, the meek, the persecuted. Not entry requirements to earn, but a portrait of the citizen of the kingdom and the gifts that are theirs.</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">5:13–16</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 2 — Influence</div>
+        <div class="beat-title">Salt of the Earth, Light of the World</div>
+        <div class="beat-desc">Kingdom character is not private. Two metaphors: salt (preserving, flavouring — useless if it loses its distinctiveness) and light (a city on a hill, a lamp on a stand — pointless if hidden). The goal: good works that make people glorify the Father.</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">5:17–20</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 3 — Thesis</div>
+        <div class="beat-title">Christ and the Law: Fulfil, Not Abolish</div>
+        <div class="beat-desc">Jesus affirms the whole Law and Prophets and says he came to <em>fulfil</em> them. The hinge (v.20): a righteousness that must <em>surpass</em> the scrupulous outward observance of the Pharisees — a righteousness of the heart, not merely the hands.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">5:21–48</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 4 — Demonstration</div>
+        <div class="beat-title">The Six Antitheses: "But I Say to You"</div>
+        <div class="beat-desc">Six case studies of the higher righteousness — anger, lust, divorce, oaths, retaliation, enemies. In each, Jesus drives the command inward and forward, exposing the heart behind the act and calling for a love that mirrors the Father (v.48).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE BEATITUDES -->
+  <div class="section-label">The Beatitudes — Eight Portraits of the Blessed (5:3–10)</div>
+  <div class="beat-grid">
+    <div class="bt-card">
+      <div class="bt-ref">5:3</div>
+      <div class="bt-blessed">The poor in spirit</div>
+      <div class="bt-promise">theirs is the kingdom of heaven</div>
+      <div class="bt-note">Spiritual bankruptcy — those who know they have nothing to bring. The kingdom opens to empty hands, not full ones. The gateway beatitude.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:4</div>
+      <div class="bt-blessed">Those who mourn</div>
+      <div class="bt-promise">they will be comforted</div>
+      <div class="bt-note">Grief over sin and a broken world — not stoic detachment. Echoes Isaiah 61's comfort for those who mourn in Zion.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:5</div>
+      <div class="bt-blessed">The meek</div>
+      <div class="bt-promise">they will inherit the earth</div>
+      <div class="bt-note">Strength under control, not weakness. A direct quote of Psalm 37:11 — the opposite of the world's grasping self-assertion.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:6</div>
+      <div class="bt-blessed">Those who hunger &amp; thirst for righteousness</div>
+      <div class="bt-promise">they will be filled</div>
+      <div class="bt-note">A craving for right-ness — personal holiness and public justice. The only appetite Jesus promises will be fully satisfied.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:7</div>
+      <div class="bt-blessed">The merciful</div>
+      <div class="bt-promise">they will be shown mercy</div>
+      <div class="bt-note">Those who forgive and give freely. The measure they use is measured back — mercy given flows from mercy received.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:8</div>
+      <div class="bt-blessed">The pure in heart</div>
+      <div class="bt-promise">they will see God</div>
+      <div class="bt-note">Single-minded, undivided devotion — not sinless perfection but an unmixed heart. The great promise: the vision of God himself.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:9</div>
+      <div class="bt-blessed">The peacemakers</div>
+      <div class="bt-promise">they will be called children of God</div>
+      <div class="bt-note">Not peace-<em>keepers</em> who avoid conflict, but peace-<em>makers</em> who create it at cost — doing the family work of God the reconciler.</div>
+    </div>
+    <div class="bt-card">
+      <div class="bt-ref">5:10–12</div>
+      <div class="bt-blessed">The persecuted for righteousness</div>
+      <div class="bt-promise">theirs is the kingdom of heaven</div>
+      <div class="bt-note">The list ends where it began — the kingdom. Suffering for Jesus is not proof of failure but of belonging, and it puts them in the line of the prophets.</div>
+    </div>
+  </div>
+  <div class="placement" style="border-color:#3b6fd4; background:#eef2fb;">
+    <strong>Read the shape:</strong> the first and eighth beatitudes share the same promise — "theirs is the kingdom of heaven" — bracketing the whole list (an <em>inclusio</em>). Everything between is what belonging to that kingdom looks like. The verbs are almost all <em>future passive</em> ("they <em>will be</em> comforted / filled / shown mercy") — God is the one who acts. These are not achievements that earn blessing; they are a description of the people God is blessing, with the gifts he will surely give.
+  </div>
+
+  <!-- SALT & LIGHT -->
+  <div class="section-label">Salt &amp; Light — Kingdom Influence (5:13–16)</div>
+  <div class="sl-grid">
+    <div class="sl-card">
+      <div class="sl-title">Salt of the Earth</div>
+      <div class="sl-note">Salt preserved, purified, and flavoured — indispensable and distinct. Its whole value is in <em>not</em> being like what surrounds it. The warning: salt that "loses its saltiness" is good for nothing. A disciple who blends indistinguishably into the world has forfeited the one thing that made them useful.</div>
+    </div>
+    <div class="sl-card">
+      <div class="sl-title">Light of the World</div>
+      <div class="sl-note">A city on a hill cannot be hidden; a lamp is lit to be set on a stand. Light exists to be <em>seen</em>. The warning is the mirror image of salt: not loss of distinctiveness but concealment. And the aim is pointed carefully — not "that they may see <em>you</em>" but "that they may… glorify your Father."</div>
+    </div>
+  </div>
+
+  <!-- THE ANTITHESES -->
+  <div class="section-label">The Six Antitheses — "You Have Heard… But I Say" (5:21–48)</div>
+  <div class="anti-map">
+    <div class="anti-row">
+      <div class="anti-topic">Murder<br><span class="anti-ref">21–26</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Do not murder"; the killer is liable to judgment.</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Anger and contempt ("Raca," "You fool") already put you under judgment. Be reconciled before you offer your gift.</div></div>
+    </div>
+    <div class="anti-row">
+      <div class="anti-topic">Adultery<br><span class="anti-ref">27–30</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Do not commit adultery."</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Lustful looking is adultery of the heart. Deal ruthlessly with what causes you to stumble — "tear it out," better to lose a part than the whole.</div></div>
+    </div>
+    <div class="anti-row">
+      <div class="anti-topic">Divorce<br><span class="anti-ref">31–32</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Give her a certificate of divorce" (a legal loophole culture leaned on).</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Divorce is not a casual paperwork matter; it exposes people to adultery. Marriage is to be protected, not conveniently dissolved.</div></div>
+    </div>
+    <div class="anti-row">
+      <div class="anti-topic">Oaths<br><span class="anti-ref">33–37</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Do not break your oath; keep your vows to the Lord."</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Do not swear at all. Let your "Yes" be yes and your "No," no. Truthfulness so total it needs no oath to prop it up.</div></div>
+    </div>
+    <div class="anti-row">
+      <div class="anti-topic">Retaliation<br><span class="anti-ref">38–42</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Eye for eye, tooth for tooth" (the <em>lex talionis</em>).</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Do not resist an evil person with revenge. Turn the other cheek, go the second mile, give freely — refuse the cycle of retaliation.</div></div>
+    </div>
+    <div class="anti-row">
+      <div class="anti-topic">Enemies<br><span class="anti-ref">43–48</span></div>
+      <div class="anti-cell anti-heard"><div class="anti-label">You have heard</div><div class="anti-text">"Love your neighbour and hate your enemy" (the second half was folk addition, not Torah).</div></div>
+      <div class="anti-cell anti-said"><div class="anti-label">But I say</div><div class="anti-text">Love your enemies and pray for those who persecute you — so that you reflect the Father, who sends sun and rain on all. "Be perfect, as your heavenly Father is perfect."</div></div>
+    </div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Six Key Terms</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">μακάριος</div>
+      <div class="word-translit">makarios</div>
+      <span class="word-ref-badge">5:3–11 · "blessed"</span>
+      <div class="word-gloss">Blessed / flourishing / truly well-off</div>
+      <div class="word-note">Not primarily "happy" (a feeling) but a state of God-given flourishing — to be congratulated, in the deepest sense. Jesus pronounces this over people the world pities. It is a declaration of objective favour, not a mood.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">πληρόω</div>
+      <div class="word-translit">plēroō</div>
+      <span class="word-ref-badge">5:17 · "fulfil"</span>
+      <div class="word-gloss">To fulfil / fill up / bring to completion</div>
+      <div class="word-note">The key verb of v.17. Jesus does not <em>abolish</em> (kataluō) the Law but brings it to its intended goal — completing its meaning, embodying its aim, and revealing the heart it always pointed toward. The Law finds its destination in him.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">δικαιοσύνη</div>
+      <div class="word-translit">dikaiosynē</div>
+      <span class="word-ref-badge">5:6, 10, 20 · "righteousness"</span>
+      <div class="word-gloss">Righteousness / justice / right-ness</div>
+      <div class="word-note">The thread running through the chapter: hungered for (v.6), suffered for (v.10), and required to <em>surpass</em> the Pharisees' (v.20). Both inward conformity to God's character and outward doing of justice — never one without the other.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">πραΰς</div>
+      <div class="word-translit">praüs</div>
+      <span class="word-ref-badge">5:5 · "meek"</span>
+      <div class="word-gloss">Meek / gentle / power under control</div>
+      <div class="word-note">Not spinelessness. Used of a war-horse broken to the bridle — strength harnessed, not absent. Jesus applies it to himself ("gentle and humble in heart," 11:29). The meek inherit precisely what the aggressive grab for.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">τέλειος</div>
+      <div class="word-translit">teleios</div>
+      <span class="word-ref-badge">5:48 · "perfect"</span>
+      <div class="word-gloss">Perfect / complete / mature / whole</div>
+      <div class="word-note">Less "flawless" than "brought to its intended end." In context (loving enemies), it means a love that is <em>complete</em> — extending even to enemies, as the Father's does. A goal that both humbles and pulls us forward, not a claim we can tick off.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἐγὼ δὲ λέγω</div>
+      <div class="word-translit">egō de legō</div>
+      <span class="word-ref-badge">5:22, 28, 32… · "but I say"</span>
+      <div class="word-gloss">"But I myself say to you"</div>
+      <div class="word-note">The stunning refrain of the antitheses. No prophet said "but <em>I</em> say"; they said "thus says the LORD." Jesus sets his own word alongside — indeed above — the received reading of Scripture, an implicit claim to divine authority the crowds noticed (7:29).</div>
+    </div>
+  </div>
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">Old Testament Roots — What Jesus Is Drawing On</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Exodus 19–20</div>
+      <div class="ot-title">Sinai — the Mountain of the Law</div>
+      <div class="ot-note">Moses ascends the mountain to receive the Law; Jesus ascends a mountain to give its true meaning. Matthew casts him as the new and greater Moses — but where Moses relayed God's words, Jesus speaks as their author: "But I say to you."</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Psalm 1 · Psalm 37:11</div>
+      <div class="ot-title">The "Blessed" Man &amp; the Meek</div>
+      <div class="ot-note">The Beatitudes stand in the wisdom tradition of "blessed is the one who…" (Ps 1:1). The third beatitude quotes Psalm 37:11 almost verbatim — "the meek shall inherit the land" — reframing the Psalm's patient trust as kingdom hope.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 61:1–3</div>
+      <div class="ot-title">Good News to the Poor, Comfort to Mourners</div>
+      <div class="ot-note">The opening beatitudes echo Isaiah's Servant, anointed to bring good news to the poor and comfort to those who mourn — the very text Jesus reads in Luke 4. The Beatitudes announce that the promised age of comfort has arrived in him.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Leviticus 19:18 · 24:20</div>
+      <div class="ot-title">Love of Neighbour &amp; the Talion</div>
+      <div class="ot-note">"Eye for eye" (Lev 24:20) was a <em>limit</em> on vengeance for the courts, not a licence for personal revenge; "love your neighbour" (Lev 19:18) is Torah, but "hate your enemy" was never in it. Jesus strips away the distortions and extends the command to its limit.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY SHELF -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of the Sermon on the Mount (BST, 1978)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott's controlling theme: the Sermon describes the <em>Christian counter-culture</em> — a community whose values run directly against the surrounding world. The Beatitudes and antitheses are not impossible ideals but the visible distinctiveness of kingdom people.</div>
+      <div class="comm-point">On 5:20: the "greater righteousness" is not more rules but a deeper, inward reality — righteousness of the heart, not merely conduct — that only God can produce.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">D. Martyn Lloyd-Jones</div>
+      <div class="comm-title">Studies in the Sermon on the Mount (1959–60)</div>
+      <span class="comm-tradition trad-preaching">Reformed · Preaching</span>
+      <div class="comm-point">Lloyd-Jones insists the Sermon is a portrait of what every Christian is <em>meant to be</em> — not a set of entry conditions but the necessary evidence of regeneration. The Beatitudes describe character in a logical order, beginning with poverty of spirit as the foundation of all the rest.</div>
+      <div class="comm-point">Emphatic that you cannot live this by willpower; the Sermon drives you first to the cross for a new heart, and only then can it be obeyed.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Studies in the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Dietrich Bonhoeffer</div>
+      <div class="comm-title">The Cost of Discipleship (1937)</div>
+      <span class="comm-tradition trad-pastoral">Lutheran · Discipleship</span>
+      <div class="comm-point">Bonhoeffer reads the Sermon as the call of "costly grace" — the summons to concrete obedience that follows Christ. Against "cheap grace" that spiritualises the commands away, he insists "only he who believes is obedient, and only he who is obedient believes."</div>
+      <div class="comm-point">On loving enemies: this is precisely where the disciple's life becomes visibly extraordinary (<em>perisson</em>) — the "more" that distinguishes the follower of Jesus from the world.</div>
+      <a href="https://www.fortresspress.com/" target="_blank" class="source-link">fortresspress.com — The Cost of Discipleship [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-critical">Evangelical Scholarly</span>
+      <div class="comm-point">France stresses the "greater righteousness" (5:20) as the heading over the whole of 5:21–48: the antitheses are not new laws but illustrations of the radical, heart-level obedience the kingdom calls for, exceeding mere external conformity.</div>
+      <div class="comm-point">On the antithesis form: Jesus opposes not Moses but the received oral interpretation — "it was said" (by the tradition), not "God said." He fulfils the Law by revealing its true intent.</div>
+      <a href="https://www.eerdmans.com/9780802825018/the-gospel-of-matthew/" target="_blank" class="source-link">eerdmans.com — Matthew, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Augustine of Hippo</div>
+      <div class="comm-title">Our Lord's Sermon on the Mount (c. 393)</div>
+      <span class="comm-tradition trad-reformed">Patristic</span>
+      <div class="comm-point">The earliest full commentary on the Sermon. Augustine calls it "a perfect standard of the Christian life" and famously links the Beatitudes to the gifts of the Spirit and to a ladder of ascent, reading them as an ordered path of growth culminating in seeing God.</div>
+      <a href="https://www.newadvent.org/fathers/1601.htm" target="_blank" class="source-link">newadvent.org — Our Lord's Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Craig Blomberg</div>
+      <div class="comm-title">Matthew (New American Commentary, 1992)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Blomberg guards against two errors: treating the Sermon as unattainable ideal (so we ignore it) or as attainable law (so we grow proud). It sets a standard that drives us to grace and then genuinely shapes discipleship in the Spirit.</div>
+      <a href="https://www.bhpublishinggroup.com/" target="_blank" class="source-link">bhpublishinggroup.com — Matthew, NAC [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Are the Beatitudes entry requirements — things I must achieve to be blessed?</div>
+      <div class="pressure-a">No. The verbs are future <em>passive</em> ("they will be comforted, filled, shown mercy") — God is the actor. And they open with "poor in spirit," the confession of spiritual bankruptcy. You do not qualify for the kingdom by becoming meek and merciful; Jesus pronounces blessing on people who already belong to the kingdom and describes the life the Spirit produces in them. Gift precedes demand. Read as a ladder of self-improvement, the Beatitudes crush; read as a description of grace, they comfort and then shape.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. In the antitheses, is Jesus contradicting or correcting Moses?</div>
+      <div class="pressure-a">Neither abolishing nor contradicting — he says so plainly (v.17). Note the wording: "you have heard that it <em>was said</em>," not "God said." Jesus is opposing the <em>received oral interpretation</em> — the scribal tradition that reduced God's law to manageable external rules ("don't murder," "hate your enemy") — and restoring its full, heart-deep intent. He is not raising the Law's true standard; he is exposing how far the popular reading had lowered it. He fulfils the Law by revealing what it always meant.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. "Be perfect" (5:48) — is sinless perfection actually commanded?</div>
+      <div class="pressure-a"><em>Teleios</em> means "complete / brought to its goal," not flawless in the modern sense. In context it caps the command to love enemies: as the Father's love is <em>complete</em> — reaching even to the ungrateful — so should ours be. Luke's parallel reads "be merciful as your Father is merciful" (Luke 6:36), confirming the sense. It is a real call to Godlike, all-embracing love that we pursue by grace and never fully arrive at in this life — a horizon, not a checkbox.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Does "turn the other cheek" (5:38–42) forbid all justice and self-defence?</div>
+      <div class="pressure-a">The target is <em>personal retaliation and revenge</em>, not the God-given role of courts and government to restrain evil (cf. Rom 13:1–4). "Eye for eye" was itself a judicial <em>limit</em> on vengeance; Jesus goes further, forbidding the disciple to answer personal insult and injury with retaliation. It is a call to absorb wrong rather than escalate it — the way of the cross — not a blanket abolition of justice or a command to enable ongoing abuse. Wisdom is required to apply it without weaponising it against victims.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Can anyone actually live this? Is the Sermon realistic?</div>
+      <div class="pressure-a">Not by willpower — and that may be part of the point. The Sermon sets a standard so high (anger is murder, lust is adultery, love your enemies, be perfect) that it strips away all self-righteousness and drives the hearer to the first beatitude: "blessed are the poor in spirit." It functions like a mirror, showing our need, <em>and</em> like a map, showing the Spirit-shaped life now possible in Christ. Divorced from grace it is despair; rooted in grace it is the genuine, if unfinished, shape of discipleship.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallel · Same sermon</div>
+      <div class="xref-ref">Luke 6:20–49</div>
+      <div class="xref-note">The "Sermon on the Plain" — a parallel with blessings <em>and</em> woes, and "be merciful as your Father is merciful" (6:36), which interprets Matthew's "be perfect."</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Isaiah 61:1–3</div>
+      <div class="xref-note">Good news to the poor, comfort to mourners — the Servant's mission the Beatitudes announce as now fulfilled.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Psalm 37:11</div>
+      <div class="xref-note">"The meek shall inherit the land" — quoted directly in the third beatitude (5:5).</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">James 1–5</div>
+      <div class="xref-note">James reads like the Sermon applied: doers not hearers, taming the tongue, "let your yes be yes," mercy triumphs over judgment.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ NT echo</div>
+      <div class="xref-ref">Romans 12:14–21</div>
+      <div class="xref-note">Paul's practical restatement: bless those who persecute you, do not repay evil for evil, overcome evil with good — the antitheses lived out.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The heart of it</div>
+      <div class="xref-ref">Matthew 22:37–40</div>
+      <div class="xref-note">Love God, love neighbour — "on these hang all the Law and the Prophets." The Sermon's "surpassing righteousness" is love that reaches the heart.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — On the Mountainside</div>
+        <div class="tn-text">To a crowd under Roman occupation, taught by scribes who had turned the Law into a checklist of externals, Jesus redraws the whole picture. Blessing belongs not to the powerful and pious but to the poor in spirit and the persecuted. Righteousness is not surface compliance but a transformed heart. And he teaches it all with an authority — "but I say to you" — that no rabbi had ever claimed.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — In the Pew and the Street</div>
+        <div class="tn-text">We still domesticate the Sermon — admiring it, quoting it, and quietly assuming it can't really be meant. But it still measures the gap between managed behaviour and a changed heart, still calls the church to be salt that stays distinct and light that isn't hidden, still asks whether we love the people hardest to love. And it still drives us, when we're honest, to the empty-handed poverty of spirit where the kingdom is given, not earned.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Where am I settling for the outward act while the heart behind it goes unchanged — and what would it mean to bring that to Jesus rather than manage it myself?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The kingdom belongs to the empty-handed, and its righteousness is not the polished surface of behaviour but a transformed heart — a standard so high it drives us to grace, and so real it reshapes the life grace gives."</div>
+    <div class="verdict-ref">Matthew 5:20 — "unless your righteousness surpasses that of the Pharisees… you will certainly not enter the kingdom of heaven."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
