@@ -14,16 +14,35 @@
   .header p { font-size: 1rem; color: #666; margin-top: 6px; }
   .header .sub2 { font-size: 0.78rem; color: #aaa; margin-top: 4px; letter-spacing: 0.04em; }
 
-  .sections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; max-width: 1100px; margin: 0 auto; }
+  .sections { display: flex; flex-direction: column; gap: 22px; max-width: 1160px; margin: 0 auto; }
 
-  .section { background: #faf7f2; border: 2.5px solid #2c2c2c; border-radius: 4px; padding: 20px 22px; min-width: 0; }
+  .section { background: #faf7f2; border: 2.5px solid #2c2c2c; border-radius: 4px; padding: 18px 22px; min-width: 0; }
   .section-label { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+
+  /* accordion header (applied to .section-label via JS) */
+  .acc-header { display: flex; align-items: center; gap: 9px; cursor: pointer; user-select: none; margin-bottom: 14px; }
+  .acc-header:hover { opacity: 0.72; }
+  .sec-chevron { font-size: 0.7rem; line-height: 1; transition: transform 0.15s; display: inline-block; opacity: 0.7; }
+  .section.collapsed .sec-chevron { transform: rotate(-90deg); }
+  .section.collapsed .acc-header { margin-bottom: 0; }
+  .section.collapsed .guide-list { display: none !important; }
+  .sec-count { margin-left: auto; font-size: 0.62rem; background: #e6ded2; color: #6a6259; border-radius: 10px; padding: 1px 9px; font-weight: 700; letter-spacing: 0; }
+
+  /* search toolbar */
+  .toolbar { max-width: 1160px; margin: 0 auto 22px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .search-wrap { flex: 1; min-width: 220px; position: relative; }
+  .search-input { width: 100%; font-family: 'Gentium Book Plus', serif; font-size: 1rem; padding: 10px 14px 10px 36px; border: 2px solid #2c2c2c; border-radius: 6px; background: #faf7f2; color: #2c2c2c; }
+  .search-input:focus { outline: none; border-color: #3b6fd4; }
+  .search-icon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: #999; font-size: 0.95rem; pointer-events: none; }
+  .toggle-all-btn { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; padding: 9px 16px; border: 2px solid #2c2c2c; border-radius: 6px; background: #faf7f2; color: #2c2c2c; cursor: pointer; white-space: nowrap; }
+  .toggle-all-btn:hover { background: #efe9df; }
+  .no-results { display: none; text-align: center; color: #888; font-style: italic; margin: 4px 0 22px; }
   .label-blue   { color: #3b6fd4; }
   .label-purple { color: #6c4bbf; }
   .label-orange { color: #d47c1a; }
   .label-red    { color: #c0392b; }
 
-  .guide-list { display: flex; flex-direction: column; gap: 8px; }
+  .guide-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 10px; align-items: start; }
   .guide-card { border: 2px solid; border-radius: 3px; padding: 11px 14px; text-decoration: none; display: block; transition: opacity 0.15s; }
   .guide-card:hover { opacity: 0.75; }
 
@@ -180,6 +199,15 @@
     <p>Sample outputs — click any panel to open it</p>
     <p class="sub2">Every guide below was generated from a single skill prompt — tap the dashed chip on each card to copy it</p>
   </div>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input id="guideSearch" class="search-input" type="text" placeholder="Search guides — book, theme, or type (e.g. amos, matthew, deep, discussion)…" autocomplete="off">
+    </div>
+    <button id="toggleAll" class="toggle-all-btn" type="button">Collapse all</button>
+  </div>
+  <div id="noResults" class="no-results">No guides match your search.</div>
 
   <div class="sections">
 
@@ -494,7 +522,7 @@
     <!-- TIMELINES -->
     <div class="section" style="grid-column: 1 / -1;">
       <div class="section-label" style="color:#3b6fd4;">Timelines &amp; Family Trees</div>
-      <div class="guide-list" style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
+      <div class="guide-list">
         <a class="guide-card card-blue" href="guides/visuals/bible-timeline-full.html">
           <div class="card-book">Adam → Jesus</div>
           <div class="card-type">Full timeline — lifespans, family tree, contemporaries, books in context</div>
@@ -522,7 +550,7 @@
     <!-- COMPARISONS -->
     <div class="section" style="grid-column: 1 / -1;">
       <div class="section-label" style="color:#2e8a4a;">Book &amp; Passage Comparisons</div>
-      <div class="guide-list" style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
+      <div class="guide-list">
         <a class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;" href="guides/visuals/judges-amos-comparison.html">
           <div class="card-book" style="color:#2c2c2c;">Judges × Amos</div>
           <div class="card-type">Same failure, 300 years apart — neglect vs. injustice</div>
@@ -635,6 +663,74 @@
           btn.textContent = 'Copy URL';
           btn.classList.remove('copied');
         }, 2000);
+      });
+    }
+
+    // ── Accordion sections + live search ──
+    const sectionEls = Array.from(document.querySelectorAll('.sections > .section'));
+
+    sectionEls.forEach(sec => {
+      const label = sec.querySelector('.section-label');
+      const list  = sec.querySelector('.guide-list');
+      if (!label || !list) return;
+      const cards = list.querySelectorAll('.guide-card');
+
+      const chev = document.createElement('span');
+      chev.className = 'sec-chevron';
+      chev.textContent = '▾';
+      label.insertBefore(chev, label.firstChild);
+
+      const count = document.createElement('span');
+      count.className = 'sec-count';
+      count.textContent = cards.length;
+      label.appendChild(count);
+
+      label.classList.add('acc-header');
+      label.setAttribute('role', 'button');
+      label.tabIndex = 0;
+
+      const toggle = () => sec.classList.toggle('collapsed');
+      label.addEventListener('click', toggle);
+      label.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+
+    const searchEl = document.getElementById('guideSearch');
+    const noResEl  = document.getElementById('noResults');
+    const toggleAllBtn = document.getElementById('toggleAll');
+
+    function applyFilter() {
+      const q = (searchEl.value || '').trim().toLowerCase();
+      let anyGlobal = false;
+      sectionEls.forEach(sec => {
+        const list = sec.querySelector('.guide-list');
+        if (!list) return;
+        const cards = list.querySelectorAll('.guide-card');
+        let visible = 0;
+        cards.forEach(card => {
+          const match = !q || card.textContent.toLowerCase().includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        const cnt = sec.querySelector('.sec-count');
+        if (cnt) cnt.textContent = q ? (visible + '/' + cards.length) : cards.length;
+        if (q) {
+          sec.style.display = visible ? '' : 'none';
+          if (visible) { sec.classList.remove('collapsed'); anyGlobal = true; }
+        } else {
+          sec.style.display = '';
+        }
+      });
+      if (noResEl) noResEl.style.display = (q && !anyGlobal) ? 'block' : 'none';
+    }
+    if (searchEl) searchEl.addEventListener('input', applyFilter);
+
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', function () {
+        const anyExpanded = sectionEls.some(s => !s.classList.contains('collapsed'));
+        sectionEls.forEach(s => s.classList.toggle('collapsed', anyExpanded));
+        this.textContent = anyExpanded ? 'Expand all' : 'Collapse all';
       });
     }
 
