@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sink the Roots — Rooted in God's Word (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
+  .companion-link:hover { color: #1c5c30; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+  .bigidea { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 15px 18px; margin: 20px 0; font-size: 0.9rem; color: #21492f; line-height: 1.5; }
+  .bigidea strong { color: #1c5c30; }
+
+  /* TWO TREES */
+  .trees { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 8px; }
+  .tree { border: 2.5px solid; border-radius: 3px; padding: 14px 16px; }
+  .tree-good { border-color: #2e8a4a; background: #edf8f1; }
+  .tree-bad { border-color: #c0392b; background: #fdf2f2; }
+  .tree-icon { font-size: 1.4rem; }
+  .tree-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1rem; margin: 2px 0; }
+  .tree-good .tree-name { color: #2e8a4a; } .tree-bad .tree-name { color: #c0392b; }
+  .tree-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700; margin-bottom: 8px; }
+  .tree-item { font-size: 0.78rem; color: #333; line-height: 1.4; margin-bottom: 6px; padding-left: 12px; position: relative; }
+  .tree-item::before { content: '·'; position: absolute; left: 2px; font-weight: 700; }
+  .tree-good .tree-item::before { color: #2e8a4a; } .tree-bad .tree-item::before { color: #c0392b; }
+  .trees-cap { font-size: 0.8rem; color: #555; font-style: italic; border-left: 3px solid #2e8a4a; padding: 8px 12px; background: #edf8f1; line-height: 1.45; margin-bottom: 24px; }
+
+  /* VERSE CHAIN */
+  .verses { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin: 4px 0 8px; }
+  .verse-card { border: 2px solid #2e8a4a; border-left-width: 5px; border-radius: 3px; background: #faf7f2; padding: 11px 14px; }
+  .verse-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2e8a4a; margin-bottom: 3px; }
+  .verse-quote { font-size: 0.78rem; color: #333; line-height: 1.4; font-style: italic; margin-bottom: 5px; }
+  .verse-point { font-size: 0.73rem; color: #666; line-height: 1.36; }
+  .verses-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+
+  /* PRODUCE STRIP */
+  .produce-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 4px 0 24px; }
+  .produce-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 12px 12px; text-align: center; }
+  .produce-icon { font-size: 1.3rem; margin-bottom: 3px; }
+  .produce-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 3px; }
+  .produce-note { font-size: 0.71rem; color: #555; line-height: 1.34; }
+
+  /* HOW-TO */
+  .howto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .howto-card { border: 2px solid #6c4bbf; border-radius: 3px; background: #f5f2fc; padding: 12px 14px; }
+  .howto-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #6c4bbf; margin-bottom: 2px; }
+  .howto-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-weight: 700; margin-bottom: 5px; }
+  .howto-note { font-size: 0.78rem; color: #444; line-height: 1.4; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-heb { font-size: 1.25rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; }
+  .word-heb.rtl { direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .trees, .verses, .howto-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .produce-row { grid-template-columns: 1fr 1fr; }
+    .word-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Sink the Roots</div>
+  <div class="header-title">Rooted in God's Word — The Tree Planted by Water</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="luke-8-14-thorns-deep-study.html" class="companion-link">⊕ Pull the Thorns (Luke 8:14)</a>
+    <a href="faith-rooted-in-scripture-deep-study.html" class="companion-link">Faith Rooted in Scripture</a>
+  </div>
+
+  <div class="section-label">Anchor Texts — The Rooted Tree</div>
+  <div class="passage-callout">
+    <div class="pc-label">Jeremiah 17:7–8 &amp; Psalm 1:2–3 · The two great root-texts</div>
+    <div class="pc-text">
+      "Blessed is the man who trusts in the LORD… He is like a tree planted by water, that sends out its roots by the stream, and does not fear when heat comes… it is not anxious in the year of drought, for it does not cease to bear fruit." … "His delight is in the law of the LORD, and on his law he meditates day and night. He is like a tree planted by streams of water that yields its fruit in its season, and its leaf does not wither."
+    </div>
+    <div class="pc-ref">Jeremiah 17:7–8; Psalm 1:2–3 (ESV)</div>
+  </div>
+
+  <div class="bigidea">
+    <strong>The big idea:</strong> Scripture's picture of a flourishing life is a <em>tree by water</em> — one whose roots reach down to the stream, so that when heat and drought come (and they will), it does not wither but keeps bearing fruit. And the Bible is consistent about what that stream is and how the roots reach it: the tree drinks through roots sunk into <strong>God himself as he is known in his word</strong> — delighted in, meditated on day and night, trusted, obeyed, abided in. If "pull the thorns" is the negative work of clearing what chokes the word, <strong>"sink the roots" is the positive work of driving your life down deep into the word until it holds you</strong>. Shallow roots wither in the first heat; deep roots draw from a source the drought can't reach.</div>
+
+  <!-- TWO TREES -->
+  <div class="section-label">Two Trees, Two Trusts — Jeremiah 17:5–8</div>
+  <div class="trees">
+    <div class="tree tree-bad">
+      <div class="tree-icon">🌵</div>
+      <div class="tree-name">The Shrub in the Desert</div>
+      <div class="tree-ref">Jer 17:5–6 · trusts in flesh</div>
+      <div class="tree-item">"Cursed is the man who trusts in man… whose heart turns away from the LORD"</div>
+      <div class="tree-item">Like a shrub in the desert, in parched places, a salt land</div>
+      <div class="tree-item">"He shall not see any good come" — no fruit, no relief</div>
+      <div class="tree-item">Roots reach only dry ground; when heat comes there is nothing to draw on</div>
+    </div>
+    <div class="tree tree-good">
+      <div class="tree-icon">🌳</div>
+      <div class="tree-name">The Tree by Water</div>
+      <div class="tree-ref">Jer 17:7–8 · trusts in the LORD</div>
+      <div class="tree-item">"Blessed is the man who trusts in the LORD, whose trust is the LORD"</div>
+      <div class="tree-item">Planted by water, sending roots to the stream</div>
+      <div class="tree-item">"Does not fear when heat comes… not anxious in the year of drought"</div>
+      <div class="tree-item">"It does not cease to bear fruit" — its leaves stay green</div>
+    </div>
+  </div>
+  <div class="trees-cap">Both trees face the same heat and the same drought — the difference is not their circumstances but their <em>roots</em>. Where a life's roots go is where its trust really is. The blessed life is not the one that avoids the drought, but the one whose roots reach a stream the drought cannot dry up.</div>
+
+  <!-- VERSE CHAIN -->
+  <div class="section-label">The Bible's Chain of Rooted-Tree Texts</div>
+  <div class="verses">
+    <div class="verse-card">
+      <div class="verse-ref">Psalm 1:2–3</div>
+      <div class="verse-quote">"His delight is in the law of the LORD… like a tree planted by streams of water."</div>
+      <div class="verse-point">The Psalter's opening portrait: delight and meditation in the word are the roots that make a life fruitful and unwithering.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Jeremiah 17:7–8</div>
+      <div class="verse-quote">"He is like a tree planted by water… not anxious in the year of drought."</div>
+      <div class="verse-point">Trust in the LORD is the root system that makes a life drought-proof — still bearing fruit when everything around is parched.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Deuteronomy 8:3</div>
+      <div class="verse-quote">"Man does not live by bread alone, but by every word that comes from the mouth of the LORD."</div>
+      <div class="verse-point">The word is the tree's water and food. A root cut off from it starves, however green it looks for a while.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Joshua 1:8</div>
+      <div class="verse-quote">"This Book of the Law shall not depart from your mouth… meditate on it day and night."</div>
+      <div class="verse-point">The <em>how</em> of sinking roots: constant meditation on the word — keeping it on the lips, in the mind, and in the doing.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Psalm 92:12–14</div>
+      <div class="verse-quote">"Planted in the house of the LORD… still bearing fruit in old age, ever full of sap and green."</div>
+      <div class="verse-point">Roots deep in God keep a life fruitful <em>to the very end</em> — flourishing like a palm and a cedar, green in old age.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Colossians 2:6–7</div>
+      <div class="verse-quote">"Rooted and built up in him and established in the faith."</div>
+      <div class="verse-point">The NT names the soil: we are rooted <em>in Christ</em> — both planted (roots) and built (foundation), grounded in the faith we were taught.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Ephesians 3:17</div>
+      <div class="verse-quote">"…being rooted and grounded in love."</div>
+      <div class="verse-point">The root reaches down into the immeasurable love of Christ — the soil that gives strength "to comprehend… the breadth and length and height and depth."</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">John 15:4–5</div>
+      <div class="verse-quote">"Abide in me… apart from me you can do nothing."</div>
+      <div class="verse-point">The vine-and-branches version: fruit comes only from staying connected to the source. Sever the root and the branch dies.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Isaiah 44:3–4</div>
+      <div class="verse-quote">"I will pour water on the thirsty land… they shall spring up like willows by flowing streams."</div>
+      <div class="verse-point">God himself waters the roots by his Spirit — the flourishing is his gift, not our achievement.</div>
+    </div>
+    <div class="verse-card">
+      <div class="verse-ref">Psalm 52:8 · Hosea 14:5–6</div>
+      <div class="verse-quote">"I am like a green olive tree in the house of God." … "He shall take root like the trees of Lebanon."</div>
+      <div class="verse-point">Trusting God's steadfast love makes a life a green, deep-rooted tree; God is "like the dew" that makes Israel blossom and root.</div>
+    </div>
+  </div>
+  <div class="verses-cap">One image, running from Genesis to Revelation: the person whose roots reach the water of God's word and Spirit is a green, fruitful, drought-proof tree (cf. Amos 9:15 "planted… never uprooted"; Ezek 47:12 trees by the river; Rev 22:2 the tree of life).</div>
+
+  <!-- WHAT ROOTS PRODUCE -->
+  <div class="section-label">What Deep Roots Produce</div>
+  <div class="produce-row">
+    <div class="produce-card"><div class="produce-icon">🍇</div><div class="produce-title">Fruit in Season</div><div class="produce-note">"Yields its fruit in its season" (Ps 1:3) — steady, timely fruitfulness, not frantic or forced.</div></div>
+    <div class="produce-card"><div class="produce-icon">🌿</div><div class="produce-title">Leaf That Won't Wither</div><div class="produce-note">"Its leaf does not wither" (Ps 1:3); "ever full of sap and green" (Ps 92:14) — lasting vitality.</div></div>
+    <div class="produce-card"><div class="produce-icon">☀️</div><div class="produce-title">No Fear in Drought</div><div class="produce-note">"Does not fear when heat comes… not anxious in drought" (Jer 17:8) — stability when others panic.</div></div>
+    <div class="produce-card"><div class="produce-icon">🕰️</div><div class="produce-title">Fruitful to the End</div><div class="produce-note">"Still bearing fruit in old age" (Ps 92:14) — roots that keep drawing life across a whole lifetime.</div></div>
+  </div>
+
+  <!-- HOW TO SINK THE ROOTS -->
+  <div class="section-label">How to Sink the Roots — The Means the Bible Gives</div>
+  <div class="howto-grid">
+    <div class="howto-card">
+      <div class="howto-name">Delight in it</div>
+      <div class="howto-ref">Psalm 1:2</div>
+      <div class="howto-note">Roots grow toward what the heart loves. Cultivate a genuine <em>delight</em> in God's word — not duty only, but treasuring it as "more to be desired than gold" (Ps 19:10).</div>
+    </div>
+    <div class="howto-card">
+      <div class="howto-name">Meditate on it day &amp; night</div>
+      <div class="howto-ref">Psalm 1:2 · Joshua 1:8</div>
+      <div class="howto-note">Meditation (<em>hagah</em>) is chewing the word over slowly and repeatedly until it soaks in — the daily, unhurried attention through which roots actually reach the stream.</div>
+    </div>
+    <div class="howto-card">
+      <div class="howto-name">Feed on it as food</div>
+      <div class="howto-ref">Deuteronomy 8:3 · Jer 15:16</div>
+      <div class="howto-note">"Your words… I ate them, and they became the joy of my heart." The word is not decoration but daily bread — the nourishment that keeps the root alive.</div>
+    </div>
+    <div class="howto-card">
+      <div class="howto-name">Trust and obey it</div>
+      <div class="howto-ref">Jeremiah 17:7 · James 1:22</div>
+      <div class="howto-note">The tree by water is the one that <em>trusts the LORD</em>. Roots deepen through obedience — hearing and doing the word, not hearing only, drives them down.</div>
+    </div>
+    <div class="howto-card">
+      <div class="howto-name">Abide in Christ</div>
+      <div class="howto-ref">John 15:4–5 · Col 2:7</div>
+      <div class="howto-note">Ultimately we are rooted in a Person. Stay connected to Christ through his word, prayer, and his people — the branch bears fruit only by remaining in the vine.</div>
+    </div>
+    <div class="howto-card">
+      <div class="howto-name">Be planted in his house</div>
+      <div class="howto-ref">Psalm 92:13</div>
+      <div class="howto-note">"Planted in the house of the LORD, they flourish in the courts of our God." Roots go deep in the soil of the worshipping community, not in isolation.</div>
+    </div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of Rooting</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb rtl">שָׁתַל</div>
+      <div class="word-translit">shātal — "planted / transplanted"</div>
+      <span class="word-ref-badge">Ps 1:3 · Jer 17:8</span>
+      <div class="word-gloss">To transplant to a place of water</div>
+      <div class="word-note">Not merely "grown" but deliberately <em>transplanted</em> — moved and set beside the stream so the roots can always drink. The blessed life is one intentionally relocated to where the water is: God's word and presence.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb rtl">שֹׁרֶשׁ</div>
+      <div class="word-translit">shoresh — "root"</div>
+      <span class="word-ref-badge">Jer 17:8 · Isa 11:1</span>
+      <div class="word-gloss">Root; the hidden source of life</div>
+      <div class="word-note">The root is unseen but decisive — it determines whether the tree survives drought. What is unseen in a life (its private feeding on God) is what shows in public when the heat comes. The Messiah himself is "the Root" (Isa 11:10; Rev 22:16).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb rtl">הָגָה</div>
+      <div class="word-translit">hāgāh — "meditate"</div>
+      <span class="word-ref-badge">Ps 1:2 · Josh 1:8</span>
+      <div class="word-gloss">To murmur, mutter, ponder</div>
+      <div class="word-note">To meditate is to <em>mutter the word under your breath</em>, turning it over slowly like an animal chewing the cud. It is the unhurried, repeated attention by which the word passes from the page into the depths — the very act of sinking roots.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb rtl">פֶּלֶג</div>
+      <div class="word-translit">peleg — "stream / channel"</div>
+      <span class="word-ref-badge">Ps 1:3</span>
+      <div class="word-gloss">An irrigation channel of water</div>
+      <div class="word-note">"Streams (<em>peleg</em>) of water" are channelled irrigation ditches — a constant, reliable supply, not a seasonal creek. The word of God is a dependable stream that does not run dry in summer; roots sunk there never lack.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb rtl">רַעֲנָן</div>
+      <div class="word-translit">raʿanan — "green / flourishing"</div>
+      <span class="word-ref-badge">Ps 92:14 · Jer 17:8</span>
+      <div class="word-gloss">Luxuriant, fresh, ever-green</div>
+      <div class="word-note">The word for a leaf that stays lush and green ("its leaf shall be green," Jer 17:8; "full of sap and green," Ps 92:14). The mark of deep roots is sustained freshness — a life that does not dry up and fade even in old age.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ῥιζόω</div>
+      <div class="word-translit">rhizoō — "to be rooted"</div>
+      <span class="word-ref-badge">Col 2:7 · Eph 3:17</span>
+      <div class="word-gloss">Firmly rooted / caused to strike root</div>
+      <div class="word-note">The NT gathers the whole image into Christ: "rooted (<em>rhizoō</em>) and built up in him" (Col 2:7), "rooted and grounded in love" (Eph 3:17). The stream the roots reach is finally a Person — the love of Christ known through his word.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Derek Kidner</div>
+      <div class="comm-title">Psalms 1–72 (Tyndale OT Commentaries, 1973)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Kidner shows how Psalm 1's tree is deliberately "transplanted" beside channelled water — a picture of a life whose secret is not vigour of its own but constant access to a supply outside itself: the law of the LORD, delighted in and pondered.</div>
+      <div class="comm-point">The "leaf that does not wither" is proof of a hidden root system; fruitfulness is the visible sign of unseen feeding.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Psalms 1–72, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Christopher J. H. Wright</div>
+      <div class="comm-title">The Message of Jeremiah (BST, 2014)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">On Jeremiah 17, Wright contrasts two root systems and two trusts: the desert shrub sunk into the dust of human self-reliance, and the tree whose roots reach the stream of trust in the LORD. Same climate, opposite outcomes — because of where the roots go.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Jeremiah [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">The Treasury of David (on Psalm 1)</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span>
+      <div class="comm-point">Spurgeon delights that the godly man is "planted" — not a wild seedling but set by God beside the rivers; and that meditation is the secret channel by which "the roots find the river." He urges believers to "get your roots down" into the word.</div>
+      <a href="https://www.spurgeon.org/resource-library/" target="_blank" class="source-link">spurgeon.org — The Treasury of David [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Eugene Peterson</div>
+      <div class="comm-title">Eat This Book (2006)</div>
+      <span class="comm-tradition trad-pastoral">Pastoral · Formation</span>
+      <div class="comm-point">Peterson recovers meditation (<em>hagah</em>) as unhurried, "ruminative" reading — chewing on Scripture rather than merely scanning it. This slow feeding, he argues, is how the word gets past the surface and forms the deep roots of a mature life.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Eat This Book [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on Psalms / Jeremiah</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin notes that the tree's endurance "in the year of drought" proves that faith draws on a hidden, heavenly moisture. When outward supports fail, those rooted in God are sustained by a supply the world cannot see and cannot cut off.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom08" target="_blank" class="source-link">ccel.org — Calvin on Psalms [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Donald S. Whitney</div>
+      <div class="comm-title">Spiritual Disciplines for the Christian Life (1991)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Practical</span>
+      <div class="comm-point">Whitney presses the practical means — intake of the word (hearing, reading, studying, memorizing, meditating) as the God-appointed channels by which roots go deep. Meditation, he argues, is the "missing link" that turns Bible <em>intake</em> into lasting transformation.</div>
+      <a href="https://www.navpress.com/" target="_blank" class="source-link">navpress.com — Spiritual Disciplines [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does "rooted in Scripture" mean rooted in a book rather than in God?</div>
+      <div class="pressure-a">No — and the texts guard against it. The tree of Jeremiah 17 is rooted in <em>trust in the LORD</em> (v.7); the NT says we are rooted "in <em>him</em>" and "in love" (Col 2:7; Eph 3:17). Scripture is the God-given channel — the "streams of water" — through which the roots reach God himself. To be rooted in the word is to be rooted in the God who speaks it, and ultimately in Christ, of whom the whole Bible testifies (John 5:39). Bibliolatry roots in the page and stops there; healthy rootedness drinks <em>through</em> the word to the living God.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. If God waters the roots (Isa 44:3), what part is mine?</div>
+      <div class="pressure-a">Both are true and both are commanded. God supplies the water — his Spirit and his word are his gift, and the flourishing is his doing (Isa 44:3; 1 Cor 3:6–7). Yet the same Bible commands us to delight, meditate, feed, trust, obey, and abide (Ps 1:2; Josh 1:8; John 15:4). This is the ordinary pattern of grace: God gives the stream, and we sink our roots toward it by the means he provides. We do not manufacture the water, but we do position ourselves beside it and drink daily. Passive drift never grew a deep root; neither did anxious self-effort. Rooting is grace-enabled diligence.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Does the "tree by water" promise mean a rooted believer will never struggle?</div>
+      <div class="pressure-a">Read it carefully: the promise is not the <em>absence</em> of heat and drought but fruitfulness <em>in the midst</em> of them. "It does not fear when heat comes… in the year of drought… it does not cease to bear fruit" (Jer 17:8). Deep roots are precisely what you need <em>because</em> hard seasons come. Rooted people still grieve, suffer, and are tested — but they are not uprooted, because they are drawing on a source the drought cannot dry. The promise is stability and sustained fruit through trial, not exemption from it.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Is meditation (hagah) the same as Eastern "emptying the mind"?</div>
+      <div class="pressure-a">Nearly the opposite. Eastern meditation typically empties the mind; biblical meditation <em>fills</em> it — with a specific word of God, turned over and over. <em>Hagah</em> means to mutter, ponder, and chew on the text (Ps 1:2; Josh 1:8), engaging the mind, memory, and affections on the truth God has spoken. It is active, verbal, and content-full: repeating a verse, praying it back, tracing its logic, applying it. Far from vacancy, it is the deliberate saturation of the mind in Scripture — the channel through which roots reach the stream.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. How does "sink the roots" relate to "pull the thorns"?</div>
+      <div class="pressure-a">They are the two halves of one gardening. The Sower parable warns that the word can be <em>choked</em> by thorns — cares, riches, pleasures — so those must be pulled. But clearing weeds alone grows nothing; the ground must also be planted and the roots driven down toward the water. "Pull the thorns" removes what competes with the word; "sink the roots" drives the word deep enough to hold. Do only the first and you have a bare field; do only the second while the thorns remain and they choke what you plant. The fruitful life requires both: clear the ground <em>and</em> sink the roots.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Trees in a Dry Land</div>
+        <div class="tn-text">In the arid Near East, everyone understood that a tree's survival depended on its roots reaching water. A shrub in the desert scrub and a tree beside an irrigation channel might look similar in spring — but when the long dry summer came, one shrivelled and one stayed green. The prophets and psalmists reached for that universal picture to describe the difference between a life sunk into God and a life sunk into itself.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Shallow by Default</div>
+        <div class="tn-text">Ours is a shallow-rooted age — endless information skimmed, little of it pondered; fast intake, slow-forming character. We tend to build wide and grow quick, then wonder why we wither in the first real heat. Psalm 1 and Jeremiah 17 call us back to the unfashionable, unhurried work of driving roots down: delighting, meditating, feeding, trusting, abiding — until the word holds us when everything else gives way.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If a season of real drought came tomorrow, how deep do my roots actually go — and what is one habit of feeding on the word I could begin this week to sink them deeper?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The flourishing life is a tree by water — roots driven down through God's word into God himself, so that when heat and drought come it does not wither but keeps bearing fruit. Pull the thorns that choke the word; then sink the roots until the word holds you."</div>
+    <div class="verdict-ref">Jeremiah 17:8 · Psalm 1:3 — "planted by water… it does not cease to bear fruit… and its leaf does not wither."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

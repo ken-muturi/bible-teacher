@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pull the Thorns — Luke 8:14, the Parable of the Sower (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
+  .companion-link:hover { color: #1c5c30; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+  .bigidea { border: 2.5px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 15px 18px; margin: 20px 0; font-size: 0.9rem; color: #5a2320; line-height: 1.5; }
+  .bigidea strong { color: #c0392b; }
+
+  /* FOUR SOILS */
+  .soils { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 4px 0 8px; }
+  .soil { border: 2px solid; border-radius: 3px; padding: 12px 13px; }
+  .soil-path { border-color: #888; background: #f1efe9; }
+  .soil-rock { border-color: #d47c1a; background: #fdf8ef; }
+  .soil-thorn { border-color: #c0392b; background: #fdf2f2; border-width: 3px; }
+  .soil-good { border-color: #2e8a4a; background: #edf8f1; }
+  .soil-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 3px; }
+  .soil-path .soil-tag { color: #888; } .soil-rock .soil-tag { color: #d47c1a; } .soil-thorn .soil-tag { color: #c0392b; } .soil-good .soil-tag { color: #2e8a4a; }
+  .soil-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.88rem; color: #2c2c2c; margin-bottom: 4px; }
+  .soil-note { font-size: 0.72rem; color: #555; line-height: 1.35; }
+  .soils-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+  .soils-cap strong { color: #c0392b; }
+
+  /* CHOKE PROGRESSION */
+  .choke { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .choke-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .choke-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .choke-step { background: #262626; border: 1px solid #444; border-radius: 3px; padding: 9px 10px; text-align: center; }
+  .choke-num { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.75rem; color: #6fc28d; margin-bottom: 3px; }
+  .choke-step.bad .choke-num { color: #e0796b; }
+  .choke-text { font-size: 0.7rem; color: #ccc; line-height: 1.34; }
+  .choke-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* THREE THORNS */
+  .thorn-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .thorn-card { border: 2.5px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 14px 15px; }
+  .thorn-greek { font-size: 1.15rem; color: #c0392b; font-weight: 700; font-style: italic; }
+  .thorn-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 3px; }
+  .thorn-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.95rem; color: #2c2c2c; margin-bottom: 7px; }
+  .thorn-look { font-size: 0.77rem; color: #444; line-height: 1.4; margin-bottom: 8px; }
+  .thorn-pull { font-size: 0.75rem; color: #2e8a4a; border-left: 3px solid #2e8a4a; padding-left: 9px; line-height: 1.4; }
+  .thorn-pull b { color: #1c5c30; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.15rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* OT / CANON */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .soils, .choke-row { grid-template-columns: 1fr 1fr; }
+    .thorn-grid, .word-grid, .xref-grid { grid-template-columns: 1fr; }
+    .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Pull the Thorns</div>
+  <div class="header-title">Luke 8:14 — The Thorny Soil in the Parable of the Sower</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="faith-rooted-in-scripture-deep-study.html" class="companion-link">⊕ Faith Rooted in Scripture</a>
+  </div>
+
+  <div class="section-label">The Verse in Focus</div>
+  <div class="passage-callout">
+    <div class="pc-label">Luke 8:14 · with the parable (8:5–8) and its meaning (8:11, 15)</div>
+    <div class="pc-text">
+      "And as for what fell among the thorns, they are those who hear, but as they go on their way they are choked by the cares and riches and pleasures of life, and their fruit does not mature."… "The seed is the word of God."… "As for that in the good soil, they are those who, hearing the word, hold it fast in an honest and good heart, and bear fruit with patience."
+    </div>
+    <div class="pc-ref">Luke 8:14, 11, 15 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> Jesus tells the Parable of the Sower to great crowds (8:4), then explains it privately to his disciples. One seed — "the word of God" (8:11) — falls on four kinds of ground, and the soils are four kinds of <em>hearers</em>. The path, the rock, and the thorns each fail in a different way; only the good soil bears fruit. Our focus is the third soil, the <strong>thorns</strong> (8:14), because it is the most deceptively dangerous. Here the word is genuinely received and even begins to grow — this is no hardened path or shallow rock. But three competing growths — <em>cares, riches, and pleasures</em> — are allowed to grow up alongside it, and slowly strangle it, so that the plant lives but never ripens to mature fruit. The call the image presses is unmistakable: <strong>pull the thorns</strong> — clear the ground of what is choking the word — before your fruitfulness is quietly suffocated.</div>
+
+  <!-- FOUR SOILS -->
+  <div class="section-label">The Four Soils — Four Ways the Word Meets a Heart</div>
+  <div class="soils">
+    <div class="soil soil-path">
+      <div class="soil-tag">v.12 · Path</div>
+      <div class="soil-name">Snatched away</div>
+      <div class="soil-note">The word never penetrates; the devil takes it away before it can be believed. Rejection.</div>
+    </div>
+    <div class="soil soil-rock">
+      <div class="soil-tag">v.13 · Rock</div>
+      <div class="soil-name">No root</div>
+      <div class="soil-note">Received with joy, but shallow. In the time of testing it withers and falls away. Collapse.</div>
+    </div>
+    <div class="soil soil-thorn">
+      <div class="soil-tag">v.14 · Thorns ←</div>
+      <div class="soil-name">Choked</div>
+      <div class="soil-note">Received and growing — then strangled by cares, riches, pleasures. Lives, but never ripens. <strong>Suffocation.</strong></div>
+    </div>
+    <div class="soil soil-good">
+      <div class="soil-tag">v.15 · Good soil</div>
+      <div class="soil-name">Fruitful</div>
+      <div class="soil-note">An honest, good heart holds the word fast and bears fruit with patience. Harvest.</div>
+    </div>
+  </div>
+  <div class="soils-cap">The thorny soil is the most sobering because it looks most like success — the word is heard, welcomed, growing. <strong>Nothing dramatic goes wrong; the plant is simply crowded to death by things that are not, in themselves, evil.</strong></div>
+
+  <!-- CHOKE PROGRESSION -->
+  <div class="section-label">How the Choking Happens — Slowly, "As They Go on Their Way"</div>
+  <div class="choke">
+    <div class="choke-title">The word is not attacked head-on — it is out-competed</div>
+    <div class="choke-row">
+      <div class="choke-step"><div class="choke-num">1 · Received</div><div class="choke-text">The word is genuinely heard and takes root. Real growth begins.</div></div>
+      <div class="choke-step"><div class="choke-num">2 · Company</div><div class="choke-text">Thorns grow up <em>with</em> it (Mark 4:7) — cares, wealth, desires, given room in the same soil.</div></div>
+      <div class="choke-step bad"><div class="choke-num">3 · Crowded</div><div class="choke-text">The thorns compete for light, water, room. Nothing is renounced; the word is simply squeezed.</div></div>
+      <div class="choke-step bad"><div class="choke-num">4 · Choked</div><div class="choke-text">Strangled (<em>sympnigō</em>). The plant survives but the fruit "does not mature" (<em>telesphoreō</em>).</div></div>
+    </div>
+    <div class="choke-note">Luke's phrase is haunting: they are choked "<em>as they go on their way</em>" — not in a moment of crisis but over the ordinary course of daily life. There is no single decision to abandon the word; it dies of neglect while attention goes elsewhere. That is why thorns must be <em>actively pulled</em>: left alone, they always win. Fruitfulness is not the absence of thorns but the ongoing work of clearing them.</div>
+  </div>
+
+  <!-- THREE THORNS -->
+  <div class="section-label">The Three Thorns — Named So We Can Pull Them (8:14)</div>
+  <div class="thorn-grid">
+    <div class="thorn-card">
+      <div class="thorn-greek">μέριμναι</div>
+      <div class="thorn-translit">merimnai</div>
+      <div class="thorn-name">The Cares of Life</div>
+      <div class="thorn-look">Anxiety, worry, the endless pressure of responsibilities, money troubles, health, family, the future. Not luxury but the <em>weight</em> of ordinary life that fills the mind and crowds out the word. The same word Jesus uses in "do not be <em>anxious</em>" (Matt 6:25).</div>
+      <div class="thorn-pull"><b>Pull it:</b> "cast all your anxieties on him" (1 Pet 5:7); pray it out (Phil 4:6); seek first the kingdom and trust the Father who feeds the birds (Matt 6:33).</div>
+    </div>
+    <div class="thorn-card">
+      <div class="thorn-greek">πλοῦτος</div>
+      <div class="thorn-translit">ploutos</div>
+      <div class="thorn-name">The Riches of Life</div>
+      <div class="thorn-look">Wealth and the pursuit of it — Mark adds "the <em>deceitfulness</em> of riches" (4:19). Money promises security and satisfaction it cannot give, and quietly reorders a life around getting and keeping until there is no room for the word.</div>
+      <div class="thorn-pull"><b>Pull it:</b> hold money loosely and give it away (1 Tim 6:17–19); refuse to serve two masters (Luke 16:13); store treasure in heaven where it can't be choked (Matt 6:19–21).</div>
+    </div>
+    <div class="thorn-card">
+      <div class="thorn-greek">ἡδοναί</div>
+      <div class="thorn-translit">hēdonai</div>
+      <div class="thorn-name">The Pleasures of Life</div>
+      <div class="thorn-look">Comforts, entertainments, appetites, the endless small gratifications that fill our time and affections. Not sins so much as good things loved too much — pleasures given the hours and the heart-space the word needed.</div>
+      <div class="thorn-pull"><b>Pull it:</b> deny yourself and take up the cross daily (Luke 9:23); make no provision for the flesh's desires (Rom 13:14); find a deeper pleasure in Christ (Ps 16:11).</div>
+    </div>
+  </div>
+  <div class="bigidea">
+    <strong>Notice what the three thorns have in common:</strong> none of them is obviously wicked. Cares, money, and pleasure are ordinary parts of a normal human life — that is precisely what makes them lethal. The path is defeated by the devil and the rock by persecution; but the thorns are just <em>life itself</em>, allowed to grow unchecked. The most common way to lose your fruitfulness is not scandal or apostasy but <strong>a slow crowding-out by good things given too much room</strong>. Weeds don't need to be planted; they only need to be left alone.</div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Language of Choking &amp; Fruit</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">ἄκανθαι</div>
+      <div class="word-translit">akanthai — "thorns"</div>
+      <span class="word-ref-badge">8:7, 14</span>
+      <div class="word-gloss">Thorns, thistles, brambles</div>
+      <div class="word-note">The same word-world as Eden's curse: "thorns and thistles it shall bring forth" (Gen 3:18). Thorns are the native growth of fallen ground — they need no cultivation. Left to itself, the human heart grows them by default.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">συμπνίγω</div>
+      <div class="word-translit">sympnigō — "choke"</div>
+      <span class="word-ref-badge">8:14 (cf. 8:42)</span>
+      <div class="word-gloss">To choke, strangle, crush together</div>
+      <div class="word-note">A violent word — to throttle or press the life out. Luke uses the same verb of the crowds "pressing in" on Jesus (8:42). The word is not gently outgrown; it is suffocated. The thorns are killers, however domestic they look.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">μέριμνα</div>
+      <div class="word-translit">merimna — "care / anxiety"</div>
+      <span class="word-ref-badge">8:14</span>
+      <div class="word-gloss">Worry, a mind pulled apart by cares</div>
+      <div class="word-note">The first thorn. The same word Jesus repeats six times in "do not be anxious" (Matt 6:25–34). Care becomes a thorn when it displaces trust — when the mind is so full of the burdens of life that the word cannot get its attention.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἡδονή</div>
+      <div class="word-translit">hēdonē — "pleasure"</div>
+      <span class="word-ref-badge">8:14</span>
+      <div class="word-gloss">Pleasure, gratification (root of "hedonism")</div>
+      <div class="word-note">The third thorn. Elsewhere in the NT it names sinful indulgence (Jas 4:1–3; Titus 3:3), but here it is the ordinary "pleasures of life" — good gifts that become weeds when they are loved more than the Giver and consume the heart's affection.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">τελεσφορέω</div>
+      <div class="word-translit">telesphoreō — "bring to maturity"</div>
+      <span class="word-ref-badge">8:14</span>
+      <div class="word-gloss">To ripen / bring fruit to completion</div>
+      <div class="word-note">The tragic verb: the thorny soil's "fruit does not <em>telesphoreō</em>" — does not ripen to maturity. It is not that there is no life, but that the life never <em>comes to anything</em>. A choked plant, an unfinished harvest, a faith that never matures into fruit.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ὑπομονή</div>
+      <div class="word-translit">hypomonē — "patience"</div>
+      <span class="word-ref-badge">8:15</span>
+      <div class="word-gloss">Patient endurance, steadfastness</div>
+      <div class="word-note">The good soil bears fruit "with <em>hypomonē</em>." Fruit takes time and steadfast holding-fast — the opposite of the distracted drift that lets the thorns win. Fruitfulness is a long obedience: keep the word central, keep pulling the weeds, and endure.</div>
+    </div>
+  </div>
+
+  <!-- CANON -->
+  <div class="section-label">Across Scripture — Thorns, Weeds &amp; a Cleared Field</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Genesis 3:17–18</div>
+      <div class="ot-title">Thorns — the Mark of the Curse</div>
+      <div class="ot-note">"Cursed is the ground… thorns and thistles it shall bring forth." Thorns are the emblem of the fall — what fallen ground grows on its own. The thorny heart isn't unusual; it's the default that grace must clear.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Matthew 6:19–34</div>
+      <div class="ot-title">Two of the Thorns, Named Again</div>
+      <div class="ot-note">Jesus' teaching on treasure (riches) and worry (cares) is the Sermon-on-the-Mount version of two thorns — and the antidote: "seek first the kingdom." The Sower diagnoses; the Sermon prescribes.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Luke 12:15–21 · 21:34</div>
+      <div class="ot-title">The Rich Fool &amp; the Weighed-Down Heart</div>
+      <div class="ot-note">The man whose barns crowded out his soul; and the warning that hearts get "weighed down… with the cares of this life." Luke keeps returning to the thorns of wealth and worry.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Hebrews 6:7–8 · 12:1</div>
+      <div class="ot-title">Land That Bears Thorns · Lay It Aside</div>
+      <div class="ot-note">Ground that yields only thorns is "worthless… near to being cursed." And the positive command: "lay aside every weight, and sin which clings so closely" — the athlete's version of pulling the thorns.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Darrell Bock</div>
+      <div class="comm-title">Luke 1:1–9:50 (BECNT, 1994)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Bock stresses that the thorny hearer genuinely receives the word — the failure is not in the hearing but in the <em>ongoing life</em>, where cares, wealth, and pleasure are permitted to dominate. The issue is divided allegiance that never resolves into fruit.</div>
+      <div class="comm-point">Notes Luke's "as they go on their way": the choking is a process, the drift of a life, not a single event.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — Luke, BECNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Joel B. Green</div>
+      <div class="comm-title">The Gospel of Luke (NICNT, 1997)</div>
+      <span class="comm-tradition trad-critical">Evangelical Scholarly</span>
+      <div class="comm-point">Green highlights the parable as a summons to <em>self-examination</em>: the four soils are not four fixed groups so much as a mirror asking every hearer, "what kind of ground am I?" The thorns expose the competing loyalties of respectable, comfortable life.</div>
+      <div class="comm-point">The good soil is defined by hearing that <em>holds fast</em> — an active, persevering retention, not a one-time reception.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Gospel of Luke, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">J. C. Ryle</div>
+      <div class="comm-title">Expository Thoughts on Luke (1858)</div>
+      <span class="comm-tradition trad-preaching">Anglican · Preaching</span>
+      <div class="comm-point">Ryle's pointed pastoral warning: the thorny-ground hearer is "the most numerous class of all." The love of the world "does more harm to souls than open sin," precisely because it looks respectable and creeps in unnoticed. He urges vigilant, ongoing self-examination.</div>
+      <a href="https://www.monergism.com/" target="_blank" class="source-link">monergism.com — Ryle, Expository Thoughts [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. Kent Hughes</div>
+      <div class="comm-title">Luke (Preaching the Word, 1998)</div>
+      <span class="comm-tradition trad-preaching">Evangelical · Preaching</span>
+      <div class="comm-point">Hughes presses the application: fruitlessness by thorns is the peril of the prosperous, busy, comfortable believer. The remedy is deliberate — ruthless weeding of the heart's competing affections and a re-centring on the word.</div>
+      <a href="https://www.crossway.org/" target="_blank" class="source-link">crossway.org — Luke (Preaching the Word) [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on a Harmony of the Gospels</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin warns that the "thorns" are the cares and pleasures to which our nature is so prone that, unless they are constantly checked, they overrun the heart. He notes that even true beginnings of faith can be smothered when the world is given the mastery.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom31" target="_blank" class="source-link">ccel.org — Calvin on the Gospels [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Sermons on the Sower (Victorian)</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span>
+      <div class="comm-point">Spurgeon pictures the thorns as growing "faster than the wheat" — worldly cares and delights need no encouragement. His counsel: the plough and the weeding-hook must do their work, or the choicest seed will yield nothing but a green promise that never fills the ear.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — Sermon archive [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Is the thorny-soil person saved, or were they never truly converted?</div>
+      <div class="pressure-a">The parable does not resolve this cleanly, and it may not mean to. Its purpose is diagnostic, not to sort out the eternal status of borderline cases. What it insists on is that <em>only fruit-bearing hearing is saving hearing</em> (cf. 8:21, "my mother and brothers are those who hear the word and do it"). A life whose word is permanently choked shows no evidence of true reception — "by their fruit you will know them." Rather than using this to speculate about others, the honest response is self-examination: is the word bearing fruit in me, or being choked? The parable is a mirror before it is a map of categories.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Are riches and pleasures sinful in themselves, then?</div>
+      <div class="pressure-a">No — and this is the crucial point. Money, comfort, work, family, and legitimate pleasures are God's good gifts (1 Tim 4:4; 6:17). They become <em>thorns</em> not by existing but by being given room to dominate the heart and crowd out the word. The problem is not the presence of these things but the <em>proportion</em> — when the cares of life get more of your mind than God's word, when wealth reorders your priorities, when pleasures consume the time and affection the word needed. The soil doesn't fail because thorns exist; it fails because the thorns are never pulled.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is worry a sin?</div>
+      <div class="pressure-a">Jesus treats anxiety as something to be repented of and released, not merely a personality trait — "do not be anxious" is a command (Matt 6:25), and here worry is a thorn that kills fruit. Yet Scripture also speaks of a legitimate <em>concern</em> and care (Paul's "daily pressure… anxiety for all the churches," 2 Cor 11:28; "casting your care," 1 Pet 5:7 assumes we have cares). The line is between godly concern that drives us <em>to</em> God in prayer and trust, and corrosive anxiety that displaces God and chokes the word. The thorn is the second kind — worry that has become a rival to faith.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. How do I "pull the thorns" without becoming ascetic or legalistic?</div>
+      <div class="pressure-a">Pulling thorns is not renouncing all money, comfort, and responsibility — that would be a different error (Col 2:20–23 warns against self-made asceticism that has "no value in stopping the indulgence of the flesh"). It is keeping the word <em>central</em> and everything else subordinate: giving God's word the prime time and attention, holding possessions loosely and giving generously, saying no to pleasures that are crowding out prayer and obedience, and repeatedly casting cares on God. The goal is not a bare field but a <em>cleared</em> one — the word given room to grow to maturity. And it is ongoing: weeds regrow, so weeding is a lifelong discipline, done in grace, not a one-time purge done in guilt.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Why does the same word bear fruit in one heart and choke in another?</div>
+      <div class="pressure-a">The seed is identical and good in every case; the difference is the <em>soil</em> — the condition of the heart. The good soil is "honest and good" and "holds fast" (8:15), and it bears fruit "with patience." The parable therefore lays responsibility on the hearer to <em>become good ground</em>: to receive the word honestly, to hold it, to guard it, and to keep the competing growths cut back. Ultimately God himself must break up the fallow ground (Hos 10:12; Ezek 36:26 — the new heart), so this is not raw self-effort; but the means he uses include our vigilant, prayerful weeding. Grace makes the ground good; grace-empowered attentiveness keeps it clear.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Parallels</div>
+      <div class="xref-ref">Mark 4:18–19 · Matt 13:22</div>
+      <div class="xref-note">Mark adds "the deceitfulness of riches and the desires for other things"; Matthew, "the cares of the world and the deceitfulness of riches."</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← The curse</div>
+      <div class="xref-ref">Genesis 3:17–18</div>
+      <div class="xref-note">Thorns as fallen ground's native crop — what the heart grows on its own unless grace clears it.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The antidote</div>
+      <div class="xref-ref">Matthew 6:19–34</div>
+      <div class="xref-note">Treasure and worry answered by "seek first the kingdom" — the Sermon's cure for two of the thorns.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Riches warned</div>
+      <div class="xref-ref">1 Timothy 6:9–10, 17–19</div>
+      <div class="xref-note">"Those who desire to be rich fall into… a snare"; the love of money as a root of all kinds of evil.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Cast the cares</div>
+      <div class="xref-ref">1 Peter 5:7 · Phil 4:6–7</div>
+      <div class="xref-note">"Cast all your anxieties on him"; "do not be anxious… by prayer… present your requests." How to pull the thorn of care.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Lay it aside</div>
+      <div class="xref-ref">Hebrews 12:1 · Colossians 3:5</div>
+      <div class="xref-note">"Lay aside every weight"; "put to death… covetousness, which is idolatry." The active, ongoing work of weeding the heart.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A Farmer's Field</div>
+        <div class="tn-text">Everyone in Jesus' audience knew that thorns grow whether you plant them or not, faster than the crop, and that a field left unweeded yields nothing. The image needed no explanation: good seed, real growth, and a harvest lost to neglect. The danger they'd all seen in the soil, Jesus turns into a picture of the human heart.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — The Peril of the Comfortable</div>
+        <div class="tn-text">We are perhaps the most thorn-rich generation ever — endless cares amplified by our screens, wealth and its pursuit assumed as the goal of life, and pleasures on demand at every idle moment. Few of us will fall away by persecution; far more will simply let the word be crowded out by a busy, prosperous, entertained life. The thorns don't need our help — only our permission.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If I named the one thorn most choking the word in me right now — a care, a pursuit of money, or a pleasure — what would it be, and what is one concrete way I could pull it this week?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The thorny soil loses its harvest not to the devil or to persecution, but to ordinary life — cares, riches, and pleasures allowed to grow up and choke a word that was truly received. Fruitfulness is not the absence of thorns but the ongoing work of pulling them."</div>
+    <div class="verdict-ref">Luke 8:14–15 — "choked by the cares and riches and pleasures of life… but the good soil… bear fruit with patience."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
