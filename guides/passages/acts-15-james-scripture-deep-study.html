@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How James Rooted a Church Decision in Scripture (Acts 15:13–18) — Deep Study</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #3b6fd4; text-decoration: none; border-bottom: 1px dashed #3b6fd4; }
+  .companion-link:hover { color: #2551a8; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* DECISION METHOD FLOW */
+  .method { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; align-items: stretch; margin: 4px 0 8px; }
+  .m-step { border: 2.5px solid; border-radius: 3px; padding: 14px 15px; }
+  .m-1 { border-color: #d47c1a; background: #fdf8ef; }
+  .m-2 { border-color: #3b6fd4; background: #eef2fb; }
+  .m-3 { border-color: #2e8a4a; background: #edf8f1; }
+  .m-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.13em; font-weight: 700; margin-bottom: 5px; }
+  .m-1 .m-tag { color: #d47c1a; } .m-2 .m-tag { color: #3b6fd4; } .m-3 .m-tag { color: #2e8a4a; }
+  .m-head { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1rem; color: #2c2c2c; margin-bottom: 5px; }
+  .m-note { font-size: 0.76rem; color: #444; line-height: 1.4; }
+  .m-arrow { display: flex; align-items: center; justify-content: center; font-family: 'Gentium Book Plus', serif; font-size: 1.5rem; color: #bbb; }
+  .method-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+
+  /* THREE TESTIMONIES */
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 24px; }
+  .test-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 14px; }
+  .tc-who { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 1px; }
+  .tc-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: #3b6fd4; font-weight: 700; margin-bottom: 6px; }
+  .tc-note { font-size: 0.77rem; color: #444; line-height: 1.4; }
+
+  /* STRUCTURE MAP */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 80px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #c0392b; } .beat.b1 .beat-body { border-color: #c0392b; } .beat.b1 .beat-ref { color: #c0392b; }
+  .beat.b2 .beat-num { background: #d47c1a; } .beat.b2 .beat-body { border-color: #d47c1a; } .beat.b2 .beat-ref { color: #d47c1a; }
+  .beat.b3 .beat-num { background: #3b6fd4; } .beat.b3 .beat-body { border-color: #3b6fd4; } .beat.b3 .beat-ref { color: #3b6fd4; }
+  .beat.b4 .beat-num { background: #2e8a4a; } .beat.b4 .beat-body { border-color: #2e8a4a; } .beat.b4 .beat-ref { color: #2e8a4a; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.15rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* OT BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #3b6fd4; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #7eb8f7; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .method { grid-template-columns: 1fr; }
+    .m-arrow { transform: rotate(90deg); padding: 4px 0; }
+    .test-grid, .word-grid, .xref-grid { grid-template-columns: 1fr; }
+    .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Acts 15:13–18</div>
+  <div class="header-title">How James Rooted a Church Decision in Scripture — The Jerusalem Council</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="faith-rooted-in-scripture-deep-study.html" class="companion-link">⊕ Faith Rooted in Scripture (Amos 9)</a>
+    <a href="amos-9-deep-study.html" class="companion-link">Amos 9 study ›</a>
+  </div>
+
+  <div class="section-label">The Text — James's Judgment</div>
+  <div class="passage-callout">
+    <div class="pc-label">Acts 15:13–18 · The decisive speech</div>
+    <div class="pc-text">
+      "When they finished, James spoke up. 'Brothers, listen to me. Simon has described to us how God first intervened to choose a people for his name from the Gentiles. The words of the prophets are in agreement with this, as it is written: "After this I will return and rebuild David's fallen tent. Its ruins I will rebuild, and I will restore it, that the rest of mankind may seek the Lord, even all the Gentiles who bear my name, says the Lord, who does these things" — things known from long ago.'"
+    </div>
+    <div class="pc-ref">Acts 15:13–18 (NIV) — quoting Amos 9:11–12</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> Acts 15 records the first great doctrinal crisis of the church. Some taught that Gentile converts had to be circumcised and keep the law of Moses to be saved (15:1, 5) — a question that struck at the heart of the gospel and threatened to split the young church in two. A council gathered in Jerusalem. After "much debate" (15:7), three testimonies were heard: <strong>Peter</strong> reported how God had given his Spirit to Gentiles (15:7–11); <strong>Paul and Barnabas</strong> recounted the signs God did among the nations (15:12); and then <strong>James</strong> — the brother of Jesus and leader of the Jerusalem church — rose to give the decisive judgment. His method is the model: he listened to what God had <em>done</em>, and then tested it against what God had <em>said</em>. "The words of the prophets," he declared, "are in agreement with this, as it is written…" The most important decision the early church ever made was settled by opening the Scriptures.
+  </div>
+
+  <!-- DECISION METHOD -->
+  <div class="section-label">James's Method — How the Decision Was Actually Made</div>
+  <div class="method">
+    <div class="m-step m-1">
+      <div class="m-tag">Step 1 — Attend to God's acts</div>
+      <div class="m-head">Listen to the testimony</div>
+      <div class="m-note">James takes Peter's report seriously: God <em>has</em> visibly saved Gentiles and given them the Spirit. Experience is heard honestly — not dismissed, not made the final word.</div>
+    </div>
+    <div class="m-arrow">→</div>
+    <div class="m-step m-2">
+      <div class="m-tag">Step 2 — Test it by Scripture</div>
+      <div class="m-head">"The prophets agree… as it is written"</div>
+      <div class="m-note">He does not settle it by the experience itself, by his own authority, or by a vote. He asks: does the written word confirm this? He turns to Amos 9 — and it does.</div>
+    </div>
+    <div class="m-arrow">→</div>
+    <div class="m-step m-3">
+      <div class="m-tag">Step 3 — Reach a judgment</div>
+      <div class="m-head">"Therefore it is my judgment…"</div>
+      <div class="m-note">Grounded in the word, he renders a decision (15:19): don't burden the Gentiles — with a few pastoral requests for the sake of fellowship (15:20).</div>
+    </div>
+  </div>
+  <div class="method-cap">The order is everything: God's work was <em>interpreted by</em> Scripture, not Scripture bent to fit the experience. Experience raised the question; the written word answered it.</div>
+
+  <!-- THREE TESTIMONIES -->
+  <div class="section-label">Three Testimonies — and Which One Settled It</div>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="tc-who">Peter</div>
+      <div class="tc-ref">Acts 15:7–11</div>
+      <div class="tc-note">"God, who knows the heart, showed that he accepted them by giving the Holy Spirit." Firsthand testimony to God's saving act among the Gentiles (Cornelius, ch.10). Salvation is "through the grace of our Lord Jesus," not the law.</div>
+    </div>
+    <div class="test-card">
+      <div class="tc-who">Paul &amp; Barnabas</div>
+      <div class="tc-ref">Acts 15:12</div>
+      <div class="tc-note">They recount "the signs and wonders God had done among the Gentiles through them." Corroborating evidence of God's own initiative — the whole assembly falls silent to listen.</div>
+    </div>
+    <div class="test-card">
+      <div class="tc-who">James — from Scripture</div>
+      <div class="tc-ref">Acts 15:13–18</div>
+      <div class="tc-note">He weighs the testimonies and then anchors the verdict in the prophets: Amos foretold exactly this — a rebuilt house of David that gathers the nations. The Scripture is what makes the case <em>decisive</em>.</div>
+    </div>
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure of James's Speech</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">15:13–14</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 1 — The evidence weighed</div>
+        <div class="beat-title">"Listen… God has taken a people for his name"</div>
+        <div class="beat-desc">James summarises Peter's report in weighty covenant language: God has "visited" the Gentiles to take from them "a people for his name" — words once reserved for Israel now applied to the nations. The fact is settled; the question is how to read it.</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">15:15</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 2 — The turn to the text</div>
+        <div class="beat-title">"The words of the prophets agree with this"</div>
+        <div class="beat-desc">The hinge of the whole speech. Not "this feels right," or "God is doing a new thing beyond Scripture," but: the experience <em>agrees with</em> the written word. He appeals to "the prophets" (plural) — this is the settled testimony of Scripture, not a proof-text.</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">15:16–18</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 3 — The Scripture cited</div>
+        <div class="beat-title">Amos 9:11–12 — The Rebuilt Tent Gathers the Nations</div>
+        <div class="beat-desc">James quotes Amos: God will rebuild David's fallen tent "that the rest of mankind may seek the Lord, even all the Gentiles who bear my name." The inclusion of the nations is not an improvisation; it was "known from long ago." Scripture always planned this.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">15:19–21</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 4 — The judgment</div>
+        <div class="beat-title">"It is my judgment that we should not burden them"</div>
+        <div class="beat-desc">The conclusion drawn from the word: don't impose circumcision and the law on Gentile believers. Add only a few requests (abstain from idol-food, blood, strangled meat, sexual immorality) so Jew and Gentile can share table and fellowship without needless offence.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of a Scripture-Rooted Decision</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">ἀκούσατέ μου</div>
+      <div class="word-translit">akousate mou — "listen to me"</div>
+      <span class="word-ref-badge">15:13</span>
+      <div class="word-gloss">A call to hear / heed</div>
+      <div class="word-note">James opens not with "obey me" but "listen." His authority is exercised by directing attention — first to what God has done, then to what God has said. Leadership that roots decisions in Scripture invites the church to <em>hear</em>, not merely to submit.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">συμφωνέω</div>
+      <div class="word-translit">symphōneō — "agree"</div>
+      <span class="word-ref-badge">15:15</span>
+      <div class="word-gloss">To sound together / harmonise</div>
+      <div class="word-note">Literally "to symphony." The prophets' words <em>harmonise</em> with what God is doing. The test is not whether experience is loud or moving, but whether it sounds in tune with the written word. Scripture is the pitch everything else is tuned to.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">καθὼς γέγραπται</div>
+      <div class="word-translit">kathōs gegraptai — "as it is written"</div>
+      <span class="word-ref-badge">15:15</span>
+      <div class="word-gloss">The perfect-tense "it stands written"</div>
+      <div class="word-note">The standard NT formula for citing Scripture as final authority. The Greek perfect (gegraptai) means "it was written and still stands" — a permanent, settled word. To reach for this phrase is to end the argument, not extend it.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἐπισκέπτομαι</div>
+      <div class="word-translit">episkeptomai — "visited / intervened"</div>
+      <span class="word-ref-badge">15:14</span>
+      <div class="word-gloss">God graciously visits to act</div>
+      <div class="word-note">The word for God "visiting" his people to save (Luke 1:68; Ruth 1:6). James uses it of God visiting the <em>Gentiles</em> — a startling application. God has taken initiative; the council's task is only to recognise and align with what he has already done.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">λαὸς</div>
+      <div class="word-translit">laos — "a people"</div>
+      <span class="word-ref-badge">15:14</span>
+      <div class="word-gloss">A people belonging to God</div>
+      <div class="word-note">The covenant word for Israel as God's own <em>laos</em>. James says God has taken "a people for his name" from the Gentiles — the church is the covenant people expanded, exactly as Amos's rebuilt tent of David foretold. The identity is defined from Scripture.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">κρίνω</div>
+      <div class="word-translit">krinō — "I judge / it is my judgment"</div>
+      <span class="word-ref-badge">15:19</span>
+      <div class="word-gloss">To decide / render a verdict</div>
+      <div class="word-note">James's conclusion (15:19). It is a real, authoritative judgment — but it comes <em>after</em> and <em>because of</em> the Scripture cited. His verdict has weight precisely because it is not his opinion; it is the word applied. Decision follows the text, not the other way around.</div>
+    </div>
+  </div>
+
+  <!-- OT BACKGROUND -->
+  <div class="section-label">The Scripture Behind the Decision</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Amos 9:11–12</div>
+      <div class="ot-title">The Tent of David Rebuilt for the Nations</div>
+      <div class="ot-note">James's key text: God rebuilds the fallen booth of David so that "all the Gentiles who bear my name" may seek him. The rebuilt house of David is the church, and the inclusion of the nations was God's plan all along — the linchpin of the whole verdict. (See the companion study on Amos 9.)</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 45:22–23 · 49:6</div>
+      <div class="ot-title">A Light to the Nations</div>
+      <div class="ot-note">"Turn to me and be saved, all the ends of the earth"; the Servant made "a light for the Gentiles." The prophets James invokes as a chorus consistently foretell the nations streaming to Israel's God — Amos is representative, not isolated.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Genesis 12:3</div>
+      <div class="ot-title">All Nations Blessed in Abraham</div>
+      <div class="ot-note">The foundational promise: "in you all the families of the earth shall be blessed." Gentile inclusion is not a first-century novelty but the original goal of God's covenant — the "known from long ago" (15:18) that James underlines.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Jeremiah 12:16 · Zechariah 2:11</div>
+      <div class="ot-title">Nations Joined to the LORD</div>
+      <div class="ot-note">"Many nations shall join themselves to the LORD in that day and shall be my people." The prophetic expectation of Gentiles becoming God's people stands behind James's covenant word laos — the Scripture had prepared the church for exactly this moment.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">F. F. Bruce</div>
+      <div class="comm-title">The Book of the Acts (NICNT, rev. 1988)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Bruce shows James clinching the council's decision by appeal to the prophetic word: the rebuilt tent of David is the messianic community into which Gentiles are gathered. The decision is a model of the church settling a dispute by Scripture rightly interpreted.</div>
+      <div class="comm-point">Careful on why James follows the Septuagint form of Amos, which brings out the passage's God-intended reach to the nations.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Book of the Acts, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of Acts (BST, 1990)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott highlights the council's balance: it protected the gospel of grace (no circumcision for salvation) while promoting the church's unity (the pastoral requests). And it did so by submitting experience and debate to the authority of Scripture.</div>
+      <div class="comm-point">Draws the enduring lesson for church decision-making: neither tradition nor experience nor pragmatism, but Scripture, must have the final word.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Acts [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Darrell Bock</div>
+      <div class="comm-title">Acts (BECNT, 2007)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Bock analyses the logic: God's action (Peter, Paul) is confirmed by God's word (Amos), yielding God's verdict (James). Divine initiative and scriptural warrant together settle the matter — experience alone would not have been enough.</div>
+      <div class="comm-point">Notes the "known from long ago" (15:18): the Gentile mission is the outworking of an ancient plan, not a break from it.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — Acts, BECNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Ben Witherington III</div>
+      <div class="comm-title">The Acts of the Apostles (Socio-Rhetorical, 1998)</div>
+      <span class="comm-tradition trad-critical">Critical · Rhetorical</span>
+      <div class="comm-point">Witherington reads James's speech as the decisive rhetorical <em>peroratio</em> of the council, and stresses James's role as an even-handed mediator: a Torah-observant Jewish leader who nonetheless rules for Gentile freedom on the authority of the prophets.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Acts of the Apostles [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on Acts / Institutes IV.9</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin makes Acts 15 the charter for how church councils should work: they carry real authority, but only as <em>ministers</em> of the word — they may decree nothing beyond Scripture. The council binds because it speaks what Scripture says, not because it is a council.</div>
+      <a href="https://www.ccel.org/ccel/calvin/institutes" target="_blank" class="source-link">ccel.org — Institutes IV.9 [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">I. Howard Marshall</div>
+      <div class="comm-title">Acts (Tyndale NT Commentaries, 1980)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Marshall underlines that the church's practice was determined by combining the evidence of God's activity with the teaching of Scripture — the two together, with Scripture as the confirming authority, produce a decision the whole church can own (15:22, 28).</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Acts, TNTC [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. So what actually decided it — Scripture, the Spirit, experience, or the council's authority?</div>
+      <div class="pressure-a">All four are present, and their <em>relationship</em> is the lesson. Experience (Peter, Paul) raised the evidence of what God was doing. The Spirit was genuinely at work — the letter even says "it seemed good to the Holy Spirit and to us" (15:28). The council exercised real authority. But the thing that made the case <em>decisive</em> was that Scripture "agreed with this" (15:15). Experience without the word would have been mere anecdote; the word confirmed and interpreted the experience. The Spirit did not lead <em>around</em> Scripture but <em>through</em> it. Rightly ordered: God acts, the Spirit works, Scripture confirms and governs, the church discerns and decides.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. James quotes the Greek Amos, which differs from the Hebrew — does that weaken the argument?</div>
+      <div class="pressure-a">The Hebrew of Amos 9:12 reads "that they may possess the remnant of Edom," while the Septuagint James follows reads "that the rest of mankind may seek the Lord" (a difference of vowel-pointing and one consonant: <em>Edom/adam</em>, "possess/seek"). Far from undercutting him, this shows careful use: James draws out the God-intended trajectory of the text toward the nations — which the very next words of Amos ("all the Gentiles who bear my name") already state plainly in either version. His argument rests not on one disputed clause but on the whole prophetic expectation that the nations would seek Israel's God. The point survives the textual variant intact.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Are the four "requirements" (15:20) still binding on Christians today?</div>
+      <div class="pressure-a">Interpreters differ. The requests — abstain from food polluted by idols, from sexual immorality, from the meat of strangled animals, and from blood — are best read not as a new mini-law for salvation (the whole point was that Gentiles are <em>not</em> under the law) but as pastoral guidance for <em>table fellowship</em> between Jewish and Gentile believers, sensitive to Jewish conscience (15:21). Sexual immorality remains universally binding as moral law; the food stipulations are widely understood as culturally-situated wisdom for that mixed-fellowship moment (cf. Paul's fuller treatment in 1 Cor 8–10; Rom 14). The abiding principle: freedom in the gospel, restrained in love for the sake of others.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Does Acts 15 support church councils and a teaching magisterium, or "Scripture alone"?</div>
+      <div class="pressure-a">It actually supports both a high view of Scripture <em>and</em> genuine church authority — held in the right order. The council really did meet, debate, and issue a binding decision that the churches were to keep (15:22–29; 16:4). But its authority was <em>ministerial</em>, not autonomous: it decided <em>by</em> Scripture, not <em>above</em> it ("the prophets agree… as it is written"). This is the Protestant reading Calvin drew out: councils and church leaders have real authority precisely when — and because — they submit to and rightly apply the written word. A decision is binding not because a council said it, but because Scripture does.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Why does this matter for how we make decisions now?</div>
+      <div class="pressure-a">Because the church constantly faces the same temptation the Judaizers embodied and the same temptation the "God is doing a new thing" crowd embodies — to let either tradition or experience become the final authority. Acts 15 models the alternative: take God's evident work seriously, listen to real testimony, debate honestly — and then bring it all to the Scriptures and let them govern. Churches, families, and individuals that decide this way build on rock; those that decide by the loudest voice, the newest experience, or bare pragmatism build on sand. The method is the message: root the decision in the word.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card backward">
+      <div class="xref-tag">← The text cited</div>
+      <div class="xref-ref">Amos 9:11–12</div>
+      <div class="xref-note">The rebuilt tent of David gathering the nations — the Scripture that settled the council. See the companion Faith Rooted in Scripture study.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The event behind it</div>
+      <div class="xref-ref">Acts 10–11</div>
+      <div class="xref-note">Cornelius: God pours out the Spirit on Gentiles, and Peter concludes God shows no partiality — the experience James now confirms from Scripture.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Paul's account</div>
+      <div class="xref-ref">Galatians 2:1–10</div>
+      <div class="xref-note">Paul's perspective on the circumcision controversy and the Jerusalem agreement — the same battle for the gospel of grace, fought from another angle.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The Spirit &amp; the church</div>
+      <div class="xref-ref">Acts 15:28</div>
+      <div class="xref-note">"It seemed good to the Holy Spirit and to us" — the Spirit and the Scripture-guided church in agreement, not competition.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Scripture's authority</div>
+      <div class="xref-ref">2 Timothy 3:16–17</div>
+      <div class="xref-note">All Scripture is God-breathed and profitable for teaching, correcting, and training — the ground on which decisions like the council's rest.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Council model</div>
+      <div class="xref-ref">Matthew 7:24 · Isaiah 8:20</div>
+      <div class="xref-note">Build on the rock by doing Jesus' words; "to the law and to the testimony!" — the standard against which every claim is tested.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A Church at a Crossroads</div>
+        <div class="tn-text">The stakes could not have been higher: get this wrong and the gospel of free grace is lost, or the church fractures into Jewish and Gentile halves. Into that crisis James brings no new revelation and pulls no rank as the Lord's brother. He listens to what God has done, opens the prophets, and lets Amos settle it. The first church council decided its hardest question by submitting everything — experience, debate, even apostolic testimony — to the written word of God.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — How We Decide</div>
+        <div class="tn-text">Every church, family, and believer still faces contested decisions, and still feels the pull to settle them by the strongest personality, the most moving experience, the prevailing culture, or plain pragmatism. Acts 15 hands us a better way — and a demanding one: take God's work seriously, hear one another honestly, and then bring it all under the Scriptures and let them govern. A decision rooted in the word can be owned by the whole people of God (15:22) and can stand.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: When I face my next hard decision, what will actually get the final word — my experience, my preferences, the loudest voice around me, or the Scriptures rightly opened?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The early church settled its greatest controversy by James's method: take God's work seriously, then test it by God's word — 'the prophets agree with this, as it is written.' Decisions that will stand and unite God's people are decisions rooted in the Scriptures."</div>
+    <div class="verdict-ref">Acts 15:15 — "The words of the prophets are in agreement with this, as it is written…"</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
