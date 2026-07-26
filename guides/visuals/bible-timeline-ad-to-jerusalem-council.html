@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bible Timeline — From Pentecost to the Jerusalem Council (AD 30–49)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 940px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 18px; }
+  .header-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 2rem; color: #2c2c2c; letter-spacing: 0.02em; line-height: 1.1; }
+  .header-sub { font-size: 1.02rem; color: #555; margin-top: 5px; }
+  .header-span { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-size: 0.82rem; color: #666; line-height: 1.5; }
+  .header-span strong { color: #2c2c2c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* LEGEND */
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 4px 0 18px; }
+  .lg { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; color: #444; }
+  .lg-dot { width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0; }
+  .lg-a .lg-dot { background: #2e8a4a; } .lg-b .lg-dot { background: #3b6fd4; } .lg-c .lg-dot { background: #6c4bbf; }
+
+  /* DATING NOTE */
+  .dating { background: #faf7f2; border: 2px dashed #888; border-radius: 3px; padding: 11px 15px; margin: 4px 0 20px; font-size: 0.8rem; color: #555; line-height: 1.5; }
+  .dating strong { color: #2c2c2c; }
+
+  /* TIMELINE */
+  .tl { position: relative; padding-left: 104px; margin: 4px 0 8px; }
+  .tl::before { content: ''; position: absolute; left: 92px; top: 10px; bottom: 10px; width: 2px; background: #d8cfc0; }
+  .tl-item { position: relative; margin-bottom: 13px; }
+  .tl-date { position: absolute; left: -104px; top: 9px; width: 82px; text-align: right; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.74rem; line-height: 1.2; }
+  .tl-dot { position: absolute; left: -18px; top: 13px; width: 14px; height: 14px; border-radius: 50%; background: #f5f0e8; border: 3px solid; }
+  .tl-card { border: 2px solid; border-left-width: 5px; border-radius: 3px; background: #faf7f2; padding: 10px 14px; }
+  .tl-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 2px; }
+  .tl-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.98rem; color: #2c2c2c; margin-bottom: 3px; }
+  .tl-desc { font-size: 0.81rem; color: #444; line-height: 1.42; }
+  /* phase colours */
+  .tl-a .tl-date { color: #2e8a4a; } .tl-a .tl-dot { border-color: #2e8a4a; } .tl-a .tl-card { border-color: #2e8a4a; } .tl-a .tl-ref { color: #2e8a4a; }
+  .tl-b .tl-date { color: #3b6fd4; } .tl-b .tl-dot { border-color: #3b6fd4; } .tl-b .tl-card { border-color: #3b6fd4; } .tl-b .tl-ref { color: #3b6fd4; }
+  .tl-c .tl-date { color: #6c4bbf; } .tl-c .tl-dot { border-color: #6c4bbf; } .tl-c .tl-card { border-color: #6c4bbf; } .tl-c .tl-ref { color: #6c4bbf; }
+  /* the destination */
+  .tl-goal .tl-card { background: #1a1a1a; border-color: #6c4bbf; }
+  .tl-goal .tl-title { color: #f5f0e8; }
+  .tl-goal .tl-desc { color: #d0c8bc; }
+  .tl-goal .tl-ref { color: #a98fe0; }
+
+  /* phase divider */
+  .phase-div { position: relative; margin: 20px 0 14px; }
+  .phase-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; padding-left: 104px; }
+  .phase-a { color: #2e8a4a; } .phase-b { color: #3b6fd4; } .phase-c { color: #6c4bbf; }
+
+  /* WHO'S WHO */
+  .who-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .who-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .who-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #2c2c2c; margin-bottom: 1px; }
+  .who-role { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-weight: 700; margin-bottom: 5px; }
+  .who-note { font-size: 0.75rem; color: #555; line-height: 1.38; }
+
+  /* BOOKS */
+  .books-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .book-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 12px 14px; }
+  .book-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.95rem; color: #d47c1a; margin-bottom: 2px; }
+  .book-date { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-weight: 700; margin-bottom: 5px; }
+  .book-note { font-size: 0.78rem; color: #444; line-height: 1.4; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 18px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.12rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 640px) {
+    .who-grid { grid-template-columns: 1fr 1fr; }
+    .books-grid { grid-template-columns: 1fr; }
+    .tl { padding-left: 78px; }
+    .tl::before { left: 66px; }
+    .tl-date { left: -78px; width: 58px; font-size: 0.66rem; }
+    .tl-dot { left: -18px; }
+    .phase-name { padding-left: 78px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-wrap">
+    <div class="header-title">From Pentecost to the Jerusalem Council</div>
+    <div class="header-sub">The first twenty years of the church — Acts 1–15</div>
+    <div class="header-span"><strong>Span:</strong> ~AD 30 (the Spirit poured out) → ~AD 48–49 (the Council settles the Gentile question). A single generation in which a Jerusalem sect became a movement reaching the nations — and had to decide, from Scripture, whether Gentiles must become Jews to be saved.</div>
+  </div>
+
+  <div class="section-label">How to Read This</div>
+  <div class="legend">
+    <div class="lg lg-a"><span class="lg-dot"></span> Phase 1 · The church is born in Jerusalem</div>
+    <div class="lg lg-b"><span class="lg-dot"></span> Phase 2 · The gospel breaks out to the nations</div>
+    <div class="lg lg-c"><span class="lg-dot"></span> Phase 3 · Mission &amp; the Council</div>
+  </div>
+  <div class="dating">
+    <strong>A note on dates:</strong> New Testament chronology is approximate and debated. The crucifixion is dated to <strong>AD 30 or 33</strong>; the Council to <strong>AD 48, 49, or 50</strong>. The firm anchor is the death of <strong>Herod Agrippa I in AD 44</strong> (Acts 12:23), fixed by Roman records — everything else is spaced around it. Dates below are the commonly used approximations.
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="phase-div"><div class="phase-name phase-a">Phase 1 — The Church Is Born (Jerusalem)</div></div>
+  <div class="tl">
+
+    <div class="tl-item tl-a">
+      <div class="tl-date">~AD 30/33</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 1</div>
+        <div class="tl-title">Resurrection, Ascension &amp; the Waiting</div>
+        <div class="tl-desc">The risen Jesus teaches for forty days, commissions the apostles as witnesses "to the ends of the earth," and ascends. The 120 wait and pray in Jerusalem; Matthias replaces Judas.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-a">
+      <div class="tl-date">~AD 30/33<br>Pentecost</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 2</div>
+        <div class="tl-title">The Spirit Poured Out — the Church Born</div>
+        <div class="tl-desc">At Pentecost the Holy Spirit falls; Peter preaches Joel's prophecy fulfilled; about 3,000 are baptised. The church begins as a Spirit-filled, teaching, sharing, worshipping community.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-a">
+      <div class="tl-date">~AD 30–33</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 3–5</div>
+        <div class="tl-title">Growth, Signs &amp; First Opposition</div>
+        <div class="tl-desc">Peter heals the lame man; thousands more believe. The apostles are hauled before the Sanhedrin — "we must obey God rather than men." Ananias &amp; Sapphira; Gamaliel's counsel of restraint.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-a">
+      <div class="tl-date">~AD 33–34</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 6–7</div>
+        <div class="tl-title">Stephen — the First Martyr</div>
+        <div class="tl-desc">Seven are chosen to serve; Stephen, full of the Spirit, is seized and stoned after his sweeping speech. "Saul approved of his execution." A great persecution breaks out against the Jerusalem church.</div>
+      </div>
+    </div>
+
+    <div class="phase-div"><div class="phase-name phase-b">Phase 2 — The Gospel Breaks Out</div></div>
+
+    <div class="tl-item tl-b">
+      <div class="tl-date">~AD 34</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 8</div>
+        <div class="tl-title">Scattered — Samaria &amp; the Ethiopian</div>
+        <div class="tl-desc">Persecution scatters believers, and they preach wherever they go. Philip brings the gospel to Samaria and to an Ethiopian court official on the desert road — the first steps beyond Judea.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-b">
+      <div class="tl-date">~AD 33–34</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 9 · Gal 1</div>
+        <div class="tl-title">The Conversion of Saul</div>
+        <div class="tl-desc">On the road to Damascus, the risen Christ confronts Saul the persecutor. Blinded, then baptised, he begins preaching Jesus. The church's fiercest enemy becomes its apostle to the Gentiles.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-b">
+      <div class="tl-date">~AD 34–37</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Gal 1:17–18 · Acts 9:26–30</div>
+        <div class="tl-title">Arabia, Damascus &amp; a First Jerusalem Visit</div>
+        <div class="tl-desc">Saul spends time in Arabia and Damascus, escapes over the wall in a basket, meets Peter and James briefly in Jerusalem, then is sent home to Tarsus — years of preparation out of the spotlight.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-b">
+      <div class="tl-date">~AD 38–40</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 10–11</div>
+        <div class="tl-title">Peter &amp; Cornelius — the Spirit on Gentiles</div>
+        <div class="tl-desc">Through a vision and a Roman centurion, God gives his Spirit to uncircumcised Gentiles. Peter: "God shows no partiality." The Jerusalem church, astonished, concludes God has "granted repentance to the Gentiles."</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-b">
+      <div class="tl-date">~AD 40–44</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 11:19–26</div>
+        <div class="tl-title">Antioch — "Christians" &amp; a Gentile Church</div>
+        <div class="tl-desc">In Antioch the gospel is preached to Greeks and a great mixed church forms. Barnabas fetches Saul from Tarsus; for a year they teach there. The disciples are first called "Christians."</div>
+      </div>
+    </div>
+
+    <div class="phase-div"><div class="phase-name phase-c">Phase 3 — Mission &amp; the Council</div></div>
+
+    <div class="tl-item tl-c">
+      <div class="tl-date">AD 44<br>(anchor)</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 12</div>
+        <div class="tl-title">Herod Agrippa — James Killed, Peter Freed</div>
+        <div class="tl-desc">Agrippa I executes James (son of Zebedee) and imprisons Peter, who is freed by an angel. Struck down for accepting worship, Agrippa dies — a fixed date (AD 44) that anchors the whole chronology.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-c">
+      <div class="tl-date">~AD 46–47</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 11:27–30 · 12:25</div>
+        <div class="tl-title">The Famine-Relief Visit to Jerusalem</div>
+        <div class="tl-desc">Warned by the prophet Agabus of a famine, the Antioch church sends aid to Judea by Barnabas and Saul — an early picture of Gentile-background believers caring for the mother church.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-c">
+      <div class="tl-date">~AD 46–48</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 13–14</div>
+        <div class="tl-title">The First Missionary Journey</div>
+        <div class="tl-desc">Set apart by the Spirit, Barnabas and Saul (now Paul) sail to Cyprus and journey through Galatia — Pisidian Antioch, Iconium, Lystra, Derbe — planting churches, turning to the Gentiles, and appointing elders.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-c">
+      <div class="tl-date">~AD 48–49</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 15:1–5 · Galatians</div>
+        <div class="tl-title">The Crisis: "Unless You Are Circumcised…"</div>
+        <div class="tl-desc">Men from Judea insist Gentile converts must be circumcised and keep the law of Moses to be saved. The gospel of grace is at stake. (Galatians is likely written into this same fight.) Paul and Barnabas are sent to Jerusalem.</div>
+      </div>
+    </div>
+
+    <div class="tl-item tl-c tl-goal">
+      <div class="tl-date">~AD 48/49</div><div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-ref">Acts 15:6–29 — the destination</div>
+        <div class="tl-title">The Jerusalem Council</div>
+        <div class="tl-desc">Peter testifies, Paul and Barnabas report, and James settles it from Scripture (Amos 9): Gentiles are saved by grace through faith, not by the law. The church's greatest controversy is decided by the Word — and the door to the nations stands open.</div>
+      </div>
+    </div>
+
+  </div><!-- /tl -->
+
+  <!-- WHO'S WHO -->
+  <div class="section-label">Who's Who in These Years</div>
+  <div class="who-grid">
+    <div class="who-card"><div class="who-name">Peter</div><div class="who-role">Lead apostle</div><div class="who-note">Preaches at Pentecost, opens the door to Cornelius's household, and defends Gentile inclusion at the Council.</div></div>
+    <div class="who-card"><div class="who-name">Stephen</div><div class="who-role">First martyr</div><div class="who-note">A Spirit-filled deacon whose death ignites the persecution that scatters the gospel beyond Jerusalem.</div></div>
+    <div class="who-card"><div class="who-name">Philip</div><div class="who-role">Evangelist</div><div class="who-note">Carries the gospel to Samaria and to the Ethiopian official — the first cross-cultural mission.</div></div>
+    <div class="who-card"><div class="who-name">Saul / Paul</div><div class="who-role">Apostle to the Gentiles</div><div class="who-note">Persecutor turned missionary; converted on the Damascus road, launched from Antioch, defender of grace at the Council.</div></div>
+    <div class="who-card"><div class="who-name">Barnabas</div><div class="who-role">Encourager, mentor</div><div class="who-note">Vouches for Saul, leads the Antioch work, and partners on the first journey — the bridge between Jerusalem and the Gentile mission.</div></div>
+    <div class="who-card"><div class="who-name">James (the Lord's brother)</div><div class="who-role">Leader, Jerusalem church</div><div class="who-note">Pronounces the decisive judgment at the Council, rooting the decision in the prophets (Amos 9).</div></div>
+    <div class="who-card"><div class="who-name">James (son of Zebedee)</div><div class="who-role">Apostle, martyr AD 44</div><div class="who-note">Executed by Herod Agrippa I — the first apostle to die (Acts 12).</div></div>
+    <div class="who-card"><div class="who-name">Cornelius</div><div class="who-role">Roman centurion</div><div class="who-note">The first Gentile convert to receive the Spirit — the test case God used to open the church to the nations.</div></div>
+    <div class="who-card"><div class="who-name">Herod Agrippa I</div><div class="who-role">King (d. AD 44)</div><div class="who-note">Persecutor whose sudden death gives the era its one firmly fixed date.</div></div>
+  </div>
+
+  <!-- BOOKS -->
+  <div class="section-label">Written in (or into) This Window</div>
+  <div class="books-grid">
+    <div class="book-card">
+      <div class="book-name">Galatians</div>
+      <div class="book-date">~AD 48–49 (on the "South Galatian" view)</div>
+      <div class="book-note">Many date Galatians to just before or around the Council — Paul's white-hot defence of justification by faith apart from the law, fighting the very error the Council would address. On other views it is slightly later.</div>
+    </div>
+    <div class="book-card">
+      <div class="book-name">James</div>
+      <div class="book-date">~AD 44–49 (possibly the earliest NT letter)</div>
+      <div class="book-note">Often dated early, before the Council — a practical letter from James of Jerusalem to Jewish believers scattered abroad, reading much like the Sermon on the Mount applied.</div>
+    </div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">The Shape of Twenty Years</div>
+    <div class="verdict-text">"In a single generation the gospel moved from an upper room in Jerusalem to churches across the Roman world — pushed outward by persecution, carried by a converted enemy, and confirmed for the nations at a council that decided the question by Scripture."</div>
+    <div class="verdict-ref">Acts 1:8 → Acts 15 — "you will be my witnesses… to the ends of the earth."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

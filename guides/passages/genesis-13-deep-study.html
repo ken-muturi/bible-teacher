@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis 13 — Abram &amp; Lot Separate (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
+  .companion-link:hover { color: #1c5c30; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 82px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #2e8a4a; } .beat.b1 .beat-body { border-color: #2e8a4a; } .beat.b1 .beat-ref { color: #2e8a4a; }
+  .beat.b2 .beat-num { background: #d47c1a; } .beat.b2 .beat-body { border-color: #d47c1a; } .beat.b2 .beat-ref { color: #d47c1a; }
+  .beat.b3 .beat-num { background: #3b6fd4; } .beat.b3 .beat-body { border-color: #3b6fd4; } .beat.b3 .beat-ref { color: #3b6fd4; }
+  .beat.b4 .beat-num { background: #c0392b; } .beat.b4 .beat-body { border-color: #c0392b; } .beat.b4 .beat-ref { color: #c0392b; }
+  .beat.b5 .beat-num { background: #6c4bbf; } .beat.b5 .beat-body { border-color: #6c4bbf; } .beat.b5 .beat-ref { color: #6c4bbf; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* TWO MEN COMPARE */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 8px; }
+  .cmp { border: 2.5px solid; border-radius: 3px; padding: 14px 16px; }
+  .cmp-abram { border-color: #2e8a4a; background: #edf8f1; }
+  .cmp-lot { border-color: #c0392b; background: #fdf2f2; }
+  .cmp-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 2px; }
+  .cmp-abram .cmp-name { color: #2e8a4a; } .cmp-lot .cmp-name { color: #c0392b; }
+  .cmp-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #888; margin-bottom: 8px; }
+  .cmp-item { font-size: 0.78rem; color: #333; line-height: 1.4; margin-bottom: 6px; padding-left: 12px; position: relative; }
+  .cmp-item::before { content: '·'; position: absolute; left: 2px; font-weight: 700; }
+  .cmp-abram .cmp-item::before { color: #2e8a4a; } .cmp-lot .cmp-item::before { color: #c0392b; }
+  .compare-cap { font-size: 0.8rem; color: #555; font-style: italic; border-left: 3px solid #6c4bbf; padding: 8px 12px; background: #f5f2fc; line-height: 1.45; margin-bottom: 24px; }
+
+  /* LIFT EYES MOTIF */
+  .eyes { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .eyes-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .eyes-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .eyes-col { background: #262626; border: 1px solid #444; border-radius: 3px; padding: 12px 13px; }
+  .eyes-col.lot { border-color: #c0392b; } .eyes-col.abram { border-color: #2e8a4a; }
+  .eyes-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 4px; }
+  .eyes-col.lot .eyes-ref { color: #e0796b; } .eyes-col.abram .eyes-ref { color: #6fc28d; }
+  .eyes-text { font-size: 0.78rem; color: #ccc; line-height: 1.42; }
+  .eyes-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* DRIFT STRIP */
+  .drift { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 8px; }
+  .drift-card { border: 2px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 12px 13px; text-align: center; }
+  .drift-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; color: #c0392b; font-weight: 700; margin-bottom: 3px; }
+  .drift-step { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .drift-note { font-size: 0.73rem; color: #555; line-height: 1.35; }
+  .drift-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-heb { font-size: 1.3rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* OT / CANON BACKGROUND */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE POINTS */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* CROSS-REFERENCES */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; }
+  .xref-card.parallel { border-color: #6c4bbf; }
+  .xref-card.forward  { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; }
+  .parallel .xref-tag { color: #6c4bbf; }
+  .forward  .xref-tag { color: #2e8a4a; }
+  .xref-ref  { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .compare, .eyes-row, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .drift { grid-template-columns: 1fr; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Genesis 13</div>
+  <div class="header-title">Abram &amp; Lot Separate — Faith That Lets Go vs. Sight That Grabs</div>
+  <span class="badge-deep">Deep Study</span>
+
+  <div class="section-label">Anchor Text — The Two Choices</div>
+  <div class="passage-callout">
+    <div class="pc-label">Genesis 13:10–11, 14–15 · Lot lifts his eyes; God lifts Abram's</div>
+    <div class="pc-text">
+      "Lot <em>lifted up his eyes</em> and saw that the plain of the Jordan was well watered everywhere like the garden of the LORD… So Lot chose for himself all the plain of the Jordan… and Lot journeyed east. Thus they separated from each other… The LORD said to Abram, after Lot had separated from him, '<em>Lift up your eyes</em> and look from the place where you are… for all the land that you see I will give to you and your offspring forever.'"
+    </div>
+    <div class="pc-ref">Genesis 13:10–11, 14–15 (ESV) — the same phrase, two opposite directions</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> Genesis 13 follows Abram's lapse in Egypt (12:10–20), where fear drove him to lie about Sarai. Now he returns — "very rich in livestock, in silver and in gold" — and, tellingly, goes back to the altar he had first built at Bethel and "called on the name of the LORD" (13:4). The prosperity that God has given becomes the very thing that strains the family: the land cannot support both Abram's and Lot's herds, and strife breaks out. The chapter turns on a single decision — who gets first choice of the land — and on the way two men make it. Lot chooses by <em>sight</em>, grabbing the best-looking ground and drifting toward Sodom. Abram, though the elder and the greater, <em>lets go</em>, trusting God with the outcome — and it is precisely to the one who relinquished his rights that God re-confirms and expands the promise of the whole land.
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Five Movements</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">13:1–4</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 1 — Return</div>
+        <div class="beat-title">Back to the Altar</div>
+        <div class="beat-desc">Abram comes up from Egypt, wealthy, and journeys by stages back to Bethel — to "the place where he had made an altar at the first," and calls on the name of the LORD. After the Egypt detour, he returns to worship. Recovery begins at the altar.</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">13:5–7</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 2 — Strife</div>
+        <div class="beat-title">The Land Cannot Hold Them</div>
+        <div class="beat-desc">Both men are so rich that the land can't sustain them together; their herdsmen quarrel. The narrator adds a pointed aside: "the Canaanites and the Perizzites were dwelling in the land" — the watching world sees the family of promise squabbling.</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">13:8–9</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 3 — Magnanimity</div>
+        <div class="beat-title">Abram Yields the Choice</div>
+        <div class="beat-desc">"Let there be no strife… for we are kinsmen." Though Abram is the elder and holds the promise, he gives Lot first pick: "If you take the left hand, I will go right; if right, I will go left." He surrenders his rights for the sake of peace.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">13:10–13</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 4 — Choosing by Sight</div>
+        <div class="beat-title">Lot Chooses the Plain</div>
+        <div class="beat-desc">Lot "lifted up his eyes" and chose the well-watered Jordan Valley — "like the garden of the LORD, like the land of Egypt." He takes the best and journeys east, pitching his tent "toward Sodom." The narrator warns: "the men of Sodom were wicked, great sinners against the LORD."</div>
+      </div>
+    </div>
+    <div class="beat b5">
+      <div class="beat-num">13:14–18</div>
+      <div class="beat-body">
+        <div class="beat-ref">Movement 5 — The Promise Renewed</div>
+        <div class="beat-title">God Lifts Abram's Eyes</div>
+        <div class="beat-desc">Only <em>after</em> Lot separates does God speak: "Lift up your eyes… all the land you see I will give you and your offspring forever," offspring "as the dust of the earth." "Arise, walk through the land." Abram moves to Hebron, to the oaks of Mamre, and builds an altar.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TWO MEN COMPARE -->
+  <div class="section-label">Two Men, Two Ways</div>
+  <div class="compare">
+    <div class="cmp cmp-abram">
+      <div class="cmp-name">Abram</div>
+      <div class="cmp-tag">Faith — receives by promise</div>
+      <div class="cmp-item">Yields his right to choose, though he is the elder and greater</div>
+      <div class="cmp-item">Seeks peace: "let there be no strife… we are kinsmen"</div>
+      <div class="cmp-item">Trusts God with the outcome rather than grasping</div>
+      <div class="cmp-item">God tells <em>him</em> to lift his eyes — and gives him the whole land</div>
+      <div class="cmp-item">Builds altars; worships; "calls on the name of the LORD"</div>
+    </div>
+    <div class="cmp cmp-lot">
+      <div class="cmp-name">Lot</div>
+      <div class="cmp-tag">Sight — grabs by appearance</div>
+      <div class="cmp-item">Takes first pick without hesitation or deference</div>
+      <div class="cmp-item">Chooses by what looks best: "well watered… like Eden, like Egypt"</div>
+      <div class="cmp-item">Journeys east and pitches his tent "toward Sodom"</div>
+      <div class="cmp-item">Moves toward a place the narrator flags as wicked</div>
+      <div class="cmp-item">No altar, no worship recorded — only a calculation of advantage</div>
+    </div>
+  </div>
+  <div class="compare-cap">The irony runs deep: the one who <em>let go</em> of the choice received everything by promise; the one who <em>seized</em> the best chose, unknowingly, the road to ruin. Faith could afford to be generous because it trusted the God who gives; sight had to grab, because it trusted only what it could see.</div>
+
+  <!-- LIFT EYES MOTIF -->
+  <div class="section-label">The Key Motif — "Lift Up the Eyes" (nasa einayim)</div>
+  <div class="eyes">
+    <div class="eyes-title">The same Hebrew phrase, used of both men — in opposite directions</div>
+    <div class="eyes-row">
+      <div class="eyes-col lot">
+        <div class="eyes-ref">Genesis 13:10 · Lot</div>
+        <div class="eyes-text"><em>Lot</em> lifted up his own eyes and <em>chose for himself</em> — his gaze fixed on what was fertile, prosperous, advantageous. He looked to <em>take</em>.</div>
+      </div>
+      <div class="eyes-col abram">
+        <div class="eyes-ref">Genesis 13:14 · Abram</div>
+        <div class="eyes-text"><em>God</em> tells Abram to lift up his eyes and <em>receive a gift</em> — the whole land, in every direction, forever. He looked to <em>be given</em>.</div>
+      </div>
+    </div>
+    <div class="eyes-note">The narrator deliberately repeats the phrase. Lot lifts his eyes to <em>seize</em> the best portion for himself; God invites Abram to lift his eyes to <em>receive</em> a far greater portion as gift. What Lot grasped by sight was a fraction of what Abram was given by promise — and Lot's "best" turned out to sit next to Sodom. The lesson is not that seeing is wrong, but <em>who</em> directs the gaze and <em>whether</em> we grab or receive.</div>
+  </div>
+
+  <!-- DRIFT STRIP -->
+  <div class="section-label">The Drift Toward Sodom — One Small Step at a Time</div>
+  <div class="drift">
+    <div class="drift-card">
+      <div class="drift-ref">Genesis 13:12</div>
+      <div class="drift-step">Pitched tent <em>toward</em> Sodom</div>
+      <div class="drift-note">Not in it yet — just facing it, drawn by the view. Proximity chosen for advantage.</div>
+    </div>
+    <div class="drift-card">
+      <div class="drift-ref">Genesis 14:12</div>
+      <div class="drift-step">Living <em>in</em> Sodom</div>
+      <div class="drift-note">By the next chapter he "was dwelling in Sodom" — captured when the city is raided. The tent moved inside.</div>
+    </div>
+    <div class="drift-card">
+      <div class="drift-ref">Genesis 19:1</div>
+      <div class="drift-step">Sitting <em>in the gate</em> of Sodom</div>
+      <div class="drift-note">A civic leader of the city — fully embedded, on the eve of its destruction, barely escaping with his life.</div>
+    </div>
+  </div>
+  <div class="drift-cap">The move toward Sodom is never a single leap — it is toward, then in, then of. The choice made "by the eyes" in Genesis 13 sets a trajectory that Genesis 19 completes.</div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Six Key Terms</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">נָשָׂא עֵינַיִם</div>
+      <div class="word-translit">nasa einayim — "lift up the eyes"</div>
+      <span class="word-ref-badge">13:10, 14</span>
+      <div class="word-gloss">To raise the eyes / look intently</div>
+      <div class="word-note">The hinge phrase of the chapter, used of Lot (v.10, to grab) and of Abram at God's command (v.14, to receive). The same act of looking leads to opposite ends depending on whose direction it follows and whether it seizes or trusts.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">רִיב</div>
+      <div class="word-translit">rîb — "strife / quarrel"</div>
+      <span class="word-ref-badge">13:7, 8</span>
+      <div class="word-gloss">Contention, dispute, lawsuit</div>
+      <div class="word-note">The word for a legal or personal dispute. Prosperity, not poverty, triggered it — abundance strained the relationship. Abram's response ("let there be no rîb… we are kinsmen") makes the relationship worth more than the rights at stake.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">פָּרַד</div>
+      <div class="word-translit">pārad — "to separate"</div>
+      <span class="word-ref-badge">13:9, 11, 14</span>
+      <div class="word-gloss">To divide, part company</div>
+      <div class="word-note">Repeated three times. The separation is real and permanent. Notably, God speaks the renewed promise to Abram only "<em>after</em> Lot had separated" (v.14) — the letting-go clears the way for the gift.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">כִּכָּר</div>
+      <div class="word-translit">kikkār — "the plain / valley"</div>
+      <span class="word-ref-badge">13:10–12</span>
+      <div class="word-gloss">A round / circle (of the Jordan)</div>
+      <div class="word-note">The lush "circle" of the Jordan that Lot chose — described as "like the garden of the LORD, like the land of Egypt." Two loaded comparisons: it looked like Eden, but it was also like <em>Egypt</em>, the place Abram had just left in disgrace.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">עָפָר</div>
+      <div class="word-translit">ʿāphār — "dust"</div>
+      <span class="word-ref-badge">13:16</span>
+      <div class="word-gloss">Dust of the earth</div>
+      <div class="word-note">God promises offspring "as the dust of the earth" — innumerable, and tied to the very land Abram is walking. The one who gave up a patch of ground is promised descendants as countless as its dust. Sight measures acres; faith is given the dust.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">מִזְבֵּחַ</div>
+      <div class="word-translit">mizbēaḥ — "altar"</div>
+      <span class="word-ref-badge">13:4, 18</span>
+      <div class="word-gloss">Altar / place of sacrifice</div>
+      <div class="word-note">The chapter is bracketed by altars — Abram returns to one at Bethel (v.4) and builds another at Hebron (v.18). Worship frames his whole story; Lot's story has none. The man of faith is marked by altars; the man of sight, by real estate.</div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="section-label">Across the Canon — Where This Story Points</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Genesis 12:1–3, 7</div>
+      <div class="ot-title">The Promise First Given</div>
+      <div class="ot-note">The land-and-offspring promise of ch.12 is what makes Abram's generosity possible: he can afford to give Lot first choice because the land is already promised to him by God, not won by grabbing. Faith rests the future on God's word, not on the best acreage.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Genesis 19:1–29</div>
+      <div class="ot-title">Where Lot's Choice Ends</div>
+      <div class="ot-note">The city Lot pitched toward is destroyed by fire; he escapes with almost nothing, his wife lost looking back. The narrator's warning in 13:13 pays off tragically. The "best" ground by sight became the site of judgment.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">2 Peter 2:7–8</div>
+      <div class="ot-title">"Righteous Lot," Vexed</div>
+      <div class="ot-note">The NT calls Lot "righteous," tormented daily by Sodom's lawlessness — a caution against reading him as simply wicked. He was a believer who made a sight-driven choice and spent years grieved by its consequences. Compromise can trap even the righteous.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Hebrews 11:8–10 · Psalm 16:5–6</div>
+      <div class="ot-title">Looking for the City With Foundations</div>
+      <div class="ot-note">Abram lived in tents, "looking forward to the city that has foundations, whose designer and builder is God." His eyes were set beyond the visible land. "The LORD is my chosen portion… the lines have fallen for me in pleasant places" (Ps 16) — faith's contentment with God as the portion.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Derek Kidner</div>
+      <div class="comm-title">Genesis (Tyndale OT Commentaries, 1967)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Kidner draws the sharp contrast: Abram's faith frees him to be generous, while Lot's choice is governed by "the lust of the eyes." He notes the ominous geography — Lot edges toward Sodom by degrees, and the narrator's asides prepare us for ch.19.</div>
+      <div class="comm-point">On v.14: God's word comes precisely after the sacrifice of rights — the man who gave up his choice is shown the whole land.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Genesis, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Gordon Wenham</div>
+      <div class="comm-title">Genesis 1–15 (Word Biblical Commentary, 1987)</div>
+      <span class="comm-tradition trad-critical">Evangelical · Exegetical</span>
+      <div class="comm-point">Wenham details the literary framing — altars bracket the chapter, and the repeated "lift up the eyes" and "separate" bind the scene. He stresses that Lot's choice, framed by the Sodom notices, is a study in appearances that deceive.</div>
+      <div class="comm-point">Reads Abram's magnanimity as covenant faith in action: confident in the promise, he need not compete for land.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Genesis 1–15, WBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Bruce Waltke</div>
+      <div class="comm-title">Genesis: A Commentary (2001)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Theological</span>
+      <div class="comm-point">Waltke frames the chapter as a test of faith over sight: Abram entrusts his destiny to God's promise, Lot to his own assessment of advantage. The "garden of the LORD / like Egypt" description exposes the mixed nature of what merely looks good.</div>
+      <div class="comm-point">Highlights worship as Abram's defining pattern — altars at Bethel and Hebron mark a life oriented Godward.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Genesis: A Commentary [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Victor P. Hamilton</div>
+      <div class="comm-title">The Book of Genesis 1–17 (NICOT, 1990)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Hamilton weighs the debate over Lot's culpability: the choice is not condemned outright, yet the narrator's steady drumbeat about Sodom's wickedness signals where self-interested looking leads. Abram's deference is the model of faith secure enough to defer.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Genesis 1–17, NICOT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. Kent Hughes</div>
+      <div class="comm-title">Genesis: Beginning &amp; Blessing (Preaching the Word, 2004)</div>
+      <span class="comm-tradition trad-preaching">Evangelical · Preaching</span>
+      <div class="comm-point">Hughes preaches the "generosity of faith": because Abram believed the promise, he could open his hand. He presses the application — those who grasp for advantage in relationships forfeit the freedom and blessing that trusting God brings.</div>
+      <a href="https://www.crossway.org/" target="_blank" class="source-link">crossway.org — Genesis (Preaching the Word) [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on Genesis (1554)</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin commends Abram's self-denial as the fruit of faith and warns against Lot's fixation on the fertile plain — a warning that outward prosperity often masks spiritual danger. He notes God's kindness in renewing the promise just when Abram had let go.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom01" target="_blank" class="source-link">ccel.org — Calvin on Genesis [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Did Lot sin in choosing the plain, or was it just unwise?</div>
+      <div class="pressure-a">The text never says "Lot sinned" at the moment of choosing — he took a fair offer. But the narrator surrounds the choice with warning signals: he "lifted up his own eyes" and "chose for himself," he moved "toward Sodom," and immediately we're told "the men of Sodom were wicked." The critique is less about a single sinful act than about a <em>way of deciding</em>: by appearance and self-interest, with no reference to God, no altar, no seeking the LORD. That method set a trajectory (13:12 → 14:12 → 19:1) that ended in disaster. Unwise and self-serving rather than flagrantly sinful — but the two are not far apart when God is left out of the looking.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Was Abram's generosity naïve — giving away the best land?</div>
+      <div class="pressure-a">Not naïve, but faith-grounded. Abram could yield the choice precisely because he believed the whole land was already promised to him by God (12:7). He wasn't gambling; he was trusting. Faith made him free from the need to compete — he didn't have to secure his future by grabbing, because his future was secured by God's word. And the outcome vindicates him: God gives him "all the land you can see," far more than the patch Lot seized. Generosity rooted in God's promise is not loss; it is freedom.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Is it wrong to choose the "well-watered" option — to seek prosperity?</div>
+      <div class="pressure-a">The point is not that fertile land is bad or that prudence is sin. Abram was himself wealthy, and God's promise <em>includes</em> land and blessing. The issue is the <em>basis</em> and <em>direction</em> of the choice: Lot chose purely by what looked best to the eye, for himself, with no regard for the spiritual environment ("toward Sodom") or for God. The same phrase — "lift up the eyes" — is holy when God directs it (v.14) and perilous when self-interest does (v.10). Prosperity sought as a gift received from God differs entirely from prosperity grabbed by sight regardless of cost.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Why does God renew the promise only after Lot leaves (v.14)?</div>
+      <div class="pressure-a">The timing is deliberate and pastoral. Abram had just surrendered his right to choose, seemingly settling for whatever Lot left — and it is exactly then, "after Lot had separated," that God says "lift up your eyes… all this is yours." The letting-go did not cost Abram the promise; it cleared the stage for God to confirm it more expansively than ever. It models a repeated biblical pattern: those who release their grip on their own advantage for God's sake find God meeting them with more than they gave up (cf. Matt 19:29; Mark 10:29–30). God honours the open hand.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. How does "toward Sodom" become a warning for us?</div>
+      <div class="pressure-a">Lot never chose Sodom's sin — he chose its <em>real estate</em>, and pitched his tent "toward" it for the view and the pasture. But proximity chosen for advantage becomes residence, and residence becomes identity: toward (13:12), in (14:12), of — sitting in the gate (19:1). The drift is gradual and each step seems small and reasonable. The warning is not against living near sinners (we're called to be salt and light) but against choosing our environment purely by material advantage while ignoring its spiritual pull — and then being surprised when the pull wins.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFERENCES -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card backward">
+      <div class="xref-tag">← The promise</div>
+      <div class="xref-ref">Genesis 12:1–7</div>
+      <div class="xref-note">The land and offspring first promised — the ground of Abram's freedom to be generous here.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Where it leads</div>
+      <div class="xref-ref">Genesis 19:1–29</div>
+      <div class="xref-note">Sodom destroyed; Lot barely escapes. The narrator's warning in 13:13 comes due.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Lot re-read</div>
+      <div class="xref-ref">2 Peter 2:7–9</div>
+      <div class="xref-note">"Righteous Lot," tormented by Sodom's sin — a believer trapped by a sight-driven choice, yet rescued by God.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Faith's gaze</div>
+      <div class="xref-ref">Hebrews 11:8–10</div>
+      <div class="xref-note">Abram lived in tents, looking for "the city that has foundations" — eyes fixed beyond the visible land.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The portion</div>
+      <div class="xref-ref">Psalm 16:5–6</div>
+      <div class="xref-note">"The LORD is my chosen portion… the lines have fallen for me in pleasant places" — contentment with God as the inheritance.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The open hand</div>
+      <div class="xref-ref">Philippians 2:3–4 · Matt 19:29</div>
+      <div class="xref-note">Count others more significant; those who give up for Christ's sake receive far more. Abram's generosity in gospel shape.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Two Herdsmen and a Land</div>
+        <div class="tn-text">Two wealthy relatives, one strip of land too small for both, and a choice to make. One trusted the promise of God enough to hand the decision away; the other trusted his own eyes and took the greenest ground — never guessing that its horizon held Sodom. The chapter quietly measures a life not by what it grabbed but by whether it worshipped and trusted.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Our Own Choices by Sight</div>
+        <div class="tn-text">We still choose jobs, houses, relationships, and opportunities by "lifting up our eyes" to what looks best, most watered, most advantageous — often with no reference to God and little thought to the spiritual pull of the place we're moving toward. Genesis 13 asks two questions of every such choice: <em>Am I grabbing or receiving? And what am I pitching my tent toward?</em></div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: In my next big decision, will I choose by sight — grabbing what looks best for me — or by faith, holding my rights loosely and trusting God with the outcome?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"Faith can afford to let go, because it trusts the God who gives; sight has to grab, because it trusts only what it can see. Abram surrendered the choice and was given the whole land; Lot seized the best and pitched his tent toward Sodom."</div>
+    <div class="verdict-ref">Genesis 13:10, 14 — Lot lifted up his eyes and chose for himself; the LORD said to Abram, "Lift up your eyes… all the land I will give to you."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
