@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nehemiah — Rebuild the Wall, Renew the People</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 1020px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 20px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .header-book { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.03em; line-height: 1; }
+  .header-sub { font-size: 1.05rem; color: #555; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+  .meta-row strong { color: #2c2c2c; }
+  .header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Gentium Book Plus', serif; font-size: 1rem; color: #2e8a4a; text-align: center; letter-spacing: 0.02em; font-style: italic; }
+
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* KEY PASSAGE */
+  .passage-callout { border-left: 6px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 4px 0 20px; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 7px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.72rem; color: #2e8a4a; margin-top: 7px; font-weight: 700; }
+
+  /* THREE-W STRUCTURE */
+  .acts-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .act { border: 2.5px solid; border-radius: 3px; padding: 16px 15px; }
+  .act-1 { border-color: #d47c1a; background: #fdf8ef; }
+  .act-2 { border-color: #3b6fd4; background: #eef2fb; }
+  .act-3 { border-color: #6c4bbf; background: #f5f2fc; }
+  .act-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; margin-bottom: 8px; }
+  .act-1 .act-label { color: #d47c1a; } .act-2 .act-label { color: #3b6fd4; } .act-3 .act-label { color: #6c4bbf; }
+  .act-chapters { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.2rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-theme { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 10px; font-style: italic; }
+  .unit { padding: 6px 9px; border-radius: 2px; margin-bottom: 5px; }
+  .unit-1 { background: #f7e6cc; border-left: 3px solid #d47c1a; }
+  .unit-2 { background: #dce8fb; border-left: 3px solid #3b6fd4; }
+  .unit-3 { background: #e7dffb; border-left: 3px solid #6c4bbf; }
+  .unit-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 1px; }
+  .unit-1 .unit-ref { color: #d47c1a; } .unit-2 .unit-ref { color: #3b6fd4; } .unit-3 .unit-ref { color: #6c4bbf; }
+  .unit-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.78rem; color: #2c2c2c; margin-bottom: 1px; }
+  .unit-desc { font-size: 0.7rem; color: #444; line-height: 1.32; }
+
+  /* OPPOSITION ESCALATION */
+  .opp { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .opp-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 4px; }
+  .opp-sub { font-size: 0.72rem; color: #999; margin-bottom: 14px; font-style: italic; }
+  .opp-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .opp-step { border: 1px solid #c0392b; border-radius: 2px; padding: 9px; background: #241618; text-align: center; }
+  .opp-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #e0796b; margin-bottom: 4px; }
+  .opp-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.76rem; color: #f5f0e8; margin-bottom: 3px; }
+  .opp-text { font-size: 0.66rem; color: #bbb; line-height: 1.32; }
+  .opp-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* PRAYERS STRIP */
+  .pray-strip { background: #2e8a4a; border-radius: 3px; padding: 14px 20px; margin: 4px 0 24px; }
+  .pray-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #fff; margin-bottom: 10px; }
+  .pray-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .pray-card { background: rgba(255,255,255,0.14); border-radius: 3px; padding: 8px 10px; }
+  .pray-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #d7f0df; margin-bottom: 2px; }
+  .pray-text { font-size: 0.72rem; color: #fff; line-height: 1.34; }
+  .pray-note { font-size: 0.72rem; color: rgba(255,255,255,0.85); line-height: 1.4; margin-top: 10px; }
+
+  /* BUILDERS NOTE */
+  .builders { border: 2.5px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 15px 18px; margin: 4px 0 24px; }
+  .builders-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.98rem; color: #d47c1a; margin-bottom: 6px; }
+  .builders-text { font-size: 0.83rem; color: #444; line-height: 1.5; }
+  .builders-text strong { color: #a95e0c; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .word-heb { font-size: 1.3rem; color: #2e8a4a; font-weight: 700; margin-bottom: 1px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 4px; }
+  .word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.73rem; color: #555; line-height: 1.38; }
+
+  /* CHAPTER CROSS-MAP */
+  .chap-map { margin: 4px 0 24px; }
+  .chap-row { display: grid; grid-template-columns: 96px 1fr 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .chap-num { background: #2c2c2c; color: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.74rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; line-height: 1.2; }
+  .chap-cell { padding: 8px 10px; border-left: 1px solid #ddd; background: #faf7f2; }
+  .chap-cell:nth-child(even) { background: #f5f0e8; }
+  .cc-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .cc-ot { color: #d47c1a; } .cc-nt { color: #2e8a4a; } .cc-theme { color: #6c4bbf; }
+  .cc-text { font-size: 0.72rem; color: #333; line-height: 1.34; }
+  .cc-refs { font-size: 0.66rem; color: #888; font-style: italic; margin-top: 2px; }
+
+  /* COMMENTARY */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.66rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.76rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
+  .source-link:hover { color: #aaa; }
+
+  /* HARDEST */
+  .hard-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .hard-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+  .hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .hard-q { font-size: 0.82rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 17px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.82rem; color: #333; line-height: 1.44; }
+  .tn-question { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.12rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  @media (max-width: 820px) {
+    .acts-layout { grid-template-columns: 1fr; }
+    .opp-track { grid-template-columns: 1fr 1fr; }
+    .pray-row { grid-template-columns: 1fr; }
+    .word-grid { grid-template-columns: 1fr 1fr; }
+    .comm-grid, .tn-cols { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 74px 1fr; }
+    .chap-row .chap-cell:nth-child(4) { display: none; }
+  }
+  @media (max-width: 520px) {
+    .word-grid, .opp-track { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 1fr; }
+    .chap-num { border-radius: 3px 3px 0 0; }
+    .chap-cell { border-left: none; border-top: 1px solid #ddd; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <div class="header-top">
+      <div>
+        <div class="header-book">Nehemiah</div>
+        <div class="header-sub">Book 16 of 66 · Post-Exilic Memoir · ~445–433 BC</div>
+      </div>
+      <div class="header-meta">
+        <div class="meta-row"><strong>Author:</strong> Nehemiah (first-person memoirs), compiled with Ezra</div>
+        <div class="meta-row"><strong>Role:</strong> Cupbearer to Artaxerxes I → governor of Judah</div>
+        <div class="meta-row"><strong>From / to:</strong> Susa (Persian court) → Jerusalem</div>
+        <div class="meta-row"><strong>Contemporaries:</strong> Ezra, Malachi; under Persian rule</div>
+        <div class="meta-row"><strong>Genre:</strong> Historical memoir · covenant renewal</div>
+        <div class="meta-row"><strong>Pairs with:</strong> Ezra (temple) — Nehemiah (walls &amp; people)</div>
+      </div>
+    </div>
+    <div class="header-char">
+      "The wall goes up in 52 days — but the real rebuilding is a people re-formed around the Word of God"
+    </div>
+  </div>
+
+  <!-- KEY PASSAGE -->
+  <div class="section-label">Controlling Verses — The Work and Its Source</div>
+  <div class="passage-callout">
+    <div class="pc-label">Nehemiah 2:18 &amp; 6:15–16 · Let us rebuild — and the nations saw it was God's doing</div>
+    <div class="pc-text">
+      "I told them of the hand of my God that had been upon me for good… And they said, 'Let us rise up and build.' So they strengthened their hands for the good work." … "So the wall was finished… in fifty-two days. And when all our enemies heard of it… they perceived that this work had been accomplished with the help of our God."
+    </div>
+    <div class="pc-ref">Nehemiah 2:18; 6:15–16 (ESV)</div>
+  </div>
+
+  <!-- THREE-W STRUCTURE -->
+  <div class="section-label">The Architecture — Three Movements (Wall → Word → Walk)</div>
+  <div class="acts-layout">
+    <div class="act act-1">
+      <div class="act-label">Movement 1 — The Wall</div>
+      <div class="act-chapters">Chapters 1 – 7</div>
+      <div class="act-theme">Rebuilding under opposition</div>
+      <div class="unit unit-1"><div class="unit-ref">1 · The Burden</div><div class="unit-title">Nehemiah Hears &amp; Prays</div><div class="unit-desc">News of Jerusalem's broken walls; Nehemiah weeps, fasts, and prays, confessing sin and pleading the covenant.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">2 · The Commission</div><div class="unit-title">The King Sends Him</div><div class="unit-desc">An arrow-prayer before Artaxerxes; letters and timber granted; the night ride to survey the ruins; "let us build."</div></div>
+      <div class="unit unit-1"><div class="unit-ref">3 · The Builders</div><div class="unit-title">Each at His Own Section</div><div class="unit-desc">A roll-call of families, priests, and guilds, each repairing the stretch of wall in front of their own house.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">4–6 · The Opposition</div><div class="unit-title">Ridicule, Threat, Plot</div><div class="unit-desc">Sanballat, Tobiah &amp; Geshem escalate; the builders work with sword and trowel; the wall is finished in 52 days.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">7 · The Register</div><div class="unit-title">Guarding the City</div><div class="unit-desc">Gates, guards, and the genealogical list of returned exiles — securing the people, not just the stones.</div></div>
+    </div>
+    <div class="act act-2">
+      <div class="act-label">Movement 2 — The Word</div>
+      <div class="act-chapters">Chapters 8 – 10</div>
+      <div class="act-theme">Revival &amp; covenant renewal</div>
+      <div class="unit unit-2"><div class="unit-ref">8 · The Reading</div><div class="unit-title">Ezra Reads the Law</div><div class="unit-desc">From daybreak to noon the Book is read and explained; the people weep, then rejoice — "the joy of the LORD is your strength."</div></div>
+      <div class="unit unit-2"><div class="unit-ref">8:13–18 · The Feast</div><div class="unit-title">Booths Rediscovered</div><div class="unit-desc">They find the Feast of Booths in the Law and keep it — great joy as Scripture reshapes their life.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">9 · The Confession</div><div class="unit-title">The Great Prayer of History</div><div class="unit-desc">A sweeping confession retells Israel's story — God's faithfulness and their repeated rebellion — from creation to exile.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">10 · The Covenant</div><div class="unit-title">A Signed Commitment</div><div class="unit-desc">Leaders and people bind themselves in writing to obey the Law — mixed marriage, Sabbath, and temple support named.</div></div>
+    </div>
+    <div class="act act-3">
+      <div class="act-label">Movement 3 — The Walk</div>
+      <div class="act-chapters">Chapters 11 – 13</div>
+      <div class="act-theme">Dedication &amp; the danger of relapse</div>
+      <div class="unit unit-3"><div class="unit-ref">11–12 · The People</div><div class="unit-title">Repopulate &amp; Dedicate</div><div class="unit-desc">Lots bring one in ten to live in Jerusalem; the wall is dedicated with two great choirs and joy "heard far away."</div></div>
+      <div class="unit unit-3"><div class="unit-ref">13:1–14 · The Relapse</div><div class="unit-title">Reforms Undone in His Absence</div><div class="unit-desc">Nehemiah returns to find Tobiah housed in the temple, tithes neglected, Levites gone — and cleanses it.</div></div>
+      <div class="unit unit-3"><div class="unit-ref">13:15–31 · The Reforms</div><div class="unit-title">Sabbath &amp; Marriage</div><div class="unit-desc">He confronts Sabbath trade and foreign marriages; the book ends abruptly: "Remember me, O my God, for good."</div></div>
+    </div>
+  </div>
+
+  <!-- OPPOSITION -->
+  <div class="section-label">The Opposition Escalates — Every Tactic the Enemy Tries (ch. 4–6)</div>
+  <div class="opp">
+    <div class="opp-title">Sanballat, Tobiah &amp; Geshem — five escalating attacks on the work</div>
+    <div class="opp-sub">The wall is opposed not by one assault but by a rising sequence — and each is met by prayer plus action.</div>
+    <div class="opp-track">
+      <div class="opp-step"><div class="opp-ref">4:1–3</div><div class="opp-name">Ridicule</div><div class="opp-text">Mockery: "Will they revive the stones? A fox would break it down!" Scorn to sap morale.</div></div>
+      <div class="opp-step"><div class="opp-ref">4:7–8</div><div class="opp-name">Threat</div><div class="opp-text">Anger turns to a plot to attack the city by force. Nehemiah posts a guard, day and night.</div></div>
+      <div class="opp-step"><div class="opp-ref">4:10–14</div><div class="opp-name">Discouragement</div><div class="opp-text">From within: the strength of the laborers fails, the rubble is too much. "Do not be afraid… remember the Lord."</div></div>
+      <div class="opp-step"><div class="opp-ref">6:1–4</div><div class="opp-name">Distraction</div><div class="opp-text">"Come, meet us in the plain" — four times. "I am doing a great work; I cannot come down."</div></div>
+      <div class="opp-step"><div class="opp-ref">6:5–14</div><div class="opp-name">Slander &amp; Intrigue</div><div class="opp-text">A false rumor of rebellion; a hired prophet urging fear. Nehemiah refuses to flee or sin.</div></div>
+    </div>
+    <div class="opp-note">The pattern is a masterclass in resisting opposition to God's work: answer mockery by building, meet threats with a guard, fight discouragement by remembering the Lord, refuse distraction with focus, and expose intrigue without fear. Through it all runs the book's refrain — "So we prayed to our God <em>and</em> set a guard" (4:9): dependence and diligence together.</div>
+  </div>
+
+  <!-- PRAYERS -->
+  <div class="section-label">A Book Punctuated by Prayer</div>
+  <div class="pray-strip">
+    <div class="pray-title">Nehemiah prays roughly a dozen times — from long intercession to split-second "arrow prayers"</div>
+    <div class="pray-row">
+      <div class="pray-card"><div class="pray-ref">1:5–11 · The long prayer</div><div class="pray-text">Days of fasting, confessing Israel's sin and pleading God's covenant word before he acts.</div></div>
+      <div class="pray-card"><div class="pray-ref">2:4 · The arrow prayer</div><div class="pray-text">Mid-sentence before the king: "So I prayed to the God of heaven, and I said to the king…" — instant, silent.</div></div>
+      <div class="pray-card"><div class="pray-ref">13:14, 22, 31 · Remember me</div><div class="pray-text">The recurring plea that closes the book: "Remember me, O my God, for good" — his life laid before God.</div></div>
+    </div>
+    <div class="pray-note">Prayer is not a preface to Nehemiah's leadership; it is woven through every decision. The great administrator is, first and last, a man on his knees — planning boldly while depending utterly on "the God of heaven."</div>
+  </div>
+
+  <!-- BUILDERS -->
+  <div class="section-label">The Builders — "Each in Front of His Own House" (ch. 3)</div>
+  <div class="builders">
+    <div class="builders-title">A whole chapter of names — and a model of shared responsibility</div>
+    <div class="builders-text">Chapter 3 can read like a dull list, but its genius is in the repeated phrase: family after family "repaired… opposite his own house" (3:10, 23, 28–30). The enormous task was accomplished because <strong>everyone took the stretch of wall in front of them</strong> — priests, perfumers, goldsmiths, rulers, and daughters (3:12) all building. No one waited for someone else to fix their section. <strong>The city was rebuilt when each person owned the part nearest to them</strong> — a picture of a community (and a family or ministry) restored when every member takes up the work at hand rather than leaving it to the leaders.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Six Key Words</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">חוֹמָה</div>
+      <div class="word-translit">ḥomah — "wall"</div>
+      <span class="word-count">~32× in book</span>
+      <div class="word-gloss">City wall / rampart</div>
+      <div class="word-note">More than masonry: in the ancient world a city's wall was its security, identity, and honour. A breached wall meant shame and exposure; the rebuilt wall meant a people re-established under God — the visible sign of restoration.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">חֶרְפָּה</div>
+      <div class="word-translit">ḥerpah — "reproach"</div>
+      <span class="word-count">1:3 · 2:17</span>
+      <div class="word-gloss">Disgrace, shame, taunt</div>
+      <div class="word-note">The ruined walls left Jerusalem in "great trouble and <em>reproach</em>." The rebuilding is framed as removing shame — "that we may no longer suffer derision" (2:17). Restoration answers not just danger but disgrace.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">חָזַק</div>
+      <div class="word-translit">ḥazaq — "strengthen / repair"</div>
+      <span class="word-count">throughout ch.3</span>
+      <div class="word-note-x"></div>
+      <div class="word-gloss">To be strong; to make firm / repair</div>
+      <div class="word-note">The verb behind "they <em>repaired</em>" the wall and "strengthened their hands for the good work" (2:18). The same word for making a wall firm is used for taking courage — the outer building and the inner resolve rise together.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">זָכַר</div>
+      <div class="word-translit">zakar — "remember"</div>
+      <span class="word-count">1:8; 13:14,22,31</span>
+      <div class="word-gloss">To remember / act on behalf of</div>
+      <div class="word-note">Nehemiah asks God to "remember" his promise (1:8) and, at the end, to "remember me… for good." Biblical remembering is not mere recall but covenant faithfulness in action — the ground of Nehemiah's confidence.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">שִׂמְחָה</div>
+      <div class="word-translit">simḥah — "joy"</div>
+      <span class="word-count">peak in ch.8, 12</span>
+      <div class="word-gloss">Joy, gladness, rejoicing</div>
+      <div class="word-note">"The joy of the LORD is your strength" (8:10). When the Word is understood, weeping turns to joy; the dedication of the wall (ch.12) rings with rejoicing "heard far away." Joy, not grim duty, is the engine of the renewed community.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">תּוֹרָה</div>
+      <div class="word-translit">torah — "law / instruction"</div>
+      <span class="word-count">central to ch.8–10</span>
+      <div class="word-gloss">The Law / teaching of God</div>
+      <div class="word-note">The hinge of the book's second movement: the Torah read aloud and <em>explained</em> so the people understand (8:8). The deepest rebuilding is not of stone but of a people re-formed around God's Word — reform that flows from revival in the Book.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-MAP -->
+  <div class="section-label">Cross-Map — Nehemiah's Roots &amp; Echoes</div>
+  <div class="chap-map">
+    <div class="chap-row">
+      <div class="chap-num">Neh 1<br>Prayer</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Daniel 9 &amp; Solomon's plea — confessing exile and pleading God's covenant promise to restore.</div><div class="cc-refs">Dan 9:4–19 · 1 Kgs 8:46–53</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Persevering, covenant-shaped prayer that moves God to act.</div><div class="cc-refs">Luke 18:1–8 · Jas 5:16</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Restoration begins on the knees, pleading God's word.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Neh 2–6<br>Rebuild</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Amos 9:11 — "I will raise up… repair its breaches… rebuild." Nehemiah 3 even repairs the breaches.</div><div class="cc-refs">Amos 9:11 · Isa 58:12</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Building God's house with dependence and diligence, against opposition.</div><div class="cc-refs">1 Cor 3:9–10 · Matt 16:18</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">God rebuilds ruins through people who pray and work.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Neh 8<br>The Word</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The Law read to the assembly; covenant renewed — as at Sinai and under Josiah.</div><div class="cc-refs">Deut 31:11 · 2 Kgs 23:1–3</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Jesus reads and opens the Scripture; the Word explained brings life.</div><div class="cc-refs">Luke 4:16–21 · Neh 8:8 → Acts</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Revival comes when the Word is read and understood.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Neh 13<br>The Wall &amp; Christ</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Covenant separation to guard holiness — Sabbath and marriage reforms.</div><div class="cc-refs">Exod 20:8 · Deut 7:3</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">In Christ the dividing wall of hostility is torn down — Jew and Gentile made one.</div><div class="cc-refs">Eph 2:14–16</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Nehemiah builds a wall to guard a people; Christ removes the wall to make one people.</div></div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-grid">
+    <div class="comm-card">
+      <div class="comm-author">Derek Kidner</div>
+      <div class="comm-title">Ezra &amp; Nehemiah (Tyndale OT Commentaries, 1979)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Kidner reads Nehemiah as the story of God accomplishing restoration through a praying, practical leader — holding together the "secular" work of walls and the sacred work of the Word without dividing them.</div>
+      <div class="comm-point">Strong on ch.8 as the theological centre: the reforming power is the Scripture read and understood, not Nehemiah's administration alone.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Ezra &amp; Nehemiah, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">H. G. M. Williamson</div>
+      <div class="comm-title">Ezra, Nehemiah (Word Biblical Commentary, 1985)</div>
+      <span class="comm-tradition trad-critical">Critical · Standard Reference</span>
+      <div class="comm-point">The benchmark scholarly treatment — meticulous on the Nehemiah Memoir, the "remember" formula, and the book's composition. Essential for the historical and literary questions.</div>
+      <div class="comm-point">Analyses the memoir's distinctive first-person voice and its appeals to God to "remember" as a recognised ancient dedicatory form.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Ezra, Nehemiah, WBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">J. I. Packer</div>
+      <div class="comm-title">A Passion for Faithfulness (1995)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Devotional</span>
+      <div class="comm-point">Packer draws from Nehemiah a theology of godly leadership and perseverance: faithfulness to God expressed in prayerful planning, courage under opposition, and refusal to compromise.</div>
+      <a href="https://www.crossway.org/" target="_blank" class="source-link">crossway.org — A Passion for Faithfulness [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Raymond Brown</div>
+      <div class="comm-title">The Message of Nehemiah (BST, 1998)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Brown's pastoral exposition traces the interplay of prayer and work, and the way genuine renewal moves from the Word (ch.8) to confession (ch.9) to concrete commitment (ch.10) — and must be guarded (ch.13).</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Nehemiah [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles R. Swindoll</div>
+      <div class="comm-title">Hand Me Another Brick (1978)</div>
+      <span class="comm-tradition trad-preaching">Evangelical · Leadership</span>
+      <div class="comm-point">The classic popular treatment of Nehemiah as a leadership case study — vision, motivation, delegation, handling criticism, and finishing the task — all grounded in dependence on God.</div>
+      <a href="https://www.thomasnelson.com/" target="_blank" class="source-link">thomasnelson.com — Hand Me Another Brick [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Mervin Breneman</div>
+      <div class="comm-title">Ezra, Nehemiah, Esther (New American Commentary, 1993)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Breneman balances exegesis and theology, emphasising covenant renewal and the community's re-formation around the Law as the book's enduring message for the people of God.</div>
+      <a href="https://www.bhpublishinggroup.com/" target="_blank" class="source-link">bhpublishinggroup.com — Ezra, Nehemiah, Esther, NAC [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- HARDEST -->
+  <div class="hard-box">
+    <div class="hard-title">The Hardest Parts — Where Readers Wrestle</div>
+    <div class="hard-item">
+      <div class="hard-q">1. Nehemiah's harsh reforms in ch.13 — pulling out hair, cursing, beating (13:25)?</div>
+      <div class="hard-a">Nehemiah's zeal in the final chapter is jarring to modern readers. It should be read as the reaction of a covenant leader to serious, community-endangering compromise (foreign marriages that had already sunk Israel once, 13:26), expressed in the robust idiom of his culture. The narrative <em>reports</em> his actions; it does not necessarily hold every one up as a model to copy. His underlying concern — guarding the newly-renewed covenant from the very sins that caused the exile — is the point, not the method. It also honestly shows how fragile reform is, and how a leader's passion can tip toward severity.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">2. The "remember me" prayers — is Nehemiah claiming to earn God's favour by works?</div>
+      <div class="hard-a">"Remember me, O my God, for good… according to your steadfast love" (13:22) can sound like merit-seeking. But Nehemiah consistently appeals to God's <em>covenant love</em> (ḥesed), not to his own worth as payment. The "remember" formula is a recognised way of laying one's life and labour before God and entrusting the outcome to him — closer to "Lord, you see my heart in this; deal with me in your mercy" than "you owe me." His whole book begins with confession of sin (1:6–7), which rules out self-righteousness.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">3. The ban on foreign marriages (13:23–27) — doesn't this teach ethnic exclusion?</div>
+      <div class="hard-a">The concern is covenantal and spiritual, not racial: intermarriage with surrounding peoples had repeatedly drawn Israel into idolatry (Solomon is the cited example, 13:26), and the fragile post-exilic community could not survive another slide. The Old Testament itself welcomes the foreigner who joins the LORD (Ruth the Moabite; Isaiah 56:3–7; Rahab), so this is not blanket xenophobia but protection against syncretism at a vulnerable moment. In Christ the barrier between Jew and Gentile is decisively removed (Eph 2:14) — the trajectory runs toward inclusion, with holiness preserved by faith, not ethnicity.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">4. Why does the book end so abruptly, on relapse and reform rather than triumph?</div>
+      <div class="hard-a">The wall is finished gloriously by ch.12 — yet the book closes (ch.13) with Nehemiah returning to find the reforms unravelling. This is deliberate realism: even a rebuilt city and a signed covenant cannot secure the human heart. The down-note ending leaves the reader longing for a better and lasting restoration — a governor who will not have to leave, a covenant that will be kept, a heart truly changed (Jer 31; Ezek 36). Nehemiah rebuilds the walls; he cannot renew the heart. The book quietly points beyond itself to the One who can.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A City in Ruins</div>
+        <div class="tn-text">A demoralised remnant lived among broken walls, exposed and ashamed, a century after the first exiles returned. Into that Nehemiah came — not a priest or prophet but a praying administrator — who mobilised ordinary families to rebuild in 52 days, and then let Ezra's reading of the Word rebuild the people themselves. Walls first, but the Word at the centre.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Rebuilding What's Broken</div>
+        <div class="tn-text">Nehemiah is a handbook for anyone facing a God-sized rebuilding job — a family, a church, a ministry, a life in ruins. It teaches the marriage of prayer and action, the courage to build against opposition, the power of each person owning "the section in front of their house," and the deepest truth of all: real restoration is not finally about walls but about a people re-formed around God's Word.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: What is the "section of wall in front of my own house" — the piece of God's rebuilding work nearest to me — that I've been waiting for someone else to repair?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"Nehemiah rebuilds a wall in fifty-two days — but the book's real work is a people re-formed around the Word of God. Prayer and action together raise the wall; the Word read and understood raises the people; and the abrupt ending, with reform already fraying, leaves us longing for a restorer who can rebuild the heart."</div>
+    <div class="verdict-ref">Nehemiah 6:15–16 · 8:8 · 8:10 — the wall finished by God's hand; the Word made clear; "the joy of the LORD is your strength."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
