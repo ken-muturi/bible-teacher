@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nehemiah 8 — The Word Read, the People Renewed (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
+  .companion-link:hover { color: #1c5c30; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 82px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #3b6fd4; } .beat.b1 .beat-body { border-color: #3b6fd4; } .beat.b1 .beat-ref { color: #3b6fd4; }
+  .beat.b2 .beat-num { background: #6c4bbf; } .beat.b2 .beat-body { border-color: #6c4bbf; } .beat.b2 .beat-ref { color: #6c4bbf; }
+  .beat.b3 .beat-num { background: #d47c1a; } .beat.b3 .beat-body { border-color: #d47c1a; } .beat.b3 .beat-ref { color: #d47c1a; }
+  .beat.b4 .beat-num { background: #2e8a4a; } .beat.b4 .beat-body { border-color: #2e8a4a; } .beat.b4 .beat-ref { color: #2e8a4a; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* WEEPING → JOY */
+  .flow { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .flow-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .flow-row { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; align-items: center; }
+  .flow-step { background: #262626; border: 1px solid #444; border-radius: 3px; padding: 11px 12px; text-align: center; }
+  .flow-step.s1 { border-color: #3b6fd4; } .flow-step.s2 { border-color: #c0392b; } .flow-step.s3 { border-color: #2e8a4a; }
+  .flow-tag { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 4px; }
+  .flow-step.s1 .flow-tag { color: #7eb8f7; } .flow-step.s2 .flow-tag { color: #e0796b; } .flow-step.s3 .flow-tag { color: #6fc28d; }
+  .flow-text { font-size: 0.73rem; color: #ccc; line-height: 1.36; }
+  .flow-arrow { display: flex; align-items: center; justify-content: center; font-family: 'Gentium Book Plus', serif; font-size: 1.4rem; color: #888; }
+  .flow-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* HOW THEY HANDLED THE WORD */
+  .handle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .handle-card { border: 2px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 12px 14px; }
+  .handle-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.88rem; color: #3b6fd4; margin-bottom: 3px; }
+  .handle-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-heb { font-size: 1.25rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* OT/CANON */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
+  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #2e8a4a; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .flow-row { grid-template-columns: 1fr; }
+    .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
+    .handle-grid, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Nehemiah 8:1–12</div>
+  <div class="header-title">The Word Read, the People Renewed — "The Joy of the LORD Is Your Strength"</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../visuals/nehemiah-panel.html" class="companion-link">⊕ Nehemiah book overview</a>
+    <a href="../discussions/nehemiah-discussion-guide.html" class="companion-link">Nehemiah discussion guide</a>
+  </div>
+
+  <div class="section-label">Anchor Text — Revival at the Water Gate</div>
+  <div class="passage-callout">
+    <div class="pc-label">Nehemiah 8:8, 10 · The Book made clear, and the joy that follows</div>
+    <div class="pc-text">
+      "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading." … "Do not be grieved, for the joy of the LORD is your strength."
+    </div>
+    <div class="pc-ref">Nehemiah 8:8, 10 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> The wall is finished (ch. 6) and the city secured (ch. 7). But the book's true climax is not the stonework — it is this scene. The people themselves gather "as one man" at the Water Gate and <em>ask</em> Ezra the scribe to bring out the Book of the Law of Moses. From daybreak to midday he reads it aloud to everyone who can understand; the Levites move through the crowd explaining it; and the Word does what no wall could — it pierces, convicts, and finally renews the people. They weep at what they hear, and are told to turn their grief to feasting, "for the joy of the LORD is your strength." Nehemiah rebuilt a wall in fifty-two days; here God rebuilds a people around his Word.</div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">Structure — Four Movements (8:1–12)</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">8:1–3</div>
+      <div class="beat-body">
+        <div class="beat-ref">1 · The Hunger</div>
+        <div class="beat-title">"Bring the Book"</div>
+        <div class="beat-desc">The people gather as one and <em>ask</em> for the Word. Men, women, and all who could understand stand attentive from early morning to midday. Revival begins with a hunger for Scripture, not a program.</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">8:4–6</div>
+      <div class="beat-body">
+        <div class="beat-ref">2 · The Reverence</div>
+        <div class="beat-title">They Stand and Worship</div>
+        <div class="beat-desc">Ezra opens the Book on a wooden platform; the people rise; he blesses the LORD; they answer "Amen, Amen," lift their hands, and bow with faces to the ground. The Word is received with reverence, as God's own voice.</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">8:7–8</div>
+      <div class="beat-body">
+        <div class="beat-ref">3 · The Understanding</div>
+        <div class="beat-title">"They Gave the Sense"</div>
+        <div class="beat-desc">The Levites teach among the people, reading "clearly" and giving "the sense, so that the people understood." Not bare recitation but explanation — the Word opened up so it can be grasped and obeyed.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">8:9–12</div>
+      <div class="beat-body">
+        <div class="beat-ref">4 · The Response</div>
+        <div class="beat-title">Weeping Turned to Joy</div>
+        <div class="beat-desc">The people weep as they hear how far they've fallen short. But Nehemiah, Ezra, and the Levites say: this day is holy; do not mourn. Eat, drink, share with those who have nothing — "the joy of the LORD is your strength." They go to celebrate "because they understood."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEPING TO JOY -->
+  <div class="section-label">The Movement of a Heart Meeting the Word</div>
+  <div class="flow">
+    <div class="flow-title">Understanding → Conviction → Joy</div>
+    <div class="flow-row">
+      <div class="flow-step s1"><div class="flow-tag">They Understood (8:8)</div><div class="flow-text">The Word is explained until the sense lands — it is grasped, not just heard.</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step s2"><div class="flow-tag">They Wept (8:9)</div><div class="flow-text">Understanding brings conviction — they see how far they have fallen from God's Law.</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step s3"><div class="flow-tag">They Rejoiced (8:12)</div><div class="flow-text">Grief gives way to feasting and sharing — joy in the God whose Word they now know.</div></div>
+    </div>
+    <div class="flow-note">The order matters. Real encounter with Scripture first <em>wounds</em> — it shows us our sin and shortfall, and tears come. But the leaders will not let the people stay in mourning: the appropriate end of hearing God's Word is <em>joy</em>, because the God who convicts is the God who forgives and restores. Godly sorrow is real, but it is a doorway, not a destination. "The joy of the LORD is your strength" is spoken to weeping people — turning their grief into gladness.</div>
+  </div>
+
+  <!-- HOW THEY HANDLED THE WORD -->
+  <div class="section-label">How They Handled the Word — A Model for Every Generation</div>
+  <div class="handle-grid">
+    <div class="handle-card"><div class="handle-ref">Asked for it (8:1)</div><div class="handle-note">The initiative came from the people — a hunger to hear God speak. Renewal starts with an appetite for the Word itself.</div></div>
+    <div class="handle-card"><div class="handle-ref">Gave it time (8:3)</div><div class="handle-note">"From early morning until midday" — hours of attentive listening. The Word was given room, not squeezed into a slot.</div></div>
+    <div class="handle-card"><div class="handle-ref">Received it standing (8:5)</div><div class="handle-note">The whole assembly stood as the Book was opened — bodily reverence for the authority of Scripture.</div></div>
+    <div class="handle-card"><div class="handle-ref">Explained it clearly (8:7–8)</div><div class="handle-note">The Levites "gave the sense." Teaching that opens the meaning so people understand — the seed of all faithful preaching.</div></div>
+    <div class="handle-card"><div class="handle-ref">Let it convict (8:9)</div><div class="handle-note">They did not deflect the Word's cutting edge; they wept. Honest conviction, not managed comfort.</div></div>
+    <div class="handle-card"><div class="handle-ref">Obeyed it with joy (8:12–18)</div><div class="handle-note">They kept the Feast of Booths they rediscovered in the text — understanding overflowed into glad obedience.</div></div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of a Word-Centred Revival</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">סֵפֶר</div>
+      <div class="word-translit">sepher — "book / scroll"</div>
+      <span class="word-ref-badge">8:1, 3, 8</span>
+      <div class="word-gloss">The written Book of the Law</div>
+      <div class="word-note">The scene centres on a physical <em>Book</em> — the written Word of God, brought out, opened, and read. Renewal here is not new revelation but the recovery of the Scripture the people already had and had neglected.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">קָרָא</div>
+      <div class="word-translit">qara — "to read / call out"</div>
+      <span class="word-ref-badge">8:3, 8, 18</span>
+      <div class="word-gloss">To read aloud, proclaim</div>
+      <div class="word-note">The Word is <em>read aloud</em> to the gathered people — public, corporate, heard together. The same verb means "to call/proclaim": reading Scripture aloud is a proclamation, God addressing his people.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">בִּין</div>
+      <div class="word-translit">bin — "understand"</div>
+      <span class="word-ref-badge">8:2,3,7,8,12</span>
+      <div class="word-gloss">To understand, discern</div>
+      <div class="word-note">The keyword of the chapter, repeated five times. The goal is never mere hearing but <em>understanding</em> — "all who could understand," "so that they understood," "because they understood." Comprehended truth is what changes a people.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">מְפֹרָשׁ</div>
+      <div class="word-translit">meporash — "clearly / with interpretation"</div>
+      <span class="word-ref-badge">8:8</span>
+      <div class="word-gloss">Made distinct / explained (possibly translated)</div>
+      <div class="word-note">The Levites read "meporash" and "gave the sense." Many take this to include rendering the Hebrew into Aramaic for a returned people, and certainly explaining it — the root of exposition. The Word must be made <em>clear</em>, not just recited.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">חֶדְוָה</div>
+      <div class="word-translit">ḥedwah — "joy"</div>
+      <span class="word-ref-badge">8:10</span>
+      <div class="word-gloss">Gladness, rejoicing</div>
+      <div class="word-note">"The <em>joy</em> of the LORD is your strength." An Aramaic-flavoured word for deep gladness. This joy is not manufactured cheerfulness but the settled delight of a people restored to their God through his Word — and it is a source of strength.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">מָעוֹז</div>
+      <div class="word-translit">maʿoz — "strength / stronghold"</div>
+      <span class="word-ref-badge">8:10</span>
+      <div class="word-gloss">Refuge, fortress, place of safety</div>
+      <div class="word-note">"Your <em>maʿoz</em>" — not just energy but a <em>stronghold</em>, a fortress. Fittingly, a book about a rebuilt wall says the people's true fortress is not the stone but the joy of the LORD. The wall protects the city; joy in God guards the heart.</div>
+    </div>
+  </div>
+
+  <!-- CANON -->
+  <div class="section-label">Across the Canon — The Word Read and Understood</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Deuteronomy 31:10–13</div>
+      <div class="ot-title">The Law Read to All</div>
+      <div class="ot-note">Moses commanded that the Law be read aloud to the whole assembly — men, women, children, and sojourners — so that they would hear, learn, and fear the LORD. Nehemiah 8 is that command joyfully obeyed.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">2 Kings 22–23</div>
+      <div class="ot-title">Josiah &amp; the Rediscovered Book</div>
+      <div class="ot-note">When the lost Book of the Law was found and read to Josiah, he tore his clothes in grief and led national covenant renewal. The same pattern: the Word rediscovered, heard, and it reforms a people.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Luke 4:16–21</div>
+      <div class="ot-title">Jesus Reads and Explains</div>
+      <div class="ot-note">Jesus stands to read the scroll of Isaiah, then sits to explain: "Today this Scripture is fulfilled." The Nehemiah 8 pattern — read, then give the sense — reaches its climax in the One who is the Word.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Acts 2:37 · 2 Cor 7:10</div>
+      <div class="ot-title">Cut to the Heart → Godly Grief → Life</div>
+      <div class="ot-note">At Pentecost the Word "cut them to the heart"; Paul says "godly grief produces a repentance that leads to salvation." The weeping-to-joy movement of Nehemiah 8 is the anatomy of every true response to the Word.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Derek Kidner</div>
+      <div class="comm-title">Ezra &amp; Nehemiah (TOTC, 1979)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Kidner marks Nehemiah 8 as the book's spiritual summit: the Word, not the wall, is the true rebuilder. He highlights "gave the sense" as the charter for expository teaching — Scripture made clear so it can be understood and obeyed.</div>
+      <div class="comm-point">On 8:10: the joy is not a denial of their sin but the proper fruit of grace received; the leaders redirect right sorrow toward the deeper reality of God's mercy.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Ezra &amp; Nehemiah, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">H. G. M. Williamson</div>
+      <div class="comm-title">Ezra, Nehemiah (WBC, 1985)</div>
+      <span class="comm-tradition trad-critical">Critical · Standard Reference</span>
+      <div class="comm-point">Williamson analyses the liturgy of the assembly and the meaning of "meporash / gave the sense," discussing the likely role of interpretation (Aramaic rendering) for the post-exilic community — the beginnings of a teaching tradition around the text.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Ezra, Nehemiah, WBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Raymond Brown</div>
+      <div class="comm-title">The Message of Nehemiah (BST, 1998)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Brown draws out the pattern of renewal: hunger for the Word, reverent reception, clear explanation, honest conviction, and glad obedience. He stresses that understanding (bin) is the hinge — truth grasped is truth that transforms.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Nehemiah [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Mervin Breneman</div>
+      <div class="comm-title">Ezra, Nehemiah, Esther (NAC, 1993)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Breneman frames ch.8 as covenant renewal driven by Scripture: the community re-formed as it hears, understands, grieves, and rejoices. The joy of the LORD becomes the strength for the obedience the covenant requires.</div>
+      <a href="https://www.bhpublishinggroup.com/" target="_blank" class="source-link">bhpublishinggroup.com — Ezra, Nehemiah, Esther, NAC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles Spurgeon</div>
+      <div class="comm-title">Sermons on "The Joy of the LORD" (Victorian)</div>
+      <span class="comm-tradition trad-preaching">Reformed Baptist · Preaching</span>
+      <div class="comm-point">Spurgeon preached 8:10 memorably: joy in God is not a luxury but a fortress — "holy joy will oil the wheels of your life" and arm the soul against temptation and despair. Strength flows from delight in the LORD, not grim effort.</div>
+      <a href="https://www.spurgeon.org/resource-library/sermons/" target="_blank" class="source-link">spurgeon.org — The Joy of the Lord [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">J. I. Packer</div>
+      <div class="comm-title">A Passion for Faithfulness (1995)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Devotional</span>
+      <div class="comm-point">Packer sees in Nehemiah 8 the enduring means of spiritual renewal in every age: the public reading and faithful exposition of Scripture, received humbly, producing both repentance and joy. Revival is, at heart, the Word regaining its place.</div>
+      <a href="https://www.crossway.org/" target="_blank" class="source-link">crossway.org — A Passion for Faithfulness [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Why did understanding the Word make the people <em>weep</em>?</div>
+      <div class="pressure-a">Because when Scripture is truly grasped, the first thing it does is expose the gap between God's standard and our lives. The returned exiles heard the Law they and their fathers had broken — the very disobedience that had caused the exile — and were cut to the heart. This is healthy: the Word is "sharper than any two-edged sword" (Heb 4:12), and conviction of sin is the normal first effect of really hearing it. A reading of Scripture that never wounds has probably not been understood.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Then why are they told <em>not</em> to weep, but to rejoice?</div>
+      <div class="pressure-a">Not because grief over sin is wrong, but because it must not be the final word. The day was "holy to the LORD" — a day to celebrate God's covenant faithfulness in bringing them back and re-teaching them his Word. Godly sorrow is a doorway to repentance and restoration, not a place to camp (2 Cor 7:10). The leaders redirect the people from staring at their failure to resting in God's mercy — and that turn from grief to joy is itself an act of faith. The gospel movement is always sin seen, then grace embraced, ending in joy.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. What exactly is "the joy of the LORD," and how is it "strength"?</div>
+      <div class="pressure-a">Most naturally it means <em>the joy that has the LORD as its object and source</em> — gladness in God himself, given by him. It is "strength" (maʿoz, a stronghold) because a heart delighting in God is fortified against despair, temptation, and the exhaustion of duty in a way that grim willpower never is. Joy is not the reward for strength; it <em>is</em> the strength. For a people facing the long, unglamorous work of rebuilding a community, that is exactly the fuel they need — and it comes from the Word, not from their circumstances.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Does "they gave the sense" justify preaching/teaching, or should Scripture just be read?</div>
+      <div class="pressure-a">The verse does both: the Word was <em>read</em> <em>and</em> its sense was <em>given</em> so the people understood (8:8). Reading alone was not deemed sufficient; explanation was needed for comprehension — this is the biblical seed of expository teaching and, many argue, of translation. It dignifies both the text (nothing is added to it) and the teacher's task (opening it up). The goal is never the teacher's cleverness but the people's <em>understanding</em> — the same aim Jesus and the apostles pursued (Luke 24:27; Acts 8:30–31).</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Is this a model for corporate worship today, or a one-off historical event?</div>
+      <div class="pressure-a">It is a specific historical event, but its pattern is deliberately paradigmatic — echoing Deuteronomy 31 and echoed forward at Pentecost and in the synagogue-and-church practice of reading and expounding Scripture (cf. 1 Tim 4:13, "devote yourself to the public reading of Scripture, to exhortation, to teaching"). The particulars (a wooden platform, a returned remnant) are of their moment; the essentials — the gathered people, the read Word, faithful explanation, humble reception, conviction, and joy — remain the enduring shape of Word-centred worship and renewal.</div>
+    </div>
+  </div>
+
+  <!-- XREF -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT root</div>
+      <div class="xref-ref">Deuteronomy 31:10–13</div>
+      <div class="xref-note">The Law commanded to be read aloud to all the people, that they may hear, learn, and fear the LORD.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← Parallel renewal</div>
+      <div class="xref-ref">2 Kings 22–23 · 2 Chr 34</div>
+      <div class="xref-note">Josiah hears the rediscovered Book, grieves, and leads covenant renewal — the same Word-driven reform.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The Word's power</div>
+      <div class="xref-ref">Hebrews 4:12 · Ps 19:7–8</div>
+      <div class="xref-note">"Living and active… piercing"; the law "reviving the soul… rejoicing the heart" — conviction and joy together.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Fulfilled in Jesus</div>
+      <div class="xref-ref">Luke 4:16–21 · 24:27</div>
+      <div class="xref-note">Jesus reads and explains the Scripture, opening its sense — the Nehemiah 8 pattern in the hands of the Word made flesh.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Godly grief</div>
+      <div class="xref-ref">Acts 2:37 · 2 Cor 7:10</div>
+      <div class="xref-note">Cut to the heart by the Word; "godly grief produces repentance that leads to salvation." Weeping that ends in life and joy.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The command remains</div>
+      <div class="xref-ref">1 Timothy 4:13</div>
+      <div class="xref-note">"Devote yourself to the public reading of Scripture, to exhortation, to teaching" — read it and give the sense, still.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — At the Water Gate</div>
+        <div class="tn-text">A rebuilt city still had a half-formed people — a generation who barely knew the Law their exile had been meant to teach them. So they asked for the Book, stood for hours to hear it, let the Levites make its meaning plain, wept at what they had lost, and then feasted in the joy of a God who had brought them home. The wall was finished; now the people were being re-made.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Word-Hungry or Word-Starved</div>
+        <div class="tn-text">We can build impressive things — programs, buildings, platforms — and still be a Word-starved people. Nehemiah 8 confronts us with a community that <em>craved</em> Scripture, gave it hours, received it standing, wanted it explained, let it convict, and obeyed it with joy. It asks whether our own renewal is being sought in activity and technique, or in the old, unglamorous means: the Word read, understood, and gladly obeyed.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: When did I last let the Word cut me to the point of tears — and then let its God turn my grief into joy? Am I feeding on Scripture enough to be re-formed by it?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"A wall can be rebuilt in fifty-two days; a people is rebuilt only around the Word of God — read, explained, understood, and obeyed. And the Word that first wounds with conviction ends in joy, because the joy of the LORD is the true stronghold of his people."</div>
+    <div class="verdict-ref">Nehemiah 8:8, 10 — "they gave the sense, so that the people understood… the joy of the LORD is your strength."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

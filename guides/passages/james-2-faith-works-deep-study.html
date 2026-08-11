@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James 2:14–26 — Faith &amp; Works (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #3b6fd4; text-decoration: none; border-bottom: 1px dashed #3b6fd4; }
+  .companion-link:hover { color: #2551a8; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* STRUCTURE */
+  .structure-map { margin: 4px 0 24px; }
+  .beat { display: flex; gap: 0; margin-bottom: 6px; align-items: stretch; }
+  .beat-num { width: 82px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Gentium Book Plus', serif; font-size: 0.72rem; font-weight: 700; color: #fff; border-radius: 3px 0 0 3px; padding: 4px; line-height: 1.2; }
+  .beat-body { flex: 1; border: 2px solid; border-left: none; border-radius: 0 3px 3px 0; padding: 10px 14px; background: #faf7f2; }
+  .beat.b1 .beat-num { background: #3b6fd4; } .beat.b1 .beat-body { border-color: #3b6fd4; } .beat.b1 .beat-ref { color: #3b6fd4; }
+  .beat.b2 .beat-num { background: #6c4bbf; } .beat.b2 .beat-body { border-color: #6c4bbf; } .beat.b2 .beat-ref { color: #6c4bbf; }
+  .beat.b3 .beat-num { background: #d47c1a; } .beat.b3 .beat-body { border-color: #d47c1a; } .beat.b3 .beat-ref { color: #d47c1a; }
+  .beat.b4 .beat-num { background: #2e8a4a; } .beat.b4 .beat-body { border-color: #2e8a4a; } .beat.b4 .beat-ref { color: #2e8a4a; }
+  .beat-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 2px; }
+  .beat-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #2c2c2c; margin-bottom: 3px; }
+  .beat-desc { font-size: 0.82rem; color: #444; line-height: 1.42; }
+
+  /* JAMES vs PAUL */
+  .jp { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 8px; }
+  .jp-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .jp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .jp-col { background: #262626; border: 1px solid #444; border-radius: 3px; padding: 12px 13px; }
+  .jp-col.james { border-color: #3b6fd4; } .jp-col.paul { border-color: #6c4bbf; }
+  .jp-who { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+  .jp-col.james .jp-who { color: #7eb8f7; } .jp-col.paul .jp-who { color: #b79ce8; }
+  .jp-item { font-size: 0.74rem; color: #ccc; line-height: 1.4; margin-bottom: 5px; padding-left: 10px; border-left: 2px solid; }
+  .jp-col.james .jp-item { border-color: #3b6fd4; } .jp-col.paul .jp-item { border-color: #6c4bbf; }
+  .jp-resolve { font-size: 0.79rem; color: #bbb; line-height: 1.46; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+  .jp-resolve strong { color: #6fc28d; }
+  .jp-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.15rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* EXAMPLES */
+  .ex-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ex-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 15px; }
+  .ex-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.95rem; color: #d47c1a; margin-bottom: 2px; }
+  .ex-ref { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-weight: 700; margin-bottom: 6px; }
+  .ex-note { font-size: 0.79rem; color: #444; line-height: 1.42; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #3b6fd4; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #7eb8f7; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
+  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .jp-row, .ex-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">James 2:14–26</div>
+  <div class="header-title">Faith &amp; Works — "Faith Without Works Is Dead"</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../visuals/james-panel.html" class="companion-link">⊕ James book overview</a>
+    <a href="../discussions/james-discussion-guide.html" class="companion-link">James discussion guide</a>
+  </div>
+
+  <div class="section-label">Anchor Text — The Passage That Launched a Debate</div>
+  <div class="passage-callout">
+    <div class="pc-label">James 2:17, 26 · The bracketing verdict</div>
+    <div class="pc-text">
+      "So also faith by itself, if it does not have works, is dead." … "For as the body apart from the spirit is dead, so also faith apart from works is dead."
+    </div>
+    <div class="pc-ref">James 2:17, 26 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> James — the brother of Jesus and leader of the Jerusalem church — writes to scattered Jewish believers a letter of intensely practical wisdom. Having just warned against showing favouritism to the rich (2:1–13), he turns to the most famous and most debated passage in the book: the relationship of <em>faith</em> and <em>works</em>. His target is not living, saving faith but a hollow substitute — a "faith" that is all profession and no practice, mere words with no life behind them. Against that, James argues bluntly that such faith "is dead," useless, and cannot save. The passage has been set against Paul's "justified by faith apart from works" (Rom 3:28) ever since — but read carefully, the two apostles are not enemies but allies, addressing opposite errors from opposite ends.</div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">The Argument — Four Moves</div>
+  <div class="structure-map">
+    <div class="beat b1">
+      <div class="beat-num">2:14–17</div>
+      <div class="beat-body">
+        <div class="beat-ref">1 · The Claim</div>
+        <div class="beat-title">"Can That Faith Save Him?"</div>
+        <div class="beat-desc">A person "says" he has faith but has no works. James pictures sending a hungry, unclothed brother away with "be warmed and filled" — words without help. Such faith, "by itself," is dead (2:17).</div>
+      </div>
+    </div>
+    <div class="beat b2">
+      <div class="beat-num">2:18–19</div>
+      <div class="beat-body">
+        <div class="beat-ref">2 · The Challenge</div>
+        <div class="beat-title">"Show Me Your Faith"</div>
+        <div class="beat-desc">"Show me your faith apart from your works, and I will show you my faith by my works." Faith is invisible; works are how it becomes visible. Even the demons "believe" the creed — and shudder. Mere assent is not saving faith.</div>
+      </div>
+    </div>
+    <div class="beat b3">
+      <div class="beat-num">2:20–25</div>
+      <div class="beat-body">
+        <div class="beat-ref">3 · The Evidence</div>
+        <div class="beat-title">Abraham and Rahab</div>
+        <div class="beat-desc">Abraham's faith "was completed by his works" when he offered Isaac; Genesis 15:6 ("counted as righteousness") was fulfilled. Even Rahab the outsider was "justified by works" when she acted on her faith. Two witnesses: faith that acts.</div>
+      </div>
+    </div>
+    <div class="beat b4">
+      <div class="beat-num">2:26</div>
+      <div class="beat-body">
+        <div class="beat-ref">4 · The Verdict</div>
+        <div class="beat-title">Body Without Spirit</div>
+        <div class="beat-desc">"As the body apart from the spirit is dead, so faith apart from works is dead." Works are to faith what breath is to a body — not an add-on, but the sign that it is alive at all.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAMES vs PAUL -->
+  <div class="section-label">The Big Question — Does James Contradict Paul?</div>
+  <div class="jp">
+    <div class="jp-title">Same words, different battles — and no contradiction</div>
+    <div class="jp-row">
+      <div class="jp-col james">
+        <div class="jp-who">James</div>
+        <div class="jp-item"><strong>Opponent:</strong> dead orthodoxy — people claiming faith with no fruit</div>
+        <div class="jp-item"><strong>"Faith":</strong> bare intellectual assent ("even the demons believe")</div>
+        <div class="jp-item"><strong>"Works":</strong> the fruit/evidence of living faith — deeds of love</div>
+        <div class="jp-item"><strong>"Justified":</strong> shown/proven righteous — vindicated as real</div>
+        <div class="jp-item"><strong>Point:</strong> faith that saves is never alone; it works</div>
+      </div>
+      <div class="jp-col paul">
+        <div class="jp-who">Paul</div>
+        <div class="jp-item"><strong>Opponent:</strong> legalism — trying to earn standing before God</div>
+        <div class="jp-item"><strong>"Faith":</strong> living trust that receives Christ</div>
+        <div class="jp-item"><strong>"Works":</strong> "works of the law" done to merit salvation</div>
+        <div class="jp-item"><strong>"Justified":</strong> declared righteous before God — the initial verdict</div>
+        <div class="jp-item"><strong>Point:</strong> we are saved by grace through faith, not by earning</div>
+      </div>
+    </div>
+    <div class="jp-resolve">Strikingly, <strong>both quote Genesis 15:6</strong> — and both are right, because they answer opposite errors. Paul fights the person who thinks works <em>earn</em> salvation; James fights the person who thinks faith <em>without</em> works still saves. Their agreement is exact: <strong>we are justified by faith alone, but the faith that justifies is never alone.</strong> Paul himself says the only thing that counts is "faith working through love" (Gal 5:6) and that we are saved for "good works" (Eph 2:10); James never says works <em>earn</em> salvation, only that they <em>prove</em> it. Two apostles, one gospel, two front lines.</div>
+  </div>
+  <div class="jp-cap">Luther felt the tension (he called James "an epistle of straw") — but the church has rightly kept James in the canon, because the danger of a dead, workless "faith" is as real as the danger of works-righteousness, and every generation needs both warnings.</div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Terms in Dispute</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">πίστις</div>
+      <div class="word-translit">pistis — "faith"</div>
+      <span class="word-ref-badge">2:14, 17, 22, 24</span>
+      <div class="word-gloss">Faith / trust / the thing believed</div>
+      <div class="word-note">The word covers a range — from living, trusting reliance to bare creedal assent. James's whole point turns on distinguishing them: the "faith" he attacks (2:14) is the kind demons have (2:19); the faith he commends is the kind that <em>works</em> (2:22).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἔργα</div>
+      <div class="word-translit">erga — "works"</div>
+      <span class="word-ref-badge">2:14–26</span>
+      <div class="word-gloss">Works / deeds / actions</div>
+      <div class="word-note">For James, deeds of practical love and obedience — feeding the hungry (2:15–16), Abraham's obedience, Rahab's action. Not Paul's "works of the law" done to earn merit, but the natural <em>fruit</em> of a faith that is truly alive.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">δικαιόω</div>
+      <div class="word-translit">dikaioō — "justify"</div>
+      <span class="word-ref-badge">2:21, 24, 25</span>
+      <div class="word-gloss">To declare / show / prove righteous</div>
+      <div class="word-note">The pivotal word. It can mean "declare righteous" (Paul's forensic sense) or "show/vindicate as righteous" (as in Luke 7:35, "wisdom is justified by her deeds"). James uses it in the latter sense: works <em>demonstrate</em> a righteousness faith has already received.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">τελειόω</div>
+      <div class="word-translit">teleioō — "complete / perfect"</div>
+      <span class="word-ref-badge">2:22</span>
+      <div class="word-gloss">To bring to maturity / completion</div>
+      <div class="word-note">"Faith was <em>completed</em> by his works." Works do not <em>create</em> Abraham's faith — he already believed (Gen 15:6, years earlier) — they bring it to full expression and maturity. Faith reaches its intended goal in action.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">νεκρός</div>
+      <div class="word-translit">nekros — "dead"</div>
+      <span class="word-ref-badge">2:17, 26</span>
+      <div class="word-gloss">Dead / lifeless / a corpse</div>
+      <div class="word-note">The verdict that brackets the passage. A workless faith isn't weak faith — it's a <em>corpse</em>, faith with no life in it. Like a body without breath, it has the outward form but none of the living reality.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἀργή</div>
+      <div class="word-translit">argē — "useless / barren"</div>
+      <span class="word-ref-badge">2:20</span>
+      <div class="word-gloss">Idle, ineffective, unproductive</div>
+      <div class="word-note">"Faith apart from works is <em>useless</em>" (2:20) — literally "workless / un-working" (a-ergos), a pointed pun: faith without <em>erga</em> is <em>arg-</em>, idle. It accomplishes nothing, saves no one, and helps no hungry brother.</div>
+    </div>
+  </div>
+
+  <!-- EXAMPLES -->
+  <div class="section-label">Two Witnesses — Faith That Acted</div>
+  <div class="ex-grid">
+    <div class="ex-card">
+      <div class="ex-name">Abraham</div>
+      <div class="ex-ref">James 2:21–24 · Gen 15:6; 22</div>
+      <div class="ex-note">The father of the faithful — and the one Paul cites for justification by faith (Rom 4). James points to the <em>later</em> moment (offering Isaac, Gen 22) where the faith declared righteous in Genesis 15:6 was "completed" and shown genuine by obedience. Believed, then proven. Even "the friend of God" had a faith that worked.</div>
+    </div>
+    <div class="ex-card">
+      <div class="ex-name">Rahab</div>
+      <div class="ex-ref">James 2:25 · Josh 2</div>
+      <div class="ex-note">A Gentile prostitute — the opposite of Abraham in every social way — set beside him as a second witness. Her faith in Israel's God was real because she <em>acted</em>: she received the spies and sent them out safely, risking her life. High and low, Jew and outsider: living faith always shows itself in deeds.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Douglas Moo</div>
+      <div class="comm-title">The Letter of James (PNTC, 2000)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Standard Reference</span>
+      <div class="comm-point">Moo carefully shows James and Paul use "justify," "works," and "faith" differently: James targets a spurious faith and means "demonstrate righteous," while Paul targets legalism and means "declare righteous." No contradiction — complementary truths.</div>
+      <div class="comm-point">Stresses 2:14's precise wording — "<em>Can that faith save him?</em>" — the faith in question is defective from the start, not genuine faith that merely lacks maturity.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Letter of James, PNTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Dan McCartney</div>
+      <div class="comm-title">James (BECNT, 2009)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">McCartney details the "faith completed by works" logic (2:22): works are the maturing and evidencing of faith, not a second ingredient added to it. Abraham's obedience in ch.22 vindicates the faith reckoned in ch.15.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — James, BECNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Alec Motyer</div>
+      <div class="comm-title">The Message of James (BST, 1985)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Motyer's memorable summary: "faith is not what a person <em>claims</em> to have but what a person <em>shows</em> he has." He presses the pastoral edge — a profession of faith with no changed life is a profession to be distrusted.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of James [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Scot McKnight</div>
+      <div class="comm-title">The Letter of James (NICNT, 2011)</div>
+      <span class="comm-tradition trad-critical">Evangelical Scholarly</span>
+      <div class="comm-point">McKnight situates the passage in James's wisdom concern for the poor: the "works" in view are concretely deeds of mercy (2:15–16). Faith that ignores the needy brother is, for James, no faith at all.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Letter of James, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on James (1550)</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin's classic reconciliation: "It is faith alone that justifies, but the faith that justifies is not alone." James, he says, does not dispute how we are justified but disputes the empty boast of faith without fruit.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom45" target="_blank" class="source-link">ccel.org — Calvin on James [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Martin Luther</div>
+      <div class="comm-title">Prefaces to the New Testament (1522)</div>
+      <span class="comm-tradition trad-preaching">Lutheran · Historical</span>
+      <div class="comm-point">Luther's famous unease — calling James "an epistle of straw" beside the gospel-rich books — is a caution about <em>overreading</em> James against justification by faith. Yet his own definition of living faith ("a busy, active thing") is pure James.</div>
+      <a href="https://www.fortresspress.com/" target="_blank" class="source-link">fortresspress.com — Luther's Works, Prefaces [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does James contradict Paul on justification?</div>
+      <div class="pressure-a">No — they fight opposite errors with the same vocabulary used in different senses. Paul opposes <em>legalism</em> (earning salvation by "works of the law") and uses "justify" to mean God's forensic declaration of righteousness received by faith. James opposes <em>dead orthodoxy</em> (a professed faith with no fruit) and uses "justify" to mean being shown/vindicated as genuinely righteous. Both quote Genesis 15:6; both are inspired and true. The synthesis, as Calvin put it: we are justified by faith alone, but the faith that justifies is never alone. Paul would say amen to James 2:17, and James to Ephesians 2:8–9.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. So does James teach salvation by works?</div>
+      <div class="pressure-a">No. James never says works <em>earn</em> or <em>procure</em> salvation. He says works are the necessary <em>evidence</em> that saving faith is present and alive — the fruit, not the root. His illustration is decisive: works are to faith what breath is to a body (2:26). Breath doesn't <em>create</em> life, but a body with no breath is a corpse. Likewise a "faith" that produces no love, no obedience, no care for the needy is not a weak faith but a dead one — and a dead faith cannot save because it was never the living thing that saves.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. What kind of "faith" is James actually attacking?</div>
+      <div class="pressure-a">Bare intellectual assent — believing the right facts about God without trusting or following him. His razor-sharp example is 2:19: "You believe that God is one; you do well. Even the demons believe — and shudder!" Demons have flawless theology and zero salvation. So agreeing with the creed, saying the words, having been raised in church — none of that is saving faith if it never bows the will or moves the hands. James is not lowering the bar on faith; he is exposing a counterfeit of it.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. How can James say Abraham was "justified by works" (2:21) when Genesis and Paul say by faith?</div>
+      <div class="pressure-a">By noticing <em>which moment</em> James points to. Abraham believed and was counted righteous in Genesis 15:6 (Paul's text). James points forward to Genesis 22 — the offering of Isaac, decades later — and says that act "completed" his faith and <em>showed</em> it to be real: "the Scripture was fulfilled" (2:23). So the faith declared righteous in ch.15 was demonstrated and vindicated as genuine in ch.22. "Justified by works" here means "shown to be righteous by the fruit of faith," not "made righteous by earning." The timeline itself rules out works-righteousness.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Was Luther right to call James "an epistle of straw"?</div>
+      <div class="pressure-a">Luther's phrase reflected a pastoral worry that James could be misused against the gospel of grace he had fought to recover — and, read as if it taught works-salvation, it could. But the church was right to keep James canonical and Luther himself never removed it. Rightly understood, James does not threaten justification by faith; it guards it from cheapening into a bloodless profession. In fact Luther's own famous line — faith is "a living, busy, active, mighty thing" that cannot help doing good works — is James's exact point. The two belong together: Paul protects the <em>root</em>, James insists on the <em>fruit</em>.</div>
+    </div>
+  </div>
+
+  <!-- XREF -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The other side</div>
+      <div class="xref-ref">Romans 3:28 · 4:1–5</div>
+      <div class="xref-note">Paul: "justified by faith apart from works of the law," citing Gen 15:6 — the complementary emphasis against legalism.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Paul agrees</div>
+      <div class="xref-ref">Galatians 5:6 · Eph 2:8–10</div>
+      <div class="xref-note">"Faith working through love"; saved by grace "for good works" — Paul's own faith-that-works. No daylight between them.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← The shared text</div>
+      <div class="xref-ref">Genesis 15:6 · 22</div>
+      <div class="xref-note">Abraham "believed… counted as righteousness," then proven in the offering of Isaac. Both apostles build here.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Jesus said it first</div>
+      <div class="xref-ref">Matthew 7:16–21</div>
+      <div class="xref-note">"By their fruit you will know them"; not everyone who says "Lord, Lord" enters, but the one who does the Father's will.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Same test</div>
+      <div class="xref-ref">1 John 3:17–18</div>
+      <div class="xref-note">"If anyone has the world's goods and sees his brother in need, yet closes his heart… let us love not in word but in deed."</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Justified by deeds</div>
+      <div class="xref-ref">Luke 7:35</div>
+      <div class="xref-note">"Wisdom is justified by all her children" — the same sense of dikaioō James uses: shown/vindicated to be right by results.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A Church Tempted to Coast</div>
+        <div class="tn-text">James wrote to believers who knew the right words and could recite the creed — "God is one" — but were showing favouritism to the rich and turning the poor brother away with empty blessings. He refuses to let them hide behind a profession of faith that changed nothing. "Show me," he says. Faith you can only <em>talk</em> is faith worth doubting.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Believism Without Discipleship</div>
+        <div class="tn-text">We live where "I have faith" can mean little more than a stored belief and a past prayer, with a life indistinguishable from the world's. James is the needed corrective — not against grace, but against a counterfeit of faith that costs nothing and does nothing. He asks the uncomfortable question of every professing Christian: if your faith were put on trial, would there be any evidence to convict you?</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: If someone examined only my <em>actions</em> this month — not my words about faith — what would they conclude I actually believe?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"We are justified by faith alone — but the faith that justifies is never alone. A faith that produces no love, no obedience, no care for the needy is not weak faith but a corpse; living faith always shows itself in works, as breath shows a body is alive."</div>
+    <div class="verdict-ref">James 2:17, 26 — "faith by itself, if it does not have works, is dead… as the body apart from the spirit is dead."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
