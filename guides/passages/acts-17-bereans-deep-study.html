@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acts 17:10–11 — The Bereans (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #3b6fd4; text-decoration: none; border-bottom: 1px dashed #3b6fd4; }
+  .companion-link:hover { color: #2551a8; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #3b6fd4; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* THE BEREAN BALANCE */
+  .balance { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 12px; align-items: stretch; margin: 4px 0 8px; }
+  .bal { border: 2px solid; border-radius: 3px; padding: 13px 15px; }
+  .bal-err { border-color: #c0392b; background: #fdf2f2; }
+  .bal-good { border-color: #2e8a4a; background: #edf8f1; border-width: 3px; }
+  .bal-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 4px; }
+  .bal-err .bal-tag { color: #c0392b; } .bal-good .bal-tag { color: #2e8a4a; }
+  .bal-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.95rem; color: #2c2c2c; margin-bottom: 5px; }
+  .bal-note { font-size: 0.76rem; color: #444; line-height: 1.4; }
+  .balance-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin-bottom: 24px; }
+  .balance-cap strong { color: #2e8a4a; }
+
+  /* THREE CITIES */
+  .cities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 24px; }
+  .city { border: 2px solid; border-radius: 3px; padding: 12px 14px; }
+  .city-thess { border-color: #c0392b; background: #fdf2f2; }
+  .city-berea { border-color: #2e8a4a; background: #edf8f1; }
+  .city-athens { border-color: #d47c1a; background: #fdf8ef; }
+  .city-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; margin-bottom: 1px; }
+  .city-thess .city-name { color: #c0392b; } .city-berea .city-name { color: #2e8a4a; } .city-athens .city-name { color: #d47c1a; }
+  .city-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-weight: 700; margin-bottom: 6px; }
+  .city-note { font-size: 0.76rem; color: #444; line-height: 1.38; }
+
+  /* METHOD FLOW */
+  .method { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .method-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .method-row { display: grid; grid-template-columns: 1fr 26px 1fr 26px 1fr 26px 1fr; align-items: center; }
+  .m-step { background: #262626; border: 1px solid #3b6fd4; border-radius: 3px; padding: 10px 8px; text-align: center; }
+  .m-num { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.72rem; color: #7eb8f7; margin-bottom: 3px; }
+  .m-text { font-size: 0.68rem; color: #ccc; line-height: 1.3; }
+  .m-arrow { display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #888; }
+  .method-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.15rem; color: #3b6fd4; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* OT/CANON */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #3b6fd4; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #7eb8f7; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
+  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aac3ef; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .balance, .cities, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .method-row { grid-template-columns: 1fr; }
+    .m-arrow { transform: rotate(90deg); padding: 3px 0; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Acts 17:10–11</div>
+  <div class="header-title">The Bereans — Eager to Receive, Ready to Examine</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="acts-15-james-scripture-deep-study.html" class="companion-link">⊕ Acts 15 · rooting a decision in Scripture</a>
+    <a href="faith-rooted-in-scripture-deep-study.html" class="companion-link">Faith Rooted in Scripture</a>
+  </div>
+
+  <div class="section-label">Anchor Text</div>
+  <div class="passage-callout">
+    <div class="pc-label">Acts 17:10–11 · A model of how to hear the Word</div>
+    <div class="pc-text">
+      "The brothers immediately sent Paul and Silas away by night to Berea, and when they arrived they went into the Jewish synagogue. Now these Jews were more noble than those in Thessalonica; they received the word with all eagerness, examining the Scriptures daily to see if these things were so."
+    </div>
+    <div class="pc-ref">Acts 17:10–11 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> On Paul's second missionary journey, he and Silas move through Macedonia. In Thessalonica they preach in the synagogue for three Sabbaths, reasoning from the Scriptures — but jealousy erupts into a mob, and the believers hurry them out "by night" to Berea, a smaller town off the main road. There Luke pauses to praise the local Jews with a single, famous sentence: they were "more noble," they "received the word with all eagerness," and they "examined the Scriptures daily to see if these things were so." In two verses Luke gives the New Testament's clearest portrait of how to hear preaching rightly — with a heart <em>eager</em> to receive and a mind <em>ready</em> to test everything by the written Word. The result: "many of them therefore believed" (17:12).</div>
+
+  <!-- THE BEREAN BALANCE -->
+  <div class="section-label">The Berean Balance — Between Two Errors</div>
+  <div class="balance">
+    <div class="bal bal-err">
+      <div class="bal-tag">Error 1</div>
+      <div class="bal-name">The Gullible</div>
+      <div class="bal-note">Believes every teacher, every claim, every "word from the Lord." Eager but undiscerning — "the simple believes everything" (Prov 14:15). Easily led astray by whoever speaks most confidently.</div>
+    </div>
+    <div class="bal bal-good">
+      <div class="bal-tag">The Berean way</div>
+      <div class="bal-name">Eager AND Examining</div>
+      <div class="bal-note">Receives the word "with all eagerness" — open, humble, wanting truth — <em>and</em> examines the Scriptures daily to test it. Neither swallows blindly nor scoffs cynically. Warm heart, careful mind, Scripture the judge.</div>
+    </div>
+    <div class="bal bal-err">
+      <div class="bal-tag">Error 2</div>
+      <div class="bal-name">The Cynic</div>
+      <div class="bal-note">Tests everything to tear it down, receiving nothing. Critical but closed — a heresy-hunter who examines in order to reject, not to find truth. Discerning but proud, and never actually believes.</div>
+    </div>
+  </div>
+  <div class="balance-cap">The genius of the Bereans is that they held <strong>eagerness and examination together</strong>. Most people pick one: the credulous receive without testing; the cynical test without receiving. The noble Berean does both — and so, unlike Thessalonica's mob or Athens' scoffers, "many of them believed."</div>
+
+  <!-- THREE CITIES -->
+  <div class="section-label">Three Cities, Three Responses to the Word (Acts 17)</div>
+  <div class="cities">
+    <div class="city city-thess">
+      <div class="city-name">Thessalonica</div>
+      <div class="city-ref">17:1–9 · Jealousy</div>
+      <div class="city-note">Some believe, but the synagogue's leaders, "jealous," gather a mob and start a riot, dragging believers before the authorities. The Word met with envy and violence.</div>
+    </div>
+    <div class="city city-berea">
+      <div class="city-name">Berea</div>
+      <div class="city-ref">17:10–12 · Examination</div>
+      <div class="city-note">They receive the word eagerly and test it daily against Scripture. Openness and discernment together — and "many of them therefore believed."</div>
+    </div>
+    <div class="city city-athens">
+      <div class="city-name">Athens</div>
+      <div class="city-ref">17:16–34 · Curiosity</div>
+      <div class="city-note">The intellectuals love novelty — "telling or hearing something new" — but most mock the resurrection. Curiosity without conviction; a few believe, but no synagogue-full.</div>
+    </div>
+  </div>
+
+  <!-- METHOD -->
+  <div class="section-label">The Berean Method — Four Steps</div>
+  <div class="method">
+    <div class="method-title">How the noble mind handles a new teaching</div>
+    <div class="method-row">
+      <div class="m-step"><div class="m-num">1 · Hear</div><div class="m-text">Go and listen to the teaching — Paul in the synagogue.</div></div>
+      <div class="m-arrow">→</div>
+      <div class="m-step"><div class="m-num">2 · Receive eagerly</div><div class="m-text">Welcome it with an open, hungry heart — not suspicious.</div></div>
+      <div class="m-arrow">→</div>
+      <div class="m-step"><div class="m-num">3 · Examine Scripture</div><div class="m-text">Test it against the Bible — daily, diligently, for yourself.</div></div>
+      <div class="m-arrow">→</div>
+      <div class="m-step"><div class="m-num">4 · Believe / reject</div><div class="m-text">Embrace what Scripture confirms; refuse what it contradicts.</div></div>
+    </div>
+    <div class="method-note">Note the order: <em>receiving</em> comes before <em>examining</em>, and Scripture, not personal opinion, is the standard. They didn't test Paul's message against their preferences or the mood of the crowd — they tested it against the written Word of God. And the examination was <em>daily</em>, not a one-off: an ongoing habit of measuring what they heard by what God had said.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of Noble Hearing</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">εὐγενέστεροι</div>
+      <div class="word-translit">eugenesteroi — "more noble"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">More noble / open-minded / fair</div>
+      <div class="word-note">Literally "better-born," but here it names <em>nobility of character</em> — an open, fair-minded, unprejudiced disposition. Their "nobility" was not bloodline but a willingness to hear and weigh the truth without hostility. Luke makes it a moral quality, not a class.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">προθυμία</div>
+      <div class="word-translit">prothumia — "eagerness"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">Eagerness, readiness, willingness</div>
+      <div class="word-note">They received the word "with all <em>prothumia</em>" — a whole-hearted, forward-leaning readiness. Not grudging, not merely tolerant, but eager. The examining that follows is not the coldness of a skeptic; it flows from a heart that <em>wants</em> the truth.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἀνακρίνω</div>
+      <div class="word-translit">anakrinō — "examine"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">To examine, scrutinise, investigate</div>
+      <div class="word-note">A word from the law court — to sift evidence, cross-examine, conduct a judicial inquiry. The Bereans "put Paul's preaching on trial" before the bar of Scripture. It implies careful, thorough investigation, not a casual glance — the same word Paul uses for the Spirit-taught believer who "judges all things" (1 Cor 2:15).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">καθ' ἡμέραν</div>
+      <div class="word-translit">kath' hēmeran — "daily"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">Day by day, each day</div>
+      <div class="word-note">The examination was a <em>daily</em> practice, not a single verdict. They kept returning to the Scriptures, week after week, testing and confirming. Discernment here is a sustained habit of life, not a one-time reaction — a daily immersion in the Word.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">γραφή</div>
+      <div class="word-translit">graphē — "Scripture"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">The (written) Scriptures</div>
+      <div class="word-note">Their standard was "the <em>Scriptures</em>" — for them, the Old Testament, which they searched to see whether Jesus really was the promised Christ. The written Word, not opinion or eloquence or majority sentiment, was the court of appeal. Even an apostle's preaching was measured by it.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">εἰ ἔχοι οὕτως</div>
+      <div class="word-translit">ei echoi houtōs — "if so"</div>
+      <span class="word-ref-badge">17:11</span>
+      <div class="word-gloss">"Whether these things were so"</div>
+      <div class="word-note">The precise question they asked of Paul's message: <em>is it true — does it match what God has said?</em> Not "do I like it?" or "is it new?" or "is he persuasive?" but "is it <em>so</em>, according to Scripture?" The one test that matters, applied honestly.</div>
+    </div>
+  </div>
+
+  <!-- CANON -->
+  <div class="section-label">Across the Canon — Test Everything by the Word</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 8:20 · Deut 13:1–5</div>
+      <div class="ot-title">"To the Law and the Testimony"</div>
+      <div class="ot-note">"To the law and to the testimony! If they will not speak according to this word…" And Moses commanded testing even a wonder-working prophet against revealed truth. Scripture as the standard for every claim is deeply rooted in the Old Testament the Bereans searched.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">1 Thessalonians 5:20–21</div>
+      <div class="ot-title">"Test Everything"</div>
+      <div class="ot-note">Ironically written <em>to the Thessalonians</em>: "Do not despise prophecies, but test everything; hold fast what is good." Paul commends the very Berean balance — don't reject the word, but weigh it, and keep the good. Openness and discernment together.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">1 John 4:1 · Galatians 1:8</div>
+      <div class="ot-title">Test the Spirits</div>
+      <div class="ot-note">"Do not believe every spirit, but test the spirits." And Paul: "even if we or an angel from heaven should preach… a gospel contrary… let him be accursed." The messenger — even an apostle or angel — is subject to the message; the Word is the norm.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Proverbs 14:15 · 2 Tim 2:15</div>
+      <div class="ot-title">Prudence, Not Credulity</div>
+      <div class="ot-note">"The simple believes everything, but the prudent gives thought to his steps." And Timothy is to be a worker "rightly handling the word of truth." Discernment is wisdom, not cynicism — and it is learned by knowing the Word well enough to test by it.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">F. F. Bruce</div>
+      <div class="comm-title">The Book of the Acts (NICNT, rev. 1988)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Bruce notes that the Bereans' nobility lay in their open, unprejudiced readiness to examine the message — and that their daily searching of the Scriptures to verify Paul's claims about the Messiah is exactly the response the gospel invites, not fears.</div>
+      <div class="comm-point">Their example, he observes, dignifies both eager reception and honest investigation: true faith is not credulity, and it has nothing to hide from Scripture.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Book of the Acts, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of Acts (BST, 1990)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott holds up the Bereans as the model of a "receptive but not gullible" mind: they combined an open heart with a critical mind, welcoming the word yet checking it against Scripture. Faith and reason, humility and discernment, in balance.</div>
+      <div class="comm-point">He draws the lesson for preachers and hearers alike: no teacher, however apostolic, is above the Scriptures; the Word of God stands over every word about God.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of Acts [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Darrell Bock</div>
+      <div class="comm-title">Acts (BECNT, 2007)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Bock highlights the judicial force of <em>anakrinō</em> — the Bereans conducted a careful investigation, testing whether Scripture supported the messianic claims. Their daily study models a disciplined, ongoing engagement with the text.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — Acts, BECNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">I. Howard Marshall</div>
+      <div class="comm-title">Acts (Tyndale NT Commentaries, 1980)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Marshall stresses that the Bereans' willingness to test the message actually <em>strengthened</em> their faith: because they verified it from Scripture, their belief rested on the Word, not on Paul's personality or persuasion. Examined faith is well-founded faith.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Acts, TNTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Ben Witherington III</div>
+      <div class="comm-title">The Acts of the Apostles (Socio-Rhetorical, 1998)</div>
+      <span class="comm-tradition trad-critical">Critical · Rhetorical</span>
+      <div class="comm-point">Witherington notes Luke's rhetorical contrast between the "well-born" openness of Berea and the mob-driven jealousy of Thessalonica — Luke commends the response that engages the message on its merits and by the Scriptures, rather than by social threat.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Acts of the Apostles [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Calvin</div>
+      <div class="comm-title">Commentary on Acts (1552)</div>
+      <span class="comm-tradition trad-reformed">Reformed</span>
+      <div class="comm-point">Calvin praises the Bereans for joining teachableness with judgment: they neither rashly embraced nor proudly rejected, but "searched" — and he warns that Scripture, not the authority of any man, must remain the rule by which all doctrine is examined.</div>
+      <a href="https://www.ccel.org/ccel/calvin/calcom37" target="_blank" class="source-link">ccel.org — Calvin on Acts [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Doesn't examining an apostle's preaching undermine his authority?</div>
+      <div class="pressure-a">The opposite — Luke <em>commends</em> the Bereans for it, calling them "more noble" precisely because they tested Paul's message against Scripture. Paul himself would say "even if… an angel from heaven should preach a gospel contrary" to the true one, let him be accursed (Gal 1:8). The point is that the Word of God stands <em>over</em> every word about God, including an apostle's. True teachers welcome this testing, because their message is drawn from Scripture and has nothing to hide; only false teachers fear the Bereans' Bibles. Testing by Scripture doesn't diminish real authority — it establishes it.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Is this a proof-text for private judgment against all church authority?</div>
+      <div class="pressure-a">Not quite. The Bereans are commended for testing teaching by Scripture — but note <em>how</em>: they used the recognised, public Scriptures (not private impressions), they did it as a synagogue community together, and they did it eagerly and humbly, not to overthrow authority but to find truth. This is not the modern posture of "no one can tell me anything" or trusting only my own opinion; it is submitting <em>everything</em>, including my own reactions, to the higher authority of the written Word. Berean discernment is Scripture-governed and community-shaped, not individualistic skepticism.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. How do I hold eagerness and examination together without becoming gullible or cynical?</div>
+      <div class="pressure-a">This is the heart of the passage. Gullibility receives without testing; cynicism tests without receiving. The Berean keeps both alive: an <em>eager, open heart</em> that genuinely wants to hear from God, and a <em>disciplined mind</em> that measures everything by Scripture. Practically: come to teaching wanting to learn and be fed (not hunting for errors), but keep your Bible open and ask honestly, "Is this so — does it match what God has said?" The safeguard against gullibility is knowing Scripture well; the safeguard against cynicism is a heart that still loves the truth and rejoices to find it.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. "More noble than Thessalonica" — is examination a personality type, or a choice?</div>
+      <div class="pressure-a">Luke's word (eugenes) points to nobility of <em>character</em>, not temperament or class — and character can be cultivated. The Thessalonians who rejected Paul did so out of jealousy, a moral failure, not a lack of cleverness; the Bereans' openness was a moral virtue, a willingness to hear and weigh honestly. So this is not "some people are naturally more analytical." It is a disposition anyone can choose: to approach God's Word without prejudice, eager to receive and willing to test. Nobility here is humility plus honesty plus love of truth — available to all.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. How do we "be Bereans" without turning into heresy-hunters?</div>
+      <div class="pressure-a">The danger is real: some make "testing everything" a license for constant, proud fault-finding — examining every preacher only to condemn. But the Bereans' examination was framed by <em>eagerness to receive</em> and resulted in <em>belief</em> (17:12), not endless suspicion. The corrective is threefold: (1) test in order to <em>embrace truth</em>, not to score points; (2) keep the warm, receptive heart that wants to be fed and changed by the Word; and (3) submit your own judgments to Scripture too, with humility. A Berean loves the truth enough both to test it and to believe it — the goal is a well-founded faith, not a well-armed critic.</div>
+    </div>
+  </div>
+
+  <!-- XREF -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Same balance</div>
+      <div class="xref-ref">1 Thessalonians 5:20–21</div>
+      <div class="xref-note">"Do not despise prophecies, but test everything; hold fast what is good" — the Berean way, written to the very city that rejected Paul.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← OT standard</div>
+      <div class="xref-ref">Isaiah 8:20 · Deut 13</div>
+      <div class="xref-note">"To the law and the testimony!" — every claim, even a wonder-worker's, measured against God's revealed word.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Test the spirits</div>
+      <div class="xref-ref">1 John 4:1 · Gal 1:8</div>
+      <div class="xref-note">Don't believe every spirit; even an apostle or angel is anathema if the gospel is contrary. The message judges the messenger.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Prudence</div>
+      <div class="xref-ref">Proverbs 14:15</div>
+      <div class="xref-note">"The simple believes everything, but the prudent gives thought to his steps." Discernment as wisdom, not cynicism.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Rightly handle it</div>
+      <div class="xref-ref">2 Timothy 2:15 · 3:16</div>
+      <div class="xref-note">"Rightly handling the word of truth"; "all Scripture is God-breathed… profitable." The Word is the sufficient standard for testing.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The Word confirms</div>
+      <div class="xref-ref">Luke 24:27, 44–45 · Acts 17:2–3</div>
+      <div class="xref-note">Jesus and Paul both "reason from the Scriptures" that the Christ must suffer and rise — exactly what the Bereans went to verify.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A Synagogue in Berea</div>
+        <div class="tn-text">A travelling preacher arrives with a startling claim: the crucified Jesus is the promised Messiah. The Bereans don't riot like Thessalonica or scoff like Athens. They lean in eagerly — and then go home and open their scrolls, day after day, checking whether Paul's astonishing message actually matches what God had written. Because it did, "many of them believed." Their faith rested not on Paul's eloquence but on the Word.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — A Flood of Voices</div>
+        <div class="tn-text">We are drowning in teachers — podcasts, posts, prophecies, bestsellers, confident voices for every view. Two temptations pull at us: swallow whatever our favourite teacher says (gullibility), or trust no one and tear everyone down (cynicism). Acts 17:11 hands us a better way — receive eagerly, then open your Bible and test it. Not "is he famous, is it new, does it feel right?" but "is it so, according to Scripture?"</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: When I hear teaching I like — or a "word from the Lord" — do I actually open my Bible to test whether it is <em>so</em>, or do I just accept it because I trust the source or it feels right?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The noble hearer receives the word with all eagerness — and then examines the Scriptures daily to see if it is so. Neither gullible nor cynical, the Berean holds an open heart and a testing mind together, and finds a faith founded on the Word of God itself."</div>
+    <div class="verdict-ref">Acts 17:11 — "they received the word with all eagerness, examining the Scriptures daily to see if these things were so."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>

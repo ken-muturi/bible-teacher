@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew 5:20 — A Righteousness That Exceeds the Pharisees (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #6c4bbf; }
+  .companion-link:hover { color: #4f349c; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #6c4bbf; background: #f2eefb; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #6c4bbf; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* TWO RIGHTEOUSNESSES */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 8px; }
+  .comp-col { border: 2px solid; border-radius: 3px; padding: 15px 17px; }
+  .comp-phar { border-color: #c0392b; background: #fdf2f2; }
+  .comp-king { border-color: #2e8a4a; background: #edf8f1; }
+  .comp-head { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1rem; margin-bottom: 2px; }
+  .comp-phar .comp-head { color: #c0392b; } .comp-king .comp-head { color: #2e8a4a; }
+  .comp-sub { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; font-weight: 700; margin-bottom: 10px; }
+  .comp-row { display: flex; gap: 8px; margin-bottom: 8px; font-size: 0.8rem; color: #333; line-height: 1.4; }
+  .comp-row .ci { flex-shrink: 0; font-weight: 700; }
+  .comp-phar .ci { color: #c0392b; } .comp-king .ci { color: #2e8a4a; }
+  .compare-cap { font-size: 0.8rem; color: #555; font-style: italic; text-align: center; margin: 4px 0 24px; }
+  .compare-cap strong { color: #2e8a4a; }
+
+  /* TWO TABLES — the signature visual */
+  .tables { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 8px; }
+  .tbl { border-radius: 3px; padding: 16px 18px; border: 2.5px solid; }
+  .tbl-phar { border-color: #c0392b; background: #1a1a1a; }
+  .tbl-jesus { border-color: #2e8a4a; background: #1a1a1a; }
+  .tbl-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1rem; margin-bottom: 3px; }
+  .tbl-phar .tbl-title { color: #e78a80; } .tbl-jesus .tbl-title { color: #7fd39c; }
+  .tbl-verse { font-size: 0.64rem; color: #999; font-style: italic; margin-bottom: 11px; }
+  .tbl-line { font-size: 0.79rem; color: #d0c8bc; line-height: 1.44; margin-bottom: 7px; padding-left: 14px; position: relative; }
+  .tbl-line::before { content: "›"; position: absolute; left: 0; }
+  .tbl-phar .tbl-line::before { color: #c0392b; } .tbl-jesus .tbl-line::before { color: #2e8a4a; }
+  .tables-cap { font-size: 0.82rem; color: #444; line-height: 1.5; text-align: center; margin: 6px 0 24px; padding: 0 6px; }
+  .tables-cap strong { color: #6c4bbf; }
+
+  /* ANTITHESES STRIP */
+  .anti { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .anti-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 4px; }
+  .anti-sub { font-size: 0.74rem; color: #aaa; margin-bottom: 14px; }
+  .anti-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+  .anti-item { border-left: 3px solid #6c4bbf; padding-left: 11px; }
+  .anti-said { font-size: 0.72rem; color: #999; line-height: 1.35; }
+  .anti-said b { color: #bbb; }
+  .anti-but { font-size: 0.78rem; color: #cdb8f0; line-height: 1.38; margin-top: 3px; }
+  .anti-but b { color: #b795ea; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-greek { font-size: 1.15rem; color: #6c4bbf; font-weight: 700; margin-bottom: 2px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #6c4bbf; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* CANON */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-catholic { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #6c4bbf; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #b795ea; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
+  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f2eefb; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8a6fd0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #c9b8ee; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .compare, .tables, .ot-grid, .comm-shelf, .tn-cols, .anti-row { grid-template-columns: 1fr; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Matthew 5:20</div>
+  <div class="header-title">A Righteousness That Exceeds the Pharisees — Why "More" Meant "Different"</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="acts-17-bereans-deep-study.html" class="companion-link">⊕ The Bereans · testing by the Word</a>
+    <a href="luke-8-14-thorns-deep-study.html" class="companion-link">The Thorns · Luke 8:14</a>
+  </div>
+
+  <div class="section-label">Anchor Text</div>
+  <div class="passage-callout">
+    <div class="pc-label">Matthew 5:20 · The kingdom's righteousness</div>
+    <div class="pc-text">
+      "For I tell you, unless your righteousness exceeds that of the scribes and Pharisees, you will never enter the kingdom of heaven."
+    </div>
+    <div class="pc-ref">Matthew 5:20 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> Jesus is early in the Sermon on the Mount. He has just insisted He came not to abolish the Law but to fulfil it (5:17–19). Then comes this shock: the entrance-requirement for the kingdom is a righteousness that <em>surpasses</em> that of the scribes and Pharisees — the most scrupulous, disciplined, rule-keeping people His hearers knew. This was not the low bar; it was the impossibly high one. So how could Jesus demand <em>more</em>? The six "you have heard it said… but I say" statements that follow (5:21–48) unpack the answer: He is not asking for a bigger pile of the same religion, but for a righteousness of a wholly <em>different kind</em> — one that reaches the heart, and one that, unlike the Pharisees, moves <em>toward</em> sinners in mercy rather than away from them in disdain.</div>
+
+  <!-- TWO RIGHTEOUSNESSES -->
+  <div class="section-label">Two Kinds of Righteousness — Why "Exceed" Meant More Than a Higher Score</div>
+  <div class="compare">
+    <div class="comp-col comp-phar">
+      <div class="comp-head">The Pharisees' Righteousness</div>
+      <div class="comp-sub">Real, disciplined — but external</div>
+      <div class="comp-row"><span class="ci">▪</span><span>Measured by <em>conduct</em> — tithing, fasting, Sabbath-keeping, ritual washing. Impressive and sincere.</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Stops at the <em>action</em>: don't murder, don't commit adultery. The hands are clean.</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Aimed at being <em>seen</em> — "to be praised by others" (6:1–2, 5, 16).</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Built on <em>comparison</em>: "God, I thank you that I am not like other men" (Luke 18:11).</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Produces <em>separation</em> — clean outside, dead men's bones within (23:27).</span></div>
+    </div>
+    <div class="comp-col comp-king">
+      <div class="comp-head">The Kingdom's Righteousness</div>
+      <div class="comp-sub">Greater in kind — of the heart</div>
+      <div class="comp-row"><span class="ci">▪</span><span>Measured by the <em>heart</em> — the root of anger, lust, contempt, not just the deed (5:22, 28).</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Reaches the <em>motive</em>: not merely no-murder but no-hatred; not no-adultery but no-lust.</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Aimed at the <em>Father who sees in secret</em> (6:4, 6, 18) — not the crowd.</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Built on <em>mercy received</em>: "God, be merciful to me, a sinner" (Luke 18:13).</span></div>
+      <div class="comp-row"><span class="ci">▪</span><span>Produces <em>mercy that draws near</em> — even to enemies and sinners (5:44–48).</span></div>
+    </div>
+  </div>
+  <div class="compare-cap">Jesus is not asking for the Pharisees' religion <em>plus a little more effort</em>. He is asking for a righteousness of a <strong>different order altogether</strong> — one that goes deeper than behaviour to the heart, and one that no amount of rule-keeping can manufacture. That is precisely why it can only be <em>received</em>, not achieved (5:3, 6).</div>
+
+  <!-- THE ANTITHESES -->
+  <div class="anti">
+    <div class="anti-title">"You have heard it said… but I say to you"</div>
+    <div class="anti-sub">In 5:21–48 Jesus shows what the deeper righteousness looks like — every time, driving the command from the hand into the heart.</div>
+    <div class="anti-row">
+      <div class="anti-item"><div class="anti-said"><b>Heard:</b> Do not murder.</div><div class="anti-but"><b>But I say:</b> do not even nurse anger or contempt.</div></div>
+      <div class="anti-item"><div class="anti-said"><b>Heard:</b> Do not commit adultery.</div><div class="anti-but"><b>But I say:</b> do not lust in the heart.</div></div>
+      <div class="anti-item"><div class="anti-said"><b>Heard:</b> Keep your oaths.</div><div class="anti-but"><b>But I say:</b> be so true that your bare yes means yes.</div></div>
+      <div class="anti-item"><div class="anti-said"><b>Heard:</b> Eye for an eye.</div><div class="anti-but"><b>But I say:</b> do not repay; turn the other cheek.</div></div>
+      <div class="anti-item"><div class="anti-said"><b>Heard:</b> Love your neighbour, hate your enemy.</div><div class="anti-but"><b>But I say:</b> love your enemies, pray for those who persecute you.</div></div>
+      <div class="anti-item"><div class="anti-said"><b>The aim:</b> "You therefore must be perfect…</div><div class="anti-but">…as your heavenly Father is perfect" (5:48) — <b>His</b> kind of righteousness.</div></div>
+    </div>
+  </div>
+
+  <!-- TWO TABLES -->
+  <div class="section-label">The Tell-Tale Sign — Two Tables</div>
+  <div class="tables">
+    <div class="tbl tbl-phar">
+      <div class="tbl-title">The Pharisees' Table</div>
+      <div class="tbl-verse">"Pharisee" = pārûsh, "the separated one"</div>
+      <div class="tbl-line">Gathered with the religious, the clean, the qualified.</div>
+      <div class="tbl-line">Tense with watching — who touched what, who broke which rule.</div>
+      <div class="tbl-line">Comparison in the air: rank, honour, who sits where.</div>
+      <div class="tbl-line">Sinners kept <em>out</em> — a tax collector or "sinner" would defile it.</div>
+      <div class="tbl-line">"This man receives sinners and eats with them" — said as an <em>accusation</em> (Luke 15:2).</div>
+    </div>
+    <div class="tbl tbl-jesus">
+      <div class="tbl-title">Jesus' Table</div>
+      <div class="tbl-verse">"Friend of tax collectors and sinners" (Matt 11:19)</div>
+      <div class="tbl-line">Reclining with tax collectors and sinners in Matthew's house (Matt 9:10).</div>
+      <div class="tbl-line">At ease with mercy — the sick are why the Physician came (9:12).</div>
+      <div class="tbl-line">Joy in the air: heaven parties over one sinner who repents (Luke 15:7).</div>
+      <div class="tbl-line">Sinners welcomed <em>in</em> — Zacchaeus, the woman who wept, Levi.</div>
+      <div class="tbl-line">"I desire mercy, and not sacrifice… I came to call sinners" (Matt 9:13).</div>
+    </div>
+  </div>
+  <div class="tables-cap">Here is the sharpest evidence that the two righteousnesses differ in <em>kind</em>. The Pharisees' holiness was <strong>separating</strong> — it pulled them away from sinners, and their gatherings grew tense with rule-watching and rank. Jesus' holiness was <strong>redeeming</strong> — it moved <em>toward</em> sinners in mercy without ever excusing sin. A righteousness that cannot sit with a sinner is not yet the righteousness of the kingdom; the King Himself is known as their friend.</div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of the Greater Righteousness</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-greek">περισσεύσῃ</div>
+      <div class="word-translit">perisseusē — "exceed / abound"</div>
+      <span class="word-ref-badge">5:20</span>
+      <div class="word-gloss">To overflow, abound, surpass</div>
+      <div class="word-note">The verb pictures <em>overflowing</em>, not merely out-scoring. It can mean "more in quantity," but in context it signals a righteousness that so surpasses the Pharisees' that it must be different in nature — an abundance welling up from within, not stacked up from without.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">δικαιοσύνη</div>
+      <div class="word-translit">dikaiosynē — "righteousness"</div>
+      <span class="word-ref-badge">5:6, 20</span>
+      <div class="word-gloss">Righteousness / right-standing</div>
+      <div class="word-note">In Matthew, the whole-life conformity to God's will that marks a kingdom citizen. It is both something you <em>hunger and thirst</em> for and are <em>filled</em> with (5:6) — received as gift — and something lived out from the heart. Not a résumé you build, but a life you're given and grow into.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">Φαρισαῖος</div>
+      <div class="word-translit">Pharisaios — from pārash</div>
+      <span class="word-ref-badge">5:20</span>
+      <div class="word-gloss">"The separated ones"</div>
+      <div class="word-note">The name likely derives from the Hebrew root "to separate." Their zeal for holiness expressed itself as <em>separation</em> from the unclean and the sinner. The irony Jesus exposes: a holiness whose instinct is to withdraw from sinners has misread the God who "desires mercy."</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ὑποκριτής</div>
+      <div class="word-translit">hypokritēs — "hypocrite"</div>
+      <span class="word-ref-badge">6:2; 23:13</span>
+      <div class="word-gloss">Play-actor, one wearing a mask</div>
+      <div class="word-note">A stage-actor speaking behind a mask. Jesus' repeated charge (esp. Matt 23) is that the Pharisees' righteousness was <em>performance</em> — the outside staged for an audience while the inside stayed unchanged. The greater righteousness has no audience but the Father who sees in secret.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἔλεος</div>
+      <div class="word-translit">eleos — "mercy"</div>
+      <span class="word-ref-badge">9:13; 23:23</span>
+      <div class="word-gloss">Mercy, compassion</div>
+      <div class="word-note">Twice Jesus throws Hosea 6:6 at the Pharisees: "I desire <em>mercy</em>, not sacrifice." Mercy is the "weightier matter" they neglected (23:23). The surpassing righteousness is not measured chiefly by scruple but by mercy — the very thing their separating holiness squeezed out.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-greek">ἐδικαιώθη</div>
+      <div class="word-translit">edikaiōthē — "was justified"</div>
+      <span class="word-ref-badge">Luke 18:14</span>
+      <div class="word-gloss">Declared righteous by God</div>
+      <div class="word-note">In the parable, it is the tax collector — beating his breast, pleading mercy — who "went down to his house <em>justified</em>," not the Pharisee. The righteousness that exceeds the Pharisees begins where the Pharisee refused to stand: empty-handed, crying for grace. It is first <em>received</em>, then lived.</div>
+    </div>
+  </div>
+
+  <!-- CANON -->
+  <div class="section-label">Across the Canon — Heart Over Externals, Mercy Over Sacrifice</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">Hosea 6:6 · Micah 6:8</div>
+      <div class="ot-title">"I Desire Mercy, Not Sacrifice"</div>
+      <div class="ot-note">The prophets already exposed a religion of ritual without heart. "What does the LORD require… but to do justice, to love mercy, to walk humbly?" Jesus' demand is not a new standard but the old prophetic one, finally reaching bottom — the heart God always wanted.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Deuteronomy 10:16 · 30:6</div>
+      <div class="ot-title">Circumcise the Heart</div>
+      <div class="ot-note">The Law itself pointed past the outward mark to an inward change: "Circumcise the foreskin of your heart." External conformity was never the goal; a transformed heart was — exactly the righteousness the Pharisees stopped short of.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Jeremiah 31:33 · Ezekiel 36:26</div>
+      <div class="ot-title">A New Heart, the Law Within</div>
+      <div class="ot-note">"I will put my law within them… write it on their hearts"; "I will give you a new heart." The greater righteousness is covenant-promise: God does by His Spirit what rule-keeping never could. It is grace-given before it is lived-out.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Isaiah 64:6 · Philippians 3:9</div>
+      <div class="ot-title">Not My Own Righteousness</div>
+      <div class="ot-note">"All our righteous deeds are like a polluted garment." Paul — himself once "as to righteousness under the law, blameless" (a Pharisee!) — counts it loss, to gain "the righteousness from God that depends on faith." The exceeding righteousness is Christ's, credited and then formed in us.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">Matthew (Expositor's Bible Commentary) · Sermon on the Mount</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Carson argues the "greater righteousness" is qualitative, not merely quantitative: it fulfils the Law as Jesus fulfils it — reaching the heart's intent — so it can never be produced by intensifying Pharisaic externalism.</div>
+      <div class="comm-point">It is the righteousness of those who mourn their sin and hunger to be filled (the Beatitudes), received before it is enacted.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Matthew, EBC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Stott</div>
+      <div class="comm-title">The Message of the Sermon on the Mount (BST, 1978)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">Stott's classic line: Pharisaic righteousness was "external and partial"; Christian righteousness is "internal, of the heart… total." The difference is one of kind, reaching motive and desire, not just deed.</div>
+      <div class="comm-point">He insists this is the righteousness of the kingdom's citizens described in the Beatitudes — poor in spirit, meek, merciful — a wholly different portrait from the self-satisfied Pharisee.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">R. T. France</div>
+      <div class="comm-title">The Gospel of Matthew (NICNT, 2007)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Scholarly</span>
+      <div class="comm-point">France stresses that the following antitheses (5:21–48) define the "greater righteousness" concretely: in each, Jesus radicalises the command toward the heart and toward love, even of enemies — a righteousness the scribes' casuistry never reached.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Gospel of Matthew, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Martyn Lloyd-Jones</div>
+      <div class="comm-title">Studies in the Sermon on the Mount (1959–60)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Preaching</span>
+      <div class="comm-point">Lloyd-Jones presses that this righteousness humbles us before it is ever attained: it drives the hearer to the poverty of spirit of 5:3, to see that only a God-given righteousness can meet God's standard. Conviction first, then grace, then obedience.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Studies in the Sermon on the Mount [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Dallas Willard</div>
+      <div class="comm-title">The Divine Conspiracy (1998)</div>
+      <span class="comm-tradition trad-pastoral">Formation · Pastoral</span>
+      <div class="comm-point">Willard reads 5:20 as an invitation, not a heavier burden: the Pharisee tries to look good on the outside while the heart stays sick; Jesus offers a transformed inner life ("kingdom heart") from which right action flows naturally — good trees bearing good fruit.</div>
+      <a href="https://www.harpercollins.com/" target="_blank" class="source-link">harpercollins.com — The Divine Conspiracy [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Leon Morris</div>
+      <div class="comm-title">The Gospel According to Matthew (Pillar, 1992)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Morris notes the staggering nature of the demand: the Pharisees were the acknowledged experts in righteousness, so to require <em>more</em> was to require what no human effort supplies — pointing beyond law-keeping to the grace and heart-change the Gospel brings.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Gospel According to Matthew, Pillar [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. If we're saved by grace, why does Jesus set the bar even <em>higher</em> than the Pharisees?</div>
+      <div class="pressure-a">Because the raised bar is the very thing that drives us to grace. The Sermon opens with "blessed are the poor in spirit" (5:3) and "those who hunger and thirst for righteousness" (5:6) — it is addressed to the spiritually bankrupt and the starving, not the self-sufficient. By demanding a righteousness that reaches the heart — no anger, no lust, love of enemies — Jesus makes it impossible to feel we've "arrived," and so shuts us up to receiving righteousness as a gift (Phil 3:9). The high standard is not the opposite of grace; it is grace's doorway. The Pharisee's error was thinking the bar was low enough to clear on his own.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Were the Pharisees just hypocrites? Isn't this caricature unfair to sincere, devout people?</div>
+      <div class="pressure-a">Many Pharisees were genuinely earnest and disciplined — that is exactly what makes them the <em>hardest</em> case and the most sobering example. Jesus does not say their righteousness was fake or worthless; He says it was <em>insufficient</em> and of the wrong <em>kind</em>. The danger He exposes is not gross wickedness but respectable religion that manages the outside while the heart stays proud, comparing, and merciless. That danger threatens the most committed believer, not the obvious sinner. The point isn't "look down on the Pharisees"; it's "beware becoming one" — which is why the warning lands hardest on church people.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. You've made much of "tense meetings, but no sinners." Is that really in the text?</div>
+      <div class="pressure-a">The phrase compresses a pattern woven through the Gospels. The very name "Pharisee" means "separated one," and their holiness worked by separation from the unclean. Again and again they <em>grumble</em> that Jesus "receives sinners and eats with them" (Luke 15:2; also Matt 9:11; Luke 7:39; 19:7), and Jesus repeatedly diagnoses their gatherings as anxious about rank, appearance, and rule-boundaries (Luke 11:43; 14:7; Matt 23:5–7) while neglecting "mercy" (Matt 9:13; 23:23). So yes: a righteousness that keeps sinners at arm's length and turns fellowship into rule-watching is precisely the righteousness Jesus says must be <em>exceeded</em>. The surpassing righteousness is unafraid to sit with sinners because it draws its holiness from mercy received, not distance maintained.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Doesn't Jesus eating with sinners mean sin doesn't matter much?</div>
+      <div class="pressure-a">The opposite. Jesus welcomes sinners <em>because</em> sin matters supremely — He came as the Physician precisely for the sick (9:12), to "call sinners" and heal them, not to leave them as they are. His table is not indifferent to sin; it is where sin is forgiven and lives are turned around (Zacchaeus gives back fourfold; the sinful woman is transformed by love). The Pharisee's separation and Jesus' welcome are two responses to the same seriousness about sin: one quarantines the sinner, the other rescues him. The greater righteousness holds together what we tend to split — uncompromising truth about sin <em>and</em> open-armed mercy to the sinner.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. Practically, how do I pursue this without either laxity or a new Pharisaism?</div>
+      <div class="pressure-a">Watch both cliffs. The first is <em>laxity</em> — using "it's the heart that counts" as an excuse to obey less; but Jesus intensifies the commands, He doesn't relax them. The second, subtler cliff is <em>a new Pharisaism</em> — turning "heart righteousness" or "grace" into a fresh badge to feel superior about, now looking down on the "legalists." The safeguards are three: (1) start every day at the tax collector's spot — "God, be merciful to me, a sinner" — so righteousness stays <em>received</em>, not achieved; (2) let mercy, not scruple, be your measure of progress — are you becoming kinder to sinners, or more separated from them?; and (3) test the fruit at the table — a heart truly being changed by grace grows more welcoming to the very people the old heart avoided.</div>
+    </div>
+  </div>
+
+  <!-- XREF -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The two men</div>
+      <div class="xref-ref">Luke 18:9–14</div>
+      <div class="xref-note">The Pharisee thanks God he's not like others; the tax collector pleads mercy — and <em>he</em> goes home justified. The exceeding righteousness in one parable.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ Mercy, not sacrifice</div>
+      <div class="xref-ref">Matthew 9:10–13</div>
+      <div class="xref-note">Jesus eats with sinners; the Pharisees object; He answers: "I desire mercy… I came to call sinners." The table that exposes both righteousnesses.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The woes</div>
+      <div class="xref-ref">Matthew 23:23–28</div>
+      <div class="xref-note">Clean cup outside, greed within; neglecting "justice and mercy and faithfulness." The full anatomy of the righteousness that falls short.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← Heart religion</div>
+      <div class="xref-ref">Hosea 6:6 · Micah 6:8</div>
+      <div class="xref-note">"I desire mercy, not sacrifice." The prophetic root of Jesus' demand — God always wanted the heart.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Not my own</div>
+      <div class="xref-ref">Philippians 3:4–9</div>
+      <div class="xref-note">Paul the ex-Pharisee counts his blameless law-righteousness as loss, for "the righteousness from God that depends on faith."</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Friend of sinners</div>
+      <div class="xref-ref">Luke 15:1–2 · Matt 11:19</div>
+      <div class="xref-note">"This man receives sinners and eats with them" — hurled as a charge, worn by Jesus as His glory. The mark of the greater righteousness.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — Two Kinds of Holy People</div>
+        <div class="tn-text">The Pharisees were the devout — disciplined, orthodox, tithing to the herb. Yet their holiness separated: their gatherings grew tense with rule-watching and rank, and no "sinner" was welcome at their table. Jesus, holier still, sat down with tax collectors and prostitutes — and was slandered as "a friend of sinners." His righteousness didn't withdraw from the unclean; it went to heal them, while never calling their sin clean.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Which Righteousness Is Ours?</div>
+        <div class="tn-text">It is fatally easy to build a respectable, rule-keeping faith that manages the outside, quietly compares itself to others, and keeps "those people" at a distance — church as a tense room of the qualified. Jesus says that righteousness, however sincere, will never enter the kingdom. The greater righteousness starts at the tax collector's cry for mercy, works from the heart outward, and can be told by one unmistakable fruit: it makes us safer, warmer people for sinners to be near.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Is my holiness the kind that <em>separates</em> me from sinners and makes my fellowship tense with comparison — or the kind that, having received mercy, can sit at the table with them the way my Lord did?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"The righteousness that exceeds the Pharisees is not more of their religion but a different kind — reaching the heart, received as grace at the tax collector's cry, and proven by mercy that draws near to sinners instead of separating from them."</div>
+    <div class="verdict-ref">Matthew 5:20 · 9:13 — "unless your righteousness exceeds…"; "I desire mercy… I came to call sinners."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
