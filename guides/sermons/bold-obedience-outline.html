@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bold Obedience — Sermon Outline</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 820px; margin: 0 auto; padding: 26px 24px 60px; }
+
+  /* HEADER */
+  .head-kicker { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.22em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
+  .head-title { font-family: 'Gentium Book Plus', serif; font-size: 2.1rem; color: #2c2c2c; letter-spacing: 0.02em; line-height: 1.15; }
+  .head-sub { font-size: 1.02rem; color: #555; margin-top: 6px; font-style: italic; }
+  .badge-sermon { display: inline-block; background: #c0392b; color: #fff; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 3px 9px; border-radius: 2px; margin-top: 10px; }
+
+  /* META STRIP */
+  .meta { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 20px 0 8px; }
+  .meta-cell { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 10px 13px; }
+  .meta-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #999; font-weight: 700; margin-bottom: 4px; }
+  .meta-val { font-size: 0.86rem; color: #2c2c2c; line-height: 1.35; }
+  .meta-val strong { color: #c0392b; }
+
+  /* BIG IDEA */
+  .big-idea { border: 3px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 16px 20px; margin: 16px 0 4px; text-align: center; }
+  .bi-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #c0392b; font-weight: 700; margin-bottom: 7px; }
+  .bi-text { font-family: 'Gentium Book Plus', serif; font-size: 1.16rem; color: #2c2c2c; line-height: 1.45; font-style: italic; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin: 30px 0 12px; }
+
+  /* INTRO / MOVEMENT BLOCKS */
+  .block { margin-bottom: 8px; }
+  .block-body { font-size: 0.93rem; color: #333; line-height: 1.6; }
+  .block-body p { margin-bottom: 10px; }
+  .scrip { color: #c0392b; font-weight: 700; }
+  .lead-in { font-family: 'Gentium Book Plus', serif; font-style: italic; color: #b5651a; }
+
+  /* MAIN POINTS */
+  .point { border: 2px solid #2c2c2c; border-radius: 4px; background: #faf7f2; margin-bottom: 18px; overflow: hidden; }
+  .point-head { display: flex; align-items: stretch; }
+  .point-rom { flex-shrink: 0; width: 60px; display: flex; align-items: center; justify-content: center; font-family: 'Gentium Book Plus', serif; font-size: 1.5rem; font-weight: 700; color: #fff; background: #c0392b; }
+  .point-titlewrap { padding: 11px 16px; flex: 1; min-width: 0; border-bottom: 2px solid #eadfd0; }
+  .point-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.12rem; color: #2c2c2c; line-height: 1.25; }
+  .point-key { font-size: 0.74rem; color: #c0392b; font-weight: 700; margin-top: 3px; }
+  .point-body { padding: 13px 18px 15px; }
+
+  .sub { display: flex; gap: 10px; margin-bottom: 11px; font-size: 0.9rem; color: #333; line-height: 1.5; }
+  .sub-letter { flex-shrink: 0; font-weight: 700; color: #c0392b; font-family: 'Gentium Book Plus', serif; min-width: 20px; }
+  .sub em { color: #2c2c2c; }
+
+  /* ILLUSTRATION */
+  .illus { border-left: 4px solid #d47c1a; background: #fdf8ef; border-radius: 0 3px 3px 0; padding: 11px 15px; margin: 4px 0 10px; }
+  .illus-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #d47c1a; font-weight: 700; margin-bottom: 4px; }
+  .illus-text { font-size: 0.85rem; color: #444; line-height: 1.5; }
+
+  /* TRANSITION */
+  .transition { font-size: 0.85rem; color: #6c4bbf; font-style: italic; line-height: 1.45; padding: 4px 2px 0; }
+  .transition::before { content: "→ "; font-style: normal; font-weight: 700; }
+
+  /* APPLICATION */
+  .app-box { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 18px; }
+  .app-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.08rem; color: #2e8a4a; margin-bottom: 4px; }
+  .app-sub { font-size: 0.84rem; color: #557; margin-bottom: 13px; font-style: italic; }
+  .app-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.89rem; color: #333; line-height: 1.5; }
+  .app-item .ai { flex-shrink: 0; color: #2e8a4a; font-weight: 700; }
+  .app-item strong { color: #2c2c2c; }
+
+  /* CONCLUSION */
+  .concl { border: 3px solid #2c2c2c; border-radius: 3px; background: #1a1a1a; padding: 20px 24px; margin: 4px 0 18px; }
+  .concl-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #e0796b; font-weight: 700; margin-bottom: 10px; }
+  .concl-text { font-size: 0.95rem; color: #e8e2d8; line-height: 1.62; }
+  .concl-text p { margin-bottom: 11px; }
+  .concl-text .hi { color: #f0c48a; font-style: italic; }
+  .concl-text .cross { color: #7fb8f0; }
+
+  /* MEMORY / LANDING */
+  .memory { border: 2px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 14px 18px; margin: 4px 0 8px; text-align: center; }
+  .mem-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
+  .mem-text { font-family: 'Gentium Book Plus', serif; font-size: 1.05rem; color: #2c2c2c; line-height: 1.5; }
+  .mem-ref { display: block; font-size: 0.8rem; color: #999; margin-top: 5px; font-weight: 700; }
+
+  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 26px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.72rem; color: #bbb; }
+
+  @media print { body { background: #fff; } .home-nav { display: none; } .point, .app-box, .concl, .big-idea { break-inside: avoid; } }
+  @media (max-width: 700px) {
+    .head-title { font-size: 1.6rem; }
+    .meta { grid-template-columns: 1fr; }
+    .point-rom { width: 48px; font-size: 1.2rem; }
+    .footer { flex-direction: column; gap: 4px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="head-kicker">Sermon Outline</div>
+  <div class="head-title">Bold Obedience</div>
+  <div class="head-sub">Stepping in before the river parts</div>
+  <span class="badge-sermon">Preaching Outline · 3 points</span>
+
+  <!-- META -->
+  <div class="meta">
+    <div class="meta-cell">
+      <div class="meta-label">Primary Text</div>
+      <div class="meta-val"><strong>Joshua 3:7–17</strong><br>Crossing the Jordan</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-label">Supporting</div>
+      <div class="meta-val">Daniel 3:16–18 · Esther 4:16 · Acts 4:13, 29–31 · Heb 11:8</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-label">Aim</div>
+      <div class="meta-val">To move hearers to obey the command they already know but have delayed — trusting God for the outcome.</div>
+    </div>
+  </div>
+
+  <!-- BIG IDEA -->
+  <div class="big-idea">
+    <div class="bi-label">The Big Idea</div>
+    <div class="bi-text">Bold obedience does what God says <em>before</em> it sees how it will work — because it trusts the One who said it. God parts the river as we step in, not before.</div>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <div class="section-label">Introduction</div>
+  <div class="block">
+    <div class="block-body">
+      <p>We love the miracle of the parted Jordan. What we forget is that the miracle came <em>after</em> wet feet. God told the priests carrying the ark to march straight into a river at <span class="scrip">flood stage</span> (Josh 3:15). The water did not divide when they prayed about it, planned for it, or watched it from the bank. It divided <span class="scrip">"as soon as… the feet of the priests… were dipped in the brink of the water"</span> (3:15–16). The command was: <em>step in — then you'll see it move.</em></p>
+      <p>That is the exact opposite of how we prefer to obey. We want to see the sea split, the money arrive, the door open, the fear lift — <em>and then</em> we'll obey. But God very often reverses the order: the way opens <em>as</em> we obey, not before. Faith that waits for the water to part before it moves will stand on the bank forever.</p>
+      <p class="lead-in">This morning: three marks of the obedience that gets its feet wet.</p>
+    </div>
+  </div>
+
+  <!-- POINTS -->
+  <div class="section-label">The Message</div>
+
+  <!-- POINT I -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">I</div>
+      <div class="point-titlewrap">
+        <div class="point-title">Bold Obedience Obeys the Word, Not the Odds</div>
+        <div class="point-key">Joshua 3:13 · Hebrews 11:8</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>The command came <em>before</em> the path was visible. "The waters… shall stand in a heap" — future tense, promised but not yet seen. The priests had only a word to go on, and a word from God was enough.</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>Abraham "obeyed… and he went out, <em>not knowing where he was going</em>" (Heb 11:8). Bold obedience does not require a map; it requires a Voice.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>Faith's arithmetic: one clear command from God outweighs a thousand visible obstacles. The question is never "Can I see how?" but "Has God said?"</span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">A river at flood stage is the worst possible moment to cross — and that is precisely when God said go. He often lets the obstacle swell to its highest just before He asks you to step, so that when it parts, no one doubts who did it.</div>
+      </div>
+      <div class="transition">But a word like that will cost you something to obey — which is the second mark.</div>
+    </div>
+  </div>
+
+  <!-- POINT II -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">II</div>
+      <div class="point-titlewrap">
+        <div class="point-title">Bold Obedience Counts the Cost and Steps Anyway</div>
+        <div class="point-key">Daniel 3:16–18 · Esther 4:16</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>Shadrach, Meshach and Abednego: "Our God… is able to deliver us… <em>But if not</em>, be it known to you, O king, that we will not serve your gods" (3:17–18). Their obedience was <em>not contingent on rescue.</em></span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>Esther walked into the throne room uninvited on pain of death: "<em>If I perish, I perish</em>" (4:16). Bold obedience will risk what it cannot afford to lose.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>Boldness is not the absence of fear; it is fear <em>overruled</em> by a higher allegiance — "we must obey God rather than men" (Acts 5:29).</span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">"But if not" is the hinge of real faith. Anyone will obey a God who guarantees the furnace won't burn. The three Hebrews obeyed a God who <em>might</em> let them burn — and trusted Him past the flames. That is the courage that cannot be bribed or threatened.</div>
+      </div>
+      <div class="transition">So where does courage like that come from? Never from us — which is the third mark.</div>
+    </div>
+  </div>
+
+  <!-- POINT III -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">III</div>
+      <div class="point-titlewrap">
+        <div class="point-title">Bold Obedience Draws Its Courage from God's Presence, Not Our Strength</div>
+        <div class="point-key">Joshua 1:9 · Acts 4:13, 29–31</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>The command to be brave rests on a promise of presence: "Be strong and courageous… <em>for the LORD your God is with you</em> wherever you go" (Josh 1:9). Take away the presence and the command is cruel; with it, it is fuel.</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>Threatened by the council, the apostles did not pray for safety — they prayed for <em>boldness</em>: "grant to your servants to continue to speak your word with all boldness" (Acts 4:29). And the place was shaken and they were filled.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>They were "uneducated, common men," yet the rulers marvelled and "recognized that they <em>had been with Jesus</em>" (4:13). Boldness is the overflow of His presence, not the product of our personality.</span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">Notice what the early church asked for under pressure. Not, "Lord, remove the threat." But, "Lord, make us bold in it." When we stop praying for the water to disappear and start praying for courage to step in, heaven starts to move.</div>
+      </div>
+      <div class="transition">So the Lord turns and asks: where is <em>your</em> Jordan?</div>
+    </div>
+  </div>
+
+  <!-- APPLICATION -->
+  <div class="section-label">Application</div>
+  <div class="app-box">
+    <div class="app-title">Where Is Your Jordan?</div>
+    <div class="app-sub">The command you already know, but have delayed because you can't yet see how it works out.</div>
+    <div class="app-item"><span class="ai">1.</span><span><strong>Name it.</strong> The conversation you've avoided. The confession overdue. The giving that feels reckless. The call you've argued with. The person you must forgive. The witness you keep swallowing. What has God already said that you have not yet done?</span></div>
+    <div class="app-item"><span class="ai">2.</span><span><strong>Step in.</strong> Don't wait for the water to part first. Obey the <em>next</em> step in front of you, and leave the outcome with the God who commanded it. Wet feet come before dry ground.</span></div>
+    <div class="app-item"><span class="ai">3.</span><span><strong>Pray "but if not" faith.</strong> Resolve to obey even if it costs, even if God doesn't rescue you the way you'd script it. Obedience that only follows a guaranteed outcome isn't yet trust.</span></div>
+    <div class="app-item"><span class="ai">4.</span><span><strong>Ask for boldness, not just relief.</strong> Like the church in Acts 4, pray less "take this away" and more "make me brave in it — you are with me."</span></div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-label">Conclusion</div>
+  <div class="concl">
+    <div class="concl-label">The Landing</div>
+    <div class="concl-text">
+      <p>The water stood at flood stage <span class="hi">until the feet got wet.</span> Hear this carefully: God is not standing back, waiting to part your sea so that you'll finally obey. He is waiting for your obedience to <em>be</em> the moment the sea parts. The miracle is on the far side of the first wet step.</p>
+      <p>And we can step boldly only because Someone stepped first. <span class="cross">Jesus was "obedient to the point of death, even death on a cross" (Phil 2:8)</span> — He walked into the flood of judgment that should have swept us away, and He did not turn back. He got no "but if not"; the furnace fell full on Him, so that it never will on us.</p>
+      <p>Our bold obedience is never the price of His love — it is the answer to it. He got His feet wet first. Now He says to you: <span class="hi">step in.</span></p>
+    </div>
+  </div>
+
+  <!-- MEMORY -->
+  <div class="memory">
+    <div class="mem-label">Memory Verse</div>
+    <div class="mem-text">"Be strong and courageous. Do not be frightened, and do not be dismayed, for the LORD your God is with you wherever you go."<span class="mem-ref">Joshua 1:9</span></div>
+  </div>
+
+  <div class="footer">
+    <span>Bold Obedience &nbsp;·&nbsp; Sermon Outline</span>
+    <span>Joshua 3 · Daniel 3 · Acts 4</span>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
