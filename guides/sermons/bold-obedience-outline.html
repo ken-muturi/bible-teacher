@@ -38,6 +38,17 @@
 
   .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin: 30px 0 12px; }
 
+  /* THE FRAME — AMOS */
+  .frame { border: 2px solid #3b6fd4; border-radius: 4px; background: #eef2fb; padding: 16px 20px; margin: 20px 0 4px; }
+  .frame-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 5px; }
+  .frame-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.08rem; color: #2c2c2c; margin-bottom: 3px; }
+  .frame-key { font-size: 0.74rem; color: #3b6fd4; font-weight: 700; margin-bottom: 12px; }
+  .frame-quote { font-size: 0.86rem; color: #33415e; line-height: 1.55; font-style: italic; border-left: 3px solid #9db8e8; padding-left: 12px; margin-bottom: 12px; }
+  .frame-body { font-size: 0.89rem; color: #333; line-height: 1.55; }
+  .frame-body p { margin-bottom: 9px; }
+  .frame-body p:last-child { margin-bottom: 0; }
+  .frame-body strong { color: #3b6fd4; }
+
   /* INTRO / MOVEMENT BLOCKS */
   .block { margin-bottom: 8px; }
   .block-body { font-size: 0.93rem; color: #333; line-height: 1.6; }
@@ -83,6 +94,26 @@
   .concl-text .hi { color: #f0c48a; font-style: italic; }
   .concl-text .cross { color: #7fb8f0; }
 
+  /* CHRIST — THE PATTERN */
+  .christ { border: 2.5px solid #d47c1a; border-radius: 4px; background: #1a1a1a; padding: 18px 22px; margin: 4px 0 18px; }
+  .christ-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #f0c48a; font-weight: 700; margin-bottom: 4px; }
+  .christ-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.14rem; color: #f5f0e8; margin-bottom: 3px; }
+  .christ-key { font-size: 0.76rem; color: #d47c1a; font-weight: 700; margin-bottom: 14px; }
+  .christ-intro { font-size: 0.88rem; color: #d8d2c8; line-height: 1.55; margin-bottom: 14px; }
+  .christ-intro em { color: #f0c48a; font-style: italic; }
+  .kenosis { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+  .descent-title, .ascent-title { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 8px; }
+  .descent-title { color: #e0796b; } .ascent-title { color: #6fc28d; }
+  .step { border-left: 3px solid #c0392b; padding: 4px 0 4px 11px; margin-bottom: 6px; font-size: 0.8rem; color: #ccc; line-height: 1.34; }
+  .step .sref { color: #999; font-size: 0.72rem; }
+  .step.deepest { border-left-color: #f0c48a; }
+  .step.deepest b { color: #f0c48a; }
+  .ascent { border: 1.5px solid #2e8a4a; border-radius: 3px; background: #20281f; padding: 13px 15px; }
+  .ascent-line { font-size: 0.83rem; color: #d8e6d8; line-height: 1.5; margin-bottom: 8px; }
+  .ascent-line:last-child { margin-bottom: 0; }
+  .ascent-line b { color: #7fd39c; }
+  .christ-turn { margin-top: 14px; padding-top: 12px; border-top: 1px solid #3a3a3a; font-family: 'Gentium Book Plus', serif; font-style: italic; font-size: 0.94rem; color: #f0c48a; line-height: 1.5; }
+
   /* MEMORY / LANDING */
   .memory { border: 2px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 14px 18px; margin: 4px 0 8px; text-align: center; }
   .mem-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
@@ -96,6 +127,7 @@
     .head-title { font-size: 1.6rem; }
     .meta { grid-template-columns: 1fr; }
     .point-rom { width: 48px; font-size: 1.2rem; }
+    .kenosis { grid-template-columns: 1fr; gap: 12px; }
     .footer { flex-direction: column; gap: 4px; }
   }
   </style>
@@ -116,12 +148,12 @@
   <!-- META -->
   <div class="meta">
     <div class="meta-cell">
-      <div class="meta-label">Primary Text</div>
-      <div class="meta-val"><strong>Joshua 3:7–17</strong><br>Crossing the Jordan</div>
+      <div class="meta-label">Text &amp; Frame</div>
+      <div class="meta-val"><strong>Joshua 3:7–17</strong> (crossing the Jordan), framed by <strong>Amos 9:11–14</strong> (God rebuilds &amp; restores)</div>
     </div>
     <div class="meta-cell">
       <div class="meta-label">Supporting</div>
-      <div class="meta-val">Daniel 3:16–18 · Esther 4:16 · Acts 4:13, 29–31 · Heb 11:8</div>
+      <div class="meta-val">Gen 12:1–4 · Dan 3:16–18 · Esther 4:16 · Hosea 1:2; 3:1 · Acts 4:29 · Phil 2:5–11</div>
     </div>
     <div class="meta-cell">
       <div class="meta-label">Aim</div>
@@ -133,6 +165,20 @@
   <div class="big-idea">
     <div class="bi-label">The Big Idea</div>
     <div class="bi-text">Bold obedience does what God says <em>before</em> it sees how it will work — because it trusts the One who said it. God parts the river as we step in, not before.</div>
+  </div>
+
+  <!-- THE FRAME -->
+  <div class="section-label">The Frame — Why Bold Obedience Is Safe</div>
+  <div class="frame">
+    <div class="frame-label">The horizon behind every step</div>
+    <div class="frame-title">God Is Rebuilding What Fell</div>
+    <div class="frame-key">Amos 9:11–14</div>
+    <div class="frame-quote">"In that day I will raise up the booth of David that is fallen and repair its breaches… that they may possess… all the nations who are called by my name… Behold, the days are coming… when the plowman shall overtake the reaper… I will restore the fortunes of my people Israel, and they shall rebuild the ruined cities and inhabit them; they shall plant vineyards and drink their wine."</div>
+    <div class="frame-body">
+      <p>Set the whole call to bold obedience inside <em>this</em> promise. After nine chapters of judgment, Amos ends with God's unbreakable pledge: He will <strong>raise up the fallen booth of David</strong>, gather in <strong>all the nations</strong>, and pour out a restoration so lavish the ploughman overtakes the reaper — the next harvest begins before the last is gathered.</p>
+      <p>This is the frame the New Testament chooses. At the Jerusalem Council, James lifts these very verses to prove God was always going to bring the nations in through the risen Christ (Acts 15:16–17). The fallen booth is raised in Jesus, "Lord" of Philippians 2; the ingathering of Genesis 12 ("all families blessed") lands here.</p>
+      <p>So when God calls you to step in, you are not stepping into the dark — you are stepping into a <strong>restoration already guaranteed</strong>. Bold obedience is safe because the outcome of history is settled: the booth <em>will</em> be raised, the harvest <em>will</em> overflow. We obey boldly because we are joining what God has already sworn to finish.</p>
+    </div>
   </div>
 
   <!-- INTRODUCTION -->
@@ -154,13 +200,14 @@
       <div class="point-rom">I</div>
       <div class="point-titlewrap">
         <div class="point-title">Bold Obedience Obeys the Word, Not the Odds</div>
-        <div class="point-key">Joshua 3:13 · Hebrews 11:8</div>
+        <div class="point-key">Genesis 12:1–4 · Joshua 3:13 · Hebrews 11:8</div>
       </div>
     </div>
     <div class="point-body">
       <div class="sub"><span class="sub-letter">A.</span><span>The command came <em>before</em> the path was visible. "The waters… shall stand in a heap" — future tense, promised but not yet seen. The priests had only a word to go on, and a word from God was enough.</span></div>
-      <div class="sub"><span class="sub-letter">B.</span><span>Abraham "obeyed… and he went out, <em>not knowing where he was going</em>" (Heb 11:8). Bold obedience does not require a map; it requires a Voice.</span></div>
-      <div class="sub"><span class="sub-letter">C.</span><span>Faith's arithmetic: one clear command from God outweighs a thousand visible obstacles. The question is never "Can I see how?" but "Has God said?"</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>Abram got a command with no address: "Go… <em>to the land that I will show you</em>" (Gen 12:1). Leave country, kindred, father's house — for a destination not yet named. And the verdict: "<em>So Abram went, as the LORD had told him</em>" (12:4). No map, just a Voice — and he moved.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>Hebrews reads his heart: "he went out, <em>not knowing where he was going</em>" (Heb 11:8). Bold obedience does not require a map; it requires a Voice worth trusting.</span></div>
+      <div class="sub"><span class="sub-letter">D.</span><span>Faith's arithmetic: one clear command from God outweighs a thousand visible obstacles. The question is never "Can I see how?" but "Has God said?"</span></div>
       <div class="illus">
         <div class="illus-label">Illustration</div>
         <div class="illus-text">A river at flood stage is the worst possible moment to cross — and that is precisely when God said go. He often lets the obstacle swell to its highest just before He asks you to step, so that when it parts, no one doubts who did it.</div>
@@ -175,13 +222,14 @@
       <div class="point-rom">II</div>
       <div class="point-titlewrap">
         <div class="point-title">Bold Obedience Counts the Cost and Steps Anyway</div>
-        <div class="point-key">Daniel 3:16–18 · Esther 4:16</div>
+        <div class="point-key">Daniel 3:16–18 · Esther 4:16 · Hosea 1:2; 3:1</div>
       </div>
     </div>
     <div class="point-body">
       <div class="sub"><span class="sub-letter">A.</span><span>Shadrach, Meshach and Abednego: "Our God… is able to deliver us… <em>But if not</em>, be it known to you, O king, that we will not serve your gods" (3:17–18). Their obedience was <em>not contingent on rescue.</em></span></div>
       <div class="sub"><span class="sub-letter">B.</span><span>Esther walked into the throne room uninvited on pain of death: "<em>If I perish, I perish</em>" (4:16). Bold obedience will risk what it cannot afford to lose.</span></div>
-      <div class="sub"><span class="sub-letter">C.</span><span>Boldness is not the absence of fear; it is fear <em>overruled</em> by a higher allegiance — "we must obey God rather than men" (Acts 5:29).</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>Hosea paid in reputation and heartbreak: "<em>Go, take to yourself a wife of whoredom</em>" (1:2) — and later, "<em>Go again, love a woman who is an adulteress</em>" (3:1). God asked him to obey with his whole life as a living sermon, at the cost of his dignity. Some obedience costs comfort; some costs your good name.</span></div>
+      <div class="sub"><span class="sub-letter">D.</span><span>Boldness is not the absence of fear; it is fear <em>overruled</em> by a higher allegiance — "we must obey God rather than men" (Acts 5:29).</span></div>
       <div class="illus">
         <div class="illus-label">Illustration</div>
         <div class="illus-text">"But if not" is the hinge of real faith. Anyone will obey a God who guarantees the furnace won't burn. The three Hebrews obeyed a God who <em>might</em> let them burn — and trusted Him past the flames. That is the courage that cannot be bribed or threatened.</div>
@@ -211,6 +259,33 @@
     </div>
   </div>
 
+  <!-- CHRIST: THE PATTERN -->
+  <div class="section-label">The Supreme Example</div>
+  <div class="christ">
+    <div class="christ-label">The Pattern &amp; the Power</div>
+    <div class="christ-title">The Bold Obedience of Christ</div>
+    <div class="christ-key">Philippians 2:5–11</div>
+    <div class="christ-intro">Every bold obedience we've traced — Abram leaving home, the priests in the flood, the three in the fire, Hosea in his shame — is a shadow of <em>one</em> obedience. "Have this mind among yourselves, which is yours in Christ Jesus" (2:5). Watch Him step in, all the way down:</div>
+    <div class="kenosis">
+      <div>
+        <div class="descent-title">▼ The Descent — He Stepped Down</div>
+        <div class="step">"though he was in the form of God, did not count equality with God a thing to be grasped" <span class="sref">(2:6)</span></div>
+        <div class="step">"but emptied himself, by taking the form of a servant" <span class="sref">(2:7)</span></div>
+        <div class="step">"being born in the likeness of men" <span class="sref">(2:7)</span></div>
+        <div class="step">"he humbled himself by becoming obedient" <span class="sref">(2:8)</span></div>
+        <div class="step deepest"><b>"to the point of death, even death on a cross"</b> <span class="sref">(2:8)</span></div>
+      </div>
+      <div>
+        <div class="ascent-title">▲ The Exaltation — God Raised Him</div>
+        <div class="ascent">
+          <div class="ascent-line">"<b>Therefore</b> God has highly exalted him and bestowed on him the name that is above every name" <span style="color:#8a9a8a">(2:9)</span></div>
+          <div class="ascent-line">"so that at the name of Jesus every knee should bow… and every tongue confess that <b>Jesus Christ is Lord</b>" <span style="color:#8a9a8a">(2:10–11)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="christ-turn">He got no "but if not." The furnace fell full on Him; the flood of judgment closed over His head and He did not turn back. He obeyed all the way down — so that the way up would be open for us. This is both our <b>pattern</b> (have this mind) and our <b>power</b> (He is now Lord). We step in behind a Saviour who already went the whole way.</div>
+  </div>
+
   <!-- APPLICATION -->
   <div class="section-label">Application</div>
   <div class="app-box">
@@ -229,6 +304,7 @@
     <div class="concl-text">
       <p>The water stood at flood stage <span class="hi">until the feet got wet.</span> Hear this carefully: God is not standing back, waiting to part your sea so that you'll finally obey. He is waiting for your obedience to <em>be</em> the moment the sea parts. The miracle is on the far side of the first wet step.</p>
       <p>And we can step boldly only because Someone stepped first. <span class="cross">Jesus was "obedient to the point of death, even death on a cross" (Phil 2:8)</span> — He walked into the flood of judgment that should have swept us away, and He did not turn back. He got no "but if not"; the furnace fell full on Him, so that it never will on us.</p>
+      <p>And remember the frame: the booth of David <span class="cross">is being raised</span>, the nations gathered, the fortunes restored — the plowman is already overtaking the reaper. You are not stepping into the dark; you are stepping into a restoration God has <em>sworn to finish.</em></p>
       <p>Our bold obedience is never the price of His love — it is the answer to it. He got His feet wet first. Now He says to you: <span class="hi">step in.</span></p>
     </div>
   </div>
@@ -241,7 +317,7 @@
 
   <div class="footer">
     <span>Bold Obedience &nbsp;·&nbsp; Sermon Outline</span>
-    <span>Joshua 3 · Daniel 3 · Acts 4</span>
+    <span>Amos 9 · Gen 12 · Joshua 3 · Hosea · Phil 2</span>
   </div>
 
 </div><!-- /main -->
