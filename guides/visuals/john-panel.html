@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John — The Word Became Flesh, That You May Believe</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 1020px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 20px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .header-book { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.03em; line-height: 1; }
+  .header-sub { font-size: 1.05rem; color: #555; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+  .meta-row strong { color: #2c2c2c; }
+  .header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Gentium Book Plus', serif; font-size: 1rem; color: #3b6fd4; text-align: center; letter-spacing: 0.02em; font-style: italic; }
+
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* KEY PASSAGE */
+  .passage-callout { border-left: 6px solid #3b6fd4; background: #eef2fb; padding: 18px 22px; margin: 4px 0 20px; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 7px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.72rem; color: #3b6fd4; margin-top: 7px; font-weight: 700; }
+
+  /* STRUCTURE */
+  .acts-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .act { border: 2.5px solid; border-radius: 3px; padding: 16px 15px; }
+  .act-1 { border-color: #d47c1a; background: #fdf8ef; }
+  .act-2 { border-color: #3b6fd4; background: #eef2fb; }
+  .act-3 { border-color: #6c4bbf; background: #f5f2fc; }
+  .act-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; margin-bottom: 8px; }
+  .act-1 .act-label { color: #d47c1a; } .act-2 .act-label { color: #3b6fd4; } .act-3 .act-label { color: #6c4bbf; }
+  .act-chapters { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.2rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-theme { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 10px; font-style: italic; }
+  .unit { padding: 6px 9px; border-radius: 2px; margin-bottom: 5px; }
+  .unit-1 { background: #f7e6cc; border-left: 3px solid #d47c1a; }
+  .unit-2 { background: #dce8fb; border-left: 3px solid #3b6fd4; }
+  .unit-3 { background: #e7dffb; border-left: 3px solid #6c4bbf; }
+  .unit-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 1px; }
+  .unit-1 .unit-ref { color: #d47c1a; } .unit-2 .unit-ref { color: #3b6fd4; } .unit-3 .unit-ref { color: #6c4bbf; }
+  .unit-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.78rem; color: #2c2c2c; margin-bottom: 1px; }
+  .unit-desc { font-size: 0.7rem; color: #444; line-height: 1.32; }
+
+  /* SEVEN SIGNS (dark strip) */
+  .signs { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .signs-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 4px; }
+  .signs-sub { font-size: 0.72rem; color: #999; margin-bottom: 14px; font-style: italic; }
+  .signs-track { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+  .sign-step { border: 1px solid #d47c1a; border-radius: 2px; padding: 9px; background: #241d12; }
+  .sign-num { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #f0c48a; }
+  .sign-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #d99f4f; margin-bottom: 3px; }
+  .sign-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.75rem; color: #f5f0e8; margin-bottom: 3px; line-height: 1.15; }
+  .sign-text { font-size: 0.65rem; color: #bbb; line-height: 1.3; }
+  .signs-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* SEVEN I AM (purple strip) */
+  .iam-strip { background: #6c4bbf; border-radius: 3px; padding: 14px 20px; margin: 4px 0 24px; }
+  .iam-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #fff; margin-bottom: 3px; }
+  .iam-sub { font-size: 0.72rem; color: #e0d6f7; margin-bottom: 12px; font-style: italic; }
+  .iam-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .iam-card { background: rgba(255,255,255,0.14); border-radius: 3px; padding: 8px 11px; }
+  .iam-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #d9ccf5; margin-bottom: 2px; }
+  .iam-text { font-size: 0.78rem; color: #fff; line-height: 1.3; font-family: 'Gentium Book Plus', serif; font-weight: 700; }
+  .iam-gloss { font-size: 0.68rem; color: #e6ddf7; line-height: 1.32; margin-top: 2px; }
+  .iam-note { font-size: 0.72rem; color: rgba(255,255,255,0.9); line-height: 1.4; margin-top: 11px; }
+
+  /* WORD-MADE-FLESH NOTE */
+  .flesh { border: 2.5px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 15px 18px; margin: 4px 0 24px; }
+  .flesh-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.98rem; color: #d47c1a; margin-bottom: 6px; }
+  .flesh-text { font-size: 0.83rem; color: #444; line-height: 1.5; }
+  .flesh-text strong { color: #a95e0c; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .word-gk { font-size: 1.2rem; color: #3b6fd4; font-weight: 700; margin-bottom: 1px; font-style: italic; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 4px; }
+  .word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: #3b6fd4; color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.73rem; color: #555; line-height: 1.38; }
+
+  /* CHAPTER CROSS-MAP */
+  .chap-map { margin: 4px 0 24px; }
+  .chap-row { display: grid; grid-template-columns: 104px 1fr 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .chap-num { background: #2c2c2c; color: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.74rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; line-height: 1.2; }
+  .chap-cell { padding: 8px 10px; border-left: 1px solid #ddd; background: #faf7f2; }
+  .chap-cell:nth-child(even) { background: #f5f0e8; }
+  .cc-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .cc-ot { color: #d47c1a; } .cc-nt { color: #3b6fd4; } .cc-theme { color: #6c4bbf; }
+  .cc-text { font-size: 0.72rem; color: #333; line-height: 1.34; }
+  .cc-refs { font-size: 0.66rem; color: #888; font-style: italic; margin-top: 2px; }
+
+  /* COMMENTARY */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.66rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #3b6fd4; padding-left: 10px; font-size: 0.76rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
+  .source-link:hover { color: #aaa; }
+
+  /* HARDEST */
+  .hard-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .hard-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+  .hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .hard-q { font-size: 0.82rem; color: #7eb8f7; font-weight: 700; margin-bottom: 4px; }
+  .hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #3b6fd4; border-radius: 3px; background: #eef2fb; padding: 17px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6f9ae0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.82rem; color: #333; line-height: 1.44; }
+  .tn-question { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #b8ccef; font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; color: #3b6fd4; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.12rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  @media (max-width: 820px) {
+    .acts-layout { grid-template-columns: 1fr; }
+    .word-grid { grid-template-columns: 1fr 1fr; }
+    .comm-grid, .tn-cols { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 84px 1fr; }
+    .chap-row .chap-cell:nth-child(4) { display: none; }
+  }
+  @media (max-width: 520px) {
+    .word-grid { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 1fr; }
+    .chap-num { border-radius: 3px 3px 0 0; }
+    .chap-cell { border-left: none; border-top: 1px solid #ddd; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <div class="header-top">
+      <div>
+        <div class="header-book">John</div>
+        <div class="header-sub">Book 43 of 66 · The Fourth Gospel · ~AD 85–95</div>
+      </div>
+      <div class="header-meta">
+        <div class="meta-row"><strong>Author:</strong> John the apostle — "the disciple whom Jesus loved" (21:24)</div>
+        <div class="meta-row"><strong>Written from:</strong> Ephesus (traditional)</div>
+        <div class="meta-row"><strong>Audience:</strong> A wide church, Jew and Greek, a generation who did not see</div>
+        <div class="meta-row"><strong>Genre:</strong> Eyewitness Gospel · theological biography</div>
+        <div class="meta-row"><strong>Stated purpose:</strong> "that you may believe… and have life" (20:31)</div>
+        <div class="meta-row"><strong>Distinct from:</strong> Matthew, Mark, Luke (the Synoptics)</div>
+      </div>
+    </div>
+    <div class="header-char">
+      "The Word became flesh and dwelt among us — written so that you may believe, and believing, have life in his name"
+    </div>
+  </div>
+
+  <!-- KEY PASSAGE -->
+  <div class="section-label">Controlling Verses — The Purpose Stated Outright</div>
+  <div class="passage-callout">
+    <div class="pc-label">John 1:14 &amp; 20:30–31 · The Word made flesh, and why the book was written</div>
+    <div class="pc-text">
+      "And the Word became flesh and dwelt among us, and we have seen his glory, glory as of the only Son from the Father, full of grace and truth." … "Now Jesus did many other signs… but these are written so that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in his name."
+    </div>
+    <div class="pc-ref">John 1:14; 20:30–31 (ESV)</div>
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">The Architecture — Prologue, the Book of Signs, the Book of Glory</div>
+  <div class="acts-layout">
+    <div class="act act-1">
+      <div class="act-label">Part 1 — The Book of Signs</div>
+      <div class="act-chapters">Chapters 1 – 12</div>
+      <div class="act-theme">Public ministry: "that you may believe"</div>
+      <div class="unit unit-1"><div class="unit-ref">1:1–18 · Prologue</div><div class="unit-title">The Word Was God</div><div class="unit-desc">Eternal Word, agent of creation, light and life, "became flesh and dwelt among us." The whole Gospel in overture.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">1:19–4:54 · Revealing</div><div class="unit-title">Come and See</div><div class="unit-desc">First disciples, Cana, Nicodemus ("born again"), the Samaritan woman, the official's son — Jesus revealed to widening circles.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">5–10 · Conflict</div><div class="unit-title">Signs &amp; "I AM" — and Division</div><div class="unit-desc">Healings, feeding the 5,000, light of the world, the good shepherd; the "I AM" sayings provoke worship and murderous opposition.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">11–12 · The Turn</div><div class="unit-title">Lazarus &amp; the Hour</div><div class="unit-desc">The climactic sign — raising Lazarus — seals the plot to kill him. "The hour has come for the Son of Man to be glorified."</div></div>
+    </div>
+    <div class="act act-2">
+      <div class="act-label">Part 2 — The Upper Room</div>
+      <div class="act-chapters">Chapters 13 – 17</div>
+      <div class="act-theme">The Book of Glory begins: with his own</div>
+      <div class="unit unit-2"><div class="unit-ref">13 · The Basin</div><div class="unit-title">He Washed Their Feet</div><div class="unit-desc">The Lord of glory kneels as a servant; a new commandment: "love one another as I have loved you."</div></div>
+      <div class="unit unit-2"><div class="unit-ref">14–16 · The Farewell</div><div class="unit-title">The Way &amp; the Helper</div><div class="unit-desc">"I am the way"; the promise of the Paraclete (Spirit); the vine and the branches — "abide in me"; peace and coming joy.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">17 · The Prayer</div><div class="unit-title">The High-Priestly Prayer</div><div class="unit-desc">Jesus prays for himself, his disciples, and all who will believe — "that they may all be one," kept and sent into the world.</div></div>
+    </div>
+    <div class="act act-3">
+      <div class="act-label">Part 3 — The Hour &amp; After</div>
+      <div class="act-chapters">Chapters 18 – 21</div>
+      <div class="act-theme">Glorified on the cross; risen; commissioning</div>
+      <div class="unit unit-3"><div class="unit-ref">18–19 · The Passion</div><div class="unit-title">"It Is Finished"</div><div class="unit-desc">Arrest, trials, Pilate, the crucifixion. In John, the cross is enthronement — the King "lifted up," his work completed (tetelestai).</div></div>
+      <div class="unit unit-3"><div class="unit-ref">20 · The Rising</div><div class="unit-title">The Empty Tomb &amp; Thomas</div><div class="unit-desc">Mary, the beloved disciple, the locked room; doubting Thomas confesses "My Lord and my God!" — the Gospel's climax of faith.</div></div>
+      <div class="unit unit-3"><div class="unit-ref">21 · The Epilogue</div><div class="unit-title">Breakfast &amp; Restoration</div><div class="unit-desc">The catch of fish; Peter restored three times — "Do you love me? Feed my sheep." The eyewitness signs his testimony.</div></div>
+    </div>
+  </div>
+
+  <!-- SEVEN SIGNS -->
+  <div class="section-label">The Seven Signs — Miracles That Reveal His Glory (ch. 2–11)</div>
+  <div class="signs">
+    <div class="signs-title">John selects seven "signs" (sēmeia) — not mere wonders, but pointers to who Jesus is</div>
+    <div class="signs-sub">Each sign unveils a facet of his glory and calls for belief; John says he chose these from many (20:30).</div>
+    <div class="signs-track">
+      <div class="sign-step"><div class="sign-num">1</div><div class="sign-ref">2:1–11</div><div class="sign-name">Water into Wine</div><div class="sign-text">At Cana — "the first of his signs… manifested his glory." The new joy of the kingdom.</div></div>
+      <div class="sign-step"><div class="sign-num">2</div><div class="sign-ref">4:46–54</div><div class="sign-name">Official's Son Healed</div><div class="sign-text">Healed from a distance by his word — faith in the bare promise of Jesus.</div></div>
+      <div class="sign-step"><div class="sign-num">3</div><div class="sign-ref">5:1–15</div><div class="sign-name">Paralytic at Bethesda</div><div class="sign-text">38 years lame, healed on the Sabbath — Jesus as Lord of life and of the Sabbath.</div></div>
+      <div class="sign-step"><div class="sign-num">4</div><div class="sign-ref">6:1–15</div><div class="sign-name">Feeding the 5,000</div><div class="sign-text">The only sign in all four Gospels; unlocks "I am the bread of life."</div></div>
+      <div class="sign-step"><div class="sign-num">5</div><div class="sign-ref">6:16–21</div><div class="sign-name">Walking on Water</div><div class="sign-text">"It is I (egō eimi); do not be afraid." Mastery over chaos and sea.</div></div>
+      <div class="sign-step"><div class="sign-num">6</div><div class="sign-ref">9:1–41</div><div class="sign-name">Man Born Blind</div><div class="sign-text">Sight given — "I am the light of the world." Physical sight becomes spiritual sight.</div></div>
+      <div class="sign-step"><div class="sign-num">7</div><div class="sign-ref">11:1–44</div><div class="sign-name">Raising of Lazarus</div><div class="sign-text">The climactic sign — "I am the resurrection and the life." Power over death itself.</div></div>
+    </div>
+    <div class="signs-note">John never calls these "miracles" (dynameis) as the other Gospels do; he calls them <em>signs</em> — each one a signpost pointing beyond the wonder to the identity of Jesus. Some count the resurrection itself as the eighth and greatest sign, and the miraculous catch of fish (ch. 21) as a resurrection echo. The signs are not proofs that compel; they are revelations that invite belief — and in John, people divide over every one.</div>
+  </div>
+
+  <!-- SEVEN I AM -->
+  <div class="section-label">The Seven "I AM" Sayings — He Names Himself (egō eimi)</div>
+  <div class="iam-strip">
+    <div class="iam-title">Seven times Jesus says "I am…" with a predicate — echoing the divine Name of Exodus 3:14</div>
+    <div class="iam-sub">Alongside the absolute "I AM" (8:58, "before Abraham was, I am"), at which they took up stones.</div>
+    <div class="iam-row">
+      <div class="iam-card"><div class="iam-ref">6:35</div><div class="iam-text">"…the bread of life"</div><div class="iam-gloss">He satisfies the deepest hunger.</div></div>
+      <div class="iam-card"><div class="iam-ref">8:12</div><div class="iam-text">"…the light of the world"</div><div class="iam-gloss">He dispels darkness and gives sight.</div></div>
+      <div class="iam-card"><div class="iam-ref">10:9</div><div class="iam-text">"…the door"</div><div class="iam-gloss">He is the only way into the fold.</div></div>
+      <div class="iam-card"><div class="iam-ref">10:11</div><div class="iam-text">"…the good shepherd"</div><div class="iam-gloss">He lays down his life for the sheep.</div></div>
+      <div class="iam-card"><div class="iam-ref">11:25</div><div class="iam-text">"…the resurrection and the life"</div><div class="iam-gloss">He conquers death for those who believe.</div></div>
+      <div class="iam-card"><div class="iam-ref">14:6</div><div class="iam-text">"…the way, the truth, the life"</div><div class="iam-gloss">No one comes to the Father but through him.</div></div>
+      <div class="iam-card"><div class="iam-ref">15:1</div><div class="iam-text">"…the true vine"</div><div class="iam-gloss">Abide in him or bear no fruit.</div></div>
+    </div>
+    <div class="iam-note">The predicated "I AM" sayings each pair naturally with a sign (bread ↔ feeding the 5,000; light ↔ the blind man; resurrection ↔ Lazarus). Behind them stands the absolute egō eimi of 8:58 — a claim to the very Name of God (Exod 3:14), which his hearers understood exactly, and picked up stones.</div>
+  </div>
+
+  <!-- WORD MADE FLESH NOTE -->
+  <div class="section-label">The Prologue — The Hinge of the Whole Gospel (1:1–18)</div>
+  <div class="flesh">
+    <div class="flesh-title">"The Word became flesh and dwelt among us" (1:14)</div>
+    <div class="flesh-text">John opens not at Bethlehem but "in the beginning" (echoing Genesis 1), identifying Jesus as the eternal <strong>Logos</strong> — God's self-expression, through whom all things were made. Then the scandal at the centre of the faith: this eternal Word "became flesh and <em>dwelt</em> (literally 'tabernacled,' eskēnōsen) among us." The God who once filled the tent in the wilderness now pitches his tent in a human life, and "we have seen his glory." Everything that follows — every sign, every "I AM," the cross as enthronement — unpacks this one sentence: <strong>the invisible God has made himself known in a Man you could touch.</strong> Grace and truth did not arrive as ideas; they walked into the room.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Six Key Words (Greek)</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-gk">λόγος</div>
+      <div class="word-translit">logos — "word"</div>
+      <span class="word-count">1:1, 14</span>
+      <div class="word-gloss">Word, reason, self-expression</div>
+      <div class="word-note">Rich in both Hebrew ("the word of the LORD" by which he creates and reveals) and Greek thought (the rational principle ordering the cosmos). John claims this Logos is a person — and became flesh. The bridge between God and everything he has made.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-gk">σημεῖον</div>
+      <div class="word-translit">sēmeion — "sign"</div>
+      <span class="word-count">~17× in John</span>
+      <div class="word-gloss">A sign, a pointer</div>
+      <div class="word-note">John's chosen word for Jesus' miracles. A sign is never about itself; it points beyond, to the identity and glory of the one who does it. The signs are structured to lead the reader to the confession of 20:31 — "that you may believe."</div>
+    </div>
+    <div class="word-card">
+      <div class="word-gk">δόξα</div>
+      <div class="word-translit">doxa — "glory"</div>
+      <span class="word-count">1:14; 12:23; 17</span>
+      <div class="word-gloss">Glory, weight, radiance</div>
+      <div class="word-note">In John, Jesus' "glory" is seen in the signs — but supremely on the cross. "The hour has come for the Son of Man to be <em>glorified</em>" means the hour to die. John's paradox: the throne is a cross, the crown is thorns, and lifting-up is both.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-gk">πιστεύω</div>
+      <div class="word-translit">pisteuō — "believe"</div>
+      <span class="word-count">~98× in John</span>
+      <div class="word-gloss">To believe, trust, entrust oneself</div>
+      <div class="word-note">The verb that carries the book's purpose (20:31). Strikingly, John almost never uses the noun "faith" (pistis) — only the verb. Belief is not a thing you possess but an act you do: to <em>trust</em> and keep trusting the person of Jesus.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-gk">ζωή</div>
+      <div class="word-translit">zōē — "life"</div>
+      <span class="word-count">~36× in John</span>
+      <div class="word-gloss">Life; esp. "eternal life"</div>
+      <div class="word-note">John's word for the gift Jesus brings — "in him was life" (1:4); "I came that they may have life… abundantly" (10:10). Eternal life is not merely endless duration but a quality of life, begun now, in knowing the Father and the Son (17:3).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-gk">μένω</div>
+      <div class="word-translit">menō — "abide / remain"</div>
+      <span class="word-count">~40× in John</span>
+      <div class="word-gloss">To remain, stay, dwell</div>
+      <div class="word-note">The heartbeat of John 15: "<em>Abide</em> in me, and I in you… apart from me you can do nothing." Not a burst of effort but a settled staying-connected to Christ, the vine — the secret of all lasting fruit and the mark of genuine discipleship.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-MAP -->
+  <div class="section-label">Cross-Map — John's Roots &amp; Echoes</div>
+  <div class="chap-map">
+    <div class="chap-row">
+      <div class="chap-num">John 1<br>The Word</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">"In the beginning" — Genesis 1. The Word creates light and life, as God's word did at creation.</div><div class="cc-refs">Gen 1:1–3 · Prov 8 · Ps 33:6</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Christ the image of God, in whom all things hold together.</div><div class="cc-refs">Col 1:15–17 · Heb 1:1–3</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">The eternal Word steps into his own creation.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">John 3 &amp; 8<br>Lifted Up / I AM</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The bronze serpent "lifted up" (3:14); the divine Name "I AM" of the burning bush (8:58).</div><div class="cc-refs">Num 21:8–9 · Exod 3:14</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">The exalted name of Jesus at which every knee bows.</div><div class="cc-refs">Phil 2:9–11</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Look and live; the Name of God walks the earth.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">John 6 &amp; 10<br>Bread / Shepherd</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Manna in the wilderness; the LORD my shepherd; God against false shepherds.</div><div class="cc-refs">Exod 16 · Ps 23 · Ezek 34</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">Christ the great Shepherd of the sheep, the true bread.</div><div class="cc-refs">Heb 13:20 · 1 Pet 2:25</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Jesus is what Israel's symbols were always pointing to.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">John 19<br>The Lamb</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The Passover lamb whose bones are unbroken; the pierced one; the suffering servant.</div><div class="cc-refs">Exod 12:46 · Zech 12:10 · Isa 53</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">"Behold, the Lamb of God" (1:29); the Lamb who was slain.</div><div class="cc-refs">1 Cor 5:7 · Rev 5:6–12</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">The cross as the true Passover — the Lamb takes away sin.</div></div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-grid">
+    <div class="comm-card">
+      <div class="comm-author">D. A. Carson</div>
+      <div class="comm-title">The Gospel According to John (Pillar NTC, 1991)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">A standard evangelical workhorse — careful, theologically rich, and strong on John's purpose statement (20:31), the signs, and the interplay of divine sovereignty and human belief.</div>
+      <div class="comm-point">Excellent on the historical questions and on reading John as genuine, if selective, eyewitness testimony rather than late invention.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Gospel According to John, Pillar [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Leon Morris</div>
+      <div class="comm-title">The Gospel According to John (NICNT, rev. 1995)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Detailed</span>
+      <div class="comm-point">Thorough and devotional, Morris mines John's key words — believe, life, glory, love, truth — and defends the Gospel's substantial historical reliability and apostolic origin.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — The Gospel According to John, NICNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Craig S. Keener</div>
+      <div class="comm-title">The Gospel of John: A Commentary (2 vols, 2003)</div>
+      <span class="comm-tradition trad-critical">Scholarly · Background</span>
+      <div class="comm-point">Encyclopaedic on the first-century Jewish and Greco-Roman background of John — invaluable for setting the signs, discourses, and "I AM" sayings in their original world.</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — The Gospel of John, Keener [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Andreas Köstenberger</div>
+      <div class="comm-title">John (Baker Exegetical, BECNT, 2004)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Strong on John's structure (signs / glory), his use of the Old Testament, and the mission theme — Jesus sent by the Father, and sending his disciples in turn (20:21).</div>
+      <a href="https://www.bakeracademic.com/" target="_blank" class="source-link">bakeracademic.com — John, BECNT [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Raymond E. Brown</div>
+      <div class="comm-title">The Gospel According to John (Anchor Bible, 1966–70)</div>
+      <span class="comm-tradition trad-critical">Catholic · Critical Landmark</span>
+      <div class="comm-point">The great critical landmark — magisterial on the Gospel's sources, the "Johannine community," symbolism, and the theology of signs and glory. Dense but rewarding.</div>
+      <a href="https://www.yalebooks.yale.edu/" target="_blank" class="source-link">yalebooks.yale.edu — The Gospel According to John, AB [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Bruce Milne</div>
+      <div class="comm-title">The Message of John (BST, 1993)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Pastoral</span>
+      <div class="comm-point">A warm, preachable exposition that keeps John's evangelistic purpose front and centre — reading each sign and discourse as an invitation to believe and find life.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — The Message of John [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- HARDEST -->
+  <div class="hard-box">
+    <div class="hard-title">The Hardest Parts — Where Readers Wrestle</div>
+    <div class="hard-item">
+      <div class="hard-q">1. John's repeated phrase "the Jews" — doesn't this fuel antisemitism?</div>
+      <div class="hard-a">This is a serious and painful question, given how the phrase has been misused across history. Several things must be held together. John himself is Jewish, as are Jesus, the disciples, and the earliest believers; "salvation is from the Jews" (4:22) is John's own line. The Greek <em>hoi Ioudaioi</em> often functions in John not as "the Jewish people" as a race but as a shorthand for the <em>Judean religious leadership</em> hostile to Jesus — sometimes it even means simply "the Judeans" or the temple authorities, and John records crowds of Jews who <em>do</em> believe. The conflict in John is an <em>intra-Jewish</em> dispute over the identity of Israel's Messiah, not a racial indictment. To read it as licence for anti-Jewish hatred is a grievous distortion of a book written by a Jew about the Jewish Messiah for the salvation of the world. Responsible teaching names both the history of misuse and the text's actual meaning.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">2. Why is John so different from Matthew, Mark, and Luke? Is it historical?</div>
+      <div class="hard-a">The differences are real: John has no parables or exorcisms, long "I AM" discourses instead of pithy sayings, a ministry spanning several Passovers, a Judean rather than Galilean focus, and the temple cleansing near the start rather than the end. But difference is not contradiction. John writes later, selectively (21:25), and for a different purpose — supplementing the others and drawing out the theological meaning of events he witnessed. He shows detailed, verifiable knowledge of pre-70 AD Jerusalem geography and Jewish festivals. Most scholars now take John as an independent, theologically shaped, but historically rooted witness — the same Jesus seen from a different, reflective angle, "that you may believe."</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">3. Predestination vs "whoever believes" — John seems to teach both. Which is it?</div>
+      <div class="hard-a">John holds together two things we struggle to: robust divine sovereignty and genuine human responsibility. "No one can come to me unless the Father… draws him" (6:44); "all that the Father gives me will come to me" (6:37); yet also the sweeping "whoever believes in him should… have eternal life" (3:16) and "you refuse to come to me that you may have life" (5:40). John never resolves this into a formula. The drawing of the Father does not cancel the call to believe; the call to believe does not deny that faith is itself a gift. Both are pressed with full force — sovereign grace as the ground of salvation, and real, responsible faith as the way it is received. The pastoral effect is humility (I cannot save myself) and urgency (I am summoned to believe).</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">4. The woman caught in adultery (7:53–8:11) — is it really part of John?</div>
+      <div class="hard-a">This beloved story is almost certainly not an original part of John's Gospel: it is missing from the earliest and best manuscripts, some copies place it elsewhere (even in Luke), and its style differs from John's. Most modern Bibles keep it but mark it off with a note. That does not make the account untrue or unedifying — many scholars regard it as a genuine tradition about Jesus that circulated early and rings true to his character ("Neither do I condemn you; go, and… sin no more"). The honest approach is to teach it openly: to explain what the manuscripts show, not build doctrine uniquely on it, and still treasure it as consistent with the Jesus the rest of the Gospel reveals. Textual honesty and reverence for Scripture belong together.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — An Old Apostle's Testimony</div>
+        <div class="tn-text">Decades after the events, the last living apostle — the one who had leaned on Jesus at the table and stood at the cross — set down his witness for a church that would never see Jesus in the flesh. He chose seven signs from many, wove them with the "I AM" sayings and the long farewell discourses, and stated his aim plainly: not to record everything, but to lead the reader to believe and find life in the name of Jesus.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — The Gospel That Asks You to Believe</div>
+        <div class="tn-text">John remains the doorway Gospel — the one pressed into the hands of seekers, because it is built for exactly that. It confronts every reader with the same crisis it forced on Nicodemus, the Samaritan woman, and Thomas: not merely to admire Jesus but to <em>believe</em> — to entrust yourself to the Word made flesh, crucified and risen. Blessed, Jesus tells Thomas, "are those who have not seen and yet have believed" (20:29). That is us. That is the book's reach across the centuries to you.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: John wrote "that you may believe… and have life." Have I moved past admiring Jesus to actually entrusting my life to him — the Word made flesh, lifted up, and risen?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"John shows the eternal Word made flesh — unveiling his glory through seven signs and seven 'I AM' sayings, and supremely on a cross that is his enthronement. It is the Gospel written with a purpose stated outright: that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in his name."</div>
+    <div class="verdict-ref">John 1:14 · 20:30–31 — "the Word became flesh… these are written so that you may believe… and have life."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
