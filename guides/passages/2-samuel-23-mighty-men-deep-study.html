@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 Samuel 23:8–39 — David's Mighty Men (Deep Study)</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
+  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
+  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #c0392b; text-decoration: none; border-bottom: 1px dashed #c0392b; }
+  .companion-link:hover { color: #922b21; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  .passage-callout { border-left: 5px solid #c0392b; background: #fdf2f2; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 8px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.74rem; color: #c0392b; margin-top: 8px; font-weight: 700; }
+
+  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+  /* ORDERS OF VALOR — tiers */
+  .tiers { margin: 4px 0 24px; }
+  .tier { display: flex; gap: 0; margin-bottom: 7px; align-items: stretch; border-radius: 3px; overflow: hidden; border: 2px solid; }
+  .tier-badge { flex-shrink: 0; width: 118px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 8px 6px; }
+  .tier-badge .tb-n { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.15rem; line-height: 1; }
+  .tier-badge .tb-l { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 3px; }
+  .tier-body { flex: 1; padding: 9px 14px; background: #faf7f2; }
+  .tier-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #2c2c2c; }
+  .tier-desc { font-size: 0.76rem; color: #555; line-height: 1.36; margin-top: 2px; }
+  .tier.t1 { border-color: #c0392b; } .tier.t1 .tier-badge { background: #c0392b; }
+  .tier.tw { border-color: #1a1a1a; } .tier.tw .tier-badge { background: #1a1a1a; }
+  .tier.t2 { border-color: #d47c1a; } .tier.t2 .tier-badge { background: #d47c1a; }
+  .tier.t3 { border-color: #6c4bbf; } .tier.t3 .tier-badge { background: #6c4bbf; }
+
+  /* HERO CARDS */
+  .hero-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .hero-grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .hero-card { border: 2px solid #c0392b; border-radius: 3px; background: #fdf5f4; padding: 13px 14px; }
+  .hero-name { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.98rem; color: #c0392b; line-height: 1.15; margin-bottom: 1px; }
+  .hero-epithet { font-size: 0.66rem; color: #888; font-style: italic; margin-bottom: 6px; }
+  .hero-ref { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #c0392b; color: #fff; padding: 1px 6px; border-radius: 2px; margin-bottom: 8px; }
+  .hero-deed { font-size: 0.78rem; color: #444; line-height: 1.44; }
+  .hero-deed strong { color: #922b21; }
+
+  /* WATER INCIDENT */
+  .water { background: #1a1a1a; border: 2.5px solid #c0392b; border-radius: 4px; padding: 20px 24px; margin: 4px 0 24px; }
+  .water-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #e0796b; font-weight: 700; margin-bottom: 6px; }
+  .water-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.14rem; color: #f5f0e8; margin-bottom: 10px; }
+  .water-body { font-size: 0.86rem; color: #d8d2c8; line-height: 1.6; }
+  .water-body p { margin-bottom: 10px; }
+  .water-quote { border-left: 3px solid #c0392b; padding-left: 14px; margin: 12px 0; font-family: 'Gentium Book Plus', serif; font-style: italic; font-size: 1rem; color: #f0c48a; line-height: 1.5; }
+  .water-turn { margin-top: 12px; padding-top: 12px; border-top: 1px solid #3a3a3a; font-size: 0.83rem; color: #bbb; line-height: 1.52; }
+  .water-turn strong { color: #e0796b; }
+
+  /* ROSTER */
+  .roster-box { border: 2px solid #6c4bbf; border-radius: 3px; background: #f6f3fc; padding: 15px 18px; margin: 4px 0 8px; }
+  .roster-intro { font-size: 0.8rem; color: #555; line-height: 1.45; margin-bottom: 12px; }
+  .roster-intro strong { color: #6c4bbf; }
+  .roster { display: flex; flex-wrap: wrap; gap: 6px; }
+  .name-chip { font-size: 0.72rem; color: #3c2f5e; background: #e7dffb; border: 1px solid #cbbaf0; border-radius: 12px; padding: 2px 10px; }
+  .name-chip.uriah { background: #1a1a1a; color: #f0c48a; border-color: #c0392b; font-weight: 700; }
+  .roster-note { font-size: 0.78rem; color: #444; line-height: 1.5; margin-top: 12px; text-align: center; font-style: italic; }
+  .roster-note strong { color: #c0392b; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
+  .word-heb { font-size: 1.25rem; color: #c0392b; font-weight: 700; margin-bottom: 2px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
+  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #c0392b; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
+  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
+
+  /* CANON */
+  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
+  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
+  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
+
+  /* COMMENTARY */
+  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
+  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #c0392b; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
+  .source-link:hover { color: #aaa; }
+
+  /* PRESSURE */
+  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .pressure-q { font-size: 0.85rem; color: #e0796b; font-weight: 700; margin-bottom: 4px; }
+  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+  /* XREF */
+  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
+  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
+  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
+  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
+  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #c0392b; border-radius: 3px; background: #fdf2f2; padding: 18px 20px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #c0392b; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #d06a5e; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #eabbb4; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #c0392b; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .hero-grid, .hero-grid.two, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+    .word-grid, .xref-grid { grid-template-columns: 1fr; }
+    .tier-badge { width: 92px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">2 Samuel 23:8–39</div>
+  <div class="header-title">David's Mighty Men — The Gibborim, and the Water Worth More Than Blood</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="../sermons/bold-obedience-outline.html" class="companion-link">Bold Obedience · sermon outline</a>
+    <a href="esther-4-such-a-time-deep-study.html" class="companion-link">Esther 4 · for such a time</a>
+  </div>
+
+  <div class="section-label">Anchor Text — The Roll of Honor and Its Beating Heart</div>
+  <div class="passage-callout">
+    <div class="pc-label">2 Samuel 23:8, 15–17 · The mighty men — and the water David would not drink</div>
+    <div class="pc-text">
+      "These are the names of the mighty men whom David had…" … And David said longingly, "Oh, that someone would give me water to drink from the well of Bethlehem that is by the gate!" Then the three mighty men broke through the camp of the Philistines and drew water… But he would not drink it. He poured it out to the LORD and said, "Far be it from me, O LORD, that I should do this. Shall I drink the blood of the men who went at the risk of their lives?"
+    </div>
+    <div class="pc-ref">2 Samuel 23:8, 15–17 (ESV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>The setting:</strong> Chapters 21–24 form an appendix to 2 Samuel — a curated set of six pieces closing the book not with David's death (that comes in 1 Kings) but with reflections on his reign. Just before this roster come "the last words of David" (23:1–7). Then comes the honor roll: the names and deeds of the warriors God gave David, the men who fought beside the shepherd-king from the cave of Adullam to the throne. It is arranged in tiers — <em>the Three</em>, then two great commanders, then <em>the Thirty</em> — and it is studded with vivid single feats. But its true center is not a body count; it is a cup of water David refused to drink. And its final name, dropped without comment, is a quiet dagger: "Uriah the Hittite" (23:39). A parallel list appears in 1 Chronicles 11:10–47.</div>
+
+  <!-- ORDERS OF VALOR -->
+  <div class="section-label">The Orders of Valor — How the Roster Is Ranked</div>
+  <div class="tiers">
+    <div class="tier t1">
+      <div class="tier-badge"><div class="tb-n">The Three</div><div class="tb-l">ha-shəloshah · v.8–12</div></div>
+      <div class="tier-body">
+        <div class="tier-name">Josheb-basshebeth · Eleazar · Shammah</div>
+        <div class="tier-desc">The elite of the elite — three warriors whose lone stands the LORD turned into "a great victory." The highest order of David's men.</div>
+      </div>
+    </div>
+    <div class="tier tw">
+      <div class="tier-badge"><div class="tb-n">The Deed</div><div class="tb-l">v.13–17</div></div>
+      <div class="tier-body">
+        <div class="tier-name">The Water from Bethlehem's Well</div>
+        <div class="tier-desc">Three break through enemy lines for a drink David only wished aloud for — and he pours it out to God. The chapter's moral heart.</div>
+      </div>
+    </div>
+    <div class="tier t2">
+      <div class="tier-badge"><div class="tb-n">The Two</div><div class="tb-l">v.18–23</div></div>
+      <div class="tier-body">
+        <div class="tier-name">Abishai &amp; Benaiah — the Commanders</div>
+        <div class="tier-desc">Famed among the Three though not counted in them; set over the men and over David's bodyguard. Renowned for their own great feats.</div>
+      </div>
+    </div>
+    <div class="tier t3">
+      <div class="tier-badge"><div class="tb-n">The Thirty</div><div class="tb-l">ha-shəloshim · v.24–39</div></div>
+      <div class="tier-body">
+        <div class="tier-name">The Wider Corps — thirty-seven named in all</div>
+        <div class="tier-desc">A roll of names, some famous, most obscure — ending, pointedly, with Uriah the Hittite.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE THREE -->
+  <div class="section-label">The Three — Lone Stands the LORD Turned to Victory (v.8–12)</div>
+  <div class="hero-grid">
+    <div class="hero-card">
+      <div class="hero-name">Josheb-basshebeth</div>
+      <div class="hero-epithet">the Tahchemonite (Adino the Eznite)</div>
+      <span class="hero-ref">v.8</span>
+      <div class="hero-deed">Chief of the Three. He <strong>wielded his spear against eight hundred</strong>, whom he killed at one time — a feat of almost unimaginable ferocity, remembered by name generations later.</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-name">Eleazar son of Dodo</div>
+      <div class="hero-epithet">the Ahohite</div>
+      <span class="hero-ref">v.9–10</span>
+      <div class="hero-deed">When the army retreated, he stood and struck the Philistines until his <strong>hand grew weary and clung to the sword</strong>. "The LORD wrought a great victory" — the men returned only to strip the slain.</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-name">Shammah son of Agee</div>
+      <div class="hero-epithet">the Hararite</div>
+      <span class="hero-ref">v.11–12</span>
+      <div class="hero-deed">When the troops fled from the Philistines, he <strong>took his stand in a field of lentils</strong> and defended it alone. Again the refrain: "the LORD worked a great victory." One man, one patch of ground, held.</div>
+    </div>
+  </div>
+
+  <!-- WATER INCIDENT -->
+  <div class="section-label">The Heart of the Chapter — "Shall I Drink the Blood of These Men?"</div>
+  <div class="water">
+    <div class="water-label">2 Samuel 23:13–17 · The water from the well of Bethlehem</div>
+    <div class="water-title">The Cup He Would Not Drink</div>
+    <div class="water-body">
+      <p>It was harvest time. David was in the stronghold at the cave of Adullam; a Philistine garrison held his hometown, Bethlehem. Weary and homesick, he sighed aloud a soldier's daydream: <em>"Oh, that someone would give me water from the well of Bethlehem, by the gate!"</em> It was not a command — just a longing spoken into the air.</p>
+      <p>Three of his men heard it. And they <strong>broke through the Philistine camp</strong>, drew the water from that very well, and carried it back through enemy lines to lay it before their king — a gift bought at the risk of three lives, for a wish David never meant as an order.</p>
+      <div class="water-quote">"Far be it from me, O LORD, that I should do this. Shall I drink the blood of the men who went at the risk of their lives?"</div>
+      <p>So David <strong>would not drink it. He poured it out to the LORD</strong> — treating the cup as too costly, too holy, for himself. Water carried at the price of blood could only be given to God.</p>
+    </div>
+    <div class="water-turn">Why pour out what they risked everything to bring? Not ingratitude — the opposite. To <strong>drink</strong> it would be to treat their near-deaths as a personal indulgence; to <strong>pour it out as an offering</strong> honored their devotion by giving it to the only One worthy of that kind of costly love. David refuses to let his men's blood serve his own appetite. It is a flash of the king at his best — the very posture he tragically abandons in ch. 11, when he spends Uriah's life to feed his own desire. The two scenes are meant to be read together.</div>
+  </div>
+
+  <!-- THE COMMANDERS -->
+  <div class="section-label">The Two Commanders — Renowned, Yet Not of the Three (v.18–23)</div>
+  <div class="hero-grid two">
+    <div class="hero-card">
+      <div class="hero-name">Abishai son of Zeruiah</div>
+      <div class="hero-epithet">brother of Joab · chief of the Thirty</div>
+      <span class="hero-ref">v.18–19</span>
+      <div class="hero-deed">He <strong>wielded his spear against three hundred and killed them</strong>, winning a name beside the Three. He was the most honored of the Thirty and their commander — "but he did not attain to the Three."</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-name">Benaiah son of Jehoiada</div>
+      <div class="hero-epithet">of Kabzeel · over David's bodyguard</div>
+      <span class="hero-ref">v.20–23</span>
+      <div class="hero-deed">A doer of "great deeds": he struck down two heroes (<em>ariels</em>) of Moab; <strong>went down into a pit on a snowy day and killed a lion</strong>; and felled a giant Egyptian — going against his spear with only a staff, wrenching the weapon from his hand, and killing him with it. David set him over his guard.</div>
+    </div>
+  </div>
+
+  <!-- THE THIRTY -->
+  <div class="section-label">The Thirty — The Honor Roll (v.24–39)</div>
+  <div class="roster-box">
+    <div class="roster-intro">A long list of names — a few remembered, most known to God alone — closes the roster. The number "<strong>thirty</strong>" is a title for the corps, not a headcount; the text names <strong>thirty-seven in all</strong> (membership changed as men fell and were replaced). Read the names slowly; then notice the last one.</div>
+    <div class="roster">
+      <span class="name-chip">Asahel</span><span class="name-chip">Elhanan</span><span class="name-chip">Shammah</span><span class="name-chip">Elika</span><span class="name-chip">Helez</span><span class="name-chip">Ira</span><span class="name-chip">Abiezer</span><span class="name-chip">Mebunnai</span><span class="name-chip">Zalmon</span><span class="name-chip">Maharai</span><span class="name-chip">Heleb</span><span class="name-chip">Ittai</span><span class="name-chip">Benaiah</span><span class="name-chip">Hiddai</span><span class="name-chip">Abi-albon</span><span class="name-chip">Azmaveth</span><span class="name-chip">Eliahba</span><span class="name-chip">the sons of Jashen</span><span class="name-chip">Jonathan</span><span class="name-chip">Shammah</span><span class="name-chip">Ahiam</span><span class="name-chip">Eliphelet</span><span class="name-chip">Eliam</span><span class="name-chip">Hezro</span><span class="name-chip">Paarai</span><span class="name-chip">Igal</span><span class="name-chip">Bani</span><span class="name-chip">Zelek the Ammonite</span><span class="name-chip">Naharai</span><span class="name-chip">Ira</span><span class="name-chip">Gareb</span><span class="name-chip uriah">Uriah the Hittite</span>
+    </div>
+    <div class="roster-note"><strong>"Uriah the Hittite — thirty-seven in all."</strong> The list ends on the loyal foreigner David sent to die. No comment is made. None is needed.</div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — The Vocabulary of Valor</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">גִּבּוֹר</div>
+      <div class="word-translit">gibbor — "mighty man"</div>
+      <span class="word-ref-badge">23:8</span>
+      <div class="word-gloss">Warrior, champion, man of valor</div>
+      <div class="word-note">The word for a strong, valiant hero — used of warriors, and of God himself ("the LORD, mighty in battle," Ps 24:8). These are David's <em>gibborim</em>, and the same men are called in 1 Chron 11 "the mighty men… who gave him strong support to make him king."</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">דָּבַק</div>
+      <div class="word-translit">dabaq — "to cling / cleave"</div>
+      <span class="word-ref-badge">23:10</span>
+      <div class="word-gloss">To stick fast, hold on, cleave</div>
+      <div class="word-note">Eleazar fought until "his hand <em>clung</em> to the sword" — the same verb for a man cleaving to his wife (Gen 2:24) and clinging to the LORD (Deut 10:20). A picture of gripping the fight so long the hand will not let go: exhausted, welded, faithful to the end.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">אֲרִיאֵל</div>
+      <div class="word-translit">ariel — "lion of God"</div>
+      <span class="word-ref-badge">23:20</span>
+      <div class="word-gloss">Lion-like hero / champion</div>
+      <div class="word-note">Benaiah struck down "two <em>ariels</em> of Moab" — likely their fiercest champions, "lion-men." The term literally joins "lion" and "God," and fittingly Benaiah's next feat is killing an actual lion — a hunter of both the lion-hearted and the lion.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">נָסַךְ</div>
+      <div class="word-translit">nasak — "to pour out"</div>
+      <span class="word-ref-badge">23:16</span>
+      <div class="word-gloss">To pour out as a drink offering</div>
+      <div class="word-note">David "<em>poured out</em>" the water "to the LORD" — the technical verb for a <em>drink offering</em> (Gen 35:14; Num 28:7). He turns a cup into an act of worship: what was won by blood is too sacred to consume, so it is libated to God alone.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">חָלָל</div>
+      <div class="word-translit">chalal — "slain / pierced"</div>
+      <span class="word-ref-badge">23:8, 18</span>
+      <div class="word-gloss">The slain, the pierced-through</div>
+      <div class="word-note">The word behind the tallies — "against 800… against 300 <em>slain</em>." It refers to those fatally pierced in battle. The exploits are real and bloody; the text neither hides the violence nor lingers on it — the glory keeps being given to the LORD who "wrought the victory."</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">שֵׁמוֹת</div>
+      <div class="word-translit">shemot — "names"</div>
+      <span class="word-ref-badge">23:8</span>
+      <div class="word-gloss">Names (the roll of honor)</div>
+      <div class="word-note">"These are the <em>names</em>…" To be named in Scripture is to be honored and remembered. God keeps a roll of the faithful — obscure men whose deeds no one else recorded are written down forever. The naming is itself the reward (cf. the book of life, Rev 3:5).</div>
+    </div>
+  </div>
+
+  <!-- CANON -->
+  <div class="section-label">Across the Canon — From Adullam to the Greater Son of David</div>
+  <div class="ot-grid">
+    <div class="ot-card">
+      <div class="ot-ref">1 Samuel 22:1–2</div>
+      <div class="ot-title">The Cave of Adullam</div>
+      <div class="ot-note">David's mighty men began as a rabble: "everyone in distress, in debt, and bitter in soul" gathered to him in the cave. The greatest warriors in Israel were forged from the desperate and the discontented — transformed by attaching themselves to God's anointed.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">2 Samuel 23:10, 12</div>
+      <div class="ot-title">"The LORD Wrought a Great Victory"</div>
+      <div class="ot-note">Twice the refrain credits the win to God, not the hero. As with Jonathan (1 Sam 14:6) and the exodus (Exod 14:14), human courage is real but the salvation is the LORD's — the men are valiant; the victory is a gift.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">Leviticus 17:11 · Numbers 28:7</div>
+      <div class="ot-title">Blood and the Poured-Out Offering</div>
+      <div class="ot-note">"The life… is in the blood." David calls the water "the blood of the men," so it may not be drunk for pleasure but only poured out to God — the logic of the drink offering. Costly, life-bought devotion belongs to the LORD.</div>
+    </div>
+    <div class="ot-card">
+      <div class="ot-ref">2 Samuel 11 · 23:39</div>
+      <div class="ot-title">Uriah — the Shadow Over the Roll</div>
+      <div class="ot-note">The list ends with the loyal Hittite David had killed to cover his adultery. The honor roll of the men David <em>fought beside</em> closes with the man he <em>betrayed</em> — a silent verdict on even the best earthly king, and a longing for a better one.</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Dale Ralph Davis</div>
+      <div class="comm-title">2 Samuel: Out of Every Adversity (Focus on the Bible)</div>
+      <span class="comm-tradition trad-preaching">Evangelical · Expository</span>
+      <div class="comm-point">Davis reads the roster as grace: obscure, ordinary men made mighty in the service of the king — and insists the water incident reveals a David whose devotion refuses to spend his men's lives on his own comfort.</div>
+      <div class="comm-point">He notes how the closing "Uriah the Hittite" makes the whole honor roll an unspoken indictment, setting David's early nobility against his later fall.</div>
+      <a href="https://www.christianfocus.com/" target="_blank" class="source-link">christianfocus.com — 2 Samuel, Focus on the Bible [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Robert D. Bergen</div>
+      <div class="comm-title">1, 2 Samuel (New American Commentary, 1996)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exegetical</span>
+      <div class="comm-point">Bergen works through the structure of the appendix (chs. 21–24) as a deliberate chiasm, and handles the numerical and textual relationship to the parallel list in 1 Chronicles 11 with care.</div>
+      <a href="https://www.bhpublishinggroup.com/" target="_blank" class="source-link">bhpublishinggroup.com — 1, 2 Samuel, NAC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Joyce G. Baldwin</div>
+      <div class="comm-title">1 &amp; 2 Samuel (Tyndale OT Commentaries, 1988)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">Baldwin brings out the loyalty theme: the mighty men embody devotion to the anointed king, and the water scene shows a covenant leader who values his men's lives above his own wishes.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — 1 &amp; 2 Samuel, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Walter Brueggemann</div>
+      <div class="comm-title">First and Second Samuel (Interpretation, 1990)</div>
+      <span class="comm-tradition trad-critical">Mainline · Theological</span>
+      <div class="comm-point">Brueggemann probes how the appendix reframes David — the list of loyal warriors and the poured-out water present an ideal of leadership that the David of ch. 11 has already betrayed, holding promise and failure in tension.</div>
+      <a href="https://www.wjkbooks.com/" target="_blank" class="source-link">wjkbooks.com — First and Second Samuel, Interpretation [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">David G. Firth</div>
+      <div class="comm-title">1 &amp; 2 Samuel (Apollos OT Commentary, 2009)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Scholarly</span>
+      <div class="comm-point">Firth attends to how the appendices interpret David's whole reign, reading the mighty-men list as a testimony that David's kingdom was upheld by the loyalty of others and, beneath them, by the LORD.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — 1 &amp; 2 Samuel, Apollos [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Eugene H. Peterson</div>
+      <div class="comm-title">Leap Over a Wall (1997)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical · Devotional</span>
+      <div class="comm-point">Peterson reflects pastorally on David's community — how a life with God is never solitary but gathers a company of the loyal, the "mighty men" who share the anointed one's exile and triumph alike.</div>
+      <a href="https://www.harpercollins.com/" target="_blank" class="source-link">harpercollins.com — Leap Over a Wall [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- PRESSURE -->
+  <div class="pressure-box">
+    <div class="pressure-title">Interpretive Pressure Points</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Why do the numbers and names differ from 1 Chronicles 11 (800 vs 300, Josheb-basshebeth vs Jashobeam)?</div>
+      <div class="pressure-a">The two lists clearly describe the same corps but diverge in spots: Samuel's "Josheb-basshebeth… eight hundred" appears in Chronicles as "Jashobeam… three hundred," and several names are spelled differently or vary. The most likely explanation is the ordinary wear of ancient copying — some names and numbers were miscopied over centuries (the Hebrew is difficult and text-critically "hard" here), and the two authors may also draw on the roll at different moments, since membership changed over time. None of this touches the substance: an elite band really existed, their feats were remembered, and both authors preserve the same honor roll. Where the wording is uncertain, honest translations flag it. This is a place to hold our reconstructions loosely, not to pretend the difficulties aren't there.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Why does the roll of honor end with "Uriah the Hittite" — and no comment?</div>
+      <div class="pressure-a">This is one of Scripture's quietest, sharpest strokes. Uriah — a foreigner (a Hittite) who bore a Hebrew name meaning "the LORD is my light," and who was more scrupulous about holiness than his king (2 Sam 11:11) — was one of David's own mighty men, and David had him killed to cover his adultery with Bathsheba. To place his name <em>last</em> in the list of David's most loyal warriors, with no explanation, forces the reader to feel the weight: the king who here <em>would not drink water bought with his men's blood</em> (23:17) later <em>shed a loyal man's blood to satisfy his own desire</em>. The honor roll becomes a mirror of David's tragedy, and a signpost that even "a man after God's own heart" was not the king Israel ultimately needed. It leaves us longing for a greater Son of David.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Was David wrong — or ungrateful — to pour out water his men risked their lives to bring?</div>
+      <div class="pressure-a">Just the reverse: pouring it out was the most honoring thing he could do. To have gulped it down would have treated three men's near-deaths as a personal luxury — as if their blood existed to slake his thirst. By refusing to drink and libating it "to the LORD," David declares the gift too costly for his own comfort and fit only for God. It is an act of worship <em>and</em> of leadership: he will not consume his people. Far from spurning the gift, he elevates it — the water becomes a sacrifice, and their devotion is received by the only One worthy of that kind of love. The scene defines the ideal king David is at his best, which is exactly what makes his later use of Uriah so damning.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">4. Isn't a catalog of killings a strange, even troubling, thing to find in Scripture?</div>
+      <div class="pressure-a">The feats are bloody and the text does not sanitize them — this is real, ancient, defensive warfare for the survival of God's people in a violent age. Two things keep it from being mere hero-worship of violence. First, the recurring refrain gives the glory to God: "the LORD wrought a great victory" (23:10, 12) — the men are brave, but salvation is the LORD's. Second, the chapter's emotional center is not a slaughter but a <em>refusal</em> — David pouring out the water rather than spending life for his own gain — which quietly critiques the very appetite that turns strength into exploitation. Read as a whole, the passage honors courageous, self-giving loyalty while pointing beyond the sword to the God who saves and, ultimately, to a kingdom secured not by shed blood of enemies but by a King who sheds his own.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">5. What is a list like this even doing in the Bible — what is it for?</div>
+      <div class="pressure-a">Three things at least. First, it is <em>testimony</em>: David's kingdom was not a one-man achievement but the gift of God through a company of loyal, often unnamed people — a rebuke to every myth of the self-made leader. Second, it is <em>honor</em>: God troubles to record the deeds of obscure men no other history would remember, showing that faithful service is seen and kept, even when no one else notices (cf. Heb 6:10). Third, it is <em>gospel trajectory</em>: the mighty men who gathered to David in his rejection, shared his exile, and made him king are a living picture of those who rally to the true Anointed One — and the list's shadow (Uriah) makes us ache for the King who would never betray his own but would instead lay down his life for them.</div>
+    </div>
+  </div>
+
+  <!-- XREF -->
+  <div class="section-label">Cross-References</div>
+  <div class="xref-grid">
+    <div class="xref-card backward">
+      <div class="xref-tag">← Where they came from</div>
+      <div class="xref-ref">1 Samuel 22:1–2</div>
+      <div class="xref-note">The distressed, indebted, and bitter gather to David at Adullam — the raw material God forged into mighty men.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">≈ The parallel roll</div>
+      <div class="xref-ref">1 Chronicles 11:10–47</div>
+      <div class="xref-note">The same corps, "who gave him strong support to make him king" — with extra names and some differing details.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">← The victory is God's</div>
+      <div class="xref-ref">1 Samuel 14:6 · Ps 44:3</div>
+      <div class="xref-note">"Nothing can hinder the LORD from saving by many or by few" — the theology behind "the LORD wrought a great victory."</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Poured out</div>
+      <div class="xref-ref">Philippians 2:17 · 2 Tim 4:6</div>
+      <div class="xref-note">Paul takes up the drink-offering image: "even if I am to be poured out as a libation…" — a life given wholly to God.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ The greater David</div>
+      <div class="xref-ref">John 15:13 · Rom 5:8</div>
+      <div class="xref-note">"Greater love has no one than this…" David would not spend his men's blood; the true King spends his own for his men.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">→ Names kept forever</div>
+      <div class="xref-ref">Hebrews 6:10 · Rev 3:5</div>
+      <div class="xref-note">"God is not unjust so as to overlook your work." The obscure faithful are named and remembered — written in the book of life.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — The Company Around the King</div>
+        <div class="tn-text">David never fought alone. From the cave of Adullam a band of the desperate became the deadliest warriors in Israel, bound to a rejected, anointed king. They held lonely fields against armies, broke enemy lines for a cup of water, and made David's throne secure — and God saw fit to write their names down, right down to the last, tragic one.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — Mighty in the Service of the True King</div>
+        <div class="tn-text">The kingdom of the greater David is still built by ordinary, unlikely people made mighty by attaching themselves to their Anointed One — most of them unknown to history, all of them known to God. This chapter honors costly, self-giving loyalty, warns (through Uriah) that even great leaders can betray it, and points to the one King who never will: the Son of David who, unlike his father, poured out not his people's blood but his own.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Am I willing to be one of the unnamed faithful — mighty not in my own strength but in loyal, costly devotion to the true King — content that my deeds are seen and kept by God even if no one else records them?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"David's throne was upheld by a company of loyal, often nameless warriors whom the LORD made mighty — and the roll's heart is a king who would not drink water bought with his men's blood. That its final name is 'Uriah the Hittite' turns the honor roll into a mirror of David's fall, and a longing for the greater Son of David who pours out not his people's blood, but his own."</div>
+    <div class="verdict-ref">2 Samuel 23:8, 16–17, 39 — "the mighty men whom David had… he poured it out to the LORD… Uriah the Hittite."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
