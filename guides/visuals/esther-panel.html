@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esther — God Never Named, Never Absent</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-size: 18px; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 1020px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* HEADER */
+  .header-wrap { border: 3px solid #2c2c2c; border-radius: 4px; background: #faf7f2; padding: 20px 26px 16px; margin-bottom: 20px; }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .header-book { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 3rem; color: #2c2c2c; letter-spacing: 0.03em; line-height: 1; }
+  .header-sub { font-size: 1.05rem; color: #555; margin-top: 4px; }
+  .header-meta { text-align: right; }
+  .meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+  .meta-row strong { color: #2c2c2c; }
+  .header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: 'Gentium Book Plus', serif; font-size: 1rem; color: #6c4bbf; text-align: center; letter-spacing: 0.02em; font-style: italic; }
+
+  .section-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
+
+  /* KEY PASSAGE */
+  .passage-callout { border-left: 6px solid #6c4bbf; background: #f4f0fb; padding: 18px 22px; margin: 4px 0 20px; border-radius: 0 3px 3px 0; }
+  .pc-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 7px; }
+  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.96rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
+  .pc-ref { font-size: 0.72rem; color: #6c4bbf; margin-top: 7px; font-weight: 700; }
+
+  /* STRUCTURE */
+  .acts-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 4px 0 24px; }
+  .act { border: 2.5px solid; border-radius: 3px; padding: 16px 15px; }
+  .act-1 { border-color: #c0392b; background: #fdf2f2; }
+  .act-2 { border-color: #d47c1a; background: #fdf8ef; }
+  .act-3 { border-color: #6c4bbf; background: #f5f2fc; }
+  .act-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700; margin-bottom: 8px; }
+  .act-1 .act-label { color: #c0392b; } .act-2 .act-label { color: #d47c1a; } .act-3 .act-label { color: #6c4bbf; }
+  .act-chapters { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.2rem; color: #2c2c2c; margin-bottom: 4px; }
+  .act-theme { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #2c2c2c; margin-bottom: 10px; font-style: italic; }
+  .unit { padding: 6px 9px; border-radius: 2px; margin-bottom: 5px; }
+  .unit-1 { background: #f7dad6; border-left: 3px solid #c0392b; }
+  .unit-2 { background: #f7e6cc; border-left: 3px solid #d47c1a; }
+  .unit-3 { background: #e7dffb; border-left: 3px solid #6c4bbf; }
+  .unit-ref { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 1px; }
+  .unit-1 .unit-ref { color: #c0392b; } .unit-2 .unit-ref { color: #d47c1a; } .unit-3 .unit-ref { color: #6c4bbf; }
+  .unit-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.78rem; color: #2c2c2c; margin-bottom: 1px; }
+  .unit-desc { font-size: 0.7rem; color: #444; line-height: 1.32; }
+
+  /* THE GREAT REVERSALS (dark strip) */
+  .rev { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .rev-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 4px; }
+  .rev-sub { font-size: 0.72rem; color: #999; margin-bottom: 14px; font-style: italic; }
+  .rev-track { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .rev-step { border: 1px solid #6c4bbf; border-radius: 2px; padding: 9px 10px; background: #1f1a29; }
+  .rev-ref { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #b79df0; margin-bottom: 4px; }
+  .rev-from { font-size: 0.68rem; color: #e0796b; line-height: 1.3; text-decoration: line-through; text-decoration-color: #7a3b34; }
+  .rev-to { font-size: 0.72rem; color: #7fd39c; line-height: 1.32; margin-top: 3px; font-weight: 700; }
+  .rev-note { font-size: 0.77rem; color: #bbb; line-height: 1.44; margin-top: 12px; padding-top: 10px; border-top: 1px solid #333; }
+
+  /* THE HIDDEN HAND (purple strip) */
+  .prov { background: #6c4bbf; border-radius: 3px; padding: 14px 20px; margin: 4px 0 24px; }
+  .prov-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #fff; margin-bottom: 3px; }
+  .prov-sub { font-size: 0.72rem; color: #e0d6f7; margin-bottom: 12px; font-style: italic; }
+  .prov-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+  .prov-card { background: rgba(255,255,255,0.14); border-radius: 3px; padding: 8px 11px; }
+  .prov-ref { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #d9ccf5; margin-bottom: 2px; }
+  .prov-text { font-size: 0.73rem; color: #fff; line-height: 1.34; }
+  .prov-note { font-size: 0.72rem; color: rgba(255,255,255,0.9); line-height: 1.4; margin-top: 11px; }
+
+  /* SUCH A TIME NOTE */
+  .flesh { border: 2.5px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 15px 18px; margin: 4px 0 24px; }
+  .flesh-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.98rem; color: #d47c1a; margin-bottom: 6px; }
+  .flesh-text { font-size: 0.83rem; color: #444; line-height: 1.5; }
+  .flesh-text strong { color: #a95e0c; }
+
+  /* WORD STUDIES */
+  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; margin: 4px 0 24px; }
+  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 12px 13px; }
+  .word-heb { font-size: 1.3rem; color: #6c4bbf; font-weight: 700; margin-bottom: 1px; direction: rtl; }
+  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 4px; }
+  .word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: #6c4bbf; color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.84rem; color: #2c2c2c; margin-bottom: 4px; }
+  .word-note { font-size: 0.73rem; color: #555; line-height: 1.38; }
+
+  /* CHAPTER CROSS-MAP */
+  .chap-map { margin: 4px 0 24px; }
+  .chap-row { display: grid; grid-template-columns: 108px 1fr 1fr 1fr; gap: 0; margin-bottom: 6px; border: 1.5px solid #ddd; border-radius: 3px; overflow: hidden; }
+  .chap-num { background: #2c2c2c; color: #f5f0e8; font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.74rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; line-height: 1.2; }
+  .chap-cell { padding: 8px 10px; border-left: 1px solid #ddd; background: #faf7f2; }
+  .chap-cell:nth-child(even) { background: #f5f0e8; }
+  .cc-label { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px; }
+  .cc-ot { color: #d47c1a; } .cc-nt { color: #2e8a4a; } .cc-theme { color: #6c4bbf; }
+  .cc-text { font-size: 0.72rem; color: #333; line-height: 1.34; }
+  .cc-refs { font-size: 0.66rem; color: #888; font-style: italic; margin-top: 2px; }
+
+  /* COMMENTARY */
+  .comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 15px; }
+  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.92rem; color: #f5f0e8; margin-bottom: 1px; }
+  .comm-title { font-size: 0.66rem; color: #aaa; font-style: italic; margin-bottom: 5px; }
+  .comm-tradition { font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+  .trad-reformed { background: #6c4bbf; color: #fff; }
+  .trad-evangelical { background: #3b6fd4; color: #fff; }
+  .trad-pastoral { background: #2e8a4a; color: #fff; }
+  .trad-preaching { background: #d47c1a; color: #fff; }
+  .trad-critical { background: #555; color: #fff; }
+  .comm-point { border-left: 3px solid #6c4bbf; padding-left: 10px; font-size: 0.76rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
+  .comm-point:last-of-type { margin-bottom: 0; }
+  .source-link { display: block; margin-top: 7px; font-size: 0.62rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; }
+  .source-link:hover { color: #aaa; }
+
+  /* HARDEST */
+  .hard-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+  .hard-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
+  .hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+  .hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .hard-q { font-size: 0.82rem; color: #b79df0; font-weight: 700; margin-bottom: 4px; }
+  .hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+
+  /* THEN → NOW */
+  .then-now { border: 2.5px solid #6c4bbf; border-radius: 3px; background: #f4f0fb; padding: 17px 22px; margin: 4px 0 24px; }
+  .tn-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 10px; }
+  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tn-col-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8a6fd0; font-weight: 700; margin-bottom: 4px; }
+  .tn-text { font-size: 0.82rem; color: #333; line-height: 1.44; }
+  .tn-question { margin-top: 13px; padding-top: 11px; border-top: 1px dashed #c9b8ee; font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; color: #6c4bbf; font-style: italic; }
+
+  /* VERDICT */
+  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 26px; text-align: center; margin: 4px 0 12px; }
+  .verdict-label { font-size: 0.57rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.12rem; color: #2c2c2c; line-height: 1.55; }
+  .verdict-ref { font-size: 0.74rem; color: #888; margin-top: 7px; }
+
+  @media (max-width: 820px) {
+    .acts-layout { grid-template-columns: 1fr; }
+    .word-grid { grid-template-columns: 1fr 1fr; }
+    .comm-grid, .tn-cols { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 84px 1fr; }
+    .chap-row .chap-cell:nth-child(4) { display: none; }
+  }
+  @media (max-width: 520px) {
+    .word-grid { grid-template-columns: 1fr; }
+    .chap-row { grid-template-columns: 1fr; }
+    .chap-num { border-radius: 3px 3px 0 0; }
+    .chap-cell { border-left: none; border-top: 1px solid #ddd; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header-wrap">
+    <div class="header-top">
+      <div>
+        <div class="header-book">Esther</div>
+        <div class="header-sub">Book 17 of 66 · Post-Exilic Narrative · ~483–473 BC</div>
+      </div>
+      <div class="header-meta">
+        <div class="meta-row"><strong>Author:</strong> Unknown (a Persian-era Jewish writer; tradition suggests Mordecai)</div>
+        <div class="meta-row"><strong>Setting:</strong> Susa, the winter capital of Persia</div>
+        <div class="meta-row"><strong>King:</strong> Ahasuerus — Xerxes I (486–465 BC)</div>
+        <div class="meta-row"><strong>People:</strong> The Jews who stayed in exile, not those who returned</div>
+        <div class="meta-row"><strong>Genre:</strong> Historical narrative · court tale · festival origin</div>
+        <div class="meta-row"><strong>Explains:</strong> The origin of the Feast of Purim</div>
+      </div>
+    </div>
+    <div class="header-char">
+      "God is never named — and never absent: hidden providence and human courage preserve his people, 'for such a time as this'"
+    </div>
+  </div>
+
+  <!-- KEY PASSAGE -->
+  <div class="section-label">Controlling Verses — The Hinge of the Whole Book</div>
+  <div class="passage-callout">
+    <div class="pc-label">Esther 4:14 · Mordecai to Esther — deliverance will come; the only question is your part in it</div>
+    <div class="pc-text">
+      "For if you keep silent at this time, relief and deliverance will rise for the Jews from another place, but you and your father's house will perish. And who knows whether you have not come to the kingdom for such a time as this?"
+    </div>
+    <div class="pc-ref">Esther 4:14 (ESV)</div>
+  </div>
+
+  <!-- STRUCTURE -->
+  <div class="section-label">The Architecture — Threat, Turn, Triumph</div>
+  <div class="acts-layout">
+    <div class="act act-1">
+      <div class="act-label">Act 1 — The Threat</div>
+      <div class="act-chapters">Chapters 1 – 3</div>
+      <div class="act-theme">A queen falls, a Jew rises, a plot forms</div>
+      <div class="unit unit-1"><div class="unit-ref">1 · The Banquet</div><div class="unit-title">Vashti Deposed</div><div class="unit-desc">Xerxes' 180-day display of glory; Queen Vashti refuses to be paraded and is removed — a vacancy on the throne.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">2 · The Contest</div><div class="unit-title">Esther Made Queen</div><div class="unit-desc">A Jewish orphan raised by Mordecai wins the crown, hiding her identity. Mordecai uncovers a plot against the king.</div></div>
+      <div class="unit unit-1"><div class="unit-ref">3 · The Decree</div><div class="unit-title">Haman's Rage &amp; the Lot</div><div class="unit-desc">Mordecai won't bow; Haman the Agagite casts <em>pur</em> (the lot) and buys a decree to annihilate every Jew in the empire.</div></div>
+    </div>
+    <div class="act act-2">
+      <div class="act-label">Act 2 — The Turn</div>
+      <div class="act-chapters">Chapters 4 – 7</div>
+      <div class="act-theme">Courage, banquets, and a sleepless night</div>
+      <div class="unit unit-2"><div class="unit-ref">4 · The Charge</div><div class="unit-title">"For Such a Time as This"</div><div class="unit-desc">Mordecai calls Esther to act; she calls a three-day fast: "If I perish, I perish." The hinge of the book.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">5 · The Approach</div><div class="unit-title">The First Banquet</div><div class="unit-desc">Esther risks the unbidden approach; the king extends the scepter. She invites him and Haman to two banquets; Haman builds a gallows for Mordecai.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">6 · The Night</div><div class="unit-title">The King Cannot Sleep</div><div class="unit-desc">The turning point: Xerxes reads the chronicles, finds Mordecai's unrewarded loyalty, and makes Haman honor the man he meant to hang.</div></div>
+      <div class="unit unit-2"><div class="unit-ref">7 · The Fall</div><div class="unit-title">Haman Unmasked</div><div class="unit-desc">At the second banquet Esther exposes Haman; the king orders him hanged on the very gallows he built for Mordecai.</div></div>
+    </div>
+    <div class="act act-3">
+      <div class="act-label">Act 3 — The Triumph</div>
+      <div class="act-chapters">Chapters 8 – 10</div>
+      <div class="act-theme">Deliverance, victory, and a new feast</div>
+      <div class="unit unit-3"><div class="unit-ref">8 · The Counter-Decree</div><div class="unit-title">The Right to Defend</div><div class="unit-desc">The first decree can't be revoked, so a second grants the Jews the right to defend themselves. Mordecai is robed in royal honor.</div></div>
+      <div class="unit unit-3"><div class="unit-ref">9:1–19 · The Deliverance</div><div class="unit-title">The Day Reversed</div><div class="unit-desc">On the very day set for their destruction, the Jews prevail over their enemies. "The reverse occurred" (9:1).</div></div>
+      <div class="unit unit-3"><div class="unit-ref">9:20–10:3 · Purim</div><div class="unit-title">Mourning into Feasting</div><div class="unit-desc">Purim is established — days of feasting, gladness, and gifts to the poor — and Mordecai is made second to the king.</div></div>
+    </div>
+  </div>
+
+  <!-- THE GREAT REVERSALS -->
+  <div class="section-label">The Great Reversals — The Book's Signature Irony</div>
+  <div class="rev">
+    <div class="rev-title">Esther turns on a series of stunning reversals — the enemy's plans recoil on his own head</div>
+    <div class="rev-sub">"On the day when the enemies of the Jews hoped to gain the mastery over them, the reverse occurred" (9:1). Struck-through = what was intended; below = what actually came.</div>
+    <div class="rev-track">
+      <div class="rev-step"><div class="rev-ref">5:14 → 7:10</div><div class="rev-from">Gallows built for Mordecai</div><div class="rev-to">Haman is hanged on them</div></div>
+      <div class="rev-step"><div class="rev-ref">6:6–11</div><div class="rev-from">Haman plans his own parade</div><div class="rev-to">He must honor Mordecai instead</div></div>
+      <div class="rev-step"><div class="rev-ref">3:10 → 8:2</div><div class="rev-from">Haman holds the king's signet ring</div><div class="rev-to">The ring passes to Mordecai</div></div>
+      <div class="rev-step"><div class="rev-ref">3:13 → 8:11</div><div class="rev-from">A decree to destroy the Jews</div><div class="rev-to">A decree letting them defend and prevail</div></div>
+      <div class="rev-step"><div class="rev-ref">9:1</div><div class="rev-from">The day set to master the Jews</div><div class="rev-to">The day the Jews are delivered</div></div>
+      <div class="rev-step"><div class="rev-ref">4:3 → 9:22</div><div class="rev-from">Fasting, weeping, and mourning</div><div class="rev-to">Feasting, gladness, and gifts</div></div>
+    </div>
+    <div class="rev-note">The Hebrew word for this is <em>nehpakhu</em> — "were turned/reversed" (9:1). The reversal is so complete it becomes the pattern of the whole book: the proud is brought low and the lowly lifted up, the plot of the wicked falls on his own head (cf. Ps 7:15–16), and the day appointed for death becomes the day of life. God is never named as the reverser — but no reader misses whose hand is turning the tables.</div>
+  </div>
+
+  <!-- THE HIDDEN HAND -->
+  <div class="section-label">The Hidden Hand — Providence Without a Single Miracle</div>
+  <div class="prov">
+    <div class="prov-title">God is never mentioned — yet "coincidence" after "coincidence" quietly saves a people</div>
+    <div class="prov-sub">No miracle, no prophet, no voice from heaven — only a chain of ordinary events that could not have lined up by chance.</div>
+    <div class="prov-row">
+      <div class="prov-card"><div class="prov-ref">1:10–2:4</div><div class="prov-text">Vashti's removal — years early — opens the very throne Esther will need.</div></div>
+      <div class="prov-card"><div class="prov-ref">2:7, 17</div><div class="prov-text">Of all the empire's women, the orphan Jewess wins the crown.</div></div>
+      <div class="prov-card"><div class="prov-ref">2:21–23</div><div class="prov-text">Mordecai just happens to overhear the assassination plot — and it's written down.</div></div>
+      <div class="prov-card"><div class="prov-ref">3:7</div><div class="prov-text">The lot falls on a date nearly a year away — leaving time for rescue.</div></div>
+      <div class="prov-card"><div class="prov-ref">6:1</div><div class="prov-text">The king "happens" to be sleepless the one night it matters most.</div></div>
+      <div class="prov-card"><div class="prov-ref">6:2</div><div class="prov-text">The chronicle read to him opens exactly at Mordecai's unrewarded deed.</div></div>
+    </div>
+    <div class="prov-note">Esther is the great biblical case study in <em>providence</em> — God working invisibly through natural events and human choices rather than open miracles. The book's silence about God is not absence but a deliberate literary strategy: it forces the reader to see his fingerprints on every "chance." As Proverbs 16:33 says of Haman's <em>pur</em>: "The lot is cast into the lap, but its every decision is from the LORD."</div>
+  </div>
+
+  <!-- FOR SUCH A TIME NOTE -->
+  <div class="section-label">The Hinge — "For Such a Time as This" (4:14)</div>
+  <div class="flesh">
+    <div class="flesh-title">Providence and responsibility, held together in one verse</div>
+    <div class="flesh-text">Mordecai's charge to Esther is the theological heart of the book, and it holds two truths in perfect balance. First, <strong>God's purpose is certain</strong>: "relief and deliverance will rise for the Jews from another place" — the people <em>will</em> be saved, with or without Esther, because God has bound himself to preserve them. Second, <strong>Esther's responsibility is real</strong>: "who knows whether you have not come to the kingdom for such a time as this?" Her position, her courage, her risk genuinely matter. Providence does not cancel human action; it summons it. Esther is not a passive pawn but a called agent — placed on purpose, and free to answer or refuse. "If I perish, I perish" (4:16) is faith stepping into the gap God has already prepared. <strong>The safety of the plan is exactly what makes bold obedience possible.</strong></div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Six Key Words (Hebrew)</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">פּוּר</div>
+      <div class="word-translit">pur — "lot"</div>
+      <span class="word-count">3:7; 9:24–26</span>
+      <div class="word-gloss">The lot (a Persian loanword)</div>
+      <div class="word-note">Haman casts <em>pur</em> to pick the day of destruction — and the feast of deliverance is named <em>Purim</em> ("lots") after it. The instrument of the enemy's scheme becomes the name of the celebration of his defeat: even chance serves God (Prov 16:33).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">מִשְׁתֶּה</div>
+      <div class="word-translit">mishteh — "feast / banquet"</div>
+      <span class="word-count">~20× in Esther</span>
+      <div class="word-gloss">A drinking-feast, banquet</div>
+      <div class="word-note">The book is built around banquets — it opens with Xerxes' feasts and closes with the feast of Purim. Feasting frames every turn: the empire's power on display, Esther's daring invitations, and finally the joy of a rescued people.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">הָפַךְ</div>
+      <div class="word-translit">haphak — "to turn / overturn"</div>
+      <span class="word-count">9:1, 22</span>
+      <div class="word-gloss">To turn, reverse, transform</div>
+      <div class="word-note">"The reverse occurred" (9:1) and sorrow "was <em>turned</em> for them from sorrow into gladness" (9:22). The verb of reversal — the engine of the plot. The same root describes God overturning cities and turning mourning to dancing (Ps 30:11).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">נָפַל</div>
+      <div class="word-translit">naphal — "to fall"</div>
+      <span class="word-count">6:13; 7:8; 8:17</span>
+      <div class="word-gloss">To fall (down, before, upon)</div>
+      <div class="word-note">Haman's wise men warn he will surely "<em>fall</em>" before Mordecai (6:13); Haman "falls" on Esther's couch pleading (7:8); "the fear of the Jews <em>fell</em>" on the peoples (8:17). Who falls, and before whom, tracks the whole reversal.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">רֶוַח</div>
+      <div class="word-translit">revach — "relief / respite"</div>
+      <span class="word-count">4:14</span>
+      <div class="word-gloss">Relief, breathing-space, deliverance</div>
+      <div class="word-note">"<em>Relief</em> and deliverance will rise for the Jews from another place" (4:14). The word pictures room to breathe after being hemmed in. Mordecai's confidence: rescue is coming — the only question is whether Esther will be part of it.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">זָכַר</div>
+      <div class="word-translit">zakar — "to remember"</div>
+      <span class="word-count">9:28</span>
+      <div class="word-gloss">To remember, keep, memorialize</div>
+      <div class="word-note">Purim is instituted so these days "should be <em>remembered</em> and kept throughout every generation" (9:28). Biblical remembering is active — retelling the rescue so each generation re-enters the story and trusts the God who delivered.</div>
+    </div>
+  </div>
+
+  <!-- CROSS-MAP -->
+  <div class="section-label">Cross-Map — Esther's Roots &amp; Echoes</div>
+  <div class="chap-map">
+    <div class="chap-row">
+      <div class="chap-num">Est 3<br>The Agagite</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Haman "the Agagite" vs Mordecai the Benjaminite (son of Kish) — the old war of Saul &amp; Agag, Israel &amp; Amalek, replayed.</div><div class="cc-refs">Exod 17:16 · 1 Sam 15 · Deut 25:17–19</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">The ancient enmity against God's people, finally undone in Christ.</div><div class="cc-refs">Rev 12:17 · Rom 16:20</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">An old enemy returns — and is defeated again.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Est 4<br>Such a Time</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">Joseph: raised up in a pagan court "to preserve life" — "you meant evil… God meant it for good."</div><div class="cc-refs">Gen 45:7 · 50:20</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">God works all things together for good for those who are his.</div><div class="cc-refs">Rom 8:28</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">God positions his servants for the crisis before it comes.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Est 4–7<br>The Hidden Hand</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">The lot belongs to God; kings' hearts are turned in his hand like water.</div><div class="cc-refs">Prov 16:33 · 21:1</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">The God who is not served by human hands, who determines times and places.</div><div class="cc-refs">Acts 17:26</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">Unseen providence governs "chance" and kings alike.</div></div>
+    </div>
+    <div class="chap-row">
+      <div class="chap-num">Est 9<br>Reversal &amp; Rescue</div>
+      <div class="chap-cell"><div class="cc-label cc-ot">OT Root</div><div class="cc-text">God preserves the people (and the seed) through whom the promise runs — the Passover pattern of deliverance.</div><div class="cc-refs">Gen 3:15 · Exod 12 · Ps 30:11</div></div>
+      <div class="chap-cell"><div class="cc-label cc-nt">NT Echo</div><div class="cc-text">The ultimate reversal — the cross and empty tomb — mourning turned to joy.</div><div class="cc-refs">Luke 24 · John 16:20</div></div>
+      <div class="chap-cell"><div class="cc-label cc-theme">Thread</div><div class="cc-text">God saves his people so his greater rescue can come.</div></div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf</div>
+  <div class="comm-grid">
+    <div class="comm-card">
+      <div class="comm-author">Karen H. Jobes</div>
+      <div class="comm-title">Esther (NIV Application Commentary, 1999)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Exposition + Application</span>
+      <div class="comm-point">A widely praised treatment — strong on the theology of hidden providence, the book's literary artistry of reversal, and how a "secular"-looking story preaches the God who works behind the scenes.</div>
+      <div class="comm-point">Excellent on the Hebrew text and on bridging Esther's world to contemporary life without moralizing the characters.</div>
+      <a href="https://www.zondervan.com/" target="_blank" class="source-link">zondervan.com — Esther, NIVAC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Joyce G. Baldwin</div>
+      <div class="comm-title">Esther (Tyndale OT Commentaries, 1984)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical · Concise</span>
+      <div class="comm-point">A reliable, compact classic that defends the book's historical plausibility and reads its theology of providence with care and restraint.</div>
+      <a href="https://www.ivpress.com/" target="_blank" class="source-link">ivpress.com — Esther, TOTC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Iain M. Duguid</div>
+      <div class="comm-title">Esther &amp; Ruth (Reformed Expository Commentary, 2005)</div>
+      <span class="comm-tradition trad-reformed">Reformed · Preaching</span>
+      <div class="comm-point">Preaches Esther christologically: the hidden God of Esther is the God who works supremely through the apparent God-forsakenness of the cross — deliverance from an unexpected quarter.</div>
+      <a href="https://www.prpbooks.com/" target="_blank" class="source-link">prpbooks.com — Esther &amp; Ruth, REC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Michael V. Fox</div>
+      <div class="comm-title">Character and Ideology in the Book of Esther (1991)</div>
+      <span class="comm-tradition trad-critical">Jewish · Literary Scholarship</span>
+      <div class="comm-point">The standard literary study — probing the characters, the theme of reversal (peripety), and how the book conveys a theology of providence precisely through God's conspicuous absence from the text.</div>
+      <a href="https://www.eerdmans.com/" target="_blank" class="source-link">eerdmans.com — Character and Ideology in Esther [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Mervin Breneman</div>
+      <div class="comm-title">Ezra, Nehemiah, Esther (New American Commentary, 1993)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical Scholarly</span>
+      <div class="comm-point">Balances exegesis and theology, reading Esther within the post-exilic story of God preserving his covenant people in a hostile empire and keeping his ancient promises.</div>
+      <a href="https://www.bhpublishinggroup.com/" target="_blank" class="source-link">bhpublishinggroup.com — Ezra, Nehemiah, Esther, NAC [VERIFY URL]</a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles R. Swindoll</div>
+      <div class="comm-title">Esther: A Woman of Strength &amp; Dignity (1997)</div>
+      <span class="comm-tradition trad-preaching">Evangelical · Popular</span>
+      <div class="comm-point">A warm, accessible character study drawing leadership and courage lessons from Esther and Mordecai, keeping God's unseen sovereignty in full view.</div>
+      <a href="https://www.thomasnelson.com/" target="_blank" class="source-link">thomasnelson.com — Esther, Swindoll [VERIFY URL]</a>
+    </div>
+  </div>
+
+  <!-- HARDEST -->
+  <div class="hard-box">
+    <div class="hard-title">The Hardest Parts — Where Readers Wrestle</div>
+    <div class="hard-item">
+      <div class="hard-q">1. God is never mentioned — not once. Why is Esther even in the Bible?</div>
+      <div class="hard-a">Esther is unique: God is never named, there is no prayer explicitly recorded, no mention of the law, temple, sacrifice, or covenant, and it is the only OT book absent from the Dead Sea Scrolls. Some in the early synagogue and church questioned it. But its inclusion is deliberate and profound. The silence is the message: this is the book for life <em>after</em> the miracles have stopped, when God does not part seas or speak from clouds but works invisibly through "coincidence," politics, and ordinary courage. Fasting (4:16) clearly implies prayer; the confidence that "relief will rise… from another place" (4:14) is confidence in <em>someone</em>. Esther teaches faith in the God you cannot see acting — exactly the situation of most believers, most of the time.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">2. The killing of 75,000 in chapter 9 — isn't this vengeance, even genocide?</div>
+      <div class="hard-a">This is the book's hardest chapter and must be read carefully. First, the Jews act in <em>self-defense</em>: the irrevocable first decree authorized their extermination (3:13), and the second decree only granted them the right "to defend their lives" against those who attacked them (8:11) — they strike those who came to strike them. Second, the narrator pointedly notes three times that they "did not touch the plunder" (9:10, 15, 16), distancing this from a war of greed or conquest. Third, the text <em>reports</em> the events; it does not necessarily commend every detail as a timeless model, and the echo of the old command against Amalek carries its own troubling history. It is honest to feel the weight of the violence, to locate it in the kill-or-be-killed logic of an ancient empire's unchangeable law, and to read it as deliverance from annihilation rather than as a mandate for aggression.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">3. Are Esther and Mordecai actually moral heroes? Esther enters a pagan king's harem, hides her faith, and joins his feasts.</div>
+      <div class="hard-a">The book is strikingly non-judgmental about its characters, which unsettles readers looking for spotless role models. Esther conceals her Jewish identity (2:10), becomes queen to a pagan despot through his harem, and takes part in the court's excess; Mordecai's refusal to bow may be principled or proud. The narrator neither praises nor condemns these choices — it simply shows real, compromised people in an impossible situation, through whom God nonetheless works. That is part of the point: Esther is not a gallery of plaster saints but a testimony that God's purposes run through flawed people in a morally murky world. We can admire Esther's decisive courage (4:16) without treating every step that got her there as a pattern to imitate.</div>
+    </div>
+    <div class="hard-item">
+      <div class="hard-q">4. Is Esther history? It doesn't perfectly match Persian records.</div>
+      <div class="hard-a">Esther shows detailed, accurate knowledge of the Persian court — Susa's layout, the postal system, royal protocol, and the reign of Xerxes (Ahasuerus) fits 483–473 BC well. The chief tension is that Greek historians name Xerxes' queen as Amestris, not Vashti or Esther; some also question the scale of an empire-wide decree. Responses vary: the king had many wives and concubines beyond the chief queen; "Vashti" and "Amestris" may be reconcilable; and ancient royal annals are selective. Scholars range from reading Esther as sober history to reading it as a historical novella written to teach and to ground the festival of Purim. Either way, its <em>theological</em> claim stands: this is how the unseen God preserves his people — and Purim, still kept today, testifies that Jews across the ages received it as the memory of a real deliverance.</div>
+    </div>
+  </div>
+
+  <!-- THEN → NOW -->
+  <div class="then-now">
+    <div class="tn-label">Then → Now Bridge</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then — A People Far From Home</div>
+        <div class="tn-text">The Jews of Esther are the ones who never went back — scattered across a vast pagan empire, with no temple in sight, no prophet speaking, no miracle in the air, and now a death-decree hanging over them. Into that God-seems-absent world, deliverance comes not by fire from heaven but through a deposed queen, a sleepless king, a written record, and one woman's costly courage at the right moment.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now — When God Seems Silent</div>
+        <div class="tn-text">Most of us live in Esther's world, not Sinai's — no thunder, no burning bush, just headlines, decisions, and "coincidences." Esther trains us to read our lives for the hidden hand of God: to trust that his purposes are certain even when his name seems absent, and to recognize that we too are placed — in this family, job, city, moment — "for such a time as this." Providence is not an excuse for passivity; it is the ground of courage.</div>
+      </div>
+    </div>
+    <div class="tn-question">Question to sit with: Where has God placed me "for such a time as this" — and is there a courageous step I've been avoiding, trusting that his purpose is safe enough for me to risk obeying?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea</div>
+    <div class="verdict-text">"Esther is the book where God is never named and never absent. Through hidden providence and human courage — not a single miracle — he overturns the enemy's plot, turns the day of death into the day of deliverance, and turns mourning into the feast of Purim: proof that what he has purposed for his people, no power can undo."</div>
+    <div class="verdict-ref">Esther 4:14 · 9:1, 22 — "for such a time as this"; "the reverse occurred"; "sorrow turned into gladness."</div>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
