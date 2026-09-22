@@ -10,3 +10,4 @@ scripts/*
 !scripts/build_guides.py
 !scripts/migrate_deepstudy.py
 !scripts/migrate_categories.py
+!scripts/migrate_panels.py

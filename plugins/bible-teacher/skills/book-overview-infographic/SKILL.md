@@ -143,3 +143,26 @@ After saving, navigate the preview to the file and confirm with a clickable link
 - Never fabricate cross-references or scholar positions
 - Every cited scholar or commentator must include: full name, book title, and one URL where the work can be accessed or purchased. Flag with **[VERIFY]** if the URL is uncertain. Include a tradition tag (conservative evangelical / reformed / critical-scholarly / pastoral / etc.)
 - The panel is a reference card, not a summary — it surfaces structure and key terms, not the full argument
+
+
+---
+
+## House style — shared CSS
+
+Standard panels use the master stylesheet `styles/base.css` (see the
+passage-study skill for the full convention). A panel's `<style>` is:
+
+```
+<style>
+/* @base:start */
+/* @base:end */
+  :root { --main-max: 1020px; --accent:#...; --accent-soft:#...;
+          --accent-lt:#...; --accent-mid:#...; --accent-hair:#...; }
+  /* panel-only: acts-layout / units / chap-map / signature strips */
+</style>
+```
+
+Shared header, word studies, commentary, then-now, verdict come from
+base.css; keep only the panel's per-page act/unit colours and its
+signature strips inline. Run `python3 scripts/build_guides.py` after edits.
+Bespoke one-off panels (timelines, comparisons) stay fully self-contained.
