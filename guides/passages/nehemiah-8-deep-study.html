@@ -5,34 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nehemiah 8 — The Word Read, the People Renewed (Deep Study)</title>
   <style>
-  html { font-size: 18px; }
-  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @base:start */
+/* ============================================================
+   Bible Teacher — shared base stylesheet (single source of truth)
+   ------------------------------------------------------------
+   This block is INLINED into each guide's <style> between the
+   markers  / * @base:start * /  …  / * @base:end * /  by
+   scripts/build_guides.py, so every guide stays a single
+   self-contained HTML file (works as an artifact, an emailed
+   file, a printed PDF, or on GitHub Pages).
+
+   DO NOT hand-edit the injected copy inside a guide. Edit THIS
+   file, then run:  python3 scripts/build_guides.py
+
+   Per-page colour is set with tokens. Each guide overrides the
+   accent tokens in its own :root (after the @base:end marker):
+
+     :root { --accent:#6c4bbf; --accent-soft:#f2eefb;
+             --accent-ink:#4f349c; --accent-lt:#b795ea;
+             --accent-mid:#8a6fd0; --accent-hair:#c9b8ee; }
+
+   Anything unique to one guide (signature strips, etc.) also
+   lives in that guide's own <style>, after the base.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font: 'Gentium Book Plus', serif;
+  --bg: #f5f0e8;
+  --card: #faf7f2;
+  --ink: #2c2c2c;
+  --ink-soft: #444;
+  --ink-mute: #555;
+  --muted: #888;
+  --dark: #1a1a1a;
+  --dark-ink: #d0c8bc;
+
+  /* Per-page accent — overridden by each guide. Defaults: purple. */
+  --accent: #6c4bbf;       /* solid accent (borders, links, headings) */
+  --accent-soft: #f2eefb;  /* pale accent background */
+  --accent-ink: #4f349c;   /* darker accent (hover) */
+  --accent-lt: #b795ea;    /* light accent for text on dark panels */
+  --accent-mid: #8a6fd0;   /* mid accent for labels on light bg */
+  --accent-hair: #c9b8ee;  /* faint accent for dashed hairlines */
+
+  /* Fixed canon/reference colours (not per-page) */
+  --orange: #d47c1a;
+  --green: #2e8a4a;
+  --blue: #3b6fd4;
+  --purple: #6c4bbf;
+  --grey: #555;
+}
+
+html { font-size: 18px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: var(--font); padding: 0; min-height: 100vh; }
+
+.home-nav { padding: 14px 24px 0; }
+.home-nav-link { font-family: var(--font); font-size: 0.82rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed #aaa; }
+.home-nav-link:hover { color: var(--ink-mute); }
+
+.main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+
+.header-ref { font-family: var(--font); font-size: 2.05rem; color: var(--ink); letter-spacing: 0.03em; }
+.header-title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+.badge-deep { display: inline-block; background: var(--dark); color: var(--bg); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+.nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.companion-link { font-family: var(--font); font-size: 0.85rem; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+.companion-link:hover { color: var(--accent-ink); }
+
+.section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: var(--muted); margin-bottom: 10px; margin-top: 28px; }
+
+.passage-callout { border-left: 5px solid var(--accent); background: var(--accent-soft); padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+.pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+.pc-text { font-family: var(--font); font-size: 0.96rem; color: var(--ink); line-height: 1.62; font-style: italic; }
+.pc-heb { direction: rtl; font-size: 1.15rem; color: var(--ink); margin-bottom: 8px; line-height: 1.5; }
+.pc-ref { font-size: 0.74rem; color: var(--accent); margin-top: 8px; font-weight: 700; }
+
+.placement { background: var(--card); border: 2px solid var(--ink); border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+/* WORD STUDIES */
+.word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+.word-card { border: 2px solid var(--ink); border-radius: 3px; background: var(--card); padding: 13px 12px; }
+.word-heb { font-size: 1.25rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; direction: rtl; }
+.word-greek { font-size: 1.15rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; font-style: italic; }
+.word-gk { font-size: 1.2rem; color: var(--accent); font-weight: 700; margin-bottom: 1px; font-style: italic; }
+.word-translit { font-size: 0.62rem; color: var(--muted); font-style: italic; margin-bottom: 5px; }
+.word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+.word-gloss { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 5px; }
+.word-note { font-size: 0.75rem; color: var(--ink-mute); line-height: 1.4; }
+
+/* CANON / OT (fixed orange) */
+.ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.ot-card { border: 2px solid var(--orange); border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+.ot-ref { font-family: var(--font); font-weight: 700; font-size: 0.9rem; color: var(--orange); margin-bottom: 3px; }
+.ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 700; }
+.ot-note { font-size: 0.79rem; color: var(--ink-soft); line-height: 1.4; }
+
+/* COMMENTARY */
+.comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.comm-card { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 14px; }
+.comm-author { font-family: var(--font); font-weight: 700; font-size: 0.94rem; color: var(--bg); margin-bottom: 2px; }
+.comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+.comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+.trad-reformed { background: var(--purple); color: #fff; }
+.trad-evangelical { background: var(--blue); color: #fff; }
+.trad-preaching { background: var(--orange); color: #fff; }
+.trad-pastoral { background: var(--green); color: #fff; }
+.trad-catholic { background: var(--grey); color: #fff; }
+.trad-critical { background: var(--grey); color: #fff; }
+.trad-jewish { background: var(--grey); color: #fff; }
+.comm-point { border-left: 3px solid var(--accent); padding-left: 10px; font-size: 0.77rem; color: var(--dark-ink); line-height: 1.4; margin-bottom: 7px; }
+.comm-point:last-of-type { margin-bottom: 0; }
+.source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed var(--grey); font-family: var(--font); }
+.source-link:hover { color: #aaa; }
+
+/* PRESSURE POINTS */
+.pressure-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+.pressure-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+.pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.pressure-q { font-size: 0.85rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+/* CROSS-REFERENCES */
+.xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+.xref-card { border: 2px solid; border-radius: 3px; background: var(--card); padding: 11px 13px; }
+.xref-card.backward { border-color: var(--orange); } .xref-card.parallel { border-color: var(--accent); } .xref-card.forward { border-color: var(--green); }
+.xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+.backward .xref-tag { color: var(--orange); } .parallel .xref-tag { color: var(--accent); } .forward .xref-tag { color: var(--green); }
+.xref-ref { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 3px; }
+.xref-note { font-size: 0.74rem; color: var(--ink-mute); line-height: 1.35; }
+
+/* THEN -> NOW */
+.then-now { border: 2.5px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 18px 20px; margin: 4px 0 24px; }
+.tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+.tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-mid); font-weight: 700; margin-bottom: 4px; }
+.tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+.tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--accent-hair); font-family: var(--font); font-size: 0.94rem; color: var(--accent); font-style: italic; }
+
+/* VERDICT */
+.verdict { border: 3px solid var(--ink); border-radius: 3px; background: var(--card); padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+.verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
+.verdict-text { font-family: var(--font); font-size: 1.2rem; color: var(--ink); line-height: 1.5; }
+.verdict-ref { font-size: 0.76rem; color: var(--muted); margin-top: 6px; }
+
+@media print { .home-nav { display: none; } }
+@media (max-width: 760px) {
+  .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  .word-grid, .xref-grid { grid-template-columns: 1fr; }
+}
+/* @base:end */
+
+:root {
+  --accent: #2e8a4a;
+  --accent-soft: #edf8f1;
+  --accent-ink: #1c5c30;
+  --accent-lt: #6fc28d;
+  --accent-mid: #57b079;
+  --accent-hair: #aad7bc;
+}
+
+0,700;1,400;1,700&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
-
-  .home-nav { padding: 14px 24px 0; }
-  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
-  .home-nav-link:hover { color: #555; }
   @media print { .home-nav { display: none; } }
-
-  .main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
-
-  .header-ref { font-family: 'Gentium Book Plus', serif; font-size: 2.05rem; color: #2c2c2c; letter-spacing: 0.03em; }
-  .header-title { font-size: 1.1rem; color: #555; margin-top: 4px; }
-  .badge-deep { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
-  .nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
-  .companion-link { font-family: 'Gentium Book Plus', serif; font-size: 0.85rem; color: #2e8a4a; text-decoration: none; border-bottom: 1px dashed #2e8a4a; }
-  .companion-link:hover { color: #1c5c30; }
-
-  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin-bottom: 10px; margin-top: 28px; }
-
-  .passage-callout { border-left: 5px solid #2e8a4a; background: #edf8f1; padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
-  .pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 8px; }
-  .pc-text { font-family: 'Gentium Book Plus', serif; font-size: 0.95rem; color: #2c2c2c; line-height: 1.62; font-style: italic; }
-  .pc-ref { font-size: 0.74rem; color: #2e8a4a; margin-top: 8px; font-weight: 700; }
-
-  .placement { background: #faf7f2; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
 
   /* STRUCTURE */
   .structure-map { margin: 4px 0 24px; }
@@ -74,74 +213,13 @@
   .handle-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.88rem; color: #3b6fd4; margin-bottom: 3px; }
   .handle-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
 
-  /* WORD STUDIES */
-  .word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
-  .word-card { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 13px 12px; }
-  .word-heb { font-size: 1.25rem; color: #2e8a4a; font-weight: 700; margin-bottom: 2px; direction: rtl; }
-  .word-translit { font-size: 0.62rem; color: #888; font-style: italic; margin-bottom: 5px; }
-  .word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: #2e8a4a; color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
-  .word-gloss { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 5px; }
-  .word-note { font-size: 0.75rem; color: #555; line-height: 1.4; }
-
-  /* OT/CANON */
-  .ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
-  .ot-card { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
-  .ot-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.9rem; color: #d47c1a; margin-bottom: 3px; }
-  .ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; font-weight: 700; }
-  .ot-note { font-size: 0.79rem; color: #444; line-height: 1.4; }
-
-  /* COMMENTARY */
-  .comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
-  .comm-card { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 14px; }
-  .comm-author { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.94rem; color: #f5f0e8; margin-bottom: 2px; }
-  .comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
-  .comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
-  .trad-reformed { background: #6c4bbf; color: #fff; }
-  .trad-evangelical { background: #3b6fd4; color: #fff; }
-  .trad-preaching { background: #d47c1a; color: #fff; }
-  .trad-pastoral { background: #2e8a4a; color: #fff; }
-  .trad-critical { background: #555; color: #fff; }
-  .comm-point { border-left: 3px solid #2e8a4a; padding-left: 10px; font-size: 0.77rem; color: #d0c8bc; line-height: 1.4; margin-bottom: 7px; }
-  .source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: #888; text-decoration: none; border-bottom: 1px dashed #555; font-family: 'Gentium Book Plus', serif; }
-  .source-link:hover { color: #aaa; }
-
-  /* PRESSURE */
-  .pressure-box { background: #1a1a1a; border: 2px solid #2c2c2c; border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
-  .pressure-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.96rem; color: #f5f0e8; margin-bottom: 12px; }
-  .pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
-  .pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .pressure-q { font-size: 0.85rem; color: #6fc28d; font-weight: 700; margin-bottom: 4px; }
-  .pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
-
-  /* XREF */
-  .xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
-  .xref-card { border: 2px solid; border-radius: 3px; background: #faf7f2; padding: 11px 13px; }
-  .xref-card.backward { border-color: #d47c1a; } .xref-card.parallel { border-color: #6c4bbf; } .xref-card.forward { border-color: #2e8a4a; }
-  .xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
-  .backward .xref-tag { color: #d47c1a; } .parallel .xref-tag { color: #6c4bbf; } .forward .xref-tag { color: #2e8a4a; }
-  .xref-ref { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 0.86rem; color: #2c2c2c; margin-bottom: 3px; }
-  .xref-note { font-size: 0.74rem; color: #555; line-height: 1.35; }
-
-  /* THEN → NOW */
-  .then-now { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 24px; }
-  .tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #2e8a4a; font-weight: 700; margin-bottom: 10px; }
-  .tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: #57b079; font-weight: 700; margin-bottom: 4px; }
-  .tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
-  .tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #aad7bc; font-family: 'Gentium Book Plus', serif; font-size: 0.94rem; color: #2e8a4a; font-style: italic; }
-
-  /* VERDICT */
-  .verdict { border: 3px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
-  .verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 8px; }
-  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.2rem; color: #2c2c2c; line-height: 1.5; }
-  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 6px; }
-
   @media (max-width: 760px) {
     .flow-row { grid-template-columns: 1fr; }
     .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
     .handle-grid, .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
     .word-grid, .xref-grid { grid-template-columns: 1fr; }
   }
+  
   </style>
 </head>
 <body>

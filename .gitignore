@@ -4,4 +4,8 @@ guides/**/*.pdf
 # Large generated artifacts — kept local, not committed
 guides/audio/
 models/
-scripts/
+
+# Local helper scripts stay out of the repo, EXCEPT the guide build tooling
+scripts/*
+!scripts/build_guides.py
+!scripts/migrate_deepstudy.py

@@ -126,3 +126,34 @@ After the chat brief, generate and save the HTML panel, then open the preview.
 - Never fill a section with generic content — if no chiasm exists, don't force one
 - Every commentator card must include a source line: full name, book title, and one URL where it can be accessed or purchased. Flag with **[VERIFY]** if the URL is uncertain.
 - Never fabricate word meanings, commentary positions, or historical details
+
+---
+
+## House style — shared CSS (IMPORTANT)
+
+Guides share one stylesheet so the whole collection stays visually consistent
+and a single edit propagates everywhere. Do **not** paste the full base CSS
+into a new guide by hand.
+
+- The single source of truth is **`styles/base.css`** (reset, layout, header,
+  `.passage-callout`, `.word-*`, `.comm-*`, `.pressure-*`, `.xref-*`,
+  `.then-now`, `.verdict`, and the colour tokens).
+- A new guide's `<style>` starts with the marker pair and then only its
+  per-page accent tokens + its unique components:
+
+  ```
+  <style>
+  /* @base:start */
+  /* @base:end */
+    :root { --accent:#...; --accent-soft:#...; --accent-ink:#...;
+            --accent-lt:#...; --accent-mid:#...; --accent-hair:#...; }
+    /* page-specific components only (signature strips, etc.) */
+  </style>
+  ```
+
+- After creating or editing a guide, run **`python3 scripts/build_guides.py`**
+  to inject the current `styles/base.css` between the markers. Files stay fully
+  self-contained (they must still work as a standalone file / artifact / PDF).
+- Skeleton to copy: **`styles/GUIDE-TEMPLATE.html`**. Colour families are
+  listed there. Pick ONE family per page; never redefine base components
+  inline — only override via the accent tokens.
