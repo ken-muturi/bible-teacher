@@ -4,45 +4,258 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nehemiah — Discussion Guide</title>
-<style>
-  html { font-size: 18px; }
-  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 32px; }
-  .page { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
-  .guide-title { font-family: 'Gentium Book Plus', serif; font-size: 1.5rem; color: #2c2c2c; text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid #2c2c2c; padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
-  .msec { margin-bottom: 20px; }
-  .msec-head { font-family: 'Gentium Book Plus', serif; font-size: 1.05rem; color: #2c2c2c; display: flex; align-items: baseline; gap: 8px; }
-  .msec-rom { color: #c0392b; }
-  .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #888; line-height: 1.7; margin-top: 6px; padding-left: 4px; }
-  .lesson { border: 2px solid #2c2c2c; border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
-  .qblock { margin-top: 16px; }
-  .qtag { display: inline-block; font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
-  .qtag-obs { background: #3b6fd4; }
-  .qtag-app { background: #6c4bbf; }
-  .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
-  .q-num { font-weight: 700; color: #888; flex-shrink: 0; min-width: 18px; }
-  .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
-  .extra-label { font-family: 'Gentium Book Plus', serif; font-size: 0.86rem; margin-bottom: 4px; }
-  .prayer .extra-label { color: #2e8a4a; } .quote .extra-label { color: #d47c1a; } .memory .extra-label { color: #c0392b; }
-  .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid #2e8a4a; }
-  .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid #d47c1a; }
-  .quote-author { font-size: 0.85rem; color: #888; margin-top: 3px; }
-  .memory-text { font-size: 1.05rem; color: #2c2c2c; padding-left: 12px; border-left: 3px solid #c0392b; }
-  .memory-text .mv-ref { font-family: 'Gentium Book Plus', serif; font-size: 0.92rem; }
-  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
-  @media print { body { background: #fff; padding: 0; } .page { border: none; max-width: 100%; padding: 18px; } .home-nav { display: none; } }
-  @media (max-width: 768px) { body { padding: 18px 14px 50px; } .page { padding: 22px 20px 26px; } .guide-title { font-size: 1.2rem; } .footer { flex-direction: column; gap: 4px; } }
-</style>
+  <style>
+/* @base:start */
+/* ============================================================
+   Bible Teacher — shared base stylesheet (single source of truth)
+   ------------------------------------------------------------
+   This block is INLINED into each guide's <style> between the
+   markers  / * @base:start * /  …  / * @base:end * /  by
+   scripts/build_guides.py, so every guide stays a single
+   self-contained HTML file (works as an artifact, an emailed
+   file, a printed PDF, or on GitHub Pages).
+
+   DO NOT hand-edit the injected copy inside a guide. Edit THIS
+   file, then run:  python3 scripts/build_guides.py
+
+   Per-page colour is set with tokens. Each guide overrides the
+   accent tokens in its own :root (after the @base:end marker):
+
+     :root { --accent:#6c4bbf; --accent-soft:#f2eefb;
+             --accent-ink:#4f349c; --accent-lt:#b795ea;
+             --accent-mid:#8a6fd0; --accent-hair:#c9b8ee; }
+
+   Anything unique to one guide (signature strips, etc.) also
+   lives in that guide's own <style>, after the base.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font: 'Gentium Book Plus', serif;
+  --bg: #f5f0e8;
+  --card: #faf7f2;
+  --ink: #2c2c2c;
+  --ink-soft: #444;
+  --ink-mute: #555;
+  --muted: #888;
+  --dark: #1a1a1a;
+  --dark-ink: #d0c8bc;
+
+  /* Per-page accent — overridden by each guide. Defaults: purple. */
+  --accent: #6c4bbf;       /* solid accent (borders, links, headings) */
+  --accent-soft: #f2eefb;  /* pale accent background */
+  --accent-ink: #4f349c;   /* darker accent (hover) */
+  --accent-lt: #b795ea;    /* light accent for text on dark panels */
+  --accent-mid: #8a6fd0;   /* mid accent for labels on light bg */
+  --accent-hair: #c9b8ee;  /* faint accent for dashed hairlines */
+
+  /* Fixed canon/reference colours (not per-page) */
+  --orange: #d47c1a;
+  --green: #2e8a4a;
+  --blue: #3b6fd4;
+  --purple: #6c4bbf;
+  --grey: #555;
+}
+
+html { font-size: 18px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: var(--font); padding: 0; min-height: 100vh; }
+
+.home-nav { padding: 14px 24px 0; }
+.home-nav-link { font-family: var(--font); font-size: 0.82rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed #aaa; }
+.home-nav-link:hover { color: var(--ink-mute); }
+
+.main { max-width: var(--main-max, 900px); margin: 0 auto; padding: 28px 24px 60px; }
+
+.header-ref { font-family: var(--font); font-size: 2.05rem; color: var(--ink); letter-spacing: 0.03em; }
+.header-title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+.badge-deep { display: inline-block; background: var(--dark); color: var(--bg); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+.nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.companion-link { font-family: var(--font); font-size: 0.85rem; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+.companion-link:hover { color: var(--accent-ink); }
+
+.section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: var(--muted); margin-bottom: 10px; margin-top: 28px; }
+
+.passage-callout { border-left: 5px solid var(--accent); background: var(--accent-soft); padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+.pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+.pc-text { font-family: var(--font); font-size: 0.96rem; color: var(--ink); line-height: 1.62; font-style: italic; }
+.pc-heb { direction: rtl; font-size: 1.15rem; color: var(--ink); margin-bottom: 8px; line-height: 1.5; }
+.pc-ref { font-size: 0.74rem; color: var(--accent); margin-top: 8px; font-weight: 700; }
+
+.placement { background: var(--card); border: 2px solid var(--ink); border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+/* WORD STUDIES */
+.word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+.word-card { border: 2px solid var(--ink); border-radius: 3px; background: var(--card); padding: 13px 12px; }
+.word-heb { font-size: 1.25rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; direction: rtl; }
+.word-greek { font-size: 1.15rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; font-style: italic; }
+.word-gk { font-size: 1.2rem; color: var(--accent); font-weight: 700; margin-bottom: 1px; font-style: italic; }
+.word-translit { font-size: 0.62rem; color: var(--muted); font-style: italic; margin-bottom: 5px; }
+.word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+.word-gloss { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 5px; }
+.word-note { font-size: 0.75rem; color: var(--ink-mute); line-height: 1.4; }
+
+/* CANON / OT (fixed orange) */
+.ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.ot-card { border: 2px solid var(--orange); border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+.ot-ref { font-family: var(--font); font-weight: 700; font-size: 0.9rem; color: var(--orange); margin-bottom: 3px; }
+.ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 700; }
+.ot-note { font-size: 0.79rem; color: var(--ink-soft); line-height: 1.4; }
+
+/* COMMENTARY */
+.comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.comm-card { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 14px; }
+.comm-author { font-family: var(--font); font-weight: 700; font-size: 0.94rem; color: var(--bg); margin-bottom: 2px; }
+.comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+.comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+.trad-reformed { background: var(--purple); color: #fff; }
+.trad-evangelical { background: var(--blue); color: #fff; }
+.trad-preaching { background: var(--orange); color: #fff; }
+.trad-pastoral { background: var(--green); color: #fff; }
+.trad-catholic { background: var(--grey); color: #fff; }
+.trad-critical { background: var(--grey); color: #fff; }
+.trad-jewish { background: var(--grey); color: #fff; }
+.comm-point { border-left: 3px solid var(--accent); padding-left: 10px; font-size: 0.77rem; color: var(--dark-ink); line-height: 1.4; margin-bottom: 7px; }
+.comm-point:last-of-type { margin-bottom: 0; }
+.source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed var(--grey); font-family: var(--font); }
+.source-link:hover { color: #aaa; }
+
+/* PRESSURE POINTS */
+.pressure-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+.pressure-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+.pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.pressure-q { font-size: 0.85rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+/* CROSS-REFERENCES */
+.xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+.xref-card { border: 2px solid; border-radius: 3px; background: var(--card); padding: 11px 13px; }
+.xref-card.backward { border-color: var(--orange); } .xref-card.parallel { border-color: var(--accent); } .xref-card.forward { border-color: var(--green); }
+.xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+.backward .xref-tag { color: var(--orange); } .parallel .xref-tag { color: var(--accent); } .forward .xref-tag { color: var(--green); }
+.xref-ref { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 3px; }
+.xref-note { font-size: 0.74rem; color: var(--ink-mute); line-height: 1.35; }
+
+/* THEN -> NOW */
+.then-now { border: 2.5px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 18px 20px; margin: 4px 0 24px; }
+.tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+.tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-mid); font-weight: 700; margin-bottom: 4px; }
+.tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+.tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--accent-hair); font-family: var(--font); font-size: 0.94rem; color: var(--accent); font-style: italic; }
+
+/* VERDICT */
+.verdict { border: 3px solid var(--ink); border-radius: 3px; background: var(--card); padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+.verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
+.verdict-text { font-family: var(--font); font-size: 1.2rem; color: var(--ink); line-height: 1.5; }
+.verdict-ref { font-size: 0.76rem; color: var(--muted); margin-top: 6px; }
+
+@media print { .home-nav { display: none; } }
+@media (max-width: 760px) {
+  .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  .word-grid, .xref-grid { grid-template-columns: 1fr; }
+}
+
+/* ==================================================================
+   PANEL COMPONENTS — book-overview panels (unscoped; shared with deep
+   studies, which use different class names for their unique parts).
+   Panels set  :root { --main-max: 1020px; }  and keep their per-page
+   act/unit/chap colours and signature strips in their own <style>.
+   ================================================================== */
+.header-wrap { border: 3px solid var(--ink); border-radius: 4px; background: var(--card); padding: 20px 26px 16px; margin-bottom: 20px; }
+.header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.header-book { font-family: var(--font); font-weight: 700; font-size: 3rem; color: var(--ink); letter-spacing: 0.03em; line-height: 1; }
+.header-sub { font-size: 1.05rem; color: var(--ink-mute); margin-top: 4px; }
+.header-meta { text-align: right; }
+.meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+.meta-row strong { color: var(--ink); }
+.header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: var(--font); font-size: 1rem; color: var(--accent); text-align: center; letter-spacing: 0.02em; font-style: italic; }
+.word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+.comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+.hard-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+.hard-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+.hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.hard-q { font-size: 0.82rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+@media (max-width: 820px) { .comm-grid { grid-template-columns: 1fr; } }
+
+/* ==================================================================
+   DISCUSSION GUIDES — every rule scoped under <body class="discuss">
+   so its generic names never touch deep-study / panel pages. Colours
+   are fixed (red numerals, blue/purple tags), not per-page.
+   ================================================================== */
+body.discuss { padding: 32px; }
+body.discuss .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
+body.discuss .home-nav-link { font-size: 0.9rem; }
+body.discuss .page { background: var(--card); border: 3px solid var(--ink); border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
+body.discuss .guide-title { font-family: var(--font); font-size: 1.5rem; color: var(--ink); text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid var(--ink); padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
+body.discuss .msec { margin-bottom: 20px; }
+body.discuss .msec-head { font-family: var(--font); font-size: 1.05rem; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+body.discuss .msec-rom { color: #c0392b; }
+body.discuss .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.7; margin-top: 6px; padding-left: 4px; }
+body.discuss .lesson { border: 2px solid var(--ink); border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
+body.discuss .qblock { margin-top: 16px; }
+body.discuss .qtag { display: inline-block; font-family: var(--font); font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
+body.discuss .qtag-obs { background: var(--blue); }
+body.discuss .qtag-app { background: var(--purple); }
+body.discuss .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
+body.discuss .q-num { font-weight: 700; color: var(--muted); flex-shrink: 0; min-width: 18px; }
+body.discuss .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
+body.discuss .extra-label { font-family: var(--font); font-size: 0.86rem; margin-bottom: 4px; }
+body.discuss .prayer .extra-label { color: var(--green); }
+body.discuss .quote .extra-label { color: var(--orange); }
+body.discuss .memory .extra-label { color: #c0392b; }
+body.discuss .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid var(--green); }
+body.discuss .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid var(--orange); }
+body.discuss .quote-author { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+body.discuss .memory-text { font-size: 1.05rem; color: var(--ink); padding-left: 12px; border-left: 3px solid #c0392b; }
+body.discuss .memory-text .mv-ref { font-family: var(--font); font-size: 0.92rem; }
+body.discuss .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
+@media print { body.discuss { padding: 0; } body.discuss .page { border: none; max-width: 100%; padding: 18px; } }
+@media (max-width: 768px) { body.discuss { padding: 18px 14px 50px; } body.discuss .page { padding: 22px 20px 26px; } body.discuss .guide-title { font-size: 1.2rem; } body.discuss .footer { flex-direction: column; gap: 4px; } }
+
+/* ==================================================================
+   SIMPLE ONE-PAGE TEACHINGS — every rule scoped under
+   <body class="simple">. Per-page colour via the --accent tokens.
+   ================================================================== */
+body.simple { padding: 28px 24px; }
+body.simple .home-nav { padding: 0 0 14px; max-width: 1060px; margin: 0 auto; }
+body.simple .home-nav-link { font-size: 0.9rem; }
+body.simple .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: var(--accent); border-bottom: 1px dashed var(--accent); }
+body.simple .companion-link:hover { color: var(--accent-ink); }
+body.simple .page-header { text-align: center; margin-bottom: 26px; }
+body.simple .ref { font-family: var(--font); font-weight: 700; font-size: 2rem; color: var(--ink); letter-spacing: 0.04em; }
+body.simple .title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+body.simple .subtitle { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 4px; }
+body.simple .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; max-width: 1060px; margin: 0 auto; }
+body.simple .card { background: var(--card); border: 2px solid var(--ink); border-radius: 4px; padding: 16px 18px; min-width: 0; }
+body.simple .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: var(--muted); }
+body.simple .key-verse { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 3px; padding: 14px 16px; }
+body.simple .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+body.simple .kv-text { font-size: 0.95rem; color: var(--ink); line-height: 1.5; font-style: italic; }
+body.simple .kv-ref { font-size: 0.75rem; color: var(--muted); margin-top: 5px; }
+body.simple .point { border-left: 3px solid var(--accent); padding-left: 12px; margin-bottom: 14px; }
+body.simple .point:last-child { margin-bottom: 0; }
+body.simple .point-num { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+body.simple .point-title { font-family: var(--font); font-weight: 700; font-size: 0.98rem; color: var(--ink); margin: 2px 0; }
+body.simple .point-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
+body.simple .plain { font-size: 0.9rem; color: #333; line-height: 1.55; }
+body.simple .plain strong { color: var(--accent-ink); }
+body.simple .apply-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 9px; margin-bottom: 9px; font-size: 0.88rem; color: #333; line-height: 1.45; }
+body.simple .apply-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+body.simple .apply-item strong { color: var(--green); }
+body.simple .verdict { background: var(--ink); color: var(--bg); border: none; border-radius: 3px; padding: 14px 16px; text-align: left; }
+body.simple .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+body.simple .verdict-text { font-family: var(--font); font-size: 0.98rem; line-height: 1.5; color: var(--bg); }
+@media (max-width: 768px) { body.simple { padding: 20px 16px 60px; } body.simple .grid { grid-template-columns: 1fr; } body.simple .ref { font-size: 1.7rem; } }
+/* @base:end */
+  </style>
 </head>
-<body>
+<body class="discuss">
   <div class="home-nav"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
-    <style>
-      .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
-      .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
-      .home-nav-link:hover { color: #555; }
-      @media print { .home-nav { display: none; } }
-    </style>
 
 <div class="page">
 

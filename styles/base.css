@@ -58,7 +58,7 @@ body { background: var(--bg); font-family: var(--font); padding: 0; min-height: 
 .home-nav-link { font-family: var(--font); font-size: 0.82rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed #aaa; }
 .home-nav-link:hover { color: var(--ink-mute); }
 
-.main { max-width: 900px; margin: 0 auto; padding: 28px 24px 60px; }
+.main { max-width: var(--main-max, 900px); margin: 0 auto; padding: 28px 24px 60px; }
 
 .header-ref { font-family: var(--font); font-size: 2.05rem; color: var(--ink); letter-spacing: 0.03em; }
 .header-title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
@@ -149,3 +149,97 @@ body { background: var(--bg); font-family: var(--font); padding: 0; min-height: 
   .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
   .word-grid, .xref-grid { grid-template-columns: 1fr; }
 }
+
+/* ==================================================================
+   PANEL COMPONENTS — book-overview panels (unscoped; shared with deep
+   studies, which use different class names for their unique parts).
+   Panels set  :root { --main-max: 1020px; }  and keep their per-page
+   act/unit/chap colours and signature strips in their own <style>.
+   ================================================================== */
+.header-wrap { border: 3px solid var(--ink); border-radius: 4px; background: var(--card); padding: 20px 26px 16px; margin-bottom: 20px; }
+.header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.header-book { font-family: var(--font); font-weight: 700; font-size: 3rem; color: var(--ink); letter-spacing: 0.03em; line-height: 1; }
+.header-sub { font-size: 1.05rem; color: var(--ink-mute); margin-top: 4px; }
+.header-meta { text-align: right; }
+.meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+.meta-row strong { color: var(--ink); }
+.header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: var(--font); font-size: 1rem; color: var(--accent); text-align: center; letter-spacing: 0.02em; font-style: italic; }
+.word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+.comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+.hard-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+.hard-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+.hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.hard-q { font-size: 0.82rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+@media (max-width: 820px) { .comm-grid { grid-template-columns: 1fr; } }
+
+/* ==================================================================
+   DISCUSSION GUIDES — every rule scoped under <body class="discuss">
+   so its generic names never touch deep-study / panel pages. Colours
+   are fixed (red numerals, blue/purple tags), not per-page.
+   ================================================================== */
+body.discuss { padding: 32px; }
+body.discuss .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
+body.discuss .home-nav-link { font-size: 0.9rem; }
+body.discuss .page { background: var(--card); border: 3px solid var(--ink); border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
+body.discuss .guide-title { font-family: var(--font); font-size: 1.5rem; color: var(--ink); text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid var(--ink); padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
+body.discuss .msec { margin-bottom: 20px; }
+body.discuss .msec-head { font-family: var(--font); font-size: 1.05rem; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+body.discuss .msec-rom { color: #c0392b; }
+body.discuss .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.7; margin-top: 6px; padding-left: 4px; }
+body.discuss .lesson { border: 2px solid var(--ink); border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
+body.discuss .qblock { margin-top: 16px; }
+body.discuss .qtag { display: inline-block; font-family: var(--font); font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
+body.discuss .qtag-obs { background: var(--blue); }
+body.discuss .qtag-app { background: var(--purple); }
+body.discuss .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
+body.discuss .q-num { font-weight: 700; color: var(--muted); flex-shrink: 0; min-width: 18px; }
+body.discuss .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
+body.discuss .extra-label { font-family: var(--font); font-size: 0.86rem; margin-bottom: 4px; }
+body.discuss .prayer .extra-label { color: var(--green); }
+body.discuss .quote .extra-label { color: var(--orange); }
+body.discuss .memory .extra-label { color: #c0392b; }
+body.discuss .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid var(--green); }
+body.discuss .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid var(--orange); }
+body.discuss .quote-author { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+body.discuss .memory-text { font-size: 1.05rem; color: var(--ink); padding-left: 12px; border-left: 3px solid #c0392b; }
+body.discuss .memory-text .mv-ref { font-family: var(--font); font-size: 0.92rem; }
+body.discuss .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
+@media print { body.discuss { padding: 0; } body.discuss .page { border: none; max-width: 100%; padding: 18px; } }
+@media (max-width: 768px) { body.discuss { padding: 18px 14px 50px; } body.discuss .page { padding: 22px 20px 26px; } body.discuss .guide-title { font-size: 1.2rem; } body.discuss .footer { flex-direction: column; gap: 4px; } }
+
+/* ==================================================================
+   SIMPLE ONE-PAGE TEACHINGS — every rule scoped under
+   <body class="simple">. Per-page colour via the --accent tokens.
+   ================================================================== */
+body.simple { padding: 28px 24px; }
+body.simple .home-nav { padding: 0 0 14px; max-width: 1060px; margin: 0 auto; }
+body.simple .home-nav-link { font-size: 0.9rem; }
+body.simple .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: var(--accent); border-bottom: 1px dashed var(--accent); }
+body.simple .companion-link:hover { color: var(--accent-ink); }
+body.simple .page-header { text-align: center; margin-bottom: 26px; }
+body.simple .ref { font-family: var(--font); font-weight: 700; font-size: 2rem; color: var(--ink); letter-spacing: 0.04em; }
+body.simple .title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+body.simple .subtitle { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 4px; }
+body.simple .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; max-width: 1060px; margin: 0 auto; }
+body.simple .card { background: var(--card); border: 2px solid var(--ink); border-radius: 4px; padding: 16px 18px; min-width: 0; }
+body.simple .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: var(--muted); }
+body.simple .key-verse { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 3px; padding: 14px 16px; }
+body.simple .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+body.simple .kv-text { font-size: 0.95rem; color: var(--ink); line-height: 1.5; font-style: italic; }
+body.simple .kv-ref { font-size: 0.75rem; color: var(--muted); margin-top: 5px; }
+body.simple .point { border-left: 3px solid var(--accent); padding-left: 12px; margin-bottom: 14px; }
+body.simple .point:last-child { margin-bottom: 0; }
+body.simple .point-num { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+body.simple .point-title { font-family: var(--font); font-weight: 700; font-size: 0.98rem; color: var(--ink); margin: 2px 0; }
+body.simple .point-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
+body.simple .plain { font-size: 0.9rem; color: #333; line-height: 1.55; }
+body.simple .plain strong { color: var(--accent-ink); }
+body.simple .apply-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 9px; margin-bottom: 9px; font-size: 0.88rem; color: #333; line-height: 1.45; }
+body.simple .apply-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+body.simple .apply-item strong { color: var(--green); }
+body.simple .verdict { background: var(--ink); color: var(--bg); border: none; border-radius: 3px; padding: 14px 16px; text-align: left; }
+body.simple .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+body.simple .verdict-text { font-family: var(--font); font-size: 0.98rem; line-height: 1.5; color: var(--bg); }
+@media (max-width: 768px) { body.simple { padding: 20px 16px 60px; } body.simple .grid { grid-template-columns: 1fr; } body.simple .ref { font-size: 1.7rem; } }
