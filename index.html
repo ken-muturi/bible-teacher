@@ -745,56 +745,55 @@
 
     <!-- SKILLS -->
     <div class="skills-section">
-      <div class="section-label">Claude Code Skills</div>
+      <div class="section-label">Install the Skills</div>
 
-      <!-- INSTALL ALL ROW -->
+      <!-- PHONE / APP / BROWSER -->
       <div class="install-all-row">
         <div class="install-all-text">
-          <div class="install-all-title">Install all skills at once</div>
-          <div class="install-all-sub">Copy the repo URL, paste it to Claude and say:</div>
-          <code class="install-all-cmd">install skills from <span>https://github.com/ken-muturi/bible-teacher</span></code>
-          <code class="install-all-cmd" style="margin-top:4px; color:#888;">update skills <span style="color:#666;">← to get the latest version</span></code>
+          <div class="install-all-title">📱 On your phone, the desktop app, or a browser</div>
+          <div class="install-all-sub">Easiest for most people — no install. Paste the skills into a Claude <strong>Project</strong> once, then type commands like <code>passage-study John 3</code> on any device. Set it up once; it syncs everywhere.</div>
+          <a class="install-all-cmd" style="display:inline-block; text-decoration:none;" href="https://github.com/ken-muturi/bible-teacher/blob/main/mobile/SETUP-ON-YOUR-PHONE.md">→ Open the 5-minute setup guide</a>
         </div>
-        <button class="copy-all-btn" onclick="copyAll(this)">Copy repo URL</button>
       </div>
 
-      <!-- INDIVIDUAL SKILLS -->
+      <!-- CLAUDE CODE -->
+      <div class="install-all-row">
+        <div class="install-all-text">
+          <div class="install-all-title">💻 In Claude Code (terminal, or the "Code" tab)</div>
+          <div class="install-all-sub">Two commands install everything at once — and they keep themselves updated:</div>
+          <code class="install-all-cmd">/plugin marketplace add ken-muturi/bible-teacher</code>
+          <code class="install-all-cmd" style="margin-top:4px;">/plugin install bible-teacher@bible-teacher</code>
+        </div>
+        <button class="copy-all-btn" onclick="copyAll(this)">Copy commands</button>
+      </div>
+
+      <!-- WHAT YOU CAN TYPE -->
+      <div class="install-all-sub" style="margin:6px 2px 12px;">Once set up (either way above), these are the commands you can use:</div>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-name">Book Overview</div>
           <div class="skill-desc">Visual panel for any Bible book — layout adapts to the book's structure.</div>
           <div class="skill-trigger">book-overview &lt;Book&gt;</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/book-overview-infographic/SKILL.md')">Copy URL</button>
         </div>
         <div class="skill-card">
           <div class="skill-name">Passage Study</div>
           <div class="skill-desc">Quick or full deep-dive for any verse or chapter — words, illustrations, xrefs.</div>
           <div class="skill-trigger">passage-study &lt;ref&gt; [--deep]</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/passage-study/SKILL.md')">Copy URL</button>
         </div>
         <div class="skill-card">
           <div class="skill-name">Discussion Guide</div>
-          <div class="skill-desc">Small-group study companion for any Bible book.</div>
+          <div class="skill-desc">Small-group study companion for any Bible book, passage, or topic.</div>
           <div class="skill-trigger">discussion-guide &lt;Book&gt;</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/discussion-guide/SKILL.md')">Copy URL</button>
         </div>
         <div class="skill-card">
           <div class="skill-name">Teacher Foundation</div>
           <div class="skill-desc">Set tradition, translation, and theology once — all skills inherit it.</div>
-          <div class="skill-trigger">Edit SKILL.md directly</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/foundation/teacher-foundation/SKILL.md')">Copy URL</button>
-        </div>
-        <div class="skill-card">
-          <div class="skill-name">Install Skill</div>
-          <div class="skill-desc">Meta-skill: install one or all skills from a URL.</div>
-          <div class="skill-trigger">install all skills: &lt;url&gt;</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md')">Copy URL</button>
+          <div class="skill-trigger">set up my profile</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Bible Timeline</div>
           <div class="skill-desc">Family tree + lifespan timeline for any figure or era — contemporaries, books in context, Adam to Jesus.</div>
           <div class="skill-trigger">bible-timeline &lt;person|period|full&gt;</div>
-          <button class="copy-btn" onclick="copySkill(this, 'https://raw.githubusercontent.com/ken-muturi/bible-teacher/family-tree/bible-timeline/SKILL.md')">Copy URL</button>
         </div>
       </div>
     </div>
@@ -802,27 +801,16 @@
   </div>
 
   <script>
-    const REPO_URL = 'https://github.com/ken-muturi/bible-teacher';
+    const INSTALL_CMDS = '/plugin marketplace add ken-muturi/bible-teacher\n/plugin install bible-teacher@bible-teacher';
 
     function copyAll(btn) {
-      navigator.clipboard.writeText(REPO_URL).then(() => {
+      navigator.clipboard.writeText(INSTALL_CMDS).then(() => {
         btn.textContent = '✓ Copied!';
         btn.classList.add('copied');
         setTimeout(() => {
-          btn.textContent = 'Copy repo URL';
+          btn.textContent = 'Copy commands';
           btn.classList.remove('copied');
         }, 2500);
-      });
-    }
-
-    function copySkill(btn, url) {
-      navigator.clipboard.writeText(url).then(() => {
-        btn.textContent = '✓ Copied';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy URL';
-          btn.classList.remove('copied');
-        }, 2000);
       });
     }
 

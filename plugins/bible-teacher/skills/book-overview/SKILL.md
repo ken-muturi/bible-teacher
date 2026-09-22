@@ -1,3 +1,9 @@
+---
+name: book-overview
+description: Produce a structured research brief for any of the 66 books of the Bible — author, date, structure, themes, and background. Use when the user types "book-overview <Book>" and wants research (not a finished panel) before making a visual panel or outline.
+argument-hint: "<Book>"
+---
+
 # Book Overview — Research Skill
 
 Produces a structured research brief for any of the 66 books of the Bible.

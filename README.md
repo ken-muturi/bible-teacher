@@ -45,51 +45,43 @@ This toolkit runs on [Claude](https://claude.ai) by Anthropic.
 
 ---
 
-## Install the Toolkit
+## Install
 
-### Option 1 — Install all skills at once (Claude Code)
+Pick the version of Claude you use — the setup is different for each.
 
-Copy the repo URL, paste it to Claude and say:
+### 📱 Phone app, the Claude desktop app, or claude.ai in a browser — easiest, no install
 
-```
-install skills from https://github.com/ken-muturi/bible-teacher
-```
+**This is the right path for most people, and the only one that works in the phone app.**
+You paste the skills into a Claude **Project** once (about 5 minutes), then just type commands
+like `passage-study John 3`. No terminal, no downloads, no code. Because a Project is tied to
+your account, **set it up once on any device and it's there on all of them** — phone, the
+desktop app, and the browser.
 
-Claude fetches the skills manifest, creates all skill directories, and confirms everything is installed.
+**→ Follow the step-by-step guide: [mobile/SETUP-ON-YOUR-PHONE.md](mobile/SETUP-ON-YOUR-PHONE.md)**
 
-**Skills installed:**
+> ⚠️ The plugin commands below are a **Claude Code** feature. They do **not** work in the phone
+> app or on claude.ai. If your friends are on their phones, send them the guide above.
 
-| Skill | Trigger | What it does |
-|-------|---------|--------------|
-| **Book Overview** | `book-overview <Book>` | Visual panel for any Bible book — layout adapts to the book's structure |
-| **Passage Study** | `passage-study <ref> [--deep]` | Quick or full deep-dive for any verse or chapter — words, illustrations, xrefs |
-| **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any Bible book |
-| **Teacher Foundation** | Edit `SKILL.md` directly | Set tradition, translation, and theology once — all skills inherit it |
-| **Install Skill** | `install all skills: <url>` | Meta-skill: install one or all skills from a URL |
+### 💻 Claude Code (the terminal, or the "Code" tab of the desktop app)
 
-> **First time?** You need the `install-skill` skill to bootstrap the rest. Install it once manually:
-> ```
-> install skill https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/install-skill/SKILL.md
-> ```
-> Then run the one-liner above to install everything else.
-
-**Already installed? Get the latest version:**
+Two commands install **all** the skills at once, and they keep themselves updated:
 
 ```
-update skills from https://github.com/ken-muturi/bible-teacher
+/plugin marketplace add ken-muturi/bible-teacher
+/plugin install bible-teacher@bible-teacher
 ```
 
-Or simply:
+That's it. The skills then work automatically — type `passage-study <ref>`,
+`book-overview <Book>`, `discussion-guide <Book>`, or `bible-timeline <query>`.
+(They're also available with the plugin prefix, e.g. `/bible-teacher:passage-study`.)
+
+**Update later:**
 
 ```
-update skills
+/plugin marketplace update bible-teacher
 ```
 
-Claude will fetch the latest version of every skill and overwrite the existing files. New skills added to the repo since your last install will be added automatically.
-
-### Option 2 — Git clone (full repo)
-
-Clone the repository and run Claude Code from inside it:
+### 🗂️ Clone the whole repo (to read, edit, or contribute)
 
 ```bash
 git clone https://github.com/ken-muturi/bible-teacher.git
@@ -97,16 +89,15 @@ cd bible-teacher
 claude
 ```
 
-Claude Code automatically reads all skill files in the directory. All generated guides are saved to `guides/` and browsable via `index.html`.
+Then load the bundled skills into the session:
 
+```
+/plugin marketplace add .
+/plugin install bible-teacher@bible-teacher
+```
+
+All generated guides are saved to `guides/` and browsable via `index.html`.
 Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/heads/main.zip) and unzip it.
-
-### Option 3 — Claude.ai / Claude Desktop Projects
-
-1. Create a new Project in Claude.ai or Claude Desktop
-2. Go to **Project instructions** and paste the contents of `foundation/teacher-foundation/SKILL.md`
-3. Add each skill file you want to use as a Project file (or paste into the instructions)
-4. Start a conversation and reference the skills by name
 
 ---
 
@@ -114,19 +105,20 @@ Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/h
 
 | Skill | Trigger | What It Does |
 |-------|---------|--------------|
-| **Teacher Foundation** | Edit `foundation/teacher-foundation/SKILL.md` | Set your tradition, translation, and theology once — all other skills inherit it |
+| **Teacher Foundation** | Edit `plugins/bible-teacher/skills/teacher-foundation/SKILL.md` (or just tell Claude your details) | Set your tradition, translation, and theology once — all other skills inherit it |
 | **Book Overview Infographic** | `book-overview <Book>` | Generates a custom HTML visual panel for any Bible book |
 | **Passage Study** | `passage-study <ref>` | Quick overview panel for any verse or chapter |
 | **Passage Study (deep)** | `passage-study <ref> --deep` | Full exegetical study — word studies, commentaries, illustrations, chat brief + rich HTML panel |
 | **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any book |
 | **Bible Timeline & Family Tree** | `bible-timeline <query>` | Family tree + lifespan timeline for any biblical figure, era, or the full Adam-to-Jesus overview |
-| **Install Skill** | `install skill <url>` or `install skills from <repo>` | Installs one skill or all skills from a GitHub repo |
+
+All skills live in `plugins/bible-teacher/skills/`. On the phone/desktop/browser they run from the pasted Project bundle (see Install); in Claude Code they run as an installed plugin.
 
 ---
 
 ## Setup (do once)
 
-1. Open `foundation/teacher-foundation/SKILL.md`
+1. Open `plugins/bible-teacher/skills/teacher-foundation/SKILL.md` (phone/browser users: this is the first section of the pasted bundle — or just tell Claude your details in chat)
 2. Edit the variables directly in the file — name, context, audience, translation, denomination, preaching posture
 3. Includes a full table of 12 Bible translations and denominational tradition options across 6 categories
 4. All skill outputs adapt to your profile automatically — commentary recommendations, application bridges, interpretive framing

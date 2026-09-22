@@ -1,3 +1,9 @@
+---
+name: discussion-guide
+description: Create a printable small-group discussion / meeting guide for a Bible passage, book, or topic. Use when the user types "discussion-guide <book, passage, or topic>". Produces a full meeting agenda with observation and application questions, prayer, and a memory verse.
+argument-hint: "<Book | passage | topic>"
+---
+
 # Discussion Guide — Small-Group Lesson Skill
 
 Produces a printable **small-group meeting guide** for a passage or topic. The guide is a

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://code.claude.com/plugin-marketplace-schema.json",
+  "name": "bible-teacher",
+  "owner": {
+    "name": "Ken Muturi",
+    "url": "https://github.com/ken-muturi/bible-teacher"
+  },
+  "metadata": {
+    "description": "Bible Teacher — a toolkit of Claude Code skills for producing Bible teaching content: visual book panels, passage studies, discussion guides, and family-tree timelines.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "bible-teacher",
+      "source": "./plugins/bible-teacher",
+      "description": "Complete Bible teaching toolkit — passage studies, book-overview visual panels, discussion guides, and Adam-to-Jesus timelines. Bundles all skills in one install.",
+      "version": "1.0.0",
+      "category": "education",
+      "keywords": ["bible", "teaching", "scripture", "study", "discussion", "sermon"]
+    }
+  ]
+}

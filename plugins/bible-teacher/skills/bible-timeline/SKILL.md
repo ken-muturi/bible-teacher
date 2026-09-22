@@ -1,3 +1,9 @@
+---
+name: bible-timeline
+description: Generate an HTML family tree and lifespan timeline for a biblical figure, family/clan, era, or the full Adam-to-Jesus overview — who lived when, who was alive at the same time, and which books belong to each era. Use when the user types "bible-timeline <person | family | period | full>".
+argument-hint: "<person | family | period | full>"
+---
+
 # Skill: Bible Timeline & Family Tree
 
 ## Trigger

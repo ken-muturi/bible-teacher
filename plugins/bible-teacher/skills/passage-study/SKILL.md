@@ -1,3 +1,9 @@
+---
+name: passage-study
+description: Create a self-contained HTML study panel for any Bible verse or chapter. Use when the user types "passage-study <reference>" for a quick panel, or "passage-study <reference> --deep" for a full exegetical study with word studies, cited commentaries, cross-references, and application.
+argument-hint: "<reference> [--deep]"
+---
+
 # Passage Study — Verse and Chapter Deep Dive
 
 Two modes: a fast overview panel, and a full deep study. Both output HTML only — no study brief in chat.

@@ -1,3 +1,9 @@
+---
+name: video-outline
+description: Turn a completed book-overview brief into a structured teaching or video talking-points outline (not a word-for-word script). Use when the user types "video-outline <Book>" after a book-overview has been run.
+argument-hint: "<Book>"
+---
+
 # Video Outline — Script Structure Skill
 
 Turns a completed book-overview brief into a structured teaching outline.

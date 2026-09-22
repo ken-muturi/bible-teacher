@@ -1,3 +1,9 @@
+---
+name: book-overview-infographic
+description: Build a self-contained HTML visual teaching panel for a whole Bible book. Use when the user types "book-overview <Book>" and wants a finished visual panel; add "--non-constrained" for a layout that emerges from the book's own structure.
+argument-hint: "<Book> [--non-constrained]"
+---
+
 # Book Overview Infographic — Visual Teaching Panel
 
 Generates a self-contained HTML teaching panel from a completed book-overview brief.
