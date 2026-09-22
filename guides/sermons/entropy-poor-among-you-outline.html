@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entropy & the Poor Among You — Sermon Outline</title>
+  <style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 0; min-height: 100vh; }
+
+  .home-nav { padding: 14px 24px 0; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.82rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  @media print { .home-nav { display: none; } }
+
+  .main { max-width: 820px; margin: 0 auto; padding: 26px 24px 60px; }
+
+  .head-kicker { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.22em; color: #d47c1a; font-weight: 700; margin-bottom: 6px; }
+  .head-title { font-family: 'Gentium Book Plus', serif; font-size: 2.1rem; color: #2c2c2c; letter-spacing: 0.02em; line-height: 1.15; }
+  .head-sub { font-size: 1.02rem; color: #555; margin-top: 6px; font-style: italic; }
+  .badge-sermon { display: inline-block; background: #d47c1a; color: #fff; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 3px 9px; border-radius: 2px; margin-top: 10px; }
+
+  .meta { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 20px 0 8px; }
+  .meta-cell { border: 2px solid #2c2c2c; border-radius: 3px; background: #faf7f2; padding: 10px 13px; }
+  .meta-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #999; font-weight: 700; margin-bottom: 4px; }
+  .meta-val { font-size: 0.86rem; color: #2c2c2c; line-height: 1.35; }
+  .meta-val strong { color: #d47c1a; }
+
+  .big-idea { border: 3px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 16px 20px; margin: 16px 0 4px; text-align: center; }
+  .bi-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #d47c1a; font-weight: 700; margin-bottom: 7px; }
+  .bi-text { font-family: 'Gentium Book Plus', serif; font-size: 1.16rem; color: #2c2c2c; line-height: 1.45; font-style: italic; }
+
+  .section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #888; margin: 30px 0 12px; }
+
+  /* FRAME */
+  .frame { border: 2px solid #3b6fd4; border-radius: 4px; background: #eef2fb; padding: 16px 20px; margin: 20px 0 4px; }
+  .frame-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #3b6fd4; font-weight: 700; margin-bottom: 5px; }
+  .frame-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.08rem; color: #2c2c2c; margin-bottom: 8px; }
+  .frame-body { font-size: 0.89rem; color: #333; line-height: 1.55; }
+  .frame-body p { margin-bottom: 9px; }
+  .frame-body p:last-child { margin-bottom: 0; }
+  .frame-body strong { color: #3b6fd4; }
+
+  .block-body { font-size: 0.93rem; color: #333; line-height: 1.6; }
+  .block-body p { margin-bottom: 10px; }
+  .scrip { color: #d47c1a; font-weight: 700; }
+  .lead-in { font-family: 'Gentium Book Plus', serif; font-style: italic; color: #b5651a; }
+
+  /* MAIN POINTS */
+  .point { border: 2px solid #2c2c2c; border-radius: 4px; background: #faf7f2; margin-bottom: 18px; overflow: hidden; }
+  .point-head { display: flex; align-items: stretch; }
+  .point-rom { flex-shrink: 0; width: 60px; display: flex; align-items: center; justify-content: center; font-family: 'Gentium Book Plus', serif; font-size: 1.5rem; font-weight: 700; color: #fff; background: #d47c1a; }
+  .point-titlewrap { padding: 11px 16px; flex: 1; min-width: 0; border-bottom: 2px solid #eadfd0; }
+  .point-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.12rem; color: #2c2c2c; line-height: 1.25; }
+  .point-key { font-size: 0.74rem; color: #d47c1a; font-weight: 700; margin-top: 3px; }
+  .point-body { padding: 13px 18px 15px; }
+
+  .sub { display: flex; gap: 10px; margin-bottom: 11px; font-size: 0.9rem; color: #333; line-height: 1.5; }
+  .sub-letter { flex-shrink: 0; font-weight: 700; color: #d47c1a; font-family: 'Gentium Book Plus', serif; min-width: 20px; }
+  .sub em { color: #2c2c2c; }
+
+  .illus { border-left: 4px solid #6c4bbf; background: #f4f0fb; border-radius: 0 3px 3px 0; padding: 11px 15px; margin: 4px 0 10px; }
+  .illus-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6c4bbf; font-weight: 700; margin-bottom: 4px; }
+  .illus-text { font-size: 0.85rem; color: #444; line-height: 1.5; }
+
+  .transition { font-size: 0.85rem; color: #6c4bbf; font-style: italic; line-height: 1.45; padding: 4px 2px 0; }
+  .transition::before { content: "→ "; font-style: normal; font-weight: 700; }
+
+  /* CLARIFY (guard against misreading) */
+  .clarify { border: 2px dashed #c0392b; border-radius: 3px; background: #fdf5f4; padding: 12px 16px; margin: 4px 0 18px; }
+  .clarify-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
+  .clarify-text { font-size: 0.85rem; color: #444; line-height: 1.5; }
+  .clarify-text strong { color: #922b21; }
+
+  /* APPLICATION */
+  .app-box { border: 2.5px solid #2e8a4a; border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 18px; }
+  .app-title { font-family: 'Gentium Book Plus', serif; font-weight: 700; font-size: 1.08rem; color: #2e8a4a; margin-bottom: 4px; }
+  .app-sub { font-size: 0.84rem; color: #557; margin-bottom: 13px; font-style: italic; }
+  .app-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.89rem; color: #333; line-height: 1.5; }
+  .app-item .ai { flex-shrink: 0; color: #2e8a4a; font-weight: 700; }
+  .app-item strong { color: #2c2c2c; }
+
+  /* CONCLUSION */
+  .concl { border: 3px solid #2c2c2c; border-radius: 3px; background: #1a1a1a; padding: 20px 24px; margin: 4px 0 18px; }
+  .concl-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: #e6a656; font-weight: 700; margin-bottom: 10px; }
+  .concl-text { font-size: 0.95rem; color: #e8e2d8; line-height: 1.62; }
+  .concl-text p { margin-bottom: 11px; }
+  .concl-text .hi { color: #f0c48a; font-style: italic; }
+  .concl-text .cross { color: #7fb8f0; }
+
+  /* MEMORY */
+  .memory { border: 2px solid #d47c1a; border-radius: 3px; background: #fdf8ef; padding: 14px 18px; margin: 4px 0 8px; text-align: center; }
+  .mem-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: #d47c1a; font-weight: 700; margin-bottom: 6px; }
+  .mem-text { font-family: 'Gentium Book Plus', serif; font-size: 1.05rem; color: #2c2c2c; line-height: 1.5; }
+  .mem-text .mv-ref { display: block; font-size: 0.8rem; color: #999; margin-top: 5px; font-weight: 700; }
+
+  .footer { border-top: 1.5px solid #e0ddd8; margin-top: 26px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.72rem; color: #bbb; }
+
+  @media print { body { background: #fff; } .home-nav { display: none; } .point, .app-box, .concl, .big-idea, .frame { break-inside: avoid; } }
+  @media (max-width: 700px) {
+    .head-title { font-size: 1.6rem; }
+    .meta { grid-template-columns: 1fr; }
+    .point-rom { width: 48px; font-size: 1.2rem; }
+    .footer { flex-direction: column; gap: 4px; }
+  }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="head-kicker">Sermon Outline</div>
+  <div class="head-title">Fighting Entropy</div>
+  <div class="head-sub">"The poor you will always have with you" — and why poverty's opposite is not wealth but intention</div>
+  <span class="badge-sermon">Preaching Outline · 3 points</span>
+
+  <!-- META -->
+  <div class="meta">
+    <div class="meta-cell">
+      <div class="meta-label">Text &amp; Frame</div>
+      <div class="meta-val"><strong>Matthew 26:6–13</strong> (the anointing at Bethany), framed by <strong>Deuteronomy 15:1–11</strong> (the year of release)</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-label">Supporting</div>
+      <div class="meta-val">Mark 14:3–9 · John 12:1–8 · Gen 3:17–19 · Luke 15:11–24 · 2 Cor 8:9 · 1 Cor 15:42</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-label">Aim</div>
+      <div class="meta-val">To move hearers from passive drift to intentional stewardship, generosity, and discipleship — under the God who became poor to make us rich.</div>
+    </div>
+  </div>
+
+  <!-- BIG IDEA -->
+  <div class="big-idea">
+    <div class="bi-label">The Big Idea</div>
+    <div class="bi-text">In a fallen world, poverty — of pocket and of soul — is the default drift of entropy. It is reversed not by <em>riches</em> but by <em>intention</em>: supremely by the intentional love of God in Christ, who became poor to make many rich.</div>
+  </div>
+
+  <!-- THE FRAME -->
+  <div class="section-label">The Frame — What "Entropy" Means Here</div>
+  <div class="frame">
+    <div class="frame-label">The horizon behind the whole message</div>
+    <div class="frame-title">Everything Left Alone Runs Down</div>
+    <div class="frame-body">
+      <p>The second law of thermodynamics says that a closed system always drifts toward disorder — heat spreads out, order decays, things fall apart unless <strong>energy is intentionally poured in</strong>. Your coffee cools. Your house dusts over. A garden left alone grows weeds, never vegetables. Nobody has to <em>try</em> to make a mess; mess is the default.</p>
+      <p>Scripture saw the pattern long before physics named it. After the Fall, the ground itself resists us: "thorns and thistles it shall bring forth… by the sweat of your face you shall eat" (Gen 3:18–19). Decay — <strong>entropy</strong> — is a signature of the curse: bodies age, relationships cool, nations decline, and wealth dissipates. Left to itself, the world runs <em>down</em>, and the name of that running-down, at street level, is <strong>poverty</strong>.</p>
+      <p>But here is the gospel seed hidden in the science: <strong>the universe is not actually a closed system.</strong> God pours energy in. He created order out of chaos, He redeems, He raises the dead. And He calls His people to be agents of that same counter-drift — pushing back the entropy of a fallen world by <em>intention</em>.</p>
+    </div>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <div class="section-label">Introduction</div>
+  <div class="block-body">
+    <p>A woman breaks a jar of costly perfume over Jesus' head. The disciples are indignant: <span class="scrip">"Why this waste? It could have been sold… and given to the poor"</span> (Matt 26:8–9). It sounds so responsible. And Jesus answers with a line we have quoted ever since — sometimes to excuse ourselves: <span class="scrip">"For you always have the poor with you, but you will not always have me"</span> (26:11).</p>
+    <p>We hear it as a shrug — <em>poverty is permanent, so don't bother.</em> But Jesus is quoting Deuteronomy 15, and He means the exact opposite. He is naming the <em>entropy</em> of a fallen world — and telling us how to live inside it.</p>
+    <p class="lead-in">Three things about living against the drift.</p>
+  </div>
+
+  <!-- POINTS -->
+  <div class="section-label">The Message</div>
+
+  <!-- POINT I -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">I</div>
+      <div class="point-titlewrap">
+        <div class="point-title">The Drift Is Real — Poverty Is the Default</div>
+        <div class="point-key">Matthew 26:11 · Deuteronomy 15:11 · Genesis 3:17–19</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>Jesus states it plainly: "you always have the poor with you." He is not being cynical; He is being <em>honest</em> about a world under the curse. Poverty is not an occasional glitch — it is the <em>gravity</em> of a fallen world.</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>He is quoting Moses: "there will never cease to be poor in the land" (Deut 15:11). The drift is built in. Eden became thorns; the ground now yields weeds by default and bread only "by the sweat of your face."</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>This kills two lies at once: the <em>utopian</em> lie that the right system will finally abolish poverty on its own, and the <em>fatalist</em> lie that nothing can be done. The truth is soberer and more hopeful: the drift is real, and it must be actively resisted.</span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">Leave a garden for one summer. You will not return to more tomatoes — you will return to weeds, every time. You never have to <em>plan</em> the weeds; they are the default. Order is the thing that costs effort. So it is with money, marriages, bodies, churches, and souls.</div>
+      </div>
+      <div class="transition">If the drift is toward poverty, surely the cure is riches? That is exactly the disciples' assumption — and it is wrong.</div>
+    </div>
+  </div>
+
+  <!-- POINT II -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">II</div>
+      <div class="point-titlewrap">
+        <div class="point-title">Riches Are Not the Cure — Intention Is</div>
+        <div class="point-key">Deuteronomy 15:11 · Luke 15:11–16 · Proverbs 6:6–11</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>The disciples think money is the answer: <em>sell it, give it</em>. But poverty's true opposite is not <em>wealth</em> — it is <em>intention</em>. Wealth with no intention simply dissipates: the prodigal took real riches and "squandered" them into a pig-pen (Luke 15:13–16).</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>That is why Deuteronomy 15:11 does not say "get rich." It says, "you shall <em>open wide your hand</em>." The command against poverty is an <em>intentional, repeated act</em> — open hands, not full accounts. The permanence of the poor is the very reason to keep giving, not to stop.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>The same law governs the <em>soul</em>. A marriage, a friendship, a walk with God does not stay rich by having once been rich; un-tended, it drifts to poverty no matter how gifted you are. Grace received but not <em>cultivated</em> grows cold. Intention is the only thing that ever pushes back the drift.</span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">Give two people the same windfall. A year later the difference between them will not be the size of the gift — it will be <em>intention</em>: one budgeted, invested, gave; the other drifted. Same riches; opposite outcomes. Wealth was never the variable. Intention was.</div>
+      </div>
+      <div class="transition">But here is the terror: no amount of intention of ours can finally beat the drift. We need Someone from <em>outside</em> the system.</div>
+    </div>
+  </div>
+
+  <!-- POINT III -->
+  <div class="point">
+    <div class="point-head">
+      <div class="point-rom">III</div>
+      <div class="point-titlewrap">
+        <div class="point-title">The Deliverer Reverses the Drift — Grace from Outside</div>
+        <div class="point-key">2 Corinthians 8:9 · 1 Corinthians 15:42 · Mark 14:8–9</div>
+      </div>
+    </div>
+    <div class="point-body">
+      <div class="sub"><span class="sub-letter">A.</span><span>Left to entropy, every one of us is headed to the ultimate poverty — the grave, the final running-down. No riches reverse that. The system is closed and cooling… <em>unless</em> energy comes from outside it.</span></div>
+      <div class="sub"><span class="sub-letter">B.</span><span>So God stepped in — <em>intentionally</em>: "though he was rich, yet for your sake he became <em>poor</em>, so that you by his poverty might become <em>rich</em>" (2 Cor 8:9). Christ deliberately entered our poverty to hand us His wealth. That is the most intentional act in history.</span></div>
+      <div class="sub"><span class="sub-letter">C.</span><span>And the resurrection is the reversal of entropy itself: "sown in corruption… raised in incorruption" (1 Cor 15:42). In Christ the drift runs backward — decay gives way to new creation. Our intentional generosity now is not grim duty; it is <em>joining God's counter-drift.</em></span></div>
+      <div class="illus">
+        <div class="illus-label">Illustration</div>
+        <div class="illus-text">The disciples looked at the shattered perfume jar and saw entropy — value dissipated, wasted. Jesus looked at the same act and saw the one truly imperishable thing in the room: "She has done a beautiful thing… wherever the gospel is preached… what she has done will be told" (Mark 14:8–9). Poured out on Christ, her "waste" is the only thing there that will never decay.</div>
+      </div>
+      <div class="transition">So the Lord turns and asks: where is entropy quietly winning in <em>your</em> life — because you have left it un-intended?</div>
+    </div>
+  </div>
+
+  <!-- CLARIFY -->
+  <div class="clarify">
+    <div class="clarify-label">Guard Against the Misreading</div>
+    <div class="clarify-text">"The poor you will always have with you" has been misused to excuse neglect — <em>it's hopeless, so why give?</em> But Jesus quotes Deuteronomy 15 precisely to command the <strong>opposite</strong>: "there will never cease to be poor… <em>therefore</em> open wide your hand" (15:11). The permanence of the need is the reason for permanent generosity. He is defending one beautiful, intentional act of devotion — not dismissing the poor He came to lift.</div>
+  </div>
+
+  <!-- APPLICATION -->
+  <div class="section-label">Application</div>
+  <div class="app-box">
+    <div class="app-title">Where Is the Drift Winning?</div>
+    <div class="app-sub">Name the place you've been coasting — and choose one intentional act against the entropy.</div>
+    <div class="app-item"><span class="ai">1.</span><span><strong>Name it.</strong> Where has "default" become decay because you stopped intending — your finances, your marriage, your body, your devotional life, the neighbour at your gate? Entropy doesn't need your permission; it just needs your <em>passivity</em>.</span></div>
+    <div class="app-item"><span class="ai">2.</span><span><strong>Open your hand now — don't wait to be rich.</strong> Generosity is an act of intention, not a level of income. Pick one concrete, repeatable open-handed act this week (a gift, a meal, a debt forgiven, time given).</span></div>
+    <div class="app-item"><span class="ai">3.</span><span><strong>Cultivate, don't coast.</strong> Choose one intentional rhythm to re-tend a "garden" you've let go — a weekly date, a fixed time in the Word, a hard conversation. Order costs effort; schedule the effort.</span></div>
+    <div class="app-item"><span class="ai">4.</span><span><strong>Pour it out on Christ.</strong> The one investment that never decays is what is poured out in devotion to Jesus. Give Him your most extravagant, intentional "waste."</span></div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-label">Conclusion</div>
+  <div class="concl">
+    <div class="concl-label">The Landing</div>
+    <div class="concl-text">
+      <p>The universe is running down. Your body is running down. Your money, left alone, runs down; so does your marriage, and so does your soul. And no amount of riches can stop the drift — that is what "you will always have the poor with you" finally means. Entropy always wins… <span class="hi">in a closed system.</span></p>
+      <p>But the good news is that the system is <span class="hi">not closed.</span> <span class="cross">"Though he was rich, yet for your sake he became poor"</span> — God stepped in from outside, intentionally, into our poverty and our grave, and on the third day the drift ran <em>backward</em>. Death itself was sown in corruption and raised in incorruption.</p>
+      <p>"You will not always have me," Jesus said — but you did. He came. He became poor. He rose. So do not drift. <span class="hi">Live intentionally in the light of the One who reversed the drift — and pour out the perfume.</span></p>
+    </div>
+  </div>
+
+  <!-- MEMORY -->
+  <div class="memory">
+    <div class="mem-label">Memory Verse</div>
+    <div class="mem-text">"For you know the grace of our Lord Jesus Christ, that though he was rich, yet for your sake he became poor, so that you by his poverty might become rich."<span class="mv-ref">2 Corinthians 8:9</span></div>
+  </div>
+
+  <div class="footer">
+    <span>Fighting Entropy &nbsp;·&nbsp; Sermon Outline</span>
+    <span>Matt 26 · Deut 15 · 2 Cor 8:9</span>
+  </div>
+
+</div><!-- /main -->
+</body>
+</html>
