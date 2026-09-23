@@ -8,13 +8,17 @@ argument-hint: "(answer a few profile questions)"
 
 This foundation personalizes all other skills. Every output — research briefs, infographics, outlines, and discussion guides — is shaped by the profile you set here.
 
-**Setup:** Edit the variables below directly in this file. Replace each placeholder with your own value — no conversation needed. Save the file, then start using the other skills.
+**Setup (once) — just tell me in chat.** The first time any Bible Teacher skill is used, if no profile has been set yet, ask the user a few quick questions — translation, tradition, audience, teaching posture, and tone — and then apply those answers to every skill's output for the rest of the project/session. No file editing is required, and this works on every surface (phone app, web, and Claude Code).
+
+The user can also just say "set up my profile" at any time to set or change it.
+
+> **Optional (Claude Code only):** a user who prefers a permanent, checked-in profile can instead fill in the block below and save this file. Either way works — the skills use whichever profile is set; if both exist, the values written here take precedence. Use the reference tables further down to choose a translation and tradition.
 
 ---
 
 ## Your Profile
 
-Tag your details here. Use the reference lists further down to choose your translation and tradition.
+Fill this in only if you want a permanent file-based profile (optional — see Setup above).
 
 ```
 TEACHER_NAME:         [Your name]

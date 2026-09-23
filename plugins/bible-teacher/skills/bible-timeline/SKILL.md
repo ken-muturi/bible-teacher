@@ -154,7 +154,7 @@ Add `<meta name="viewport" content="width=device-width, initial-scale=1">` and m
 ---
 
 ## Foundation Integration
-If `foundation/teacher-foundation/SKILL.md` is present, adapt:
+If a teacher-foundation profile is set (the `teacher-foundation` skill), adapt:
 - Use the preferred translation for all scripture references
 - Use denominational chronology preferences if specified
 - Tailor the "Then → Now" application to the ministry context
