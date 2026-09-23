@@ -8,9 +8,8 @@ guides/**/*.pdf
 guides/audio/
 models/
 
-# Local helper scripts stay out of the repo, EXCEPT the guide build tooling
+# Local helper scripts stay out of the repo, EXCEPT the ongoing build tooling.
+# (The one-time migrate_* scripts were used once to fold CSS into base.css
+#  and are kept local only.)
 scripts/*
 !scripts/build_guides.py
-!scripts/migrate_deepstudy.py
-!scripts/migrate_categories.py
-!scripts/migrate_panels.py
