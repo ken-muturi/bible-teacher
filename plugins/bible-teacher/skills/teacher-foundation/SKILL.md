@@ -1,6 +1,7 @@
 ---
 name: teacher-foundation
-description: The teacher's profile for all Bible Teacher skills — Bible translation, denomination/tradition, audience, teaching posture, and tone. Every other skill reads this to shape its output. Use when the user wants to set or change their teaching profile, or says "set up my foundation / profile".
+description: The teacher's profile for all Bible Teacher skills — Bible translation, denomination/tradition, audience, teaching posture, and tone. Every other skill reads this to shape its output. Runs as a short one-time conversation the first time it's needed (no file editing required); use when the user says "set up my profile / foundation", or automatically before another skill's first run if no profile is set yet.
+argument-hint: "(answer a few profile questions)"
 ---
 
 # Teacher Foundation — Shared Context Layer

@@ -57,14 +57,22 @@ like `passage-study John 3`. No terminal, no downloads, no code. Because a Proje
 your account, **set it up once on any device and it's there on all of them** — phone, the
 desktop app, and the browser.
 
-**→ Follow the step-by-step guide: [mobile/SETUP-ON-YOUR-PHONE.md](mobile/SETUP-ON-YOUR-PHONE.md)**
+**→ One-tap Copy page: [ken-muturi.github.io/bible-teacher/install.html](https://ken-muturi.github.io/bible-teacher/install.html)**
+(tap **Copy**, make a Claude **Project**, paste once — done. Full walkthrough:
+[mobile/SETUP-ON-YOUR-PHONE.md](mobile/SETUP-ON-YOUR-PHONE.md).)
 
 > ⚠️ The plugin commands below are a **Claude Code** feature. They do **not** work in the phone
-> app or on claude.ai. If your friends are on their phones, send them the guide above.
+> app or on claude.ai. If your friends are on their phones, send them the Copy page above.
 
 ### 💻 Claude Code (the terminal, or the "Code" tab of the desktop app)
 
-Two commands install **all** the skills at once, and they keep themselves updated:
+One command installs **all** the skills at once (recent Claude Code):
+
+```
+/plugin install bible-teacher --marketplace ken-muturi/bible-teacher
+```
+
+Or the classic two-step (any version):
 
 ```
 /plugin marketplace add ken-muturi/bible-teacher
@@ -89,7 +97,11 @@ cd bible-teacher
 claude
 ```
 
-Then load the bundled skills into the session:
+**Zero commands:** this repo ships a `.claude/settings.json` that registers its own marketplace
+and enables the plugin, so opening the folder in Claude Code **auto-installs the plugin**. The
+first time you open it, Claude Code shows a one-time **workspace-trust prompt** — accept it and
+the skills are ready (nothing else runs; the committed settings contain no scripts or hooks).
+If auto-install doesn't trigger on your version, fall back to:
 
 ```
 /plugin marketplace add .

@@ -1,6 +1,9 @@
 .DS_Store
 guides/**/*.pdf
 
+# Personal Claude Code overrides (local hooks, etc.) — never shared
+.claude/settings.local.json
+
 # Large generated artifacts — kept local, not committed
 guides/audio/
 models/

@@ -17,54 +17,49 @@ the browser.
 
 ## The easiest way — a Project (recommended)
 
-*A "Project" is a Claude workspace that remembers instructions across chats. Projects need a
-paid plan (Claude Pro). If you're on the free plan, skip to "No Project? Do this instead" below.*
+*A "Project" is a Claude workspace that remembers things across chats. Projects need a paid plan
+(Claude Pro). If you're on the free plan, skip to "No Project? Do this instead" below.*
 
-### Step 1 — Copy the skills text
-1. Open this link in your phone's browser:
-   **https://raw.githubusercontent.com/ken-muturi/bible-teacher/main/mobile/bible-teacher-project.md**
-2. Tap and hold the text → **Select All** → **Copy**. (It's long — that's fine, copy all of it.)
+**One tap to copy, then two taps to set up — a single paste, no second step.**
 
-### Step 2 — Make a Project in the Claude app
-1. Open the **Claude** app.
-2. Tap the menu (☰) → **Projects** → **＋ New Project**.
-3. Name it **Bible Teacher**.
+### Step 1 — Copy (one tap)
+Open the install page and tap the green **Copy** button:
+**https://ken-muturi.github.io/bible-teacher/install.html**
+*(It grabs the whole setup for you — no wrestling with a giant text file.)*
 
-### Step 3 — Paste the skills into the Project
-1. Open your new **Bible Teacher** project.
-2. Find **Project knowledge** (sometimes "Add content" / "＋"), choose **Add text**.
-3. **Paste** the text you copied. Give it a title like "Skills" and save.
+### Step 2 — Make a Project
+Open the **Claude** app → menu (☰) → **Projects** → **＋ New Project**. Name it **Bible Teacher**.
 
-### Step 4 — Add one line of instructions
-1. In the same project, open **Instructions** (or "Set custom instructions").
-2. Paste this one line:
-   > *You are my Bible teaching assistant. Follow the skills in this project's knowledge. When I type a command like `passage-study`, `book-overview`, `discussion-guide`, or `bible-timeline`, follow the matching skill and show the result as a viewable HTML panel plus a short summary.*
-3. Save.
+### Step 3 — Paste it in (the whole install)
+Open the project → **Project knowledge** (or "Add content" → "Add text") → **paste** → save.
+That's it — the pasted text already tells Claude how to behave, so there is **nothing else to
+set up**. (No separate "instructions" box to fill in.)
 
-### Step 5 — Use it
-Start a new chat **inside the Bible Teacher project** and type, for example:
+### Step 4 — Check it worked
+Start a new chat **inside the Bible Teacher project** and type:
 - `passage-study John 3:16`
+
+You should get a small formatted study panel plus a short summary. The first time, Claude may ask
+a few questions about your Bible translation and tradition — answer once and it remembers.
+Then try any of these any time:
 - `passage-study Romans 8:1-11 --deep`
 - `book-overview Jonah`
 - `discussion-guide James`
 - `bible-timeline Moses`
-
-Claude will make a teaching panel you can view and copy. The very first time, it may ask you a
-few questions to set your profile (translation, tradition, audience) — answer once and it
-remembers them in the project.
 
 ---
 
 ## No Project? (free plan) — Do this instead
 
 Projects need Claude Pro. Without one, you can still use everything — you just paste the skills
-at the **start of each new chat**:
+at the **start of a chat**:
 
-1. Open the link from Step 1 above and **copy all** the text.
+1. Open **https://ken-muturi.github.io/bible-teacher/install.html** and tap **Copy**.
 2. In the Claude app, start a **new chat** and **paste** it as your first message. Send it.
 3. Then type your command, e.g. `passage-study Psalm 23`.
 
-That's it — the only difference is you re-paste the block whenever you begin a brand-new chat.
+Tip: keep using that **same chat** for a while — Claude remembers within a conversation, so you
+only re-paste when you start a brand-new chat.
 
 ---
 
@@ -78,8 +73,9 @@ That's it — the only difference is you re-paste the block whenever you begin a
   will match your church and style.
 - **You don't need to memorize commands.** You can also just ask in plain words, e.g.
   "make me a small-group discussion guide on Philippians 2."
-- **Updating:** if the skills are improved later, just repeat Step 1 and Step 3 (paste the newer
-  text over the old project knowledge).
+- **Updating:** if the skills are improved later, open the install page again, tap **Copy**, and
+  paste the new text over the old Project knowledge (delete the old entry first). The top of the
+  pasted text shows a version line so you can tell it changed.
 
 ---
 
