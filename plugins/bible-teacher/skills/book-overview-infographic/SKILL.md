@@ -128,11 +128,9 @@ These are present regardless of layout:
 
 ## File Output
 
-Save to: `guides/visuals/<bookname-lowercase>-panel.html`
+The panel must be **fully self-contained** — all CSS in a `<style>` block, fonts via `@import`, no external scripts or stylesheets beyond the Google Fonts CDN.
 
-The file must be fully self-contained — all CSS in a `<style>` block, fonts via `@import`. No external scripts or stylesheets beyond the Google Fonts CDN.
-
-After saving, navigate the preview to the file and confirm with a clickable link: `[guides/visuals/<bookname-lowercase>-panel.html](http://localhost:7654/guides/visuals/<bookname-lowercase>-panel.html)`
+**Where it goes (auto-detect):** if a `guides/` folder exists (the Bible Teacher repo), save to `guides/visuals/<bookname-lowercase>-panel.html`, add its index card, and — if the preview server is running — confirm with `[guides/visuals/<bookname-lowercase>-panel.html](http://localhost:7654/guides/visuals/<bookname-lowercase>-panel.html)`. **Otherwise** (installed in another project), just deliver the finished HTML as an artifact or a single `.html` file, and skip the `guides/` path, index card, and preview.
 
 ---
 
@@ -147,22 +145,28 @@ After saving, navigate the preview to the file and confirm with a clickable link
 
 ---
 
-## House style — shared CSS
+## House style — keep panels consistent
 
-Standard panels use the master stylesheet `styles/base.css` (see the
-passage-study skill for the full convention). A panel's `<style>` is:
+Follow the same house look as the other guides (cream ground, Gentium serif,
+one accent family, dark commentary/hard-question boxes, `.then-now`,
+`.verdict`). **Auto-detect** how to apply it:
 
-```
-<style>
-/* @base:start */
-/* @base:end */
-  :root { --main-max: 1020px; --accent:#...; --accent-soft:#...;
-          --accent-lt:#...; --accent-mid:#...; --accent-hair:#...; }
-  /* panel-only: acts-layout / units / chap-map / signature strips */
-</style>
-```
+- **Default (works anywhere):** emit a **fully self-contained** `<style>` with
+  the shared base look plus the panel's per-page act/unit colours and its
+  signature strips, all inline.
+- **Inside the Bible Teacher repo (optional):** if `styles/base.css` exists,
+  use the marker system — the shared header, word studies, commentary,
+  then-now and verdict come from base.css, so keep only the per-page tokens
+  and unique strips inline, then run `python3 scripts/build_guides.py`:
 
-Shared header, word studies, commentary, then-now, verdict come from
-base.css; keep only the panel's per-page act/unit colours and its
-signature strips inline. Run `python3 scripts/build_guides.py` after edits.
-Bespoke one-off panels (timelines, comparisons) stay fully self-contained.
+  ```
+  <style>
+  /* @base:start */
+  /* @base:end */
+    :root { --main-max: 1020px; --accent:#...; --accent-soft:#...;
+            --accent-lt:#...; --accent-mid:#...; --accent-hair:#...; }
+    /* panel-only: acts-layout / units / chap-map / signature strips */
+  </style>
+  ```
+
+Bespoke one-off panels (timelines, comparisons) are always fully self-contained.

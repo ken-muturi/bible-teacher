@@ -46,7 +46,7 @@ Optional focus for `--deep`: `word-study`, `context`, `illustrations`, `structur
 - Cross-references — 2 tagged cards
 - Verdict — controlling idea, dark banner
 
-Save to: `guides/passages/<book-chapter-verse>-study.html`
+Save to `guides/passages/<book-chapter-verse>-study.html` when a `guides/` folder exists, else deliver as a self-contained artifact
 
 ---
 
@@ -73,7 +73,7 @@ Builds on Mode 1 and adds:
 - Interpretive pressure points — dark box
 - Extended cross-reference strip
 
-Save to: `guides/passages/<book-chapter-verse>-study.html`
+Save to `guides/passages/<book-chapter-verse>-study.html` when a `guides/` folder exists, else deliver as a self-contained artifact
 (overwrites the quick panel if one exists)
 
 ---
@@ -117,9 +117,9 @@ No length limit — write the full study. Cover everything:
 After the chat brief, generate and save the HTML panel, then open the preview.
 
 ### HTML panel
-- Self-contained — all CSS in `<style>`, fonts via `@import`
-- After saving, open the preview at `http://localhost:7654/guides/passages/<filename>.html`
-- Confirm with one line as a clickable link: `[guides/passages/<filename>.html](http://localhost:7654/guides/passages/<filename>.html)`
+- **Always fully self-contained** — all CSS inline in `<style>`, fonts via `@import`, no external files. The panel must render on its own as an artifact, an emailed file, or a printed page.
+- **Where it goes (auto-detect):** if a `guides/` folder exists in the project (you're in the Bible Teacher repo), save to `guides/passages/<filename>.html` and add its index card. **Otherwise** (the plugin is installed in some other project), just deliver the finished HTML — as an artifact, or a single `.html` file in the working folder — and skip the `guides/` path, the index card, and the preview step.
+- **Preview (repo only):** if the repo's preview server is running, you may open `http://localhost:7654/guides/passages/<filename>.html` and give a clickable link. Otherwise skip it — the file stands alone.
 
 ### Quality rules
 - Flag every unverified claim: **[VERIFY: what to check]**
@@ -129,17 +129,22 @@ After the chat brief, generate and save the HTML panel, then open the preview.
 
 ---
 
-## House style — shared CSS (IMPORTANT)
+## House style — keep every guide consistent
 
-Guides share one stylesheet so the whole collection stays visually consistent
-and a single edit propagates everywhere. Do **not** paste the full base CSS
-into a new guide by hand.
+Two ways to style a guide; **auto-detect which applies**:
 
-- The single source of truth is **`styles/base.css`** (reset, layout, header,
-  `.passage-callout`, `.word-*`, `.comm-*`, `.pressure-*`, `.xref-*`,
-  `.then-now`, `.verdict`, and the colour tokens).
-- A new guide's `<style>` starts with the marker pair and then only its
-  per-page accent tokens + its unique components:
+- **Default (works anywhere, incl. installed in another project):** emit a
+  **fully self-contained** `<style>` that follows the house look — cream ground
+  `#f5f0e8`, card `#faf7f2`, ink `#2c2c2c`, Gentium Book Plus serif, one accent
+  colour family per page, and the standard components (`.passage-callout`,
+  `.word-*` studies, dark `.comm-*` commentary cards, `.pressure-box`,
+  `.xref-*`, `.then-now`, `.verdict`). Everything inline; no external CSS.
+- **Inside the Bible Teacher repo (optional optimisation):** if
+  **`styles/base.css`** exists, don't hand-write the base — start the `<style>`
+  with the marker pair and add only the per-page tokens + unique components,
+  then run **`python3 scripts/build_guides.py`** to inject the shared base
+  (single source of truth). `styles/GUIDE-TEMPLATE.html` is the skeleton and
+  lists the colour families.
 
   ```
   <style>
@@ -151,9 +156,5 @@ into a new guide by hand.
   </style>
   ```
 
-- After creating or editing a guide, run **`python3 scripts/build_guides.py`**
-  to inject the current `styles/base.css` between the markers. Files stay fully
-  self-contained (they must still work as a standalone file / artifact / PDF).
-- Skeleton to copy: **`styles/GUIDE-TEMPLATE.html`**. Colour families are
-  listed there. Pick ONE family per page; never redefine base components
-  inline — only override via the accent tokens.
+Either way, pick ONE accent family per page and drive all accent colour from
+the tokens — never scatter hardcoded accent hexes through the components.

@@ -21,7 +21,7 @@ Where `<query>` can be:
 
 ## What This Skill Produces
 
-An HTML visual panel saved to `guides/visuals/bible-timeline-<query>.html` containing:
+A **fully self-contained** HTML visual panel — saved to `guides/visuals/bible-timeline-<query>.html` when a `guides/` folder exists (the Bible Teacher repo), otherwise delivered as an artifact or a single `.html` file — containing:
 
 1. **Era timeline strip** — colour-coded horizontal bands from Adam to Jesus
 2. **Lifespan bars** — each key figure shown as a horizontal bar across their years
@@ -135,8 +135,8 @@ Add `<meta name="viewport" content="width=device-width, initial-scale=1">` and m
 ```
 
 ### Step 6 — Save and report
-- Save to `guides/visuals/bible-timeline-<query-slug>.html`
-- Report: who was included, date range covered, books mapped, file path
+- Save to `guides/visuals/bible-timeline-<query-slug>.html` if a `guides/` folder exists; otherwise deliver it as an artifact or a single self-contained `.html` file
+- Report: who was included, date range covered, books mapped, and where the file is (path or artifact)
 - Offer to zoom in on any sub-family or sub-period
 
 ---
@@ -162,7 +162,7 @@ If a teacher-foundation profile is set (the `teacher-foundation` skill), adapt:
 ---
 
 ## Output File Naming
-`guides/visuals/bible-timeline-<slug>.html`
+`bible-timeline-<slug>.html` (in the Bible Teacher repo: `guides/visuals/bible-timeline-<slug>.html`)
 
 Examples:
 - `bible-timeline-moses.html`

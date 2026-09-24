@@ -115,7 +115,10 @@ Standard framing:
 
 ## File Output
 
-Save to: `guides/discussions/<passage-or-topic-slug>-discussion-guide.html`
+The guide must be **fully self-contained** (all CSS inline). Save to
+`guides/discussions/<passage-or-topic-slug>-discussion-guide.html` when a
+`guides/` folder exists (the Bible Teacher repo); **otherwise** just deliver
+it as an artifact or a single `.html` file.
 (e.g., `matthew-16-24-26-discussion-guide.html`)
 
 Match the house visual style used across the site:
@@ -128,10 +131,11 @@ Match the house visual style used across the site:
 - Tag Observation vs Application blocks; number questions within each
 - `.home-nav` back-to-index link; `@media print` hides nav and fits one to two pages
 
-After saving, navigate the preview to the file and confirm with a clickable link.
-
-Then add an index card under the **Discussion Guides** section of `index.html`
-(`card-orange`), with the theme + passage as the card title.
+**Repo only:** if you saved into `guides/` and the preview server is running,
+confirm with a clickable link, and add an index card under the **Discussion
+Guides** section of `index.html` (`card-orange`) with the theme + passage as
+the title. When there's no `guides/`/`index.html`, skip both — the file stands
+alone.
 
 ---
 
