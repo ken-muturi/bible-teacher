@@ -93,7 +93,7 @@
   .copy-all-btn:hover { background: #2e5bb5; }
   .copy-all-btn.copied { background: #2e8a4a; }
 
-  .skills-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+  .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .skill-card {
     background: #2c2c2c; border-radius: 3px; padding: 11px 12px;
     display: flex; flex-direction: column; gap: 4px; min-width: 0;
@@ -836,6 +836,11 @@
           <div class="skill-name">Bible Timeline</div>
           <div class="skill-desc">Family tree + lifespan timeline for any figure or era — contemporaries, books in context, Adam to Jesus.</div>
           <div class="skill-trigger">bible-timeline &lt;person|period|full&gt;</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Message Infographic</div>
+          <div class="skill-desc">16:9 slide deck from a sermon or video transcript — for video B-roll, projector slides, or social cards.</div>
+          <div class="skill-trigger">message-infographic [--dark] + transcript</div>
         </div>
       </div>
     </div>
