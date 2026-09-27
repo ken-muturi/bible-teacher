@@ -13,3 +13,4 @@ models/
 #  and are kept local only.)
 scripts/*
 !scripts/build_guides.py
+!scripts/build_bundle.py
