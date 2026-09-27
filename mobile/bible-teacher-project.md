@@ -952,11 +952,11 @@ Rounded cards (20px), thin 1px borders.
 ## File Output
 
 One **fully self-contained** HTML file: all CSS in a `<style>` block, fonts via the
-Google Fonts `@import`, inline SVG only, no scripts required.
+Google Fonts `@import`, inline SVG only, no external scripts (a small inline fit-to-width script is fine).
 
 Structure:
 - Each slide is a `<section class="slide">` fixed at 1920×1080, stacked vertically
-  with a gap, and scaled down with CSS (`zoom` or a `transform: scale()` wrapper) so
+  with a gap, and scaled down (a `transform: scale()` wrapper) so
   the whole deck fits the browser width.
 - A print rule (`@page { size: 1920px 1080px; margin: 0 }`, one slide per page) so
   **Save as PDF** gives one slide per page, ready to drop into a video editor.
@@ -980,6 +980,11 @@ message-infographic "The poor you will always have" --dark
 message-infographic --slides 4
   <paste sermon outline>                → 4 cream house-style slides
 ```
+
+---
+
+Reference output: `guides/visuals/poor-among-you-infographics.html` (in the repo) shows the
+`--dark` look and the anchor → observation → image → reframe → question beats.
 
 ---
 
