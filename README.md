@@ -80,7 +80,7 @@ Or the classic two-step (any version):
 ```
 
 That's it. The skills then work automatically — type `passage-study <ref>`,
-`book-overview <Book>`, `discussion-guide <Book>`, or `bible-timeline <query>`.
+`book-overview <Book>`, `discussion-guide <Book>`, `bible-timeline <query>`, or `message-infographic`.
 (They're also available with the plugin prefix, e.g. `/bible-teacher:passage-study`.)
 
 **Update later:**
@@ -123,6 +123,7 @@ Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/h
 | **Passage Study (deep)** | `passage-study <ref> --deep` | Full exegetical study — word studies, commentaries, illustrations, chat brief + rich HTML panel |
 | **Discussion Guide** | `discussion-guide <Book>` | Small-group study companion for any book |
 | **Bible Timeline & Family Tree** | `bible-timeline <query>` | Family tree + lifespan timeline for any biblical figure, era, or the full Adam-to-Jesus overview |
+| **Message Infographic** | `message-infographic [--dark]` + pasted transcript | 16:9 infographic slides from a sermon or video transcript, following the message's own beats |
 
 All skills live in `plugins/bible-teacher/skills/`. On the phone/desktop/browser they run from the pasted Project bundle (see Install); in Claude Code they run as an installed plugin.
 
@@ -218,6 +219,18 @@ The full `bible-timeline full` panel includes a dedicated prophets section with 
 ![Prophets Timeline](guides/visuals/screenshots/prophets-timeline.png)
 
 Output: `guides/visuals/bible-timeline-<query>.html`
+
+### Message Infographics
+Widescreen slides built from a sermon or video transcript — for B-roll, projector slides, or social cards.
+
+```
+message-infographic "The poor you will always have" --dark
+<paste transcript>
+```
+
+The skill finds the message's beats (anchor verse → observation → central image → reframe → closing question), uses the speaker's own words, and skips and flags any garbled transcript sections instead of guessing. Default is the cream house look; `--dark` gives a dark on-screen look for video.
+
+Output: `guides/visuals/<slug>-infographics.html` (one 1920×1080 slide per PDF page)
 
 ### Discussion Guides
 One-page printable HTML companion for small groups, classrooms, or self-study.

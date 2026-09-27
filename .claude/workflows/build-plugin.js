@@ -20,7 +20,7 @@ export const meta = {
   ],
 }
 
-const SKILLS = ['teacher-foundation','passage-study','book-overview','book-overview-infographic','discussion-guide','bible-timeline','video-outline']
+const SKILLS = ['teacher-foundation','passage-study','book-overview','book-overview-infographic','discussion-guide','bible-timeline','video-outline','message-infographic']
 
 const PREP_SCHEMA = {
   type: 'object',
@@ -63,7 +63,7 @@ const reports = (await parallel(SKILLS.map((s) => () =>
 
 phase('Synthesize')
 const verdict = await agent(
-  'You are the release coordinator for the Bible Teacher Claude Code plugin (repo root is the current working directory). Below are per-skill validation reports as JSON:\n\n' + JSON.stringify(reports, null, 2) + '\n\nProduce the structured release verdict:\n1. dependencyOrder = a topological order of the skills from their declared prerequisites (teacher-foundation first; book-overview before book-overview-infographic and before video-outline).\n2. conflicts[] = any case where two skills document the SAME trigger phrase (report the phrase and the two skill names).\n3. Run these two commands with Bash and read their output: `claude plugin validate .` and `claude plugin validate ./plugins/bible-teacher`. Set validatePassed = true only if both succeed; put any validation errors into blocking[].\n4. Check that mobile/bible-teacher-project.md exists and mentions each of: teacher-foundation, passage-study, book-overview-infographic, discussion-guide, bible-timeline. Set bundleInSync accordingly; note any missing ones in warnings[].\n5. blocking[] = anything that MUST be fixed before release (failed validate, malformed skill, an unresolved trigger collision). warnings[] = non-blocking observations. ready = (blocking is empty) AND validatePassed. Write a one-paragraph summary. Read-only except for running the validate commands.',
+  'You are the release coordinator for the Bible Teacher Claude Code plugin (repo root is the current working directory). Below are per-skill validation reports as JSON:\n\n' + JSON.stringify(reports, null, 2) + '\n\nProduce the structured release verdict:\n1. dependencyOrder = a topological order of the skills from their declared prerequisites (teacher-foundation first; book-overview before book-overview-infographic and before video-outline).\n2. conflicts[] = any case where two skills document the SAME trigger phrase (report the phrase and the two skill names).\n3. Run these two commands with Bash and read their output: `claude plugin validate .` and `claude plugin validate ./plugins/bible-teacher`. Set validatePassed = true only if both succeed; put any validation errors into blocking[].\n4. Check that mobile/bible-teacher-project.md exists and mentions each of: teacher-foundation, passage-study, book-overview-infographic, discussion-guide, bible-timeline, message-infographic. Set bundleInSync accordingly; note any missing ones in warnings[].\n5. blocking[] = anything that MUST be fixed before release (failed validate, malformed skill, an unresolved trigger collision). warnings[] = non-blocking observations. ready = (blocking is empty) AND validatePassed. Write a one-paragraph summary. Read-only except for running the validate commands.',
   { label: 'coordinator', phase: 'Synthesize', agentType: 'general-purpose', schema: RELEASE_SCHEMA }
 )
 

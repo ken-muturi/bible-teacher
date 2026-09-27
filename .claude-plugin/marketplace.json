@@ -7,16 +7,24 @@
   },
   "metadata": {
     "description": "Bible Teacher — a toolkit of Claude Code skills for producing Bible teaching content: visual book panels, passage studies, discussion guides, and family-tree timelines.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "bible-teacher",
       "source": "./plugins/bible-teacher",
-      "description": "Complete Bible teaching toolkit — passage studies, book-overview visual panels, discussion guides, and Adam-to-Jesus timelines. Bundles all skills in one install.",
-      "version": "1.0.0",
+      "description": "Complete Bible teaching toolkit — passage studies, book-overview visual panels, discussion guides, Adam-to-Jesus timelines, and transcript-to-infographic slides. Bundles all skills in one install.",
+      "version": "1.1.0",
       "category": "education",
-      "keywords": ["bible", "teaching", "scripture", "study", "discussion", "sermon"]
+      "keywords": [
+        "bible",
+        "teaching",
+        "scripture",
+        "study",
+        "discussion",
+        "sermon",
+        "infographic"
+      ]
     }
   ]
 }
