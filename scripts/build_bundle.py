@@ -25,6 +25,7 @@ CORE = [
     ("book-overview-infographic", "BOOK OVERVIEW (visual panel)"),
     ("discussion-guide",          "DISCUSSION GUIDE"),
     ("bible-timeline",            "BIBLE TIMELINE & FAMILY TREE"),
+    ("message-infographic",       "MESSAGE INFOGRAPHIC (transcript → slides)"),
 ]
 
 PREAMBLE = """# Bible Teacher — Skills Bundle (Phone / Web / Desktop app)
@@ -44,6 +45,7 @@ Each skill has a **trigger** (a short command I type) and instructions for what 
    - `book-overview <Book>` — a visual overview panel for a whole book of the Bible
    - `discussion-guide <book | passage | topic>` — a small-group discussion / meeting guide
    - `bible-timeline <person | family | period | full>` — a family tree + timeline
+   - `message-infographic` (then paste a sermon/video transcript) — 16:9 infographic slides; add `--dark` for a dark on-screen look
    If I just ask a normal question, answer normally — you don't need a trigger.
 
 2. **Always apply my Teacher Foundation profile first** (the first skill below): my Bible
