@@ -42,6 +42,7 @@
   .label-orange { color: #d47c1a; }
   .label-red    { color: #c0392b; }
   .label-green  { color: #2e8a4a; }
+  .label-gold   { color: #b0842a; }
 
   .guide-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 10px; align-items: stretch; }
   .guide-card { border: 2px solid; border-radius: 3px; padding: 11px 14px; text-decoration: none; display: flex; flex-direction: column; transition: opacity 0.15s; }
@@ -52,6 +53,7 @@
   .card-orange { border-color: #d47c1a; background: #fdf3e3; }
   .card-red    { border-color: #c0392b; background: #fdf2f2; }
   .card-green  { border-color: #2e8a4a; background: #edf8f1; }
+  .card-gold   { border-color: #c59a3e; background: #faf4e4; }
 
   .card-book { font-family: 'Gentium Book Plus', serif; font-size: 1.05rem; color: #2c2c2c; }
   .card-type { font-size: 0.72rem; color: #888; margin-top: 2px; letter-spacing: 0.08em; }
@@ -59,6 +61,7 @@
   .badge-deep { background: #1a1a1a; color: #f5f0e8; }
   .badge-3col { background: #e0d8cc; color: #555; }
   .badge-preach { background: #2e8a4a; color: #fff; }
+  .badge-video  { background: #1a1a1a; color: #e9c46a; }
 
   .empty { font-size: 0.85rem; color: #aaa; font-style: italic; }
 
@@ -464,17 +467,24 @@
           <span class="card-badge badge-preach">Preaching</span>
           <code class="card-prompt">sermon-outline "entropy / the poor among you"</code>
         </a>
-        <a class="guide-card card-green" href="guides/visuals/poor-among-you-infographics.html">
-          <div class="card-book">"The Poor You Always Have" · Infographics</div>
-          <div class="card-type">5 video slides from the reflective message · we all know… · time reveals what we stop tending · poverty's opposite is intentionality · what exactly are we expecting?</div>
-          <span class="card-badge badge-preach">Video</span>
-          <code class="card-prompt">message-infographic "the poor you will always have" --dark</code>
-        </a>
         <a class="guide-card card-green" href="guides/sermons/bold-obedience-outline.html">
           <div class="card-book">Bold Obedience · Stepping In Before the River Parts</div>
           <div class="card-type">Preaching outline · 3 points, framed by Amos 9:11–14 (God rebuilds) · Gen 12 · Joshua 3 (feet in the water) · Daniel 3 "but if not" · Hosea · Christ's descent in Phil 2 · big idea · illustrations · application</div>
           <span class="card-badge badge-preach">Preaching</span>
           <code class="card-prompt">sermon-outline "bold obedience"</code>
+        </a>
+      </div>
+    </div>
+
+    <!-- MESSAGE INFOGRAPHICS -->
+    <div class="section">
+      <div class="section-label label-gold">Message Infographics</div>
+      <div class="guide-list">
+        <a class="guide-card card-gold" href="guides/visuals/poor-among-you-infographics.html">
+          <div class="card-book">"The Poor You Always Have" · Infographics</div>
+          <div class="card-type">5 video slides from the reflective message · we all know… · time reveals what we stop tending · poverty's opposite is intentionality · what exactly are we expecting? · 16:9, dark on-screen look</div>
+          <span class="card-badge badge-video">Video slides</span>
+          <code class="card-prompt">message-infographic "the poor you will always have" --dark</code>
         </a>
       </div>
     </div>
@@ -771,7 +781,7 @@
       <div class="cta-arrow">↓</div>
       <div class="cta-text">
         <div class="cta-heading">These are just examples — now go to town</div>
-        <div class="cta-sub">Every panel above came from a single prompt. Install the skills below and generate overviews for any of the 66 books, deep studies on any passage, discussion guides for any series, timelines for any figure or era — the toolkit handles the rest.</div>
+        <div class="cta-sub">Every panel above came from a single prompt. Install the skills below and generate overviews for any of the 66 books, deep studies on any passage, discussion guides for any series, timelines for any figure or era, and infographic slides from any sermon transcript — the toolkit handles the rest.</div>
         <div class="cta-examples">
           <span class="cta-chip">book-overview Genesis</span>
           <span class="cta-chip">book-overview Revelation --non-constrained</span>
@@ -781,6 +791,7 @@
           <span class="cta-chip">bible-timeline exile</span>
           <span class="cta-chip">passage-study Isaiah 53 --deep</span>
           <span class="cta-chip">book-overview Philippians</span>
+          <span class="cta-chip">message-infographic "…" --dark + transcript</span>
         </div>
       </div>
     </div>
