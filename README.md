@@ -113,6 +113,37 @@ Or [download the ZIP](https://github.com/ken-muturi/bible-teacher/archive/refs/h
 
 ---
 
+## Updating — getting new skills (e.g. Message Infographic)
+
+New skills and fixes ship to this same repo/marketplace. How you pull them in depends on how you installed:
+
+### 💻 Claude Code (marketplace install)
+
+```
+/plugin marketplace update bible-teacher
+```
+
+Reload if prompted (`/reload-plugins`). Marketplaces also auto-update by default, so you may already be current. Any new skill (like **message-infographic**) becomes available automatically after the update.
+
+### 🗂️ Claude Code (clone-and-open)
+
+```bash
+git pull
+```
+
+Reopen the folder — the auto-install picks up the new version (accept the trust prompt if it reappears).
+
+### 📱 Phone app / desktop app / browser (Project)
+
+The pasted bundle is a **snapshot**, so updating means re-copying it once:
+
+1. Open the **[Copy page](https://ken-muturi.github.io/bible-teacher/install.html)** and tap **Copy** — it always serves the latest.
+2. In your **Bible Teacher** Project → **Project knowledge**, **delete the old pasted "Skills" item** and paste the new one. Save.
+
+That's it — new skills are now available. The top of the pasted text shows a **version line** (e.g. `bundle version: 2026.09.27`) so you can tell it refreshed. *(Free-plan users who paste at the start of a chat just copy the latest next time.)*
+
+---
+
 ## Skills
 
 | Skill | Trigger | What It Does |
