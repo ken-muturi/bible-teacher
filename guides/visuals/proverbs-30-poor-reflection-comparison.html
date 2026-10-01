@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proverbs 30 × "The Poor You Will Always Have" — Correlation Panel</title>
+<style>
+  html { font-size: 18px; }
+  @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; font-family: 'Gentium Book Plus', serif; padding: 28px; }
+  .panel { background: #faf7f2; border: 3px solid #2c2c2c; border-radius: 4px; padding: 26px 30px; max-width: 1260px; margin: 0 auto; }
+
+  /* TITLE */
+  .title-bar { text-align: center; border-bottom: 3px solid #2c2c2c; padding-bottom: 12px; margin-bottom: 22px; }
+  .title-bar h1 { font-family: 'Gentium Book Plus', serif; font-size: 2.4rem; letter-spacing: 0.06em; line-height: 1.2; }
+  .title-bar .subtitle { font-size: 0.92rem; color: #666; margin-top: 6px; font-style: italic; }
+
+  /* ORIENTATION STRIP */
+  .orient { display: flex; align-items: stretch; gap: 0; margin-bottom: 22px; border: 2px solid #2c2c2c; border-radius: 3px; overflow: hidden; }
+  .or-block { flex: 1; padding: 10px 14px; font-size: 0.82rem; line-height: 1.45; }
+  .or-prov { background: #f0ecfb; border-right: 2px solid #2c2c2c; }
+  .or-gap { background: #f0ede8; border-right: 2px solid #2c2c2c; text-align: center; color: #999; font-style: italic; font-size: 0.78rem; flex: 0.55; display: flex; align-items: center; justify-content: center; }
+  .or-refl { background: #fdf6e8; }
+  .or-label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 3px; }
+  .or-prov .or-label { color: #6c4bbf; }
+  .or-refl .or-label { color: #b0842a; }
+
+  /* MAIN 3-COL GRID */
+  .main { display: grid; grid-template-columns: 1fr 230px 1fr; gap: 18px; align-items: start; margin-bottom: 20px; }
+
+  .book-col-label { font-family: 'Gentium Book Plus', serif; font-size: 1.3rem; letter-spacing: 0.04em; text-align: center; padding: 8px 10px; border-radius: 3px; margin-bottom: 12px; line-height: 1.2; }
+  .label-prov { background: #f0ecfb; border: 2.5px solid #6c4bbf; color: #6c4bbf; }
+  .label-refl { background: #fdf6e8; border: 2.5px solid #b0842a; color: #b0842a; }
+
+  .card { border: 2px solid; border-radius: 3px; padding: 10px 12px; margin-bottom: 10px; }
+  .card-label { font-size: 0.63rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
+  .card-body { font-size: 0.85rem; line-height: 1.5; color: #2c2c2c; }
+
+  .blue { border-color: #3b6fd4; background: #edf2fc; } .blue .card-label { color: #3b6fd4; }
+  .orange { border-color: #d47c1a; background: #fdf4e7; } .orange .card-label { color: #d47c1a; }
+  .gold { border-color: #b0842a; background: #fdf6e8; } .gold .card-label { color: #b0842a; }
+  .red { border-color: #c0392b; background: #fbeaea; } .red .card-label { color: #c0392b; }
+  .green { border-color: #2e8a4a; background: #eaf4ee; } .green .card-label { color: #2e8a4a; }
+  .purple { border-color: #6c4bbf; background: #f0ecfb; } .purple .card-label { color: #6c4bbf; }
+  .dark { background: #1a1a1a; color: #f5f0e8; border: 2.5px solid #2c2c2c; border-radius: 3px; padding: 10px 12px; margin-bottom: 10px; }
+  .dark .card-label { color: #aaa; font-size: 0.63rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; }
+  .dark .card-body { font-size: 0.85rem; line-height: 1.5; }
+
+  /* CALLOUT */
+  .callout { border-left: 5px solid; padding: 9px 12px; border-radius: 0 3px 3px 0; margin-bottom: 10px; }
+  .callout-label { font-size: 0.63rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .callout-text { font-size: 0.92rem; line-height: 1.5; color: #1a1a1a; font-style: italic; }
+  .callout-ref { font-size: 0.75rem; color: #888; margin-top: 3px; }
+  .callout-purple { border-color: #6c4bbf; background: #f0ecfb; } .callout-purple .callout-label { color: #6c4bbf; }
+  .callout-gold { border-color: #b0842a; background: #fdf6e8; } .callout-gold .callout-label { color: #b0842a; }
+
+  /* CENTER BRIDGE */
+  .bridge-section { margin-bottom: 14px; }
+  .bridge-label { font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; color: #888; text-align: center; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1.5px solid #e0ddd8; }
+  .bridge-item { background: #f0ede8; border: 1.5px solid #ccc; border-radius: 3px; padding: 7px 9px; margin-bottom: 6px; font-size: 0.8rem; line-height: 1.4; color: #444; text-align: center; }
+  .bridge-item strong { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 2px; }
+  .bridge-connect { text-align: center; color: #bbb; font-size: 1rem; margin: 3px 0; }
+
+  .contrast-pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: 5px; align-items: center; margin-bottom: 8px; }
+  .contrast-a { background: #f0ecfb; border: 1.5px solid #6c4bbf; border-radius: 3px; padding: 5px 7px; font-size: 0.76rem; color: #2c2c2c; text-align: center; line-height: 1.3; }
+  .contrast-b { background: #fdf6e8; border: 1.5px solid #b0842a; border-radius: 3px; padding: 5px 7px; font-size: 0.76rem; color: #2c2c2c; text-align: center; line-height: 1.3; }
+  .contrast-vs { font-size: 0.7rem; color: #aaa; text-align: center; font-weight: 700; }
+
+  /* SHARED THEMES ROW */
+  .shared-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+  .shared-card { border: 2px solid #2e8a4a; border-radius: 3px; background: #eaf4ee; padding: 11px 13px; }
+  .shared-label { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: #2e8a4a; font-weight: 700; margin-bottom: 5px; }
+  .shared-body { font-size: 0.82rem; line-height: 1.45; color: #2c2c2c; }
+  .shared-body .vs { color: #888; font-style: italic; }
+
+  /* BOTTOM */
+  .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .verdict { text-align: center; border: 3px solid #2c2c2c; border-radius: 3px; background: #1a1a1a; color: #f5f0e8; padding: 13px 18px; }
+  .verdict-label { font-size: 0.63rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .verdict-text { font-family: 'Gentium Book Plus', serif; font-size: 1.08rem; color: #fff; line-height: 1.45; font-style: italic; }
+  .verdict-ref { font-size: 0.76rem; color: #888; margin-top: 5px; }
+  .vd-prov .verdict-label { color: #b795ea; }
+  .vd-refl .verdict-label { color: #e0b34a; }
+
+  /* THROUGH-LINE */
+  .throughline { border: 2.5px solid #2c2c2c; border-radius: 3px; background: #fbf7ef; padding: 14px 20px; margin-bottom: 20px; text-align: center; }
+  .tl-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #888; margin-bottom: 6px; }
+  .tl-text { font-family: 'Gentium Book Plus', serif; font-size: 1.12rem; color: #2c2c2c; line-height: 1.5; }
+  .tl-text strong { color: #6c4bbf; }
+  .tl-text em { color: #b0842a; font-style: italic; }
+
+  .home-nav { padding: 0 0 14px; }
+  .home-nav-link { font-family: 'Gentium Book Plus', serif; font-size: 0.9rem; color: #888; text-decoration: none; border-bottom: 1px dashed #aaa; }
+  .home-nav-link:hover { color: #555; }
+  .seealso { text-align: center; font-size: 0.8rem; color: #999; margin-top: 18px; }
+  .seealso a { color: #6c4bbf; text-decoration: none; border-bottom: 1px dashed #c9b8ee; }
+  .seealso a:hover { color: #4f349c; }
+
+  @media print { .home-nav, .seealso { display: none; } }
+  @media (max-width: 768px) {
+    body { padding: 20px 16px 60px; }
+    .main { grid-template-columns: 1fr !important; }
+    .orient { flex-direction: column; } .or-prov, .or-gap { border-right: none; border-bottom: 2px solid #2c2c2c; }
+    .shared-row { grid-template-columns: 1fr 1fr !important; }
+    .bottom { grid-template-columns: 1fr !important; }
+    .contrast-pair { grid-template-columns: 1fr !important; } .contrast-vs { display: none; }
+    .title-bar h1 { font-size: 1.7rem !important; }
+  }
+  @media (max-width: 480px) {
+    .shared-row { grid-template-columns: 1fr !important; }
+    .title-bar h1 { font-size: 1.4rem !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="home-nav" style="max-width:1260px; margin:0 auto;"><a href="../../index.html" class="home-nav-link">← Back to index</a></div>
+
+<div class="panel">
+
+  <!-- TITLE -->
+  <div class="title-bar">
+    <h1>Proverbs 30 &nbsp;×&nbsp; "The Poor You Will Always Have"</h1>
+    <div class="subtitle">Ancient wisdom and a modern reflection — two honest readings of the same human condition.</div>
+  </div>
+
+  <!-- ORIENTATION -->
+  <div class="orient">
+    <div class="or-block or-prov">
+      <div class="or-label">Proverbs 30 — the words of Agur</div>
+      Wisdom literature, c. 10th–6th c. BC. An unknown (possibly non-Israelite) sage opens by confessing he cannot reach God's knowledge, then trusts God's word, prays for "just enough," and reads the created and moral order with humble, watchful eyes.
+    </div>
+    <div class="or-block or-gap">a reflection<br>across the centuries</div>
+    <div class="or-block or-refl">
+      <div class="or-label">"The Poor You Will Always Have" — a reflection on the human condition</div>
+      A contemporary meditation anchored on Matthew 26:11. It reads human lack as <em>entropy</em> — the drift of a world left untended — and argues that the opposite of poverty is not wealth but <em>intentionality</em>.
+    </div>
+  </div>
+
+  <!-- MAIN 3-COL -->
+  <div class="main">
+
+    <!-- PROVERBS 30 COLUMN -->
+    <div>
+      <div class="book-col-label label-prov">PROVERBS 30</div>
+
+      <div class="card purple">
+        <div class="card-label">The Core Claim</div>
+        <div class="card-body">Wisdom begins by admitting its limits. We cannot climb up to God's knowledge (30:2–4), so we live within our size — trusting his word, asking for enough, watching the world without pride.</div>
+      </div>
+
+      <div class="card blue">
+        <div class="card-label">How It Works</div>
+        <div class="card-body">It <em>observes</em>. The numerical "three… four" sayings train the eye to notice the never-satisfied, the small-but-wise, the self-exalting. Wisdom is attention to the real order of things.</div>
+      </div>
+
+      <div class="card red">
+        <div class="card-label">The Human Problem It Names</div>
+        <div class="card-body">Insatiable appetite and pride. The leech cries "Give! Give!" and is never full (30:15–16); "haughty eyes" and the self-exalting fool run through the chapter and are silenced at the end (30:13, 32).</div>
+      </div>
+
+      <div class="card green">
+        <div class="card-label">Its Answer</div>
+        <div class="card-body">The only prayer in Proverbs: "neither poverty nor riches, but… my daily bread" (30:8). Not more — <em>enough</em>; the intentional middle that keeps you honest and dependent.</div>
+      </div>
+
+      <div class="callout callout-purple">
+        <div class="callout-label">Key Verse</div>
+        <div class="callout-text">"Give me neither poverty nor riches, but give me only my daily bread."</div>
+        <div class="callout-ref">Proverbs 30:8 (NIV) — the hinge of the chapter</div>
+      </div>
+
+      <div class="dark">
+        <div class="card-label">Its Sharpest Image</div>
+        <div class="card-body">"Four things on earth are small, yet they are extremely wise" (30:24). The ant stores its food in summer — wisdom is <em>foresight and intention</em>, not size, strength, or wealth.</div>
+      </div>
+    </div>
+
+    <!-- CENTER BRIDGE -->
+    <div>
+      <div class="bridge-section">
+        <div class="bridge-label">Shared Diagnosis</div>
+        <div class="bridge-item"><strong>Both</strong>Read the human condition honestly — no utopia, no despair; the drift is real and must be actively resisted.</div>
+        <div class="bridge-item"><strong>Both</strong>Locate the problem not in a lack of <em>resources</em> but in a failure to act wisely within our limits.</div>
+        <div class="bridge-item"><strong>Both</strong>End in humility — a prayer, a question — not in a boast or a formula.</div>
+      </div>
+
+      <div class="bridge-section">
+        <div class="bridge-label">Key Differences</div>
+        <div class="contrast-pair">
+          <div class="contrast-a">Canonical wisdom text</div>
+          <div class="contrast-vs">vs</div>
+          <div class="contrast-b">Contemporary meditation</div>
+        </div>
+        <div class="contrast-pair">
+          <div class="contrast-a">Limits before <em>God</em> (vertical)</div>
+          <div class="contrast-vs">vs</div>
+          <div class="contrast-b">Limits before <em>time / entropy</em> (horizontal)</div>
+        </div>
+        <div class="contrast-pair">
+          <div class="contrast-a">"Ask God for enough"</div>
+          <div class="contrast-vs">vs</div>
+          <div class="contrast-b">"Pour energy in — be intentional"</div>
+        </div>
+        <div class="contrast-pair">
+          <div class="contrast-a">Lands on a <em>prayer</em></div>
+          <div class="contrast-vs">vs</div>
+          <div class="contrast-b">Lands on a <em>question</em></div>
+        </div>
+      </div>
+
+      <div class="bridge-section">
+        <div class="bridge-label">The Convergence</div>
+        <div class="bridge-item">Agur: "I cannot reach up to God"</div>
+        <div class="bridge-connect">↓</div>
+        <div class="bridge-item">Reflection: "things drift unless tended"</div>
+        <div class="bridge-connect">↓</div>
+        <div class="bridge-item" style="border-color:#2e8a4a; background:#eaf4ee; color:#2e8a4a;">Live wisely &amp; dependently within your actual limits</div>
+      </div>
+    </div>
+
+    <!-- REFLECTION COLUMN -->
+    <div>
+      <div class="book-col-label label-refl">THE REFLECTION</div>
+
+      <div class="card gold">
+        <div class="card-label">The Core Claim</div>
+        <div class="card-body">The opposite of poverty is not wealth but <em>intentionality</em>. A fallen world drifts toward lack by default; it is reversed only when we deliberately pour energy in.</div>
+      </div>
+
+      <div class="card blue">
+        <div class="card-label">How It Works</div>
+        <div class="card-body">It <em>observes</em> too — everyday life. We all know books, exercise, study, and good conversation change us… "yet something in us keeps negotiating with tomorrow."</div>
+      </div>
+
+      <div class="card red">
+        <div class="card-label">The Human Problem It Names</div>
+        <div class="card-body">Drift. "Time doesn't preserve things; it reveals what we've stopped tending to." A parked car decays with no force on it at all. "If nothing changes, nothing changes."</div>
+      </div>
+
+      <div class="card green">
+        <div class="card-label">Its Answer</div>
+        <div class="card-body">Intentional stewardship: "little resources + intention = building with little; abundance − intention = drifting in plenty." Each, in time, gets its report card.</div>
+      </div>
+
+      <div class="callout callout-gold">
+        <div class="callout-label">Key Line</div>
+        <div class="callout-text">"Maybe the opposite of poverty is not wealth — but intentionality."</div>
+        <div class="callout-ref">The reflection's central turn · anchored on Matthew 26:11</div>
+      </div>
+
+      <div class="dark">
+        <div class="card-label">Its Sharpest Image</div>
+        <div class="card-body">The parked car, untouched for two years, slowly becoming a wreck — "no force on it, yet it is changing." Decay needs no effort; only order costs intention.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SHARED THEMES ROW -->
+  <div class="shared-row">
+    <div class="shared-card">
+      <div class="shared-label">Not More — Enough / Intention</div>
+      <div class="shared-body"><strong>Prov 30:8–9:</strong> neither poverty nor riches. <span class="vs">↔</span> <strong>Reflection:</strong> poverty's opposite isn't wealth but intentionality. Both refuse the lie that <em>more</em> is the answer.</div>
+    </div>
+    <div class="shared-card">
+      <div class="shared-label">The Never-Satisfied</div>
+      <div class="shared-body"><strong>Prov 30:15–16:</strong> the leech's "Give! Give!" — things never satisfied. <span class="vs">↔</span> <strong>Reflection:</strong> "something in us keeps negotiating with tomorrow." Appetite that never says "enough."</div>
+    </div>
+    <div class="shared-card">
+      <div class="shared-label">Foresight vs. Drift</div>
+      <div class="shared-body"><strong>Prov 30:24–25:</strong> the ant stores food in summer. <span class="vs">↔</span> <strong>Reflection:</strong> "if nothing changes, nothing changes." Both make foresight — acting early — the mark of wisdom.</div>
+    </div>
+    <div class="shared-card">
+      <div class="shared-label">The Humble Speaker</div>
+      <div class="shared-body"><strong>Prov 30:2:</strong> "I am too stupid to be a man." <span class="vs">↔</span> <strong>Reflection:</strong> "This isn't me talking at anybody. I'm in this conversation too." Neither preaches from above.</div>
+    </div>
+  </div>
+
+  <!-- THROUGH-LINE -->
+  <div class="throughline">
+    <div class="tl-label">The Through-Line</div>
+    <div class="tl-text">Both say the human problem is not that we lack enough, but that we <strong>drift unless we live on purpose</strong> — and the cure is not <em>more</em> but <strong>attention within our limits</strong>: Agur prays for it before God; the reflection urges it against the clock.</div>
+  </div>
+
+  <!-- BOTTOM VERDICTS -->
+  <div class="bottom">
+    <div class="verdict vd-prov">
+      <div class="verdict-label">Proverbs 30 — Its Last Word to Us</div>
+      <div class="verdict-text">"Give me neither poverty nor riches, but give me only my daily bread."</div>
+      <div class="verdict-ref">Proverbs 30:8 — enough, asked of God</div>
+    </div>
+    <div class="verdict vd-refl">
+      <div class="verdict-label">The Reflection — Its Last Word to Us</div>
+      <div class="verdict-text">"If we refuse the inconvenience of doing it — what exactly are we expecting?"</div>
+      <div class="verdict-ref">The closing question — enough, asked of ourselves</div>
+    </div>
+  </div>
+
+  <div class="seealso">
+    See also: <a href="../passages/proverbs-30-deep-study.html">Proverbs 30 · deep study</a> &nbsp;·&nbsp;
+    <a href="poor-among-you-infographics.html">"The Poor You Will Always Have" · infographics</a> &nbsp;·&nbsp;
+    <a href="../sermons/entropy-poor-among-you-outline.html">Fighting Entropy · sermon outline</a>
+  </div>
+
+</div>
+
+</body>
+</html>
