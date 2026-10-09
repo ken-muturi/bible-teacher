@@ -144,6 +144,24 @@ That's it — new skills are now available. The top of the pasted text shows a *
 
 ---
 
+## Contributing your guides back to the library
+
+Made something good and want it in the shared library? You can add it **from your
+phone — no git, no coding.** The short version:
+
+1. Ask the maintainer to add you as a **collaborator** (repo **Settings →
+   Collaborators**), using **your own** GitHub account — never a shared password or token.
+2. Copy your guide's HTML out of Claude.
+3. On **github.com**, open the repo → the right folder (`guides/sermons/`,
+   `guides/passages/`, `guides/visuals/`, `guides/discussions/`) → **Add file →
+   Create new file** → name it `something-descriptive.html` → paste → **Commit**.
+
+Full step-by-step (phone-friendly) is in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+New files render on their own immediately; the maintainer adds the gallery card on
+`index.html` and runs the build.
+
+---
+
 ## Skills
 
 | Skill | Trigger | What It Does |
