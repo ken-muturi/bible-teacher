@@ -54,10 +54,15 @@ at its GitHub Pages URL and as a file.
 
 ## A couple of things to know
 
+- **You'll be credited automatically.** You don't need to add your name anywhere. When
+  Ken runs the build, a small *"Contributed by &lt;your name&gt; · &lt;date&gt;"* line is
+  added to the foot of your guide, taken from your GitHub commit. (And GitHub always
+  records you as the author in the file's history and blame, regardless.) So commit from
+  **your own** account — that's how you get the credit.
 - **The index/gallery card is Ken's step.** New files don't automatically appear on
   the home page (`index.html`) — Ken adds the little gallery card and runs the build
-  so it also picks up the shared stylesheet. Your file still works and renders on its
-  own in the meantime; just tell Ken it's there.
+  so it also picks up the shared stylesheet and your byline. Your file still works and
+  renders on its own in the meantime; just tell Ken it's there.
 - **Naming:** lowercase, words-separated-by-hyphens, end in `.html`. Match the style
   of the files already in the folder.
 - **One guide per file.** Keep each teaching, outline, or deck in its own file.
