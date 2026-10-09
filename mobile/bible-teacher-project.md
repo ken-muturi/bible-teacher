@@ -16,6 +16,7 @@ Each skill has a **trigger** (a short command I type) and instructions for what 
    - `discussion-guide <book | passage | topic>` — a small-group discussion / meeting guide
    - `bible-timeline <person | family | period | full>` — a family tree + timeline
    - `message-infographic` (then paste a sermon/video transcript) — 16:9 infographic slides; add `--dark` for a dark on-screen look
+   - `submit this` / `commit this` — publish the guide you just made to the shared library (see the SUBMIT skill below)
    If I just ask a normal question, answer normally — you don't need a trigger.
 
 2. **Always apply my Teacher Foundation profile first** (the first skill below): my Bible
@@ -32,12 +33,11 @@ Each skill has a **trigger** (a short command I type) and instructions for what 
 
 4. If a skill needs something from me (a passage, a book name, my profile details), just ask.
 
-5. **Sharing a guide back to the library (optional).** Each guide you make is one
-   self-contained HTML file, so it can be added to the shared project on GitHub with
-   no coding: a collaborator copies the HTML and, on github.com, opens the repo → a
-   `guides/...` folder → **Add file → Create new file** → pastes → **Commit**. Full
-   phone steps are in the project's `CONTRIBUTING.md`. (Ask the maintainer to add you
-   as a collaborator first, using your own GitHub account — never a shared password.)
+5. **Sharing a guide back to the library (optional).** When I like a guide and say
+   **"submit this"** or **"commit this"**, follow the SUBMIT skill below: show the guide
+   in one copyable ```html block and give me a tappable GitHub link so I can post it in
+   two taps. (I must be a collaborator on the repo first — the maintainer adds me once,
+   using my own GitHub account; never a shared password.)
 
 ---
 
@@ -1001,3 +1001,69 @@ Reference output: `guides/visuals/poor-among-you-infographics.html` (in the repo
 - Guessed reconstructions of garbled transcript sections
 - Statistics, scholar quotes or cross-references the speaker didn't give
 - Images of real people, logos or copyrighted artwork
+
+
+<!-- ===================== SKILL: SUBMIT / COMMIT A GUIDE (publish to the library) ===================== -->
+
+---
+name: submit-guide
+description: Publish the guide just made to the shared library. Use when the user says "submit this", "commit this", "publish this", or "add this to the library" after a guide has been generated.
+argument-hint: "(say it right after a guide is made)"
+---
+
+# Submit / Commit a Guide
+
+When the user says **"submit this"** or **"commit this"** (or publish / add to the
+library), take the guide you just made and get it into the repo
+**github.com/ken-muturi/bible-teacher** — the simplest way that actually works here.
+Never make the user learn git or type commands.
+
+---
+
+## Step 1 — identify the file
+
+- Use the **most recent guide** you produced in this chat. If it's unclear which one,
+  ask "which guide?" in one line.
+- **Folder by type:**
+  - sermon outline → `guides/sermons/`
+  - passage study or simple one-page teaching → `guides/passages/`
+  - book panel, infographic deck, or comparison → `guides/visuals/`
+  - discussion guide → `guides/discussions/`
+- **Filename:** short, lowercase, hyphenated, ending in `.html`
+  (e.g. `communion-with-the-spirit-outline.html`).
+
+## Step 2 — submit, using the first method that works here
+
+**A — You can run commands and git (e.g. Claude Code inside the repo).**
+Save the file to the folder, run `python3 scripts/build_guides.py` (this injects the
+shared stylesheet and stamps the contributor byline), then commit on a **new branch**
+and open a pull request to `main` (default), or push directly if the user asks.
+Report the file path and the commit/PR link.
+
+**B — A GitHub tool/connector is available (can create files / commit).**
+Create the file at the chosen path on a new branch through it and open a pull request
+to `main`. Report the PR link.
+
+**C — No file or GitHub access (phone or web Project chat).**
+You can't push from here, so hand it off in the fewest taps:
+1. Show the complete guide in **one** ` ```html ` code block (so the copy button grabs
+   all of it).
+2. Give a tappable link that opens GitHub's "create new file" page with the path
+   already filled in:
+   `https://github.com/ken-muturi/bible-teacher/new/main?filename=<folder>/<slug>.html`
+3. Say exactly this, short: **"Tap *Copy* above, open that link (sign in if asked),
+   *paste* into the box, and tap *Commit changes*. Done."**
+
+The person must be a **collaborator** on the repo (the maintainer adds them once). If
+branch protection is on, step C's commit screen will offer "create a new branch and
+start a pull request" — tell them to use that and tap the green button.
+
+---
+
+## Rules
+
+- Keep it to the fewest steps; don't explain git.
+- One guide per file; keep the HTML fully self-contained (inline CSS).
+- Never put passwords, keys, or personal data into a guide.
+- You'll be credited automatically (the build stamps a "Contributed by …" byline from
+  your GitHub commit) — so submit from **your own** account.

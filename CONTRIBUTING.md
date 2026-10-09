@@ -3,6 +3,15 @@
 Made a guide with the Bible Teacher skills that you'd like to add to the shared
 library? This page shows how — **from your phone, no coding and no git**.
 
+## The easy way: just say "submit this"
+
+Right after Claude makes a guide, type **"submit this"** (or **"commit this"**).
+Claude will show the guide in a copy block and give you a **tappable GitHub link** with
+everything pre-filled. Then it's two taps: **Copy** → open the link → **paste** → **Commit
+changes**. That's it. (The detailed steps below are the same thing, spelled out.)
+
+---
+
 > **You need to be a collaborator first.** Ask Ken to add you (he does this in the
 > repo's **Settings → Collaborators**). You'll get an email/notification invite —
 > accept it. Use **your own** GitHub account; never ask for or share anyone else's

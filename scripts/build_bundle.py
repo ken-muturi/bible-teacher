@@ -26,6 +26,7 @@ CORE = [
     ("discussion-guide",          "DISCUSSION GUIDE"),
     ("bible-timeline",            "BIBLE TIMELINE & FAMILY TREE"),
     ("message-infographic",       "MESSAGE INFOGRAPHIC (transcript → slides)"),
+    ("submit-guide",              "SUBMIT / COMMIT A GUIDE (publish to the library)"),
 ]
 
 PREAMBLE = """# Bible Teacher — Skills Bundle (Phone / Web / Desktop app)
@@ -46,6 +47,7 @@ Each skill has a **trigger** (a short command I type) and instructions for what 
    - `discussion-guide <book | passage | topic>` — a small-group discussion / meeting guide
    - `bible-timeline <person | family | period | full>` — a family tree + timeline
    - `message-infographic` (then paste a sermon/video transcript) — 16:9 infographic slides; add `--dark` for a dark on-screen look
+   - `submit this` / `commit this` — publish the guide you just made to the shared library (see the SUBMIT skill below)
    If I just ask a normal question, answer normally — you don't need a trigger.
 
 2. **Always apply my Teacher Foundation profile first** (the first skill below): my Bible
@@ -62,12 +64,11 @@ Each skill has a **trigger** (a short command I type) and instructions for what 
 
 4. If a skill needs something from me (a passage, a book name, my profile details), just ask.
 
-5. **Sharing a guide back to the library (optional).** Each guide you make is one
-   self-contained HTML file, so it can be added to the shared project on GitHub with
-   no coding: a collaborator copies the HTML and, on github.com, opens the repo → a
-   `guides/...` folder → **Add file → Create new file** → pastes → **Commit**. Full
-   phone steps are in the project's `CONTRIBUTING.md`. (Ask the maintainer to add you
-   as a collaborator first, using your own GitHub account — never a shared password.)
+5. **Sharing a guide back to the library (optional).** When I like a guide and say
+   **"submit this"** or **"commit this"**, follow the SUBMIT skill below: show the guide
+   in one copyable ```html block and give me a tappable GitHub link so I can post it in
+   two taps. (I must be a collaborator on the repo first — the maintainer adds me once,
+   using my own GitHub account; never a shared password.)
 
 ---
 """
