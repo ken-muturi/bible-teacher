@@ -14,3 +14,4 @@ models/
 scripts/*
 !scripts/build_guides.py
 !scripts/build_bundle.py
+!scripts/build_index.py

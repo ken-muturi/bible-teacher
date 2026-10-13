@@ -1,0 +1,45 @@
+name: Add new guides to the home page
+
+# When a collaborator's pull request adds or changes a guide, automatically
+# stamp the contributor byline and add a gallery card to index.html, committing
+# the result back into the same PR. You then review the guide + its card together
+# and merge once — nothing reaches the live site without your approval.
+#
+# Only runs for branches in this repo (a fork PR gets a read-only token and
+# can't be pushed to — for those, run `python3 scripts/build_index.py` locally).
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "guides/**/*.html"
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0          # full history so bylines can read the git author
+
+      - name: Stamp bylines and add home-page cards
+        run: |
+          python3 scripts/build_guides.py
+          python3 scripts/build_index.py
+
+      - name: Commit back to the pull request
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to add — already on the home page."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto: add home-page card(s) + contributor byline [skip ci]"
+          git push
