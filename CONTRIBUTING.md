@@ -68,10 +68,10 @@ at its GitHub Pages URL and as a file.
   added to the foot of your guide, taken from your GitHub commit. (And GitHub always
   records you as the author in the file's history and blame, regardless.) So commit from
   **your own** account — that's how you get the credit.
-- **The index/gallery card is Ken's step.** New files don't automatically appear on
-  the home page (`index.html`) — Ken adds the little gallery card and runs the build
-  so it also picks up the shared stylesheet and your byline. Your file still works and
-  renders on its own in the meantime; just tell Ken it's there.
+- **The home-page card is automatic.** When your pull request is opened, a helper adds a
+  gallery card for your guide to the home page (`index.html`) and stamps your byline, right
+  inside the same PR — so once Ken reviews and merges, your guide shows up on the site with
+  no extra steps. (Ken can still polish the card's wording later.)
 - **Naming:** lowercase, words-separated-by-hyphens, end in `.html`. Match the style
   of the files already in the folder.
 - **One guide per file.** Keep each teaching, outline, or deck in its own file.
