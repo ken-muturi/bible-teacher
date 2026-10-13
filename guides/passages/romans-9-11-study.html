@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Romans 9–11 — Deep Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #f5f0e8; --card: #faf7f2; --ink: #2c2c2c; --muted: #5a5750;
+  --blue: #3b6fd4; --green: #2e8a4a; --red: #c0392b; --orange: #d47c1a; --purple: #6c4bbf;
+  --darkbox: #1a1a1a; --darktext: #f5f0e8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1b19; --card: #252421; --ink: #ece7dd; --muted: #b3ada1;
+    --blue: #6f97ec; --green: #5cbb78; --red: #e2685a; --orange: #eba04a; --purple: #9d84e6;
+    --darkbox: #0f0f0e; --darktext: #f5f0e8;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1b19; --card: #252421; --ink: #ece7dd; --muted: #b3ada1;
+  --blue: #6f97ec; --green: #5cbb78; --red: #e2685a; --orange: #eba04a; --purple: #9d84e6;
+  --darkbox: #0f0f0e; --darktext: #f5f0e8;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: 'Gentium Book Plus', Georgia, 'Times New Roman', serif;
+  font-size: 18px; line-height: 1.55;
+}
+.page { max-width: 880px; margin: 0 auto; padding: 20px 16px 48px; }
+h1, h2, h3 { margin: 0; font-weight: 700; }
+.lbl { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+section { margin-top: 28px; }
+.sec-title { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; margin: 0 0 10px; color: var(--muted); }
+p { margin: 0 0 10px; }
+.box { border: 2.5px solid var(--ink); border-radius: 3px; padding: 14px 16px; background: var(--card); }
+.blue   { border-color: var(--blue);   background: rgba(59,111,212,.09); }
+.green  { border-color: var(--green);  background: rgba(46,138,74,.09); }
+.red    { border-color: var(--red);    background: rgba(192,57,43,.09); }
+.orange { border-color: var(--orange); background: rgba(212,124,26,.10); }
+.purple { border-color: var(--purple); background: rgba(108,75,191,.10); }
+.blue .lbl { color: var(--blue); } .green .lbl { color: var(--green); }
+.red .lbl { color: var(--red); } .orange .lbl { color: var(--orange); } .purple .lbl { color: var(--purple); }
+.title-bar { border: 3px solid var(--ink); border-radius: 3px; padding: 18px; background: var(--card); text-align: center; }
+.title-bar h1 { font-size: 30px; letter-spacing: .16em; text-transform: uppercase; }
+.title-bar .sub { font-style: italic; color: var(--muted); margin-top: 4px; }
+.title-bar .one { margin-top: 10px; font-size: 19px; }
+.callout { border-left: 5px solid var(--blue); background: rgba(59,111,212,.08); padding: 12px 16px; border-radius: 0 3px 3px 0; }
+.callout + .callout { margin-top: 10px; }
+.callout .ref { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--blue); }
+.callout q { font-style: italic; font-size: 20px; quotes: none; display: block; margin: 6px 0; }
+.small { font-size: 15px; color: var(--muted); }
+.grid { display: grid; gap: 12px; }
+.g2 { grid-template-columns: 1fr 1fr; }
+.g3 { grid-template-columns: 1fr 1fr 1fr; }
+.span { grid-column: 1 / -1; }
+.chap { font-size: 14px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2.5px solid var(--ink); }
+.beat { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: start; }
+.beat + .beat { margin-top: 10px; }
+.beat .vs { font-weight: 700; font-size: 15px; letter-spacing: .06em; padding-top: 14px; }
+.word h3 { font-size: 20px; }
+.word .orig { font-style: italic; color: var(--muted); margin-bottom: 6px; }
+.tag { display: inline-block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; border: 2px solid currentColor; border-radius: 3px; padding: 1px 6px; margin-bottom: 6px; }
+.v { font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: .04em; }
+.darkbox { background: var(--darkbox); color: var(--darktext); border: 2.5px solid var(--darkbox); border-radius: 3px; padding: 16px 18px; }
+.darkbox h3 { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; color: #e8c07a; }
+.darkbox .v { color: #f08a7e; }
+.darkbox .pp + .pp { margin-top: 14px; padding-top: 14px; border-top: 1px solid #444; }
+.src { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.src a { color: inherit; word-break: break-all; }
+.verdict { border: 3px solid var(--ink); background: var(--darkbox); color: var(--darktext); border-radius: 3px; padding: 22px 18px; text-align: center; }
+.verdict .big { font-size: 24px; font-style: italic; }
+.verdict .ref { margin-top: 8px; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
+.xref b { font-size: 16px; }
+@media (max-width: 720px) {
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .beat { grid-template-columns: 1fr; gap: 0; }
+  .beat .vs { padding-top: 0; margin-bottom: 4px; }
+  .title-bar h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="title-bar">
+  <div class="lbl" style="color:var(--muted)">Passage Study · Deep</div>
+  <h1>Romans 9–11</h1>
+  <div class="sub">Romans · One argument in three chapters, framed by grief (9:1–5) and praise (11:33–36)</div>
+  <div class="one">If most of Israel said no to the Messiah, has God's word failed? Paul says no. God's mercy has always been the ground, the door is open to everyone who calls, and God isn't finished with Israel.</div>
+</div>
+
+<section>
+  <div class="callout">
+    <div class="ref">Chapter 9 · Romans 9:16 (KJV)</div>
+    <q>So then it is not of him that willeth, nor of him that runneth, but of God that sheweth mercy.</q>
+  </div>
+  <div class="callout">
+    <div class="ref">Chapter 10 · Romans 10:13 (KJV)</div>
+    <q>For whosoever shall call upon the name of the Lord shall be saved.</q>
+  </div>
+  <div class="callout">
+    <div class="ref">Chapter 11 · Romans 11:32 (KJV)</div>
+    <q>For God hath concluded them all in unbelief, that he might have mercy upon all.</q>
+  </div>
+  <p class="small" style="margin-top:10px">Quoted from the KJV (public domain). Your NIV and NKJV are copyrighted, so the full chapter text isn't reproduced here. Read the three chapters in your own Bible alongside this panel.</p>
+</section>
+
+<section>
+  <h2 class="sec-title">Where this sits</h2>
+  <div class="box">
+    <p>Romans 8 ends at a peak: nothing can separate believers from God's love (8:38–39). Chapter 9 opens with grief. That's the tension. If God's promises to Israel can fail, why trust the promise of chapter 8? Chapters 9–11 are Paul's answer, and they're one argument, not three topics.</p>
+    <p>Chapter 9 says God's word hasn't failed, because it was never built on ancestry or effort. Chapter 10 says the gospel door is open to everyone, and Israel's problem is that many haven't walked through it. Chapter 11 says God hasn't rejected his people and will show mercy to them again. Then Paul stops arguing and worships.</p>
+    <p class="small" style="margin:0">Interpretive choice: I teach 9–11 as a unit, because 9 read alone pulls toward questions that 10 and 11 answer, and 11 read alone loses the foundation 9 lays.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec-title">Structure map — an argument in three movements</h2>
+
+  <div class="grid g3">
+    <div class="box blue"><div class="lbl">Ch. 9 · God's mercy</div><p style="margin:0">Why God's word hasn't failed. Mercy has always chosen. Not all Israel is Israel.</p></div>
+    <div class="box orange"><div class="lbl">Ch. 10 · The open door</div><p style="margin:0">Why many in Israel are outside. They pursued righteousness by works. The word is near, and it's for all.</p></div>
+    <div class="box green"><div class="lbl">Ch. 11 · God's faithfulness</div><p style="margin:0">Why Israel isn't finished. A remnant now, the olive tree, a mystery, and mercy on all.</p></div>
+  </div>
+
+  <div class="chap" style="color:var(--blue)">Chapter 9</div>
+  <div class="beat"><div class="vs" style="color:var(--blue)">9:1–5</div>
+    <div class="box blue"><div class="lbl">Grief and privilege</div>
+    <p style="margin:0">Paul's anguish over his own people. He lists their gifts: adoption, glory, covenants, the law, the worship, the promises, the patriarchs, and the Messiah. Verse 5 ends in a doxology to Christ.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--blue)">9:6–13</div>
+    <div class="box blue"><div class="lbl">Thesis: not all Israel is Israel</div>
+    <p style="margin:0">God's word hasn't failed. The promise ran through a chosen line: Isaac, not Ishmael; Jacob, not Esau. Both choices came before the children did anything (v. 11).</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--red)">9:14–18</div>
+    <div class="box red"><div class="lbl">Objection one: is God unjust?</div>
+    <p style="margin:0">Paul says no and goes to Exodus. God tells Moses he shows mercy as he chooses. God tells Pharaoh he raised him up to display his power.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--red)">9:19–24</div>
+    <div class="box red"><div class="lbl">Objection two: how can he still blame us?</div>
+    <p style="margin:0">The potter and the clay. Paul doesn't give a tidy mechanism. He asks who we are to cross-examine God, then adds a careful "what if" about patience, wrath, and mercy, now reaching Jews and Gentiles.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--green)">9:25–29</div>
+    <div class="box green"><div class="lbl">Scripture already said this</div>
+    <p style="margin:0">Hosea: "not my people" become God's people. Isaiah: only a remnant of Israel survives.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--orange)">9:30–33</div>
+    <div class="box orange"><div class="lbl">The stumbling stone</div>
+    <p style="margin:0">Gentiles who weren't chasing righteousness received it by faith. Israel chased it by works and tripped over the stone God laid in Zion. Paul now puts responsibility on Israel's pursuit. Hold that next to 9:14–24.</p></div></div>
+
+  <div class="chap" style="color:var(--orange)">Chapter 10</div>
+  <div class="beat"><div class="vs" style="color:var(--orange)">10:1–4</div>
+    <div class="box orange"><div class="lbl">Zeal without knowledge</div>
+    <p style="margin:0">Paul prays for Israel again. They have zeal for God but are seeking to establish their own righteousness. Verse 4 says Christ is the <i>telos</i> of the law (see word studies).</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--blue)">10:5–13</div>
+    <div class="box blue"><div class="lbl">Two kinds of righteousness, one open door</div>
+    <p style="margin:0">Paul sets Moses on doing the law (Leviticus 18:5) against the righteousness of faith, which he draws from Deuteronomy 30: the word is near, in your mouth and heart. Believe in the heart, confess Jesus as Lord. No distinction between Jew and Greek. Everyone who calls is saved (Joel 2:32).</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--green)">10:14–15</div>
+    <div class="box green"><div class="lbl">The chain</div>
+    <p style="margin:0">Call, believe, hear, preach, be sent. Each step depends on the one before. Paul backs it with Isaiah 52:7, the beautiful feet of those who bring good news.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--red)">10:16–21</div>
+    <div class="box red"><div class="lbl">They heard, and not all obeyed</div>
+    <p style="margin:0">Israel can't say it didn't hear. The word has gone out (Psalm 19:4). Moses and Isaiah had already predicted Gentile inclusion and Israel's resistance. The chapter ends with God holding out his hands all day long to a disobedient people (Isaiah 65:2).</p></div></div>
+
+  <div class="chap" style="color:var(--green)">Chapter 11</div>
+  <div class="beat"><div class="vs" style="color:var(--green)">11:1–10</div>
+    <div class="box green"><div class="lbl">Has God rejected his people? No.</div>
+    <p style="margin:0">Paul himself is an Israelite and a believer. Elijah thought he was alone, and God said he'd kept seven thousand (1 Kings 19). So now: a remnant chosen by grace. The rest were hardened.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--blue)">11:11–24</div>
+    <div class="box blue"><div class="lbl">Did they stumble beyond recovery? No.</div>
+    <p style="margin:0">Their stumbling opened salvation to the Gentiles, and the Gentiles' blessing is meant to make Israel jealous. Then the olive tree: some branches broken off, wild shoots grafted in. Paul warns Gentile believers not to boast. They stand by faith and could be cut off. Broken branches can be grafted back in if they don't persist in unbelief.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--purple)">11:25–32</div>
+    <div class="box purple"><div class="lbl">The mystery</div>
+    <p style="margin:0">Hardening in part has come on Israel until the fullness of the Gentiles comes in, "and so all Israel will be saved." The gifts and calling of God are irrevocable. God has bound everyone in disobedience so he can show mercy to all.</p></div></div>
+  <div class="beat"><div class="vs" style="color:var(--ink)">11:33–36</div>
+    <div class="box"><div class="lbl" style="color:var(--ink)">Doxology</div>
+    <p style="margin:0">Paul stops arguing and worships. The depth of God's riches, wisdom, and knowledge. Who has known his mind? From him and through him and to him are all things.</p></div></div>
+</section>
+
+<section>
+  <h2 class="sec-title">Historical and cultural context</h2>
+  <div class="box orange">
+    <div class="lbl">Rome, around AD 57</div>
+    <p>Paul likely wrote Romans from Corinth near the end of his third missionary journey. <span class="v">[VERIFY: standard dating and place, check a Romans introduction]</span> The Roman church was mixed. Acts 18:2 mentions Claudius expelling Jews from Rome, which most scholars connect to around AD 49. Jewish believers returned later to a church that had become largely Gentile. <span class="v">[VERIFY: date of the edict and its link to the Roman church]</span> So "has God dropped Israel?" wasn't abstract. It affected how two groups of Christians treated each other. It also explains the warning in 11:18–20: Gentile believers in Rome were in a position to feel superior.</p>
+    <p><b>Paul's wish in 9:3.</b> He'd accept being cut off from Christ for his people's sake. That echoes Moses, who asked to be blotted out of God's book if God wouldn't forgive Israel (Exodus 32:32). He's speaking as an intercessor, not a theorist.</p>
+    <p><b>"Jacob I loved, Esau I hated" (9:13).</b> This quotes Malachi 1:2–3, which is about the nations Israel and Edom, centuries after the twins. "Hated" is Hebrew comparative language: choose one over another. Compare Genesis 29:30–31 and Luke 14:26. <span class="v">[VERIFY: check a Hebrew lexicon or commentary on the idiom]</span></p>
+    <p><b>The potter (9:20–21).</b> Clay and potter imagery is Israel's own Scripture: Isaiah 29:16, 45:9, and Jeremiah 18. In Jeremiah 18 the potter reworks the clay, and God says he will relent if the nation turns.</p>
+    <p><b>The olive tree (11:17–24).</b> Olive trees were everywhere in the Mediterranean, so Paul's readers knew them. Normally a cultivated shoot is grafted into a wild root. Paul reverses it: wild branches grafted into a cultivated tree, which he calls "contrary to nature" (11:24). Commentators connect this to ancient agricultural writers. <span class="v">[VERIFY: check how a commentary treats the grafting practice and any ancient sources, such as Columella]</span></p>
+    <p style="margin:0"><b>The Old Testament throughout.</b> These three chapters lean heavily on Moses, the Prophets, and the Psalms. Paul argues from Israel's own Scriptures, not against them.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec-title">Word studies</h2>
+  <div class="grid g2">
+    <div class="box blue word"><div class="lbl">9:4</div><h3>Adoption</h3><div class="orig">huiothesia (υἱοθεσία)</div>
+      <p style="margin:0"><b>Translations:</b> adoption (most), "sonship" (some). <b>What's lost:</b> Paul uses the same word for Christians in 8:15. Israel's sonship in Exodus 4:22 is the pattern. The church isn't replacing Israel's privileges here. It's sharing the family language.</p></div>
+    <div class="box blue word"><div class="lbl">9:11; 11:5, 7, 28</div><h3>Election / choice</h3><div class="orig">eklogē (ἐκλογή)</div>
+      <p style="margin:0"><b>Translations:</b> election, choice, "chosen". <b>What's lost:</b> English "election" can sound like a vote. Paul uses the word for God's settled purpose (9:11), for the remnant (11:5, 7), and for Israel as a people, beloved "as regards election" (11:28). The same word covers more than one thing. Tracking which one is in view is the whole debate.</p></div>
+    <div class="box red word"><div class="lbl">9:18; 11:7, 25</div><h3>Hardens / hardening</h3><div class="orig">sklērynō (σκληρύνω) · pōrōsis (πώρωσις)</div>
+      <p style="margin:0"><b>Translations:</b> hardened, blinded, "hardening in part" (the NIV and NKJV differ in places). <b>What's lost:</b> in 11:25 the Greek <i>apo merous</i> can mean "in part" (some Israelites) or "for a time." Paul probably intends the hardening as partial and temporary. Also: Exodus has Pharaoh hardening his own heart (8:15, 32) and the LORD hardening it (9:12). Both are in the story. <span class="v">[VERIFY: NIV and NKJV renderings at 11:7 and 11:25; Exodus verbs]</span></p></div>
+    <div class="box red word"><div class="lbl">9:22–23</div><h3>Prepared for destruction / beforehand</h3><div class="orig">katērtismena (κατηρτισμένα) vs. proētoimasen (προητοίμασεν)</div>
+      <p style="margin:0"><b>What's lost:</b> in verse 22 the vessels "are prepared": a perfect participle that doesn't name who prepared them, and can read as passive or middle. In verse 23 God is plainly the subject. Paul changes the verb and the grammar. Many commentators think this is deliberate, though they disagree about what it proves. <span class="v">[VERIFY: check the grammatical discussion in a Greek-based commentary]</span></p></div>
+    <div class="box orange word"><div class="lbl">10:4</div><h3>End of the law</h3><div class="orig">telos (τέλος)</div>
+      <p style="margin:0"><b>Translations:</b> "end" (NKJV), "culmination" (NIV). <b>What's lost:</b> <i>telos</i> can mean termination, goal, or fulfillment, and English picks one. Whether Paul says Christ ends the law, completes it, or is its goal is debated, and the context (a contrast between two ways of seeking righteousness) supports more than one. <span class="v">[VERIFY: NIV and NKJV wording at 10:4]</span></p></div>
+    <div class="box green word"><div class="lbl">11:12, 25</div><h3>Fullness</h3><div class="orig">plērōma (πλήρωμα)</div>
+      <p style="margin:0"><b>Translations:</b> fullness, "full inclusion", "full number". <b>What's lost:</b> the word can mean a full number or a full measure, and Paul uses it for both Israel (v. 12) and the Gentiles (v. 25). Whether he has a fixed number in mind or just completeness is debated. <span class="v">[VERIFY: renderings in your two translations]</span></p></div>
+    <div class="box purple word span"><div class="lbl">11:26</div><h3>"And so all Israel will be saved"</h3><div class="orig">kai houtōs pas Israēl sōthēsetai (καὶ οὕτως πᾶς Ἰσραὴλ σωθήσεται)</div>
+      <p style="margin:0"><b>What's lost:</b> two words carry the weight. <i>Houtōs</i> ("so") usually means "in this way" (manner), though some read it as "and then" (time). And "all Israel" in Jewish usage generally means Israel as a whole, not every single person. <span class="v">[VERIFY: the usage of "all Israel" in Jewish sources, such as Mishnah Sanhedrin 10:1, and how commentaries read <i>houtōs</i>]</span> Who "all Israel" is, and when, is the biggest open question in chapter 11. See pressure points.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec-title">Teaching illustrations</h2>
+  <div class="grid g2">
+    <div class="box"><div class="lbl" style="color:var(--blue)">Chapter 9 · everyday</div>
+      <p style="margin:0">A swimmer in trouble doesn't contribute to the rescue. The lifeguard decides to go in, and the swimmer's job is to be rescued. That's verse 16: mercy isn't earned by running harder. The picture has limits: it doesn't explain why some aren't rescued, and Paul doesn't try to.</p></div>
+    <div class="box"><div class="lbl" style="color:var(--blue)">Chapter 9 · everyday</div>
+      <p style="margin:0">Visit a pottery studio. The clay gets wedged, thrown, sometimes collapsed and thrown again. That's Jeremiah 18, the picture behind Paul's potter. Ask: does the clay's response change the pot? Jeremiah says it does. Paul's point in 9:21 is the potter's right, and he doesn't retract Jeremiah.</p></div>
+    <div class="box"><div class="lbl" style="color:var(--orange)">Chapter 10 · everyday</div>
+      <p style="margin:0">Picture someone lost in a foreign airport who needs directions. Someone has to know the way, someone has to be sent to the desk, someone has to speak a language they understand. Paul's chain in 10:14–15 works the same way: call, believe, hear, preach, send. Every link is a person doing something ordinary. The point is that the door is real, and it takes people to open it.</p></div>
+    <div class="box"><div class="lbl" style="color:var(--green)">Chapter 11 · everyday</div>
+      <p style="margin:0">A gardener who grafts a wild shoot onto an orchard tree isn't improving the shoot. The shoot lives only because of the root. Paul's point to Gentile believers (11:18) is that the root carries you, you don't carry the root. It works against pride in either direction: no boasting over the cut-off branches, and no despair about them either.</p></div>
+    <div class="box span"><div class="lbl" style="color:var(--purple)">Chapter 11 · Scripture itself</div>
+      <p style="margin:0">Job asks why, and God answers from the whirlwind with questions, not explanations (Job 38). Paul's doxology (11:33–36) lands in a similar place. After three chapters of argument, he doesn't resolve every question. He worships. Neither passage says the question was wrong. Both say the full answer isn't ours to demand.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec-title">Interpretive pressure points</h2>
+  <div class="darkbox">
+    <div class="pp"><h3>Debate 1 (ch. 9): individual or corporate election?</h3>
+      <p style="margin:0">Is Paul talking about individuals or peoples? Is God's choice unconditional or based on something? Three broad readings. (1) <b>Individual and unconditional:</b> God chooses particular people for salvation and passes over others (Augustinian and Reformed readings, Schreiner, Piper). (2) <b>Corporate and covenantal:</b> Paul describes God's choice of Israel and then of a people in the Messiah, and individuals enter that people by faith (Wright, Witherington, and many Wesleyan and Arminian readers). (3) <b>Mixed positions:</b> Moo, for instance, sees individual election within a salvation-history frame. <span class="v">[VERIFY: each scholar's position against their commentary]</span></p></div>
+    <div class="pp"><h3>Debate 2 (ch. 11): who is "all Israel" (11:26)?</h3>
+      <p style="margin:0">(1) <b>Ethnic Israel, in the future:</b> a large-scale turning of the Jewish people to Christ before or at the end, held by many commentators, including Moo and Cranfield, and I believe Schreiner. (2) <b>The whole people of God:</b> Jews and Gentiles together, Israel redefined in Christ. Calvin took this line, and Wright argues for a version of it. (3) <b>The elect remnant of Israel across history:</b> the "all" is the full number of the chosen Jews through the ages. Each reads the same Greek, and each can point to the surrounding verses. <span class="v">[VERIFY: where each scholar lands on 11:26; Calvin's comment on Romans 11:26]</span></p></div>
+    <div class="pp"><h3>The most common misreadings</h3>
+      <p style="margin:0">(a) Pulling 9:6–24 out of the argument and treating it as a full doctrine of who goes to heaven. Chapter 10 says everyone who calls is saved, and 9:30–33 puts responsibility on Israel. (b) "God made Pharaoh evil." Exodus shows Pharaoh hardening himself too. (c) Using chapter 11 to say the church has replaced Israel. Paul says the Gentile branches are grafted into Israel's tree and are warned not to boast over the rest. (d) The opposite error: saying Israel is saved apart from Christ. In 11:23 the broken branches are grafted back in "if they do not persist in unbelief."</p></div>
+    <div class="pp"><h3>The open question</h3>
+      <p style="margin:0">How does 9:22 ("prepared for destruction") sit with 11:32 (mercy on all)? Does Paul mean mercy for every individual, or mercy that reaches both Jews and Gentiles as peoples? He ends in a doxology, not a diagram. I'd keep it open with your group rather than force a close. A related puzzle: the warning to Gentile believers in 11:22 ("continue in his kindness, otherwise you also will be cut off") is read very differently in Calvinist and
