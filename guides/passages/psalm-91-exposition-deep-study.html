@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psalm 91 — Full Exposition (Deep Study)</title>
+  <style>
+/* @base:start */
+/* ============================================================
+   Bible Teacher — shared base stylesheet (single source of truth)
+   ------------------------------------------------------------
+   This block is INLINED into each guide's <style> between the
+   markers  / * @base:start * /  …  / * @base:end * /  by
+   scripts/build_guides.py, so every guide stays a single
+   self-contained HTML file (works as an artifact, an emailed
+   file, a printed PDF, or on GitHub Pages).
+
+   DO NOT hand-edit the injected copy inside a guide. Edit THIS
+   file, then run:  python3 scripts/build_guides.py
+
+   Per-page colour is set with tokens. Each guide overrides the
+   accent tokens in its own :root (after the @base:end marker):
+
+     :root { --accent:#6c4bbf; --accent-soft:#f2eefb;
+             --accent-ink:#4f349c; --accent-lt:#b795ea;
+             --accent-mid:#8a6fd0; --accent-hair:#c9b8ee; }
+
+   Anything unique to one guide (signature strips, etc.) also
+   lives in that guide's own <style>, after the base.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font: 'Gentium Book Plus', serif;
+  --bg: #f5f0e8;
+  --card: #faf7f2;
+  --ink: #2c2c2c;
+  --ink-soft: #444;
+  --ink-mute: #555;
+  --muted: #888;
+  --dark: #1a1a1a;
+  --dark-ink: #d0c8bc;
+
+  /* Per-page accent — overridden by each guide. Defaults: purple. */
+  --accent: #6c4bbf;       /* solid accent (borders, links, headings) */
+  --accent-soft: #f2eefb;  /* pale accent background */
+  --accent-ink: #4f349c;   /* darker accent (hover) */
+  --accent-lt: #b795ea;    /* light accent for text on dark panels */
+  --accent-mid: #8a6fd0;   /* mid accent for labels on light bg */
+  --accent-hair: #c9b8ee;  /* faint accent for dashed hairlines */
+
+  /* Fixed canon/reference colours (not per-page) */
+  --orange: #d47c1a;
+  --green: #2e8a4a;
+  --blue: #3b6fd4;
+  --purple: #6c4bbf;
+  --grey: #555;
+}
+
+html { font-size: 18px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: var(--font); padding: 0; min-height: 100vh; }
+
+.home-nav { padding: 14px 24px 0; }
+.home-nav-link { font-family: var(--font); font-size: 0.82rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed #aaa; }
+.home-nav-link:hover { color: var(--ink-mute); }
+
+.main { max-width: var(--main-max, 900px); margin: 0 auto; padding: 28px 24px 60px; }
+
+.header-ref { font-family: var(--font); font-size: 2.05rem; color: var(--ink); letter-spacing: 0.03em; }
+.header-title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+.badge-deep { display: inline-block; background: var(--dark); color: var(--bg); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 2px; margin-top: 6px; }
+.nav-links { display: flex; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+.companion-link { font-family: var(--font); font-size: 0.85rem; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+.companion-link:hover { color: var(--accent-ink); }
+
+.section-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: var(--muted); margin-bottom: 10px; margin-top: 28px; }
+
+.passage-callout { border-left: 5px solid var(--accent); background: var(--accent-soft); padding: 18px 22px; margin: 20px 0; border-radius: 0 3px 3px 0; }
+.pc-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+.pc-text { font-family: var(--font); font-size: 0.96rem; color: var(--ink); line-height: 1.62; font-style: italic; }
+.pc-heb { direction: rtl; font-size: 1.15rem; color: var(--ink); margin-bottom: 8px; line-height: 1.5; }
+.pc-ref { font-size: 0.74rem; color: var(--accent); margin-top: 8px; font-weight: 700; }
+
+.placement { background: var(--card); border: 2px solid var(--ink); border-radius: 3px; padding: 14px 18px; margin: 20px 0; font-size: 0.9rem; color: #333; line-height: 1.5; }
+
+/* WORD STUDIES */
+.word-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+.word-card { border: 2px solid var(--ink); border-radius: 3px; background: var(--card); padding: 13px 12px; }
+.word-heb { font-size: 1.25rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; direction: rtl; }
+.word-greek { font-size: 1.15rem; color: var(--accent); font-weight: 700; margin-bottom: 2px; font-style: italic; }
+.word-gk { font-size: 1.2rem; color: var(--accent); font-weight: 700; margin-bottom: 1px; font-style: italic; }
+.word-translit { font-size: 0.62rem; color: var(--muted); font-style: italic; margin-bottom: 5px; }
+.word-ref-badge { display: inline-block; font-size: 0.53rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; margin-bottom: 7px; }
+.word-gloss { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 5px; }
+.word-note { font-size: 0.75rem; color: var(--ink-mute); line-height: 1.4; }
+
+/* CANON / OT (fixed orange) */
+.ot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.ot-card { border: 2px solid var(--orange); border-radius: 3px; background: #fdf8ef; padding: 13px 14px; }
+.ot-ref { font-family: var(--font); font-weight: 700; font-size: 0.9rem; color: var(--orange); margin-bottom: 3px; }
+.ot-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 700; }
+.ot-note { font-size: 0.79rem; color: var(--ink-soft); line-height: 1.4; }
+
+/* COMMENTARY */
+.comm-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 24px; }
+.comm-card { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 14px; }
+.comm-author { font-family: var(--font); font-weight: 700; font-size: 0.94rem; color: var(--bg); margin-bottom: 2px; }
+.comm-title { font-size: 0.7rem; color: #aaa; font-style: italic; margin-bottom: 4px; }
+.comm-tradition { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 6px; border-radius: 2px; display: inline-block; margin-bottom: 8px; font-weight: 700; }
+.trad-reformed { background: var(--purple); color: #fff; }
+.trad-evangelical { background: var(--blue); color: #fff; }
+.trad-preaching { background: var(--orange); color: #fff; }
+.trad-pastoral { background: var(--green); color: #fff; }
+.trad-catholic { background: var(--grey); color: #fff; }
+.trad-critical { background: var(--grey); color: #fff; }
+.trad-jewish { background: var(--grey); color: #fff; }
+.comm-point { border-left: 3px solid var(--accent); padding-left: 10px; font-size: 0.77rem; color: var(--dark-ink); line-height: 1.4; margin-bottom: 7px; }
+.comm-point:last-of-type { margin-bottom: 0; }
+.source-link { display: block; margin-top: 6px; font-size: 0.64rem; color: var(--muted); text-decoration: none; border-bottom: 1px dashed var(--grey); font-family: var(--font); }
+.source-link:hover { color: #aaa; }
+
+/* PRESSURE POINTS */
+.pressure-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 18px 20px; margin: 4px 0 24px; }
+.pressure-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.pressure-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #333; }
+.pressure-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.pressure-q { font-size: 0.85rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.pressure-a { font-size: 0.8rem; color: #bbb; line-height: 1.42; }
+
+/* CROSS-REFERENCES */
+.xref-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 4px 0 24px; }
+.xref-card { border: 2px solid; border-radius: 3px; background: var(--card); padding: 11px 13px; }
+.xref-card.backward { border-color: var(--orange); } .xref-card.parallel { border-color: var(--accent); } .xref-card.forward { border-color: var(--green); }
+.xref-tag { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 3px; }
+.backward .xref-tag { color: var(--orange); } .parallel .xref-tag { color: var(--accent); } .forward .xref-tag { color: var(--green); }
+.xref-ref { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-bottom: 3px; }
+.xref-note { font-size: 0.74rem; color: var(--ink-mute); line-height: 1.35; }
+
+/* THEN -> NOW */
+.then-now { border: 2.5px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 18px 20px; margin: 4px 0 24px; }
+.tn-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+.tn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.tn-col-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-mid); font-weight: 700; margin-bottom: 4px; }
+.tn-text { font-size: 0.85rem; color: #333; line-height: 1.45; }
+.tn-question { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--accent-hair); font-family: var(--font); font-size: 0.94rem; color: var(--accent); font-style: italic; }
+
+/* VERDICT */
+.verdict { border: 3px solid var(--ink); border-radius: 3px; background: var(--card); padding: 20px 24px; text-align: center; margin: 4px 0 12px; }
+.verdict-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
+.verdict-text { font-family: var(--font); font-size: 1.2rem; color: var(--ink); line-height: 1.5; }
+.verdict-ref { font-size: 0.76rem; color: var(--muted); margin-top: 6px; }
+
+@media print { .home-nav { display: none; } }
+@media (max-width: 760px) {
+  .ot-grid, .comm-shelf, .tn-cols { grid-template-columns: 1fr; }
+  .word-grid, .xref-grid { grid-template-columns: 1fr; }
+}
+
+/* ==================================================================
+   PANEL COMPONENTS — book-overview panels (unscoped; shared with deep
+   studies, which use different class names for their unique parts).
+   Panels set  :root { --main-max: 1020px; }  and keep their per-page
+   act/unit/chap colours and signature strips in their own <style>.
+   ================================================================== */
+.header-wrap { border: 3px solid var(--ink); border-radius: 4px; background: var(--card); padding: 20px 26px 16px; margin-bottom: 20px; }
+.header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.header-book { font-family: var(--font); font-weight: 700; font-size: 3rem; color: var(--ink); letter-spacing: 0.03em; line-height: 1; }
+.header-sub { font-size: 1.05rem; color: var(--ink-mute); margin-top: 4px; }
+.header-meta { text-align: right; }
+.meta-row { font-size: 0.75rem; color: #666; margin-bottom: 3px; }
+.meta-row strong { color: var(--ink); }
+.header-char { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #ccc; font-family: var(--font); font-size: 1rem; color: var(--accent); text-align: center; letter-spacing: 0.02em; font-style: italic; }
+.word-count { font-size: 0.54rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 5px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+.comm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 4px 0 24px; }
+.hard-box { background: var(--dark); border: 2px solid var(--ink); border-radius: 3px; padding: 16px 20px; margin: 4px 0 24px; }
+.hard-title { font-family: var(--font); font-weight: 700; font-size: 0.96rem; color: var(--bg); margin-bottom: 12px; }
+.hard-item { margin-bottom: 11px; padding-bottom: 11px; border-bottom: 1px solid #2e2e2e; }
+.hard-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.hard-q { font-size: 0.82rem; color: var(--accent-lt); font-weight: 700; margin-bottom: 4px; }
+.hard-a { font-size: 0.76rem; color: #bbb; line-height: 1.4; }
+@media (max-width: 820px) { .comm-grid { grid-template-columns: 1fr; } }
+
+/* ==================================================================
+   DISCUSSION GUIDES — every rule scoped under <body class="discuss">
+   so its generic names never touch deep-study / panel pages. Colours
+   are fixed (red numerals, blue/purple tags), not per-page.
+   ================================================================== */
+body.discuss { padding: 32px; }
+body.discuss .home-nav { padding: 0 0 14px; max-width: 820px; margin: 0 auto; }
+body.discuss .home-nav-link { font-size: 0.9rem; }
+body.discuss .page { background: var(--card); border: 3px solid var(--ink); border-radius: 4px; padding: 30px 38px 34px; max-width: 820px; margin: 0 auto; }
+body.discuss .guide-title { font-family: var(--font); font-size: 1.5rem; color: var(--ink); text-align: center; letter-spacing: 0.02em; border-bottom: 3px solid var(--ink); padding-bottom: 14px; margin-bottom: 22px; line-height: 1.3; }
+body.discuss .msec { margin-bottom: 20px; }
+body.discuss .msec-head { font-family: var(--font); font-size: 1.05rem; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+body.discuss .msec-rom { color: #c0392b; }
+body.discuss .framing { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.7; margin-top: 6px; padding-left: 4px; }
+body.discuss .lesson { border: 2px solid var(--ink); border-radius: 3px; background: #fdfcfa; padding: 4px 20px 18px; margin-top: 10px; }
+body.discuss .qblock { margin-top: 16px; }
+body.discuss .qtag { display: inline-block; font-family: var(--font); font-size: 0.9rem; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 2px; margin-bottom: 10px; color: #fff; }
+body.discuss .qtag-obs { background: var(--blue); }
+body.discuss .qtag-app { background: var(--purple); }
+body.discuss .q { display: flex; gap: 10px; margin-bottom: 13px; font-size: 1rem; color: #1a1a1a; line-height: 1.48; }
+body.discuss .q-num { font-weight: 700; color: var(--muted); flex-shrink: 0; min-width: 18px; }
+body.discuss .extra { margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #d8cfc0; }
+body.discuss .extra-label { font-family: var(--font); font-size: 0.86rem; margin-bottom: 4px; }
+body.discuss .prayer .extra-label { color: var(--green); }
+body.discuss .quote .extra-label { color: var(--orange); }
+body.discuss .memory .extra-label { color: #c0392b; }
+body.discuss .prayer-text { font-size: 1rem; color: #333; line-height: 1.55; font-style: italic; padding-left: 12px; border-left: 3px solid var(--green); }
+body.discuss .quote-text { font-size: 1rem; color: #333; line-height: 1.5; padding-left: 12px; border-left: 3px solid var(--orange); }
+body.discuss .quote-author { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+body.discuss .memory-text { font-size: 1.05rem; color: var(--ink); padding-left: 12px; border-left: 3px solid #c0392b; }
+body.discuss .memory-text .mv-ref { font-family: var(--font); font-size: 0.92rem; }
+body.discuss .footer { border-top: 1.5px solid #e0ddd8; margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #bbb; }
+@media print { body.discuss { padding: 0; } body.discuss .page { border: none; max-width: 100%; padding: 18px; } }
+@media (max-width: 768px) { body.discuss { padding: 18px 14px 50px; } body.discuss .page { padding: 22px 20px 26px; } body.discuss .guide-title { font-size: 1.2rem; } body.discuss .footer { flex-direction: column; gap: 4px; } }
+
+/* ==================================================================
+   SIMPLE ONE-PAGE TEACHINGS — every rule scoped under
+   <body class="simple">. Per-page colour via the --accent tokens.
+   ================================================================== */
+body.simple { padding: 28px 24px; }
+body.simple .home-nav { padding: 0 0 14px; max-width: 1060px; margin: 0 auto; }
+body.simple .home-nav-link { font-size: 0.9rem; }
+body.simple .companion-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: var(--accent); border-bottom: 1px dashed var(--accent); }
+body.simple .companion-link:hover { color: var(--accent-ink); }
+body.simple .page-header { text-align: center; margin-bottom: 26px; }
+body.simple .ref { font-family: var(--font); font-weight: 700; font-size: 2rem; color: var(--ink); letter-spacing: 0.04em; }
+body.simple .title { font-size: 1.1rem; color: var(--ink-mute); margin-top: 4px; }
+body.simple .subtitle { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 4px; }
+body.simple .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; max-width: 1060px; margin: 0 auto; }
+body.simple .card { background: var(--card); border: 2px solid var(--ink); border-radius: 4px; padding: 16px 18px; min-width: 0; }
+body.simple .card-label { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; color: var(--muted); }
+body.simple .key-verse { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 3px; padding: 14px 16px; }
+body.simple .kv-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+body.simple .kv-text { font-size: 0.95rem; color: var(--ink); line-height: 1.5; font-style: italic; }
+body.simple .kv-ref { font-size: 0.75rem; color: var(--muted); margin-top: 5px; }
+body.simple .point { border-left: 3px solid var(--accent); padding-left: 12px; margin-bottom: 14px; }
+body.simple .point:last-child { margin-bottom: 0; }
+body.simple .point-num { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+body.simple .point-title { font-family: var(--font); font-weight: 700; font-size: 0.98rem; color: var(--ink); margin: 2px 0; }
+body.simple .point-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
+body.simple .plain { font-size: 0.9rem; color: #333; line-height: 1.55; }
+body.simple .plain strong { color: var(--accent-ink); }
+body.simple .apply-item { border-bottom: 1px solid #e0d8cc; padding-bottom: 9px; margin-bottom: 9px; font-size: 0.88rem; color: #333; line-height: 1.45; }
+body.simple .apply-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+body.simple .apply-item strong { color: var(--green); }
+body.simple .verdict { background: var(--ink); color: var(--bg); border: none; border-radius: 3px; padding: 14px 16px; text-align: left; }
+body.simple .verdict-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #aaa; margin-bottom: 6px; }
+body.simple .verdict-text { font-family: var(--font); font-size: 0.98rem; line-height: 1.5; color: var(--bg); }
+@media (max-width: 768px) { body.simple { padding: 20px 16px 60px; } body.simple .grid { grid-template-columns: 1fr; } body.simple .ref { font-size: 1.7rem; } }
+
+/* ==================================================================
+   SERMON OUTLINES — scoped under <body class="sermon">. Per-page accent
+   via the --accent tokens; sermons set --main-max:820px. Fixed semantic
+   colours: frame=blue, illustration=purple, further=purple, clarify=red,
+   application=green, conclusion=dark.
+   ================================================================== */
+body.sermon .head-kicker { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+body.sermon .head-title { font-family: var(--font); font-size: 2.1rem; color: var(--ink); letter-spacing: 0.02em; line-height: 1.15; }
+body.sermon .head-sub { font-size: 1.02rem; color: var(--ink-mute); margin-top: 6px; font-style: italic; }
+body.sermon .badge-sermon { display: inline-block; background: var(--accent); color: #fff; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 3px 9px; border-radius: 2px; margin-top: 10px; }
+body.sermon .series-nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.82rem; }
+body.sermon .series-nav a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+body.sermon .series-nav a:hover { color: var(--accent-ink); }
+body.sermon .series-nav .here { color: var(--muted); border-bottom: 1px solid #ccc; }
+body.sermon .meta { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin: 20px 0 8px; }
+body.sermon .meta-cell { border: 2px solid var(--ink); border-radius: 3px; background: var(--card); padding: 10px 13px; }
+body.sermon .meta-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #999; font-weight: 700; margin-bottom: 4px; }
+body.sermon .meta-val { font-size: 0.86rem; color: var(--ink); line-height: 1.35; }
+body.sermon .meta-val strong { color: var(--accent); }
+body.sermon .big-idea { border: 3px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 16px 20px; margin: 16px 0 4px; text-align: center; }
+body.sermon .bi-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); font-weight: 700; margin-bottom: 7px; }
+body.sermon .bi-text { font-family: var(--font); font-size: 1.16rem; color: var(--ink); line-height: 1.45; font-style: italic; }
+body.sermon .section-label { margin: 30px 0 12px; }
+body.sermon .frame { border: 2px solid var(--blue); border-radius: 4px; background: #eef2fb; padding: 16px 20px; margin: 20px 0 4px; }
+body.sermon .frame-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); font-weight: 700; margin-bottom: 5px; }
+body.sermon .frame-title { font-family: var(--font); font-weight: 700; font-size: 1.08rem; color: var(--ink); margin-bottom: 8px; }
+body.sermon .frame-body { font-size: 0.89rem; color: #333; line-height: 1.55; }
+body.sermon .frame-body p { margin-bottom: 9px; } body.sermon .frame-body p:last-child { margin-bottom: 0; }
+body.sermon .frame-body strong { color: var(--blue); }
+body.sermon .block-body { font-size: 0.93rem; color: #333; line-height: 1.6; }
+body.sermon .block-body p { margin-bottom: 10px; }
+body.sermon .scrip { color: var(--accent); font-weight: 700; }
+body.sermon .lead-in { font-family: var(--font); font-style: italic; color: var(--accent-ink); }
+body.sermon .point { border: 2px solid var(--ink); border-radius: 4px; background: var(--card); margin-bottom: 18px; overflow: hidden; }
+body.sermon .point-head { display: flex; align-items: stretch; }
+body.sermon .point-rom { flex-shrink: 0; width: 60px; display: flex; align-items: center; justify-content: center; font-family: var(--font); font-size: 1.5rem; font-weight: 700; color: #fff; background: var(--accent); }
+body.sermon .point-titlewrap { padding: 11px 16px; flex: 1; min-width: 0; border-bottom: 2px solid #eadfd0; }
+body.sermon .point-title { font-family: var(--font); font-weight: 700; font-size: 1.12rem; color: var(--ink); line-height: 1.25; }
+body.sermon .point-key { font-size: 0.74rem; color: var(--accent); font-weight: 700; margin-top: 3px; }
+body.sermon .point-body { padding: 13px 18px 15px; }
+body.sermon .sub { display: flex; gap: 10px; margin-bottom: 11px; font-size: 0.9rem; color: #333; line-height: 1.5; }
+body.sermon .sub-letter { flex-shrink: 0; font-weight: 700; color: var(--accent); font-family: var(--font); min-width: 20px; }
+body.sermon .sub em { color: var(--ink); }
+body.sermon .illus { border-left: 4px solid #6c4bbf; background: #f4f0fb; border-radius: 0 3px 3px 0; padding: 11px 15px; margin: 4px 0 10px; }
+body.sermon .illus-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6c4bbf; font-weight: 700; margin-bottom: 4px; }
+body.sermon .illus-text { font-size: 0.85rem; color: #444; line-height: 1.5; }
+body.sermon .transition { font-size: 0.85rem; color: #6c4bbf; font-style: italic; line-height: 1.45; padding: 4px 2px 0; }
+body.sermon .transition::before { content: "\2192  "; font-style: normal; font-weight: 700; }
+body.sermon .further { border: 2px solid #6c4bbf; border-radius: 4px; background: #f4f0fb; padding: 16px 20px; margin: 4px 0 18px; }
+body.sermon .further-kicker { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6c4bbf; font-weight: 700; margin-bottom: 4px; }
+body.sermon .further-title { font-family: var(--font); font-weight: 700; font-size: 1.12rem; color: var(--ink); margin-bottom: 3px; }
+body.sermon .further-key { font-size: 0.74rem; color: #6c4bbf; font-weight: 700; margin-bottom: 12px; }
+body.sermon .further-body { font-size: 0.9rem; color: #333; line-height: 1.55; }
+body.sermon .further-body p { margin-bottom: 9px; } body.sermon .further-body p:last-child { margin-bottom: 0; }
+body.sermon .further-body strong { color: #4f349c; }
+body.sermon .fsplit { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 4px 0 12px; }
+body.sermon .fcol { border-radius: 3px; padding: 11px 13px; border: 1.5px solid; }
+body.sermon .fcol.seen { border-color: var(--blue); background: #eef2fb; }
+body.sermon .fcol.said { border-color: #999; background: #f1efeb; }
+body.sermon .fcol-h { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 6px; }
+body.sermon .fcol.seen .fcol-h { color: var(--blue); } body.sermon .fcol.said .fcol-h { color: #777; }
+body.sermon .fcol-t { font-size: 0.8rem; color: #444; line-height: 1.42; }
+body.sermon .clarify { border: 2px dashed #c0392b; border-radius: 3px; background: #fdf5f4; padding: 12px 16px; margin: 4px 0 18px; }
+body.sermon .clarify-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.14em; color: #c0392b; font-weight: 700; margin-bottom: 5px; }
+body.sermon .clarify-text { font-size: 0.85rem; color: #444; line-height: 1.5; }
+body.sermon .clarify-text strong { color: #922b21; }
+body.sermon .app-box { border: 2.5px solid var(--green); border-radius: 3px; background: #edf8f1; padding: 18px 20px; margin: 4px 0 18px; }
+body.sermon .app-title { font-family: var(--font); font-weight: 700; font-size: 1.08rem; color: var(--green); margin-bottom: 4px; }
+body.sermon .app-sub { font-size: 0.84rem; color: #557; margin-bottom: 13px; font-style: italic; }
+body.sermon .app-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.89rem; color: #333; line-height: 1.5; }
+body.sermon .app-item .ai { flex-shrink: 0; color: var(--green); font-weight: 700; }
+body.sermon .app-item strong { color: var(--ink); }
+body.sermon .concl { border: 3px solid var(--ink); border-radius: 3px; background: var(--dark); padding: 20px 24px; margin: 4px 0 18px; }
+body.sermon .concl-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-lt); font-weight: 700; margin-bottom: 10px; }
+body.sermon .concl-text { font-size: 0.95rem; color: #e8e2d8; line-height: 1.62; }
+body.sermon .concl-text p { margin-bottom: 11px; } body.sermon .concl-text p:last-child { margin-bottom: 0; }
+body.sermon .concl-text .hi { color: #f0c48a; font-style: italic; }
+body.sermon .concl-text .cross { color: #7fb8f0; }
+body.sermon .memory { border: 2px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 14px 18px; margin: 4px 0 8px; text-align: center; }
+body.sermon .mem-label { font-size: 0.56rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+body.sermon .mem-text { font-family: var(--font); font-size: 1.05rem; color: var(--ink); line-height: 1.5; }
+body.sermon .mem-text .mv-ref { display: block; font-size: 0.8rem; color: #999; margin-top: 5px; font-weight: 700; }
+body.sermon .footer { border-top: 1.5px solid #e0ddd8; margin-top: 26px; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.72rem; color: #bbb; }
+@media print { body.sermon .point, body.sermon .app-box, body.sermon .concl, body.sermon .big-idea, body.sermon .frame, body.sermon .further { break-inside: avoid; } }
+@media (max-width: 700px) { body.sermon .head-title { font-size: 1.6rem; } body.sermon .meta { grid-template-columns: 1fr; } body.sermon .point-rom { width: 48px; font-size: 1.2rem; } body.sermon .fsplit { grid-template-columns: 1fr; } body.sermon .footer { flex-direction: column; gap: 4px; } }
+/* @base:end */
+
+:root {
+  --accent: #3b6fd4;
+  --accent-soft: #eef2fb;
+  --accent-ink: #2551a8;
+  --accent-lt: #7eb8f7;
+  --accent-mid: #6f9ae0;
+  --accent-hair: #aac3ef;
+}
+
+  @media print { .home-nav { display: none; } }
+
+  /* THREE VOICES */
+  .voices3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 4px 0 24px; }
+  .v3 { border: 2px solid var(--ink); border-radius: 3px; background: var(--card); padding: 13px 15px; }
+  .v3-ref { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; }
+  .v3-who { font-family: var(--font); font-weight: 700; font-size: 1rem; color: var(--ink); margin: 3px 0 5px; }
+  .v3-note { font-size: 0.8rem; color: var(--ink-mute); line-height: 1.42; }
+
+  /* VERSE-BY-VERSE */
+  .verse { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin-bottom: 15px; }
+  .verse-ref { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; }
+  .verse-text { font-family: var(--font); font-style: italic; font-size: 0.95rem; color: var(--ink); margin: 3px 0 6px; line-height: 1.5; }
+  .verse-note { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; }
+  .verse-note strong { color: var(--accent-ink); }
+
+  /* WARNING / MISUSE BOX */
+  .warn { border: 2px dashed #c0392b; border-radius: 3px; background: #fdf5f4; padding: 16px 20px; margin: 4px 0 24px; }
+  .warn-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: #c0392b; font-weight: 700; margin-bottom: 6px; }
+  .warn-title { font-family: var(--font); font-weight: 700; font-size: 1.05rem; color: #922b21; margin-bottom: 8px; }
+  .warn-text { font-size: 0.87rem; color: #444; line-height: 1.55; }
+  .warn-text strong { color: #922b21; }
+
+  /* SEVEN I-WILLS */
+  .iwills { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin: 10px 0 24px; }
+  .iwill { border: 1.5px solid var(--accent); border-radius: 3px; background: var(--accent-soft); padding: 9px 10px; text-align: center; }
+  .iwill-n { font-size: 0.6rem; color: var(--accent-mid); font-weight: 700; }
+  .iwill-t { font-family: var(--font); font-weight: 700; font-size: 0.86rem; color: var(--ink); margin-top: 2px; }
+  @media (max-width: 760px) { .voices3 { grid-template-columns: 1fr; } .iwills { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="home-nav">
+  <a href="../../index.html" class="home-nav-link">← Back to index</a>
+</div>
+
+<div class="main">
+
+  <div class="header-ref">Psalm 91</div>
+  <div class="header-title">He Who Dwells in the Secret Place — A Full Exposition</div>
+  <span class="badge-deep">Deep Study</span>
+  <div class="nav-links">
+    <a href="psalm-91-1-secret-place-deep-study.html" class="companion-link">← Psalm 91:1 · the secret place</a>
+  </div>
+
+  <div class="section-label">Anchor — The Opening Confession</div>
+  <div class="passage-callout">
+    <div class="pc-label">Psalm 91:1–2 · the thesis and the believer's "amen"</div>
+    <div class="pc-text">"Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty. I will say of the LORD, 'He is my refuge and my fortress, my God, in whom I trust.'"</div>
+    <div class="pc-ref">Psalm 91:1–2 (NIV)</div>
+  </div>
+
+  <div class="placement">
+    <strong>What kind of psalm is this?</strong> Psalm 91 is untitled in Hebrew — anonymous, though Jewish tradition linked it to Moses (Psalm 90 is "a prayer of Moses"). It is a psalm of <em>confidence</em>, and it is built as a <strong>dialogue</strong>: three voices take turns. A worshiper declares the truth and owns it (vv.1–2); a second voice turns and assures "you" with promise after promise (vv.3–13); and then God himself speaks, in the first person, with seven "I will" pledges (vv.14–16). Read it as a conversation and the whole psalm opens up.
+  </div>
+
+  <!-- THREE VOICES -->
+  <div class="section-label">The Structure — Three Voices</div>
+  <div class="voices3">
+    <div class="v3">
+      <div class="v3-ref">vv.1–2 · The Worshiper</div>
+      <div class="v3-who">"He is my refuge"</div>
+      <div class="v3-note">The thesis (v.1) is personally owned (v.2). Six names of God across two verses land on "<em>my</em> God, in whom I trust." Faith that speaks out loud.</div>
+    </div>
+    <div class="v3">
+      <div class="v3-ref">vv.3–13 · The Assurance</div>
+      <div class="v3-who">"He will deliver you"</div>
+      <div class="v3-note">A second voice turns to address "you." Snares, plague, terror, arrows, thousands falling, angels, lions and serpents — every danger met by God's covering. Fear is answered.</div>
+    </div>
+    <div class="v3">
+      <div class="v3-ref">vv.14–16 · The LORD</div>
+      <div class="v3-who">"I will rescue him"</div>
+      <div class="v3-note">God himself speaks. Seven first-person promises crown the psalm, grounded in one thing: "because he loves me… he acknowledges my name."</div>
+    </div>
+  </div>
+
+  <!-- MOVEMENT 1 -->
+  <div class="section-label">Movement 1 — The Confession (vv.1–2)</div>
+
+  <div class="verse">
+    <div class="verse-ref">Verse 1</div>
+    <div class="verse-text">"Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty."</div>
+    <div class="verse-note">The thesis of the whole psalm, and its one condition. <strong>Dwells</strong> (yāšab) and <strong>rests / lodges</strong> (lûn) describe a settled life, not an emergency visit — the one who lives in the <em>sēter</em> (secret place) and stays there through the night. The names <strong>Most High</strong> (Elyon) and <strong>Almighty</strong> (Shaddai) set God above every power and all-sufficient to cover you. <em>(Explored fully in the companion study on 91:1.)</em></div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verse 2</div>
+    <div class="verse-text">"I will say of the LORD, 'He is my refuge and my fortress, my God, in whom I trust.'"</div>
+    <div class="verse-note">The worshiper takes the truth of v.1 and makes it personal — the way <em>into</em> the shelter is a spoken confession. Two more names (<strong>the LORD</strong> / YHWH, the covenant name; <strong>my God</strong> / Elohai) turn cosmic titles into relationship. <strong>Refuge</strong> (machseh, a storm-shelter you flee to) and <strong>fortress</strong> (metsudah, a mountain stronghold) pair tenderness with strength.</div>
+  </div>
+
+  <!-- MOVEMENT 2 -->
+  <div class="section-label">Movement 2 — The Assurance to "You" (vv.3–13)</div>
+
+  <div class="verse">
+    <div class="verse-ref">Verse 3</div>
+    <div class="verse-text">"Surely he will save you from the fowler's snare and from the deadly pestilence."</div>
+    <div class="verse-note">Two kinds of threat set the pattern: the <strong>fowler's snare</strong> — hidden traps, the schemes of people who hunt you like a bird — and the <strong>pestilence</strong>, unseen disease. God delivers from both the plotted danger and the invisible one.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verse 4</div>
+    <div class="verse-text">"He will cover you with his feathers, and under his wings you will find refuge; his faithfulness will be your shield and rampart."</div>
+    <div class="verse-note">The tenderest image in the psalm — a mother bird covering her young — fused with a soldier's image: <strong>shield and rampart</strong>. And the armor is named: God's <strong>faithfulness</strong> (emunah). What protects you is not your strength but his reliability.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verses 5–6</div>
+    <div class="verse-text">"You will not fear the terror of night, nor the arrow that flies by day, nor the pestilence that stalks in the darkness, nor the plague that destroys at midday."</div>
+    <div class="verse-note">A deliberate sweep: <strong>night and day, darkness and noon</strong> — danger at every hour, seen and unseen. Note the promise is precise: "you will not <em>fear</em>." The psalm does not deny that terrors exist; it frees the dweller from being ruled by them.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verses 7–8</div>
+    <div class="verse-text">"A thousand may fall at your side, ten thousand at your right hand, but it will not come near you. You will only observe with your eyes and see the punishment of the wicked."</div>
+    <div class="verse-note">Even amid mass calamity, the one in the shelter is kept. This is <strong>covenant assurance</strong>, not a statistical guarantee that no believer ever dies (see the pressure points) — the sweeping Hebrew promise declares God's faithful protection of his own, ultimately vindicated when his justice is seen.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verses 9–10</div>
+    <div class="verse-text">"If you say, 'The LORD is my refuge,' and you make the Most High your dwelling, no harm will overtake you, no disaster will come near your tent."</div>
+    <div class="verse-note">The condition of v.1, now stated outright: <strong>"if you say… and you make the Most High your dwelling."</strong> The promises are for those who have moved in. "Your <strong>tent</strong>" extends the shelter to the whole household — your home under God's covering.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verses 11–12</div>
+    <div class="verse-text">"For he will command his angels concerning you to guard you in all your ways; they will lift you up in their hands, so that you will not strike your foot against a stone."</div>
+    <div class="verse-note">God assigns <strong>angels</strong> (malakim) to guard his own — "in <em>all your ways</em>," that is, as you walk in <em>his</em> ways. A promise of such tender care that not even your foot is left to stumble. <strong>These are the verses Satan would later quote — and twist (see below).</strong></div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verse 13</div>
+    <div class="verse-text">"You will tread on the lion and the cobra; you will trample the great lion and the serpent."</div>
+    <div class="verse-note">From defense to <strong>victory</strong>: the fiercest predator and the deadliest snake underfoot. The <em>serpent</em> especially carries weight — the New Testament hears the final trampling of evil itself: "I have given you authority to trample on snakes" (Luke 10:19); "the God of peace will soon crush Satan under your feet" (Rom 16:20; cf. Gen 3:15).</div>
+  </div>
+
+  <!-- SATAN MISUSE -->
+  <div class="warn">
+    <div class="warn-label">A Warning Written Into the Text — vv.11–12 Misused</div>
+    <div class="warn-title">When the Devil Quotes Scripture</div>
+    <div class="warn-text">At the temptation of Jesus, Satan quotes <strong>Psalm 91:11–12</strong> — "he will command his angels… they will lift you up" — daring Jesus to throw himself from the temple (Matt 4:6; Luke 4:10–11). But he <strong>omits three words: "in all your ways."</strong> The psalm promises God's protection for the one walking in God's <em>ways</em>, not a safety net for the one leaping off a ledge to test him. Jesus answers not by disputing the verse but by refusing to twist it: <em>"Do not put the Lord your God to the test"</em> (Deut 6:16). <strong>The lesson is built into the chapter: Psalm 91 is a promise for faith, never a license for presumption.</strong> Faith shelters under God's wings; presumption jumps and demands the catch.</div>
+  </div>
+
+  <!-- MOVEMENT 3 -->
+  <div class="section-label">Movement 3 — God Himself Speaks (vv.14–16)</div>
+
+  <div class="verse">
+    <div class="verse-ref">Verse 14</div>
+    <div class="verse-text">"'Because he loves me,' says the LORD, 'I will rescue him; I will protect him, for he acknowledges my name.'"</div>
+    <div class="verse-note">Now the LORD speaks for himself. The ground of every promise is named twice: <strong>"because he loves me"</strong> and <strong>"he acknowledges my name."</strong> Not merit, but love that clings and a heart that knows God personally. This is the same dwelling of v.1, from God's side.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verse 15</div>
+    <div class="verse-text">"'He will call on me, and I will answer him; I will be with him in trouble, I will deliver him and honor him.'"</div>
+    <div class="verse-note">The crucial line: <strong>"I will be with him <em>in</em> trouble"</strong> — not always <em>from</em> it. The psalm's highest promise is not a trouble-free life but God's presence <em>inside</em> the trouble, and deliverance and honor on the far side. Immanuel, in the valley.</div>
+  </div>
+  <div class="verse">
+    <div class="verse-ref">Verse 16</div>
+    <div class="verse-text">"'With long life will I satisfy him and show him my salvation.'"</div>
+    <div class="verse-note">The climax: a full life, and — the last and greatest word — <strong>"my salvation"</strong> (yeshuah). The psalm ends not on length of days but on <em>seeing God's salvation</em>, a hope the New Testament fills out in Christ, who <em>is</em> that salvation (Luke 2:30; the name <em>Yeshua</em>).</div>
+  </div>
+
+  <div class="section-label">God's Seven "I Will" Promises (vv.14–16)</div>
+  <div class="iwills">
+    <div class="iwill"><div class="iwill-n">1 · v.14</div><div class="iwill-t">Rescue him</div></div>
+    <div class="iwill"><div class="iwill-n">2 · v.14</div><div class="iwill-t">Protect him</div></div>
+    <div class="iwill"><div class="iwill-n">3 · v.15</div><div class="iwill-t">Answer him</div></div>
+    <div class="iwill"><div class="iwill-n">4 · v.15</div><div class="iwill-t">Be with him</div></div>
+    <div class="iwill"><div class="iwill-n">5 · v.15</div><div class="iwill-t">Deliver him</div></div>
+    <div class="iwill"><div class="iwill-n">6 · v.15</div><div class="iwill-t">Honor him</div></div>
+    <div class="iwill"><div class="iwill-n">7 · v.16</div><div class="iwill-t">Satisfy &amp; save</div></div>
+  </div>
+
+  <!-- WORD STUDIES -->
+  <div class="section-label">Word Studies — Five Terms</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-heb">סֵתֶר</div>
+      <div class="word-translit">sēter — "shelter, secret place" (v.1)</div>
+      <span class="word-ref-badge">91:1</span>
+      <div class="word-gloss">The hidden place of God's cover</div>
+      <div class="word-note">From <em>sātar</em>, "to hide." The whole psalm flows from this one place of concealment — God himself as the believer's hiding place (cf. Ps 27:5; 32:7).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">כָּנָף</div>
+      <div class="word-translit">kanaph — "wing" (v.4)</div>
+      <span class="word-ref-badge">91:4</span>
+      <div class="word-gloss">A mother bird's covering</div>
+      <div class="word-note">"Under his <em>wings</em> you will find refuge." The image of a hen sheltering her chicks — tender, warm, close. Jesus takes it on his own lips over Jerusalem (Matt 23:37).</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">אֱמוּנָה</div>
+      <div class="word-translit">emunah — "faithfulness" (v.4)</div>
+      <span class="word-ref-badge">91:4</span>
+      <div class="word-gloss">The armor is his reliability</div>
+      <div class="word-note">"His <em>faithfulness</em> will be your shield and rampart." What defends you is God's steadfast dependability — the same root as "amen." You are guarded by how trustworthy he is, not how strong you are.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">מַלְאָךְ</div>
+      <div class="word-translit">malak — "messenger, angel" (v.11)</div>
+      <span class="word-ref-badge">91:11</span>
+      <div class="word-gloss">Commanded guardians</div>
+      <div class="word-note">God "commands his <em>angels</em>" to guard his own "in all your ways." Protection comes through God's agents, under God's orders — a promise for the path of obedience, not a dare to test him.</div>
+    </div>
+    <div class="word-card">
+      <div class="word-heb">יְשׁוּעָה</div>
+      <div class="word-translit">yeshuah — "salvation" (v.16)</div>
+      <span class="word-ref-badge">91:16</span>
+      <div class="word-gloss">The psalm's final word</div>
+      <div class="word-note">"I will… show him my <em>salvation</em>." More than rescue from a single danger — God's whole saving work, seen. The New Testament hears its fullness in <em>Yeshua</em>, Jesus, "your salvation" (Luke 2:30).</div>
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="section-label">Commentary Shelf — Four Sources</div>
+  <div class="comm-shelf">
+    <div class="comm-card">
+      <div class="comm-author">Derek Kidner</div>
+      <div class="comm-title">Psalms 73–150 (Tyndale OT Commentaries)</div>
+      <span class="comm-tradition trad-pastoral">Evangelical / Pastoral</span>
+      <div class="comm-point">Reads the dialogue structure and insists the promises belong to the one whose life is settled in God (vv.1, 9), guarding the psalm from being heard as a blanket charm.</div>
+      <div class="comm-point">On vv.11–12: the angelic promise is for the path of obedience — exactly what Satan's omission of "in all your ways" denies.</div>
+      <a class="source-link" href="https://www.ivpress.com/psalms-73-150" target="_blank" rel="noopener">ivpress.com — Psalms 73–150 (TOTC) <strong>[VERIFY URL]</strong></a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Willem VanGemeren</div>
+      <div class="comm-title">Psalms (Expositor's Bible Commentary)</div>
+      <span class="comm-tradition trad-evangelical">Evangelical</span>
+      <div class="comm-point">Traces the three speakers and reads vv.14–16 as a divine oracle that seals the psalm — God's own voice guaranteeing the assurances the earlier voices gave.</div>
+      <div class="comm-point">Stresses "I will be with him in trouble" (v.15): the covenant promise is presence and deliverance, not exemption from suffering.</div>
+      <a class="source-link" href="https://www.zondervan.com/p/expositors-bible-commentary/" target="_blank" rel="noopener">zondervan.com — Expositor's Bible Commentary <strong>[VERIFY URL]</strong></a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">John Goldingay</div>
+      <div class="comm-title">Psalms Vol. 3: 90–150 (BCOTWP)</div>
+      <span class="comm-tradition trad-critical">Critical / Detailed</span>
+      <div class="comm-point">Close work on the vocabulary of danger and refuge, and on the merisms (night/day, darkness/noon) that make the protection total in scope.</div>
+      <div class="comm-point">Reads the psalm within the realism of the Psalter: sweeping assurance held alongside the laments, so v.7 is covenant confidence, not a denial that the righteous ever fall.</div>
+      <a class="source-link" href="https://bakerpublishinggroup.com/books/psalms-volume-3/" target="_blank" rel="noopener">bakeracademic.com — Psalms Vol. 3 (BCOTWP) <strong>[VERIFY URL]</strong></a>
+    </div>
+    <div class="comm-card">
+      <div class="comm-author">Charles H. Spurgeon</div>
+      <div class="comm-title">The Treasury of David</div>
+      <span class="comm-tradition trad-preaching">Preaching / Devotional</span>
+      <div class="comm-point">Preaches the secret place as the hidden life of communion, and the whole psalm as the believer's "fortress" against every fear — to be prayed, not merely read.</div>
+      <div class="comm-point">Warns pointedly against the devil's use of vv.11–12: the promise is for the path of duty, and faith must never be made to "tempt" God.</div>
+      <a class="source-link" href="https://www.spurgeon.org/resource-library/" target="_blank" rel="noopener">spurgeon.org — The Treasury of David <strong>[VERIFY URL]</strong></a>
+    </div>
+  </div>
+
+  <!-- PRESSURE POINTS -->
+  <div class="section-label">Interpretive Pressure Points</div>
+  <div class="pressure-box">
+    <div class="pressure-title">Three Hard Questions</div>
+    <div class="pressure-item">
+      <div class="pressure-q">1. Does Psalm 91 promise that believers never suffer or die?</div>
+      <div class="pressure-a">Plainly, no — Scripture is full of faithful people who suffered (the martyrs; the "heroes" of Heb 11:35–38 who were tortured and killed; Jesus himself). Three keys hold the psalm together with reality: (a) it is <em>covenant assurance</em> in the sweeping, proverbial style of Hebrew poetry, declaring God's faithful care of his own, not a contract against all harm; (b) its own highest promise is "I will be with him <em>in</em> trouble" (v.15) — presence and deliverance, not exemption; (c) its final word is "my <em>salvation</em>" (v.16), an ultimate, even eschatological, rescue that death cannot cancel (cf. Rom 8:35–39).</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">2. Satan quoted this psalm — so can it be twisted?</div>
+      <div class="pressure-a">Yes, and the chapter shows how. By dropping "in all your ways" (vv.11–12), Satan turned a promise for the obedient into a dare to the presumptuous (Matt 4:6). The test of a true claim on Psalm 91 is the test Jesus applied: faith <em>shelters</em> under God; presumption <em>tests</em> God (Deut 6:16). The same verse can feed trust or recklessness depending on whether you keep walking in God's ways.</div>
+    </div>
+    <div class="pressure-item">
+      <div class="pressure-q">3. Who speaks, and who wrote it?</div>
+      <div class="pressure-a">The psalm is anonymous (untitled); Jewish tradition associated it with Moses and used it as a psalm of protection. More important than authorship is the <em>dialogue</em>: a worshiper (vv.1–2), an assuring voice (vv.3–13), and God himself (vv.14–16). The structure invites every reader to step into the "you" and make the "I" their own. <strong>[VERIFY: the Mosaic link is tradition, not a superscription.]</strong></div>
+    </div>
+  </div>
+
+  <!-- CROSS-REFS -->
+  <div class="section-label">Cross-References — Six Connections</div>
+  <div class="xref-grid">
+    <div class="xref-card forward">
+      <div class="xref-tag">Looks Forward</div>
+      <div class="xref-ref">Matthew 4:6 / Luke 4:10–11</div>
+      <div class="xref-note">Satan quotes Ps 91:11–12 to tempt Jesus, omitting "in all your ways." The psalm's protection is for faith, not presumption.</div>
+    </div>
+    <div class="xref-card backward">
+      <div class="xref-tag">Behind It</div>
+      <div class="xref-ref">Deuteronomy 6:16</div>
+      <div class="xref-note">"Do not put the LORD your God to the test." Jesus' answer to the misused psalm — the boundary that keeps faith from becoming presumption.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">Looks Forward</div>
+      <div class="xref-ref">Luke 10:19</div>
+      <div class="xref-note">"I have given you authority to trample on snakes and scorpions." Verse 13 fulfilled — victory over the serpent and all the power of the enemy.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">Looks Forward</div>
+      <div class="xref-ref">Matthew 23:37</div>
+      <div class="xref-note">"As a hen gathers her chicks under her wings." Jesus takes up the wing-image of v.4 — the shelter of God embodied, and longed to give.</div>
+    </div>
+    <div class="xref-card forward">
+      <div class="xref-tag">Looks Forward</div>
+      <div class="xref-ref">Romans 8:35–39</div>
+      <div class="xref-note">"Neither death nor life… will separate us from the love of God." The New Testament's fullest answer to "no harm will overtake you" — security that holds even through death.</div>
+    </div>
+    <div class="xref-card parallel">
+      <div class="xref-tag">Parallel</div>
+      <div class="xref-ref">Psalm 46:1</div>
+      <div class="xref-note">"God is our refuge and strength, an ever-present help in trouble." The same refuge, the same "in trouble" — presence in the storm, not a storm-free life.</div>
+    </div>
+  </div>
+
+  <!-- THEN -> NOW -->
+  <div class="section-label">Then → Now</div>
+  <div class="then-now">
+    <div class="tn-label">Bridging the Gap</div>
+    <div class="tn-cols">
+      <div>
+        <div class="tn-col-label">Then</div>
+        <div class="tn-text">To Israel — likely sung in worship — Psalm 91 answered a world full of real terror: raiders and arrows, plague and night. Its genius was not to deny the dangers but to name them all and set over them the covering wings of the Most High. The one who <em>dwelt</em> in the shelter, who loved God and knew his name, heard God's own voice pledge rescue, presence, and salvation.</div>
+      </div>
+      <div>
+        <div class="tn-col-label">Now</div>
+        <div class="tn-text">Psalm 91 is still the song for fearful times — but it is neither a lucky charm nor a promise of a pain-free life. It is fulfilled in Christ, the true Dweller who refused to leap from the temple, entrusted himself to the Father through the cross, and rose as God's <em>salvation</em>. In him the promises are "yes": God with us <em>in</em> trouble, nothing able to separate us from his love, and the serpent crushed under our feet. We shelter by abiding in him.</div>
+      </div>
+    </div>
+    <div class="tn-question">Psalm 91 does not promise you will never pass through the valley — it promises Whose shadow you pass through it in. Do you <em>dwell</em> there?</div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">Controlling Idea — Psalm 91</div>
+    <div class="verdict-text">For the one who dwells in the secret place — who loves God and knows his name — the Almighty himself pledges rescue, his presence <em>in</em> trouble, and final salvation. Not a life without danger, but a life under his wings.</div>
+    <div class="verdict-ref">"I will be with him in trouble, I will deliver him… and show him my salvation." — Psalm 91:15–16</div>
+  </div>
+
+</div>
+</body>
+</html>
