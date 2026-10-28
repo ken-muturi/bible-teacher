@@ -42,6 +42,8 @@ def classify(rel):
             return ("Book &amp; Passage Comparisons",
                     'class="guide-card" style="border-color:#2e8a4a; background:#eaf4ee;"',
                     ' style="color:#2c2c2c;"', "")
+        if any(k in name for k in ("timeline", "family", "tree", "journey")):
+            return ("Timelines &amp; Family Trees", 'class="guide-card card-blue"', "", "")
         return ("Book Overview Panels", 'class="guide-card card-blue"', "", "")
     if rel.startswith("guides/passages/"):
         badge = '<span class="card-badge badge-deep">Deep</span>' if "deep" in name else ""
